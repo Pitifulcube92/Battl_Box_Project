@@ -20,7 +20,7 @@ class CommandAction : public BaseAction
 {
 private:
 	WEAPONTYPE currentweapon;
-	BaseAction* Command;
+	BaseAction* command;
 public:
 	CommandAction();
 	CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_,const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_,
