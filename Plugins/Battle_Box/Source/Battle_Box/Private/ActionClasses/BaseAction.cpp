@@ -29,15 +29,15 @@ void BaseAction::SetDiscription(const FString discription_)
 {
 	discription = discription_;
 }
-void BaseAction::SetAction(const ACTIONTYPE type_)
+void BaseAction::SetActionType(const ACTIONTYPE type_)
 {
 	action = type_;
 }
-void BaseAction::SetTarget(const TARGETTYPE type_)
+void BaseAction::SetTargetType(const TARGETTYPE type_)
 {
 	target = type_;
 }
-void BaseAction::SetInteraction(const INTERACTIONTYPE type_)
+void BaseAction::SetInteractionType(const INTERACTIONTYPE type_)
 {
 	interaction = type_;
 }

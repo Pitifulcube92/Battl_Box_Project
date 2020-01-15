@@ -69,9 +69,9 @@ public:
 	BaseAction(const BaseAction* other_);
 	void SetName(const FString name_);
 	void SetDiscription(const FString discription_);
-	void SetAction(const ACTIONTYPE type_);
-	void SetTarget(const TARGETTYPE type_);
-	void SetInteraction(const INTERACTIONTYPE type_);
+	void SetActionType(const ACTIONTYPE type_);
+	void SetTargetType(const TARGETTYPE type_);
+	void SetInteractionType(const INTERACTIONTYPE type_);
 	void SetActionID(const uint32 actionID_);
 	void OnDestroy();
 
