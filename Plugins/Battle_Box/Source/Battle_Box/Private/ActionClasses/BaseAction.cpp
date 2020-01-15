@@ -72,6 +72,11 @@ uint32 BaseAction::ReturnActionID() const
 void BaseAction::OnDestroy()
 {
 	//The clean up method
+	if (command)
+	{
+
+	}
+		delete 
 }
 BaseAction::~BaseAction()
 {

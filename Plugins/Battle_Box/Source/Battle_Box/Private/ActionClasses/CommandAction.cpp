@@ -22,19 +22,23 @@ void CommandAction::SetWeaponType(WEAPONTYPE type_)
 }
 void CommandAction::SetCommand(BaseAction* action_)
 {
-
+	command = action_;
 }
 WEAPONTYPE CommandAction::ReturnWeaponType() const
 {
-
+	return currentweapon;
 }
 BaseAction* CommandAction::ReturnAction() const
 {
-
+	return command;
 }
 void CommandAction::OnDestroy()
 {
-
+	if(command)
+	{
+		delete command;
+		command = nullptr;
+	}
 }
 CommandAction::~CommandAction()
 {
