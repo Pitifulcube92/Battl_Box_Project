@@ -14,11 +14,15 @@ class ItemAction : public BaseAction
 private:
 	uint32 value;
 	TArray<AbilityAction*> effectList;
-	DAMAGETYPE damaType;
+	DAMAGETYPE damageType;
 public:
 	ItemAction();
 	ItemAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const  TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, const uint32 value_, const DAMAGETYPE damageType_, const TArray<AbilityAction*> effectArray_);
 	ItemAction(const ItemAction* other_);
+	void SetValue(const uint32 value_);
+	void AddEffect(const AbilityAction* ability_);
+	uint32 ReturnValue();
+	TArray<AbilityAction*> ReturnEffectList();
 	~ItemAction();
 };
 
