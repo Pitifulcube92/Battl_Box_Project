@@ -1,12 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "AbilityClass.h"
+#include "AbilityAction.h"
 
-AbilityClass::AbilityClass()
+AbilityAction::AbilityAction()
 {
 }
 
-AbilityClass::~AbilityClass()
+AbilityAction::~AbilityAction()
 {
 }
