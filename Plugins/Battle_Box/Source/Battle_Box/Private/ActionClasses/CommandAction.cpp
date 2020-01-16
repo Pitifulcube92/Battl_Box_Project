@@ -3,10 +3,17 @@
 
 #include "CommandAction.h"
 
-CommandAction::CommandAction()
+CommandAction::CommandAction() : command(nullptr)
 {
+	SetName("");
+	SetDiscription("");
+	SetActionType(ACTIONTYPE::E_NONE);
+	SetTargetType(TARGETTYPE::E_NONE);
+	SetInteractionType(INTERACTIONTYPE::E_NONE);
+	SetActionID(00);
+	currentweapon = WEAPONTYPE::E_NONE;
 }
-CommandAction::CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, const WEAPONTYPE currentWeap_, const BaseAction* command_)
+CommandAction::CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, const WEAPONTYPE currentWeap_,  BaseAction* const command_)
 {
 	SetName(name_);
 	SetDiscription(discription_);
@@ -14,7 +21,19 @@ CommandAction::CommandAction(const FString name_, const FString discription_, co
 	SetTargetType(target_);
 	SetInteractionType(interaction_);
 	SetActionID(actionID_);
-
+	currentweapon = currentWeap_;
+	command = command_;
+}
+CommandAction::CommandAction(CommandAction* const other_)
+{
+	SetName(other_->ReturnName());
+	SetDiscription(other_->ReturnDiscription());
+	SetActionType(other_->ReturnActionType());
+	SetTargetType(other_->ReturnTargetType());
+	SetInteractionType(other_->ReturnInteractionType());
+	SetActionID(other_->ReturnActionID());
+	currentweapon = ReturnWeaponType();
+	command = ReturnAction();
 }
 void CommandAction::SetWeaponType(WEAPONTYPE type_)
 {
@@ -42,4 +61,5 @@ void CommandAction::OnDestroy()
 }
 CommandAction::~CommandAction()
 {
+	OnDestroy();
 }

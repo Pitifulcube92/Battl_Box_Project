@@ -5,6 +5,12 @@
 
 BaseAction::BaseAction()
 {
+	name = "";
+	discription = "";
+	action = ACTIONTYPE::E_NONE;
+	target = TARGETTYPE::E_NONE;
+	interaction = INTERACTIONTYPE::E_NONE;
+	actionID = 00;
 }
 BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_)
 {
@@ -20,6 +26,7 @@ BaseAction::BaseAction(const BaseAction* other_)
 	name = other_->ReturnName();
 	discription = other_->ReturnDiscription();
 	target = other_->ReturnTargetType();
+	actionID = other_->ReturnActionID();
 }
 void BaseAction::SetName(const FString name_)
 {
