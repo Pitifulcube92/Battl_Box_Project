@@ -16,7 +16,9 @@ public:
 	AbilityAction();
 	AbilityAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_,
 				  const float duration_);
-	AbilityAction(AbilityAction* other_);
+	AbilityAction(AbilityAction* const other_);
+	void SetDuration(const float duration_);
+	float ReturnDuration() const;
 	~AbilityAction();
 };
 #endif // !1

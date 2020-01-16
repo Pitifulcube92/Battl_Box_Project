@@ -12,7 +12,6 @@ enum class WEAPONTYPE
 	E_RANGE,
 	E_BLUNT_WEAP
 };
-
 /**
  * 
  */
