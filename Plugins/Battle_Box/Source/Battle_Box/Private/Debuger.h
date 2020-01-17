@@ -18,6 +18,7 @@ class Debuger
 {
 private:
 	static void Log(const MessageType type_, const FString& message_, const FString& fileName_, const int32 line_);
+	static TArray<FString> LogArray;
 	static MessageType currentType;
 	static FString DebugDirectory;
 public:

@@ -5,9 +5,7 @@
 #include "CoreMinimal.h"
 #include "BaseAction.h"
 
-/**
- * 
- */
+/****/
 class AbilityAction : public BaseAction
 {
 private: 

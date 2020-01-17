@@ -10,7 +10,16 @@ void FBattle_BoxModule::StartupModule()
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	Debuger::InitDebug();
 	Debuger::SetSeverity(MessageType::E_INFO);
-	Debuger::Info("Info: Debuger info works!", "Logger.txt", __LINE__);
+	Debuger::Info("Info is working.", "Battle_Box.cpp", __LINE__);
+
+	Debuger::SetSeverity(MessageType::E_ERROR);
+	Debuger::Error("Error is working.", "Battle_Box.cpp", __LINE__);
+
+	Debuger::SetSeverity(MessageType::E_WARNING);
+	Debuger::Warrning("Warning is Working.", "Battle_Box.cpp", __LINE__);
+
+	Debuger::SetSeverity(MessageType::E_FATAL_ERROR);
+	Debuger::FatalError("FatalError is working.", "Battle_Box.cpp", __LINE__);
 }
 
 void FBattle_BoxModule::ShutdownModule()

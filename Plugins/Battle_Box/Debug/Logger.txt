@@ -1,1 +1,2 @@
- info works!
+INFO: Info is working. in Battle_Box.cpp. Line: 13
+ERROR: Error is working. in Battle_Box.cpp. Line: 16

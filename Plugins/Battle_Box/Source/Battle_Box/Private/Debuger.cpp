@@ -4,8 +4,10 @@
 #include "Debuger.h"
 #include "BattleBoxFileManager.h"
 #include "Misc/Paths.h"
+
 MessageType Debuger::currentType = MessageType::E_NONE;
 FString Debuger::DebugDirectory = "";
+TArray<FString> Debuger::LogArray = TArray<FString>();
 
 void Debuger::InitDebug()
 {
@@ -15,6 +17,7 @@ void Debuger::InitDebug()
 		UE_LOG(LogTemp, Warning, TEXT("Something went wrong with the directory!"));
 		return;
 	}
+	currentType = MessageType::E_FATAL_ERROR;
 	UE_LOG(LogTemp, Log, TEXT("Debug Directory has been made!"));
 }
 void Debuger::Log(const MessageType type_, const FString& message_, const FString& fileName_, const int32 line_)
@@ -23,7 +26,10 @@ void Debuger::Log(const MessageType type_, const FString& message_, const FStrin
 	if (type_ <= currentType && currentType > MessageType::E_NONE)
 	{
 		UE_LOG(LogTemp, Log, TEXT("This Works!"));
-		BattleBoxFileManager::WriteTextFile(DebugDirectory, message_, fileName_, line_, false);		
+		FString LogMessage = message_ + " in " + fileName_ + ". " + "Line: " + FString::FromInt(line_);
+		FString LogFileName = "Logger.txt";
+		LogArray.Add(LogMessage);
+		BattleBoxFileManager::WriteTextArrayToFile(DebugDirectory, LogArray, LogFileName, true);
 	}
 }
 void Debuger::SetSeverity(const MessageType type_)
@@ -32,17 +38,17 @@ void Debuger::SetSeverity(const MessageType type_)
 }
 void Debuger::Info(const FString& message_, const FString& fileName_, const int32 line_)
 {
-	Log(MessageType::E_INFO, message_, fileName_, line_);
+	Log(MessageType::E_INFO,"INFO: " + message_, fileName_, line_);
 }
 void Debuger::Error(const FString& message_, const FString& fileName_, const int32 line_)
 {
-	Log(MessageType::E_ERROR, message_, fileName_, line_);
+	Log(MessageType::E_ERROR,"ERROR: " + message_, fileName_, line_);
 }
 void Debuger::Warrning(const FString& message_, const FString& fileName_, const int32 line_)
 {
-	Log(MessageType::E_WARNING, message_, fileName_, line_);
+	Log(MessageType::E_WARNING,"WARNING: " + message_, fileName_, line_);
 }
 void Debuger::FatalError(const FString& message_, const FString& fileName_, const int32 line_)
 {
-	Log(MessageType::E_FATAL_ERROR, message_, fileName_, line_);
+	Log(MessageType::E_FATAL_ERROR,"FATALERROR: " + message_, fileName_, line_);
 }

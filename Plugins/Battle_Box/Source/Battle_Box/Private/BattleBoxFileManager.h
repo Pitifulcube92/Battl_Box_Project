@@ -20,6 +20,7 @@ public:
 	static bool VerifyOnCreateDirectory(const FString& testDir_);
 	static void GetFileSize(const FString& sourcePath_);
 	static void DeleteFile(const FString& sourcePath_);
-	static void WriteTextFile(const FString& saveDirectory_, const FString context_, const FString& FileName_, const int32 line_, bool const IsOverWrite_);
+	static void WriteTextFile(const FString& saveDirectory_, const FString context_, const FString& FileName_, bool const IsOverWrite_);
+	static void WriteTextArrayToFile(const FString& saveDirectory_, const TArray<FString> textArray_, const FString& FileName_, bool const IsOverWrite_);
 };
 #endif // !

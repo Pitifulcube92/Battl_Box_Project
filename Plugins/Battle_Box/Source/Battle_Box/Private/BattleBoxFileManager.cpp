@@ -40,17 +40,39 @@ void  BattleBoxFileManager::DeleteFile(const FString& sourcePath_)
 		return;
 	}
 }
-void  BattleBoxFileManager::WriteTextFile(const FString& saveDirectory_, const FString context_, const FString& FileName_, const int32 line_,  bool const IsOverWrite_)
+void BattleBoxFileManager::WriteTextFile(const FString& saveDirectory_, const FString context_, const FString& FileName_,  bool const IsOverWrite_)
 {
 	IPlatformFile& PlateFormFile = FPlatformFileManager::Get().GetPlatformFile();
 
 	if(PlateFormFile.CreateDirectory(*saveDirectory_))
 	{
 		FString absoluteFilePath = saveDirectory_ + "/" + FileName_;
-		if (IsOverWrite_|| !PlateFormFile.FileExists(*absoluteFilePath))
+		
+		if (IsOverWrite_ || !PlateFormFile.FileExists(*absoluteFilePath))
 		{
-			FFileHelper::SaveStringToFile(*context_ + line_, *absoluteFilePath);
+			FFileHelper::SaveStringToFile(*context_, *absoluteFilePath);
 		}
 	}
 }
+void  BattleBoxFileManager::WriteTextArrayToFile(const FString& saveDirectory_, const TArray<FString> textArray_, const FString& FileName_, bool const IsOverWrite_)
+{
+	if (!IsOverWrite_)
+	{
+		if (!FPlatformFileManager::Get().GetPlatformFile().FileExists(*saveDirectory_))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("This does not work"));
+			return;
+		}
+	}
+
+	FString FinalString = "";
+	for (auto e : textArray_)
+	{
+		FinalString += e;
+		FinalString += LINE_TERMINATOR;
+	}
+	FString absoluteFilePath = saveDirectory_ + "/" + FileName_;
+	FFileHelper::SaveStringToFile(*FinalString, *absoluteFilePath);
+}
+
 
