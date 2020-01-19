@@ -14,7 +14,7 @@ enum class MessageType
 	E_ERROR,
 	E_FATAL_ERROR
 };
-class Debuger 
+class Debugger 
 {
 private:
 	static void Log(const MessageType type_, const FString& message_, const FString& fileName_, const int32 line_);
@@ -22,11 +22,11 @@ private:
 	static MessageType currentType;
 	static FString DebugDirectory;
 public:
-	Debuger(const Debuger&) = delete;
-	Debuger(Debuger&&) = delete;
-	Debuger& operator =(const Debuger&) = delete;
-	Debuger& operator =(Debuger&&) = delete;
-	Debuger() = delete;
+	Debugger(const Debugger&) = delete;
+	Debugger(Debugger&&) = delete;
+	Debugger& operator =(const Debugger&) = delete;
+	Debugger& operator =(Debugger&&) = delete;
+	Debugger() = delete;
 
 	static void InitDebug();
 	static void SetSeverity(const MessageType type_);
