@@ -26,6 +26,7 @@ public class BB_Runtime_System : ModuleRules
             new string[]
             {
                 "Core",
+                "Battle_Box"
 				// ... add other public dependencies that you statically link with here ...
 			}
             );
@@ -38,6 +39,7 @@ public class BB_Runtime_System : ModuleRules
                 "Engine",
                 "Slate",
                 "SlateCore",
+                "Battle_Box"
 				// ... add private dependencies that you statically link with here ...	
 			}
             );
@@ -46,6 +48,7 @@ public class BB_Runtime_System : ModuleRules
         DynamicallyLoadedModuleNames.AddRange(
             new string[]
             {
+              
 				// ... add any modules that your module loads dynamically here ...
 			}
             );

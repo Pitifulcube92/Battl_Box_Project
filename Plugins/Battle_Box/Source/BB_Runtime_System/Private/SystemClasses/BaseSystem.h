@@ -4,7 +4,9 @@
 
 class BaseSystem
 {
-	virtual void BaseCalculate(const bool IsSingledTarget) = 0;
+public:
+	virtual void BaseCalculate(const bool IsSingledTarget);
+	virtual ~BaseSystem();
 };
 
 #endif // !BASESYSTEM_H

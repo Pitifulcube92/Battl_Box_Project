@@ -26,6 +26,7 @@ public class Battle_Box : ModuleRules
 			new string[]
 			{
 				"Core",
+                "BB_Runtime_System"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -38,6 +39,7 @@ public class Battle_Box : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "BB_Runtime_System"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
