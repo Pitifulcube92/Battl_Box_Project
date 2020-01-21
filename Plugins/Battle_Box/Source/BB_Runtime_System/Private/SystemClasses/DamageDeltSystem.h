@@ -17,10 +17,10 @@ private:
 public:
 	DamageDeltSystem();
 	void BaseCalculate(const bool IsSingledTarget_);
-	void CalculateTotalDamage(const StatSheetObject* target_);
-	float CalculateMagicDamage(const StatSheetObject* target_);
-	float CalculatePhysicalDefence(const StatSheetObject* target_);
-	float CalculateMagicalDefence(const StatSheetObject* target_);
+	void CalculateTotalDamage(StatSheetObject* const target_);
+	float CalculateMagicDamage(StatSheetObject* const target_);
+	float CalculatePhysicalDefence(StatSheetObject* const target_);
+	float CalculateMagicalDefence(StatSheetObject* const target_);
 	void SetOwner(StatSheetObject* const owner_);
 	void SetTarget(StatSheetObject* const target_);
 	void AddTargetToArray(StatSheetObject* const target_);

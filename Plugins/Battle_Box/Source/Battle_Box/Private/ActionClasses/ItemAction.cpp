@@ -43,9 +43,17 @@ void ItemAction::SetDamageType(const DAMAGETYPE type_)
 {
 	damageType = type_;
 }
+void ItemAction::SetType(const ITEMTYPE type_)
+{
+	type = type_;
+}
 void ItemAction::AddEffect(AbilityAction* const ability_)
 {
 	effectList.Add(ability_);
+}
+ITEMTYPE ItemAction::ReturnItemType() const
+{
+	return type;
 }
 uint32 ItemAction::ReturnValue() const 
 {
