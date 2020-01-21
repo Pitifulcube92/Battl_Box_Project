@@ -16,7 +16,7 @@ private:
 	TArray<float> totalDamageValues;
 public:
 	DamageDeltSystem();
-	void BaseCalculate(const bool IsSingledTarget);
+	void BaseCalculate(const bool IsSingledTarget_);
 	void CalculateTotalDamage(const StatSheetObject* target_);
 	float CalculateMagicDamage(const StatSheetObject* target_);
 	float CalculatePhysicalDefence(const StatSheetObject* target_);

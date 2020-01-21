@@ -40,7 +40,7 @@ public class Battle_Box : ModuleRules
 				"Slate",
 				"SlateCore",
                 "BB_Runtime_System"
-				// ... add private dependencies that you statically link with here ...	
+				// ...   add private dependencies that you statically link with here ...	
 			}
 			);
 		
