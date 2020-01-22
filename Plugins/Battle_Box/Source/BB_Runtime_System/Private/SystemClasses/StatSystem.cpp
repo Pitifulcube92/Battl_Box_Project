@@ -7,9 +7,15 @@ StatSystem::StatSystem()
 {
 
 }
-void StatSystem::BaseCalculate(const bool IsSingleTarget_)
+void StatSystem::BaseCalculate(const bool IsSingledTarget_)
 {
+	if (IsSingledTarget_)
+	{
+	}
+	else if (IsSingledTarget_)
+	{
 
+	}
 }
 void StatSystem::AddStatModifier(BaseAction* const action_)
 {

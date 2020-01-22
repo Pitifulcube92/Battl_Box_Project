@@ -7,9 +7,15 @@ EffectSystem::EffectSystem()
 {
 
 }
-void EffectSystem::BaseCalculate(const bool IsSingleTarget_)
+void EffectSystem::BaseCalculate(const bool IsSingledTarget_)
 {
+	if (IsSingledTarget_)
+	{
+	}
+	else if (IsSingledTarget_)
+	{
 
+	}
 }
 void EffectSystem::CallculateEffect(BaseAction* action_)
 {

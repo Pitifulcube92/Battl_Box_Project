@@ -5,6 +5,9 @@
 #include "BaseSystem.h"
 #include "Containers/Queue.h"
 class StatSheetObject;
+class ItemAction;
+class AbilityAction;
+class CommandAction;
 
 class DamageDeltSystem : public BaseSystem
 {
@@ -17,8 +20,11 @@ private:
 public:
 	DamageDeltSystem();
 	void BaseCalculate(const bool IsSingledTarget_);
-	void CalculateTotalDamage(StatSheetObject* const target_);
+	float CalculateWeaponDamage(StatSheetObject* const target_);
 	float CalculateMagicDamage(StatSheetObject* const target_);
+	float CalculateCommandDamage(CommandAction* const targetCommand_);
+	float CalculateAbilityDamage(AbilityAction* const targetAbility_);
+	float ClaculateItemDamage(ItemAction* const targetItem_);
 	float CalculatePhysicalDefence(StatSheetObject* const target_);
 	float CalculateMagicalDefence(StatSheetObject* const target_);
 	void SetOwner(StatSheetObject* const owner_);
