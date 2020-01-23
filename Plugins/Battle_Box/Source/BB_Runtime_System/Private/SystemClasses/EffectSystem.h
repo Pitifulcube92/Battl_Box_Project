@@ -14,7 +14,7 @@ private:
 	BaseAction* targetAction;
 public:
 	EffectSystem();
-	void BaseCalculate(const bool IsSingleTarget_);
+	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
 	void CallculateEffect(BaseAction* action_);
 	void RemoveEffect(BaseAction* action_);
 	void SetTarget(StatSheetObject* target_);

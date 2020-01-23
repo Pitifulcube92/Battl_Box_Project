@@ -26,9 +26,9 @@ enum class TARGETTYPE
 enum class INTERACTIONTYPE
 {
 	E_NONE,
-	E_BASIC_ACTION,
-	E_PHYSICAL_ACTION,
-	E_ABILITY_ACTION
+	E_PHYSICAL,
+	E_ABILITY,
+	E_PHYSICAL_AND_ABILITY
 };
 
 enum class DAMAGETYPE
@@ -62,10 +62,11 @@ private:
 	TARGETTYPE target;
 	INTERACTIONTYPE interaction;
 	uint32 actionID;
+	TMap<FString, float> statMap;
 public:
 	BaseAction();
 	//Base Construction
-	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_);
+	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_);
 	BaseAction(const BaseAction* other_);
 	void SetName(const FString name_);
 	void SetDiscription(const FString discription_);
@@ -81,6 +82,7 @@ public:
 	TARGETTYPE ReturnTargetType() const;
 	INTERACTIONTYPE ReturnInteractionType() const;
 	uint32 ReturnActionID() const;
+	TMap<FString, float> ReturnStatMap() const;
 	virtual ~BaseAction();
 };
 

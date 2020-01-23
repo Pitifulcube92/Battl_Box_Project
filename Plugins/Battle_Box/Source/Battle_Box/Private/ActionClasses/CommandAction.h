@@ -18,15 +18,17 @@ enum class WEAPONTYPE
 class CommandAction : public BaseAction
 {
 private:
+	bool isActionCommand;
 	WEAPONTYPE currentweapon;
 	BaseAction* command;
 public:
 	CommandAction();
-	CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_,const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_,
+	CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_,const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
 				  const WEAPONTYPE currentWeap_,  BaseAction* const command_);
 	CommandAction(CommandAction* const other_);
 	void SetWeaponType(WEAPONTYPE type_);
 	void SetCommand(BaseAction* action_);
+	//TO DO: Make a method thta can execute a blueprint script
 	WEAPONTYPE ReturnWeaponType() const;
 	BaseAction* ReturnAction() const;
 	void OnDestroy();

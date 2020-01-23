@@ -7,7 +7,7 @@ StatSystem::StatSystem()
 {
 
 }
-void StatSystem::BaseCalculate(const bool IsSingledTarget_)
+void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
 {
 	if (IsSingledTarget_)
 	{

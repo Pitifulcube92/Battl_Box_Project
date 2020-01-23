@@ -14,7 +14,7 @@ AbilityAction::AbilityAction()
 	SetActionID(00);
 	duration = 0.0f;
 }
-AbilityAction::AbilityAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_,
+AbilityAction::AbilityAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
 	const float duration_)
 {
 	SetName(name_);
@@ -34,6 +34,10 @@ AbilityAction::AbilityAction(AbilityAction* const other_)
 	SetActionID(other_->ReturnActionID());
 	duration = other_->ReturnDuration();
 
+}
+float AbilityAction::CalculateAbilityValue()
+{
+	//TO DO: implement an equation class.
 }
 void AbilityAction::SetDuration(const float duration_)
 {

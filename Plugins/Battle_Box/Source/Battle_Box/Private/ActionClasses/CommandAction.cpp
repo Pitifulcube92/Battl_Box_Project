@@ -13,7 +13,7 @@ CommandAction::CommandAction() : command(nullptr)
 	SetActionID(00);
 	currentweapon = WEAPONTYPE::E_NONE;
 }
-CommandAction::CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, const WEAPONTYPE currentWeap_,  BaseAction* const command_)
+CommandAction::CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const WEAPONTYPE currentWeap_,  BaseAction* const command_)
 {
 	SetName(name_);
 	SetDiscription(discription_);

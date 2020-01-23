@@ -14,7 +14,7 @@ private:
 	TArray<StatSheetObject*> targets;
 public:
 	StatSystem();
-	void BaseCalculate(const bool IsSingleTarget_);
+	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
 	void AddStatModifier(BaseAction* const action_);
 	void RemoveModifier(BaseAction* const action_);
 	void AddTmpModifier(BaseAction* action_, const float duration_);

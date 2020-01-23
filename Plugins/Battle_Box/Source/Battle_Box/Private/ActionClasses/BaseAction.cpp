@@ -12,7 +12,7 @@ BaseAction::BaseAction()
 	interaction = INTERACTIONTYPE::E_NONE;
 	actionID = 00;
 }
-BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_)
+BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_)
 {
 	name = name_;
 	discription = discription_;
@@ -67,6 +67,10 @@ ACTIONTYPE BaseAction::ReturnActionType() const
 TARGETTYPE BaseAction::ReturnTargetType() const
 {
 	return target;
+}
+TMap<FString, float> BaseAction::ReturnStatMap() const
+{
+	return statMap;
 }
 INTERACTIONTYPE BaseAction::ReturnInteractionType() const
 {
