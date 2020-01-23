@@ -68,20 +68,32 @@ public:
 	//Base Construction
 	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_);
 	BaseAction(const BaseAction* other_);
+	//Sets Name.
 	void SetName(const FString name_);
+	//Sets Discription.
 	void SetDiscription(const FString discription_);
+	//Sets Actiontype.
 	void SetActionType(const ACTIONTYPE type_);
+	//Sets target type.
 	void SetTargetType(const TARGETTYPE type_);
+	//Sets interaction type.
 	void SetInteractionType(const INTERACTIONTYPE type_);
+	//Sets action ID
 	void SetActionID(const uint32 actionID_);
 	void OnDestroy();
-
+	//Return Name.
 	FString ReturnName() const;
+	//Return discription.
 	FString ReturnDiscription() const;
+	//Return action type.
 	ACTIONTYPE ReturnActionType() const;
+	//Return target type.
 	TARGETTYPE ReturnTargetType() const;
+	//Return Interaction type.
 	INTERACTIONTYPE ReturnInteractionType() const;
+	//Return Action ID.
 	uint32 ReturnActionID() const;
+	//Return Stat Map
 	TMap<FString, float> ReturnStatMap() const;
 	virtual ~BaseAction();
 };
