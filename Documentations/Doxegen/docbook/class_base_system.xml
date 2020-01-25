@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_base_system">
+<title>BaseSystem Class Reference</title>
+<indexterm><primary>BaseSystem</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BaseSystem.h&gt;</computeroutput>
+</para>
+Inheritance diagram for BaseSystem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_system__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for BaseSystem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_system__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1">BaseCalculate</link> (const bool IsSingledTarget_, <link linkend="_class_base_action">BaseAction</link> *const action_)=0</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16">~BaseSystem</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16"/>    <section>
+    <title>~BaseSystem()</title>
+<indexterm><primary>~BaseSystem</primary><secondary>BaseSystem</secondary></indexterm>
+<indexterm><primary>BaseSystem</primary><secondary>~BaseSystem</secondary></indexterm>
+<para><computeroutput>virtual BaseSystem::~BaseSystem ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><programlisting>9 {};
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1"/>    <section>
+    <title>BaseCalculate()</title>
+<indexterm><primary>BaseCalculate</primary><secondary>BaseSystem</secondary></indexterm>
+<indexterm><primary>BaseSystem</primary><secondary>BaseCalculate</secondary></indexterm>
+<para><computeroutput>virtual void BaseSystem::BaseCalculate (const bool IsSingledTarget_, <link linkend="_class_base_action">BaseAction</link> *const action_)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0">EffectSystem</link>, <link linkend="_class_stat_system_1a805454116d5cd0a0c408117b42f413be">StatSystem</link>, and <link linkend="_class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663">DamageDeltSystem</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<link linkend="__base_system_8h">BaseSystem.h</link></section>
+</section>

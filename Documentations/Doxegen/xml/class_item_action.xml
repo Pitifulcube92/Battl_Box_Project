@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_item_action" kind="class" language="C++" prot="public">
+    <compoundname>ItemAction</compoundname>
+    <basecompoundref refid="class_base_action" prot="public" virt="non-virtual">BaseAction</basecompoundref>
+    <includes refid="_item_action_8h" local="no">ItemAction.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_item_action_1a86da96d7beb1b83eceb55297ee397088" prot="private" static="no" mutable="no">
+        <type><ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746" kindref="member">ITEMTYPE</ref></type>
+        <definition>ITEMTYPE ItemAction::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="24" column="10" bodyfile="ItemAction.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_item_action_1ac8676cc277e93d28f1f6789fddf07da0" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 ItemAction::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="25" column="8" bodyfile="ItemAction.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_item_action_1a1f7abdb1a6ced6acfa28da1767c5cd22" prot="private" static="no" mutable="no">
+        <type>TArray&lt; <ref refid="class_ability_action" kindref="compound">AbilityAction</ref> * &gt;</type>
+        <definition>TArray&lt;AbilityAction*&gt; ItemAction::effectList</definition>
+        <argsstring></argsstring>
+        <name>effectList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="26" column="8" bodyfile="ItemAction.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_item_action_1a93d8f1fe4fdb7223d77b5f176fcbdba0" prot="private" static="no" mutable="no">
+        <type><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" kindref="member">DAMAGETYPE</ref></type>
+        <definition>DAMAGETYPE ItemAction::damageType</definition>
+        <argsstring></argsstring>
+        <name>damageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="27" column="12" bodyfile="ItemAction.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_item_action_1ac1668162b93e3a97a555cff050593ec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ItemAction::ItemAction</definition>
+        <argsstring>()</argsstring>
+        <name>ItemAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="29" column="1" bodyfile="ItemAction.cpp" bodystart="4" bodyend="14"/>
+        <references refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</references>
+        <references refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" compoundref="_base_action_8cpp" startline="51" endline="54">BaseAction::SetActionID</references>
+        <references refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" compoundref="_base_action_8cpp" startline="39" endline="42">BaseAction::SetActionType</references>
+        <references refid="class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23" compoundref="_item_action_8cpp" startline="42" endline="45">SetDamageType</references>
+        <references refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" compoundref="_base_action_8cpp" startline="35" endline="38">BaseAction::SetDiscription</references>
+        <references refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" compoundref="_base_action_8cpp" startline="47" endline="50">BaseAction::SetInteractionType</references>
+        <references refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" compoundref="_base_action_8cpp" startline="31" endline="34">BaseAction::SetName</references>
+        <references refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" compoundref="_base_action_8cpp" startline="43" endline="46">BaseAction::SetTargetType</references>
+        <references refid="class_item_action_1aa6fdb08d13415443f080d75d2b934773" compoundref="_item_action_8cpp" startline="38" endline="41">SetValue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1a4ce5e6d0984f4b9f3352327396bb154f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ItemAction::ItemAction</definition>
+        <argsstring>(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const uint32 value_, const DAMAGETYPE damageType_, const TArray&lt; AbilityAction * &gt; effectArray_)</argsstring>
+        <name>ItemAction</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>const FString</type>
+          <declname>discription_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></type>
+          <declname>action_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></type>
+          <declname>target_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></type>
+          <declname>interaction_</declname>
+        </param>
+        <param>
+          <type>const uint32</type>
+          <declname>actionID_</declname>
+        </param>
+        <param>
+          <type>TMap&lt; FString, float &gt;</type>
+          <declname>statMap_</declname>
+        </param>
+        <param>
+          <type>const uint32</type>
+          <declname>value_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" kindref="member">DAMAGETYPE</ref></type>
+          <declname>damageType_</declname>
+        </param>
+        <param>
+          <type>const TArray&lt; <ref refid="class_ability_action" kindref="compound">AbilityAction</ref> * &gt;</type>
+          <declname>effectArray_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="30" column="1" bodyfile="ItemAction.cpp" bodystart="15" bodyend="27"/>
+        <references refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" compoundref="_base_action_8cpp" startline="51" endline="54">BaseAction::SetActionID</references>
+        <references refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" compoundref="_base_action_8cpp" startline="39" endline="42">BaseAction::SetActionType</references>
+        <references refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" compoundref="_base_action_8cpp" startline="35" endline="38">BaseAction::SetDiscription</references>
+        <references refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" compoundref="_base_action_8cpp" startline="47" endline="50">BaseAction::SetInteractionType</references>
+        <references refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" compoundref="_base_action_8cpp" startline="31" endline="34">BaseAction::SetName</references>
+        <references refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" compoundref="_base_action_8cpp" startline="43" endline="46">BaseAction::SetTargetType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ItemAction::ItemAction</definition>
+        <argsstring>(const ItemAction *other_)</argsstring>
+        <name>ItemAction</name>
+        <param>
+          <type>const <ref refid="class_item_action" kindref="compound">ItemAction</ref> *</type>
+          <declname>other_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="31" column="1" bodyfile="ItemAction.cpp" bodystart="28" bodyend="37"/>
+        <references refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" compoundref="_base_action_8cpp" startline="79" endline="82">BaseAction::ReturnActionID</references>
+        <references refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" compoundref="_base_action_8cpp" startline="63" endline="66">BaseAction::ReturnActionType</references>
+        <references refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" compoundref="_base_action_8cpp" startline="59" endline="62">BaseAction::ReturnDiscription</references>
+        <references refid="class_base_action_1a70d34140345d92808deed0304397b074" compoundref="_base_action_8cpp" startline="75" endline="78">BaseAction::ReturnInteractionType</references>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+        <references refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" compoundref="_base_action_8cpp" startline="67" endline="70">BaseAction::ReturnTargetType</references>
+        <references refid="class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f" compoundref="_item_action_8cpp" startline="58" endline="61">ReturnValue</references>
+        <references refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" compoundref="_base_action_8cpp" startline="51" endline="54">BaseAction::SetActionID</references>
+        <references refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" compoundref="_base_action_8cpp" startline="39" endline="42">BaseAction::SetActionType</references>
+        <references refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" compoundref="_base_action_8cpp" startline="35" endline="38">BaseAction::SetDiscription</references>
+        <references refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" compoundref="_base_action_8cpp" startline="47" endline="50">BaseAction::SetInteractionType</references>
+        <references refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" compoundref="_base_action_8cpp" startline="31" endline="34">BaseAction::SetName</references>
+        <references refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" compoundref="_base_action_8cpp" startline="43" endline="46">BaseAction::SetTargetType</references>
+        <references refid="class_item_action_1aa6fdb08d13415443f080d75d2b934773" compoundref="_item_action_8cpp" startline="38" endline="41">SetValue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1ad433b7e82b9144f2301190698799577e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ItemAction::SetType</definition>
+        <argsstring>(const ITEMTYPE type_)</argsstring>
+        <name>SetType</name>
+        <param>
+          <type>const <ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746" kindref="member">ITEMTYPE</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="33" column="6" bodyfile="ItemAction.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1aa6fdb08d13415443f080d75d2b934773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ItemAction::SetValue</definition>
+        <argsstring>(const uint32 value_)</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>const uint32</type>
+          <declname>value_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="35" column="6" bodyfile="ItemAction.cpp" bodystart="38" bodyend="41"/>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ItemAction::SetDamageType</definition>
+        <argsstring>(const DAMAGETYPE type_)</argsstring>
+        <name>SetDamageType</name>
+        <param>
+          <type>const <ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" kindref="member">DAMAGETYPE</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="37" column="6" bodyfile="ItemAction.cpp" bodystart="42" bodyend="45"/>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1ab069950b61fd230fc34e55e546bc1772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ItemAction::AddEffect</definition>
+        <argsstring>(AbilityAction *const ability_)</argsstring>
+        <name>AddEffect</name>
+        <param>
+          <type><ref refid="class_ability_action" kindref="compound">AbilityAction</ref> *const</type>
+          <declname>ability_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="39" column="6" bodyfile="ItemAction.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1aa3322621804e1869f956757c31e4c4b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746" kindref="member">ITEMTYPE</ref></type>
+        <definition>ITEMTYPE ItemAction::ReturnItemType</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnItemType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="41" column="10" bodyfile="ItemAction.cpp" bodystart="54" bodyend="57"/>
+        <referencedby refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" compoundref="_damage_delt_system_8cpp" startline="14" endline="99">DamageDeltSystem::BaseCalculate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 ItemAction::ReturnValue</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="43" column="8" bodyfile="ItemAction.cpp" bodystart="58" bodyend="61"/>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1a4b2e489cc0ae92c10ce4d6d91e6b5b7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" kindref="member">DAMAGETYPE</ref></type>
+        <definition>DAMAGETYPE ItemAction::ReturnDamageType</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnDamageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="45" column="12" bodyfile="ItemAction.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1adf02b73e5a94f785a2a5eec11cbfb003" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TArray&lt; <ref refid="class_ability_action" kindref="compound">AbilityAction</ref> * &gt;</type>
+        <definition>TArray&lt; AbilityAction * &gt; ItemAction::ReturnEffectList</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnEffectList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="46" column="8" bodyfile="ItemAction.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1a79871a2e6d401cff1d005fdd161c1120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ItemAction::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="47" column="6" bodyfile="ItemAction.cpp" bodystart="74" bodyend="77"/>
+        <referencedby refid="class_item_action_1a69652c432e3177c89052c5a2fa3819ae" compoundref="_item_action_8cpp" startline="78" endline="81">~ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_item_action_1a69652c432e3177c89052c5a2fa3819ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ItemAction::~ItemAction</definition>
+        <argsstring>()</argsstring>
+        <name>~ItemAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ItemAction.h" line="48" column="1" bodyfile="ItemAction.cpp" bodystart="78" bodyend="81"/>
+        <references refid="class_item_action_1a79871a2e6d401cff1d005fdd161c1120" compoundref="_item_action_8cpp" startline="74" endline="77">OnDestroy</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseAction</label>
+        <link refid="class_base_action"/>
+      </node>
+      <node id="1">
+        <label>ItemAction</label>
+        <link refid="class_item_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseAction</label>
+        <link refid="class_base_action"/>
+      </node>
+      <node id="1">
+        <label>ItemAction</label>
+        <link refid="class_item_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ItemAction.h" line="22" column="1" bodyfile="ItemAction.h" bodystart="21" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_item_action_1ab069950b61fd230fc34e55e546bc1772" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>AddEffect</name></member>
+      <member refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a359a13b822b4da103d91d3d0179d8302" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>BaseAction</name></member>
+      <member refid="class_item_action_1a93d8f1fe4fdb7223d77b5f176fcbdba0" prot="private" virt="non-virtual"><scope>ItemAction</scope><name>damageType</name></member>
+      <member refid="class_item_action_1a1f7abdb1a6ced6acfa28da1767c5cd22" prot="private" virt="non-virtual"><scope>ItemAction</scope><name>effectList</name></member>
+      <member refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ItemAction</name></member>
+      <member refid="class_item_action_1a4ce5e6d0984f4b9f3352327396bb154f" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ItemAction</name></member>
+      <member refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ItemAction</name></member>
+      <member refid="class_item_action_1a79871a2e6d401cff1d005fdd161c1120" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>OnDestroy</name></member>
+      <member refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnActionID</name></member>
+      <member refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnActionType</name></member>
+      <member refid="class_item_action_1a4b2e489cc0ae92c10ce4d6d91e6b5b7d" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnDamageType</name></member>
+      <member refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnDiscription</name></member>
+      <member refid="class_item_action_1adf02b73e5a94f785a2a5eec11cbfb003" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnEffectList</name></member>
+      <member refid="class_base_action_1a70d34140345d92808deed0304397b074" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnInteractionType</name></member>
+      <member refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnItemType</name></member>
+      <member refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnName</name></member>
+      <member refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnStatMap</name></member>
+      <member refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnTargetType</name></member>
+      <member refid="class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>ReturnValue</name></member>
+      <member refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetActionID</name></member>
+      <member refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetActionType</name></member>
+      <member refid="class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetDamageType</name></member>
+      <member refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetDiscription</name></member>
+      <member refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetInteractionType</name></member>
+      <member refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetName</name></member>
+      <member refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetTargetType</name></member>
+      <member refid="class_item_action_1ad433b7e82b9144f2301190698799577e" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetType</name></member>
+      <member refid="class_item_action_1aa6fdb08d13415443f080d75d2b934773" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>SetValue</name></member>
+      <member refid="class_item_action_1a86da96d7beb1b83eceb55297ee397088" prot="private" virt="non-virtual"><scope>ItemAction</scope><name>type</name></member>
+      <member refid="class_item_action_1ac8676cc277e93d28f1f6789fddf07da0" prot="private" virt="non-virtual"><scope>ItemAction</scope><name>value</name></member>
+      <member refid="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" prot="public" virt="virtual"><scope>ItemAction</scope><name>~BaseAction</name></member>
+      <member refid="class_item_action_1a69652c432e3177c89052c5a2fa3819ae" prot="public" virt="non-virtual"><scope>ItemAction</scope><name>~ItemAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

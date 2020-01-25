@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_debuger_8cpp" kind="file" language="C++">
+    <compoundname>Debuger.cpp</compoundname>
+    <includes refid="_debugger_8h" local="yes">Debugger.h</includes>
+    <includes refid="_battle_box_file_manager_8h" local="yes">BattleBoxFileManager.h</includes>
+    <includes local="yes">Misc/Paths.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="5">
+        <label>Misc/Paths.h</label>
+      </node>
+      <node id="2">
+        <label>Debugger.h</label>
+        <link refid="_debugger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp</label>
+        <link refid="_debuger_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BattleBoxFileManager.h</label>
+        <link refid="_battle_box_file_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Fill<sp/>out<sp/>your<sp/>copyright<sp/>notice<sp/>in<sp/>the<sp/>Description<sp/>page<sp/>of<sp/>Project<sp/>Settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_debugger_8h" kindref="compound">Debugger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_battle_box_file_manager_8h" kindref="compound">BattleBoxFileManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Misc/Paths.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kindref="member">MessageType</ref><sp/>Debugger::currentType<sp/>=<sp/><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100" kindref="member">MessageType::E_NONE</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">FString<sp/>Debugger::DebugDirectory<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">TArray&lt;FString&gt;<sp/>Debugger::LogArray<sp/>=<sp/>TArray&lt;FString&gt;();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" kindref="member">Debugger::InitDebug</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>DebugDirectory<sp/>=<sp/>FPaths::ProjectPluginsDir()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/Battle_Box/Debug&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa" kindref="member">BattleBoxFileManager::VerifyOnCreateDirectory</ref>(DebugDirectory))</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UE_LOG(LogTemp,<sp/>Warning,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;Something<sp/>went<sp/>wrong<sp/>with<sp/>the<sp/>directory!&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>currentType<sp/>=<sp/><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3" kindref="member">MessageType::E_FATAL_ERROR</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>UE_LOG(LogTemp,<sp/>Log,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;Debug<sp/>Directory<sp/>has<sp/>been<sp/>made!&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Debugger::Log(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kindref="member">MessageType</ref><sp/>type_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>message_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>fileName_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32<sp/>line_)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>UE_LOG(LogTemp,<sp/>Log,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;This<sp/>Works!&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type_<sp/>&lt;=<sp/>currentType<sp/>&amp;&amp;<sp/>currentType<sp/>&gt;<sp/><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100" kindref="member">MessageType::E_NONE</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UE_LOG(LogTemp,<sp/>Log,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;This<sp/>Works!&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FString<sp/>LogMessage<sp/>=<sp/>message_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>in<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>fileName_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Line:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>FString::FromInt(line_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FString<sp/>LogFileName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Logger.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogArray.Add(LogMessage);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_battle_box_file_manager_1a132a3963cf91131124f5b5ff3d4f4909" kindref="member">BattleBoxFileManager::WriteTextArrayToFile</ref>(DebugDirectory,<sp/>LogArray,<sp/>LogFileName,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35" refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" kindref="member">Debugger::SetSeverity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kindref="member">MessageType</ref><sp/>type_)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>currentType<sp/>=<sp/>type_;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39" refid="class_debugger_1aef91ed84489c9c928445e1f712d401de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_debugger_1aef91ed84489c9c928445e1f712d401de" kindref="member">Debugger::Info</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>message_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>fileName_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32<sp/>line_)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Log(<ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8" kindref="member">MessageType::E_INFO</ref>,</highlight><highlight class="stringliteral">&quot;INFO:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message_,<sp/>fileName_,<sp/>line_);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43" refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" kindref="member">Debugger::Error</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>message_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>fileName_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32<sp/>line_)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>Log(<ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76" kindref="member">MessageType::E_ERROR</ref>,</highlight><highlight class="stringliteral">&quot;ERROR:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message_,<sp/>fileName_,<sp/>line_);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47" refid="class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3" kindref="member">Debugger::Warrning</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>message_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>fileName_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32<sp/>line_)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>Log(<ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd" kindref="member">MessageType::E_WARNING</ref>,</highlight><highlight class="stringliteral">&quot;WARNING:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message_,<sp/>fileName_,<sp/>line_);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51" refid="class_debugger_1a34151070033a196f3a220dd0297fd3d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_debugger_1a34151070033a196f3a220dd0297fd3d6" kindref="member">Debugger::FatalError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>message_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString&amp;<sp/>fileName_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32<sp/>line_)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>Log(<ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3" kindref="member">MessageType::E_FATAL_ERROR</ref>,</highlight><highlight class="stringliteral">&quot;FATALERROR:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message_,<sp/>fileName_,<sp/>line_);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__item_action_8h">
+<title>ItemAction.h File Reference</title>
+<indexterm><primary>ItemAction.h</primary></indexterm>
+<programlisting>#include &quot;CoreMinimal.h&quot;
+#include &quot;BaseAction.h&quot;
+#include &quot;Containers/Array.h&quot;
+#include &quot;Containers/Map.h&quot;
+</programlisting>Include dependency graph for ItemAction.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_item_action_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_item_action_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_item_action">ItemAction</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746">ITEMTYPE</link> { 
+<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a60880a7ff476d1de07c31261d81d4100">ITEMTYPE::E_NONE</link>, 
+<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c">ITEMTYPE::E_CONSUMABLE</link>, 
+<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3522a06e460b0cab0962e66d20a4913d">ITEMTYPE::E_ARMOR</link>, 
+<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87">ITEMTYPE::E_WEAPON</link>, 
+
+<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3c72ed2815dc6cb034ee0a47d58cc6d6">ITEMTYPE::E_KEY_ITEM</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746"/>    <section>
+    <title>ITEMTYPE</title>
+<indexterm><primary>ITEMTYPE</primary><secondary>ItemAction.h</secondary></indexterm>
+<indexterm><primary>ItemAction.h</primary><secondary>ITEMTYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746">ITEMTYPE</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>ItemAction.h</secondary></indexterm>
+<indexterm><primary>ItemAction.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_CONSUMABLE</primary><secondary>ItemAction.h</secondary></indexterm>
+<indexterm><primary>ItemAction.h</primary><secondary>E_CONSUMABLE</secondary></indexterm>
+<anchor xml:id="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c"/>E_CONSUMABLE</entry><entry></entry></row><row><entry><indexterm><primary>E_ARMOR</primary><secondary>ItemAction.h</secondary></indexterm>
+<indexterm><primary>ItemAction.h</primary><secondary>E_ARMOR</secondary></indexterm>
+<anchor xml:id="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3522a06e460b0cab0962e66d20a4913d"/>E_ARMOR</entry><entry></entry></row><row><entry><indexterm><primary>E_WEAPON</primary><secondary>ItemAction.h</secondary></indexterm>
+<indexterm><primary>ItemAction.h</primary><secondary>E_WEAPON</secondary></indexterm>
+<anchor xml:id="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87"/>E_WEAPON</entry><entry></entry></row><row><entry><indexterm><primary>E_KEY_ITEM</primary><secondary>ItemAction.h</secondary></indexterm>
+<indexterm><primary>ItemAction.h</primary><secondary>E_KEY_ITEM</secondary></indexterm>
+<anchor xml:id="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3c72ed2815dc6cb034ee0a47d58cc6d6"/>E_KEY_ITEM</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>14 {
+15 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>,
+16 &#32;&#32;&#32;&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c">E_CONSUMABLE</link>,
+17 &#32;&#32;&#32;&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3522a06e460b0cab0962e66d20a4913d">E_ARMOR</link>,
+18 &#32;&#32;&#32;&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87">E_WEAPON</link>,
+19 &#32;&#32;&#32;&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3c72ed2815dc6cb034ee0a47d58cc6d6">E_KEY_ITEM</link>
+20 };
+</programlisting></section>
+</section>
+</section>

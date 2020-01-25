@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__debugger_8h">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h File Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h</primary></indexterm>
+<programlisting>#include &quot;CoreMinimal.h&quot;
+</programlisting>Include dependency graph for Debugger.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_debugger_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_debugger_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_debugger">Debugger</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</link> { 
+<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100">MessageType::E_NONE</link> = 0, 
+<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8">MessageType::E_INFO</link>, 
+<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">MessageType::E_WARNING</link>, 
+<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>, 
+
+<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">MessageType::E_FATAL_ERROR</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013"/>    <section>
+    <title>MessageType</title>
+<indexterm><primary>MessageType</primary><secondary>Debugger.h</secondary></indexterm>
+<indexterm><primary>Debugger.h</primary><secondary>MessageType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>Debugger.h</secondary></indexterm>
+<indexterm><primary>Debugger.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_INFO</primary><secondary>Debugger.h</secondary></indexterm>
+<indexterm><primary>Debugger.h</primary><secondary>E_INFO</secondary></indexterm>
+<anchor xml:id="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8"/>E_INFO</entry><entry></entry></row><row><entry><indexterm><primary>E_WARNING</primary><secondary>Debugger.h</secondary></indexterm>
+<indexterm><primary>Debugger.h</primary><secondary>E_WARNING</secondary></indexterm>
+<anchor xml:id="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd"/>E_WARNING</entry><entry></entry></row><row><entry><indexterm><primary>E_ERROR</primary><secondary>Debugger.h</secondary></indexterm>
+<indexterm><primary>Debugger.h</primary><secondary>E_ERROR</secondary></indexterm>
+<anchor xml:id="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76"/>E_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>E_FATAL_ERROR</primary><secondary>Debugger.h</secondary></indexterm>
+<indexterm><primary>Debugger.h</primary><secondary>E_FATAL_ERROR</secondary></indexterm>
+<anchor xml:id="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3"/>E_FATAL_ERROR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>10 {
+11 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>&#32;=&#32;0,
+12 &#32;&#32;&#32;&#32;<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8">E_INFO</link>,
+13 &#32;&#32;&#32;&#32;<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">E_WARNING</link>,
+14 &#32;&#32;&#32;&#32;<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</link>,
+15 &#32;&#32;&#32;&#32;<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">E_FATAL_ERROR</link>
+16 };
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,93 @@
+\doxysection{F\+Battle\+\_\+\+Box\+Module Class Reference}
+\label{class_f_battle___box_module}\index{FBattle\_BoxModule@{FBattle\_BoxModule}}
+
+
+{\ttfamily \#include $<$Battle\+\_\+\+Box.\+h$>$}
+
+
+
+Inheritance diagram for F\+Battle\+\_\+\+Box\+Module\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_f_battle___box_module__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for F\+Battle\+\_\+\+Box\+Module\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_f_battle___box_module__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Startup\+Module} () override
+\item 
+virtual void \textbf{ Shutdown\+Module} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_f_battle___box_module_af861316d1a9e9cda23763de4e970d3af}} 
+\index{FBattle\_BoxModule@{FBattle\_BoxModule}!ShutdownModule@{ShutdownModule}}
+\index{ShutdownModule@{ShutdownModule}!FBattle\_BoxModule@{FBattle\_BoxModule}}
+\doxysubsubsection{ShutdownModule()}
+{\footnotesize\ttfamily void F\+Battle\+\_\+\+Box\+Module\+::\+Shutdown\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{comment}{// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,}}
+\DoxyCodeLine{28     \textcolor{comment}{// we call this function before unloading the module.}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664}} 
+\index{FBattle\_BoxModule@{FBattle\_BoxModule}!StartupModule@{StartupModule}}
+\index{StartupModule@{StartupModule}!FBattle\_BoxModule@{FBattle\_BoxModule}}
+\doxysubsubsection{StartupModule()}
+{\footnotesize\ttfamily void F\+Battle\+\_\+\+Box\+Module\+::\+Startup\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+I\+Module\+Interface implementation 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-\/module}}
+\DoxyCodeLine{11     Debugger::InitDebug();}
+\DoxyCodeLine{12     Debugger::SetSeverity(MessageType::E\_INFO);}
+\DoxyCodeLine{13     Debugger::Info(\textcolor{stringliteral}{"Info is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{16     Debugger::Error(\textcolor{stringliteral}{"Error is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     Debugger::SetSeverity(MessageType::E\_WARNING);}
+\DoxyCodeLine{19     Debugger::Warrning(\textcolor{stringliteral}{"Warning is Working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     Debugger::SetSeverity(MessageType::E\_FATAL\_ERROR);}
+\DoxyCodeLine{22     Debugger::FatalError(\textcolor{stringliteral}{"FatalError is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+
+
+References E\+\_\+\+E\+R\+R\+OR, E\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR, E\+\_\+\+I\+N\+FO, E\+\_\+\+W\+A\+R\+N\+I\+NG, Debugger\+::\+Error(), Debugger\+::\+Fatal\+Error(), Debugger\+::\+Info(), Debugger\+::\+Init\+Debug(), Debugger\+::\+Set\+Severity(), and Debugger\+::\+Warrning().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Public/\textbf{ Battle\+\_\+\+Box.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Battle\+\_\+\+Box.\+cpp}\end{DoxyCompactItemize}

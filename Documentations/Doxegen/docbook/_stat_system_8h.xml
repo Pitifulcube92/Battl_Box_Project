@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__stat_system_8h">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h File Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h</primary></indexterm>
+<programlisting>#include &quot;BaseSystem.h&quot;
+#include &quot;Containers/Array.h&quot;
+</programlisting>Include dependency graph for StatSystem.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_stat_system_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_stat_system_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_stat_system">StatSystem</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

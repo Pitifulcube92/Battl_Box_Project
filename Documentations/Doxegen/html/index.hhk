@@ -1,0 +1,902 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#a58fb21fb03457e4dbaebb9617cf82f3e"><param name="Name" value="AbilityAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#a772784d3aa39971866fe064fe5da9ec3"><param name="Name" value="AbilityAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#a49bbeeb71bda33bcdaeef5c6db164b9f"><param name="Name" value="AbilityAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#a7b8b9201aa5b7bf4706ac57f5ff6cded"><param name="Name" value="CalculateAbilityValue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#af903bcb271edb3122c66c7c726711b1e"><param name="Name" value="ReturnDuration"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html"><param name="Name" value="AbilityAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#ab7439e866106b751cf640fb137c9c1c9"><param name="Name" value="SetDuration"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#ab8a58b822ce9092d697f1647064a65dc"><param name="Name" value="AbilityAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad9ec606301ee7f1a0c94217a5cc0b142"><param name="Name" value="AddAbilityAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad9c4cf7a66ce5f1665b1400015fa8dc3"><param name="Name" value="AddCommandAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#ab069950b61fd230fc34e55e546bc1772"><param name="Name" value="AddEffect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a1925be119c8aa3dafca64e7c025b36e3"><param name="Name" value="AddEquipment"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aec28b9c716aaa3274f5bcd82930b70f8"><param name="Name" value="AddItemAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a69b98b0b70ffb649aaad4e8cebda95db"><param name="Name" value="AddStatModifier"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a1cc71d0093defb7c5dcbccb593876b37"><param name="Name" value="Addtarget"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a1cc71d0093defb7c5dcbccb593876b37"><param name="Name" value="EffectSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#afd6ba964080b87f599135a91466474eb"><param name="Name" value="Addtarget"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#aba55f72ffb892e2996ec377f62b202fb"><param name="Name" value="AddTargetToArray"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#acc44ff7b73bce66d9da24df9608aab65"><param name="Name" value="AddTmpModifier"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"><param name="Name" value="E_ABILITY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920"><param name="Name" value="E_ABILITY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0"><param name="Name" value="E_ALL_ALLY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788"><param name="Name" value="E_ALL_ALLY_KO"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57"><param name="Name" value="E_ALL_ENEMIES"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f"><param name="Name" value="E_ALLY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c"><param name="Name" value="E_ALLY_KO"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb"><param name="Name" value="E_COMMAND"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7"><param name="Name" value="E_DARK"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80"><param name="Name" value="E_EARTH"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa"><param name="Name" value="E_FLAME"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d"><param name="Name" value="E_HP_DAMAGE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1"><param name="Name" value="E_HP_RECOVER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c"><param name="Name" value="E_ICE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"><param name="Name" value="E_ITEM"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554"><param name="Name" value="E_LIGHT"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607"><param name="Name" value="E_MP_DAMAGE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca"><param name="Name" value="E_MP_RECOVER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"><param name="Name" value="E_PHYSICAL"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"><param name="Name" value="E_PHYSICAL_AND_ABILITY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d"><param name="Name" value="E_RANDOM_ENEMY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d"><param name="Name" value="E_TARGET_ENEMY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c"><param name="Name" value="E_THUNDER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335"><param name="Name" value="E_USER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html"><param name="Name" value="BaseAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892"><param name="Name" value="E_WATER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e"><param name="Name" value="BaseAction.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a7662eb2bee3cab3daa07fd4f91f9ebd3"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a309dc573513db2dcd5249ca5cc986276"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a359a13b822b4da103d91d3d0179d8302"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a933e2ff31a35d79bcc96d1d6b7f3c458"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a0954da9087f93b46ea68468de1ecce92"><param name="Name" value="ReturnActionID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a3c14c6ebf59154d1ad8d60ab546d7888"><param name="Name" value="ReturnActionType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a66e6fdeaefdcd4606eaa2964e2020049"><param name="Name" value="ReturnDiscription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a70d34140345d92808deed0304397b074"><param name="Name" value="ReturnInteractionType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a87fa8929e542db8b7b7e695490f1f0a2"><param name="Name" value="ReturnName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#aa09404d68151b3575c5d3d7d6eda9aba"><param name="Name" value="ReturnStatMap"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a3286f0bb34ada3b25b0ccb5a7b456f9d"><param name="Name" value="ReturnTargetType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a82e6afa7a79dee542492d587904dc380"><param name="Name" value="SetActionID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ad040813bdd0c9f622ef5dd42db46f530"><param name="Name" value="SetActionType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a0a4bd7fd3ce61159e35282a7b05659a7"><param name="Name" value="SetDiscription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ae0e83722e14079e10f7d43d54ba4898e"><param name="Name" value="SetInteractionType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ad307b128f9ded949daa718fc1364919c"><param name="Name" value="SetName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html"><param name="Name" value="BaseAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a6f0ca61c63f46332e6507fc2ee2b29f8"><param name="Name" value="SetTargetType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a8a23c4be7948ffae58850b7f16da3a1a"><param name="Name" value="BaseAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html#a94cbf2e076874bb2ef74d4d20e3c68e1"><param name="Name" value="BaseCalculate"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html#a94cbf2e076874bb2ef74d4d20e3c68e1"><param name="Name" value="BaseSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#abd7f711f20dd60d57c896c02f159c663"><param name="Name" value="BaseCalculate"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#abd7f711f20dd60d57c896c02f159c663"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#ab5c41ca84888911f7c878be0a3a5d4c0"><param name="Name" value="BaseCalculate"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#ab5c41ca84888911f7c878be0a3a5d4c0"><param name="Name" value="EffectSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a805454116d5cd0a0c408117b42f413be"><param name="Name" value="BaseCalculate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html"><param name="Name" value="BaseSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html"><param name="Name" value="BaseSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html#a94cbf2e076874bb2ef74d4d20e3c68e1"><param name="Name" value="BaseCalculate"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html#a05c74f56b5726d7510b4bc2314dd6a16"><param name="Name" value="BaseSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d1e/a00087.html"><param name="Name" value="Battle_Box"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d16/a00029.html#a0de3ae51f3a629a8e5d113f1b9390da7"><param name="Name" value="Battle_Box.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d1e/a00087.html#a3cedcf74184e2b8bb3fd4c3ec012a6a9"><param name="Name" value="Battle_Box"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a990e83630fa54920d542d985cc1719ae"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a18a8c6620bbb82f0f5bdd098e5eb5d20"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#aa208c81249e7f64046ac125da5251691"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#af12ddc1b9f330c6dac9b59b7768c8a70"><param name="Name" value="DeleteFile"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a2afc97bab32b85e1afce4c255e4a7aef"><param name="Name" value="GetFileSize"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a0531fe1d9ca69a0f5302154a53e2f4bf"><param name="Name" value="operator="></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a4c6958072e3bcd4c4919373d47d16a18"><param name="Name" value="operator="></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#aac6c3bb192936f4f22b4e93090cd45aa"><param name="Name" value="VerifyOnCreateDirectory"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a132a3963cf91131124f5b5ff3d4f4909"><param name="Name" value="WriteTextArrayToFile"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#abd4bb207fe330e3d32150bc96978a385"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d36/a00123.html"><param name="Name" value="BB_Runtime_System"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d2e/a00056.html#a0de3ae51f3a629a8e5d113f1b9390da7"><param name="Name" value="BB_Runtime_System.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d36/a00123.html#aac77030ceddb602253c1163447e3a0f1"><param name="Name" value="BB_Runtime_System"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#a7b8b9201aa5b7bf4706ac57f5ff6cded"><param name="Name" value="CalculateAbilityValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a6f3268f2b1a70386b505f9a979c89841"><param name="Name" value="CallculateEffect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html"><param name="Name" value="CommandAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a1cc41ef898c7dc5a33b95675fd1ae0a3"><param name="Name" value="E_BLADE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html"><param name="Name" value="CommandAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a154165a6024f0465ffdb2559926cd465"><param name="Name" value="E_BLUNT_WEAP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html"><param name="Name" value="CommandAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a3a4bd5ec1b9e1a449a030e95737fcccb"><param name="Name" value="CommandAction.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#a9bed07066f01bc031713fe727ef2af68"><param name="Name" value="CommandAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aaa9704a80750e6a758d76178cfe12b5a"><param name="Name" value="CommandAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#abf23d117fdcbc02af3d0b67bddb6a410"><param name="Name" value="CommandAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aae8b568d1642f0bd846f4a8022eba70a"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#ae4ad4949defce81722252072e3413d2b"><param name="Name" value="ReturnAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aed6b4cc73d8dd8e5e184e248c6e102a1"><param name="Name" value="ReturnWeaponType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#a07a737aaa16805dccea57471b9918324"><param name="Name" value="SetCommand"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html"><param name="Name" value="CommandAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aebe160173438c46ddaac8018cd3d1b22"><param name="Name" value="SetWeaponType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#a82d13a0eb569ad2584dd2d4dcfc6386b"><param name="Name" value="CommandAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#aba55f72ffb892e2996ec377f62b202fb"><param name="Name" value="AddTargetToArray"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#abd7f711f20dd60d57c896c02f159c663"><param name="Name" value="BaseCalculate"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a1e8116df2e2fff7732f3b82d287a9186"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a42f934dffed92d2cda9181bc0657e1c5"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#afcffaef781f580054ef1b9259255751a"><param name="Name" value="ReturnDamageValues"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a52ab082a93d8ab975bc5275089a16954"><param name="Name" value="ReturnTotalDamageValue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a4646a3cb7224ed2e7796f6baaef00d2a"><param name="Name" value="SetOwner"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#adbf10558dcfaec31ffe016ea51f3cfc7"><param name="Name" value="SetTarget"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a83e05f212c7cb033acb9e48394d2706c"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html"><param name="Name" value="Debugger.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76"><param name="Name" value="E_ERROR"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html"><param name="Name" value="Debugger.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3"><param name="Name" value="E_FATAL_ERROR"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html"><param name="Name" value="Debugger.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8"><param name="Name" value="E_INFO"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html"><param name="Name" value="Debugger.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd"><param name="Name" value="Debugger.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a0f3b2388a6d48a7dbb479858443c501d"><param name="Name" value="Debugger"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a0ff42aadd2564d22da3ea639dbfff21e"><param name="Name" value="Debugger"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a42527ab94f2b927aacbe758ff61e37cf"><param name="Name" value="Debugger"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a2d1f06f606185f51dc86b782e059ed48"><param name="Name" value="Error"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a34151070033a196f3a220dd0297fd3d6"><param name="Name" value="FatalError"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#aef91ed84489c9c928445e1f712d401de"><param name="Name" value="Info"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a9ab35dcd08d8f181e262f4c8fb1ec892"><param name="Name" value="InitDebug"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a66f6b2afc3ca554b5a8d16eb2bc2d858"><param name="Name" value="operator="></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a8184e6b00d991bd5e5c746397f081f67"><param name="Name" value="operator="></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html"><param name="Name" value="Debugger"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a2e066519c4fe48fb1268f9bfe2ded3a2"><param name="Name" value="SetSeverity"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a6f945a47fa65d5eb4f93a1db124324f3"><param name="Name" value="Debugger"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#af12ddc1b9f330c6dac9b59b7768c8a70"><param name="Name" value="DeleteFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"><param name="Name" value="E_ABILITY"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"><param name="Name" value="BaseAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920"><param name="Name" value="E_ABILITY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0"><param name="Name" value="E_ALL_ALLY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788"><param name="Name" value="E_ALL_ALLY_KO"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57"><param name="Name" value="E_ALL_ENEMIES"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f"><param name="Name" value="E_ALLY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c"><param name="Name" value="E_ALLY_KO"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a3522a06e460b0cab0962e66d20a4913d"><param name="Name" value="E_ARMOR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a1cc41ef898c7dc5a33b95675fd1ae0a3"><param name="Name" value="E_BLADE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a154165a6024f0465ffdb2559926cd465"><param name="Name" value="E_BLUNT_WEAP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb"><param name="Name" value="E_COMMAND"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c"><param name="Name" value="E_CONSUMABLE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7"><param name="Name" value="E_DARK"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80"><param name="Name" value="E_EARTH"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76"><param name="Name" value="E_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3"><param name="Name" value="E_FATAL_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa"><param name="Name" value="E_FLAME"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d"><param name="Name" value="E_HP_DAMAGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1"><param name="Name" value="E_HP_RECOVER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c"><param name="Name" value="E_ICE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8"><param name="Name" value="E_INFO"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"><param name="Name" value="E_ITEM"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a3c72ed2815dc6cb034ee0a47d58cc6d6"><param name="Name" value="E_KEY_ITEM"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554"><param name="Name" value="E_LIGHT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607"><param name="Name" value="E_MP_DAMAGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca"><param name="Name" value="E_MP_RECOVER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"><param name="Name" value="BaseAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="BaseAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100"><param name="Name" value="BaseAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100"><param name="Name" value="BaseAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="BaseAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="CommandAction.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="Debugger.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"><param name="Name" value="E_PHYSICAL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"><param name="Name" value="E_PHYSICAL_AND_ABILITY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d"><param name="Name" value="E_RANDOM_ENEMY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="db/db2/a00020.html#a7c40fc58b569c771a25b2d876500bc03a3a4bd5ec1b9e1a449a030e95737fcccb"><param name="Name" value="E_RANGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d"><param name="Name" value="E_TARGET_ENEMY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c"><param name="Name" value="E_THUNDER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335"><param name="Name" value="E_USER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d32/a00041.html#ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd"><param name="Name" value="E_WARNING"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892"><param name="Name" value="E_WATER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87"><param name="Name" value="E_WEAPON"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/de7/a00014.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e"><param name="Name" value="E_WIND"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a1cc71d0093defb7c5dcbccb593876b37"><param name="Name" value="Addtarget"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#ab5c41ca84888911f7c878be0a3a5d4c0"><param name="Name" value="BaseCalculate"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a6f3268f2b1a70386b505f9a979c89841"><param name="Name" value="CallculateEffect"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a92be58e865893f0b16340887d2edd606"><param name="Name" value="EffectSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a9419cd87fd9b4e8519fc3960dedefd22"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a1b599411780ea6013b9de3a94252dc29"><param name="Name" value="RemoveEffect"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html"><param name="Name" value="EffectSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a224e059a2e658f9cad40799fdf902fbb"><param name="Name" value="SetTarget"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#aeacfcab72c0129a58bb18363b4763263"><param name="Name" value="EffectSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a2d1f06f606185f51dc86b782e059ed48"><param name="Name" value="Error"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a34151070033a196f3a220dd0297fd3d6"><param name="Name" value="FatalError"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html"><param name="Name" value="FBattle_BoxModule"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html"><param name="Name" value="FBattle_BoxModule"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html#af861316d1a9e9cda23763de4e970d3af"><param name="Name" value="ShutdownModule"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html#af9e8a9761586d4c32b376edc5d5f9664"><param name="Name" value="FBattle_BoxModule"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/dce/a00143.html"><param name="Name" value="FBB_Runtime_System"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/dce/a00143.html"><param name="Name" value="FBB_Runtime_System"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/dce/a00143.html#a8c94ff01dfdc5d43225b452f0bb27da4"><param name="Name" value="ShutdownModule"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/dce/a00143.html#af98a066d4d817555652d5a1274b56885"><param name="Name" value="FBB_Runtime_System"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a2afc97bab32b85e1afce4c255e4a7aef"><param name="Name" value="GetFileSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#aef91ed84489c9c928445e1f712d401de"><param name="Name" value="Info"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a9ab35dcd08d8f181e262f4c8fb1ec892"><param name="Name" value="InitDebug"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html"><param name="Name" value="ItemAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a3522a06e460b0cab0962e66d20a4913d"><param name="Name" value="E_ARMOR"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html"><param name="Name" value="ItemAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c"><param name="Name" value="E_CONSUMABLE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html"><param name="Name" value="ItemAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a3c72ed2815dc6cb034ee0a47d58cc6d6"><param name="Name" value="E_KEY_ITEM"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html"><param name="Name" value="ItemAction.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a60880a7ff476d1de07c31261d81d4100"><param name="Name" value="E_NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d6/d5b/a00026.html#a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87"><param name="Name" value="ItemAction.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#ab069950b61fd230fc34e55e546bc1772"><param name="Name" value="AddEffect"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#ac1668162b93e3a97a555cff050593ec1"><param name="Name" value="ItemAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a4ce5e6d0984f4b9f3352327396bb154f"><param name="Name" value="ItemAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#ae98143bbb738b0d4e6b98b84e1e45e05"><param name="Name" value="ItemAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a79871a2e6d401cff1d005fdd161c1120"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a4b2e489cc0ae92c10ce4d6d91e6b5b7d"><param name="Name" value="ReturnDamageType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#adf02b73e5a94f785a2a5eec11cbfb003"><param name="Name" value="ReturnEffectList"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#aa3322621804e1869f956757c31e4c4b6"><param name="Name" value="ReturnItemType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#af05b71cc56a5edcc0771aa64d3858f4f"><param name="Name" value="ReturnValue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#aa40a2cc0d7f23836c8403f0b82f37a23"><param name="Name" value="SetDamageType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#ad433b7e82b9144f2301190698799577e"><param name="Name" value="SetType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html"><param name="Name" value="ItemAction"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#aa6fdb08d13415443f080d75d2b934773"><param name="Name" value="SetValue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a69652c432e3177c89052c5a2fa3819ae"><param name="Name" value="ItemAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d16/a00029.html#a0de3ae51f3a629a8e5d113f1b9390da7"><param name="Name" value="LOCTEXT_NAMESPACE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d16/a00029.html#a0de3ae51f3a629a8e5d113f1b9390da7"><param name="Name" value="Battle_Box.cpp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d2e/a00056.html#a0de3ae51f3a629a8e5d113f1b9390da7"><param name="Name" value="LOCTEXT_NAMESPACE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a933e2ff31a35d79bcc96d1d6b7f3c458"><param name="Name" value="OnDestroy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a933e2ff31a35d79bcc96d1d6b7f3c458"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aae8b568d1642f0bd846f4a8022eba70a"><param name="Name" value="OnDestroy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aae8b568d1642f0bd846f4a8022eba70a"><param name="Name" value="CommandAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a42f934dffed92d2cda9181bc0657e1c5"><param name="Name" value="OnDestroy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a42f934dffed92d2cda9181bc0657e1c5"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a9419cd87fd9b4e8519fc3960dedefd22"><param name="Name" value="OnDestroy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a9419cd87fd9b4e8519fc3960dedefd22"><param name="Name" value="EffectSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a79871a2e6d401cff1d005fdd161c1120"><param name="Name" value="OnDestroy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a79871a2e6d401cff1d005fdd161c1120"><param name="Name" value="ItemAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#afb4f166bb980f7e367981397a9c5379d"><param name="Name" value="OnDestroy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#afb4f166bb980f7e367981397a9c5379d"><param name="Name" value="StatSheetObject"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#aa74080624aba5dd9c0836013d684e931"><param name="Name" value="OnDestroy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a0531fe1d9ca69a0f5302154a53e2f4bf"><param name="Name" value="operator="></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a0531fe1d9ca69a0f5302154a53e2f4bf"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a4c6958072e3bcd4c4919373d47d16a18"><param name="Name" value="operator="></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a4c6958072e3bcd4c4919373d47d16a18"><param name="Name" value="BattleBoxFileManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a66f6b2afc3ca554b5a8d16eb2bc2d858"><param name="Name" value="operator="></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a66f6b2afc3ca554b5a8d16eb2bc2d858"><param name="Name" value="Debugger"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a8184e6b00d991bd5e5c746397f081f67"><param name="Name" value="operator="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#afa220913560581c6976e720c2f9d6f6a"><param name="Name" value="RemoveAbilityAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ab22d60ec7f2082cf6a55e759ffc79af0"><param name="Name" value="RemoveCommandAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a1b599411780ea6013b9de3a94252dc29"><param name="Name" value="RemoveEffect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a3fe9bd16a83ba7970dcaa2cd2d68f1d5"><param name="Name" value="RemoveEquipment"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a3d652cd2a6177ef396a9adc27fbcdac0"><param name="Name" value="RemoveItemAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a02d648b7bf4890422092ef592ef6d95c"><param name="Name" value="RemoveModifier"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a4026d7a8088f539e3f34d80613f8dccd"><param name="Name" value="ReturnAbility"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a4b6e004e70d178b864126a93d6ea3df4"><param name="Name" value="ReturnAbilityMap"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#ae4ad4949defce81722252072e3413d2b"><param name="Name" value="ReturnAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a0954da9087f93b46ea68468de1ecce92"><param name="Name" value="ReturnActionID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a3c14c6ebf59154d1ad8d60ab546d7888"><param name="Name" value="ReturnActionType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#adee30a8470b9fd57b32f4892aacac55b"><param name="Name" value="ReturnCommand"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a9b6fcf1480b8d15424f5476ed40604d2"><param name="Name" value="ReturnCommandMap"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a4b2e489cc0ae92c10ce4d6d91e6b5b7d"><param name="Name" value="ReturnDamageType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#afcffaef781f580054ef1b9259255751a"><param name="Name" value="ReturnDamageValues"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a66e6fdeaefdcd4606eaa2964e2020049"><param name="Name" value="ReturnDiscription"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#af903bcb271edb3122c66c7c726711b1e"><param name="Name" value="ReturnDuration"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#adf02b73e5a94f785a2a5eec11cbfb003"><param name="Name" value="ReturnEffectList"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad7e95011555f4015c74ecf7e053e529a"><param name="Name" value="ReturnEquipment"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aecfdf70147ffaa33f65b03c3b97232c8"><param name="Name" value="ReturnEquipmentMap"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a70d34140345d92808deed0304397b074"><param name="Name" value="ReturnInteractionType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a68ac4e437d66c297c8c74bdc95dcfc55"><param name="Name" value="ReturnItem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a16559559522d65dfb2d4baf3881bc1ba"><param name="Name" value="ReturnItemMap"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#aa3322621804e1869f956757c31e4c4b6"><param name="Name" value="ReturnItemType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a87fa8929e542db8b7b7e695490f1f0a2"><param name="Name" value="ReturnName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a87fa8929e542db8b7b7e695490f1f0a2"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a5b875038059a4d910ef9af1ff8cec26a"><param name="Name" value="ReturnName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#aa09404d68151b3575c5d3d7d6eda9aba"><param name="Name" value="ReturnStatMap"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#aa09404d68151b3575c5d3d7d6eda9aba"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aa92a6ba4a423719096ce45fe714491f3"><param name="Name" value="ReturnStatMap"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ac0352b9c1c206b2cecd57e9d2d028e44"><param name="Name" value="ReturnTag"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a3286f0bb34ada3b25b0ccb5a7b456f9d"><param name="Name" value="ReturnTargetType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a52ab082a93d8ab975bc5275089a16954"><param name="Name" value="ReturnTotalDamageValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#af05b71cc56a5edcc0771aa64d3858f4f"><param name="Name" value="ReturnValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aed6b4cc73d8dd8e5e184e248c6e102a1"><param name="Name" value="ReturnWeaponType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a82e6afa7a79dee542492d587904dc380"><param name="Name" value="SetActionID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ad040813bdd0c9f622ef5dd42db46f530"><param name="Name" value="SetActionType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#a07a737aaa16805dccea57471b9918324"><param name="Name" value="SetCommand"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#aa40a2cc0d7f23836c8403f0b82f37a23"><param name="Name" value="SetDamageType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a0a4bd7fd3ce61159e35282a7b05659a7"><param name="Name" value="SetDiscription"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#ab7439e866106b751cf640fb137c9c1c9"><param name="Name" value="SetDuration"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ae0e83722e14079e10f7d43d54ba4898e"><param name="Name" value="SetInteractionType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ad307b128f9ded949daa718fc1364919c"><param name="Name" value="SetName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#ad307b128f9ded949daa718fc1364919c"><param name="Name" value="BaseAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aea46c857ac7552e6460bbc9605f0caab"><param name="Name" value="SetName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a4646a3cb7224ed2e7796f6baaef00d2a"><param name="Name" value="SetOwner"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a2e066519c4fe48fb1268f9bfe2ded3a2"><param name="Name" value="SetSeverity"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a0015a317c575f299b59dc712504b0879"><param name="Name" value="SetTag"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#adbf10558dcfaec31ffe016ea51f3cfc7"><param name="Name" value="SetTarget"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#adbf10558dcfaec31ffe016ea51f3cfc7"><param name="Name" value="DamageDeltSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a224e059a2e658f9cad40799fdf902fbb"><param name="Name" value="SetTarget"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#a224e059a2e658f9cad40799fdf902fbb"><param name="Name" value="EffectSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a37eb3d84c033799fe52f96ae7371e9a4"><param name="Name" value="SetTarget"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a3db7a7b3be3f83319de0481332947674"><param name="Name" value="SetTargetAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a6f0ca61c63f46332e6507fc2ee2b29f8"><param name="Name" value="SetTargetType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#ad433b7e82b9144f2301190698799577e"><param name="Name" value="SetType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#aa6fdb08d13415443f080d75d2b934773"><param name="Name" value="SetValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#aebe160173438c46ddaac8018cd3d1b22"><param name="Name" value="SetWeaponType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html#af861316d1a9e9cda23763de4e970d3af"><param name="Name" value="ShutdownModule"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html#af861316d1a9e9cda23763de4e970d3af"><param name="Name" value="FBattle_BoxModule"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/dce/a00143.html#a8c94ff01dfdc5d43225b452f0bb27da4"><param name="Name" value="ShutdownModule"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html#af9e8a9761586d4c32b376edc5d5f9664"><param name="Name" value="StartupModule"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d6a/a00119.html#af9e8a9761586d4c32b376edc5d5f9664"><param name="Name" value="FBattle_BoxModule"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/dce/a00143.html#af98a066d4d817555652d5a1274b56885"><param name="Name" value="StartupModule"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad9ec606301ee7f1a0c94217a5cc0b142"><param name="Name" value="AddAbilityAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad9c4cf7a66ce5f1665b1400015fa8dc3"><param name="Name" value="AddCommandAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a1925be119c8aa3dafca64e7c025b36e3"><param name="Name" value="AddEquipment"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aec28b9c716aaa3274f5bcd82930b70f8"><param name="Name" value="AddItemAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#afb4f166bb980f7e367981397a9c5379d"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#afa220913560581c6976e720c2f9d6f6a"><param name="Name" value="RemoveAbilityAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ab22d60ec7f2082cf6a55e759ffc79af0"><param name="Name" value="RemoveCommandAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a3fe9bd16a83ba7970dcaa2cd2d68f1d5"><param name="Name" value="RemoveEquipment"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a3d652cd2a6177ef396a9adc27fbcdac0"><param name="Name" value="RemoveItemAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a4026d7a8088f539e3f34d80613f8dccd"><param name="Name" value="ReturnAbility"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a4b6e004e70d178b864126a93d6ea3df4"><param name="Name" value="ReturnAbilityMap"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#adee30a8470b9fd57b32f4892aacac55b"><param name="Name" value="ReturnCommand"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a9b6fcf1480b8d15424f5476ed40604d2"><param name="Name" value="ReturnCommandMap"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad7e95011555f4015c74ecf7e053e529a"><param name="Name" value="ReturnEquipment"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aecfdf70147ffaa33f65b03c3b97232c8"><param name="Name" value="ReturnEquipmentMap"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a68ac4e437d66c297c8c74bdc95dcfc55"><param name="Name" value="ReturnItem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a16559559522d65dfb2d4baf3881bc1ba"><param name="Name" value="ReturnItemMap"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a5b875038059a4d910ef9af1ff8cec26a"><param name="Name" value="ReturnName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aa92a6ba4a423719096ce45fe714491f3"><param name="Name" value="ReturnStatMap"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ac0352b9c1c206b2cecd57e9d2d028e44"><param name="Name" value="ReturnTag"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#aea46c857ac7552e6460bbc9605f0caab"><param name="Name" value="SetName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a0015a317c575f299b59dc712504b0879"><param name="Name" value="SetTag"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a0122cd38668000c17134d6d267b31df2"><param name="Name" value="StatSheetObject"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a43f6237d48c0499e4746f895a462f5d6"><param name="Name" value="StatSheetObject"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html"><param name="Name" value="StatSheetObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#ad888b9681bca9f42638ae6d845012060"><param name="Name" value="StatSheetObject"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a5b6b1adcd9e73b5c852cc9bb56c540a8"><param name="Name" value="StatSheetObject"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a69b98b0b70ffb649aaad4e8cebda95db"><param name="Name" value="AddStatModifier"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#afd6ba964080b87f599135a91466474eb"><param name="Name" value="Addtarget"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#acc44ff7b73bce66d9da24df9608aab65"><param name="Name" value="AddTmpModifier"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a805454116d5cd0a0c408117b42f413be"><param name="Name" value="BaseCalculate"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#aa74080624aba5dd9c0836013d684e931"><param name="Name" value="OnDestroy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a02d648b7bf4890422092ef592ef6d95c"><param name="Name" value="RemoveModifier"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a37eb3d84c033799fe52f96ae7371e9a4"><param name="Name" value="SetTarget"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#a3db7a7b3be3f83319de0481332947674"><param name="Name" value="SetTargetAction"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html"><param name="Name" value="StatSystem"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#ac75d67d5db20babea9601894aee1e871"><param name="Name" value="StatSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#ae92847be88226779e422cfea7d9b597c"><param name="Name" value="StatSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#aac6c3bb192936f4f22b4e93090cd45aa"><param name="Name" value="VerifyOnCreateDirectory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d6d/a00111.html#a6f945a47fa65d5eb4f93a1db124324f3"><param name="Name" value="Warrning"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#a132a3963cf91131124f5b5ff3d4f4909"><param name="Name" value="WriteTextArrayToFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d98/a00107.html#abd4bb207fe330e3d32150bc96978a385"><param name="Name" value="WriteTextFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d82/a00091.html#ab8a58b822ce9092d697f1647064a65dc"><param name="Name" value="~AbilityAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d77/a00095.html#a8a23c4be7948ffae58850b7f16da3a1a"><param name="Name" value="~BaseAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/dcd/a00127.html#a05c74f56b5726d7510b4bc2314dd6a16"><param name="Name" value="~BaseSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d74/a00099.html#a82d13a0eb569ad2584dd2d4dcfc6386b"><param name="Name" value="~CommandAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/d06/a00131.html#a83e05f212c7cb033acb9e48394d2706c"><param name="Name" value="~DamageDeltSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d5b/a00135.html#aeacfcab72c0129a58bb18363b4763263"><param name="Name" value="~EffectSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d1e/a00103.html#a69652c432e3177c89052c5a2fa3819ae"><param name="Name" value="~ItemAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d2/da3/a00115.html#a5b6b1adcd9e73b5c852cc9bb56c540a8"><param name="Name" value="~StatSheetObject"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d14/a00139.html#ae92847be88226779e422cfea7d9b597c"><param name="Name" value="~StatSystem"></OBJECT>
+</UL>
+</BODY>
+</HTML>

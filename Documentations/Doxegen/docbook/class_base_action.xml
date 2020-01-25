@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_base_action">
+<title>BaseAction Class Reference</title>
+<indexterm><primary>BaseAction</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BaseAction.h&gt;</computeroutput>
+</para>
+Inheritance diagram for BaseAction:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for BaseAction:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3">BaseAction</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_base_action_1a359a13b822b4da103d91d3d0179d8302">BaseAction</link> (FString name_, FString discription_, <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> action_, <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> target_, <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_)</para>
+</listitem>
+            <listitem><para><link linkend="_class_base_action_1a309dc573513db2dcd5249ca5cc986276">BaseAction</link> (const <link linkend="_class_base_action">BaseAction</link> *other_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link> (const FString name_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link> (const FString discription_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link> (const <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> type_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link> (const <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> type_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link> (const <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> type_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link> (const uint32 actionID_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para>FString <link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link> () const</para>
+</listitem>
+            <listitem><para>FString <link linkend="_class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049">ReturnDiscription</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> <link linkend="_class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888">ReturnActionType</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> <link linkend="_class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d">ReturnTargetType</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> <link linkend="_class_base_action_1a70d34140345d92808deed0304397b074">ReturnInteractionType</link> () const</para>
+</listitem>
+            <listitem><para>uint32 <link linkend="_class_base_action_1a0954da9087f93b46ea68468de1ecce92">ReturnActionID</link> () const</para>
+</listitem>
+            <listitem><para>TMap&lt; FString, float &gt; <link linkend="_class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba">ReturnStatMap</link> () const</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a">~BaseAction</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3"/>    <section>
+    <title>BaseAction()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<para><computeroutput>BaseAction::BaseAction ( )</computeroutput></para><programlisting>7 {
+8 &#32;&#32;&#32;&#32;name&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+9 &#32;&#32;&#32;&#32;discription&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+10 &#32;&#32;&#32;&#32;action&#32;=&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</link>;
+11 &#32;&#32;&#32;&#32;target&#32;=&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100">TARGETTYPE::E_NONE</link>;
+12 &#32;&#32;&#32;&#32;interaction&#32;=&#32;<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100">INTERACTIONTYPE::E_NONE</link>;
+13 &#32;&#32;&#32;&#32;actionID&#32;=&#32;00;
+14 }
+</programlisting><para>
+References E_NONE.</para>
+    </section><anchor xml:id="_class_base_action_1a359a13b822b4da103d91d3d0179d8302"/>    <section>
+    <title>BaseAction()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<para><computeroutput>BaseAction::BaseAction (FString name_, FString discription_, <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> action_, <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> target_, <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_)</computeroutput></para><programlisting>16 {
+17 &#32;&#32;&#32;&#32;name&#32;=&#32;name_;
+18 &#32;&#32;&#32;&#32;discription&#32;=&#32;discription_;
+19 &#32;&#32;&#32;&#32;action&#32;=&#32;action_;
+20 &#32;&#32;&#32;&#32;target&#32;=&#32;target_;
+21 &#32;&#32;&#32;&#32;interaction&#32;=&#32;interaction_;
+22 &#32;&#32;&#32;&#32;actionID&#32;=&#32;actionID_;
+23 }
+</programlisting>    </section><anchor xml:id="_class_base_action_1a309dc573513db2dcd5249ca5cc986276"/>    <section>
+    <title>BaseAction()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<para><computeroutput>BaseAction::BaseAction (const <link linkend="_class_base_action">BaseAction</link> * other_)</computeroutput></para><programlisting>25 {
+26 &#32;&#32;&#32;&#32;name&#32;=&#32;other_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>();
+27 &#32;&#32;&#32;&#32;discription&#32;=&#32;other_-&gt;<link linkend="_class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049">ReturnDiscription</link>();
+28 &#32;&#32;&#32;&#32;target&#32;=&#32;other_-&gt;<link linkend="_class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d">ReturnTargetType</link>();
+29 &#32;&#32;&#32;&#32;actionID&#32;=&#32;other_-&gt;<link linkend="_class_base_action_1a0954da9087f93b46ea68468de1ecce92">ReturnActionID</link>();
+30 }
+</programlisting><para>
+References ReturnActionID(), ReturnDiscription(), ReturnName(), and ReturnTargetType().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a309dc573513db2dcd5249ca5cc986276_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a"/>    <section>
+    <title>~BaseAction()</title>
+<indexterm><primary>~BaseAction</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>~BaseAction</secondary></indexterm>
+<para><computeroutput>BaseAction::~BaseAction ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><programlisting>88 {
+89 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458">OnDestroy</link>();
+90 }
+</programlisting><para>
+References OnDestroy().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a8a23c4be7948ffae58850b7f16da3a1a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458"/>    <section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>void BaseAction::OnDestroy ( )</computeroutput></para><programlisting>84 {
+85 &#32;&#32;&#32;&#32;<emphasis role="comment">//The&#32;clean&#32;up&#32;method</emphasis>
+86 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a933e2ff31a35d79bcc96d1d6b7f3c458_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a0954da9087f93b46ea68468de1ecce92"/>    <section>
+    <title>ReturnActionID()</title>
+<indexterm><primary>ReturnActionID</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnActionID</secondary></indexterm>
+<para><computeroutput>uint32 BaseAction::ReturnActionID ( ) const</computeroutput></para><programlisting>80 {
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;actionID;
+82 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a0954da9087f93b46ea68468de1ecce92_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888"/>    <section>
+    <title>ReturnActionType()</title>
+<indexterm><primary>ReturnActionType</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnActionType</secondary></indexterm>
+<para><computeroutput><link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> BaseAction::ReturnActionType ( ) const</computeroutput></para><programlisting>64 {
+65 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;action;
+66 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049"/>    <section>
+    <title>ReturnDiscription()</title>
+<indexterm><primary>ReturnDiscription</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnDiscription</secondary></indexterm>
+<para><computeroutput>FString BaseAction::ReturnDiscription ( ) const</computeroutput></para><programlisting>60 {
+61 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;discription;
+62 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a66e6fdeaefdcd4606eaa2964e2020049_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a70d34140345d92808deed0304397b074"/>    <section>
+    <title>ReturnInteractionType()</title>
+<indexterm><primary>ReturnInteractionType</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnInteractionType</secondary></indexterm>
+<para><computeroutput><link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> BaseAction::ReturnInteractionType ( ) const</computeroutput></para><programlisting>76 {
+77 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;interaction;
+78 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a70d34140345d92808deed0304397b074_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2"/>    <section>
+    <title>ReturnName()</title>
+<indexterm><primary>ReturnName</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnName</secondary></indexterm>
+<para><computeroutput>FString BaseAction::ReturnName ( ) const</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a87fa8929e542db8b7b7e695490f1f0a2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba"/>    <section>
+    <title>ReturnStatMap()</title>
+<indexterm><primary>ReturnStatMap</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnStatMap</secondary></indexterm>
+<para><computeroutput>TMap&lt; FString, float &gt; BaseAction::ReturnStatMap ( ) const</computeroutput></para><programlisting>72 {
+73 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;statMap;
+74 }
+</programlisting>    </section><anchor xml:id="_class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d"/>    <section>
+    <title>ReturnTargetType()</title>
+<indexterm><primary>ReturnTargetType</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>ReturnTargetType</secondary></indexterm>
+<para><computeroutput><link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> BaseAction::ReturnTargetType ( ) const</computeroutput></para><programlisting>68 {
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;target;
+70 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a3286f0bb34ada3b25b0ccb5a7b456f9d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a82e6afa7a79dee542492d587904dc380"/>    <section>
+    <title>SetActionID()</title>
+<indexterm><primary>SetActionID</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>SetActionID</secondary></indexterm>
+<para><computeroutput>void BaseAction::SetActionID (const uint32 actionID_)</computeroutput></para><programlisting>52 {
+53 &#32;&#32;&#32;&#32;actionID&#32;=&#32;actionID_;
+54 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a82e6afa7a79dee542492d587904dc380_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530"/>    <section>
+    <title>SetActionType()</title>
+<indexterm><primary>SetActionType</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>SetActionType</secondary></indexterm>
+<para><computeroutput>void BaseAction::SetActionType (const <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> type_)</computeroutput></para><programlisting>40 {
+41 &#32;&#32;&#32;&#32;action&#32;=&#32;type_;
+42 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_ad040813bdd0c9f622ef5dd42db46f530_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7"/>    <section>
+    <title>SetDiscription()</title>
+<indexterm><primary>SetDiscription</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>SetDiscription</secondary></indexterm>
+<para><computeroutput>void BaseAction::SetDiscription (const FString discription_)</computeroutput></para><programlisting>36 {
+37 &#32;&#32;&#32;&#32;discription&#32;=&#32;discription_;
+38 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e"/>    <section>
+    <title>SetInteractionType()</title>
+<indexterm><primary>SetInteractionType</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>SetInteractionType</secondary></indexterm>
+<para><computeroutput>void BaseAction::SetInteractionType (const <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> type_)</computeroutput></para><programlisting>48 {
+49 &#32;&#32;&#32;&#32;interaction&#32;=&#32;type_;
+50 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_ae0e83722e14079e10f7d43d54ba4898e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1ad307b128f9ded949daa718fc1364919c"/>    <section>
+    <title>SetName()</title>
+<indexterm><primary>SetName</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>SetName</secondary></indexterm>
+<para><computeroutput>void BaseAction::SetName (const FString name_)</computeroutput></para><programlisting>32 {
+33 &#32;&#32;&#32;&#32;name&#32;=&#32;name_;
+34 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_ad307b128f9ded949daa718fc1364919c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8"/>    <section>
+    <title>SetTargetType()</title>
+<indexterm><primary>SetTargetType</primary><secondary>BaseAction</secondary></indexterm>
+<indexterm><primary>BaseAction</primary><secondary>SetTargetType</secondary></indexterm>
+<para><computeroutput>void BaseAction::SetTargetType (const <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> type_)</computeroutput></para><programlisting>44 {
+45 &#32;&#32;&#32;&#32;target&#32;=&#32;type_;
+46 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__base_action_8h">BaseAction.h</link><link linkend="__base_action_8cpp">BaseAction.cpp</link></section>
+</section>

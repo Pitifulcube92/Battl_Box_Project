@@ -1,0 +1,222 @@
+\hypertarget{class_ability_action}{}\doxysection{Ability\+Action Class Reference}
+\label{class_ability_action}\index{AbilityAction@{AbilityAction}}
+
+
+{\ttfamily \#include $<$Ability\+Action.\+h$>$}
+
+
+
+Inheritance diagram for Ability\+Action\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{df/d2e/class_ability_action__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ability\+Action\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{d4/d1d/class_ability_action__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ability_action_a58fb21fb03457e4dbaebb9617cf82f3e}{Ability\+Action}} ()
+\item 
+\mbox{\hyperlink{class_ability_action_a772784d3aa39971866fe064fe5da9ec3}{Ability\+Action}} (\mbox{\hyperlink{class_ability_action}{Ability\+Action}} $\ast$const other\+\_\+)
+\item 
+\mbox{\hyperlink{class_ability_action_a49bbeeb71bda33bcdaeef5c6db164b9f}{Ability\+Action}} (const F\+String name\+\_\+, const F\+String discription\+\_\+, const \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949a}{A\+C\+T\+I\+O\+N\+T\+Y\+PE}} action\+\_\+, const \mbox{\hyperlink{_base_action_8h_a607550079f88dc0df6c9761da9352ec7}{T\+A\+R\+G\+E\+T\+T\+Y\+PE}} target\+\_\+, const \mbox{\hyperlink{_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3}{I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE}} interaction\+\_\+, const uint32 action\+I\+D\+\_\+, T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const float duration\+\_\+)
+\item 
+float \mbox{\hyperlink{class_ability_action_a7b8b9201aa5b7bf4706ac57f5ff6cded}{Calculate\+Ability\+Value}} ()
+\item 
+float \mbox{\hyperlink{class_ability_action_af903bcb271edb3122c66c7c726711b1e}{Return\+Duration}} () const
+\item 
+void \mbox{\hyperlink{class_ability_action_ab7439e866106b751cf640fb137c9c1c9}{Set\+Duration}} (const float duration\+\_\+)
+\item 
+\mbox{\hyperlink{class_ability_action_ab8a58b822ce9092d697f1647064a65dc}{$\sim$\+Ability\+Action}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Ability\+Action.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ability_action_a58fb21fb03457e4dbaebb9617cf82f3e}\label{class_ability_action_a58fb21fb03457e4dbaebb9617cf82f3e}} 
+\index{AbilityAction@{AbilityAction}!AbilityAction@{AbilityAction}}
+\index{AbilityAction@{AbilityAction}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{AbilityAction()}{AbilityAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Ability\+Action\+::\+Ability\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6      \mbox{\hyperlink{class_base_action_ad307b128f9ded949daa718fc1364919c}{SetName}}(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{7      \mbox{\hyperlink{class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7}{SetDiscription}}(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{8      \mbox{\hyperlink{class_base_action_ad040813bdd0c9f622ef5dd42db46f530}{SetActionType}}(\mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100}{ACTIONTYPE::E\_NONE}});}
+\DoxyCodeLine{9      \mbox{\hyperlink{class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8}{SetTargetType}}(\mbox{\hyperlink{_base_action_8h_a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100}{TARGETTYPE::E\_NONE}});}
+\DoxyCodeLine{10      \mbox{\hyperlink{class_base_action_ae0e83722e14079e10f7d43d54ba4898e}{SetInteractionType}}(\mbox{\hyperlink{_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100}{INTERACTIONTYPE::E\_NONE}});}
+\DoxyCodeLine{11      \mbox{\hyperlink{class_base_action_a82e6afa7a79dee542492d587904dc380}{SetActionID}}(00);}
+\DoxyCodeLine{12      duration = 0.0f;}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d53/class_ability_action_a58fb21fb03457e4dbaebb9617cf82f3e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ability_action_a49bbeeb71bda33bcdaeef5c6db164b9f}\label{class_ability_action_a49bbeeb71bda33bcdaeef5c6db164b9f}} 
+\index{AbilityAction@{AbilityAction}!AbilityAction@{AbilityAction}}
+\index{AbilityAction@{AbilityAction}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{AbilityAction()}{AbilityAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Ability\+Action\+::\+Ability\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+,  }\item[{const F\+String}]{discription\+\_\+,  }\item[{const \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949a}{A\+C\+T\+I\+O\+N\+T\+Y\+PE}}}]{action\+\_\+,  }\item[{const \mbox{\hyperlink{_base_action_8h_a607550079f88dc0df6c9761da9352ec7}{T\+A\+R\+G\+E\+T\+T\+Y\+PE}}}]{target\+\_\+,  }\item[{const \mbox{\hyperlink{_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3}{I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE}}}]{interaction\+\_\+,  }\item[{const uint32}]{action\+I\+D\+\_\+,  }\item[{T\+Map$<$ F\+String, float $>$}]{stat\+Map\+\_\+,  }\item[{const float}]{duration\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17      \mbox{\hyperlink{class_base_action_ad307b128f9ded949daa718fc1364919c}{SetName}}(name\_);}
+\DoxyCodeLine{18      \mbox{\hyperlink{class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7}{SetDiscription}}(discription\_);}
+\DoxyCodeLine{19      \mbox{\hyperlink{class_base_action_ad040813bdd0c9f622ef5dd42db46f530}{SetActionType}}(action\_);}
+\DoxyCodeLine{20      \mbox{\hyperlink{class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8}{SetTargetType}}(target\_);}
+\DoxyCodeLine{21      \mbox{\hyperlink{class_base_action_ae0e83722e14079e10f7d43d54ba4898e}{SetInteractionType}}(interaction\_);}
+\DoxyCodeLine{22      \mbox{\hyperlink{class_base_action_a82e6afa7a79dee542492d587904dc380}{SetActionID}}(actionID\_);}
+\DoxyCodeLine{23      duration = duration\_;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d53/class_ability_action_a49bbeeb71bda33bcdaeef5c6db164b9f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ability_action_a772784d3aa39971866fe064fe5da9ec3}\label{class_ability_action_a772784d3aa39971866fe064fe5da9ec3}} 
+\index{AbilityAction@{AbilityAction}!AbilityAction@{AbilityAction}}
+\index{AbilityAction@{AbilityAction}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{AbilityAction()}{AbilityAction()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Ability\+Action\+::\+Ability\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ability_action}{Ability\+Action}} $\ast$const}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27      \mbox{\hyperlink{class_base_action_ad307b128f9ded949daa718fc1364919c}{SetName}}(other\_-\/>\mbox{\hyperlink{class_base_action_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}());}
+\DoxyCodeLine{28      \mbox{\hyperlink{class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7}{SetDiscription}}(other\_-\/>\mbox{\hyperlink{class_base_action_a66e6fdeaefdcd4606eaa2964e2020049}{ReturnDiscription}}());}
+\DoxyCodeLine{29      \mbox{\hyperlink{class_base_action_ad040813bdd0c9f622ef5dd42db46f530}{SetActionType}}(other\_-\/>\mbox{\hyperlink{class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888}{ReturnActionType}}());}
+\DoxyCodeLine{30      \mbox{\hyperlink{class_base_action_ae0e83722e14079e10f7d43d54ba4898e}{SetInteractionType}}(other\_-\/>\mbox{\hyperlink{class_base_action_a70d34140345d92808deed0304397b074}{ReturnInteractionType}}());}
+\DoxyCodeLine{31      \mbox{\hyperlink{class_base_action_a82e6afa7a79dee542492d587904dc380}{SetActionID}}(other\_-\/>\mbox{\hyperlink{class_base_action_a0954da9087f93b46ea68468de1ecce92}{ReturnActionID}}());}
+\DoxyCodeLine{32      duration = other\_-\/>\mbox{\hyperlink{class_ability_action_af903bcb271edb3122c66c7c726711b1e}{ReturnDuration}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d53/class_ability_action_a772784d3aa39971866fe064fe5da9ec3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ability_action_ab8a58b822ce9092d697f1647064a65dc}\label{class_ability_action_ab8a58b822ce9092d697f1647064a65dc}} 
+\index{AbilityAction@{AbilityAction}!````~AbilityAction@{$\sim$AbilityAction}}
+\index{````~AbilityAction@{$\sim$AbilityAction}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbilityAction()}{~AbilityAction()}}
+{\footnotesize\ttfamily Ability\+Action\+::$\sim$\+Ability\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ability_action_a7b8b9201aa5b7bf4706ac57f5ff6cded}\label{class_ability_action_a7b8b9201aa5b7bf4706ac57f5ff6cded}} 
+\index{AbilityAction@{AbilityAction}!CalculateAbilityValue@{CalculateAbilityValue}}
+\index{CalculateAbilityValue@{CalculateAbilityValue}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{CalculateAbilityValue()}{CalculateAbilityValue()}}
+{\footnotesize\ttfamily float Ability\+Action\+::\+Calculate\+Ability\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37      \textcolor{comment}{//TO DO: implement an equation class.}}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ability_action_af903bcb271edb3122c66c7c726711b1e}\label{class_ability_action_af903bcb271edb3122c66c7c726711b1e}} 
+\index{AbilityAction@{AbilityAction}!ReturnDuration@{ReturnDuration}}
+\index{ReturnDuration@{ReturnDuration}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{ReturnDuration()}{ReturnDuration()}}
+{\footnotesize\ttfamily float Ability\+Action\+::\+Return\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 43 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45      \textcolor{keywordflow}{return} duration;}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Ability\+Action().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d53/class_ability_action_af903bcb271edb3122c66c7c726711b1e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ability_action_ab7439e866106b751cf640fb137c9c1c9}\label{class_ability_action_ab7439e866106b751cf640fb137c9c1c9}} 
+\index{AbilityAction@{AbilityAction}!SetDuration@{SetDuration}}
+\index{SetDuration@{SetDuration}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{\texorpdfstring{SetDuration()}{SetDuration()}}
+{\footnotesize\ttfamily void Ability\+Action\+::\+Set\+Duration (\begin{DoxyParamCaption}\item[{const float}]{duration\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41      duration = duration\_;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}

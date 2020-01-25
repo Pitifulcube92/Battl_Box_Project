@@ -1,0 +1,202 @@
+\doxysection{Stat\+System Class Reference}
+\label{class_stat_system}\index{StatSystem@{StatSystem}}
+
+
+{\ttfamily \#include $<$Stat\+System.\+h$>$}
+
+
+
+Inheritance diagram for Stat\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_stat_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stat\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_stat_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Stat\+System} ()
+\item 
+void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
+\item 
+void \textbf{ Add\+Stat\+Modifier} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
+\item 
+void \textbf{ Remove\+Modifier} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
+\item 
+void \textbf{ Add\+Tmp\+Modifier} (\textbf{ Base\+Action} $\ast$action\+\_\+, const float duration\+\_\+)
+\item 
+void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+)
+\item 
+void \textbf{ Set\+Target\+Action} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
+\item 
+void \textbf{ Addtarget} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+)
+\item 
+void \textbf{ On\+Destroy} ()
+\item 
+\textbf{ $\sim$\+Stat\+System} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_stat_system_ac75d67d5db20babea9601894aee1e871}} 
+\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
+\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
+\doxysubsubsection{StatSystem()}
+{\footnotesize\ttfamily Stat\+System\+::\+Stat\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_ae92847be88226779e422cfea7d9b597c}} 
+\index{StatSystem@{StatSystem}!````~StatSystem@{$\sim$StatSystem}}
+\index{````~StatSystem@{$\sim$StatSystem}!StatSystem@{StatSystem}}
+\doxysubsubsection{$\sim$StatSystem()}
+{\footnotesize\ttfamily Stat\+System\+::$\sim$\+Stat\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db}} 
+\index{StatSystem@{StatSystem}!AddStatModifier@{AddStatModifier}}
+\index{AddStatModifier@{AddStatModifier}!StatSystem@{StatSystem}}
+\doxysubsubsection{AddStatModifier()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Add\+Stat\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_afd6ba964080b87f599135a91466474eb}} 
+\index{StatSystem@{StatSystem}!Addtarget@{Addtarget}}
+\index{Addtarget@{Addtarget}!StatSystem@{StatSystem}}
+\doxysubsubsection{Addtarget()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Addtarget (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_acc44ff7b73bce66d9da24df9608aab65}} 
+\index{StatSystem@{StatSystem}!AddTmpModifier@{AddTmpModifier}}
+\index{AddTmpModifier@{AddTmpModifier}!StatSystem@{StatSystem}}
+\doxysubsubsection{AddTmpModifier()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Add\+Tmp\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+,  }\item[{const float}]{duration\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_a805454116d5cd0a0c408117b42f413be}} 
+\index{StatSystem@{StatSystem}!BaseCalculate@{BaseCalculate}}
+\index{BaseCalculate@{BaseCalculate}!StatSystem@{StatSystem}}
+\doxysubsubsection{BaseCalculate()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Single\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e076874bb2ef74d4d20e3c68e1}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{if} (IsSingledTarget\_)}
+\DoxyCodeLine{13     \{}
+\DoxyCodeLine{14     \}}
+\DoxyCodeLine{15     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (IsSingledTarget\_)}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_aa74080624aba5dd9c0836013d684e931}} 
+\index{StatSystem@{StatSystem}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!StatSystem@{StatSystem}}
+\doxysubsubsection{OnDestroy()}
+{\footnotesize\ttfamily void Stat\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_a02d648b7bf4890422092ef592ef6d95c}} 
+\index{StatSystem@{StatSystem}!RemoveModifier@{RemoveModifier}}
+\index{RemoveModifier@{RemoveModifier}!StatSystem@{StatSystem}}
+\doxysubsubsection{RemoveModifier()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Remove\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_a37eb3d84c033799fe52f96ae7371e9a4}} 
+\index{StatSystem@{StatSystem}!SetTarget@{SetTarget}}
+\index{SetTarget@{SetTarget}!StatSystem@{StatSystem}}
+\doxysubsubsection{SetTarget()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_system_a3db7a7b3be3f83319de0481332947674}} 
+\index{StatSystem@{StatSystem}!SetTargetAction@{SetTargetAction}}
+\index{SetTargetAction@{SetTargetAction}!StatSystem@{StatSystem}}
+\doxysubsubsection{SetTargetAction()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Set\+Target\+Action (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Stat\+System.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Stat\+System.\+cpp}\end{DoxyCompactItemize}

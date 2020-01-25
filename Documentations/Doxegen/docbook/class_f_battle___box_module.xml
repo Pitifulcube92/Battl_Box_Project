@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_f_battle___box_module">
+<title>FBattle_BoxModule Class Reference</title>
+<indexterm><primary>FBattle_BoxModule</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Battle_Box.h&gt;</computeroutput>
+</para>
+Inheritance diagram for FBattle_BoxModule:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_f_battle___box_module__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for FBattle_BoxModule:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_f_battle___box_module__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664">StartupModule</link> () override</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_f_battle___box_module_1af861316d1a9e9cda23763de4e970d3af">ShutdownModule</link> () override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_f_battle___box_module_1af861316d1a9e9cda23763de4e970d3af"/>    <section>
+    <title>ShutdownModule()</title>
+<indexterm><primary>ShutdownModule</primary><secondary>FBattle_BoxModule</secondary></indexterm>
+<indexterm><primary>FBattle_BoxModule</primary><secondary>ShutdownModule</secondary></indexterm>
+<para><computeroutput>void FBattle_BoxModule::ShutdownModule ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><programlisting>26 {
+27 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;function&#32;may&#32;be&#32;called&#32;during&#32;shutdown&#32;to&#32;clean&#32;up&#32;your&#32;module.&#32;&#32;For&#32;modules&#32;that&#32;support&#32;dynamic&#32;reloading,</emphasis>
+28 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;we&#32;call&#32;this&#32;function&#32;before&#32;unloading&#32;the&#32;module.</emphasis>
+29 }
+</programlisting>    </section><anchor xml:id="_class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664"/>    <section>
+    <title>StartupModule()</title>
+<indexterm><primary>StartupModule</primary><secondary>FBattle_BoxModule</secondary></indexterm>
+<indexterm><primary>FBattle_BoxModule</primary><secondary>StartupModule</secondary></indexterm>
+<para><computeroutput>void FBattle_BoxModule::StartupModule ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>IModuleInterface implementation </para>
+<programlisting>9 {
+10 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;code&#32;will&#32;execute&#32;after&#32;your&#32;module&#32;is&#32;loaded&#32;into&#32;memory;&#32;the&#32;exact&#32;timing&#32;is&#32;specified&#32;in&#32;the&#32;.uplugin&#32;file&#32;per-module</emphasis>
+11 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892">Debugger::InitDebug</link>();
+12 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8">MessageType::E_INFO</link>);
+13 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1aef91ed84489c9c928445e1f712d401de">Debugger::Info</link>(<emphasis role="stringliteral">&quot;Info&#32;is&#32;working.&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Battle_Box.cpp&quot;</emphasis>,&#32;__LINE__);
+14 
+15 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+16 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;Error&#32;is&#32;working.&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Battle_Box.cpp&quot;</emphasis>,&#32;__LINE__);
+17 
+18 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">MessageType::E_WARNING</link>);
+19 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3">Debugger::Warrning</link>(<emphasis role="stringliteral">&quot;Warning&#32;is&#32;Working.&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Battle_Box.cpp&quot;</emphasis>,&#32;__LINE__);
+20 
+21 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">MessageType::E_FATAL_ERROR</link>);
+22 &#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a34151070033a196f3a220dd0297fd3d6">Debugger::FatalError</link>(<emphasis role="stringliteral">&quot;FatalError&#32;is&#32;working.&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Battle_Box.cpp&quot;</emphasis>,&#32;__LINE__);
+23 }
+</programlisting><para>
+References E_ERROR, E_FATAL_ERROR, E_INFO, E_WARNING, Debugger::Error(), Debugger::FatalError(), Debugger::Info(), Debugger::InitDebug(), Debugger::SetSeverity(), and Debugger::Warrning().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public/<link linkend="__battle___box_8h">Battle_Box.h</link>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__battle___box_8cpp">Battle_Box.cpp</link></section>
+</section>

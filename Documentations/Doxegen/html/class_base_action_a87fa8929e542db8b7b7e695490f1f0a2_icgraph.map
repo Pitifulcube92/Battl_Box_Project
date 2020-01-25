@@ -1,0 +1,12 @@
+<map id="BaseAction::ReturnName" name="BaseAction::ReturnName">
+<area shape="rect" id="node1" title=" " alt="" coords="327,264,525,293"/>
+<area shape="rect" id="node2" href="$class_ability_action.html#a772784d3aa39971866fe064fe5da9ec3" title=" " alt="" coords="41,5,243,35"/>
+<area shape="rect" id="node3" href="$class_stat_sheet_object.html#ad9ec606301ee7f1a0c94217a5cc0b142" title=" " alt="" coords="35,59,249,106"/>
+<area shape="rect" id="node4" href="$class_stat_sheet_object.html#ad9c4cf7a66ce5f1665b1400015fa8dc3" title=" " alt="" coords="19,130,265,177"/>
+<area shape="rect" id="node5" href="$class_stat_sheet_object.html#a1925be119c8aa3dafca64e7c025b36e3" title=" " alt="" coords="18,201,266,231"/>
+<area shape="rect" id="node6" href="$class_stat_sheet_object.html#aec28b9c716aaa3274f5bcd82930b70f8" title=" " alt="" coords="41,255,243,302"/>
+<area shape="rect" id="node7" href="$class_base_action.html#a309dc573513db2dcd5249ca5cc986276" title=" " alt="" coords="46,327,238,356"/>
+<area shape="rect" id="node8" href="$class_damage_delt_system.html#abd7f711f20dd60d57c896c02f159c663" title=" " alt="" coords="5,380,279,409"/>
+<area shape="rect" id="node9" href="$class_command_action.html#aaa9704a80750e6a758d76178cfe12b5a" title=" " alt="" coords="10,433,274,463"/>
+<area shape="rect" id="node10" href="$class_item_action.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="54,487,230,516"/>
+</map>

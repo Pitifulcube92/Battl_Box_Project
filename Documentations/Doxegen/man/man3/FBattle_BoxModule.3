@@ -1,0 +1,68 @@
+.TH "FBattle_BoxModule" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FBattle_BoxModule
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Battle_Box\&.h>\fP
+.PP
+Inherits IModuleInterface\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBShutdownModule\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBStartupModule\fP () override"
+.br
+.RI "IModuleInterface implementation\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file Battle_Box\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void FBattle_BoxModule::ShutdownModule ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 25 of file Battle_Box\&.cpp\&.
+.PP
+.nf
+26 {
+27      // This function may be called during shutdown to clean up your module\&.  For modules that support dynamic reloading,
+28      // we call this function before unloading the module\&.
+29 }
+.fi
+.SS "void FBattle_BoxModule::StartupModule ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+IModuleInterface implementation\&. 
+.PP
+Definition at line 8 of file Battle_Box\&.cpp\&.
+.PP
+.nf
+9 {
+10      // This code will execute after your module is loaded into memory; the exact timing is specified in the \&.uplugin file per-module
+11      Debugger::InitDebug();
+12      Debugger::SetSeverity(MessageType::E_INFO);
+13      Debugger::Info("Info is working\&.", "Battle_Box\&.cpp", __LINE__);
+14 
+15      Debugger::SetSeverity(MessageType::E_ERROR);
+16      Debugger::Error("Error is working\&.", "Battle_Box\&.cpp", __LINE__);
+17 
+18      Debugger::SetSeverity(MessageType::E_WARNING);
+19      Debugger::Warrning("Warning is Working\&.", "Battle_Box\&.cpp", __LINE__);
+20 
+21      Debugger::SetSeverity(MessageType::E_FATAL_ERROR);
+22      Debugger::FatalError("FatalError is working\&.", "Battle_Box\&.cpp", __LINE__);
+23 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

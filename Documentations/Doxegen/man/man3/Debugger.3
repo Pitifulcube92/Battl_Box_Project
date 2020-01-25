@@ -1,0 +1,169 @@
+.TH "Debugger" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Debugger
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Debugger\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDebugger\fP ()=delete"
+.br
+.ti -1c
+.RI "\fBDebugger\fP (const \fBDebugger\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBDebugger\fP (\fBDebugger\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBDebugger\fP & \fBoperator=\fP (const \fBDebugger\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBDebugger\fP & \fBoperator=\fP (\fBDebugger\fP &&)=delete"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBError\fP (const FString &message_, const FString &fileName_, const int32 line_)"
+.br
+.RI "Sends a error log to the debugger txt file\&. "
+.ti -1c
+.RI "static void \fBFatalError\fP (const FString &message_, const FString &fileName_, const int32 line_)"
+.br
+.RI "Sends a warning log to the dugger txt file\&. "
+.ti -1c
+.RI "static void \fBInfo\fP (const FString &message_, const FString &fileName_, const int32 line_)"
+.br
+.RI "Sends a info log to the debugger txt file\&. "
+.ti -1c
+.RI "static void \fBInitDebug\fP ()"
+.br
+.RI "Initiates the debugger\&. "
+.ti -1c
+.RI "static void \fBSetSeverity\fP (const \fBMessageType\fP type_)"
+.br
+.RI "Sets the severity\&. "
+.ti -1c
+.RI "static void \fBWarrning\fP (const FString &message_, const FString &fileName_, const int32 line_)"
+.br
+.RI "Sends a warrning log to the debugger txt file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file Debugger\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Debugger::Debugger (const \fBDebugger\fP &)\fC [delete]\fP"
+
+.SS "Debugger::Debugger (\fBDebugger\fP &&)\fC [delete]\fP"
+
+.SS "Debugger::Debugger ()\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Debugger::Error (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
+
+.PP
+Sends a error log to the debugger txt file\&. 
+.PP
+Definition at line 43 of file Debuger\&.cpp\&.
+.PP
+.nf
+44 {
+45      Log(MessageType::E_ERROR,"ERROR: " + message_, fileName_, line_);
+46 }
+.fi
+.PP
+Referenced by DamageDeltSystem::BaseCalculate(), StatSheetObject::ReturnAbility(), StatSheetObject::ReturnCommand(), StatSheetObject::ReturnEquipment(), StatSheetObject::ReturnItem(), and FBattle_BoxModule::StartupModule()\&.
+.SS "void Debugger::FatalError (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
+
+.PP
+Sends a warning log to the dugger txt file\&. 
+.PP
+Definition at line 51 of file Debuger\&.cpp\&.
+.PP
+.nf
+52 {
+53      Log(MessageType::E_FATAL_ERROR,"FATALERROR: " + message_, fileName_, line_);
+54 }
+.fi
+.PP
+Referenced by FBattle_BoxModule::StartupModule()\&.
+.SS "void Debugger::Info (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
+
+.PP
+Sends a info log to the debugger txt file\&. 
+.PP
+Definition at line 39 of file Debuger\&.cpp\&.
+.PP
+.nf
+40 {
+41      Log(MessageType::E_INFO,"INFO: " + message_, fileName_, line_);
+42 }
+.fi
+.PP
+Referenced by FBattle_BoxModule::StartupModule()\&.
+.SS "void Debugger::InitDebug ()\fC [static]\fP"
+
+.PP
+Initiates the debugger\&. 
+.PP
+Definition at line 12 of file Debuger\&.cpp\&.
+.PP
+.nf
+13 {
+14      DebugDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/Debug";
+15      if (!BattleBoxFileManager::VerifyOnCreateDirectory(DebugDirectory))
+16      {
+17           UE_LOG(LogTemp, Warning, TEXT("Something went wrong with the directory!"));
+18           return;
+19      }
+20      currentType = MessageType::E_FATAL_ERROR;
+21      UE_LOG(LogTemp, Log, TEXT("Debug Directory has been made!"));
+22 }
+.fi
+.PP
+Referenced by FBattle_BoxModule::StartupModule()\&.
+.SS "\fBDebugger\fP& Debugger::operator= (const \fBDebugger\fP &)\fC [delete]\fP"
+
+.SS "\fBDebugger\fP& Debugger::operator= (\fBDebugger\fP &&)\fC [delete]\fP"
+
+.SS "void Debugger::SetSeverity (const \fBMessageType\fP type_)\fC [static]\fP"
+
+.PP
+Sets the severity\&. 
+.PP
+Definition at line 35 of file Debuger\&.cpp\&.
+.PP
+.nf
+36 {
+37      currentType = type_;
+38 }
+.fi
+.PP
+Referenced by DamageDeltSystem::BaseCalculate(), StatSheetObject::ReturnAbility(), StatSheetObject::ReturnCommand(), StatSheetObject::ReturnEquipment(), StatSheetObject::ReturnItem(), and FBattle_BoxModule::StartupModule()\&.
+.SS "void Debugger::Warrning (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
+
+.PP
+Sends a warrning log to the debugger txt file\&. 
+.PP
+Definition at line 47 of file Debuger\&.cpp\&.
+.PP
+.nf
+48 {
+49      Log(MessageType::E_WARNING,"WARNING: " + message_, fileName_, line_);
+50 }
+.fi
+.PP
+Referenced by FBattle_BoxModule::StartupModule()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

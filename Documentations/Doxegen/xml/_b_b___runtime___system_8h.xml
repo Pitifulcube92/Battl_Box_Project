@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_b_b___runtime___system_8h" kind="file" language="C++">
+    <compoundname>BB_Runtime_System.h</compoundname>
+    <includes local="yes">CoreMinimal.h</includes>
+    <includes local="yes">Modules/ModuleManager.h</includes>
+    <includedby refid="_b_b___runtime___system_8cpp" local="yes">D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/BB_Runtime_System.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h</label>
+        <link refid="_b_b___runtime___system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Modules/ModuleManager.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/BB_Runtime_System.cpp</label>
+        <link refid="_b_b___runtime___system_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h</label>
+        <link refid="_b_b___runtime___system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_f_b_b___runtime___system" prot="public">FBB_Runtime_System</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>1998-2019<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CoreMinimal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Modules/ModuleManager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_f_b_b___runtime___system" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_f_b_b___runtime___system" kindref="compound">FBB_Runtime_System</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IModuleInterface</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_b_b___runtime___system_1af98a066d4d817555652d5a1274b56885" kindref="member">StartupModule</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_b_b___runtime___system_1a8c94ff01dfdc5d43225b452f0bb27da4" kindref="member">ShutdownModule</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h"/>
+  </compounddef>
+</doxygen>

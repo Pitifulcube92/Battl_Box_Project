@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_damage_delt_system">
+<title>DamageDeltSystem Class Reference</title>
+<indexterm><primary>DamageDeltSystem</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DamageDeltSystem.h&gt;</computeroutput>
+</para>
+Inheritance diagram for DamageDeltSystem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_delt_system__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DamageDeltSystem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_delt_system__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186">DamageDeltSystem</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663">BaseCalculate</link> (const bool IsSingledTarget_, <link linkend="_class_base_action">BaseAction</link> *const action_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a">SetOwner</link> (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const owner_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7">SetTarget</link> (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const target_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb">AddTargetToArray</link> (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const target_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954">ReturnTotalDamageValue</link> () const</para>
+</listitem>
+            <listitem><para>TArray&lt; float &gt; <link linkend="_class_damage_delt_system_1afcffaef781f580054ef1b9259255751a">ReturnDamageValues</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c">~DamageDeltSystem</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186"/>    <section>
+    <title>DamageDeltSystem()</title>
+<indexterm><primary>DamageDeltSystem</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<para><computeroutput>DamageDeltSystem::DamageDeltSystem ( )</computeroutput></para><programlisting>10 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;singleTarget(<emphasis role="keyword">nullptr</emphasis>),&#32;owner(<emphasis role="keyword">nullptr</emphasis>),&#32;targets(TArray&lt;StatSheetObject*&gt;()),&#32;totalDamageValues(TArray&lt;float&gt;())
+11 {
+12 &#32;&#32;&#32;&#32;totalDamageValue&#32;=&#32;0.0f;
+13 }
+</programlisting>    </section><anchor xml:id="_class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c"/>    <section>
+    <title>~DamageDeltSystem()</title>
+<indexterm><primary>~DamageDeltSystem</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>~DamageDeltSystem</secondary></indexterm>
+<para><computeroutput>DamageDeltSystem::~DamageDeltSystem ( )</computeroutput></para><programlisting>275 {
+276 &#32;&#32;&#32;&#32;<link linkend="_class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5">OnDestroy</link>();
+277 }
+</programlisting><para>
+References OnDestroy().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb"/>    <section>
+    <title>AddTargetToArray()</title>
+<indexterm><primary>AddTargetToArray</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>AddTargetToArray</secondary></indexterm>
+<para><computeroutput>void DamageDeltSystem::AddTargetToArray (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const target_)</computeroutput></para><programlisting>246 {
+247 &#32;&#32;&#32;&#32;targets.Add(target_);
+248 }
+</programlisting>    </section><anchor xml:id="_class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663"/>    <section>
+    <title>BaseCalculate()</title>
+<indexterm><primary>BaseCalculate</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>BaseCalculate</secondary></indexterm>
+<para><computeroutput>void DamageDeltSystem::BaseCalculate (const bool IsSingledTarget_, <link linkend="_class_base_action">BaseAction</link> *const action_)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1">BaseSystem</link>.</para>
+<programlisting>15 {
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(IsSingledTarget_)
+17 &#32;&#32;&#32;&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//This&#32;will&#32;claculate&#32;any&#32;damage&#32;for&#32;a&#32;single&#32;target.</emphasis>
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(action_-&gt;<link linkend="_class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888">ReturnActionType</link>())
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</link>:
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Command&#32;will&#32;do&#32;basic&#32;act&#32;with&#32;basic&#32;stats</emphasis>
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;Check&#32;if&#32;there&#32;is&#32;any&#32;damage&#32;in&#32;this&#32;command.</emphasis>
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_command_action">CommandAction</link>*&#32;command&#32;=&#32;<emphasis role="keyword">dynamic_cast&lt;</emphasis><link linkend="_class_command_action">CommandAction</link>*<emphasis role="keyword">&gt;</emphasis>(action_);
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+26 
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</link>:
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Item&#32;will&#32;be&#32;sorted&#32;to&#32;what&#32;type&#32;then&#32;calculated&#32;for&#32;total&#32;damage.</emphasis>
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_item_action">ItemAction</link>*&#32;item&#32;=&#32;<emphasis role="keyword">dynamic_cast&lt;</emphasis><link linkend="_class_item_action">ItemAction</link>*<emphasis role="keyword">&gt;</emphasis>(action_);
+30 
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(item-&gt;<link linkend="_class_item_action_1aa3322621804e1869f956757c31e4c4b6">ReturnItemType</link>()&#32;==&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c">ITEMTYPE::E_CONSUMABLE</link>)
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalDamageValue&#32;=&#32;CalculateItemDamage(item)&#32;-&#32;CalculateMagicalDefence(singleTarget)&#32;+&#32;CalculatePhysicalDefence(singleTarget);
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(item-&gt;<link linkend="_class_item_action_1aa3322621804e1869f956757c31e4c4b6">ReturnItemType</link>()&#32;==&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87">ITEMTYPE::E_WEAPON</link>)
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalDamageValue&#32;=&#32;CalculateItemDamage(item)&#32;-&#32;CalculateMagicalDefence(singleTarget)&#32;+&#32;CalculatePhysicalDefence(singleTarget);
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;No&#32;Item&#32;to&#32;contain&#32;damage&#32;from:&#32;&quot;</emphasis>&#32;+&#32;item-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>(),&#32;<emphasis role="stringliteral">&quot;DamageDeltSystem.cpp&quot;</emphasis>,&#32;__LINE__);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</link>:
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//ability&#32;will&#32;retreive&#32;the&#32;damage&#32;value&#32;if&#32;any.</emphasis>
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;create&#32;an&#32;enum&#32;for&#32;what&#32;type&#32;of&#32;ability&#32;it&#32;is.</emphasis>
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_ability_action">AbilityAction</link>*&#32;ability&#32;=&#32;<emphasis role="keyword">dynamic_cast&lt;</emphasis><link linkend="_class_ability_action">AbilityAction</link>*<emphasis role="keyword">&gt;</emphasis>(action_);
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateAbilityDamage(ability);
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;modify&#32;targets&#32;HP&#32;on&#32;stat&#32;system.</emphasis>
+53 &#32;&#32;&#32;&#32;}
+54 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsSingledTarget_)
+55 &#32;&#32;&#32;&#32;{
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//This&#32;will&#32;calculate&#32;any&#32;damage&#32;for&#32;multiple&#32;targets.</emphasis>
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(action_-&gt;<link linkend="_class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888">ReturnActionType</link>())
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</link>:
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Command&#32;will&#32;do&#32;basic&#32;act&#32;with&#32;basic&#32;stats</emphasis>
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;Check&#32;if&#32;there&#32;is&#32;any&#32;damage&#32;in&#32;this&#32;command.</emphasis>
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_command_action">CommandAction</link>*&#32;command&#32;=&#32;<emphasis role="keyword">dynamic_cast&lt;</emphasis><link linkend="_class_command_action">CommandAction</link>*<emphasis role="keyword">&gt;</emphasis>(action_);
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</link>:
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Item&#32;will&#32;be&#32;sorted&#32;to&#32;what&#32;type&#32;then&#32;calculated&#32;for&#32;total&#32;damage.</emphasis>
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_item_action">ItemAction</link>*&#32;item&#32;=&#32;<emphasis role="keyword">dynamic_cast&lt;</emphasis><link linkend="_class_item_action">ItemAction</link>*<emphasis role="keyword">&gt;</emphasis>(action_);
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(item-&gt;<link linkend="_class_item_action_1aa3322621804e1869f956757c31e4c4b6">ReturnItemType</link>()&#32;==&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c">ITEMTYPE::E_CONSUMABLE</link>)
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;targets.Num();&#32;i++)
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalDamageValues.Add(CalculateItemDamage(item)&#32;-&#32;CalculateMagicalDefence(targets[i])&#32;+&#32;CalculatePhysicalDefence(targets[i]));
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(item-&gt;<link linkend="_class_item_action_1aa3322621804e1869f956757c31e4c4b6">ReturnItemType</link>()&#32;==&#32;<link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87">ITEMTYPE::E_WEAPON</link>)
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;targets.Num();&#32;i++)
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalDamageValues.Add(CalculateItemDamage(item)&#32;-&#32;CalculateMagicalDefence(targets[i])&#32;+&#32;CalculatePhysicalDefence(targets[i]));
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;No&#32;Item&#32;to&#32;contain&#32;damage&#32;from:&#32;&quot;</emphasis>&#32;+&#32;item-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>(),&#32;<emphasis role="stringliteral">&quot;DamageDeltSystem.cpp&quot;</emphasis>,&#32;__LINE__);
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</link>:
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//ability&#32;will&#32;retreive&#32;the&#32;damage&#32;value&#32;if&#32;any.</emphasis>
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;create&#32;an&#32;enum&#32;for&#32;what&#32;type&#32;of&#32;ability&#32;it&#32;is.</emphasis>
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_ability_action">AbilityAction</link>*&#32;ability&#32;=&#32;<emphasis role="keyword">dynamic_cast&lt;</emphasis><link linkend="_class_ability_action">AbilityAction</link>*<emphasis role="keyword">&gt;</emphasis>(action_);
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CalculateAbilityDamage(ability);
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;Modify&#32;stats&#32;of&#32;HP&#32;in&#32;targets.</emphasis>
+95 
+96 &#32;&#32;&#32;&#32;}
+97 &#32;&#32;&#32;&#32;<emphasis role="comment">//TO&#32;DO:&#32;After&#32;modification&#32;is&#32;done&#32;empty&#32;all&#32;information.</emphasis>
+98 
+99 }
+</programlisting><para>
+References E_ABILITY, E_COMMAND, E_CONSUMABLE, E_ERROR, E_ITEM, E_WEAPON, Debugger::Error(), BaseAction::ReturnActionType(), ItemAction::ReturnItemType(), BaseAction::ReturnName(), and Debugger::SetSeverity().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5"/>    <section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>void DamageDeltSystem::OnDestroy ( )</computeroutput></para><programlisting>250 {
+251 &#32;&#32;&#32;&#32;<emphasis role="comment">//clean&#32;up&#32;any&#32;pointers</emphasis>
+252 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(singleTarget)
+253 &#32;&#32;&#32;&#32;{
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;singleTarget;
+255 &#32;&#32;&#32;&#32;}
+256 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(targets.Num()&#32;&gt;&#32;0)
+257 &#32;&#32;&#32;&#32;{
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">auto</emphasis>&amp;&#32;elem&#32;:&#32;targets)
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;elem;
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;elem&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;targets.Empty();
+264 &#32;&#32;&#32;&#32;}
+265 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_damage_delt_system_1afcffaef781f580054ef1b9259255751a"/>    <section>
+    <title>ReturnDamageValues()</title>
+<indexterm><primary>ReturnDamageValues</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>ReturnDamageValues</secondary></indexterm>
+<para><computeroutput>TArray&lt; float &gt; DamageDeltSystem::ReturnDamageValues ( ) const</computeroutput></para><programlisting>271 {
+272 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;totalDamageValues;
+273 }
+</programlisting>    </section><anchor xml:id="_class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954"/>    <section>
+    <title>ReturnTotalDamageValue()</title>
+<indexterm><primary>ReturnTotalDamageValue</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>ReturnTotalDamageValue</secondary></indexterm>
+<para><computeroutput>float DamageDeltSystem::ReturnTotalDamageValue ( ) const</computeroutput></para><programlisting>267 {
+268 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;totalDamageValue;
+269 }
+</programlisting>    </section><anchor xml:id="_class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a"/>    <section>
+    <title>SetOwner()</title>
+<indexterm><primary>SetOwner</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>SetOwner</secondary></indexterm>
+<para><computeroutput>void DamageDeltSystem::SetOwner (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const owner_)</computeroutput></para><programlisting>238 {
+239 &#32;&#32;&#32;&#32;owner&#32;=&#32;owner_;
+240 }
+</programlisting>    </section><anchor xml:id="_class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7"/>    <section>
+    <title>SetTarget()</title>
+<indexterm><primary>SetTarget</primary><secondary>DamageDeltSystem</secondary></indexterm>
+<indexterm><primary>DamageDeltSystem</primary><secondary>SetTarget</secondary></indexterm>
+<para><computeroutput>void DamageDeltSystem::SetTarget (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const target_)</computeroutput></para><programlisting>242 {
+243 &#32;&#32;&#32;&#32;singleTarget&#32;=&#32;target_;
+244 }
+</programlisting></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<link linkend="__damage_delt_system_8h">DamageDeltSystem.h</link>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<link linkend="__damage_delt_system_8cpp">DamageDeltSystem.cpp</link></section>
+</section>

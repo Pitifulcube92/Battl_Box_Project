@@ -23,6 +23,7 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 			//TO DO: Check if there is any damage in this command.
 			CommandAction* command = dynamic_cast<CommandAction*>(action_);
 			break;
+
 		case ACTIONTYPE::E_ITEM:
 			//Item will be sorted to what type then calculated for total damage.
 			ItemAction* item = dynamic_cast<ItemAction*>(action_);

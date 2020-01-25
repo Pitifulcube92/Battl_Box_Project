@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_ability_action_8cpp" kind="file" language="C++">
+    <compoundname>AbilityAction.cpp</compoundname>
+    <includes refid="_ability_action_8h" local="yes">ActionClasses/AbilityAction.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="4">
+        <label>BaseAction.h</label>
+        <link refid="_base_action_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ActionClasses/AbilityAction.h</label>
+        <link refid="_ability_action_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AbilityAction.cpp</label>
+        <link refid="_ability_action_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Fill<sp/>out<sp/>your<sp/>copyright<sp/>notice<sp/>in<sp/>the<sp/>Description<sp/>page<sp/>of<sp/>Project<sp/>Settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ability_action_8h" kindref="compound">ActionClasses/AbilityAction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" refkind="member"><highlight class="normal"><ref refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" kindref="member">AbilityAction::AbilityAction</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" kindref="member">SetName</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" kindref="member">SetDiscription</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" kindref="member">SetActionType</ref>(<ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">ACTIONTYPE::E_NONE</ref>);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" kindref="member">SetTargetType</ref>(<ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100" kindref="member">TARGETTYPE::E_NONE</ref>);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" kindref="member">SetInteractionType</ref>(<ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100" kindref="member">INTERACTIONTYPE::E_NONE</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" kindref="member">SetActionID</ref>(00);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>duration<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14" refid="class_ability_action_1a49bbeeb71bda33bcdaeef5c6db164b9f" refkind="member"><highlight class="normal"><ref refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" kindref="member">AbilityAction::AbilityAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>discription_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref><sp/>action_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref><sp/>target_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref><sp/>interaction_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32<sp/>actionID_,<sp/>TMap&lt;FString,<sp/>float&gt;<sp/>statMap_,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duration_)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" kindref="member">SetName</ref>(name_);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" kindref="member">SetDiscription</ref>(discription_);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" kindref="member">SetActionType</ref>(action_);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" kindref="member">SetTargetType</ref>(target_);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" kindref="member">SetInteractionType</ref>(interaction_);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" kindref="member">SetActionID</ref>(actionID_);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>duration<sp/>=<sp/>duration_;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25" refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" refkind="member"><highlight class="normal"><ref refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" kindref="member">AbilityAction::AbilityAction</ref>(<ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>other_)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" kindref="member">SetName</ref>(other_-&gt;<ref refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" kindref="member">ReturnName</ref>());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" kindref="member">SetDiscription</ref>(other_-&gt;<ref refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" kindref="member">ReturnDiscription</ref>());</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" kindref="member">SetActionType</ref>(other_-&gt;<ref refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" kindref="member">ReturnActionType</ref>());</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" kindref="member">SetInteractionType</ref>(other_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>());</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" kindref="member">SetActionID</ref>(other_-&gt;<ref refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" kindref="member">ReturnActionID</ref>());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>duration<sp/>=<sp/>other_-&gt;<ref refid="class_ability_action_1af903bcb271edb3122c66c7c726711b1e" kindref="member">ReturnDuration</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35" refid="class_ability_action_1a7b8b9201aa5b7bf4706ac57f5ff6cded" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_ability_action_1a7b8b9201aa5b7bf4706ac57f5ff6cded" kindref="member">AbilityAction::CalculateAbilityValue</ref>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>implement<sp/>an<sp/>equation<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39" refid="class_ability_action_1ab7439e866106b751cf640fb137c9c1c9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_action_1ab7439e866106b751cf640fb137c9c1c9" kindref="member">AbilityAction::SetDuration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duration_)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>duration<sp/>=<sp/>duration_;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43" refid="class_ability_action_1af903bcb271edb3122c66c7c726711b1e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_ability_action_1af903bcb271edb3122c66c7c726711b1e" kindref="member">AbilityAction::ReturnDuration</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duration;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47" refid="class_ability_action_1ab8a58b822ce9092d697f1647064a65dc" refkind="member"><highlight class="normal"><ref refid="class_ability_action_1ab8a58b822ce9092d697f1647064a65dc" kindref="member">AbilityAction::~AbilityAction</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="AbilityAction.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_base_system" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>BaseSystem</compoundname>
+    <derivedcompoundref refid="class_damage_delt_system" prot="public" virt="non-virtual">DamageDeltSystem</derivedcompoundref>
+    <derivedcompoundref refid="class_effect_system" prot="public" virt="non-virtual">EffectSystem</derivedcompoundref>
+    <derivedcompoundref refid="class_stat_system" prot="public" virt="non-virtual">StatSystem</derivedcompoundref>
+    <includes refid="_base_system_8h" local="no">BaseSystem.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void BaseSystem::BaseCalculate</definition>
+        <argsstring>(const bool IsSingledTarget_, BaseAction *const action_)=0</argsstring>
+        <name>BaseCalculate</name>
+        <reimplementedby refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663">BaseCalculate</reimplementedby>
+        <reimplementedby refid="class_stat_system_1a805454116d5cd0a0c408117b42f413be">BaseCalculate</reimplementedby>
+        <reimplementedby refid="class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0">BaseCalculate</reimplementedby>
+        <param>
+          <type>const bool</type>
+          <declname>IsSingledTarget_</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/BaseSystem.h" line="8" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual BaseSystem::~BaseSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/BaseSystem.h" line="9" column="9" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/BaseSystem.h" bodystart="9" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>StatSystem</label>
+        <link refid="class_stat_system"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DamageDeltSystem</label>
+        <link refid="class_damage_delt_system"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+      <node id="3">
+        <label>EffectSystem</label>
+        <link refid="class_effect_system"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/BaseSystem.h" line="6" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/BaseSystem.h" bodystart="5" bodyend="10"/>
+    <listofallmembers>
+      <member refid="class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1" prot="public" virt="pure-virtual"><scope>BaseSystem</scope><name>BaseCalculate</name></member>
+      <member refid="class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16" prot="public" virt="virtual"><scope>BaseSystem</scope><name>~BaseSystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

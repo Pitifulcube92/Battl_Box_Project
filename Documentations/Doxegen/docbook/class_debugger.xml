@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_debugger">
+<title>Debugger Class Reference</title>
+<indexterm><primary>Debugger</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Debugger.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Debugger:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_debugger_1a0ff42aadd2564d22da3ea639dbfff21e">Debugger</link> (const <link linkend="_class_debugger">Debugger</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_debugger_1a42527ab94f2b927aacbe758ff61e37cf">Debugger</link> (<link linkend="_class_debugger">Debugger</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_debugger">Debugger</link> &amp; <link linkend="_class_debugger_1a66f6b2afc3ca554b5a8d16eb2bc2d858">operator=</link> (const <link linkend="_class_debugger">Debugger</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_debugger">Debugger</link> &amp; <link linkend="_class_debugger_1a8184e6b00d991bd5e5c746397f081f67">operator=</link> (<link linkend="_class_debugger">Debugger</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_debugger_1a0f3b2388a6d48a7dbb479858443c501d">Debugger</link> ()=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892">InitDebug</link> ()</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">SetSeverity</link> (const <link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</link> type_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_debugger_1aef91ed84489c9c928445e1f712d401de">Info</link> (const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Error</link> (const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3">Warrning</link> (const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_debugger_1a34151070033a196f3a220dd0297fd3d6">FatalError</link> (const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_debugger_1a0ff42aadd2564d22da3ea639dbfff21e"/>    <section>
+    <title>Debugger()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Debugger</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>Debugger</secondary></indexterm>
+<para><computeroutput>Debugger::Debugger (const <link linkend="_class_debugger">Debugger</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_debugger_1a42527ab94f2b927aacbe758ff61e37cf"/>    <section>
+    <title>Debugger()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Debugger</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>Debugger</secondary></indexterm>
+<para><computeroutput>Debugger::Debugger (<link linkend="_class_debugger">Debugger</link> &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_debugger_1a0f3b2388a6d48a7dbb479858443c501d"/>    <section>
+    <title>Debugger()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Debugger</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>Debugger</secondary></indexterm>
+<para><computeroutput>Debugger::Debugger ( )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48"/>    <section>
+    <title>Error()</title>
+<indexterm><primary>Error</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>Error</secondary></indexterm>
+<para><computeroutput>void Debugger::Error (const FString &amp; message_, const FString &amp; fileName_, const int32 line_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>44 {
+45 &#32;&#32;&#32;&#32;Log(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>,<emphasis role="stringliteral">&quot;ERROR:&#32;&quot;</emphasis>&#32;+&#32;message_,&#32;fileName_,&#32;line_);
+46 }
+</programlisting><para>
+References E_ERROR.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_a2d1f06f606185f51dc86b782e059ed48_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_debugger_1a34151070033a196f3a220dd0297fd3d6"/>    <section>
+    <title>FatalError()</title>
+<indexterm><primary>FatalError</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>FatalError</secondary></indexterm>
+<para><computeroutput>void Debugger::FatalError (const FString &amp; message_, const FString &amp; fileName_, const int32 line_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>52 {
+53 &#32;&#32;&#32;&#32;Log(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">MessageType::E_FATAL_ERROR</link>,<emphasis role="stringliteral">&quot;FATALERROR:&#32;&quot;</emphasis>&#32;+&#32;message_,&#32;fileName_,&#32;line_);
+54 }
+</programlisting><para>
+References E_FATAL_ERROR.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_a34151070033a196f3a220dd0297fd3d6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_debugger_1aef91ed84489c9c928445e1f712d401de"/>    <section>
+    <title>Info()</title>
+<indexterm><primary>Info</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>Info</secondary></indexterm>
+<para><computeroutput>void Debugger::Info (const FString &amp; message_, const FString &amp; fileName_, const int32 line_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>40 {
+41 &#32;&#32;&#32;&#32;Log(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8">MessageType::E_INFO</link>,<emphasis role="stringliteral">&quot;INFO:&#32;&quot;</emphasis>&#32;+&#32;message_,&#32;fileName_,&#32;line_);
+42 }
+</programlisting><para>
+References E_INFO.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_aef91ed84489c9c928445e1f712d401de_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892"/>    <section>
+    <title>InitDebug()</title>
+<indexterm><primary>InitDebug</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>InitDebug</secondary></indexterm>
+<para><computeroutput>void Debugger::InitDebug ( )<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>13 {
+14 &#32;&#32;&#32;&#32;DebugDirectory&#32;=&#32;FPaths::ProjectPluginsDir()&#32;+&#32;<emphasis role="stringliteral">&quot;/Battle_Box/Debug&quot;</emphasis>;
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa">BattleBoxFileManager::VerifyOnCreateDirectory</link>(DebugDirectory))
+16 &#32;&#32;&#32;&#32;{
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UE_LOG(LogTemp,&#32;Warning,&#32;TEXT(<emphasis role="stringliteral">&quot;Something&#32;went&#32;wrong&#32;with&#32;the&#32;directory!&quot;</emphasis>));
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+19 &#32;&#32;&#32;&#32;}
+20 &#32;&#32;&#32;&#32;currentType&#32;=&#32;<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">MessageType::E_FATAL_ERROR</link>;
+21 &#32;&#32;&#32;&#32;UE_LOG(LogTemp,&#32;Log,&#32;TEXT(<emphasis role="stringliteral">&quot;Debug&#32;Directory&#32;has&#32;been&#32;made!&quot;</emphasis>));
+22 }
+</programlisting><para>
+References E_FATAL_ERROR, and BattleBoxFileManager::VerifyOnCreateDirectory().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_a9ab35dcd08d8f181e262f4c8fb1ec892_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_a9ab35dcd08d8f181e262f4c8fb1ec892_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_debugger_1a66f6b2afc3ca554b5a8d16eb2bc2d858"/>    <section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_debugger">Debugger</link>&amp; Debugger::operator= (const <link linkend="_class_debugger">Debugger</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_debugger_1a8184e6b00d991bd5e5c746397f081f67"/>    <section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_debugger">Debugger</link>&amp; Debugger::operator= (<link linkend="_class_debugger">Debugger</link> &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2"/>    <section>
+    <title>SetSeverity()</title>
+<indexterm><primary>SetSeverity</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>SetSeverity</secondary></indexterm>
+<para><computeroutput>void Debugger::SetSeverity (const <link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</link> type_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>36 {
+37 &#32;&#32;&#32;&#32;currentType&#32;=&#32;type_;
+38 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3"/>    <section>
+    <title>Warrning()</title>
+<indexterm><primary>Warrning</primary><secondary>Debugger</secondary></indexterm>
+<indexterm><primary>Debugger</primary><secondary>Warrning</secondary></indexterm>
+<para><computeroutput>void Debugger::Warrning (const FString &amp; message_, const FString &amp; fileName_, const int32 line_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>48 {
+49 &#32;&#32;&#32;&#32;Log(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">MessageType::E_WARNING</link>,<emphasis role="stringliteral">&quot;WARNING:&#32;&quot;</emphasis>&#32;+&#32;message_,&#32;fileName_,&#32;line_);
+50 }
+</programlisting><para>
+References E_WARNING.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_debugger_a6f945a47fa65d5eb4f93a1db124324f3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__debugger_8h">Debugger.h</link>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__debuger_8cpp">Debuger.cpp</link></section>
+</section>

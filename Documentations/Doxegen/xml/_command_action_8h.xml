@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_command_action_8h" kind="file" language="C++">
+    <compoundname>CommandAction.h</compoundname>
+    <includes local="yes">CoreMinimal.h</includes>
+    <includes refid="_base_action_8h" local="yes">BaseAction.h</includes>
+    <includedby refid="_command_action_8cpp" local="yes">CommandAction.cpp</includedby>
+    <includedby refid="_stat_sheet_object_8cpp" local="yes">D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>CommandAction.h</label>
+        <link refid="_command_action_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="3">
+        <label>BaseAction.h</label>
+        <link refid="_base_action_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>CommandAction.h</label>
+        <link refid="_command_action_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp</label>
+        <link refid="_stat_sheet_object_8cpp"/>
+      </node>
+      <node id="2">
+        <label>CommandAction.cpp</label>
+        <link refid="_command_action_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_command_action" prot="public">CommandAction</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>WEAPONTYPE</name>
+        <enumvalue id="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a60880a7ff476d1de07c31261d81d4100" prot="public">
+          <name>E_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a1cc41ef898c7dc5a33b95675fd1ae0a3" prot="public">
+          <name>E_BLADE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a3a4bd5ec1b9e1a449a030e95737fcccb" prot="public">
+          <name>E_RANGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a154165a6024f0465ffdb2559926cd465" prot="public">
+          <name>E_BLUNT_WEAP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="9" column="1" bodyfile="CommandAction.h" bodystart="8" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Fill<sp/>out<sp/>your<sp/>copyright<sp/>notice<sp/>in<sp/>the<sp/>Description<sp/>page<sp/>of<sp/>Project<sp/>Settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COMMANDACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMMANDACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CoreMinimal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_base_action_8h" kindref="compound">BaseAction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">E_NONE</ref>,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a1cc41ef898c7dc5a33b95675fd1ae0a3" kindref="member">E_BLADE</ref>,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a3a4bd5ec1b9e1a449a030e95737fcccb" kindref="member">E_RANGE</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a154165a6024f0465ffdb2559926cd465" kindref="member">E_BLUNT_WEAP</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18" refid="class_command_action" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_action" kindref="compound">CommandAction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isActionCommand;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref><sp/>currentweapon;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/>command;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" kindref="member">CommandAction</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" kindref="member">CommandAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>discription_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref><sp/>action_,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref><sp/>target_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref><sp/>interaction_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32<sp/>actionID_,<sp/>TMap&lt;FString,<sp/>float&gt;<sp/>statMap_,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref><sp/>currentWeap_,<sp/><sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>command_);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" kindref="member">CommandAction</ref>(<ref refid="class_command_action" kindref="compound">CommandAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>other_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>the<sp/>weapon<sp/>type<sp/>the<sp/>item<sp/>is.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_action_1aebe160173438c46ddaac8018cd3d1b22" kindref="member">SetWeaponType</ref>(<ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref><sp/>type_);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>the<sp/>command<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_action_1a07a737aaa16805dccea57471b9918324" kindref="member">SetCommand</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/>action_);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>Make<sp/>a<sp/>method<sp/>thta<sp/>can<sp/>execute<sp/>a<sp/>blueprint<sp/>script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>weapon<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref><sp/><ref refid="class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1" kindref="member">ReturnWeaponType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>acton.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/><ref refid="class_command_action_1ae4ad4949defce81722252072e3413d2b" kindref="member">ReturnAction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_action_1aae8b568d1642f0bd846f4a8022eba70a" kindref="member">OnDestroy</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b" kindref="member">~CommandAction</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!1</highlight></codeline>
+    </programlisting>
+    <location file="CommandAction.h"/>
+  </compounddef>
+</doxygen>

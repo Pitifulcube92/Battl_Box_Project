@@ -1,0 +1,176 @@
+.TH "CommandAction" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommandAction
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CommandAction\&.h>\fP
+.PP
+Inherits \fBBaseAction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandAction\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandAction\fP (\fBCommandAction\fP *const other_)"
+.br
+.ti -1c
+.RI "\fBCommandAction\fP (const FString name_, const FString discription_, const \fBACTIONTYPE\fP action_, const \fBTARGETTYPE\fP target_, const \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const \fBWEAPONTYPE\fP currentWeap_, \fBBaseAction\fP *const command_)"
+.br
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "\fBBaseAction\fP * \fBReturnAction\fP () const"
+.br
+.ti -1c
+.RI "\fBWEAPONTYPE\fP \fBReturnWeaponType\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetCommand\fP (\fBBaseAction\fP *action_)"
+.br
+.ti -1c
+.RI "void \fBSetWeaponType\fP (\fBWEAPONTYPE\fP type_)"
+.br
+.ti -1c
+.RI "\fB~CommandAction\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file CommandAction\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CommandAction::CommandAction ()"
+
+.PP
+Definition at line 6 of file CommandAction\&.cpp\&.
+.PP
+.nf
+6                              : command(nullptr)
+7 {
+8      SetName("");
+9      SetDiscription("");
+10      SetActionType(ACTIONTYPE::E_NONE);
+11      SetTargetType(TARGETTYPE::E_NONE);
+12      SetInteractionType(INTERACTIONTYPE::E_NONE);
+13      SetActionID(00);
+14      currentweapon = WEAPONTYPE::E_NONE;
+15 }
+.fi
+.SS "CommandAction::CommandAction (const FString name_, const FString discription_, const \fBACTIONTYPE\fP action_, const \fBTARGETTYPE\fP target_, const \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const \fBWEAPONTYPE\fP currentWeap_, \fBBaseAction\fP *const command_)"
+
+.PP
+Definition at line 16 of file CommandAction\&.cpp\&.
+.PP
+.nf
+17 {
+18      SetName(name_);
+19      SetDiscription(discription_);
+20      SetActionType(action_);
+21      SetTargetType(target_);
+22      SetInteractionType(interaction_);
+23      SetActionID(actionID_);
+24      currentweapon = currentWeap_;
+25      command = command_;
+26 }
+.fi
+.SS "CommandAction::CommandAction (\fBCommandAction\fP *const other_)"
+
+.PP
+Definition at line 27 of file CommandAction\&.cpp\&.
+.PP
+.nf
+28 {
+29      SetName(other_->ReturnName());
+30      SetDiscription(other_->ReturnDiscription());
+31      SetActionType(other_->ReturnActionType());
+32      SetTargetType(other_->ReturnTargetType());
+33      SetInteractionType(other_->ReturnInteractionType());
+34      SetActionID(other_->ReturnActionID());
+35      currentweapon = ReturnWeaponType();
+36      command = ReturnAction();
+37 }
+.fi
+.SS "CommandAction::~CommandAction ()"
+
+.PP
+Definition at line 62 of file CommandAction\&.cpp\&.
+.PP
+.nf
+63 {
+64      OnDestroy();
+65 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void CommandAction::OnDestroy ()"
+
+.PP
+Definition at line 54 of file CommandAction\&.cpp\&.
+.PP
+.nf
+55 {
+56      if(command)
+57      {
+58           delete command;
+59           command = nullptr;
+60      }
+61 }
+.fi
+.PP
+Referenced by ~CommandAction()\&.
+.SS "\fBBaseAction\fP * CommandAction::ReturnAction () const"
+
+.PP
+Definition at line 50 of file CommandAction\&.cpp\&.
+.PP
+.nf
+51 {
+52      return command;
+53 }
+.fi
+.PP
+Referenced by CommandAction()\&.
+.SS "\fBWEAPONTYPE\fP CommandAction::ReturnWeaponType () const"
+
+.PP
+Definition at line 46 of file CommandAction\&.cpp\&.
+.PP
+.nf
+47 {
+48      return currentweapon;
+49 }
+.fi
+.PP
+Referenced by CommandAction()\&.
+.SS "void CommandAction::SetCommand (\fBBaseAction\fP * action_)"
+
+.PP
+Definition at line 42 of file CommandAction\&.cpp\&.
+.PP
+.nf
+43 {
+44      command = action_;
+45 }
+.fi
+.SS "void CommandAction::SetWeaponType (\fBWEAPONTYPE\fP type_)"
+
+.PP
+Definition at line 38 of file CommandAction\&.cpp\&.
+.PP
+.nf
+39 {
+40      currentweapon = type_;
+41 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

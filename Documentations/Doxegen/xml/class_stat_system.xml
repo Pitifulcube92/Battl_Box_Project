@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_stat_system" kind="class" language="C++" prot="public">
+    <compoundname>StatSystem</compoundname>
+    <basecompoundref refid="class_base_system" prot="public" virt="non-virtual">BaseSystem</basecompoundref>
+    <includes refid="_stat_system_8h" local="no">StatSystem.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stat_system_1ae09b0274af73fc6ba5984eb00578504a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *</type>
+        <definition>StatSheetObject* StatSystem::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="12" column="17" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_system_1ad8897d020748de4b84e6994d858867fe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+        <definition>BaseAction* StatSystem::targetAction</definition>
+        <argsstring></argsstring>
+        <name>targetAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="13" column="12" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_system_1a588a9905678c53a72b748e0b0de1fc5a" prot="private" static="no" mutable="no">
+        <type>TArray&lt; <ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> * &gt;</type>
+        <definition>TArray&lt;StatSheetObject*&gt; StatSystem::targets</definition>
+        <argsstring></argsstring>
+        <name>targets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="14" column="8" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stat_system_1ac75d67d5db20babea9601894aee1e871" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatSystem::StatSystem</definition>
+        <argsstring>()</argsstring>
+        <name>StatSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="16" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1a805454116d5cd0a0c408117b42f413be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void StatSystem::BaseCalculate</definition>
+        <argsstring>(const bool IsSingleTarget_, BaseAction *const action_)</argsstring>
+        <name>BaseCalculate</name>
+        <reimplements refid="class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1">BaseCalculate</reimplements>
+        <param>
+          <type>const bool</type>
+          <declname>IsSingleTarget_</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="17" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="10" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1a69b98b0b70ffb649aaad4e8cebda95db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::AddStatModifier</definition>
+        <argsstring>(BaseAction *const action_)</argsstring>
+        <name>AddStatModifier</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="18" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1a02d648b7bf4890422092ef592ef6d95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::RemoveModifier</definition>
+        <argsstring>(BaseAction *const action_)</argsstring>
+        <name>RemoveModifier</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="19" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1acc44ff7b73bce66d9da24df9608aab65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::AddTmpModifier</definition>
+        <argsstring>(BaseAction *action_, const float duration_)</argsstring>
+        <name>AddTmpModifier</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+          <declname>action_</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>duration_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="20" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1a37eb3d84c033799fe52f96ae7371e9a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::SetTarget</definition>
+        <argsstring>(StatSheetObject *const target_)</argsstring>
+        <name>SetTarget</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="21" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1a3db7a7b3be3f83319de0481332947674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::SetTargetAction</definition>
+        <argsstring>(BaseAction *const action_)</argsstring>
+        <name>SetTargetAction</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="22" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1afd6ba964080b87f599135a91466474eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::Addtarget</definition>
+        <argsstring>(StatSheetObject *const target_)</argsstring>
+        <name>Addtarget</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="23" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1aa74080624aba5dd9c0836013d684e931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSystem::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="24" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_system_1ae92847be88226779e422cfea7d9b597c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatSystem::~StatSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~StatSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="25" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>StatSystem</label>
+        <link refid="class_stat_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>StatSystem</label>
+        <link refid="class_stat_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" line="10" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h" bodystart="9" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_stat_system_1a69b98b0b70ffb649aaad4e8cebda95db" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>AddStatModifier</name></member>
+      <member refid="class_stat_system_1afd6ba964080b87f599135a91466474eb" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>Addtarget</name></member>
+      <member refid="class_stat_system_1acc44ff7b73bce66d9da24df9608aab65" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>AddTmpModifier</name></member>
+      <member refid="class_stat_system_1a805454116d5cd0a0c408117b42f413be" prot="public" virt="virtual"><scope>StatSystem</scope><name>BaseCalculate</name></member>
+      <member refid="class_stat_system_1aa74080624aba5dd9c0836013d684e931" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>OnDestroy</name></member>
+      <member refid="class_stat_system_1a02d648b7bf4890422092ef592ef6d95c" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>RemoveModifier</name></member>
+      <member refid="class_stat_system_1a37eb3d84c033799fe52f96ae7371e9a4" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>SetTarget</name></member>
+      <member refid="class_stat_system_1a3db7a7b3be3f83319de0481332947674" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>SetTargetAction</name></member>
+      <member refid="class_stat_system_1ac75d67d5db20babea9601894aee1e871" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>StatSystem</name></member>
+      <member refid="class_stat_system_1ae09b0274af73fc6ba5984eb00578504a" prot="private" virt="non-virtual"><scope>StatSystem</scope><name>target</name></member>
+      <member refid="class_stat_system_1ad8897d020748de4b84e6994d858867fe" prot="private" virt="non-virtual"><scope>StatSystem</scope><name>targetAction</name></member>
+      <member refid="class_stat_system_1a588a9905678c53a72b748e0b0de1fc5a" prot="private" virt="non-virtual"><scope>StatSystem</scope><name>targets</name></member>
+      <member refid="class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16" prot="public" virt="virtual"><scope>StatSystem</scope><name>~BaseSystem</name></member>
+      <member refid="class_stat_system_1ae92847be88226779e422cfea7d9b597c" prot="public" virt="non-virtual"><scope>StatSystem</scope><name>~StatSystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

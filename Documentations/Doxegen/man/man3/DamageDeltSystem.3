@@ -1,0 +1,248 @@
+.TH "DamageDeltSystem" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DamageDeltSystem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DamageDeltSystem\&.h>\fP
+.PP
+Inherits \fBBaseSystem\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddTargetToArray\fP (\fBStatSheetObject\fP *const target_)"
+.br
+.ti -1c
+.RI "void \fBBaseCalculate\fP (const bool IsSingledTarget_, \fBBaseAction\fP *const action_)"
+.br
+.RI "Base calculation for any dirieved system classes\&. "
+.ti -1c
+.RI "\fBDamageDeltSystem\fP ()"
+.br
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "TArray< float > \fBReturnDamageValues\fP () const"
+.br
+.ti -1c
+.RI "float \fBReturnTotalDamageValue\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetOwner\fP (\fBStatSheetObject\fP *const owner_)"
+.br
+.ti -1c
+.RI "void \fBSetTarget\fP (\fBStatSheetObject\fP *const target_)"
+.br
+.ti -1c
+.RI "\fB~DamageDeltSystem\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file DamageDeltSystem\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DamageDeltSystem::DamageDeltSystem ()"
+
+.PP
+Definition at line 10 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+10                                    : singleTarget(nullptr), owner(nullptr), targets(TArray<StatSheetObject*>()), totalDamageValues(TArray<float>())
+11 {
+12      totalDamageValue = 0\&.0f;
+13 }
+.fi
+.SS "DamageDeltSystem::~DamageDeltSystem ()"
+
+.PP
+Definition at line 274 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+275 {
+276      OnDestroy();
+277 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void DamageDeltSystem::AddTargetToArray (\fBStatSheetObject\fP *const target_)"
+
+.PP
+Definition at line 245 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+246 {
+247      targets\&.Add(target_);
+248 }
+.fi
+.SS "void DamageDeltSystem::BaseCalculate (const bool IsSingledTarget_, \fBBaseAction\fP *const action_)\fC [virtual]\fP"
+
+.PP
+Base calculation for any dirieved system classes\&. 
+.PP
+Implements \fBBaseSystem\fP\&.
+.PP
+Definition at line 14 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+15 {
+16      if(IsSingledTarget_)
+17      {
+18           //This will claculate any damage for a single target\&.
+19           switch (action_->ReturnActionType())
+20           {
+21           case ACTIONTYPE::E_COMMAND:
+22                //Command will do basic act with basic stats
+23                //TO DO: Check if there is any damage in this command\&.
+24                CommandAction* command = dynamic_cast<CommandAction*>(action_);
+25                break;
+26 
+27           case ACTIONTYPE::E_ITEM:
+28                //Item will be sorted to what type then calculated for total damage\&.
+29                ItemAction* item = dynamic_cast<ItemAction*>(action_);
+30 
+31                if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
+32                {
+33                     totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
+34                }
+35                else if (item->ReturnItemType() == ITEMTYPE::E_WEAPON)
+36                {
+37                     totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
+38                }
+39                else
+40                {
+41                     Debugger::SetSeverity(MessageType::E_ERROR);
+42                     Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem\&.cpp", __LINE__);
+43                }
+44                break;
+45           case ACTIONTYPE::E_ABILITY:
+46                //ability will retreive the damage value if any\&.
+47                //TO DO: create an enum for what type of ability it is\&.
+48                AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+49                CalculateAbilityDamage(ability);
+50                break;
+51           }    
+52           //TO DO: modify targets HP on stat system\&.
+53      }
+54      else if (IsSingledTarget_)
+55      {
+56           //This will calculate any damage for multiple targets\&.
+57           switch (action_->ReturnActionType())
+58           {
+59           case ACTIONTYPE::E_COMMAND:
+60                //Command will do basic act with basic stats
+61                //TO DO: Check if there is any damage in this command\&.
+62                CommandAction* command = dynamic_cast<CommandAction*>(action_);
+63                break;
+64           case ACTIONTYPE::E_ITEM:
+65                //Item will be sorted to what type then calculated for total damage\&.
+66                ItemAction* item = dynamic_cast<ItemAction*>(action_);
+67                if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
+68                {
+69                     for (int i = 0; i < targets\&.Num(); i++)
+70                     {
+71                          totalDamageValues\&.Add(CalculateItemDamage(item) - CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));
+72                     }
+73                }
+74                else if(item->ReturnItemType() == ITEMTYPE::E_WEAPON)
+75                {
+76                     for(int i = 0; i < targets\&.Num(); i++)
+77                     {
+78                          totalDamageValues\&.Add(CalculateItemDamage(item) - CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));
+79                     }
+80                }
+81                else
+82                {
+83                     Debugger::SetSeverity(MessageType::E_ERROR);
+84                     Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem\&.cpp", __LINE__);
+85                }
+86                break;
+87           case ACTIONTYPE::E_ABILITY:
+88                //ability will retreive the damage value if any\&.
+89                //TO DO: create an enum for what type of ability it is\&.
+90                AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+91                CalculateAbilityDamage(ability);
+92                break;
+93           }
+94           //TO DO: Modify stats of HP in targets\&.
+95 
+96      }
+97      //TO DO: After modification is done empty all information\&.
+98 
+99 }
+.fi
+.SS "void DamageDeltSystem::OnDestroy ()"
+
+.PP
+Definition at line 249 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+250 {
+251      //clean up any pointers
+252      if(singleTarget)
+253      {
+254           delete singleTarget;
+255      }
+256      if(targets\&.Num() > 0)
+257      {
+258           for(auto& elem : targets)
+259           {
+260                delete elem;
+261                elem = nullptr;
+262           }
+263           targets\&.Empty();
+264      }
+265 }
+.fi
+.PP
+Referenced by ~DamageDeltSystem()\&.
+.SS "TArray< float > DamageDeltSystem::ReturnDamageValues () const"
+
+.PP
+Definition at line 270 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+271 {
+272      return totalDamageValues;
+273 }
+.fi
+.SS "float DamageDeltSystem::ReturnTotalDamageValue () const"
+
+.PP
+Definition at line 266 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+267 {
+268      return totalDamageValue;
+269 }
+.fi
+.SS "void DamageDeltSystem::SetOwner (\fBStatSheetObject\fP *const owner_)"
+
+.PP
+Definition at line 237 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+238 {
+239      owner = owner_;
+240 }
+.fi
+.SS "void DamageDeltSystem::SetTarget (\fBStatSheetObject\fP *const target_)"
+
+.PP
+Definition at line 241 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+242 {
+243      singleTarget = target_;
+244 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

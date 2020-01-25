@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__debuger_8cpp">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp File Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp</primary></indexterm>
+<programlisting>#include &quot;Debugger.h&quot;
+#include &quot;BattleBoxFileManager.h&quot;
+#include &quot;Misc/Paths.h&quot;
+</programlisting>Include dependency graph for Debuger.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_debuger_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

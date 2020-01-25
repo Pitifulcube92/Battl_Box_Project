@@ -1,0 +1,5 @@
+<map id="StatSheetObject::ReturnCommand" name="StatSheetObject::ReturnCommand">
+<area shape="rect" id="node1" title="Returns a command action by its name from the command map." alt="" coords="5,31,228,57"/>
+<area shape="rect" id="node2" href="$dc/dbf/class_debugger.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="295,5,408,32"/>
+<area shape="rect" id="node3" href="$dc/dbf/class_debugger.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="276,56,427,83"/>
+</map>

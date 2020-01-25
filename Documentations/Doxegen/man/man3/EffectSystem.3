@@ -1,0 +1,159 @@
+.TH "EffectSystem" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EffectSystem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EffectSystem\&.h>\fP
+.PP
+Inherits \fBBaseSystem\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddtarget\fP (\fBStatSheetObject\fP *target_)"
+.br
+.RI "Add target to the target array\&. "
+.ti -1c
+.RI "void \fBBaseCalculate\fP (const bool IsSingleTarget_, \fBBaseAction\fP *const action_)"
+.br
+.RI "Base calculation for any dirieved system classes\&. "
+.ti -1c
+.RI "void \fBCallculateEffect\fP (\fBBaseAction\fP *action_)"
+.br
+.RI "Calculates the effect 
+.br
+ "
+.ti -1c
+.RI "\fBEffectSystem\fP ()"
+.br
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "void \fBRemoveEffect\fP (\fBBaseAction\fP *action_)"
+.br
+.RI "Removes the effect by the action\&. "
+.ti -1c
+.RI "void \fBSetTarget\fP (\fBStatSheetObject\fP *target_)"
+.br
+.RI "Sets target\&. "
+.ti -1c
+.RI "\fB~EffectSystem\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file EffectSystem\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "EffectSystem::EffectSystem ()"
+
+.PP
+Definition at line 6 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+7 {
+8 
+9 }
+.fi
+.SS "EffectSystem::~EffectSystem ()"
+
+.PP
+Definition at line 40 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+41 {
+42 
+43 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void EffectSystem::Addtarget (\fBStatSheetObject\fP * target_)"
+
+.PP
+Add target to the target array\&. 
+.PP
+Definition at line 32 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+33 {
+34 
+35 }
+.fi
+.SS "void EffectSystem::BaseCalculate (const bool IsSingledTarget_, \fBBaseAction\fP *const action_)\fC [virtual]\fP"
+
+.PP
+Base calculation for any dirieved system classes\&. 
+.PP
+Implements \fBBaseSystem\fP\&.
+.PP
+Definition at line 10 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+11 {
+12      if (IsSingledTarget_)
+13      {
+14      }
+15      else if (IsSingledTarget_)
+16      {
+17 
+18      }
+19 }
+.fi
+.SS "void EffectSystem::CallculateEffect (\fBBaseAction\fP * action_)"
+
+.PP
+Calculates the effect 
+.br
+ 
+.PP
+Definition at line 20 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+21 {
+22 
+23 }
+.fi
+.SS "void EffectSystem::OnDestroy ()"
+
+.PP
+Definition at line 36 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+37 {
+38 
+39 }
+.fi
+.SS "void EffectSystem::RemoveEffect (\fBBaseAction\fP * action_)"
+
+.PP
+Removes the effect by the action\&. 
+.PP
+Definition at line 24 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+25 {
+26 
+27 }
+.fi
+.SS "void EffectSystem::SetTarget (\fBStatSheetObject\fP * target_)"
+
+.PP
+Sets target\&. 
+.PP
+Definition at line 28 of file EffectSystem\&.cpp\&.
+.PP
+.nf
+29 {
+30 
+31 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

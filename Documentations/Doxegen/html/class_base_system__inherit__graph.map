@@ -1,0 +1,6 @@
+<map id="BaseSystem" name="BaseSystem">
+<area shape="rect" id="node1" title=" " alt="" coords="258,5,405,108"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system.html" title=" " alt="" coords="5,165,231,389"/>
+<area shape="rect" id="node3" href="$class_effect_system.html" title=" " alt="" coords="255,173,408,380"/>
+<area shape="rect" id="node4" href="$class_stat_system.html" title=" " alt="" coords="433,156,595,397"/>
+</map>

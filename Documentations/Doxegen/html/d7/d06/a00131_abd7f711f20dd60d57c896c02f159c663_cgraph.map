@@ -1,0 +1,8 @@
+<map id="DamageDeltSystem::BaseCalculate" name="DamageDeltSystem::BaseCalculate">
+<area shape="rect" id="node1" title="Base calculation for any dirieved system classes." alt="" coords="5,107,236,133"/>
+<area shape="rect" id="node2" href="$dd/d6d/a00111.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="327,5,441,32"/>
+<area shape="rect" id="node3" href="$d9/d77/a00095.html#a3c14c6ebf59154d1ad8d60ab546d7888" title=" " alt="" coords="284,56,484,83"/>
+<area shape="rect" id="node4" href="$d5/d1e/a00103.html#aa3322621804e1869f956757c31e4c4b6" title="Returns itemType." alt="" coords="293,107,475,133"/>
+<area shape="rect" id="node5" href="$d9/d77/a00095.html#a87fa8929e542db8b7b7e695490f1f0a2" title=" " alt="" coords="299,157,469,184"/>
+<area shape="rect" id="node6" href="$dd/d6d/a00111.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="309,208,459,235"/>
+</map>

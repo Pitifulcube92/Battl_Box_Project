@@ -1,0 +1,207 @@
+\doxysection{Battle\+Box\+File\+Manager Class Reference}
+\label{class_battle_box_file_manager}\index{BattleBoxFileManager@{BattleBoxFileManager}}
+
+
+{\ttfamily \#include $<$Battle\+Box\+File\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Battle\+Box\+File\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_battle_box_file_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Battle\+Box\+File\+Manager} (const \textbf{ Battle\+Box\+File\+Manager} \&)=delete
+\item 
+\textbf{ Battle\+Box\+File\+Manager} (\textbf{ Battle\+Box\+File\+Manager} \&\&)=delete
+\item 
+\textbf{ Battle\+Box\+File\+Manager} \& \textbf{ operator=} (const \textbf{ Battle\+Box\+File\+Manager} \&)=delete
+\item 
+\textbf{ Battle\+Box\+File\+Manager} \& \textbf{ operator=} (\textbf{ Battle\+Box\+File\+Manager} \&\&)=delete
+\item 
+\textbf{ Battle\+Box\+File\+Manager} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \textbf{ Verify\+On\+Create\+Directory} (const F\+String \&test\+Dir\+\_\+)
+\item 
+static void \textbf{ Get\+File\+Size} (const F\+String \&source\+Path\+\_\+)
+\item 
+static void \textbf{ Delete\+File} (const F\+String \&source\+Path\+\_\+)
+\item 
+static void \textbf{ Write\+Text\+File} (const F\+String \&save\+Directory\+\_\+, const F\+String context\+\_\+, const F\+String \&File\+Name\+\_\+, bool const Is\+Over\+Write\+\_\+)
+\item 
+static void \textbf{ Write\+Text\+Array\+To\+File} (const F\+String \&save\+Directory\+\_\+, const T\+Array$<$ F\+String $>$ text\+Array\+\_\+, const F\+String \&File\+Name\+\_\+, bool const Is\+Over\+Write\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_battle_box_file_manager_aa208c81249e7f64046ac125da5251691}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!BattleBoxFileManager@{BattleBoxFileManager}}
+\index{BattleBoxFileManager@{BattleBoxFileManager}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{BattleBoxFileManager()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Battle\+Box\+File\+Manager\+::\+Battle\+Box\+File\+Manager (\begin{DoxyParamCaption}\item[{const \textbf{ Battle\+Box\+File\+Manager} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_battle_box_file_manager_a18a8c6620bbb82f0f5bdd098e5eb5d20}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!BattleBoxFileManager@{BattleBoxFileManager}}
+\index{BattleBoxFileManager@{BattleBoxFileManager}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{BattleBoxFileManager()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Battle\+Box\+File\+Manager\+::\+Battle\+Box\+File\+Manager (\begin{DoxyParamCaption}\item[{\textbf{ Battle\+Box\+File\+Manager} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_battle_box_file_manager_a990e83630fa54920d542d985cc1719ae}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!BattleBoxFileManager@{BattleBoxFileManager}}
+\index{BattleBoxFileManager@{BattleBoxFileManager}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{BattleBoxFileManager()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Battle\+Box\+File\+Manager\+::\+Battle\+Box\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_battle_box_file_manager_af12ddc1b9f330c6dac9b59b7768c8a70}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!DeleteFile@{DeleteFile}}
+\index{DeleteFile@{DeleteFile}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{DeleteFile()}
+{\footnotesize\ttfamily void Battle\+Box\+File\+Manager\+::\+Delete\+File (\begin{DoxyParamCaption}\item[{const F\+String \&}]{source\+Path\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{if} (!FPlatformFileManager::Get().GetPlatformFile().DeleteFile(*sourcePath\_))}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         UE\_LOG(LogTemp, Warning, TEXT(\textcolor{stringliteral}{"Could not find File!"}));}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_battle_box_file_manager_a2afc97bab32b85e1afce4c255e4a7aef}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!GetFileSize@{GetFileSize}}
+\index{GetFileSize@{GetFileSize}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{GetFileSize()}
+{\footnotesize\ttfamily void Battle\+Box\+File\+Manager\+::\+Get\+File\+Size (\begin{DoxyParamCaption}\item[{const F\+String \&}]{source\+Path\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{if}(!FPlatformFileManager::Get().GetPlatformFile().FileSize(*sourcePath\_)) }
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         UE\_LOG(LogTemp, Warning, TEXT(\textcolor{stringliteral}{"File not Found!"}));}
+\DoxyCodeLine{27         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29     \textcolor{keyword}{const} int32 FileSize = FPlatformFileManager::Get().GetPlatformFile().FileSize(*sourcePath\_);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     FString Message = FString::Printf(TEXT(\textcolor{stringliteral}{"File size is: \%d"}), FileSize);}
+\DoxyCodeLine{32     UE\_LOG(LogTemp, Log, TEXT(\textcolor{stringliteral}{"\%s"}), *Message);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_battle_box_file_manager_a0531fe1d9ca69a0f5302154a53e2f4bf}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!operator=@{operator=}}
+\index{operator=@{operator=}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Battle\+Box\+File\+Manager}\& Battle\+Box\+File\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\textbf{ Battle\+Box\+File\+Manager} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_battle_box_file_manager_a4c6958072e3bcd4c4919373d47d16a18}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!operator=@{operator=}}
+\index{operator=@{operator=}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Battle\+Box\+File\+Manager}\& Battle\+Box\+File\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Battle\+Box\+File\+Manager} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!VerifyOnCreateDirectory@{VerifyOnCreateDirectory}}
+\index{VerifyOnCreateDirectory@{VerifyOnCreateDirectory}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{VerifyOnCreateDirectory()}
+{\footnotesize\ttfamily bool Battle\+Box\+File\+Manager\+::\+Verify\+On\+Create\+Directory (\begin{DoxyParamCaption}\item[{const F\+String \&}]{test\+Dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     IPlatformFile\& PlatFromFile = FPlatformFileManager::Get().GetPlatformFile();}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keywordflow}{if} (!PlatFromFile.DirectoryExists(*testDir\_))}
+\DoxyCodeLine{13     \{}
+\DoxyCodeLine{14         PlatFromFile.CreateDirectory(*testDir\_);}
+\DoxyCodeLine{15         \textcolor{keywordflow}{if}(!PlatFromFile.DirectoryExists(*testDir\_))}
+\DoxyCodeLine{16         \{}
+\DoxyCodeLine{17             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!WriteTextArrayToFile@{WriteTextArrayToFile}}
+\index{WriteTextArrayToFile@{WriteTextArrayToFile}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{WriteTextArrayToFile()}
+{\footnotesize\ttfamily void Battle\+Box\+File\+Manager\+::\+Write\+Text\+Array\+To\+File (\begin{DoxyParamCaption}\item[{const F\+String \&}]{save\+Directory\+\_\+,  }\item[{const T\+Array$<$ F\+String $>$}]{text\+Array\+\_\+,  }\item[{const F\+String \&}]{File\+Name\+\_\+,  }\item[{bool const}]{Is\+Over\+Write\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{if} (!IsOverWrite\_)}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{if} (!FPlatformFileManager::Get().GetPlatformFile().FileExists(*saveDirectory\_))}
+\DoxyCodeLine{62         \{}
+\DoxyCodeLine{63             UE\_LOG(LogTemp, Warning, TEXT(\textcolor{stringliteral}{"This does not work"}));}
+\DoxyCodeLine{64             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     FString FinalString = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{69     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} e : textArray\_)}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         FinalString += e;}
+\DoxyCodeLine{72         FinalString += LINE\_TERMINATOR;}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74     FString absoluteFilePath = saveDirectory\_ + \textcolor{stringliteral}{"/"} + FileName\_;}
+\DoxyCodeLine{75     FFileHelper::SaveStringToFile(*FinalString, *absoluteFilePath);}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_battle_box_file_manager_abd4bb207fe330e3d32150bc96978a385}} 
+\index{BattleBoxFileManager@{BattleBoxFileManager}!WriteTextFile@{WriteTextFile}}
+\index{WriteTextFile@{WriteTextFile}!BattleBoxFileManager@{BattleBoxFileManager}}
+\doxysubsubsection{WriteTextFile()}
+{\footnotesize\ttfamily void Battle\+Box\+File\+Manager\+::\+Write\+Text\+File (\begin{DoxyParamCaption}\item[{const F\+String \&}]{save\+Directory\+\_\+,  }\item[{const F\+String}]{context\+\_\+,  }\item[{const F\+String \&}]{File\+Name\+\_\+,  }\item[{bool const}]{Is\+Over\+Write\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     IPlatformFile\& PlateFormFile = FPlatformFileManager::Get().GetPlatformFile();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordflow}{if}(PlateFormFile.CreateDirectory(*saveDirectory\_))}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         FString absoluteFilePath = saveDirectory\_ + \textcolor{stringliteral}{"/"} + FileName\_;}
+\DoxyCodeLine{50         }
+\DoxyCodeLine{51         \textcolor{keywordflow}{if} (IsOverWrite\_ || !PlateFormFile.FileExists(*absoluteFilePath))}
+\DoxyCodeLine{52         \{}
+\DoxyCodeLine{53             FFileHelper::SaveStringToFile(*context\_, *absoluteFilePath);}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Battle\+Box\+File\+Manager.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Battle\+Box\+File\+Manager.\+cpp}\end{DoxyCompactItemize}

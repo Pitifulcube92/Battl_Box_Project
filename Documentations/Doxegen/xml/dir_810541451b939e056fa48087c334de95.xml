@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_810541451b939e056fa48087c334de95" kind="dir">
+    <compoundname>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public</compoundname>
+    <innerfile refid="_battle___box_8h">Battle_Box.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public/"/>
+  </compounddef>
+</doxygen>

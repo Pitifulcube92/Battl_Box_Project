@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_battle_box_file_manager">
+<title>BattleBoxFileManager Class Reference</title>
+<indexterm><primary>BattleBoxFileManager</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BattleBoxFileManager.h&gt;</computeroutput>
+</para>
+Collaboration diagram for BattleBoxFileManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_battle_box_file_manager__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_battle_box_file_manager_1aa208c81249e7f64046ac125da5251691">BattleBoxFileManager</link> (const <link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_box_file_manager_1a18a8c6620bbb82f0f5bdd098e5eb5d20">BattleBoxFileManager</link> (<link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp; <link linkend="_class_battle_box_file_manager_1a4c6958072e3bcd4c4919373d47d16a18">operator=</link> (const <link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp; <link linkend="_class_battle_box_file_manager_1a0531fe1d9ca69a0f5302154a53e2f4bf">operator=</link> (<link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_battle_box_file_manager_1a990e83630fa54920d542d985cc1719ae">BattleBoxFileManager</link> ()=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa">VerifyOnCreateDirectory</link> (const FString &amp;testDir_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_battle_box_file_manager_1a2afc97bab32b85e1afce4c255e4a7aef">GetFileSize</link> (const FString &amp;sourcePath_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_battle_box_file_manager_1af12ddc1b9f330c6dac9b59b7768c8a70">DeleteFile</link> (const FString &amp;sourcePath_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_battle_box_file_manager_1abd4bb207fe330e3d32150bc96978a385">WriteTextFile</link> (const FString &amp;saveDirectory_, const FString context_, const FString &amp;FileName_, bool const IsOverWrite_)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_battle_box_file_manager_1a132a3963cf91131124f5b5ff3d4f4909">WriteTextArrayToFile</link> (const FString &amp;saveDirectory_, const TArray&lt; FString &gt; textArray_, const FString &amp;FileName_, bool const IsOverWrite_)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_battle_box_file_manager_1aa208c81249e7f64046ac125da5251691"/>    <section>
+    <title>BattleBoxFileManager()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<para><computeroutput>BattleBoxFileManager::BattleBoxFileManager (const <link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_battle_box_file_manager_1a18a8c6620bbb82f0f5bdd098e5eb5d20"/>    <section>
+    <title>BattleBoxFileManager()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<para><computeroutput>BattleBoxFileManager::BattleBoxFileManager (<link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_battle_box_file_manager_1a990e83630fa54920d542d985cc1719ae"/>    <section>
+    <title>BattleBoxFileManager()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<para><computeroutput>BattleBoxFileManager::BattleBoxFileManager ( )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_battle_box_file_manager_1af12ddc1b9f330c6dac9b59b7768c8a70"/>    <section>
+    <title>DeleteFile()</title>
+<indexterm><primary>DeleteFile</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>DeleteFile</secondary></indexterm>
+<para><computeroutput>void BattleBoxFileManager::DeleteFile (const FString &amp; sourcePath_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>36 {
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!FPlatformFileManager::Get().GetPlatformFile().<link linkend="_class_battle_box_file_manager_1af12ddc1b9f330c6dac9b59b7768c8a70">DeleteFile</link>(*sourcePath_))
+38 &#32;&#32;&#32;&#32;{
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UE_LOG(LogTemp,&#32;Warning,&#32;TEXT(<emphasis role="stringliteral">&quot;Could&#32;not&#32;find&#32;File!&quot;</emphasis>));
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+41 &#32;&#32;&#32;&#32;}
+42 }
+</programlisting>    </section><anchor xml:id="_class_battle_box_file_manager_1a2afc97bab32b85e1afce4c255e4a7aef"/>    <section>
+    <title>GetFileSize()</title>
+<indexterm><primary>GetFileSize</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>GetFileSize</secondary></indexterm>
+<para><computeroutput>void BattleBoxFileManager::GetFileSize (const FString &amp; sourcePath_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>23 {
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!FPlatformFileManager::Get().GetPlatformFile().FileSize(*sourcePath_))&#32;
+25 &#32;&#32;&#32;&#32;{
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UE_LOG(LogTemp,&#32;Warning,&#32;TEXT(<emphasis role="stringliteral">&quot;File&#32;not&#32;Found!&quot;</emphasis>));
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+28 &#32;&#32;&#32;&#32;}
+29 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;int32&#32;FileSize&#32;=&#32;FPlatformFileManager::Get().GetPlatformFile().FileSize(*sourcePath_);
+30 
+31 &#32;&#32;&#32;&#32;FString&#32;Message&#32;=&#32;FString::Printf(TEXT(<emphasis role="stringliteral">&quot;File&#32;size&#32;is:&#32;%d&quot;</emphasis>),&#32;FileSize);
+32 &#32;&#32;&#32;&#32;UE_LOG(LogTemp,&#32;Log,&#32;TEXT(<emphasis role="stringliteral">&quot;%s&quot;</emphasis>),&#32;*Message);
+33 
+34 }
+</programlisting>    </section><anchor xml:id="_class_battle_box_file_manager_1a0531fe1d9ca69a0f5302154a53e2f4bf"/>    <section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link>&amp; BattleBoxFileManager::operator= (<link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_battle_box_file_manager_1a4c6958072e3bcd4c4919373d47d16a18"/>    <section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link>&amp; BattleBoxFileManager::operator= (const <link linkend="_class_battle_box_file_manager">BattleBoxFileManager</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa"/>    <section>
+    <title>VerifyOnCreateDirectory()</title>
+<indexterm><primary>VerifyOnCreateDirectory</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>VerifyOnCreateDirectory</secondary></indexterm>
+<para><computeroutput>bool BattleBoxFileManager::VerifyOnCreateDirectory (const FString &amp; testDir_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>9 {
+10 &#32;&#32;&#32;&#32;IPlatformFile&amp;&#32;PlatFromFile&#32;=&#32;FPlatformFileManager::Get().GetPlatformFile();
+11 
+12 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!PlatFromFile.DirectoryExists(*testDir_))
+13 &#32;&#32;&#32;&#32;{
+14 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlatFromFile.CreateDirectory(*testDir_);
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!PlatFromFile.DirectoryExists(*testDir_))
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+19 &#32;&#32;&#32;&#32;}
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+21 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_battle_box_file_manager_1a132a3963cf91131124f5b5ff3d4f4909"/>    <section>
+    <title>WriteTextArrayToFile()</title>
+<indexterm><primary>WriteTextArrayToFile</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>WriteTextArrayToFile</secondary></indexterm>
+<para><computeroutput>void BattleBoxFileManager::WriteTextArrayToFile (const FString &amp; saveDirectory_, const TArray&lt; FString &gt; textArray_, const FString &amp; FileName_, bool const IsOverWrite_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>58 {
+59 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!IsOverWrite_)
+60 &#32;&#32;&#32;&#32;{
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!FPlatformFileManager::Get().GetPlatformFile().FileExists(*saveDirectory_))
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UE_LOG(LogTemp,&#32;Warning,&#32;TEXT(<emphasis role="stringliteral">&quot;This&#32;does&#32;not&#32;work&quot;</emphasis>));
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+66 &#32;&#32;&#32;&#32;}
+67 
+68 &#32;&#32;&#32;&#32;FString&#32;FinalString&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&#32;e&#32;:&#32;textArray_)
+70 &#32;&#32;&#32;&#32;{
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FinalString&#32;+=&#32;e;
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FinalString&#32;+=&#32;LINE_TERMINATOR;
+73 &#32;&#32;&#32;&#32;}
+74 &#32;&#32;&#32;&#32;FString&#32;absoluteFilePath&#32;=&#32;saveDirectory_&#32;+&#32;<emphasis role="stringliteral">&quot;/&quot;</emphasis>&#32;+&#32;FileName_;
+75 &#32;&#32;&#32;&#32;FFileHelper::SaveStringToFile(*FinalString,&#32;*absoluteFilePath);
+76 }
+</programlisting>    </section><anchor xml:id="_class_battle_box_file_manager_1abd4bb207fe330e3d32150bc96978a385"/>    <section>
+    <title>WriteTextFile()</title>
+<indexterm><primary>WriteTextFile</primary><secondary>BattleBoxFileManager</secondary></indexterm>
+<indexterm><primary>BattleBoxFileManager</primary><secondary>WriteTextFile</secondary></indexterm>
+<para><computeroutput>void BattleBoxFileManager::WriteTextFile (const FString &amp; saveDirectory_, const FString context_, const FString &amp; FileName_, bool const IsOverWrite_)<computeroutput>[static]</computeroutput></computeroutput></para><programlisting>44 {
+45 &#32;&#32;&#32;&#32;IPlatformFile&amp;&#32;PlateFormFile&#32;=&#32;FPlatformFileManager::Get().GetPlatformFile();
+46 
+47 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(PlateFormFile.CreateDirectory(*saveDirectory_))
+48 &#32;&#32;&#32;&#32;{
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FString&#32;absoluteFilePath&#32;=&#32;saveDirectory_&#32;+&#32;<emphasis role="stringliteral">&quot;/&quot;</emphasis>&#32;+&#32;FileName_;
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsOverWrite_&#32;||&#32;!PlateFormFile.FileExists(*absoluteFilePath))
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FFileHelper::SaveStringToFile(*context_,&#32;*absoluteFilePath);
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+55 &#32;&#32;&#32;&#32;}
+56 }
+</programlisting></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__battle_box_file_manager_8h">BattleBoxFileManager.h</link>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__battle_box_file_manager_8cpp">BattleBoxFileManager.cpp</link></section>
+</section>

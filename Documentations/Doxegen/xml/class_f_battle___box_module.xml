@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_f_battle___box_module" kind="class" language="C++" prot="public">
+    <compoundname>FBattle_BoxModule</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IModuleInterface</basecompoundref>
+    <includes refid="_battle___box_8h" local="no">Battle_Box.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FBattle_BoxModule::StartupModule</definition>
+        <argsstring>() override</argsstring>
+        <name>StartupModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IModuleInterface implementation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public/Battle_Box.h" line="13" column="14" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Battle_Box.cpp" bodystart="8" bodyend="23"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">E_FATAL_ERROR</references>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8">E_INFO</references>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">E_WARNING</references>
+        <references refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" compoundref="_debuger_8cpp" startline="43" endline="46">Debugger::Error</references>
+        <references refid="class_debugger_1a34151070033a196f3a220dd0297fd3d6" compoundref="_debuger_8cpp" startline="51" endline="54">Debugger::FatalError</references>
+        <references refid="class_debugger_1aef91ed84489c9c928445e1f712d401de" compoundref="_debuger_8cpp" startline="39" endline="42">Debugger::Info</references>
+        <references refid="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" compoundref="_debuger_8cpp" startline="12" endline="22">Debugger::InitDebug</references>
+        <references refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" compoundref="_debuger_8cpp" startline="35" endline="38">Debugger::SetSeverity</references>
+        <references refid="class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3" compoundref="_debuger_8cpp" startline="47" endline="50">Debugger::Warrning</references>
+      </memberdef>
+      <memberdef kind="function" id="class_f_battle___box_module_1af861316d1a9e9cda23763de4e970d3af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FBattle_BoxModule::ShutdownModule</definition>
+        <argsstring>() override</argsstring>
+        <name>ShutdownModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public/Battle_Box.h" line="14" column="14" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Battle_Box.cpp" bodystart="25" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IModuleInterface</label>
+      </node>
+      <node id="1">
+        <label>FBattle_BoxModule</label>
+        <link refid="class_f_battle___box_module"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IModuleInterface</label>
+      </node>
+      <node id="1">
+        <label>FBattle_BoxModule</label>
+        <link refid="class_f_battle___box_module"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public/Battle_Box.h" line="9" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public/Battle_Box.h" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_f_battle___box_module_1af861316d1a9e9cda23763de4e970d3af" prot="public" virt="virtual"><scope>FBattle_BoxModule</scope><name>ShutdownModule</name></member>
+      <member refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" prot="public" virt="virtual"><scope>FBattle_BoxModule</scope><name>StartupModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

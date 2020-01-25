@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_stat_sheet_object_8h" kind="file" language="C++">
+    <compoundname>StatSheetObject.h</compoundname>
+    <includes local="yes">CoreMinimal.h</includes>
+    <includes local="yes">Containers/Array.h</includes>
+    <includes local="yes">Containers/Map.h</includes>
+    <includedby refid="_stat_sheet_object_8cpp" local="yes">D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Containers/Array.h</label>
+      </node>
+      <node id="2">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="4">
+        <label>Containers/Map.h</label>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h</label>
+        <link refid="_stat_sheet_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp</label>
+        <link refid="_stat_sheet_object_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h</label>
+        <link refid="_stat_sheet_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_stat_sheet_object" prot="public">StatSheetObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Fill<sp/>out<sp/>your<sp/>copyright<sp/>notice<sp/>in<sp/>the<sp/>Description<sp/>page<sp/>of<sp/>Project<sp/>Settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STATSHEETOBJECT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STATSHEETOBJECT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CoreMinimal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Containers/Array.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Containers/Map.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_item_action" kindref="compound">ItemAction</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_action" kindref="compound">CommandAction</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ability_action" kindref="compound">AbilityAction</ref>;</highlight></codeline>
+<codeline lineno="14" refid="class_stat_sheet_object" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/>name;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/>tag;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>CommandAction*&gt;<sp/>commandMap;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>ItemAction*&gt;<sp/>itemMap;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>AbilityAction*&gt;<sp/>abilityMap;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>float&gt;<sp/>statMap;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>ItemAction*&gt;<sp/>equipmentMap;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060" kindref="member">StatSheetObject</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060" kindref="member">StatSheetObject</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>tag_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TMap&lt;FString,<sp/>CommandAction*&gt;<sp/>commandMap_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TMap&lt;FString,<sp/>ItemAction*&gt;<sp/>itemMap_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TMap&lt;FString,<sp/>AbilityAction*&gt;<sp/>abilityMap_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TMap&lt;FString,<sp/>float&gt;<sp/>statMap_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TMap&lt;FString,<sp/>ItemAction*&gt;<sp/>equipmentMap_);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060" kindref="member">StatSheetObject</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>other_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1aea46c857ac7552e6460bbc9605f0caab" kindref="member">SetName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1a0015a317c575f299b59dc712504b0879" kindref="member">SetTag</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>tag_);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/><ref refid="class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a" kindref="member">ReturnName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/><ref refid="class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44" kindref="member">ReturnTag</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3" kindref="member">AddCommandAction</ref>(<ref refid="class_command_action" kindref="compound">CommandAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>command_);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8" kindref="member">AddItemAction</ref>(<ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>item_);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142" kindref="member">AddAbilityAction</ref>(<ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ability_);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3" kindref="member">AddEquipment</ref>(<ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>equipment_);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1ab22d60ec7f2082cf6a55e759ffc79af0" kindref="member">RemoveCommandAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1a3d652cd2a6177ef396a9adc27fbcdac0" kindref="member">RemoveItemAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1afa220913560581c6976e720c2f9d6f6a" kindref="member">RemoveAbilityAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1a3fe9bd16a83ba7970dcaa2cd2d68f1d5" kindref="member">RemoveEquipment</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>CommandAction*&gt;<sp/><ref refid="class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2" kindref="member">ReturnCommandMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>ItemAction*&gt;<sp/><ref refid="class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba" kindref="member">ReturnItemMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>AbilityAction*&gt;<sp/><ref refid="class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4" kindref="member">ReturnAbilityMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>float&gt;<sp/><ref refid="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" kindref="member">ReturnStatMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>ItemAction*&gt;<sp/><ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_action" kindref="compound">CommandAction</ref>*<sp/><ref refid="class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b" kindref="member">ReturnCommand</ref>(FString<sp/>name_)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/><ref refid="class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55" kindref="member">ReturnItem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*<sp/><ref refid="class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd" kindref="member">ReturnAbility</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/><ref refid="class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a" kindref="member">ReturnEquipment</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d" kindref="member">OnDestroy</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8" kindref="member">~StatSheetObject</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!1</highlight></codeline>
+    </programlisting>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h"/>
+  </compounddef>
+</doxygen>

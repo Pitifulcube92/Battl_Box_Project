@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_battle___box" kind="class" language="C#" prot="public">
+    <compoundname>Battle_Box</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModuleRules</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_battle___box_1a3cedcf74184e2b8bb3fd4c3ec012a6a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Battle_Box.Battle_Box</definition>
+        <argsstring>(ReadOnlyTargetRules Target)</argsstring>
+        <name>Battle_Box</name>
+        <param>
+          <type>ReadOnlyTargetRules</type>
+          <declname>Target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Battle_Box.Build.cs" line="7" column="8" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Battle_Box.Build.cs" bodystart="7" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ModuleRules</label>
+      </node>
+      <node id="1">
+        <label>Battle_Box</label>
+        <link refid="class_battle___box"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ModuleRules</label>
+      </node>
+      <node id="1">
+        <label>Battle_Box</label>
+        <link refid="class_battle___box"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Battle_Box.Build.cs" line="6" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Battle_Box.Build.cs" bodystart="5" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_battle___box_1a3cedcf74184e2b8bb3fd4c3ec012a6a9" prot="public" virt="non-virtual"><scope>Battle_Box</scope><name>Battle_Box</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

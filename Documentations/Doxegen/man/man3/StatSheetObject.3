@@ -1,0 +1,490 @@
+.TH "StatSheetObject" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StatSheetObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <StatSheetObject\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddAbilityAction\fP (\fBAbilityAction\fP *const ability_)"
+.br
+.RI "Adds a ability action to the ability map\&. "
+.ti -1c
+.RI "void \fBAddCommandAction\fP (\fBCommandAction\fP *const command_)"
+.br
+.RI "Adds a command action the command map\&. "
+.ti -1c
+.RI "void \fBAddEquipment\fP (\fBItemAction\fP *const equipment_)"
+.br
+.RI "Adds a eqquipment-item action to the equipmnet map\&. "
+.ti -1c
+.RI "void \fBAddItemAction\fP (\fBItemAction\fP *const item_)"
+.br
+.RI "Adds a item action to the item map\&. "
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "void \fBRemoveAbilityAction\fP (const FString name_)"
+.br
+.RI "Removes a ability action if there is one in the map\&. "
+.ti -1c
+.RI "void \fBRemoveCommandAction\fP (const FString name_)"
+.br
+.RI "Removes a command action if there is one in the map\&. "
+.ti -1c
+.RI "void \fBRemoveEquipment\fP (const FString name_)"
+.br
+.RI "Removes a equipment-type action if there is one in the map\&. "
+.ti -1c
+.RI "void \fBRemoveItemAction\fP (const FString name_)"
+.br
+.RI "Removes a item action if there is one in the map\&. "
+.ti -1c
+.RI "\fBAbilityAction\fP * \fBReturnAbility\fP (const FString name_) const"
+.br
+.RI "Returns a ability action by its name from the ability map\&. "
+.ti -1c
+.RI "TMap< FString, \fBAbilityAction\fP * > \fBReturnAbilityMap\fP () const"
+.br
+.RI "Returns the ability map\&. "
+.ti -1c
+.RI "\fBCommandAction\fP * \fBReturnCommand\fP (FString name_) const"
+.br
+.RI "Returns a command action by its name from the command map\&. "
+.ti -1c
+.RI "TMap< FString, \fBCommandAction\fP * > \fBReturnCommandMap\fP () const"
+.br
+.RI "Returns the commmand map\&. "
+.ti -1c
+.RI "\fBItemAction\fP * \fBReturnEquipment\fP (const FString name_) const"
+.br
+.RI "Returns a equipment-item action by its name from the equipment map\&. "
+.ti -1c
+.RI "TMap< FString, \fBItemAction\fP * > \fBReturnEquipmentMap\fP () const"
+.br
+.RI "Returns the equipment map\&. "
+.ti -1c
+.RI "\fBItemAction\fP * \fBReturnItem\fP (const FString name_) const"
+.br
+.RI "Returns a item action by its name from the item map\&. "
+.ti -1c
+.RI "TMap< FString, \fBItemAction\fP * > \fBReturnItemMap\fP () const"
+.br
+.RI "Returns the item map\&. "
+.ti -1c
+.RI "FString \fBReturnName\fP () const"
+.br
+.RI "Returns name\&. "
+.ti -1c
+.RI "TMap< FString, float > \fBReturnStatMap\fP () const"
+.br
+.RI "Returns the statMap\&. "
+.ti -1c
+.RI "FString \fBReturnTag\fP () const"
+.br
+.RI "Returns tag\&. "
+.ti -1c
+.RI "void \fBSetName\fP (const FString name_)"
+.br
+.RI "Sets name\&. "
+.ti -1c
+.RI "void \fBSetTag\fP (const FString tag_)"
+.br
+.RI "Sets tag\&. "
+.ti -1c
+.RI "\fBStatSheetObject\fP ()"
+.br
+.ti -1c
+.RI "\fBStatSheetObject\fP (const FString name_, const FString tag_, const TMap< FString, \fBCommandAction\fP * > commandMap_, const TMap< FString, \fBItemAction\fP * > itemMap_, const TMap< FString, \fBAbilityAction\fP * > abilityMap_, const TMap< FString, float > statMap_, const TMap< FString, \fBItemAction\fP * > equipmentMap_)"
+.br
+.ti -1c
+.RI "\fBStatSheetObject\fP (\fBStatSheetObject\fP *const other_)"
+.br
+.ti -1c
+.RI "\fB~StatSheetObject\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file StatSheetObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StatSheetObject::StatSheetObject ()"
+
+.PP
+Definition at line 10 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+10                                  : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())
+11 {
+12      name = "";
+13      tag = "";
+14 }
+.fi
+.SS "StatSheetObject::StatSheetObject (const FString name_, const FString tag_, const TMap< FString, \fBCommandAction\fP * > commandMap_, const TMap< FString, \fBItemAction\fP * > itemMap_, const TMap< FString, \fBAbilityAction\fP * > abilityMap_, const TMap< FString, float > statMap_, const TMap< FString, \fBItemAction\fP * > equipmentMap_)"
+
+.PP
+Definition at line 15 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+16 {
+17      name = name_;
+18      tag = tag_;
+19      commandMap = commandMap_;
+20      itemMap = itemMap_;
+21      abilityMap = abilityMap_;
+22      equipmentMap = equipmentMap_;
+23 }
+.fi
+.SS "StatSheetObject::StatSheetObject (\fBStatSheetObject\fP *const other_)"
+
+.PP
+Definition at line 24 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+25 {
+26      name = other_->ReturnName();
+27      tag = other_->ReturnTag();
+28      commandMap = other_->ReturnCommandMap();
+29      itemMap = other_->ReturnItemMap();
+30      abilityMap = other_->ReturnAbilityMap();
+31      equipmentMap = other_->ReturnEquipmentMap();
+32      statMap = other_->ReturnStatMap();
+33 
+34 }
+.fi
+.SS "StatSheetObject::~StatSheetObject ()"
+
+.PP
+Definition at line 156 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+157 {
+158      OnDestroy();
+159 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void StatSheetObject::AddAbilityAction (\fBAbilityAction\fP *const ability_)"
+
+.PP
+Adds a ability action to the ability map\&. 
+.PP
+Definition at line 59 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+60 {
+61      abilityMap\&.Add(ability_->ReturnName(), ability_);
+62 }
+.fi
+.SS "void StatSheetObject::AddCommandAction (\fBCommandAction\fP *const command_)"
+
+.PP
+Adds a command action the command map\&. 
+.PP
+Definition at line 51 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+52 {
+53      commandMap\&.Add(command_->ReturnName(), command_);
+54 }
+.fi
+.SS "void StatSheetObject::AddEquipment (\fBItemAction\fP *const equipment_)"
+
+.PP
+Adds a eqquipment-item action to the equipmnet map\&. 
+.PP
+Definition at line 63 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+64 {
+65      equipmentMap\&.Add(equipment_->ReturnName(), equipment_);
+66 }
+.fi
+.SS "void StatSheetObject::AddItemAction (\fBItemAction\fP *const item_)"
+
+.PP
+Adds a item action to the item map\&. 
+.PP
+Definition at line 55 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+56 {
+57      itemMap\&.Add(item_->ReturnName(), item_);
+58 }
+.fi
+.SS "void StatSheetObject::OnDestroy ()"
+
+.PP
+Definition at line 144 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+145 {
+146      //Clear out all pointer within the maps
+147      if (commandMap\&.Num() > 0)
+148      {
+149           for(auto command : commandMap)
+150           {
+151                delete command\&.Value;
+152           }
+153           commandMap\&.Empty();
+154      }
+155 }
+.fi
+.PP
+Referenced by ~StatSheetObject()\&.
+.SS "void StatSheetObject::RemoveAbilityAction (const FString name_)"
+
+.PP
+Removes a ability action if there is one in the map\&. 
+.PP
+Definition at line 75 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+76 {
+77      abilityMap\&.Remove(name_);
+78 }
+.fi
+.SS "void StatSheetObject::RemoveCommandAction (const FString name_)"
+
+.PP
+Removes a command action if there is one in the map\&. 
+.PP
+Definition at line 67 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+68 {
+69      commandMap\&.Remove(name_);
+70 }
+.fi
+.SS "void StatSheetObject::RemoveEquipment (const FString name_)"
+
+.PP
+Removes a equipment-type action if there is one in the map\&. 
+.PP
+Definition at line 79 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+80 {
+81      equipmentMap\&.Remove(name);
+82 }
+.fi
+.SS "void StatSheetObject::RemoveItemAction (const FString name_)"
+
+.PP
+Removes a item action if there is one in the map\&. 
+.PP
+Definition at line 71 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+72 {
+73      itemMap\&.Remove(name_);
+74 }
+.fi
+.SS "\fBAbilityAction\fP * StatSheetObject::ReturnAbility (const FString name_) const"
+
+.PP
+Returns a ability action by its name from the ability map\&. 
+.PP
+Definition at line 103 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+104 {
+105      if (!abilityMap\&.Find(name_))
+106      {
+107           Debugger::SetSeverity(MessageType::E_ERROR);
+108           Debugger::Error("Ability action " + name_ + " could not be found", "StatSheetObject\&.cpp", __LINE__);
+109           return nullptr;
+110      }
+111      
+112      return abilityMap[name_];
+113 }
+.fi
+.SS "TMap< FString, \fBAbilityAction\fP * > StatSheetObject::ReturnAbilityMap () const"
+
+.PP
+Returns the ability map\&. 
+.PP
+Definition at line 132 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+133 {
+134      return abilityMap;
+135 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "\fBCommandAction\fP * StatSheetObject::ReturnCommand (FString name_) const"
+
+.PP
+Returns a command action by its name from the command map\&. 
+.PP
+Definition at line 83 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+84 {
+85      if (!commandMap\&.Find(name_))
+86      {
+87           Debugger::SetSeverity(MessageType::E_ERROR);
+88           Debugger::Error("Command action " + name_ + " could not be found", "StatSheetObject\&.cpp", __LINE__);
+89           return nullptr;
+90      }
+91           return commandMap[name_];
+92 }
+.fi
+.SS "TMap< FString, \fBCommandAction\fP * > StatSheetObject::ReturnCommandMap () const"
+
+.PP
+Returns the commmand map\&. 
+.PP
+Definition at line 124 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+125 {
+126      return commandMap;
+127 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "\fBItemAction\fP * StatSheetObject::ReturnEquipment (const FString name_) const"
+
+.PP
+Returns a equipment-item action by its name from the equipment map\&. 
+.PP
+Definition at line 114 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+115 {
+116      if (!equipmentMap\&.Find(name_))
+117      {
+118           Debugger::SetSeverity(MessageType::E_ERROR);
+119           Debugger::Error("Equipment action " + name_ + " could not be found", "StatSheetObject\&.cpp", __LINE__);
+120           return nullptr;
+121      }
+122           return equipmentMap[name_];
+123 }
+.fi
+.SS "TMap< FString, \fBItemAction\fP * > StatSheetObject::ReturnEquipmentMap () const"
+
+.PP
+Returns the equipment map\&. 
+.PP
+Definition at line 140 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+141 {
+142      return equipmentMap;
+143 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "\fBItemAction\fP * StatSheetObject::ReturnItem (const FString name_) const"
+
+.PP
+Returns a item action by its name from the item map\&. 
+.PP
+Definition at line 93 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+94 {
+95      if (!itemMap\&.Find(name_))
+96      {
+97           Debugger::SetSeverity(MessageType::E_ERROR);
+98           Debugger::Error("Item action " + name_ + " could not be found", "StatSheetObject\&.cpp", __LINE__);
+99           return nullptr;
+100      }
+101           return itemMap[name_];
+102 }
+.fi
+.SS "TMap< FString, \fBItemAction\fP * > StatSheetObject::ReturnItemMap () const"
+
+.PP
+Returns the item map\&. 
+.PP
+Definition at line 128 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+129 {
+130      return itemMap;
+131 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "FString StatSheetObject::ReturnName () const"
+
+.PP
+Returns name\&. 
+.PP
+Definition at line 43 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+44 {
+45      return name;
+46 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "TMap< FString, float > StatSheetObject::ReturnStatMap () const"
+
+.PP
+Returns the statMap\&. 
+.PP
+Definition at line 136 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+137 {
+138      return statMap;
+139 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "FString StatSheetObject::ReturnTag () const"
+
+.PP
+Returns tag\&. 
+.PP
+Definition at line 47 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+48 {
+49      return tag;
+50 }
+.fi
+.PP
+Referenced by StatSheetObject()\&.
+.SS "void StatSheetObject::SetName (const FString name_)"
+
+.PP
+Sets name\&. 
+.PP
+Definition at line 35 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+36 {
+37      name = name_;
+38 }
+.fi
+.SS "void StatSheetObject::SetTag (const FString tag_)"
+
+.PP
+Sets tag\&. 
+.PP
+Definition at line 39 of file StatSheetObject\&.cpp\&.
+.PP
+.nf
+40 {
+41      tag = tag_;
+42 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

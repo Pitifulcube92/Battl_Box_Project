@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_e62df1e735427e812253531f25cd505f" kind="dir">
+    <compoundname>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses</compoundname>
+    <innerfile refid="_base_system_8h">BaseSystem.h</innerfile>
+    <innerfile refid="_damage_delt_system_8cpp">DamageDeltSystem.cpp</innerfile>
+    <innerfile refid="_damage_delt_system_8h">DamageDeltSystem.h</innerfile>
+    <innerfile refid="_effect_system_8cpp">EffectSystem.cpp</innerfile>
+    <innerfile refid="_effect_system_8h">EffectSystem.h</innerfile>
+    <innerfile refid="_stat_system_8cpp">StatSystem.cpp</innerfile>
+    <innerfile refid="_stat_system_8h">StatSystem.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/"/>
+  </compounddef>
+</doxygen>

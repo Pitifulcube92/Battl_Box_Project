@@ -1,0 +1,171 @@
+.TH "BattleBoxFileManager" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BattleBoxFileManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BattleBoxFileManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBattleBoxFileManager\fP ()=delete"
+.br
+.ti -1c
+.RI "\fBBattleBoxFileManager\fP (\fBBattleBoxFileManager\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBBattleBoxFileManager\fP (const \fBBattleBoxFileManager\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBBattleBoxFileManager\fP & \fBoperator=\fP (\fBBattleBoxFileManager\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBBattleBoxFileManager\fP & \fBoperator=\fP (const \fBBattleBoxFileManager\fP &)=delete"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBDeleteFile\fP (const FString &sourcePath_)"
+.br
+.ti -1c
+.RI "static void \fBGetFileSize\fP (const FString &sourcePath_)"
+.br
+.ti -1c
+.RI "static bool \fBVerifyOnCreateDirectory\fP (const FString &testDir_)"
+.br
+.ti -1c
+.RI "static void \fBWriteTextArrayToFile\fP (const FString &saveDirectory_, const TArray< FString > textArray_, const FString &FileName_, bool const IsOverWrite_)"
+.br
+.ti -1c
+.RI "static void \fBWriteTextFile\fP (const FString &saveDirectory_, const FString context_, const FString &FileName_, bool const IsOverWrite_)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file BattleBoxFileManager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BattleBoxFileManager::BattleBoxFileManager (const \fBBattleBoxFileManager\fP &)\fC [delete]\fP"
+
+.SS "BattleBoxFileManager::BattleBoxFileManager (\fBBattleBoxFileManager\fP &&)\fC [delete]\fP"
+
+.SS "BattleBoxFileManager::BattleBoxFileManager ()\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void BattleBoxFileManager::DeleteFile (const FString & sourcePath_)\fC [static]\fP"
+
+.PP
+Definition at line 35 of file BattleBoxFileManager\&.cpp\&.
+.PP
+.nf
+36 {
+37      if (!FPlatformFileManager::Get()\&.GetPlatformFile()\&.DeleteFile(*sourcePath_))
+38      {
+39           UE_LOG(LogTemp, Warning, TEXT("Could not find File!"));
+40           return;
+41      }
+42 }
+.fi
+.SS "void BattleBoxFileManager::GetFileSize (const FString & sourcePath_)\fC [static]\fP"
+
+.PP
+Definition at line 22 of file BattleBoxFileManager\&.cpp\&.
+.PP
+.nf
+23 {
+24      if(!FPlatformFileManager::Get()\&.GetPlatformFile()\&.FileSize(*sourcePath_)) 
+25      {
+26           UE_LOG(LogTemp, Warning, TEXT("File not Found!"));
+27           return;
+28      }
+29      const int32 FileSize = FPlatformFileManager::Get()\&.GetPlatformFile()\&.FileSize(*sourcePath_);
+30 
+31      FString Message = FString::Printf(TEXT("File size is: %d"), FileSize);
+32      UE_LOG(LogTemp, Log, TEXT("%s"), *Message);
+33 
+34 }
+.fi
+.SS "\fBBattleBoxFileManager\fP& BattleBoxFileManager::operator= (\fBBattleBoxFileManager\fP &&)\fC [delete]\fP"
+
+.SS "\fBBattleBoxFileManager\fP& BattleBoxFileManager::operator= (const \fBBattleBoxFileManager\fP &)\fC [delete]\fP"
+
+.SS "bool BattleBoxFileManager::VerifyOnCreateDirectory (const FString & testDir_)\fC [static]\fP"
+
+.PP
+Definition at line 8 of file BattleBoxFileManager\&.cpp\&.
+.PP
+.nf
+9 {
+10      IPlatformFile& PlatFromFile = FPlatformFileManager::Get()\&.GetPlatformFile();
+11 
+12      if (!PlatFromFile\&.DirectoryExists(*testDir_))
+13      {
+14           PlatFromFile\&.CreateDirectory(*testDir_);
+15           if(!PlatFromFile\&.DirectoryExists(*testDir_))
+16           {
+17                return false;
+18           }
+19      }
+20      return true;
+21 }
+.fi
+.PP
+Referenced by Debugger::InitDebug()\&.
+.SS "void BattleBoxFileManager::WriteTextArrayToFile (const FString & saveDirectory_, const TArray< FString > textArray_, const FString & FileName_, bool const IsOverWrite_)\fC [static]\fP"
+
+.PP
+Definition at line 57 of file BattleBoxFileManager\&.cpp\&.
+.PP
+.nf
+58 {
+59      if (!IsOverWrite_)
+60      {
+61           if (!FPlatformFileManager::Get()\&.GetPlatformFile()\&.FileExists(*saveDirectory_))
+62           {
+63                UE_LOG(LogTemp, Warning, TEXT("This does not work"));
+64                return;
+65           }
+66      }
+67 
+68      FString FinalString = "";
+69      for (auto e : textArray_)
+70      {
+71           FinalString += e;
+72           FinalString += LINE_TERMINATOR;
+73      }
+74      FString absoluteFilePath = saveDirectory_ + "/" + FileName_;
+75      FFileHelper::SaveStringToFile(*FinalString, *absoluteFilePath);
+76 }
+.fi
+.SS "void BattleBoxFileManager::WriteTextFile (const FString & saveDirectory_, const FString context_, const FString & FileName_, bool const IsOverWrite_)\fC [static]\fP"
+
+.PP
+Definition at line 43 of file BattleBoxFileManager\&.cpp\&.
+.PP
+.nf
+44 {
+45      IPlatformFile& PlateFormFile = FPlatformFileManager::Get()\&.GetPlatformFile();
+46 
+47      if(PlateFormFile\&.CreateDirectory(*saveDirectory_))
+48      {
+49           FString absoluteFilePath = saveDirectory_ + "/" + FileName_;
+50           
+51           if (IsOverWrite_ || !PlateFormFile\&.FileExists(*absoluteFilePath))
+52           {
+53                FFileHelper::SaveStringToFile(*context_, *absoluteFilePath);
+54           }
+55      }
+56 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_f_b_b___runtime___system" kind="class" language="C++" prot="public">
+    <compoundname>FBB_Runtime_System</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IModuleInterface</basecompoundref>
+    <includes refid="_b_b___runtime___system_8h" local="no">BB_Runtime_System.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_f_b_b___runtime___system_1af98a066d4d817555652d5a1274b56885" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FBB_Runtime_System::StartupModule</definition>
+        <argsstring>() override</argsstring>
+        <name>StartupModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IModuleInterface implementation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h" line="13" column="14" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/BB_Runtime_System.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_b_b___runtime___system_1a8c94ff01dfdc5d43225b452f0bb27da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FBB_Runtime_System::ShutdownModule</definition>
+        <argsstring>() override</argsstring>
+        <name>ShutdownModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h" line="14" column="14" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/BB_Runtime_System.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IModuleInterface</label>
+      </node>
+      <node id="1">
+        <label>FBB_Runtime_System</label>
+        <link refid="class_f_b_b___runtime___system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IModuleInterface</label>
+      </node>
+      <node id="1">
+        <label>FBB_Runtime_System</label>
+        <link refid="class_f_b_b___runtime___system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h" line="9" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public/BB_Runtime_System.h" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_f_b_b___runtime___system_1a8c94ff01dfdc5d43225b452f0bb27da4" prot="public" virt="virtual"><scope>FBB_Runtime_System</scope><name>ShutdownModule</name></member>
+      <member refid="class_f_b_b___runtime___system_1af98a066d4d817555652d5a1274b56885" prot="public" virt="virtual"><scope>FBB_Runtime_System</scope><name>StartupModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

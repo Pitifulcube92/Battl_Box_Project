@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_command_action" kind="class" language="C++" prot="public">
+    <compoundname>CommandAction</compoundname>
+    <basecompoundref refid="class_base_action" prot="public" virt="non-virtual">BaseAction</basecompoundref>
+    <includes refid="_command_action_8h" local="no">CommandAction.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_command_action_1a8458ced4a5af267f03dae720b3c4ae0e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CommandAction::isActionCommand</definition>
+        <argsstring></argsstring>
+        <name>isActionCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="21" column="6" bodyfile="CommandAction.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_command_action_1a3fb3b61a06e73ecb893129dbbb7ce5f5" prot="private" static="no" mutable="no">
+        <type><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref></type>
+        <definition>WEAPONTYPE CommandAction::currentweapon</definition>
+        <argsstring></argsstring>
+        <name>currentweapon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="22" column="12" bodyfile="CommandAction.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_command_action_1a9be5bf2c9041a5418f989d3494702416" prot="private" static="no" mutable="no">
+        <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+        <definition>BaseAction* CommandAction::command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="23" column="12" bodyfile="CommandAction.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_command_action_1a9bed07066f01bc031713fe727ef2af68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommandAction::CommandAction</definition>
+        <argsstring>()</argsstring>
+        <name>CommandAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="25" column="1" bodyfile="CommandAction.cpp" bodystart="6" bodyend="15"/>
+        <references refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</references>
+        <references refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" compoundref="_base_action_8cpp" startline="51" endline="54">BaseAction::SetActionID</references>
+        <references refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" compoundref="_base_action_8cpp" startline="39" endline="42">BaseAction::SetActionType</references>
+        <references refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" compoundref="_base_action_8cpp" startline="35" endline="38">BaseAction::SetDiscription</references>
+        <references refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" compoundref="_base_action_8cpp" startline="47" endline="50">BaseAction::SetInteractionType</references>
+        <references refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" compoundref="_base_action_8cpp" startline="31" endline="34">BaseAction::SetName</references>
+        <references refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" compoundref="_base_action_8cpp" startline="43" endline="46">BaseAction::SetTargetType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1abf23d117fdcbc02af3d0b67bddb6a410" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommandAction::CommandAction</definition>
+        <argsstring>(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const WEAPONTYPE currentWeap_, BaseAction *const command_)</argsstring>
+        <name>CommandAction</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>const FString</type>
+          <declname>discription_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></type>
+          <declname>action_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></type>
+          <declname>target_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></type>
+          <declname>interaction_</declname>
+        </param>
+        <param>
+          <type>const uint32</type>
+          <declname>actionID_</declname>
+        </param>
+        <param>
+          <type>TMap&lt; FString, float &gt;</type>
+          <declname>statMap_</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref></type>
+          <declname>currentWeap_</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>command_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="26" column="1" bodyfile="CommandAction.cpp" bodystart="16" bodyend="26"/>
+        <references refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" compoundref="_base_action_8cpp" startline="51" endline="54">BaseAction::SetActionID</references>
+        <references refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" compoundref="_base_action_8cpp" startline="39" endline="42">BaseAction::SetActionType</references>
+        <references refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" compoundref="_base_action_8cpp" startline="35" endline="38">BaseAction::SetDiscription</references>
+        <references refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" compoundref="_base_action_8cpp" startline="47" endline="50">BaseAction::SetInteractionType</references>
+        <references refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" compoundref="_base_action_8cpp" startline="31" endline="34">BaseAction::SetName</references>
+        <references refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" compoundref="_base_action_8cpp" startline="43" endline="46">BaseAction::SetTargetType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommandAction::CommandAction</definition>
+        <argsstring>(CommandAction *const other_)</argsstring>
+        <name>CommandAction</name>
+        <param>
+          <type><ref refid="class_command_action" kindref="compound">CommandAction</ref> *const</type>
+          <declname>other_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="28" column="1" bodyfile="CommandAction.cpp" bodystart="27" bodyend="37"/>
+        <references refid="class_command_action_1ae4ad4949defce81722252072e3413d2b" compoundref="_command_action_8cpp" startline="50" endline="53">ReturnAction</references>
+        <references refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" compoundref="_base_action_8cpp" startline="79" endline="82">BaseAction::ReturnActionID</references>
+        <references refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" compoundref="_base_action_8cpp" startline="63" endline="66">BaseAction::ReturnActionType</references>
+        <references refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" compoundref="_base_action_8cpp" startline="59" endline="62">BaseAction::ReturnDiscription</references>
+        <references refid="class_base_action_1a70d34140345d92808deed0304397b074" compoundref="_base_action_8cpp" startline="75" endline="78">BaseAction::ReturnInteractionType</references>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+        <references refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" compoundref="_base_action_8cpp" startline="67" endline="70">BaseAction::ReturnTargetType</references>
+        <references refid="class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1" compoundref="_command_action_8cpp" startline="46" endline="49">ReturnWeaponType</references>
+        <references refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" compoundref="_base_action_8cpp" startline="51" endline="54">BaseAction::SetActionID</references>
+        <references refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" compoundref="_base_action_8cpp" startline="39" endline="42">BaseAction::SetActionType</references>
+        <references refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" compoundref="_base_action_8cpp" startline="35" endline="38">BaseAction::SetDiscription</references>
+        <references refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" compoundref="_base_action_8cpp" startline="47" endline="50">BaseAction::SetInteractionType</references>
+        <references refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" compoundref="_base_action_8cpp" startline="31" endline="34">BaseAction::SetName</references>
+        <references refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" compoundref="_base_action_8cpp" startline="43" endline="46">BaseAction::SetTargetType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1aebe160173438c46ddaac8018cd3d1b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CommandAction::SetWeaponType</definition>
+        <argsstring>(WEAPONTYPE type_)</argsstring>
+        <name>SetWeaponType</name>
+        <param>
+          <type><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="30" column="6" bodyfile="CommandAction.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1a07a737aaa16805dccea57471b9918324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CommandAction::SetCommand</definition>
+        <argsstring>(BaseAction *action_)</argsstring>
+        <name>SetCommand</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="32" column="6" bodyfile="CommandAction.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kindref="member">WEAPONTYPE</ref></type>
+        <definition>WEAPONTYPE CommandAction::ReturnWeaponType</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnWeaponType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="36" column="12" bodyfile="CommandAction.cpp" bodystart="46" bodyend="49"/>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1ae4ad4949defce81722252072e3413d2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+        <definition>BaseAction * CommandAction::ReturnAction</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="38" column="12" bodyfile="CommandAction.cpp" bodystart="50" bodyend="53"/>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1aae8b568d1642f0bd846f4a8022eba70a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CommandAction::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="39" column="6" bodyfile="CommandAction.cpp" bodystart="54" bodyend="61"/>
+        <referencedby refid="class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b" compoundref="_command_action_8cpp" startline="62" endline="65">~CommandAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommandAction::~CommandAction</definition>
+        <argsstring>()</argsstring>
+        <name>~CommandAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CommandAction.h" line="40" column="1" bodyfile="CommandAction.cpp" bodystart="62" bodyend="65"/>
+        <references refid="class_command_action_1aae8b568d1642f0bd846f4a8022eba70a" compoundref="_command_action_8cpp" startline="54" endline="61">OnDestroy</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CommandAction</label>
+        <link refid="class_command_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAction</label>
+        <link refid="class_base_action"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CommandAction</label>
+        <link refid="class_command_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAction</label>
+        <link refid="class_base_action"/>
+      </node>
+    </collaborationgraph>
+    <location file="CommandAction.h" line="19" column="1" bodyfile="CommandAction.h" bodystart="18" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a359a13b822b4da103d91d3d0179d8302" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>BaseAction</name></member>
+      <member refid="class_command_action_1a9be5bf2c9041a5418f989d3494702416" prot="private" virt="non-virtual"><scope>CommandAction</scope><name>command</name></member>
+      <member refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>CommandAction</name></member>
+      <member refid="class_command_action_1abf23d117fdcbc02af3d0b67bddb6a410" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>CommandAction</name></member>
+      <member refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>CommandAction</name></member>
+      <member refid="class_command_action_1a3fb3b61a06e73ecb893129dbbb7ce5f5" prot="private" virt="non-virtual"><scope>CommandAction</scope><name>currentweapon</name></member>
+      <member refid="class_command_action_1a8458ced4a5af267f03dae720b3c4ae0e" prot="private" virt="non-virtual"><scope>CommandAction</scope><name>isActionCommand</name></member>
+      <member refid="class_command_action_1aae8b568d1642f0bd846f4a8022eba70a" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>OnDestroy</name></member>
+      <member refid="class_command_action_1ae4ad4949defce81722252072e3413d2b" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnAction</name></member>
+      <member refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnActionID</name></member>
+      <member refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnActionType</name></member>
+      <member refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnDiscription</name></member>
+      <member refid="class_base_action_1a70d34140345d92808deed0304397b074" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnInteractionType</name></member>
+      <member refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnName</name></member>
+      <member refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnStatMap</name></member>
+      <member refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnTargetType</name></member>
+      <member refid="class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>ReturnWeaponType</name></member>
+      <member refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetActionID</name></member>
+      <member refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetActionType</name></member>
+      <member refid="class_command_action_1a07a737aaa16805dccea57471b9918324" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetCommand</name></member>
+      <member refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetDiscription</name></member>
+      <member refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetInteractionType</name></member>
+      <member refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetName</name></member>
+      <member refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetTargetType</name></member>
+      <member refid="class_command_action_1aebe160173438c46ddaac8018cd3d1b22" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>SetWeaponType</name></member>
+      <member refid="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" prot="public" virt="virtual"><scope>CommandAction</scope><name>~BaseAction</name></member>
+      <member refid="class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b" prot="public" virt="non-virtual"><scope>CommandAction</scope><name>~CommandAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

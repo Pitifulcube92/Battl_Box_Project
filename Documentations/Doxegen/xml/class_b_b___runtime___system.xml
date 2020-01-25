@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_b_b___runtime___system" kind="class" language="C#" prot="public">
+    <compoundname>BB_Runtime_System</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModuleRules</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_b___runtime___system_1aac77030ceddb602253c1163447e3a0f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BB_Runtime_System.BB_Runtime_System</definition>
+        <argsstring>(ReadOnlyTargetRules Target)</argsstring>
+        <name>BB_Runtime_System</name>
+        <param>
+          <type>ReadOnlyTargetRules</type>
+          <declname>Target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/BB_Runtime_System.Build.cs" line="7" column="12" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/BB_Runtime_System.Build.cs" bodystart="7" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ModuleRules</label>
+      </node>
+      <node id="1">
+        <label>BB_Runtime_System</label>
+        <link refid="class_b_b___runtime___system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ModuleRules</label>
+      </node>
+      <node id="1">
+        <label>BB_Runtime_System</label>
+        <link refid="class_b_b___runtime___system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/BB_Runtime_System.Build.cs" line="6" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/BB_Runtime_System.Build.cs" bodystart="5" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_b_b___runtime___system_1aac77030ceddb602253c1163447e3a0f1" prot="public" virt="non-virtual"><scope>BB_Runtime_System</scope><name>BB_Runtime_System</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

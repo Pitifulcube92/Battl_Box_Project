@@ -1,0 +1,138 @@
+.TH "AbilityAction" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AbilityAction
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AbilityAction\&.h>\fP
+.PP
+Inherits \fBBaseAction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbilityAction\fP ()"
+.br
+.ti -1c
+.RI "\fBAbilityAction\fP (\fBAbilityAction\fP *const other_)"
+.br
+.ti -1c
+.RI "\fBAbilityAction\fP (const FString name_, const FString discription_, const \fBACTIONTYPE\fP action_, const \fBTARGETTYPE\fP target_, const \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const float duration_)"
+.br
+.ti -1c
+.RI "float \fBCalculateAbilityValue\fP ()"
+.br
+.ti -1c
+.RI "float \fBReturnDuration\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetDuration\fP (const float duration_)"
+.br
+.ti -1c
+.RI "\fB~AbilityAction\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file AbilityAction\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AbilityAction::AbilityAction ()"
+
+.PP
+Definition at line 4 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+5 {
+6      SetName("");
+7      SetDiscription("");
+8      SetActionType(ACTIONTYPE::E_NONE);
+9      SetTargetType(TARGETTYPE::E_NONE);
+10      SetInteractionType(INTERACTIONTYPE::E_NONE);
+11      SetActionID(00);
+12      duration = 0\&.0f;
+13 }
+.fi
+.SS "AbilityAction::AbilityAction (const FString name_, const FString discription_, const \fBACTIONTYPE\fP action_, const \fBTARGETTYPE\fP target_, const \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const float duration_)"
+
+.PP
+Definition at line 14 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+16 {
+17      SetName(name_);
+18      SetDiscription(discription_);
+19      SetActionType(action_);
+20      SetTargetType(target_);
+21      SetInteractionType(interaction_);
+22      SetActionID(actionID_);
+23      duration = duration_;
+24 }
+.fi
+.SS "AbilityAction::AbilityAction (\fBAbilityAction\fP *const other_)"
+
+.PP
+Definition at line 25 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+26 {
+27      SetName(other_->ReturnName());
+28      SetDiscription(other_->ReturnDiscription());
+29      SetActionType(other_->ReturnActionType());
+30      SetInteractionType(other_->ReturnInteractionType());
+31      SetActionID(other_->ReturnActionID());
+32      duration = other_->ReturnDuration();
+33 
+34 }
+.fi
+.SS "AbilityAction::~AbilityAction ()"
+
+.PP
+Definition at line 47 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+48 {
+49 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "float AbilityAction::CalculateAbilityValue ()"
+
+.PP
+Definition at line 35 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+36 {
+37      //TO DO: implement an equation class\&.
+38 }
+.fi
+.SS "float AbilityAction::ReturnDuration () const"
+
+.PP
+Definition at line 43 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+44 {
+45      return duration;
+46 }
+.fi
+.PP
+Referenced by AbilityAction()\&.
+.SS "void AbilityAction::SetDuration (const float duration_)"
+
+.PP
+Definition at line 39 of file AbilityAction\&.cpp\&.
+.PP
+.nf
+40 {
+41      duration = duration_;
+42 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

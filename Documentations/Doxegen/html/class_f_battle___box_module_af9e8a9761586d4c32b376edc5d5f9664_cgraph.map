@@ -1,0 +1,10 @@
+<map id="FBattle_BoxModule::StartupModule" name="FBattle_BoxModule::StartupModule">
+<area shape="rect" id="node1" title=" " alt="" coords="5,130,172,177"/>
+<area shape="rect" id="node2" href="$class_debugger.html#a2d1f06f606185f51dc86b782e059ed48" title=" " alt="" coords="243,5,377,35"/>
+<area shape="rect" id="node3" href="$class_debugger.html#a34151070033a196f3a220dd0297fd3d6" title=" " alt="" coords="225,59,395,88"/>
+<area shape="rect" id="node4" href="$class_debugger.html#aef91ed84489c9c928445e1f712d401de" title=" " alt="" coords="248,112,372,141"/>
+<area shape="rect" id="node5" href="$class_debugger.html#a9ab35dcd08d8f181e262f4c8fb1ec892" title=" " alt="" coords="227,165,393,195"/>
+<area shape="rect" id="node7" href="$class_debugger.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title=" " alt="" coords="220,219,400,248"/>
+<area shape="rect" id="node8" href="$class_debugger.html#a6f945a47fa65d5eb4f93a1db124324f3" title=" " alt="" coords="229,272,391,301"/>
+<area shape="rect" id="node6" href="$class_battle_box_file_manager.html#aac6c3bb192936f4f22b4e93090cd45aa" title=" " alt="" coords="448,157,649,203"/>
+</map>

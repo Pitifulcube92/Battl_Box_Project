@@ -1,0 +1,636 @@
+\doxysection{Stat\+Sheet\+Object Class Reference}
+\label{class_stat_sheet_object}\index{StatSheetObject@{StatSheetObject}}
+
+
+{\ttfamily \#include $<$Stat\+Sheet\+Object.\+h$>$}
+
+
+
+Collaboration diagram for Stat\+Sheet\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{class_stat_sheet_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Stat\+Sheet\+Object} ()
+\item 
+\textbf{ Stat\+Sheet\+Object} (const F\+String name\+\_\+, const F\+String tag\+\_\+, const T\+Map$<$ F\+String, \textbf{ Command\+Action} $\ast$ $>$ command\+Map\+\_\+, const T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$ item\+Map\+\_\+, const T\+Map$<$ F\+String, \textbf{ Ability\+Action} $\ast$ $>$ ability\+Map\+\_\+, const T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$ equipment\+Map\+\_\+)
+\item 
+\textbf{ Stat\+Sheet\+Object} (\textbf{ Stat\+Sheet\+Object} $\ast$const other\+\_\+)
+\item 
+void \textbf{ Set\+Name} (const F\+String name\+\_\+)
+\item 
+void \textbf{ Set\+Tag} (const F\+String tag\+\_\+)
+\item 
+F\+String \textbf{ Return\+Name} () const
+\item 
+F\+String \textbf{ Return\+Tag} () const
+\item 
+void \textbf{ Add\+Command\+Action} (\textbf{ Command\+Action} $\ast$const command\+\_\+)
+\item 
+void \textbf{ Add\+Item\+Action} (\textbf{ Item\+Action} $\ast$const item\+\_\+)
+\item 
+void \textbf{ Add\+Ability\+Action} (\textbf{ Ability\+Action} $\ast$const ability\+\_\+)
+\item 
+void \textbf{ Add\+Equipment} (\textbf{ Item\+Action} $\ast$const equipment\+\_\+)
+\item 
+void \textbf{ Remove\+Command\+Action} (const F\+String name\+\_\+)
+\item 
+void \textbf{ Remove\+Item\+Action} (const F\+String name\+\_\+)
+\item 
+void \textbf{ Remove\+Ability\+Action} (const F\+String name\+\_\+)
+\item 
+void \textbf{ Remove\+Equipment} (const F\+String name\+\_\+)
+\item 
+T\+Map$<$ F\+String, \textbf{ Command\+Action} $\ast$ $>$ \textbf{ Return\+Command\+Map} () const
+\item 
+T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$ \textbf{ Return\+Item\+Map} () const
+\item 
+T\+Map$<$ F\+String, \textbf{ Ability\+Action} $\ast$ $>$ \textbf{ Return\+Ability\+Map} () const
+\item 
+T\+Map$<$ F\+String, float $>$ \textbf{ Return\+Stat\+Map} () const
+\item 
+T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$ \textbf{ Return\+Equipment\+Map} () const
+\item 
+\textbf{ Command\+Action} $\ast$ \textbf{ Return\+Command} (F\+String name\+\_\+) const
+\item 
+\textbf{ Item\+Action} $\ast$ \textbf{ Return\+Item} (const F\+String name\+\_\+) const
+\item 
+\textbf{ Ability\+Action} $\ast$ \textbf{ Return\+Ability} (const F\+String name\+\_\+) const
+\item 
+\textbf{ Item\+Action} $\ast$ \textbf{ Return\+Equipment} (const F\+String name\+\_\+) const
+\item 
+void \textbf{ On\+Destroy} ()
+\item 
+\textbf{ $\sim$\+Stat\+Sheet\+Object} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_stat_sheet_object_ad888b9681bca9f42638ae6d845012060}} 
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{StatSheetObject()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                  : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     name = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{13     tag = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_a43f6237d48c0499e4746f895a462f5d6}} 
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{StatSheetObject()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+,  }\item[{const F\+String}]{tag\+\_\+,  }\item[{const T\+Map$<$ F\+String, \textbf{ Command\+Action} $\ast$ $>$}]{command\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$}]{item\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, \textbf{ Ability\+Action} $\ast$ $>$}]{ability\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, float $>$}]{stat\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$}]{equipment\+Map\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     name = name\_;}
+\DoxyCodeLine{18     tag = tag\_;}
+\DoxyCodeLine{19     commandMap = commandMap\_;}
+\DoxyCodeLine{20     itemMap = itemMap\_;}
+\DoxyCodeLine{21     abilityMap = abilityMap\_;}
+\DoxyCodeLine{22     equipmentMap = equipmentMap\_;}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2}} 
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{StatSheetObject()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     name = other\_-\/>ReturnName();}
+\DoxyCodeLine{27     tag = other\_-\/>ReturnTag();}
+\DoxyCodeLine{28     commandMap = other\_-\/>ReturnCommandMap();}
+\DoxyCodeLine{29     itemMap = other\_-\/>ReturnItemMap();}
+\DoxyCodeLine{30     abilityMap = other\_-\/>ReturnAbilityMap();}
+\DoxyCodeLine{31     equipmentMap = other\_-\/>ReturnEquipmentMap();}
+\DoxyCodeLine{32     statMap = other\_-\/>ReturnStatMap();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+
+
+References Return\+Ability\+Map(), Return\+Command\+Map(), Return\+Equipment\+Map(), Return\+Item\+Map(), Return\+Name(), Return\+Stat\+Map(), and Return\+Tag().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a5b6b1adcd9e73b5c852cc9bb56c540a8}} 
+\index{StatSheetObject@{StatSheetObject}!````~StatSheetObject@{$\sim$StatSheetObject}}
+\index{````~StatSheetObject@{$\sim$StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{$\sim$StatSheetObject()}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::$\sim$\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158     OnDestroy();}
+\DoxyCodeLine{159 \}}
+
+\end{DoxyCode}
+
+
+References On\+Destroy().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a5b6b1adcd9e73b5c852cc9bb56c540a8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_stat_sheet_object_ad9ec606301ee7f1a0c94217a5cc0b142}} 
+\index{StatSheetObject@{StatSheetObject}!AddAbilityAction@{AddAbilityAction}}
+\index{AddAbilityAction@{AddAbilityAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{AddAbilityAction()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Ability\+Action (\begin{DoxyParamCaption}\item[{\textbf{ Ability\+Action} $\ast$const}]{ability\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60 \{}
+\DoxyCodeLine{61     abilityMap.Add(ability\_-\/>ReturnName(), ability\_);}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::\+Return\+Name().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_ad9ec606301ee7f1a0c94217a5cc0b142_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_ad9c4cf7a66ce5f1665b1400015fa8dc3}} 
+\index{StatSheetObject@{StatSheetObject}!AddCommandAction@{AddCommandAction}}
+\index{AddCommandAction@{AddCommandAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{AddCommandAction()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Command\+Action (\begin{DoxyParamCaption}\item[{\textbf{ Command\+Action} $\ast$const}]{command\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53     commandMap.Add(command\_-\/>ReturnName(), command\_);}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::\+Return\+Name().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_ad9c4cf7a66ce5f1665b1400015fa8dc3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a1925be119c8aa3dafca64e7c025b36e3}} 
+\index{StatSheetObject@{StatSheetObject}!AddEquipment@{AddEquipment}}
+\index{AddEquipment@{AddEquipment}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{AddEquipment()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Equipment (\begin{DoxyParamCaption}\item[{\textbf{ Item\+Action} $\ast$const}]{equipment\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65     equipmentMap.Add(equipment\_-\/>ReturnName(), equipment\_);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::\+Return\+Name().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a1925be119c8aa3dafca64e7c025b36e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_aec28b9c716aaa3274f5bcd82930b70f8}} 
+\index{StatSheetObject@{StatSheetObject}!AddItemAction@{AddItemAction}}
+\index{AddItemAction@{AddItemAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{AddItemAction()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Item\+Action (\begin{DoxyParamCaption}\item[{\textbf{ Item\+Action} $\ast$const}]{item\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     itemMap.Add(item\_-\/>ReturnName(), item\_);}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::\+Return\+Name().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_aec28b9c716aaa3274f5bcd82930b70f8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_afb4f166bb980f7e367981397a9c5379d}} 
+\index{StatSheetObject@{StatSheetObject}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{OnDestroy()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145 \{}
+\DoxyCodeLine{146     \textcolor{comment}{//Clear out all pointer within the maps}}
+\DoxyCodeLine{147     \textcolor{keywordflow}{if} (commandMap.Num() > 0)}
+\DoxyCodeLine{148     \{}
+\DoxyCodeLine{149         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} command : commandMap)}
+\DoxyCodeLine{150         \{}
+\DoxyCodeLine{151             \textcolor{keyword}{delete} command.Value;}
+\DoxyCodeLine{152         \}}
+\DoxyCodeLine{153         commandMap.Empty();}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_afb4f166bb980f7e367981397a9c5379d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_afa220913560581c6976e720c2f9d6f6a}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveAbilityAction@{RemoveAbilityAction}}
+\index{RemoveAbilityAction@{RemoveAbilityAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{RemoveAbilityAction()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Ability\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77     abilityMap.Remove(name\_);}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_ab22d60ec7f2082cf6a55e759ffc79af0}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveCommandAction@{RemoveCommandAction}}
+\index{RemoveCommandAction@{RemoveCommandAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{RemoveCommandAction()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Command\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69     commandMap.Remove(name\_);}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_a3fe9bd16a83ba7970dcaa2cd2d68f1d5}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveEquipment@{RemoveEquipment}}
+\index{RemoveEquipment@{RemoveEquipment}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{RemoveEquipment()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Equipment (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     equipmentMap.Remove(name);}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_a3d652cd2a6177ef396a9adc27fbcdac0}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveItemAction@{RemoveItemAction}}
+\index{RemoveItemAction@{RemoveItemAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{RemoveItemAction()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Item\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72 \{}
+\DoxyCodeLine{73     itemMap.Remove(name\_);}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_a4026d7a8088f539e3f34d80613f8dccd}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnAbility@{ReturnAbility}}
+\index{ReturnAbility@{ReturnAbility}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnAbility()}
+{\footnotesize\ttfamily \textbf{ Ability\+Action} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Ability (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105     \textcolor{keywordflow}{if} (!abilityMap.Find(name\_))}
+\DoxyCodeLine{106     \{}
+\DoxyCodeLine{107         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{108         Debugger::Error(\textcolor{stringliteral}{"Ability action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{109         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111     }
+\DoxyCodeLine{112     \textcolor{keywordflow}{return} abilityMap[name\_];}
+\DoxyCodeLine{113 \}}
+
+\end{DoxyCode}
+
+
+References E\+\_\+\+E\+R\+R\+OR, Debugger\+::\+Error(), and Debugger\+::\+Set\+Severity().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a4026d7a8088f539e3f34d80613f8dccd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a4b6e004e70d178b864126a93d6ea3df4}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnAbilityMap@{ReturnAbilityMap}}
+\index{ReturnAbilityMap@{ReturnAbilityMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnAbilityMap()}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \textbf{ Ability\+Action} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Ability\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134     \textcolor{keywordflow}{return} abilityMap;}
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a4b6e004e70d178b864126a93d6ea3df4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_adee30a8470b9fd57b32f4892aacac55b}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnCommand@{ReturnCommand}}
+\index{ReturnCommand@{ReturnCommand}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnCommand()}
+{\footnotesize\ttfamily \textbf{ Command\+Action} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Command (\begin{DoxyParamCaption}\item[{F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{if} (!commandMap.Find(name\_))}
+\DoxyCodeLine{86     \{}
+\DoxyCodeLine{87         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{88         Debugger::Error(\textcolor{stringliteral}{"Command action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{89         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91         \textcolor{keywordflow}{return} commandMap[name\_];}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+
+
+References E\+\_\+\+E\+R\+R\+OR, Debugger\+::\+Error(), and Debugger\+::\+Set\+Severity().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_adee30a8470b9fd57b32f4892aacac55b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a9b6fcf1480b8d15424f5476ed40604d2}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnCommandMap@{ReturnCommandMap}}
+\index{ReturnCommandMap@{ReturnCommandMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnCommandMap()}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \textbf{ Command\+Action} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Command\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125 \{}
+\DoxyCodeLine{126     \textcolor{keywordflow}{return} commandMap;}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a9b6fcf1480b8d15424f5476ed40604d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_ad7e95011555f4015c74ecf7e053e529a}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnEquipment@{ReturnEquipment}}
+\index{ReturnEquipment@{ReturnEquipment}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnEquipment()}
+{\footnotesize\ttfamily \textbf{ Item\+Action} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Equipment (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115 \{}
+\DoxyCodeLine{116     \textcolor{keywordflow}{if} (!equipmentMap.Find(name\_))}
+\DoxyCodeLine{117     \{}
+\DoxyCodeLine{118         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{119         Debugger::Error(\textcolor{stringliteral}{"Equipment action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{120         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{121     \}}
+\DoxyCodeLine{122         \textcolor{keywordflow}{return} equipmentMap[name\_];}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+
+
+References E\+\_\+\+E\+R\+R\+OR, Debugger\+::\+Error(), and Debugger\+::\+Set\+Severity().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_ad7e95011555f4015c74ecf7e053e529a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnEquipmentMap@{ReturnEquipmentMap}}
+\index{ReturnEquipmentMap@{ReturnEquipmentMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnEquipmentMap()}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Equipment\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142     \textcolor{keywordflow}{return} equipmentMap;}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a68ac4e437d66c297c8c74bdc95dcfc55}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnItem@{ReturnItem}}
+\index{ReturnItem@{ReturnItem}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnItem()}
+{\footnotesize\ttfamily \textbf{ Item\+Action} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Item (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95     \textcolor{keywordflow}{if} (!itemMap.Find(name\_))}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{98         Debugger::Error(\textcolor{stringliteral}{"Item action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101         \textcolor{keywordflow}{return} itemMap[name\_];}
+\DoxyCodeLine{102 \}}
+
+\end{DoxyCode}
+
+
+References E\+\_\+\+E\+R\+R\+OR, Debugger\+::\+Error(), and Debugger\+::\+Set\+Severity().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a68ac4e437d66c297c8c74bdc95dcfc55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a16559559522d65dfb2d4baf3881bc1ba}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnItemMap@{ReturnItemMap}}
+\index{ReturnItemMap@{ReturnItemMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnItemMap()}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \textbf{ Item\+Action} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Item\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129 \{}
+\DoxyCodeLine{130     \textcolor{keywordflow}{return} itemMap;}
+\DoxyCodeLine{131 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a16559559522d65dfb2d4baf3881bc1ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_a5b875038059a4d910ef9af1ff8cec26a}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnName@{ReturnName}}
+\index{ReturnName@{ReturnName}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnName()}
+{\footnotesize\ttfamily F\+String Stat\+Sheet\+Object\+::\+Return\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_a5b875038059a4d910ef9af1ff8cec26a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnStatMap@{ReturnStatMap}}
+\index{ReturnStatMap@{ReturnStatMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnStatMap()}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, float $>$ Stat\+Sheet\+Object\+::\+Return\+Stat\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{137 \{}
+\DoxyCodeLine{138     \textcolor{keywordflow}{return} statMap;}
+\DoxyCodeLine{139 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_ac0352b9c1c206b2cecd57e9d2d028e44}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnTag@{ReturnTag}}
+\index{ReturnTag@{ReturnTag}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{ReturnTag()}
+{\footnotesize\ttfamily F\+String Stat\+Sheet\+Object\+::\+Return\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} tag;}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_sheet_object_ac0352b9c1c206b2cecd57e9d2d028e44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_sheet_object_aea46c857ac7552e6460bbc9605f0caab}} 
+\index{StatSheetObject@{StatSheetObject}!SetName@{SetName}}
+\index{SetName@{SetName}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{SetName()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     name = name\_;}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_stat_sheet_object_a0015a317c575f299b59dc712504b0879}} 
+\index{StatSheetObject@{StatSheetObject}!SetTag@{SetTag}}
+\index{SetTag@{SetTag}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{SetTag()}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Set\+Tag (\begin{DoxyParamCaption}\item[{const F\+String}]{tag\+\_\+ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     tag = tag\_;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Stat\+Sheet\+Object.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Stat\+Sheet\+Object.\+cpp}\end{DoxyCompactItemize}

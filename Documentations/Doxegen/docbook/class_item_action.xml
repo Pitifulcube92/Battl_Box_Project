@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_item_action">
+<title>ItemAction Class Reference</title>
+<indexterm><primary>ItemAction</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ItemAction.h&gt;</computeroutput>
+</para>
+Inheritance diagram for ItemAction:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ItemAction:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_item_action_1ac1668162b93e3a97a555cff050593ec1">ItemAction</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_item_action_1a4ce5e6d0984f4b9f3352327396bb154f">ItemAction</link> (const FString name_, const FString discription_, const <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> action_, const <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> target_, const <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const uint32 value_, const <link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> damageType_, const TArray&lt; <link linkend="_class_ability_action">AbilityAction</link> * &gt; effectArray_)</para>
+</listitem>
+            <listitem><para><link linkend="_class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05">ItemAction</link> (const <link linkend="_class_item_action">ItemAction</link> *other_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_item_action_1ad433b7e82b9144f2301190698799577e">SetType</link> (const <link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746">ITEMTYPE</link> type_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_item_action_1aa6fdb08d13415443f080d75d2b934773">SetValue</link> (const uint32 value_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23">SetDamageType</link> (const <link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> type_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_item_action_1ab069950b61fd230fc34e55e546bc1772">AddEffect</link> (<link linkend="_class_ability_action">AbilityAction</link> *const ability_)</para>
+</listitem>
+            <listitem><para><link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746">ITEMTYPE</link> <link linkend="_class_item_action_1aa3322621804e1869f956757c31e4c4b6">ReturnItemType</link> () const</para>
+</listitem>
+            <listitem><para>uint32 <link linkend="_class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f">ReturnValue</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> <link linkend="_class_item_action_1a4b2e489cc0ae92c10ce4d6d91e6b5b7d">ReturnDamageType</link> () const</para>
+</listitem>
+            <listitem><para>TArray&lt; <link linkend="_class_ability_action">AbilityAction</link> * &gt; <link linkend="_class_item_action_1adf02b73e5a94f785a2a5eec11cbfb003">ReturnEffectList</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_item_action_1a79871a2e6d401cff1d005fdd161c1120">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_item_action_1a69652c432e3177c89052c5a2fa3819ae">~ItemAction</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_item_action_1ac1668162b93e3a97a555cff050593ec1"/>    <section>
+    <title>ItemAction()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<para><computeroutput>ItemAction::ItemAction ( )</computeroutput></para><programlisting>4 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;effectList(TArray&lt;AbilityAction*&gt;())
+5 {
+6 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link>(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+7 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link>(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+8 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link>(<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</link>);
+9 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link>(<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100">TARGETTYPE::E_NONE</link>);
+10 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link>(<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100">INTERACTIONTYPE::E_NONE</link>);
+11 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link>(00);
+12 &#32;&#32;&#32;&#32;<link linkend="_class_item_action_1aa6fdb08d13415443f080d75d2b934773">SetValue</link>(00);
+13 &#32;&#32;&#32;&#32;<link linkend="_class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23">SetDamageType</link>(<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100">DAMAGETYPE::E_NONE</link>);
+14 }
+</programlisting><para>
+References E_NONE, BaseAction::SetActionID(), BaseAction::SetActionType(), SetDamageType(), BaseAction::SetDiscription(), BaseAction::SetInteractionType(), BaseAction::SetName(), BaseAction::SetTargetType(), and SetValue().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_ac1668162b93e3a97a555cff050593ec1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1a4ce5e6d0984f4b9f3352327396bb154f"/>    <section>
+    <title>ItemAction()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<para><computeroutput>ItemAction::ItemAction (const FString name_, const FString discription_, const <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> action_, const <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> target_, const <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const uint32 value_, const <link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> damageType_, const TArray&lt; <link linkend="_class_ability_action">AbilityAction</link> * &gt; effectArray_)</computeroutput></para><programlisting>16 {
+17 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link>(name_);
+18 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link>(discription_);
+19 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link>(action_);
+20 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link>(target_);&#32;
+21 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link>(interaction_);
+22 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link>(actionID_);
+23 &#32;&#32;&#32;&#32;
+24 &#32;&#32;&#32;&#32;value&#32;=&#32;value_;
+25 &#32;&#32;&#32;&#32;effectList&#32;=&#32;effectArray_;
+26 
+27 }
+</programlisting><para>
+References BaseAction::SetActionID(), BaseAction::SetActionType(), BaseAction::SetDiscription(), BaseAction::SetInteractionType(), BaseAction::SetName(), and BaseAction::SetTargetType().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_a4ce5e6d0984f4b9f3352327396bb154f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05"/>    <section>
+    <title>ItemAction()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<para><computeroutput>ItemAction::ItemAction (const <link linkend="_class_item_action">ItemAction</link> * other_)</computeroutput></para><programlisting>29 {
+30 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link>(other_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>());
+31 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link>(other_-&gt;<link linkend="_class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049">ReturnDiscription</link>());
+32 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link>(other_&#32;-&gt;<link linkend="_class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888">ReturnActionType</link>());
+33 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link>(other_-&gt;<link linkend="_class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d">ReturnTargetType</link>());
+34 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link>(other_-&gt;<link linkend="_class_base_action_1a70d34140345d92808deed0304397b074">ReturnInteractionType</link>());
+35 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link>(other_-&gt;<link linkend="_class_base_action_1a0954da9087f93b46ea68468de1ecce92">ReturnActionID</link>());
+36 &#32;&#32;&#32;&#32;<link linkend="_class_item_action_1aa6fdb08d13415443f080d75d2b934773">SetValue</link>(other_-&gt;<link linkend="_class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f">ReturnValue</link>());
+37 }
+</programlisting><para>
+References BaseAction::ReturnActionID(), BaseAction::ReturnActionType(), BaseAction::ReturnDiscription(), BaseAction::ReturnInteractionType(), BaseAction::ReturnName(), BaseAction::ReturnTargetType(), ReturnValue(), BaseAction::SetActionID(), BaseAction::SetActionType(), BaseAction::SetDiscription(), BaseAction::SetInteractionType(), BaseAction::SetName(), BaseAction::SetTargetType(), and SetValue().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_ae98143bbb738b0d4e6b98b84e1e45e05_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1a69652c432e3177c89052c5a2fa3819ae"/>    <section>
+    <title>~ItemAction()</title>
+<indexterm><primary>~ItemAction</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>~ItemAction</secondary></indexterm>
+<para><computeroutput>ItemAction::~ItemAction ( )</computeroutput></para><programlisting>79 {
+80 &#32;&#32;&#32;&#32;<link linkend="_class_item_action_1a79871a2e6d401cff1d005fdd161c1120">OnDestroy</link>();
+81 }
+</programlisting><para>
+References OnDestroy().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_a69652c432e3177c89052c5a2fa3819ae_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_item_action_1ab069950b61fd230fc34e55e546bc1772"/>    <section>
+    <title>AddEffect()</title>
+<indexterm><primary>AddEffect</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>AddEffect</secondary></indexterm>
+<para><computeroutput>void ItemAction::AddEffect (<link linkend="_class_ability_action">AbilityAction</link> *const ability_)</computeroutput></para><programlisting>51 {
+52 &#32;&#32;&#32;&#32;effectList.Add(ability_);
+53 }
+</programlisting>    </section><anchor xml:id="_class_item_action_1a79871a2e6d401cff1d005fdd161c1120"/>    <section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>void ItemAction::OnDestroy ( )</computeroutput></para><programlisting>75 {
+76 &#32;&#32;&#32;&#32;<emphasis role="comment">//Clean&#32;up&#32;method</emphasis>
+77 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_a79871a2e6d401cff1d005fdd161c1120_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1a4b2e489cc0ae92c10ce4d6d91e6b5b7d"/>    <section>
+    <title>ReturnDamageType()</title>
+<indexterm><primary>ReturnDamageType</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ReturnDamageType</secondary></indexterm>
+<para><computeroutput><link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> ItemAction::ReturnDamageType ( ) const</computeroutput></para><programlisting>63 {
+64 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;damageType;
+65 }
+</programlisting>    </section><anchor xml:id="_class_item_action_1adf02b73e5a94f785a2a5eec11cbfb003"/>    <section>
+    <title>ReturnEffectList()</title>
+<indexterm><primary>ReturnEffectList</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ReturnEffectList</secondary></indexterm>
+<para><computeroutput>TArray&lt; <link linkend="_class_ability_action">AbilityAction</link> * &gt; ItemAction::ReturnEffectList ( ) const</computeroutput></para><programlisting>71 {
+72 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;effectList;
+73 }
+</programlisting>    </section><anchor xml:id="_class_item_action_1aa3322621804e1869f956757c31e4c4b6"/>    <section>
+    <title>ReturnItemType()</title>
+<indexterm><primary>ReturnItemType</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ReturnItemType</secondary></indexterm>
+<para><computeroutput><link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746">ITEMTYPE</link> ItemAction::ReturnItemType ( ) const</computeroutput></para><programlisting>55 {
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;type;
+57 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_aa3322621804e1869f956757c31e4c4b6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f"/>    <section>
+    <title>ReturnValue()</title>
+<indexterm><primary>ReturnValue</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>ReturnValue</secondary></indexterm>
+<para><computeroutput>uint32 ItemAction::ReturnValue ( ) const</computeroutput></para><programlisting>59 {
+60 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;value;
+61 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_af05b71cc56a5edcc0771aa64d3858f4f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23"/>    <section>
+    <title>SetDamageType()</title>
+<indexterm><primary>SetDamageType</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>SetDamageType</secondary></indexterm>
+<para><computeroutput>void ItemAction::SetDamageType (const <link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> type_)</computeroutput></para><programlisting>43 {
+44 &#32;&#32;&#32;&#32;damageType&#32;=&#32;type_;
+45 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_aa40a2cc0d7f23836c8403f0b82f37a23_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_item_action_1ad433b7e82b9144f2301190698799577e"/>    <section>
+    <title>SetType()</title>
+<indexterm><primary>SetType</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>SetType</secondary></indexterm>
+<para><computeroutput>void ItemAction::SetType (const <link linkend="__item_action_8h_1a8164105d3663e42053d5b6daa79a9746">ITEMTYPE</link> type_)</computeroutput></para><programlisting>47 {
+48 &#32;&#32;&#32;&#32;type&#32;=&#32;type_;
+49 }
+</programlisting>    </section><anchor xml:id="_class_item_action_1aa6fdb08d13415443f080d75d2b934773"/>    <section>
+    <title>SetValue()</title>
+<indexterm><primary>SetValue</primary><secondary>ItemAction</secondary></indexterm>
+<indexterm><primary>ItemAction</primary><secondary>SetValue</secondary></indexterm>
+<para><computeroutput>void ItemAction::SetValue (const uint32 value_)</computeroutput></para><programlisting>39 {
+40 &#32;&#32;&#32;&#32;value&#32;=&#32;value_;
+41 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_item_action_aa6fdb08d13415443f080d75d2b934773_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__item_action_8h">ItemAction.h</link><link linkend="__item_action_8cpp">ItemAction.cpp</link></section>
+</section>

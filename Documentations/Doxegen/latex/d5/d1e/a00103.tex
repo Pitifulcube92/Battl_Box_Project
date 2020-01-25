@@ -1,0 +1,425 @@
+\hypertarget{a00103}{}\doxysection{Item\+Action Class Reference}
+\label{a00103}\index{ItemAction@{ItemAction}}
+
+
+{\ttfamily \#include $<$Item\+Action.\+h$>$}
+
+
+
+Inheritance diagram for Item\+Action\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{d9/dcc/a00102}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Item\+Action\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{d4/d3a/a00101}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00103_ab069950b61fd230fc34e55e546bc1772}{Add\+Effect}} (\mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$const ability\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds an effect to the items effects array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00103_ac1668162b93e3a97a555cff050593ec1}{Item\+Action}} ()
+\item 
+\mbox{\hyperlink{a00103_a4ce5e6d0984f4b9f3352327396bb154f}{Item\+Action}} (const F\+String name\+\_\+, const F\+String discription\+\_\+, const \mbox{\hyperlink{a00014_af0b345d735b1ce577e172853a4b8949a}{A\+C\+T\+I\+O\+N\+T\+Y\+PE}} action\+\_\+, const \mbox{\hyperlink{a00014_a607550079f88dc0df6c9761da9352ec7}{T\+A\+R\+G\+E\+T\+T\+Y\+PE}} target\+\_\+, const \mbox{\hyperlink{a00014_ad2506947a6c3c06e014b556ab6b13ff3}{I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE}} interaction\+\_\+, const uint32 action\+I\+D\+\_\+, T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const uint32 value\+\_\+, const \mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434c}{D\+A\+M\+A\+G\+E\+T\+Y\+PE}} damage\+Type\+\_\+, const T\+Array$<$ \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$ effect\+Array\+\_\+)
+\item 
+\mbox{\hyperlink{a00103_ae98143bbb738b0d4e6b98b84e1e45e05}{Item\+Action}} (const \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$other\+\_\+)
+\item 
+void \mbox{\hyperlink{a00103_a79871a2e6d401cff1d005fdd161c1120}{On\+Destroy}} ()
+\item 
+\mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434c}{D\+A\+M\+A\+G\+E\+T\+Y\+PE}} \mbox{\hyperlink{a00103_a4b2e489cc0ae92c10ce4d6d91e6b5b7d}{Return\+Damage\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns Damage type. \end{DoxyCompactList}\item 
+T\+Array$<$ \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$ \mbox{\hyperlink{a00103_adf02b73e5a94f785a2a5eec11cbfb003}{Return\+Effect\+List}} () const
+\begin{DoxyCompactList}\small\item\em Returns Effect array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00026_a8164105d3663e42053d5b6daa79a9746}{I\+T\+E\+M\+T\+Y\+PE}} \mbox{\hyperlink{a00103_aa3322621804e1869f956757c31e4c4b6}{Return\+Item\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns item\+Type. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{a00103_af05b71cc56a5edcc0771aa64d3858f4f}{Return\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Returnsitem value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00103_aa40a2cc0d7f23836c8403f0b82f37a23}{Set\+Damage\+Type}} (const \mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434c}{D\+A\+M\+A\+G\+E\+T\+Y\+PE}} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set Damage type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00103_ad433b7e82b9144f2301190698799577e}{Set\+Type}} (const \mbox{\hyperlink{a00026_a8164105d3663e42053d5b6daa79a9746}{I\+T\+E\+M\+T\+Y\+PE}} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set Item type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00103_aa6fdb08d13415443f080d75d2b934773}{Set\+Value}} (const uint32 value\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set item Value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00103_a69652c432e3177c89052c5a2fa3819ae}{$\sim$\+Item\+Action}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 21 of file Item\+Action.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a00103_ac1668162b93e3a97a555cff050593ec1}\label{a00103_ac1668162b93e3a97a555cff050593ec1}} 
+\index{ItemAction@{ItemAction}!ItemAction@{ItemAction}}
+\index{ItemAction@{ItemAction}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ItemAction()}{ItemAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Item\+Action\+::\+Item\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                        : effectList(TArray<AbilityAction*>())}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6      \mbox{\hyperlink{a00095_ad307b128f9ded949daa718fc1364919c}{SetName}}(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{7      \mbox{\hyperlink{a00095_a0a4bd7fd3ce61159e35282a7b05659a7}{SetDiscription}}(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{8      \mbox{\hyperlink{a00095_ad040813bdd0c9f622ef5dd42db46f530}{SetActionType}}(\mbox{\hyperlink{a00014_af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100}{ACTIONTYPE::E\_NONE}});}
+\DoxyCodeLine{9      \mbox{\hyperlink{a00095_a6f0ca61c63f46332e6507fc2ee2b29f8}{SetTargetType}}(\mbox{\hyperlink{a00014_a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100}{TARGETTYPE::E\_NONE}});}
+\DoxyCodeLine{10      \mbox{\hyperlink{a00095_ae0e83722e14079e10f7d43d54ba4898e}{SetInteractionType}}(\mbox{\hyperlink{a00014_ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100}{INTERACTIONTYPE::E\_NONE}});}
+\DoxyCodeLine{11      \mbox{\hyperlink{a00095_a82e6afa7a79dee542492d587904dc380}{SetActionID}}(00);}
+\DoxyCodeLine{12      \mbox{\hyperlink{a00103_aa6fdb08d13415443f080d75d2b934773}{SetValue}}(00);}
+\DoxyCodeLine{13      \mbox{\hyperlink{a00103_aa40a2cc0d7f23836c8403f0b82f37a23}{SetDamageType}}(\mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100}{DAMAGETYPE::E\_NONE}});}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_ac1668162b93e3a97a555cff050593ec1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_a4ce5e6d0984f4b9f3352327396bb154f}\label{a00103_a4ce5e6d0984f4b9f3352327396bb154f}} 
+\index{ItemAction@{ItemAction}!ItemAction@{ItemAction}}
+\index{ItemAction@{ItemAction}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ItemAction()}{ItemAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Item\+Action\+::\+Item\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+,  }\item[{const F\+String}]{discription\+\_\+,  }\item[{const \mbox{\hyperlink{a00014_af0b345d735b1ce577e172853a4b8949a}{A\+C\+T\+I\+O\+N\+T\+Y\+PE}}}]{action\+\_\+,  }\item[{const \mbox{\hyperlink{a00014_a607550079f88dc0df6c9761da9352ec7}{T\+A\+R\+G\+E\+T\+T\+Y\+PE}}}]{target\+\_\+,  }\item[{const \mbox{\hyperlink{a00014_ad2506947a6c3c06e014b556ab6b13ff3}{I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE}}}]{interaction\+\_\+,  }\item[{const uint32}]{action\+I\+D\+\_\+,  }\item[{T\+Map$<$ F\+String, float $>$}]{stat\+Map\+\_\+,  }\item[{const uint32}]{value\+\_\+,  }\item[{const \mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434c}{D\+A\+M\+A\+G\+E\+T\+Y\+PE}}}]{damage\+Type\+\_\+,  }\item[{const T\+Array$<$ \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$}]{effect\+Array\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17      \mbox{\hyperlink{a00095_ad307b128f9ded949daa718fc1364919c}{SetName}}(name\_);}
+\DoxyCodeLine{18      \mbox{\hyperlink{a00095_a0a4bd7fd3ce61159e35282a7b05659a7}{SetDiscription}}(discription\_);}
+\DoxyCodeLine{19      \mbox{\hyperlink{a00095_ad040813bdd0c9f622ef5dd42db46f530}{SetActionType}}(action\_);}
+\DoxyCodeLine{20      \mbox{\hyperlink{a00095_a6f0ca61c63f46332e6507fc2ee2b29f8}{SetTargetType}}(target\_); }
+\DoxyCodeLine{21      \mbox{\hyperlink{a00095_ae0e83722e14079e10f7d43d54ba4898e}{SetInteractionType}}(interaction\_);}
+\DoxyCodeLine{22      \mbox{\hyperlink{a00095_a82e6afa7a79dee542492d587904dc380}{SetActionID}}(actionID\_);}
+\DoxyCodeLine{23      }
+\DoxyCodeLine{24      value = value\_;}
+\DoxyCodeLine{25      effectList = effectArray\_;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_a4ce5e6d0984f4b9f3352327396bb154f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_ae98143bbb738b0d4e6b98b84e1e45e05}\label{a00103_ae98143bbb738b0d4e6b98b84e1e45e05}} 
+\index{ItemAction@{ItemAction}!ItemAction@{ItemAction}}
+\index{ItemAction@{ItemAction}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ItemAction()}{ItemAction()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Item\+Action\+::\+Item\+Action (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30      \mbox{\hyperlink{a00095_ad307b128f9ded949daa718fc1364919c}{SetName}}(other\_-\/>\mbox{\hyperlink{a00095_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}());}
+\DoxyCodeLine{31      \mbox{\hyperlink{a00095_a0a4bd7fd3ce61159e35282a7b05659a7}{SetDiscription}}(other\_-\/>\mbox{\hyperlink{a00095_a66e6fdeaefdcd4606eaa2964e2020049}{ReturnDiscription}}());}
+\DoxyCodeLine{32      \mbox{\hyperlink{a00095_ad040813bdd0c9f622ef5dd42db46f530}{SetActionType}}(other\_ -\/>\mbox{\hyperlink{a00095_a3c14c6ebf59154d1ad8d60ab546d7888}{ReturnActionType}}());}
+\DoxyCodeLine{33      \mbox{\hyperlink{a00095_a6f0ca61c63f46332e6507fc2ee2b29f8}{SetTargetType}}(other\_-\/>\mbox{\hyperlink{a00095_a3286f0bb34ada3b25b0ccb5a7b456f9d}{ReturnTargetType}}());}
+\DoxyCodeLine{34      \mbox{\hyperlink{a00095_ae0e83722e14079e10f7d43d54ba4898e}{SetInteractionType}}(other\_-\/>\mbox{\hyperlink{a00095_a70d34140345d92808deed0304397b074}{ReturnInteractionType}}());}
+\DoxyCodeLine{35      \mbox{\hyperlink{a00095_a82e6afa7a79dee542492d587904dc380}{SetActionID}}(other\_-\/>\mbox{\hyperlink{a00095_a0954da9087f93b46ea68468de1ecce92}{ReturnActionID}}());}
+\DoxyCodeLine{36      \mbox{\hyperlink{a00103_aa6fdb08d13415443f080d75d2b934773}{SetValue}}(other\_-\/>\mbox{\hyperlink{a00103_af05b71cc56a5edcc0771aa64d3858f4f}{ReturnValue}}());}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_ae98143bbb738b0d4e6b98b84e1e45e05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_a69652c432e3177c89052c5a2fa3819ae}\label{a00103_a69652c432e3177c89052c5a2fa3819ae}} 
+\index{ItemAction@{ItemAction}!````~ItemAction@{$\sim$ItemAction}}
+\index{````~ItemAction@{$\sim$ItemAction}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{$\sim$ItemAction()}{~ItemAction()}}
+{\footnotesize\ttfamily Item\+Action\+::$\sim$\+Item\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 78 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79 \{}
+\DoxyCodeLine{80      \mbox{\hyperlink{a00103_a79871a2e6d401cff1d005fdd161c1120}{OnDestroy}}();}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_a69652c432e3177c89052c5a2fa3819ae_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00103_ab069950b61fd230fc34e55e546bc1772}\label{a00103_ab069950b61fd230fc34e55e546bc1772}} 
+\index{ItemAction@{ItemAction}!AddEffect@{AddEffect}}
+\index{AddEffect@{AddEffect}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{AddEffect()}{AddEffect()}}
+{\footnotesize\ttfamily void Item\+Action\+::\+Add\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$const}]{ability\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Adds an effect to the items effects array. 
+
+
+
+Definition at line 50 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52      effectList.Add(ability\_);}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00103_a79871a2e6d401cff1d005fdd161c1120}\label{a00103_a79871a2e6d401cff1d005fdd161c1120}} 
+\index{ItemAction@{ItemAction}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void Item\+Action\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76      \textcolor{comment}{//Clean up method}}
+\DoxyCodeLine{77 \}}
+
+\end{DoxyCode}
+
+
+Referenced by $\sim$\+Item\+Action().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_a79871a2e6d401cff1d005fdd161c1120_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_a4b2e489cc0ae92c10ce4d6d91e6b5b7d}\label{a00103_a4b2e489cc0ae92c10ce4d6d91e6b5b7d}} 
+\index{ItemAction@{ItemAction}!ReturnDamageType@{ReturnDamageType}}
+\index{ReturnDamageType@{ReturnDamageType}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ReturnDamageType()}{ReturnDamageType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434c}{D\+A\+M\+A\+G\+E\+T\+Y\+PE}} Item\+Action\+::\+Return\+Damage\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns Damage type. 
+
+
+
+Definition at line 62 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64      \textcolor{keywordflow}{return} damageType;}
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00103_adf02b73e5a94f785a2a5eec11cbfb003}\label{a00103_adf02b73e5a94f785a2a5eec11cbfb003}} 
+\index{ItemAction@{ItemAction}!ReturnEffectList@{ReturnEffectList}}
+\index{ReturnEffectList@{ReturnEffectList}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ReturnEffectList()}{ReturnEffectList()}}
+{\footnotesize\ttfamily T\+Array$<$ \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$ Item\+Action\+::\+Return\+Effect\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns Effect array. 
+
+
+
+Definition at line 70 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72      \textcolor{keywordflow}{return} effectList;}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00103_aa3322621804e1869f956757c31e4c4b6}\label{a00103_aa3322621804e1869f956757c31e4c4b6}} 
+\index{ItemAction@{ItemAction}!ReturnItemType@{ReturnItemType}}
+\index{ReturnItemType@{ReturnItemType}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ReturnItemType()}{ReturnItemType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00026_a8164105d3663e42053d5b6daa79a9746}{I\+T\+E\+M\+T\+Y\+PE}} Item\+Action\+::\+Return\+Item\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns item\+Type. 
+
+
+
+Definition at line 54 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56      \textcolor{keywordflow}{return} type;}
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Damage\+Delt\+System\+::\+Base\+Calculate().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_aa3322621804e1869f956757c31e4c4b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_af05b71cc56a5edcc0771aa64d3858f4f}\label{a00103_af05b71cc56a5edcc0771aa64d3858f4f}} 
+\index{ItemAction@{ItemAction}!ReturnValue@{ReturnValue}}
+\index{ReturnValue@{ReturnValue}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{ReturnValue()}{ReturnValue()}}
+{\footnotesize\ttfamily uint32 Item\+Action\+::\+Return\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returnsitem value. 
+
+
+
+Definition at line 58 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60      \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Item\+Action().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_af05b71cc56a5edcc0771aa64d3858f4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_aa40a2cc0d7f23836c8403f0b82f37a23}\label{a00103_aa40a2cc0d7f23836c8403f0b82f37a23}} 
+\index{ItemAction@{ItemAction}!SetDamageType@{SetDamageType}}
+\index{SetDamageType@{SetDamageType}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{SetDamageType()}{SetDamageType()}}
+{\footnotesize\ttfamily void Item\+Action\+::\+Set\+Damage\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00014_ad49b53f4e7977b4cc867898320c4434c}{D\+A\+M\+A\+G\+E\+T\+Y\+PE}}}]{type\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set Damage type. 
+
+
+
+Definition at line 42 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44      damageType = type\_;}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Item\+Action().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d1e/a00103_aa40a2cc0d7f23836c8403f0b82f37a23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00103_ad433b7e82b9144f2301190698799577e}\label{a00103_ad433b7e82b9144f2301190698799577e}} 
+\index{ItemAction@{ItemAction}!SetType@{SetType}}
+\index{SetType@{SetType}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{SetType()}{SetType()}}
+{\footnotesize\ttfamily void Item\+Action\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00026_a8164105d3663e42053d5b6daa79a9746}{I\+T\+E\+M\+T\+Y\+PE}}}]{type\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set Item type. 
+
+
+
+Definition at line 46 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48      type = type\_;}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00103_aa6fdb08d13415443f080d75d2b934773}\label{a00103_aa6fdb08d13415443f080d75d2b934773}} 
+\index{ItemAction@{ItemAction}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!ItemAction@{ItemAction}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily void Item\+Action\+::\+Set\+Value (\begin{DoxyParamCaption}\item[{const uint32}]{value\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set item Value. 
+
+
+
+Definition at line 38 of file Item\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40      value = value\_;}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Item\+Action().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{d5/d1e/a00103_aa6fdb08d13415443f080d75d2b934773_icgraph}
+\end{center}
+\end{figure}

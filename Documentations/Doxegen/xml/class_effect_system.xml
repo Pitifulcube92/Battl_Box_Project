@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_effect_system" kind="class" language="C++" prot="public">
+    <compoundname>EffectSystem</compoundname>
+    <basecompoundref refid="class_base_system" prot="public" virt="non-virtual">BaseSystem</basecompoundref>
+    <includes refid="_effect_system_8h" local="no">EffectSystem.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_effect_system_1a1c7d29836af594f9fad93b8f3562e8e7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *</type>
+        <definition>StatSheetObject* EffectSystem::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="12" column="17" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_effect_system_1a2c4378aa4b2d84795cfcf32157330c4d" prot="private" static="no" mutable="no">
+        <type>TArray&lt; <ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> * &gt;</type>
+        <definition>TArray&lt;StatSheetObject*&gt; EffectSystem::targets</definition>
+        <argsstring></argsstring>
+        <name>targets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="13" column="8" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_effect_system_1a232e145c135d885a995e9f96d0aa71dc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+        <definition>BaseAction* EffectSystem::targetAction</definition>
+        <argsstring></argsstring>
+        <name>targetAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="14" column="12" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_effect_system_1a92be58e865893f0b16340887d2edd606" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EffectSystem::EffectSystem</definition>
+        <argsstring>()</argsstring>
+        <name>EffectSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="16" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EffectSystem::BaseCalculate</definition>
+        <argsstring>(const bool IsSingleTarget_, BaseAction *const action_)</argsstring>
+        <name>BaseCalculate</name>
+        <reimplements refid="class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1">BaseCalculate</reimplements>
+        <param>
+          <type>const bool</type>
+          <declname>IsSingleTarget_</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="17" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="10" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1a6f3268f2b1a70386b505f9a979c89841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EffectSystem::CallculateEffect</definition>
+        <argsstring>(BaseAction *action_)</argsstring>
+        <name>CallculateEffect</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="18" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1a1b599411780ea6013b9de3a94252dc29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EffectSystem::RemoveEffect</definition>
+        <argsstring>(BaseAction *action_)</argsstring>
+        <name>RemoveEffect</name>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="19" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1a224e059a2e658f9cad40799fdf902fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EffectSystem::SetTarget</definition>
+        <argsstring>(StatSheetObject *target_)</argsstring>
+        <name>SetTarget</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="20" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1a1cc71d0093defb7c5dcbccb593876b37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EffectSystem::Addtarget</definition>
+        <argsstring>(StatSheetObject *target_)</argsstring>
+        <name>Addtarget</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="21" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1a9419cd87fd9b4e8519fc3960dedefd22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EffectSystem::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="22" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_effect_system_1aeacfcab72c0129a58bb18363b4763263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EffectSystem::~EffectSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~EffectSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="23" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+      <node id="1">
+        <label>EffectSystem</label>
+        <link refid="class_effect_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+      <node id="1">
+        <label>EffectSystem</label>
+        <link refid="class_effect_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" line="10" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.h" bodystart="9" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_effect_system_1a1cc71d0093defb7c5dcbccb593876b37" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>Addtarget</name></member>
+      <member refid="class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0" prot="public" virt="virtual"><scope>EffectSystem</scope><name>BaseCalculate</name></member>
+      <member refid="class_effect_system_1a6f3268f2b1a70386b505f9a979c89841" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>CallculateEffect</name></member>
+      <member refid="class_effect_system_1a92be58e865893f0b16340887d2edd606" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>EffectSystem</name></member>
+      <member refid="class_effect_system_1a9419cd87fd9b4e8519fc3960dedefd22" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>OnDestroy</name></member>
+      <member refid="class_effect_system_1a1b599411780ea6013b9de3a94252dc29" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>RemoveEffect</name></member>
+      <member refid="class_effect_system_1a224e059a2e658f9cad40799fdf902fbb" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>SetTarget</name></member>
+      <member refid="class_effect_system_1a1c7d29836af594f9fad93b8f3562e8e7" prot="private" virt="non-virtual"><scope>EffectSystem</scope><name>target</name></member>
+      <member refid="class_effect_system_1a232e145c135d885a995e9f96d0aa71dc" prot="private" virt="non-virtual"><scope>EffectSystem</scope><name>targetAction</name></member>
+      <member refid="class_effect_system_1a2c4378aa4b2d84795cfcf32157330c4d" prot="private" virt="non-virtual"><scope>EffectSystem</scope><name>targets</name></member>
+      <member refid="class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16" prot="public" virt="virtual"><scope>EffectSystem</scope><name>~BaseSystem</name></member>
+      <member refid="class_effect_system_1aeacfcab72c0129a58bb18363b4763263" prot="public" virt="non-virtual"><scope>EffectSystem</scope><name>~EffectSystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_stat_sheet_object">
+<title>StatSheetObject Class Reference</title>
+<indexterm><primary>StatSheetObject</primary></indexterm>
+<para>
+<computeroutput>#include &lt;StatSheetObject.h&gt;</computeroutput>
+</para>
+Collaboration diagram for StatSheetObject:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060">StatSheetObject</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_stat_sheet_object_1a43f6237d48c0499e4746f895a462f5d6">StatSheetObject</link> (const FString name_, const FString tag_, const TMap&lt; FString, <link linkend="_class_command_action">CommandAction</link> * &gt; commandMap_, const TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; itemMap_, const TMap&lt; FString, <link linkend="_class_ability_action">AbilityAction</link> * &gt; abilityMap_, const TMap&lt; FString, float &gt; statMap_, const TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; equipmentMap_)</para>
+</listitem>
+            <listitem><para><link linkend="_class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2">StatSheetObject</link> (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const other_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1aea46c857ac7552e6460bbc9605f0caab">SetName</link> (const FString name_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1a0015a317c575f299b59dc712504b0879">SetTag</link> (const FString tag_)</para>
+</listitem>
+            <listitem><para>FString <link linkend="_class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a">ReturnName</link> () const</para>
+</listitem>
+            <listitem><para>FString <link linkend="_class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44">ReturnTag</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3">AddCommandAction</link> (<link linkend="_class_command_action">CommandAction</link> *const command_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8">AddItemAction</link> (<link linkend="_class_item_action">ItemAction</link> *const item_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142">AddAbilityAction</link> (<link linkend="_class_ability_action">AbilityAction</link> *const ability_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3">AddEquipment</link> (<link linkend="_class_item_action">ItemAction</link> *const equipment_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1ab22d60ec7f2082cf6a55e759ffc79af0">RemoveCommandAction</link> (const FString name_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1a3d652cd2a6177ef396a9adc27fbcdac0">RemoveItemAction</link> (const FString name_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1afa220913560581c6976e720c2f9d6f6a">RemoveAbilityAction</link> (const FString name_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1a3fe9bd16a83ba7970dcaa2cd2d68f1d5">RemoveEquipment</link> (const FString name_)</para>
+</listitem>
+            <listitem><para>TMap&lt; FString, <link linkend="_class_command_action">CommandAction</link> * &gt; <link linkend="_class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2">ReturnCommandMap</link> () const</para>
+</listitem>
+            <listitem><para>TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; <link linkend="_class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba">ReturnItemMap</link> () const</para>
+</listitem>
+            <listitem><para>TMap&lt; FString, <link linkend="_class_ability_action">AbilityAction</link> * &gt; <link linkend="_class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4">ReturnAbilityMap</link> () const</para>
+</listitem>
+            <listitem><para>TMap&lt; FString, float &gt; <link linkend="_class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3">ReturnStatMap</link> () const</para>
+</listitem>
+            <listitem><para>TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; <link linkend="_class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8">ReturnEquipmentMap</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_command_action">CommandAction</link> * <link linkend="_class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b">ReturnCommand</link> (FString name_) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_item_action">ItemAction</link> * <link linkend="_class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55">ReturnItem</link> (const FString name_) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_ability_action">AbilityAction</link> * <link linkend="_class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd">ReturnAbility</link> (const FString name_) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_item_action">ItemAction</link> * <link linkend="_class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a">ReturnEquipment</link> (const FString name_) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8">~StatSheetObject</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060"/>    <section>
+    <title>StatSheetObject()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<para><computeroutput>StatSheetObject::StatSheetObject ( )</computeroutput></para><programlisting>10 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;commandMap(TMap&lt;FString,&#32;CommandAction*&gt;()),&#32;itemMap(TMap&lt;FString,&#32;ItemAction*&gt;()),&#32;abilityMap(TMap&lt;FString,&#32;AbilityAction*&gt;()),&#32;statMap(TMap&lt;FString,&#32;float&gt;()),&#32;equipmentMap(TMap&lt;FString,&#32;ItemAction*&gt;())
+11 {
+12 &#32;&#32;&#32;&#32;name&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+13 &#32;&#32;&#32;&#32;tag&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+14 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1a43f6237d48c0499e4746f895a462f5d6"/>    <section>
+    <title>StatSheetObject()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<para><computeroutput>StatSheetObject::StatSheetObject (const FString name_, const FString tag_, const TMap&lt; FString, <link linkend="_class_command_action">CommandAction</link> * &gt; commandMap_, const TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; itemMap_, const TMap&lt; FString, <link linkend="_class_ability_action">AbilityAction</link> * &gt; abilityMap_, const TMap&lt; FString, float &gt; statMap_, const TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; equipmentMap_)</computeroutput></para><programlisting>16 {
+17 &#32;&#32;&#32;&#32;name&#32;=&#32;name_;
+18 &#32;&#32;&#32;&#32;tag&#32;=&#32;tag_;
+19 &#32;&#32;&#32;&#32;commandMap&#32;=&#32;commandMap_;
+20 &#32;&#32;&#32;&#32;itemMap&#32;=&#32;itemMap_;
+21 &#32;&#32;&#32;&#32;abilityMap&#32;=&#32;abilityMap_;
+22 &#32;&#32;&#32;&#32;equipmentMap&#32;=&#32;equipmentMap_;
+23 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2"/>    <section>
+    <title>StatSheetObject()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<para><computeroutput>StatSheetObject::StatSheetObject (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *const other_)</computeroutput></para><programlisting>25 {
+26 &#32;&#32;&#32;&#32;name&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a">ReturnName</link>();
+27 &#32;&#32;&#32;&#32;tag&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44">ReturnTag</link>();
+28 &#32;&#32;&#32;&#32;commandMap&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2">ReturnCommandMap</link>();
+29 &#32;&#32;&#32;&#32;itemMap&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba">ReturnItemMap</link>();
+30 &#32;&#32;&#32;&#32;abilityMap&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4">ReturnAbilityMap</link>();
+31 &#32;&#32;&#32;&#32;equipmentMap&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8">ReturnEquipmentMap</link>();
+32 &#32;&#32;&#32;&#32;statMap&#32;=&#32;other_-&gt;<link linkend="_class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3">ReturnStatMap</link>();
+33 
+34 }
+</programlisting><para>
+References ReturnAbilityMap(), ReturnCommandMap(), ReturnEquipmentMap(), ReturnItemMap(), ReturnName(), ReturnStatMap(), and ReturnTag().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8"/>    <section>
+    <title>~StatSheetObject()</title>
+<indexterm><primary>~StatSheetObject</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>~StatSheetObject</secondary></indexterm>
+<para><computeroutput>StatSheetObject::~StatSheetObject ( )</computeroutput></para><programlisting>157 {
+158 &#32;&#32;&#32;&#32;<link linkend="_class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d">OnDestroy</link>();
+159 }
+</programlisting><para>
+References OnDestroy().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a5b6b1adcd9e73b5c852cc9bb56c540a8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142"/>    <section>
+    <title>AddAbilityAction()</title>
+<indexterm><primary>AddAbilityAction</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>AddAbilityAction</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::AddAbilityAction (<link linkend="_class_ability_action">AbilityAction</link> *const ability_)</computeroutput></para><programlisting>60 {
+61 &#32;&#32;&#32;&#32;abilityMap.Add(ability_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>(),&#32;ability_);
+62 }
+</programlisting><para>
+References BaseAction::ReturnName().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_ad9ec606301ee7f1a0c94217a5cc0b142_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3"/>    <section>
+    <title>AddCommandAction()</title>
+<indexterm><primary>AddCommandAction</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>AddCommandAction</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::AddCommandAction (<link linkend="_class_command_action">CommandAction</link> *const command_)</computeroutput></para><programlisting>52 {
+53 &#32;&#32;&#32;&#32;commandMap.Add(command_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>(),&#32;command_);
+54 }
+</programlisting><para>
+References BaseAction::ReturnName().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_ad9c4cf7a66ce5f1665b1400015fa8dc3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3"/>    <section>
+    <title>AddEquipment()</title>
+<indexterm><primary>AddEquipment</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>AddEquipment</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::AddEquipment (<link linkend="_class_item_action">ItemAction</link> *const equipment_)</computeroutput></para><programlisting>64 {
+65 &#32;&#32;&#32;&#32;equipmentMap.Add(equipment_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>(),&#32;equipment_);
+66 }
+</programlisting><para>
+References BaseAction::ReturnName().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a1925be119c8aa3dafca64e7c025b36e3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8"/>    <section>
+    <title>AddItemAction()</title>
+<indexterm><primary>AddItemAction</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>AddItemAction</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::AddItemAction (<link linkend="_class_item_action">ItemAction</link> *const item_)</computeroutput></para><programlisting>56 {
+57 &#32;&#32;&#32;&#32;itemMap.Add(item_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>(),&#32;item_);
+58 }
+</programlisting><para>
+References BaseAction::ReturnName().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_aec28b9c716aaa3274f5bcd82930b70f8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d"/>    <section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::OnDestroy ( )</computeroutput></para><programlisting>145 {
+146 &#32;&#32;&#32;&#32;<emphasis role="comment">//Clear&#32;out&#32;all&#32;pointer&#32;within&#32;the&#32;maps</emphasis>
+147 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(commandMap.Num()&#32;&gt;&#32;0)
+148 &#32;&#32;&#32;&#32;{
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">auto</emphasis>&#32;command&#32;:&#32;commandMap)
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;command.Value;
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandMap.Empty();
+154 &#32;&#32;&#32;&#32;}
+155 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_afb4f166bb980f7e367981397a9c5379d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1afa220913560581c6976e720c2f9d6f6a"/>    <section>
+    <title>RemoveAbilityAction()</title>
+<indexterm><primary>RemoveAbilityAction</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>RemoveAbilityAction</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::RemoveAbilityAction (const FString name_)</computeroutput></para><programlisting>76 {
+77 &#32;&#32;&#32;&#32;abilityMap.Remove(name_);
+78 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1ab22d60ec7f2082cf6a55e759ffc79af0"/>    <section>
+    <title>RemoveCommandAction()</title>
+<indexterm><primary>RemoveCommandAction</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>RemoveCommandAction</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::RemoveCommandAction (const FString name_)</computeroutput></para><programlisting>68 {
+69 &#32;&#32;&#32;&#32;commandMap.Remove(name_);
+70 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1a3fe9bd16a83ba7970dcaa2cd2d68f1d5"/>    <section>
+    <title>RemoveEquipment()</title>
+<indexterm><primary>RemoveEquipment</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>RemoveEquipment</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::RemoveEquipment (const FString name_)</computeroutput></para><programlisting>80 {
+81 &#32;&#32;&#32;&#32;equipmentMap.Remove(name);
+82 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1a3d652cd2a6177ef396a9adc27fbcdac0"/>    <section>
+    <title>RemoveItemAction()</title>
+<indexterm><primary>RemoveItemAction</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>RemoveItemAction</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::RemoveItemAction (const FString name_)</computeroutput></para><programlisting>72 {
+73 &#32;&#32;&#32;&#32;itemMap.Remove(name_);
+74 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd"/>    <section>
+    <title>ReturnAbility()</title>
+<indexterm><primary>ReturnAbility</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnAbility</secondary></indexterm>
+<para><computeroutput><link linkend="_class_ability_action">AbilityAction</link> * StatSheetObject::ReturnAbility (const FString name_) const</computeroutput></para><programlisting>104 {
+105 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!abilityMap.Find(name_))
+106 &#32;&#32;&#32;&#32;{
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;Ability&#32;action&#32;&quot;</emphasis>&#32;+&#32;name_&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;could&#32;not&#32;be&#32;found&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;StatSheetObject.cpp&quot;</emphasis>,&#32;__LINE__);
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">nullptr</emphasis>;
+110 &#32;&#32;&#32;&#32;}
+111 &#32;&#32;&#32;&#32;
+112 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;abilityMap[name_];
+113 }
+</programlisting><para>
+References E_ERROR, Debugger::Error(), and Debugger::SetSeverity().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a4026d7a8088f539e3f34d80613f8dccd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4"/>    <section>
+    <title>ReturnAbilityMap()</title>
+<indexterm><primary>ReturnAbilityMap</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnAbilityMap</secondary></indexterm>
+<para><computeroutput>TMap&lt; FString, <link linkend="_class_ability_action">AbilityAction</link> * &gt; StatSheetObject::ReturnAbilityMap ( ) const</computeroutput></para><programlisting>133 {
+134 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;abilityMap;
+135 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a4b6e004e70d178b864126a93d6ea3df4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b"/>    <section>
+    <title>ReturnCommand()</title>
+<indexterm><primary>ReturnCommand</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnCommand</secondary></indexterm>
+<para><computeroutput><link linkend="_class_command_action">CommandAction</link> * StatSheetObject::ReturnCommand (FString name_) const</computeroutput></para><programlisting>84 {
+85 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!commandMap.Find(name_))
+86 &#32;&#32;&#32;&#32;{
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;Command&#32;action&#32;&quot;</emphasis>&#32;+&#32;name_&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;could&#32;not&#32;be&#32;found&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;StatSheetObject.cpp&quot;</emphasis>,&#32;__LINE__);
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">nullptr</emphasis>;
+90 &#32;&#32;&#32;&#32;}
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;commandMap[name_];
+92 }
+</programlisting><para>
+References E_ERROR, Debugger::Error(), and Debugger::SetSeverity().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_adee30a8470b9fd57b32f4892aacac55b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2"/>    <section>
+    <title>ReturnCommandMap()</title>
+<indexterm><primary>ReturnCommandMap</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnCommandMap</secondary></indexterm>
+<para><computeroutput>TMap&lt; FString, <link linkend="_class_command_action">CommandAction</link> * &gt; StatSheetObject::ReturnCommandMap ( ) const</computeroutput></para><programlisting>125 {
+126 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;commandMap;
+127 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a9b6fcf1480b8d15424f5476ed40604d2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a"/>    <section>
+    <title>ReturnEquipment()</title>
+<indexterm><primary>ReturnEquipment</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnEquipment</secondary></indexterm>
+<para><computeroutput><link linkend="_class_item_action">ItemAction</link> * StatSheetObject::ReturnEquipment (const FString name_) const</computeroutput></para><programlisting>115 {
+116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!equipmentMap.Find(name_))
+117 &#32;&#32;&#32;&#32;{
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;Equipment&#32;action&#32;&quot;</emphasis>&#32;+&#32;name_&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;could&#32;not&#32;be&#32;found&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;StatSheetObject.cpp&quot;</emphasis>,&#32;__LINE__);
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">nullptr</emphasis>;
+121 &#32;&#32;&#32;&#32;}
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;equipmentMap[name_];
+123 }
+</programlisting><para>
+References E_ERROR, Debugger::Error(), and Debugger::SetSeverity().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_ad7e95011555f4015c74ecf7e053e529a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8"/>    <section>
+    <title>ReturnEquipmentMap()</title>
+<indexterm><primary>ReturnEquipmentMap</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnEquipmentMap</secondary></indexterm>
+<para><computeroutput>TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; StatSheetObject::ReturnEquipmentMap ( ) const</computeroutput></para><programlisting>141 {
+142 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;equipmentMap;
+143 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55"/>    <section>
+    <title>ReturnItem()</title>
+<indexterm><primary>ReturnItem</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnItem</secondary></indexterm>
+<para><computeroutput><link linkend="_class_item_action">ItemAction</link> * StatSheetObject::ReturnItem (const FString name_) const</computeroutput></para><programlisting>94 {
+95 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!itemMap.Find(name_))
+96 &#32;&#32;&#32;&#32;{
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</link>(<link linkend="__debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</link>);
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_debugger_1a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</link>(<emphasis role="stringliteral">&quot;Item&#32;action&#32;&quot;</emphasis>&#32;+&#32;name_&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;could&#32;not&#32;be&#32;found&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;StatSheetObject.cpp&quot;</emphasis>,&#32;__LINE__);
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">nullptr</emphasis>;
+100 &#32;&#32;&#32;&#32;}
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;itemMap[name_];
+102 }
+</programlisting><para>
+References E_ERROR, Debugger::Error(), and Debugger::SetSeverity().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a68ac4e437d66c297c8c74bdc95dcfc55_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba"/>    <section>
+    <title>ReturnItemMap()</title>
+<indexterm><primary>ReturnItemMap</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnItemMap</secondary></indexterm>
+<para><computeroutput>TMap&lt; FString, <link linkend="_class_item_action">ItemAction</link> * &gt; StatSheetObject::ReturnItemMap ( ) const</computeroutput></para><programlisting>129 {
+130 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;itemMap;
+131 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a16559559522d65dfb2d4baf3881bc1ba_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a"/>    <section>
+    <title>ReturnName()</title>
+<indexterm><primary>ReturnName</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnName</secondary></indexterm>
+<para><computeroutput>FString StatSheetObject::ReturnName ( ) const</computeroutput></para><programlisting>44 {
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;name;
+46 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_a5b875038059a4d910ef9af1ff8cec26a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3"/>    <section>
+    <title>ReturnStatMap()</title>
+<indexterm><primary>ReturnStatMap</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnStatMap</secondary></indexterm>
+<para><computeroutput>TMap&lt; FString, float &gt; StatSheetObject::ReturnStatMap ( ) const</computeroutput></para><programlisting>137 {
+138 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;statMap;
+139 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44"/>    <section>
+    <title>ReturnTag()</title>
+<indexterm><primary>ReturnTag</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>ReturnTag</secondary></indexterm>
+<para><computeroutput>FString StatSheetObject::ReturnTag ( ) const</computeroutput></para><programlisting>48 {
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;tag;
+50 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stat_sheet_object_ac0352b9c1c206b2cecd57e9d2d028e44_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_stat_sheet_object_1aea46c857ac7552e6460bbc9605f0caab"/>    <section>
+    <title>SetName()</title>
+<indexterm><primary>SetName</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>SetName</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::SetName (const FString name_)</computeroutput></para><programlisting>36 {
+37 &#32;&#32;&#32;&#32;name&#32;=&#32;name_;
+38 }
+</programlisting>    </section><anchor xml:id="_class_stat_sheet_object_1a0015a317c575f299b59dc712504b0879"/>    <section>
+    <title>SetTag()</title>
+<indexterm><primary>SetTag</primary><secondary>StatSheetObject</secondary></indexterm>
+<indexterm><primary>StatSheetObject</primary><secondary>SetTag</secondary></indexterm>
+<para><computeroutput>void StatSheetObject::SetTag (const FString tag_)</computeroutput></para><programlisting>40 {
+41 &#32;&#32;&#32;&#32;tag&#32;=&#32;tag_;
+42 }
+</programlisting></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__stat_sheet_object_8h">StatSheetObject.h</link>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/<link linkend="__stat_sheet_object_8cpp">StatSheetObject.cpp</link></section>
+</section>

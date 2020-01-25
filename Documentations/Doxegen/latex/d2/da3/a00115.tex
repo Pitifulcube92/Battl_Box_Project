@@ -1,0 +1,814 @@
+\hypertarget{a00115}{}\doxysection{Stat\+Sheet\+Object Class Reference}
+\label{a00115}\index{StatSheetObject@{StatSheetObject}}
+
+
+{\ttfamily \#include $<$Stat\+Sheet\+Object.\+h$>$}
+
+
+
+Collaboration diagram for Stat\+Sheet\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{d3/d00/a00113}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00115_ad9ec606301ee7f1a0c94217a5cc0b142}{Add\+Ability\+Action}} (\mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$const ability\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds a ability action to the ability map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_ad9c4cf7a66ce5f1665b1400015fa8dc3}{Add\+Command\+Action}} (\mbox{\hyperlink{a00099}{Command\+Action}} $\ast$const command\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds a command action the command map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_a1925be119c8aa3dafca64e7c025b36e3}{Add\+Equipment}} (\mbox{\hyperlink{a00103}{Item\+Action}} $\ast$const equipment\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds a eqquipment-\/item action to the equipmnet map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_aec28b9c716aaa3274f5bcd82930b70f8}{Add\+Item\+Action}} (\mbox{\hyperlink{a00103}{Item\+Action}} $\ast$const item\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds a item action to the item map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_afb4f166bb980f7e367981397a9c5379d}{On\+Destroy}} ()
+\item 
+void \mbox{\hyperlink{a00115_afa220913560581c6976e720c2f9d6f6a}{Remove\+Ability\+Action}} (const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes a ability action if there is one in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_ab22d60ec7f2082cf6a55e759ffc79af0}{Remove\+Command\+Action}} (const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes a command action if there is one in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_a3fe9bd16a83ba7970dcaa2cd2d68f1d5}{Remove\+Equipment}} (const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes a equipment-\/type action if there is one in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_a3d652cd2a6177ef396a9adc27fbcdac0}{Remove\+Item\+Action}} (const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes a item action if there is one in the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ \mbox{\hyperlink{a00115_a4026d7a8088f539e3f34d80613f8dccd}{Return\+Ability}} (const F\+String name\+\_\+) const
+\begin{DoxyCompactList}\small\item\em Returns a ability action by its name from the ability map. \end{DoxyCompactList}\item 
+T\+Map$<$ F\+String, \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$ \mbox{\hyperlink{a00115_a4b6e004e70d178b864126a93d6ea3df4}{Return\+Ability\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ability map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00099}{Command\+Action}} $\ast$ \mbox{\hyperlink{a00115_adee30a8470b9fd57b32f4892aacac55b}{Return\+Command}} (F\+String name\+\_\+) const
+\begin{DoxyCompactList}\small\item\em Returns a command action by its name from the command map. \end{DoxyCompactList}\item 
+T\+Map$<$ F\+String, \mbox{\hyperlink{a00099}{Command\+Action}} $\ast$ $>$ \mbox{\hyperlink{a00115_a9b6fcf1480b8d15424f5476ed40604d2}{Return\+Command\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the commmand map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ \mbox{\hyperlink{a00115_ad7e95011555f4015c74ecf7e053e529a}{Return\+Equipment}} (const F\+String name\+\_\+) const
+\begin{DoxyCompactList}\small\item\em Returns a equipment-\/item action by its name from the equipment map. \end{DoxyCompactList}\item 
+T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$ \mbox{\hyperlink{a00115_aecfdf70147ffaa33f65b03c3b97232c8}{Return\+Equipment\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the equipment map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ \mbox{\hyperlink{a00115_a68ac4e437d66c297c8c74bdc95dcfc55}{Return\+Item}} (const F\+String name\+\_\+) const
+\begin{DoxyCompactList}\small\item\em Returns a item action by its name from the item map. \end{DoxyCompactList}\item 
+T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$ \mbox{\hyperlink{a00115_a16559559522d65dfb2d4baf3881bc1ba}{Return\+Item\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the item map. \end{DoxyCompactList}\item 
+F\+String \mbox{\hyperlink{a00115_a5b875038059a4d910ef9af1ff8cec26a}{Return\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns name. \end{DoxyCompactList}\item 
+T\+Map$<$ F\+String, float $>$ \mbox{\hyperlink{a00115_aa92a6ba4a423719096ce45fe714491f3}{Return\+Stat\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the stat\+Map. \end{DoxyCompactList}\item 
+F\+String \mbox{\hyperlink{a00115_ac0352b9c1c206b2cecd57e9d2d028e44}{Return\+Tag}} () const
+\begin{DoxyCompactList}\small\item\em Returns tag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_aea46c857ac7552e6460bbc9605f0caab}{Set\+Name}} (const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00115_a0015a317c575f299b59dc712504b0879}{Set\+Tag}} (const F\+String tag\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets tag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00115_ad888b9681bca9f42638ae6d845012060}{Stat\+Sheet\+Object}} ()
+\item 
+\mbox{\hyperlink{a00115_a43f6237d48c0499e4746f895a462f5d6}{Stat\+Sheet\+Object}} (const F\+String name\+\_\+, const F\+String tag\+\_\+, const T\+Map$<$ F\+String, \mbox{\hyperlink{a00099}{Command\+Action}} $\ast$ $>$ command\+Map\+\_\+, const T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$ item\+Map\+\_\+, const T\+Map$<$ F\+String, \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$ ability\+Map\+\_\+, const T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$ equipment\+Map\+\_\+)
+\item 
+\mbox{\hyperlink{a00115_a0122cd38668000c17134d6d267b31df2}{Stat\+Sheet\+Object}} (\mbox{\hyperlink{a00115}{Stat\+Sheet\+Object}} $\ast$const other\+\_\+)
+\item 
+\mbox{\hyperlink{a00115_a5b6b1adcd9e73b5c852cc9bb56c540a8}{$\sim$\+Stat\+Sheet\+Object}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file Stat\+Sheet\+Object.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a00115_ad888b9681bca9f42638ae6d845012060}\label{a00115_ad888b9681bca9f42638ae6d845012060}} 
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{StatSheetObject()}{StatSheetObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                  : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12      name = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{13      tag = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_a43f6237d48c0499e4746f895a462f5d6}\label{a00115_a43f6237d48c0499e4746f895a462f5d6}} 
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{StatSheetObject()}{StatSheetObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+,  }\item[{const F\+String}]{tag\+\_\+,  }\item[{const T\+Map$<$ F\+String, \mbox{\hyperlink{a00099}{Command\+Action}} $\ast$ $>$}]{command\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$}]{item\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$}]{ability\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, float $>$}]{stat\+Map\+\_\+,  }\item[{const T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$}]{equipment\+Map\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17      name = name\_;}
+\DoxyCodeLine{18      tag = tag\_;}
+\DoxyCodeLine{19      commandMap = commandMap\_;}
+\DoxyCodeLine{20      itemMap = itemMap\_;}
+\DoxyCodeLine{21      abilityMap = abilityMap\_;}
+\DoxyCodeLine{22      equipmentMap = equipmentMap\_;}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_a0122cd38668000c17134d6d267b31df2}\label{a00115_a0122cd38668000c17134d6d267b31df2}} 
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\index{StatSheetObject@{StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{StatSheetObject()}{StatSheetObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00115}{Stat\+Sheet\+Object}} $\ast$const}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26      name = other\_-\/>\mbox{\hyperlink{a00115_a5b875038059a4d910ef9af1ff8cec26a}{ReturnName}}();}
+\DoxyCodeLine{27      tag = other\_-\/>\mbox{\hyperlink{a00115_ac0352b9c1c206b2cecd57e9d2d028e44}{ReturnTag}}();}
+\DoxyCodeLine{28      commandMap = other\_-\/>\mbox{\hyperlink{a00115_a9b6fcf1480b8d15424f5476ed40604d2}{ReturnCommandMap}}();}
+\DoxyCodeLine{29      itemMap = other\_-\/>\mbox{\hyperlink{a00115_a16559559522d65dfb2d4baf3881bc1ba}{ReturnItemMap}}();}
+\DoxyCodeLine{30      abilityMap = other\_-\/>\mbox{\hyperlink{a00115_a4b6e004e70d178b864126a93d6ea3df4}{ReturnAbilityMap}}();}
+\DoxyCodeLine{31      equipmentMap = other\_-\/>\mbox{\hyperlink{a00115_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}();}
+\DoxyCodeLine{32      statMap = other\_-\/>\mbox{\hyperlink{a00115_aa92a6ba4a423719096ce45fe714491f3}{ReturnStatMap}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a0122cd38668000c17134d6d267b31df2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a5b6b1adcd9e73b5c852cc9bb56c540a8}\label{a00115_a5b6b1adcd9e73b5c852cc9bb56c540a8}} 
+\index{StatSheetObject@{StatSheetObject}!````~StatSheetObject@{$\sim$StatSheetObject}}
+\index{````~StatSheetObject@{$\sim$StatSheetObject}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$StatSheetObject()}{~StatSheetObject()}}
+{\footnotesize\ttfamily Stat\+Sheet\+Object\+::$\sim$\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 156 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158      \mbox{\hyperlink{a00115_afb4f166bb980f7e367981397a9c5379d}{OnDestroy}}();}
+\DoxyCodeLine{159 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a5b6b1adcd9e73b5c852cc9bb56c540a8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00115_ad9ec606301ee7f1a0c94217a5cc0b142}\label{a00115_ad9ec606301ee7f1a0c94217a5cc0b142}} 
+\index{StatSheetObject@{StatSheetObject}!AddAbilityAction@{AddAbilityAction}}
+\index{AddAbilityAction@{AddAbilityAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{AddAbilityAction()}{AddAbilityAction()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Ability\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$const}]{ability\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Adds a ability action to the ability map. 
+
+
+
+Definition at line 59 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60 \{}
+\DoxyCodeLine{61      abilityMap.Add(ability\_-\/>\mbox{\hyperlink{a00095_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}(), ability\_);}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_ad9ec606301ee7f1a0c94217a5cc0b142_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_ad9c4cf7a66ce5f1665b1400015fa8dc3}\label{a00115_ad9c4cf7a66ce5f1665b1400015fa8dc3}} 
+\index{StatSheetObject@{StatSheetObject}!AddCommandAction@{AddCommandAction}}
+\index{AddCommandAction@{AddCommandAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{AddCommandAction()}{AddCommandAction()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Command\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00099}{Command\+Action}} $\ast$const}]{command\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Adds a command action the command map. 
+
+
+
+Definition at line 51 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53      commandMap.Add(command\_-\/>\mbox{\hyperlink{a00095_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}(), command\_);}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_ad9c4cf7a66ce5f1665b1400015fa8dc3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a1925be119c8aa3dafca64e7c025b36e3}\label{a00115_a1925be119c8aa3dafca64e7c025b36e3}} 
+\index{StatSheetObject@{StatSheetObject}!AddEquipment@{AddEquipment}}
+\index{AddEquipment@{AddEquipment}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{AddEquipment()}{AddEquipment()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00103}{Item\+Action}} $\ast$const}]{equipment\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Adds a eqquipment-\/item action to the equipmnet map. 
+
+
+
+Definition at line 63 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65      equipmentMap.Add(equipment\_-\/>\mbox{\hyperlink{a00095_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}(), equipment\_);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a1925be119c8aa3dafca64e7c025b36e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_aec28b9c716aaa3274f5bcd82930b70f8}\label{a00115_aec28b9c716aaa3274f5bcd82930b70f8}} 
+\index{StatSheetObject@{StatSheetObject}!AddItemAction@{AddItemAction}}
+\index{AddItemAction@{AddItemAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{AddItemAction()}{AddItemAction()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Add\+Item\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00103}{Item\+Action}} $\ast$const}]{item\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Adds a item action to the item map. 
+
+
+
+Definition at line 55 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57      itemMap.Add(item\_-\/>\mbox{\hyperlink{a00095_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}(), item\_);}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_aec28b9c716aaa3274f5bcd82930b70f8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_afb4f166bb980f7e367981397a9c5379d}\label{a00115_afb4f166bb980f7e367981397a9c5379d}} 
+\index{StatSheetObject@{StatSheetObject}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145 \{}
+\DoxyCodeLine{146      \textcolor{comment}{//Clear out all pointer within the maps}}
+\DoxyCodeLine{147      \textcolor{keywordflow}{if} (commandMap.Num() > 0)}
+\DoxyCodeLine{148      \{}
+\DoxyCodeLine{149           \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} command : commandMap)}
+\DoxyCodeLine{150           \{}
+\DoxyCodeLine{151                \textcolor{keyword}{delete} command.Value;}
+\DoxyCodeLine{152           \}}
+\DoxyCodeLine{153           commandMap.Empty();}
+\DoxyCodeLine{154      \}}
+\DoxyCodeLine{155 \}}
+
+\end{DoxyCode}
+
+
+Referenced by $\sim$\+Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_afb4f166bb980f7e367981397a9c5379d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_afa220913560581c6976e720c2f9d6f6a}\label{a00115_afa220913560581c6976e720c2f9d6f6a}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveAbilityAction@{RemoveAbilityAction}}
+\index{RemoveAbilityAction@{RemoveAbilityAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{RemoveAbilityAction()}{RemoveAbilityAction()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Ability\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Removes a ability action if there is one in the map. 
+
+
+
+Definition at line 75 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77      abilityMap.Remove(name\_);}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_ab22d60ec7f2082cf6a55e759ffc79af0}\label{a00115_ab22d60ec7f2082cf6a55e759ffc79af0}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveCommandAction@{RemoveCommandAction}}
+\index{RemoveCommandAction@{RemoveCommandAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{RemoveCommandAction()}{RemoveCommandAction()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Command\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Removes a command action if there is one in the map. 
+
+
+
+Definition at line 67 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69      commandMap.Remove(name\_);}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_a3fe9bd16a83ba7970dcaa2cd2d68f1d5}\label{a00115_a3fe9bd16a83ba7970dcaa2cd2d68f1d5}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveEquipment@{RemoveEquipment}}
+\index{RemoveEquipment@{RemoveEquipment}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{RemoveEquipment()}{RemoveEquipment()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Equipment (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Removes a equipment-\/type action if there is one in the map. 
+
+
+
+Definition at line 79 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81      equipmentMap.Remove(name);}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_a3d652cd2a6177ef396a9adc27fbcdac0}\label{a00115_a3d652cd2a6177ef396a9adc27fbcdac0}} 
+\index{StatSheetObject@{StatSheetObject}!RemoveItemAction@{RemoveItemAction}}
+\index{RemoveItemAction@{RemoveItemAction}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{RemoveItemAction()}{RemoveItemAction()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Remove\+Item\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Removes a item action if there is one in the map. 
+
+
+
+Definition at line 71 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72 \{}
+\DoxyCodeLine{73      itemMap.Remove(name\_);}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_a4026d7a8088f539e3f34d80613f8dccd}\label{a00115_a4026d7a8088f539e3f34d80613f8dccd}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnAbility@{ReturnAbility}}
+\index{ReturnAbility@{ReturnAbility}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnAbility()}{ReturnAbility()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Ability (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a ability action by its name from the ability map. 
+
+
+
+Definition at line 103 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105      \textcolor{keywordflow}{if} (!abilityMap.Find(name\_))}
+\DoxyCodeLine{106      \{}
+\DoxyCodeLine{107           \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
+\DoxyCodeLine{108           \mbox{\hyperlink{a00111_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"Ability action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{109           \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{110      \}}
+\DoxyCodeLine{111      }
+\DoxyCodeLine{112      \textcolor{keywordflow}{return} abilityMap[name\_];}
+\DoxyCodeLine{113 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a4026d7a8088f539e3f34d80613f8dccd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a4b6e004e70d178b864126a93d6ea3df4}\label{a00115_a4b6e004e70d178b864126a93d6ea3df4}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnAbilityMap@{ReturnAbilityMap}}
+\index{ReturnAbilityMap@{ReturnAbilityMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnAbilityMap()}{ReturnAbilityMap()}}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \mbox{\hyperlink{a00091}{Ability\+Action}} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Ability\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the ability map. 
+
+
+
+Definition at line 132 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134      \textcolor{keywordflow}{return} abilityMap;}
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a4b6e004e70d178b864126a93d6ea3df4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_adee30a8470b9fd57b32f4892aacac55b}\label{a00115_adee30a8470b9fd57b32f4892aacac55b}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnCommand@{ReturnCommand}}
+\index{ReturnCommand@{ReturnCommand}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnCommand()}{ReturnCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00099}{Command\+Action}} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Command (\begin{DoxyParamCaption}\item[{F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a command action by its name from the command map. 
+
+
+
+Definition at line 83 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85      \textcolor{keywordflow}{if} (!commandMap.Find(name\_))}
+\DoxyCodeLine{86      \{}
+\DoxyCodeLine{87           \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
+\DoxyCodeLine{88           \mbox{\hyperlink{a00111_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"Command action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{89           \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{90      \}}
+\DoxyCodeLine{91           \textcolor{keywordflow}{return} commandMap[name\_];}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_adee30a8470b9fd57b32f4892aacac55b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a9b6fcf1480b8d15424f5476ed40604d2}\label{a00115_a9b6fcf1480b8d15424f5476ed40604d2}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnCommandMap@{ReturnCommandMap}}
+\index{ReturnCommandMap@{ReturnCommandMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnCommandMap()}{ReturnCommandMap()}}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \mbox{\hyperlink{a00099}{Command\+Action}} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Command\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the commmand map. 
+
+
+
+Definition at line 124 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125 \{}
+\DoxyCodeLine{126      \textcolor{keywordflow}{return} commandMap;}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a9b6fcf1480b8d15424f5476ed40604d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_ad7e95011555f4015c74ecf7e053e529a}\label{a00115_ad7e95011555f4015c74ecf7e053e529a}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnEquipment@{ReturnEquipment}}
+\index{ReturnEquipment@{ReturnEquipment}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnEquipment()}{ReturnEquipment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Equipment (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a equipment-\/item action by its name from the equipment map. 
+
+
+
+Definition at line 114 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115 \{}
+\DoxyCodeLine{116      \textcolor{keywordflow}{if} (!equipmentMap.Find(name\_))}
+\DoxyCodeLine{117      \{}
+\DoxyCodeLine{118           \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
+\DoxyCodeLine{119           \mbox{\hyperlink{a00111_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"Equipment action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{120           \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{121      \}}
+\DoxyCodeLine{122           \textcolor{keywordflow}{return} equipmentMap[name\_];}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_ad7e95011555f4015c74ecf7e053e529a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_aecfdf70147ffaa33f65b03c3b97232c8}\label{a00115_aecfdf70147ffaa33f65b03c3b97232c8}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnEquipmentMap@{ReturnEquipmentMap}}
+\index{ReturnEquipmentMap@{ReturnEquipmentMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnEquipmentMap()}{ReturnEquipmentMap()}}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Equipment\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the equipment map. 
+
+
+
+Definition at line 140 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142      \textcolor{keywordflow}{return} equipmentMap;}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_aecfdf70147ffaa33f65b03c3b97232c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a68ac4e437d66c297c8c74bdc95dcfc55}\label{a00115_a68ac4e437d66c297c8c74bdc95dcfc55}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnItem@{ReturnItem}}
+\index{ReturnItem@{ReturnItem}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnItem()}{ReturnItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ Stat\+Sheet\+Object\+::\+Return\+Item (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a item action by its name from the item map. 
+
+
+
+Definition at line 93 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95      \textcolor{keywordflow}{if} (!itemMap.Find(name\_))}
+\DoxyCodeLine{96      \{}
+\DoxyCodeLine{97           \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
+\DoxyCodeLine{98           \mbox{\hyperlink{a00111_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"Item action "} + name\_ + \textcolor{stringliteral}{" could not be found"}, \textcolor{stringliteral}{"StatSheetObject.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{99           \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{100      \}}
+\DoxyCodeLine{101           \textcolor{keywordflow}{return} itemMap[name\_];}
+\DoxyCodeLine{102 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a68ac4e437d66c297c8c74bdc95dcfc55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a16559559522d65dfb2d4baf3881bc1ba}\label{a00115_a16559559522d65dfb2d4baf3881bc1ba}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnItemMap@{ReturnItemMap}}
+\index{ReturnItemMap@{ReturnItemMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnItemMap()}{ReturnItemMap()}}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, \mbox{\hyperlink{a00103}{Item\+Action}} $\ast$ $>$ Stat\+Sheet\+Object\+::\+Return\+Item\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the item map. 
+
+
+
+Definition at line 128 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129 \{}
+\DoxyCodeLine{130      \textcolor{keywordflow}{return} itemMap;}
+\DoxyCodeLine{131 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a16559559522d65dfb2d4baf3881bc1ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_a5b875038059a4d910ef9af1ff8cec26a}\label{a00115_a5b875038059a4d910ef9af1ff8cec26a}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnName@{ReturnName}}
+\index{ReturnName@{ReturnName}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnName()}{ReturnName()}}
+{\footnotesize\ttfamily F\+String Stat\+Sheet\+Object\+::\+Return\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns name. 
+
+
+
+Definition at line 43 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45      \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_a5b875038059a4d910ef9af1ff8cec26a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_aa92a6ba4a423719096ce45fe714491f3}\label{a00115_aa92a6ba4a423719096ce45fe714491f3}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnStatMap@{ReturnStatMap}}
+\index{ReturnStatMap@{ReturnStatMap}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnStatMap()}{ReturnStatMap()}}
+{\footnotesize\ttfamily T\+Map$<$ F\+String, float $>$ Stat\+Sheet\+Object\+::\+Return\+Stat\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the stat\+Map. 
+
+
+
+Definition at line 136 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{137 \{}
+\DoxyCodeLine{138      \textcolor{keywordflow}{return} statMap;}
+\DoxyCodeLine{139 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_aa92a6ba4a423719096ce45fe714491f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_ac0352b9c1c206b2cecd57e9d2d028e44}\label{a00115_ac0352b9c1c206b2cecd57e9d2d028e44}} 
+\index{StatSheetObject@{StatSheetObject}!ReturnTag@{ReturnTag}}
+\index{ReturnTag@{ReturnTag}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{ReturnTag()}{ReturnTag()}}
+{\footnotesize\ttfamily F\+String Stat\+Sheet\+Object\+::\+Return\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns tag. 
+
+
+
+Definition at line 47 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49      \textcolor{keywordflow}{return} tag;}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+Referenced by Stat\+Sheet\+Object().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/da3/a00115_ac0352b9c1c206b2cecd57e9d2d028e44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00115_aea46c857ac7552e6460bbc9605f0caab}\label{a00115_aea46c857ac7552e6460bbc9605f0caab}} 
+\index{StatSheetObject@{StatSheetObject}!SetName@{SetName}}
+\index{SetName@{SetName}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets name. 
+
+
+
+Definition at line 35 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37      name = name\_;}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00115_a0015a317c575f299b59dc712504b0879}\label{a00115_a0015a317c575f299b59dc712504b0879}} 
+\index{StatSheetObject@{StatSheetObject}!SetTag@{SetTag}}
+\index{SetTag@{SetTag}!StatSheetObject@{StatSheetObject}}
+\doxysubsubsection{\texorpdfstring{SetTag()}{SetTag()}}
+{\footnotesize\ttfamily void Stat\+Sheet\+Object\+::\+Set\+Tag (\begin{DoxyParamCaption}\item[{const F\+String}]{tag\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets tag. 
+
+
+
+Definition at line 39 of file Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41      tag = tag\_;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}

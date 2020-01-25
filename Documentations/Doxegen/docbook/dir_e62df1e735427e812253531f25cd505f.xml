@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e62df1e735427e812253531f25cd505f">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses Directory Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__base_system_8h">BaseSystem.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__damage_delt_system_8cpp">DamageDeltSystem.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__damage_delt_system_8h">DamageDeltSystem.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__effect_system_8cpp">EffectSystem.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__effect_system_8h">EffectSystem.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__stat_system_8cpp">StatSystem.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__stat_system_8h">StatSystem.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

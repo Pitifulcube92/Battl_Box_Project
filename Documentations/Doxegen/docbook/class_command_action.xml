@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_command_action">
+<title>CommandAction Class Reference</title>
+<indexterm><primary>CommandAction</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CommandAction.h&gt;</computeroutput>
+</para>
+Inheritance diagram for CommandAction:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CommandAction:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_command_action_1a9bed07066f01bc031713fe727ef2af68">CommandAction</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_command_action_1abf23d117fdcbc02af3d0b67bddb6a410">CommandAction</link> (const FString name_, const FString discription_, const <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> action_, const <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> target_, const <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const <link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03">WEAPONTYPE</link> currentWeap_, <link linkend="_class_base_action">BaseAction</link> *const command_)</para>
+</listitem>
+            <listitem><para><link linkend="_class_command_action_1aaa9704a80750e6a758d76178cfe12b5a">CommandAction</link> (<link linkend="_class_command_action">CommandAction</link> *const other_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_command_action_1aebe160173438c46ddaac8018cd3d1b22">SetWeaponType</link> (<link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03">WEAPONTYPE</link> type_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_command_action_1a07a737aaa16805dccea57471b9918324">SetCommand</link> (<link linkend="_class_base_action">BaseAction</link> *action_)</para>
+</listitem>
+            <listitem><para><link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03">WEAPONTYPE</link> <link linkend="_class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1">ReturnWeaponType</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_base_action">BaseAction</link> * <link linkend="_class_command_action_1ae4ad4949defce81722252072e3413d2b">ReturnAction</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_command_action_1aae8b568d1642f0bd846f4a8022eba70a">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b">~CommandAction</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_command_action_1a9bed07066f01bc031713fe727ef2af68"/>    <section>
+    <title>CommandAction()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<para><computeroutput>CommandAction::CommandAction ( )</computeroutput></para><programlisting>6 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;command(<emphasis role="keyword">nullptr</emphasis>)
+7 {
+8 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link>(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+9 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link>(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+10 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link>(<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</link>);
+11 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link>(<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100">TARGETTYPE::E_NONE</link>);
+12 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link>(<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100">INTERACTIONTYPE::E_NONE</link>);
+13 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link>(00);
+14 &#32;&#32;&#32;&#32;currentweapon&#32;=&#32;<link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a60880a7ff476d1de07c31261d81d4100">WEAPONTYPE::E_NONE</link>;
+15 }
+</programlisting><para>
+References E_NONE, BaseAction::SetActionID(), BaseAction::SetActionType(), BaseAction::SetDiscription(), BaseAction::SetInteractionType(), BaseAction::SetName(), and BaseAction::SetTargetType().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_a9bed07066f01bc031713fe727ef2af68_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_command_action_1abf23d117fdcbc02af3d0b67bddb6a410"/>    <section>
+    <title>CommandAction()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<para><computeroutput>CommandAction::CommandAction (const FString name_, const FString discription_, const <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> action_, const <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> target_, const <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const <link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03">WEAPONTYPE</link> currentWeap_, <link linkend="_class_base_action">BaseAction</link> *const command_)</computeroutput></para><programlisting>17 {
+18 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link>(name_);
+19 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link>(discription_);
+20 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link>(action_);
+21 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link>(target_);
+22 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link>(interaction_);
+23 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link>(actionID_);
+24 &#32;&#32;&#32;&#32;currentweapon&#32;=&#32;currentWeap_;
+25 &#32;&#32;&#32;&#32;command&#32;=&#32;command_;
+26 }
+</programlisting><para>
+References BaseAction::SetActionID(), BaseAction::SetActionType(), BaseAction::SetDiscription(), BaseAction::SetInteractionType(), BaseAction::SetName(), and BaseAction::SetTargetType().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_abf23d117fdcbc02af3d0b67bddb6a410_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_command_action_1aaa9704a80750e6a758d76178cfe12b5a"/>    <section>
+    <title>CommandAction()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<para><computeroutput>CommandAction::CommandAction (<link linkend="_class_command_action">CommandAction</link> *const other_)</computeroutput></para><programlisting>28 {
+29 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad307b128f9ded949daa718fc1364919c">SetName</link>(other_-&gt;<link linkend="_class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</link>());
+30 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7">SetDiscription</link>(other_-&gt;<link linkend="_class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049">ReturnDiscription</link>());
+31 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ad040813bdd0c9f622ef5dd42db46f530">SetActionType</link>(other_-&gt;<link linkend="_class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888">ReturnActionType</link>());
+32 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8">SetTargetType</link>(other_-&gt;<link linkend="_class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d">ReturnTargetType</link>());
+33 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1ae0e83722e14079e10f7d43d54ba4898e">SetInteractionType</link>(other_-&gt;<link linkend="_class_base_action_1a70d34140345d92808deed0304397b074">ReturnInteractionType</link>());
+34 &#32;&#32;&#32;&#32;<link linkend="_class_base_action_1a82e6afa7a79dee542492d587904dc380">SetActionID</link>(other_-&gt;<link linkend="_class_base_action_1a0954da9087f93b46ea68468de1ecce92">ReturnActionID</link>());
+35 &#32;&#32;&#32;&#32;currentweapon&#32;=&#32;<link linkend="_class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1">ReturnWeaponType</link>();
+36 &#32;&#32;&#32;&#32;command&#32;=&#32;<link linkend="_class_command_action_1ae4ad4949defce81722252072e3413d2b">ReturnAction</link>();
+37 }
+</programlisting><para>
+References ReturnAction(), BaseAction::ReturnActionID(), BaseAction::ReturnActionType(), BaseAction::ReturnDiscription(), BaseAction::ReturnInteractionType(), BaseAction::ReturnName(), BaseAction::ReturnTargetType(), ReturnWeaponType(), BaseAction::SetActionID(), BaseAction::SetActionType(), BaseAction::SetDiscription(), BaseAction::SetInteractionType(), BaseAction::SetName(), and BaseAction::SetTargetType().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_aaa9704a80750e6a758d76178cfe12b5a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b"/>    <section>
+    <title>~CommandAction()</title>
+<indexterm><primary>~CommandAction</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>~CommandAction</secondary></indexterm>
+<para><computeroutput>CommandAction::~CommandAction ( )</computeroutput></para><programlisting>63 {
+64 &#32;&#32;&#32;&#32;<link linkend="_class_command_action_1aae8b568d1642f0bd846f4a8022eba70a">OnDestroy</link>();
+65 }
+</programlisting><para>
+References OnDestroy().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_a82d13a0eb569ad2584dd2d4dcfc6386b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_command_action_1aae8b568d1642f0bd846f4a8022eba70a"/>    <section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>void CommandAction::OnDestroy ( )</computeroutput></para><programlisting>55 {
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(command)
+57 &#32;&#32;&#32;&#32;{
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;command;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;command&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+60 &#32;&#32;&#32;&#32;}
+61 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_aae8b568d1642f0bd846f4a8022eba70a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_command_action_1ae4ad4949defce81722252072e3413d2b"/>    <section>
+    <title>ReturnAction()</title>
+<indexterm><primary>ReturnAction</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>ReturnAction</secondary></indexterm>
+<para><computeroutput><link linkend="_class_base_action">BaseAction</link> * CommandAction::ReturnAction ( ) const</computeroutput></para><programlisting>51 {
+52 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;command;
+53 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_ae4ad4949defce81722252072e3413d2b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1"/>    <section>
+    <title>ReturnWeaponType()</title>
+<indexterm><primary>ReturnWeaponType</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>ReturnWeaponType</secondary></indexterm>
+<para><computeroutput><link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03">WEAPONTYPE</link> CommandAction::ReturnWeaponType ( ) const</computeroutput></para><programlisting>47 {
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;currentweapon;
+49 }
+</programlisting>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_command_action_1a07a737aaa16805dccea57471b9918324"/>    <section>
+    <title>SetCommand()</title>
+<indexterm><primary>SetCommand</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>SetCommand</secondary></indexterm>
+<para><computeroutput>void CommandAction::SetCommand (<link linkend="_class_base_action">BaseAction</link> * action_)</computeroutput></para><programlisting>43 {
+44 &#32;&#32;&#32;&#32;command&#32;=&#32;action_;
+45 }
+</programlisting>    </section><anchor xml:id="_class_command_action_1aebe160173438c46ddaac8018cd3d1b22"/>    <section>
+    <title>SetWeaponType()</title>
+<indexterm><primary>SetWeaponType</primary><secondary>CommandAction</secondary></indexterm>
+<indexterm><primary>CommandAction</primary><secondary>SetWeaponType</secondary></indexterm>
+<para><computeroutput>void CommandAction::SetWeaponType (<link linkend="__command_action_8h_1a7c40fc58b569c771a25b2d876500bc03">WEAPONTYPE</link> type_)</computeroutput></para><programlisting>39 {
+40 &#32;&#32;&#32;&#32;currentweapon&#32;=&#32;type_;
+41 }
+</programlisting></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__command_action_8h">CommandAction.h</link><link linkend="__command_action_8cpp">CommandAction.cpp</link></section>
+</section>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_effect_system">
+<title>EffectSystem Class Reference</title>
+<indexterm><primary>EffectSystem</primary></indexterm>
+<para>
+<computeroutput>#include &lt;EffectSystem.h&gt;</computeroutput>
+</para>
+Inheritance diagram for EffectSystem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_effect_system__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for EffectSystem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_effect_system__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_effect_system_1a92be58e865893f0b16340887d2edd606">EffectSystem</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0">BaseCalculate</link> (const bool IsSingleTarget_, <link linkend="_class_base_action">BaseAction</link> *const action_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_effect_system_1a6f3268f2b1a70386b505f9a979c89841">CallculateEffect</link> (<link linkend="_class_base_action">BaseAction</link> *action_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_effect_system_1a1b599411780ea6013b9de3a94252dc29">RemoveEffect</link> (<link linkend="_class_base_action">BaseAction</link> *action_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_effect_system_1a224e059a2e658f9cad40799fdf902fbb">SetTarget</link> (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *target_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_effect_system_1a1cc71d0093defb7c5dcbccb593876b37">Addtarget</link> (<link linkend="_class_stat_sheet_object">StatSheetObject</link> *target_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_effect_system_1a9419cd87fd9b4e8519fc3960dedefd22">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_effect_system_1aeacfcab72c0129a58bb18363b4763263">~EffectSystem</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_effect_system_1a92be58e865893f0b16340887d2edd606"/>    <section>
+    <title>EffectSystem()</title>
+<indexterm><primary>EffectSystem</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>EffectSystem</secondary></indexterm>
+<para><computeroutput>EffectSystem::EffectSystem ( )</computeroutput></para><programlisting>7 {
+8 
+9 }
+</programlisting>    </section><anchor xml:id="_class_effect_system_1aeacfcab72c0129a58bb18363b4763263"/>    <section>
+    <title>~EffectSystem()</title>
+<indexterm><primary>~EffectSystem</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>~EffectSystem</secondary></indexterm>
+<para><computeroutput>EffectSystem::~EffectSystem ( )</computeroutput></para><programlisting>41 {
+42 
+43 }
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_effect_system_1a1cc71d0093defb7c5dcbccb593876b37"/>    <section>
+    <title>Addtarget()</title>
+<indexterm><primary>Addtarget</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>Addtarget</secondary></indexterm>
+<para><computeroutput>void EffectSystem::Addtarget (<link linkend="_class_stat_sheet_object">StatSheetObject</link> * target_)</computeroutput></para><programlisting>33 {
+34 
+35 }
+</programlisting>    </section><anchor xml:id="_class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0"/>    <section>
+    <title>BaseCalculate()</title>
+<indexterm><primary>BaseCalculate</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>BaseCalculate</secondary></indexterm>
+<para><computeroutput>void EffectSystem::BaseCalculate (const bool IsSingleTarget_, <link linkend="_class_base_action">BaseAction</link> *const action_)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1">BaseSystem</link>.</para>
+<programlisting>11 {
+12 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsSingledTarget_)
+13 &#32;&#32;&#32;&#32;{
+14 &#32;&#32;&#32;&#32;}
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsSingledTarget_)
+16 &#32;&#32;&#32;&#32;{
+17 
+18 &#32;&#32;&#32;&#32;}
+19 }
+</programlisting>    </section><anchor xml:id="_class_effect_system_1a6f3268f2b1a70386b505f9a979c89841"/>    <section>
+    <title>CallculateEffect()</title>
+<indexterm><primary>CallculateEffect</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>CallculateEffect</secondary></indexterm>
+<para><computeroutput>void EffectSystem::CallculateEffect (<link linkend="_class_base_action">BaseAction</link> * action_)</computeroutput></para><programlisting>21 {
+22 
+23 }
+</programlisting>    </section><anchor xml:id="_class_effect_system_1a9419cd87fd9b4e8519fc3960dedefd22"/>    <section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>void EffectSystem::OnDestroy ( )</computeroutput></para><programlisting>37 {
+38 
+39 }
+</programlisting>    </section><anchor xml:id="_class_effect_system_1a1b599411780ea6013b9de3a94252dc29"/>    <section>
+    <title>RemoveEffect()</title>
+<indexterm><primary>RemoveEffect</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>RemoveEffect</secondary></indexterm>
+<para><computeroutput>void EffectSystem::RemoveEffect (<link linkend="_class_base_action">BaseAction</link> * action_)</computeroutput></para><programlisting>25 {
+26 
+27 }
+</programlisting>    </section><anchor xml:id="_class_effect_system_1a224e059a2e658f9cad40799fdf902fbb"/>    <section>
+    <title>SetTarget()</title>
+<indexterm><primary>SetTarget</primary><secondary>EffectSystem</secondary></indexterm>
+<indexterm><primary>EffectSystem</primary><secondary>SetTarget</secondary></indexterm>
+<para><computeroutput>void EffectSystem::SetTarget (<link linkend="_class_stat_sheet_object">StatSheetObject</link> * target_)</computeroutput></para><programlisting>29 {
+30 
+31 }
+</programlisting></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<link linkend="__effect_system_8h">EffectSystem.h</link>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<link linkend="__effect_system_8cpp">EffectSystem.cpp</link></section>
+</section>

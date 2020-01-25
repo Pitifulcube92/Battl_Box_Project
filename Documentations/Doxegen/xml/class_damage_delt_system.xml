@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_damage_delt_system" kind="class" language="C++" prot="public">
+    <compoundname>DamageDeltSystem</compoundname>
+    <basecompoundref refid="class_base_system" prot="public" virt="non-virtual">BaseSystem</basecompoundref>
+    <includes refid="_damage_delt_system_8h" local="no">DamageDeltSystem.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_damage_delt_system_1a1fc52d024a2b857a4427fd2d839b396c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *</type>
+        <definition>StatSheetObject* DamageDeltSystem::singleTarget</definition>
+        <argsstring></argsstring>
+        <name>singleTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="15" column="17" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_damage_delt_system_1ae7c9b7ee9de8736c4a373c7eca061735" prot="private" static="no" mutable="no">
+        <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *</type>
+        <definition>StatSheetObject* DamageDeltSystem::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="16" column="17" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_damage_delt_system_1a4fc133e16d60a0511c8c139a56bb41f6" prot="private" static="no" mutable="no">
+        <type>TArray&lt; <ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> * &gt;</type>
+        <definition>TArray&lt;StatSheetObject*&gt; DamageDeltSystem::targets</definition>
+        <argsstring></argsstring>
+        <name>targets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="17" column="8" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_damage_delt_system_1acbb16604c2f56234c51adf04317817ac" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DamageDeltSystem::totalDamageValue</definition>
+        <argsstring></argsstring>
+        <name>totalDamageValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="18" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_damage_delt_system_1addd5bb239f2ae94eac8d1ab402f06c30" prot="private" static="no" mutable="no">
+        <type>TArray&lt; float &gt;</type>
+        <definition>TArray&lt;float&gt; DamageDeltSystem::totalDamageValues</definition>
+        <argsstring></argsstring>
+        <name>totalDamageValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="19" column="8" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_damage_delt_system_1a9c2c58391271d6a546decf7b6d966732" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DamageDeltSystem::CalculateWeaponDamage</definition>
+        <argsstring>(ItemAction *const target_)</argsstring>
+        <name>CalculateWeaponDamage</name>
+        <param>
+          <type><ref refid="class_item_action" kindref="compound">ItemAction</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="22" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="100" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1ac77b81a1237dac09021141090113f43c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DamageDeltSystem::CalculateAbilityDamage</definition>
+        <argsstring>(AbilityAction *const targetAbility_)</argsstring>
+        <name>CalculateAbilityDamage</name>
+        <param>
+          <type><ref refid="class_ability_action" kindref="compound">AbilityAction</ref> *const</type>
+          <declname>targetAbility_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="24" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="116" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1a7b2fc3b7d84fa682d2132143443053be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DamageDeltSystem::CalculateItemDamage</definition>
+        <argsstring>(ItemAction *const targetItem_)</argsstring>
+        <name>CalculateItemDamage</name>
+        <param>
+          <type><ref refid="class_item_action" kindref="compound">ItemAction</ref> *const</type>
+          <declname>targetItem_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="26" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="133" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1afe23abbc1d1f86ef88484692e4800fb0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DamageDeltSystem::CalculatePhysicalDefence</definition>
+        <argsstring>(StatSheetObject *const target_)</argsstring>
+        <name>CalculatePhysicalDefence</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="28" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="161" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1ab04599079f9f0e8734678800df8bc6d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DamageDeltSystem::CalculateMagicalDefence</definition>
+        <argsstring>(StatSheetObject *const target_)</argsstring>
+        <name>CalculateMagicalDefence</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="30" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="199" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DamageDeltSystem::DamageDeltSystem</definition>
+        <argsstring>()</argsstring>
+        <name>DamageDeltSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="32" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DamageDeltSystem::BaseCalculate</definition>
+        <argsstring>(const bool IsSingledTarget_, BaseAction *const action_)</argsstring>
+        <name>BaseCalculate</name>
+        <reimplements refid="class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1">BaseCalculate</reimplements>
+        <param>
+          <type>const bool</type>
+          <declname>IsSingledTarget_</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_action" kindref="compound">BaseAction</ref> *const</type>
+          <declname>action_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="34" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="14" bodyend="99"/>
+        <references refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">E_ABILITY</references>
+        <references refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">E_COMMAND</references>
+        <references refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c">E_CONSUMABLE</references>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <references refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">E_ITEM</references>
+        <references refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87">E_WEAPON</references>
+        <references refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" compoundref="_debuger_8cpp" startline="43" endline="46">Debugger::Error</references>
+        <references refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" compoundref="_base_action_8cpp" startline="63" endline="66">BaseAction::ReturnActionType</references>
+        <references refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" compoundref="_item_action_8cpp" startline="54" endline="57">ItemAction::ReturnItemType</references>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+        <references refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" compoundref="_debuger_8cpp" startline="35" endline="38">Debugger::SetSeverity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DamageDeltSystem::SetOwner</definition>
+        <argsstring>(StatSheetObject *const owner_)</argsstring>
+        <name>SetOwner</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>owner_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="36" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="237" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DamageDeltSystem::SetTarget</definition>
+        <argsstring>(StatSheetObject *const target_)</argsstring>
+        <name>SetTarget</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="38" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DamageDeltSystem::AddTargetToArray</definition>
+        <argsstring>(StatSheetObject *const target_)</argsstring>
+        <name>AddTargetToArray</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>target_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="40" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DamageDeltSystem::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="41" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="249" bodyend="265"/>
+        <referencedby refid="class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c" compoundref="_damage_delt_system_8cpp" startline="274" endline="277">~DamageDeltSystem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DamageDeltSystem::ReturnTotalDamageValue</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnTotalDamageValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="43" column="7" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="266" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1afcffaef781f580054ef1b9259255751a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TArray&lt; float &gt;</type>
+        <definition>TArray&lt; float &gt; DamageDeltSystem::ReturnDamageValues</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnDamageValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="45" column="8" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DamageDeltSystem::~DamageDeltSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~DamageDeltSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="46" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp" bodystart="274" bodyend="277"/>
+        <references refid="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" compoundref="_damage_delt_system_8cpp" startline="249" endline="265">OnDestroy</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DamageDeltSystem</label>
+        <link refid="class_damage_delt_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DamageDeltSystem</label>
+        <link refid="class_damage_delt_system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseSystem</label>
+        <link refid="class_base_system"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" line="13" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" bodystart="12" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>AddTargetToArray</name></member>
+      <member refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" prot="public" virt="virtual"><scope>DamageDeltSystem</scope><name>BaseCalculate</name></member>
+      <member refid="class_damage_delt_system_1ac77b81a1237dac09021141090113f43c" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>CalculateAbilityDamage</name></member>
+      <member refid="class_damage_delt_system_1a7b2fc3b7d84fa682d2132143443053be" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>CalculateItemDamage</name></member>
+      <member refid="class_damage_delt_system_1ab04599079f9f0e8734678800df8bc6d9" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>CalculateMagicalDefence</name></member>
+      <member refid="class_damage_delt_system_1afe23abbc1d1f86ef88484692e4800fb0" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>CalculatePhysicalDefence</name></member>
+      <member refid="class_damage_delt_system_1a9c2c58391271d6a546decf7b6d966732" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>CalculateWeaponDamage</name></member>
+      <member refid="class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>DamageDeltSystem</name></member>
+      <member refid="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>OnDestroy</name></member>
+      <member refid="class_damage_delt_system_1ae7c9b7ee9de8736c4a373c7eca061735" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>owner</name></member>
+      <member refid="class_damage_delt_system_1afcffaef781f580054ef1b9259255751a" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>ReturnDamageValues</name></member>
+      <member refid="class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>ReturnTotalDamageValue</name></member>
+      <member refid="class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>SetOwner</name></member>
+      <member refid="class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>SetTarget</name></member>
+      <member refid="class_damage_delt_system_1a1fc52d024a2b857a4427fd2d839b396c" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>singleTarget</name></member>
+      <member refid="class_damage_delt_system_1a4fc133e16d60a0511c8c139a56bb41f6" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>targets</name></member>
+      <member refid="class_damage_delt_system_1acbb16604c2f56234c51adf04317817ac" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>totalDamageValue</name></member>
+      <member refid="class_damage_delt_system_1addd5bb239f2ae94eac8d1ab402f06c30" prot="private" virt="non-virtual"><scope>DamageDeltSystem</scope><name>totalDamageValues</name></member>
+      <member refid="class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16" prot="public" virt="virtual"><scope>DamageDeltSystem</scope><name>~BaseSystem</name></member>
+      <member refid="class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c" prot="public" virt="non-virtual"><scope>DamageDeltSystem</scope><name>~DamageDeltSystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

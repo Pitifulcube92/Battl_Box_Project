@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__base_action_8h">
+<title>BaseAction.h File Reference</title>
+<indexterm><primary>BaseAction.h</primary></indexterm>
+<programlisting>#include &quot;CoreMinimal.h&quot;
+</programlisting>Include dependency graph for BaseAction.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_base_action_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_base_action_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_base_action">BaseAction</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link> { <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</link>, 
+<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</link>, 
+<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</link>, 
+<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link> { 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100">TARGETTYPE::E_NONE</link>, 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">TARGETTYPE::E_TARGET_ENEMY</link>, 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">TARGETTYPE::E_ALL_ENEMIES</link>, 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">TARGETTYPE::E_RANDOM_ENEMY</link>, 
+
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">TARGETTYPE::E_ALLY</link>, 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">TARGETTYPE::E_ALL_ALLY</link>, 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">TARGETTYPE::E_ALLY_KO</link>, 
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">TARGETTYPE::E_ALL_ALLY_KO</link>, 
+
+<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">TARGETTYPE::E_USER</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link> { <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100">INTERACTIONTYPE::E_NONE</link>, 
+<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">INTERACTIONTYPE::E_PHYSICAL</link>, 
+<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920">INTERACTIONTYPE::E_ABILITY</link>, 
+<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link> { 
+<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100">DAMAGETYPE::E_NONE</link>, 
+<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">DAMAGETYPE::E_HP_DAMAGE</link>, 
+<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">DAMAGETYPE::E_MP_DAMAGE</link>, 
+<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">DAMAGETYPE::E_HP_RECOVER</link>, 
+
+<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">DAMAGETYPE::E_MP_RECOVER</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bf">ELEMENTTYPE</link> { 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100">ELEMENTTYPE::E_NONE</link>, 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">ELEMENTTYPE::E_FLAME</link>, 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">ELEMENTTYPE::E_WATER</link>, 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">ELEMENTTYPE::E_EARTH</link>, 
+
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">ELEMENTTYPE::E_ICE</link>, 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">ELEMENTTYPE::E_THUNDER</link>, 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">ELEMENTTYPE::E_WIND</link>, 
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">ELEMENTTYPE::E_LIGHT</link>, 
+
+<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">ELEMENTTYPE::E_DARK</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a"/>    <section>
+    <title>ACTIONTYPE</title>
+<indexterm><primary>ACTIONTYPE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>ACTIONTYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_COMMAND</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_COMMAND</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb"/>E_COMMAND</entry><entry></entry></row><row><entry><indexterm><primary>E_ITEM</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ITEM</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"/>E_ITEM</entry><entry></entry></row><row><entry><indexterm><primary>E_ABILITY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ABILITY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"/>E_ABILITY</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>6 {
+7 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>,
+8 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">E_COMMAND</link>,
+9 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">E_ITEM</link>,
+10 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">E_ABILITY</link>
+11 };
+</programlisting>    </section><anchor xml:id="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c"/>    <section>
+    <title>DAMAGETYPE</title>
+<indexterm><primary>DAMAGETYPE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>DAMAGETYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_HP_DAMAGE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_HP_DAMAGE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d"/>E_HP_DAMAGE</entry><entry></entry></row><row><entry><indexterm><primary>E_MP_DAMAGE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_MP_DAMAGE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607"/>E_MP_DAMAGE</entry><entry></entry></row><row><entry><indexterm><primary>E_HP_RECOVER</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_HP_RECOVER</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1"/>E_HP_RECOVER</entry><entry></entry></row><row><entry><indexterm><primary>E_MP_RECOVER</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_MP_RECOVER</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca"/>E_MP_RECOVER</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>35 {
+36 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>,
+37 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">E_HP_DAMAGE</link>,
+38 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">E_MP_DAMAGE</link>,
+39 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">E_HP_RECOVER</link>,
+40 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">E_MP_RECOVER</link>
+41 };
+</programlisting>    </section><anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bf"/>    <section>
+    <title>ELEMENTTYPE</title>
+<indexterm><primary>ELEMENTTYPE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>ELEMENTTYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bf">ELEMENTTYPE</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_FLAME</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_FLAME</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa"/>E_FLAME</entry><entry></entry></row><row><entry><indexterm><primary>E_WATER</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_WATER</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892"/>E_WATER</entry><entry></entry></row><row><entry><indexterm><primary>E_EARTH</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_EARTH</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80"/>E_EARTH</entry><entry></entry></row><row><entry><indexterm><primary>E_ICE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ICE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c"/>E_ICE</entry><entry></entry></row><row><entry><indexterm><primary>E_THUNDER</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_THUNDER</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c"/>E_THUNDER</entry><entry></entry></row><row><entry><indexterm><primary>E_WIND</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_WIND</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e"/>E_WIND</entry><entry></entry></row><row><entry><indexterm><primary>E_LIGHT</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_LIGHT</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554"/>E_LIGHT</entry><entry></entry></row><row><entry><indexterm><primary>E_DARK</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_DARK</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7"/>E_DARK</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>44 {
+45 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>,
+46 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">E_FLAME</link>,
+47 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">E_WATER</link>,
+48 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">E_EARTH</link>,
+49 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">E_ICE</link>,
+50 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">E_THUNDER</link>,
+51 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">E_WIND</link>,
+52 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">E_LIGHT</link>,
+53 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">E_DARK</link>
+54 };
+</programlisting>    </section><anchor xml:id="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3"/>    <section>
+    <title>INTERACTIONTYPE</title>
+<indexterm><primary>INTERACTIONTYPE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>INTERACTIONTYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_PHYSICAL</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_PHYSICAL</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"/>E_PHYSICAL</entry><entry></entry></row><row><entry><indexterm><primary>E_ABILITY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ABILITY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920"/>E_ABILITY</entry><entry></entry></row><row><entry><indexterm><primary>E_PHYSICAL_AND_ABILITY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_PHYSICAL_AND_ABILITY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"/>E_PHYSICAL_AND_ABILITY</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>27 {
+28 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>,
+29 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">E_PHYSICAL</link>,
+30 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">E_ABILITY</link>,
+31 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">E_PHYSICAL_AND_ABILITY</link>
+32 };
+</programlisting>    </section><anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7"/>    <section>
+    <title>TARGETTYPE</title>
+<indexterm><primary>TARGETTYPE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>TARGETTYPE</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>E_NONE</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_NONE</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100"/>E_NONE</entry><entry></entry></row><row><entry><indexterm><primary>E_TARGET_ENEMY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_TARGET_ENEMY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d"/>E_TARGET_ENEMY</entry><entry></entry></row><row><entry><indexterm><primary>E_ALL_ENEMIES</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ALL_ENEMIES</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57"/>E_ALL_ENEMIES</entry><entry></entry></row><row><entry><indexterm><primary>E_RANDOM_ENEMY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_RANDOM_ENEMY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d"/>E_RANDOM_ENEMY</entry><entry></entry></row><row><entry><indexterm><primary>E_ALLY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ALLY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f"/>E_ALLY</entry><entry></entry></row><row><entry><indexterm><primary>E_ALL_ALLY</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ALL_ALLY</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0"/>E_ALL_ALLY</entry><entry></entry></row><row><entry><indexterm><primary>E_ALLY_KO</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ALLY_KO</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c"/>E_ALLY_KO</entry><entry></entry></row><row><entry><indexterm><primary>E_ALL_ALLY_KO</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_ALL_ALLY_KO</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788"/>E_ALL_ALLY_KO</entry><entry></entry></row><row><entry><indexterm><primary>E_USER</primary><secondary>BaseAction.h</secondary></indexterm>
+<indexterm><primary>BaseAction.h</primary><secondary>E_USER</secondary></indexterm>
+<anchor xml:id="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335"/>E_USER</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<programlisting>14 {
+15 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</link>,
+16 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">E_TARGET_ENEMY</link>,
+17 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">E_ALL_ENEMIES</link>,
+18 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">E_RANDOM_ENEMY</link>,
+19 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">E_ALLY</link>,
+20 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">E_ALL_ALLY</link>,
+21 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">E_ALLY_KO</link>,
+22 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">E_ALL_ALLY_KO</link>,
+23 &#32;&#32;&#32;&#32;<link linkend="__base_action_8h_1a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">E_USER</link>
+24 };
+</programlisting></section>
+</section>
+</section>

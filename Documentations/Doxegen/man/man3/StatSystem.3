@@ -1,0 +1,187 @@
+.TH "StatSystem" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StatSystem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <StatSystem\&.h>\fP
+.PP
+Inherits \fBBaseSystem\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddStatModifier\fP (\fBBaseAction\fP *const action_)"
+.br
+.RI "Adds the specific modification by the baseaction\&. "
+.ti -1c
+.RI "void \fBAddtarget\fP (\fBStatSheetObject\fP *const target_)"
+.br
+.RI "Adds another target to the target array\&. "
+.ti -1c
+.RI "void \fBAddTmpModifier\fP (\fBBaseAction\fP *action_, const float duration_)"
+.br
+.RI "Adds a temporary modifierby the base action\&. "
+.ti -1c
+.RI "void \fBBaseCalculate\fP (const bool IsSingleTarget_, \fBBaseAction\fP *const action_)"
+.br
+.RI "Base calculation for any dirieved system classes\&. "
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "void \fBRemoveModifier\fP (\fBBaseAction\fP *const action_)"
+.br
+.RI "Removes the specific modification by the baseaction\&. "
+.ti -1c
+.RI "void \fBSetTarget\fP (\fBStatSheetObject\fP *const target_)"
+.br
+.RI "Sets target\&. "
+.ti -1c
+.RI "void \fBSetTargetAction\fP (\fBBaseAction\fP *const action_)"
+.br
+.RI "Sets target action\&. "
+.ti -1c
+.RI "\fBStatSystem\fP ()"
+.br
+.ti -1c
+.RI "\fB~StatSystem\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file StatSystem\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StatSystem::StatSystem ()"
+
+.PP
+Definition at line 6 of file StatSystem\&.cpp\&.
+.PP
+.nf
+7 {
+8 
+9 }
+.fi
+.SS "StatSystem::~StatSystem ()"
+
+.PP
+Definition at line 48 of file StatSystem\&.cpp\&.
+.PP
+.nf
+49 {
+50 
+51 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void StatSystem::AddStatModifier (\fBBaseAction\fP *const action_)"
+
+.PP
+Adds the specific modification by the baseaction\&. 
+.PP
+Definition at line 20 of file StatSystem\&.cpp\&.
+.PP
+.nf
+21 {
+22 
+23 }
+.fi
+.SS "void StatSystem::Addtarget (\fBStatSheetObject\fP *const target_)"
+
+.PP
+Adds another target to the target array\&. 
+.PP
+Definition at line 40 of file StatSystem\&.cpp\&.
+.PP
+.nf
+41 {
+42 
+43 }
+.fi
+.SS "void StatSystem::AddTmpModifier (\fBBaseAction\fP * action_, const float duration_)"
+
+.PP
+Adds a temporary modifierby the base action\&. 
+.PP
+Definition at line 28 of file StatSystem\&.cpp\&.
+.PP
+.nf
+29 {
+30 
+31 }
+.fi
+.SS "void StatSystem::BaseCalculate (const bool IsSingledTarget_, \fBBaseAction\fP *const action_)\fC [virtual]\fP"
+
+.PP
+Base calculation for any dirieved system classes\&. 
+.PP
+Implements \fBBaseSystem\fP\&.
+.PP
+Definition at line 10 of file StatSystem\&.cpp\&.
+.PP
+.nf
+11 {
+12      if (IsSingledTarget_)
+13      {
+14      }
+15      else if (IsSingledTarget_)
+16      {
+17 
+18      }
+19 }
+.fi
+.SS "void StatSystem::OnDestroy ()"
+
+.PP
+Definition at line 44 of file StatSystem\&.cpp\&.
+.PP
+.nf
+45 {
+46 
+47 }
+.fi
+.SS "void StatSystem::RemoveModifier (\fBBaseAction\fP *const action_)"
+
+.PP
+Removes the specific modification by the baseaction\&. 
+.PP
+Definition at line 24 of file StatSystem\&.cpp\&.
+.PP
+.nf
+25 {
+26 
+27 }
+.fi
+.SS "void StatSystem::SetTarget (\fBStatSheetObject\fP *const target_)"
+
+.PP
+Sets target\&. 
+.PP
+Definition at line 32 of file StatSystem\&.cpp\&.
+.PP
+.nf
+33 {
+34 
+35 }
+.fi
+.SS "void StatSystem::SetTargetAction (\fBBaseAction\fP *const action_)"
+
+.PP
+Sets target action\&. 
+.PP
+Definition at line 36 of file StatSystem\&.cpp\&.
+.PP
+.nf
+37 {
+38 
+39 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

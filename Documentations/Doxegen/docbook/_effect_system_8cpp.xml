@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__effect_system_8cpp">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp File Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/EffectSystem.cpp</primary></indexterm>
+<programlisting>#include &quot;EffectSystem.h&quot;
+#include &quot;../Battle_Box/Private/StatSheetObject.h&quot;
+#include &quot;../Battle_Box/Private/ActionClasses/BaseAction.h&quot;
+</programlisting>Include dependency graph for EffectSystem.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_effect_system_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

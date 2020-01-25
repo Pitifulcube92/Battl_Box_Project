@@ -1,0 +1,292 @@
+.TH "BaseAction" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BaseAction
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BaseAction\&.h>\fP
+.PP
+Inherited by \fBAbilityAction\fP, \fBCommandAction\fP, and \fBItemAction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseAction\fP ()"
+.br
+.ti -1c
+.RI "\fBBaseAction\fP (const \fBBaseAction\fP *other_)"
+.br
+.ti -1c
+.RI "\fBBaseAction\fP (FString name_, FString discription_, \fBACTIONTYPE\fP action_, \fBTARGETTYPE\fP target_, \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_)"
+.br
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "uint32 \fBReturnActionID\fP () const"
+.br
+.ti -1c
+.RI "\fBACTIONTYPE\fP \fBReturnActionType\fP () const"
+.br
+.ti -1c
+.RI "FString \fBReturnDiscription\fP () const"
+.br
+.ti -1c
+.RI "\fBINTERACTIONTYPE\fP \fBReturnInteractionType\fP () const"
+.br
+.ti -1c
+.RI "FString \fBReturnName\fP () const"
+.br
+.ti -1c
+.RI "TMap< FString, float > \fBReturnStatMap\fP () const"
+.br
+.ti -1c
+.RI "\fBTARGETTYPE\fP \fBReturnTargetType\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetActionID\fP (const uint32 actionID_)"
+.br
+.ti -1c
+.RI "void \fBSetActionType\fP (const \fBACTIONTYPE\fP type_)"
+.br
+.ti -1c
+.RI "void \fBSetDiscription\fP (const FString discription_)"
+.br
+.ti -1c
+.RI "void \fBSetInteractionType\fP (const \fBINTERACTIONTYPE\fP type_)"
+.br
+.ti -1c
+.RI "void \fBSetName\fP (const FString name_)"
+.br
+.ti -1c
+.RI "void \fBSetTargetType\fP (const \fBTARGETTYPE\fP type_)"
+.br
+.ti -1c
+.RI "virtual \fB~BaseAction\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 56 of file BaseAction\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BaseAction::BaseAction ()"
+
+.PP
+Definition at line 6 of file BaseAction\&.cpp\&.
+.PP
+.nf
+7 {
+8      name = "";
+9      discription = "";
+10      action = ACTIONTYPE::E_NONE;
+11      target = TARGETTYPE::E_NONE;
+12      interaction = INTERACTIONTYPE::E_NONE;
+13      actionID = 00;
+14 }
+.fi
+.SS "BaseAction::BaseAction (FString name_, FString discription_, \fBACTIONTYPE\fP action_, \fBTARGETTYPE\fP target_, \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_)"
+
+.PP
+Definition at line 15 of file BaseAction\&.cpp\&.
+.PP
+.nf
+16 {
+17      name = name_;
+18      discription = discription_;
+19      action = action_;
+20      target = target_;
+21      interaction = interaction_;
+22      actionID = actionID_;
+23 }
+.fi
+.SS "BaseAction::BaseAction (const \fBBaseAction\fP * other_)"
+
+.PP
+Definition at line 24 of file BaseAction\&.cpp\&.
+.PP
+.nf
+25 {
+26      name = other_->ReturnName();
+27      discription = other_->ReturnDiscription();
+28      target = other_->ReturnTargetType();
+29      actionID = other_->ReturnActionID();
+30 }
+.fi
+.SS "BaseAction::~BaseAction ()\fC [virtual]\fP"
+
+.PP
+Definition at line 87 of file BaseAction\&.cpp\&.
+.PP
+.nf
+88 {
+89      OnDestroy();
+90 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void BaseAction::OnDestroy ()"
+
+.PP
+Definition at line 83 of file BaseAction\&.cpp\&.
+.PP
+.nf
+84 {
+85      //The clean up method
+86 }
+.fi
+.PP
+Referenced by ~BaseAction()\&.
+.SS "uint32 BaseAction::ReturnActionID () const"
+
+.PP
+Definition at line 79 of file BaseAction\&.cpp\&.
+.PP
+.nf
+80 {
+81      return actionID;
+82 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), BaseAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "\fBACTIONTYPE\fP BaseAction::ReturnActionType () const"
+
+.PP
+Definition at line 63 of file BaseAction\&.cpp\&.
+.PP
+.nf
+64 {
+65      return action;
+66 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), DamageDeltSystem::BaseCalculate(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "FString BaseAction::ReturnDiscription () const"
+
+.PP
+Definition at line 59 of file BaseAction\&.cpp\&.
+.PP
+.nf
+60 {
+61      return discription;
+62 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), BaseAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "\fBINTERACTIONTYPE\fP BaseAction::ReturnInteractionType () const"
+
+.PP
+Definition at line 75 of file BaseAction\&.cpp\&.
+.PP
+.nf
+76 {
+77      return interaction;
+78 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "FString BaseAction::ReturnName () const"
+
+.PP
+Referenced by AbilityAction::AbilityAction(), StatSheetObject::AddAbilityAction(), StatSheetObject::AddCommandAction(), StatSheetObject::AddEquipment(), StatSheetObject::AddItemAction(), BaseAction(), DamageDeltSystem::BaseCalculate(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "TMap< FString, float > BaseAction::ReturnStatMap () const"
+
+.PP
+Definition at line 71 of file BaseAction\&.cpp\&.
+.PP
+.nf
+72 {
+73      return statMap;
+74 }
+.fi
+.SS "\fBTARGETTYPE\fP BaseAction::ReturnTargetType () const"
+
+.PP
+Definition at line 67 of file BaseAction\&.cpp\&.
+.PP
+.nf
+68 {
+69      return target;
+70 }
+.fi
+.PP
+Referenced by BaseAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "void BaseAction::SetActionID (const uint32 actionID_)"
+
+.PP
+Definition at line 51 of file BaseAction\&.cpp\&.
+.PP
+.nf
+52 {
+53      actionID = actionID_;
+54 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "void BaseAction::SetActionType (const \fBACTIONTYPE\fP type_)"
+
+.PP
+Definition at line 39 of file BaseAction\&.cpp\&.
+.PP
+.nf
+40 {
+41      action = type_;
+42 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "void BaseAction::SetDiscription (const FString discription_)"
+
+.PP
+Definition at line 35 of file BaseAction\&.cpp\&.
+.PP
+.nf
+36 {
+37      discription = discription_;
+38 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "void BaseAction::SetInteractionType (const \fBINTERACTIONTYPE\fP type_)"
+
+.PP
+Definition at line 47 of file BaseAction\&.cpp\&.
+.PP
+.nf
+48 {
+49      interaction = type_;
+50 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "void BaseAction::SetName (const FString name_)"
+
+.PP
+Definition at line 31 of file BaseAction\&.cpp\&.
+.PP
+.nf
+32 {
+33      name = name_;
+34 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+.SS "void BaseAction::SetTargetType (const \fBTARGETTYPE\fP type_)"
+
+.PP
+Definition at line 43 of file BaseAction\&.cpp\&.
+.PP
+.nf
+44 {
+45      target = type_;
+46 }
+.fi
+.PP
+Referenced by AbilityAction::AbilityAction(), CommandAction::CommandAction(), and ItemAction::ItemAction()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

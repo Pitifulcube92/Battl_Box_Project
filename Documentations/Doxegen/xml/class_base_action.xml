@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_base_action" kind="class" language="C++" prot="public">
+    <compoundname>BaseAction</compoundname>
+    <derivedcompoundref refid="class_ability_action" prot="public" virt="non-virtual">AbilityAction</derivedcompoundref>
+    <derivedcompoundref refid="class_command_action" prot="public" virt="non-virtual">CommandAction</derivedcompoundref>
+    <derivedcompoundref refid="class_item_action" prot="public" virt="non-virtual">ItemAction</derivedcompoundref>
+    <includes refid="_base_action_8h" local="no">BaseAction.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_base_action_1a89d98c13f445fa58b96d5c4eff58e134" prot="private" static="no" mutable="no">
+        <type>FString</type>
+        <definition>FString BaseAction::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="59" column="9" bodyfile="BaseAction.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_base_action_1a513d01865c01cb52756d2d634afda491" prot="private" static="no" mutable="no">
+        <type>FString</type>
+        <definition>FString BaseAction::discription</definition>
+        <argsstring></argsstring>
+        <name>discription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="60" column="9" bodyfile="BaseAction.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_base_action_1a23cf827d35850a4e4d2859a12a885567" prot="private" static="no" mutable="no">
+        <type><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></type>
+        <definition>ACTIONTYPE BaseAction::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="61" column="12" bodyfile="BaseAction.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_base_action_1afafdb765a8e836a0eba3a59fb1f23e01" prot="private" static="no" mutable="no">
+        <type><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></type>
+        <definition>TARGETTYPE BaseAction::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="62" column="12" bodyfile="BaseAction.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_base_action_1a46af3a3c5512e3d0072fac96989b52ec" prot="private" static="no" mutable="no">
+        <type><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></type>
+        <definition>INTERACTIONTYPE BaseAction::interaction</definition>
+        <argsstring></argsstring>
+        <name>interaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="63" column="17" bodyfile="BaseAction.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_base_action_1a050d54574671299fb3f8d854aeb6a190" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 BaseAction::actionID</definition>
+        <argsstring></argsstring>
+        <name>actionID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="64" column="8" bodyfile="BaseAction.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_base_action_1a98568ceec0e6f17054a14ea118d2adeb" prot="private" static="no" mutable="no">
+        <type>TMap&lt; FString, float &gt;</type>
+        <definition>TMap&lt;FString, float&gt; BaseAction::statMap</definition>
+        <argsstring></argsstring>
+        <name>statMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="65" column="6" bodyfile="BaseAction.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BaseAction::BaseAction</definition>
+        <argsstring>()</argsstring>
+        <name>BaseAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="67" column="1" bodyfile="BaseAction.cpp" bodystart="6" bodyend="14"/>
+        <references refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a359a13b822b4da103d91d3d0179d8302" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BaseAction::BaseAction</definition>
+        <argsstring>(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_)</argsstring>
+        <name>BaseAction</name>
+        <param>
+          <type>FString</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>FString</type>
+          <declname>discription_</declname>
+        </param>
+        <param>
+          <type><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></type>
+          <declname>action_</declname>
+        </param>
+        <param>
+          <type><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></type>
+          <declname>target_</declname>
+        </param>
+        <param>
+          <type><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></type>
+          <declname>interaction_</declname>
+        </param>
+        <param>
+          <type>const uint32</type>
+          <declname>actionID_</declname>
+        </param>
+        <param>
+          <type>TMap&lt; FString, float &gt;</type>
+          <declname>statMap_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="69" column="1" bodyfile="BaseAction.cpp" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a309dc573513db2dcd5249ca5cc986276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BaseAction::BaseAction</definition>
+        <argsstring>(const BaseAction *other_)</argsstring>
+        <name>BaseAction</name>
+        <param>
+          <type>const <ref refid="class_base_action" kindref="compound">BaseAction</ref> *</type>
+          <declname>other_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="70" column="1" bodyfile="BaseAction.cpp" bodystart="24" bodyend="30"/>
+        <references refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" compoundref="_base_action_8cpp" startline="79" endline="82">ReturnActionID</references>
+        <references refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" compoundref="_base_action_8cpp" startline="59" endline="62">ReturnDiscription</references>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">ReturnName</references>
+        <references refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" compoundref="_base_action_8cpp" startline="67" endline="70">ReturnTargetType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1ad307b128f9ded949daa718fc1364919c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::SetName</definition>
+        <argsstring>(const FString name_)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="72" column="6" bodyfile="BaseAction.cpp" bodystart="31" bodyend="34"/>
+        <referencedby refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" compoundref="_ability_action_8cpp" startline="4" endline="13">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" compoundref="_command_action_8cpp" startline="6" endline="15">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::SetDiscription</definition>
+        <argsstring>(const FString discription_)</argsstring>
+        <name>SetDiscription</name>
+        <param>
+          <type>const FString</type>
+          <declname>discription_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="74" column="6" bodyfile="BaseAction.cpp" bodystart="35" bodyend="38"/>
+        <referencedby refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" compoundref="_ability_action_8cpp" startline="4" endline="13">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" compoundref="_command_action_8cpp" startline="6" endline="15">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::SetActionType</definition>
+        <argsstring>(const ACTIONTYPE type_)</argsstring>
+        <name>SetActionType</name>
+        <param>
+          <type>const <ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="76" column="6" bodyfile="BaseAction.cpp" bodystart="39" bodyend="42"/>
+        <referencedby refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" compoundref="_ability_action_8cpp" startline="4" endline="13">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" compoundref="_command_action_8cpp" startline="6" endline="15">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::SetTargetType</definition>
+        <argsstring>(const TARGETTYPE type_)</argsstring>
+        <name>SetTargetType</name>
+        <param>
+          <type>const <ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="78" column="6" bodyfile="BaseAction.cpp" bodystart="43" bodyend="46"/>
+        <referencedby refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" compoundref="_ability_action_8cpp" startline="4" endline="13">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" compoundref="_command_action_8cpp" startline="6" endline="15">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::SetInteractionType</definition>
+        <argsstring>(const INTERACTIONTYPE type_)</argsstring>
+        <name>SetInteractionType</name>
+        <param>
+          <type>const <ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="80" column="6" bodyfile="BaseAction.cpp" bodystart="47" bodyend="50"/>
+        <referencedby refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" compoundref="_ability_action_8cpp" startline="4" endline="13">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" compoundref="_command_action_8cpp" startline="6" endline="15">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a82e6afa7a79dee542492d587904dc380" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::SetActionID</definition>
+        <argsstring>(const uint32 actionID_)</argsstring>
+        <name>SetActionID</name>
+        <param>
+          <type>const uint32</type>
+          <declname>actionID_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="82" column="6" bodyfile="BaseAction.cpp" bodystart="51" bodyend="54"/>
+        <referencedby refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" compoundref="_ability_action_8cpp" startline="4" endline="13">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" compoundref="_command_action_8cpp" startline="6" endline="15">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" compoundref="_item_action_8cpp" startline="4" endline="14">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BaseAction::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="83" column="6" bodyfile="BaseAction.cpp" bodystart="83" bodyend="86"/>
+        <referencedby refid="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" compoundref="_base_action_8cpp" startline="87" endline="90">~BaseAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>FString</type>
+        <definition>FString BaseAction::ReturnName</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="85" column="9"/>
+        <referencedby refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" compoundref="_ability_action_8cpp" startline="25" endline="34">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142" compoundref="_stat_sheet_object_8cpp" startline="59" endline="62">StatSheetObject::AddAbilityAction</referencedby>
+        <referencedby refid="class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3" compoundref="_stat_sheet_object_8cpp" startline="51" endline="54">StatSheetObject::AddCommandAction</referencedby>
+        <referencedby refid="class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3" compoundref="_stat_sheet_object_8cpp" startline="63" endline="66">StatSheetObject::AddEquipment</referencedby>
+        <referencedby refid="class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8" compoundref="_stat_sheet_object_8cpp" startline="55" endline="58">StatSheetObject::AddItemAction</referencedby>
+        <referencedby refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" compoundref="_base_action_8cpp" startline="24" endline="30">BaseAction</referencedby>
+        <referencedby refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" compoundref="_damage_delt_system_8cpp" startline="14" endline="99">DamageDeltSystem::BaseCalculate</referencedby>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>FString</type>
+        <definition>FString BaseAction::ReturnDiscription</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnDiscription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="87" column="9" bodyfile="BaseAction.cpp" bodystart="59" bodyend="62"/>
+        <referencedby refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" compoundref="_ability_action_8cpp" startline="25" endline="34">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" compoundref="_base_action_8cpp" startline="24" endline="30">BaseAction</referencedby>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></type>
+        <definition>ACTIONTYPE BaseAction::ReturnActionType</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnActionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="89" column="12" bodyfile="BaseAction.cpp" bodystart="63" bodyend="66"/>
+        <referencedby refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" compoundref="_ability_action_8cpp" startline="25" endline="34">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" compoundref="_damage_delt_system_8cpp" startline="14" endline="99">DamageDeltSystem::BaseCalculate</referencedby>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></type>
+        <definition>TARGETTYPE BaseAction::ReturnTargetType</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnTargetType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="91" column="12" bodyfile="BaseAction.cpp" bodystart="67" bodyend="70"/>
+        <referencedby refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" compoundref="_base_action_8cpp" startline="24" endline="30">BaseAction</referencedby>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a70d34140345d92808deed0304397b074" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></type>
+        <definition>INTERACTIONTYPE BaseAction::ReturnInteractionType</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnInteractionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="93" column="17" bodyfile="BaseAction.cpp" bodystart="75" bodyend="78"/>
+        <referencedby refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" compoundref="_ability_action_8cpp" startline="25" endline="34">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a0954da9087f93b46ea68468de1ecce92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 BaseAction::ReturnActionID</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnActionID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="95" column="8" bodyfile="BaseAction.cpp" bodystart="79" bodyend="82"/>
+        <referencedby refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" compoundref="_ability_action_8cpp" startline="25" endline="34">AbilityAction::AbilityAction</referencedby>
+        <referencedby refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" compoundref="_base_action_8cpp" startline="24" endline="30">BaseAction</referencedby>
+        <referencedby refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" compoundref="_command_action_8cpp" startline="27" endline="37">CommandAction::CommandAction</referencedby>
+        <referencedby refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" compoundref="_item_action_8cpp" startline="28" endline="37">ItemAction::ItemAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMap&lt; FString, float &gt;</type>
+        <definition>TMap&lt; FString, float &gt; BaseAction::ReturnStatMap</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnStatMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="97" column="6" bodyfile="BaseAction.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>BaseAction::~BaseAction</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="98" column="9" bodyfile="BaseAction.cpp" bodystart="87" bodyend="90"/>
+        <references refid="class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458" compoundref="_base_action_8cpp" startline="83" endline="86">OnDestroy</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbilityAction</label>
+        <link refid="class_ability_action"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CommandAction</label>
+        <link refid="class_command_action"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BaseAction</label>
+        <link refid="class_base_action"/>
+      </node>
+      <node id="4">
+        <label>ItemAction</label>
+        <link refid="class_item_action"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BaseAction</label>
+        <link refid="class_base_action"/>
+      </node>
+    </collaborationgraph>
+    <location file="BaseAction.h" line="57" column="1" bodyfile="BaseAction.h" bodystart="56" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_base_action_1a23cf827d35850a4e4d2859a12a885567" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>action</name></member>
+      <member refid="class_base_action_1a050d54574671299fb3f8d854aeb6a190" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>actionID</name></member>
+      <member refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a359a13b822b4da103d91d3d0179d8302" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>BaseAction</name></member>
+      <member refid="class_base_action_1a513d01865c01cb52756d2d634afda491" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>discription</name></member>
+      <member refid="class_base_action_1a46af3a3c5512e3d0072fac96989b52ec" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>interaction</name></member>
+      <member refid="class_base_action_1a89d98c13f445fa58b96d5c4eff58e134" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>name</name></member>
+      <member refid="class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>OnDestroy</name></member>
+      <member refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnActionID</name></member>
+      <member refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnActionType</name></member>
+      <member refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnDiscription</name></member>
+      <member refid="class_base_action_1a70d34140345d92808deed0304397b074" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnInteractionType</name></member>
+      <member refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnName</name></member>
+      <member refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnStatMap</name></member>
+      <member refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>ReturnTargetType</name></member>
+      <member refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>SetActionID</name></member>
+      <member refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>SetActionType</name></member>
+      <member refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>SetDiscription</name></member>
+      <member refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>SetInteractionType</name></member>
+      <member refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>SetName</name></member>
+      <member refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" prot="public" virt="non-virtual"><scope>BaseAction</scope><name>SetTargetType</name></member>
+      <member refid="class_base_action_1a98568ceec0e6f17054a14ea118d2adeb" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>statMap</name></member>
+      <member refid="class_base_action_1afafdb765a8e836a0eba3a59fb1f23e01" prot="private" virt="non-virtual"><scope>BaseAction</scope><name>target</name></member>
+      <member refid="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" prot="public" virt="virtual"><scope>BaseAction</scope><name>~BaseAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

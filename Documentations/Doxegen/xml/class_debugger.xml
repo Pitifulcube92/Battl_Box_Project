@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_debugger" kind="class" language="C++" prot="public">
+    <compoundname>Debugger</compoundname>
+    <includes refid="_debugger_8h" local="no">Debugger.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_debugger_1a3694e5bc039163c9dfc64e76a1a7f90f" prot="private" static="yes" mutable="no">
+        <type>TArray&lt; FString &gt;</type>
+        <definition>TArray&lt; FString &gt; Debugger::LogArray</definition>
+        <argsstring></argsstring>
+        <name>LogArray</name>
+        <initializer>= TArray&lt;FString&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="21" column="15" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_debugger_1ad15844f242e2c8a02fd9bf7595a5ece8" prot="private" static="yes" mutable="no">
+        <type><ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kindref="member">MessageType</ref></type>
+        <definition>MessageType Debugger::currentType</definition>
+        <argsstring></argsstring>
+        <name>currentType</name>
+        <initializer>= <ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100" kindref="member">MessageType::E_NONE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="22" column="20" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_debugger_1abe3554be440f9a06b0864653bee32b03" prot="private" static="yes" mutable="no">
+        <type>FString</type>
+        <definition>FString Debugger::DebugDirectory</definition>
+        <argsstring></argsstring>
+        <name>DebugDirectory</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="23" column="16" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_debugger_1aed201a492e988e040cf265244dfdd5da" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::Log</definition>
+        <argsstring>(const MessageType type_, const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>const <ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kindref="member">MessageType</ref></type>
+          <declname>type_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>message_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>fileName_</declname>
+        </param>
+        <param>
+          <type>const int32</type>
+          <declname>line_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="20" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="23" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_debugger_1a0ff42aadd2564d22da3ea639dbfff21e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Debugger::Debugger</definition>
+        <argsstring>(const Debugger &amp;)=delete</argsstring>
+        <name>Debugger</name>
+        <param>
+          <type>const <ref refid="class_debugger" kindref="compound">Debugger</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a42527ab94f2b927aacbe758ff61e37cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Debugger::Debugger</definition>
+        <argsstring>(Debugger &amp;&amp;)=delete</argsstring>
+        <name>Debugger</name>
+        <param>
+          <type><ref refid="class_debugger" kindref="compound">Debugger</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a66f6b2afc3ca554b5a8d16eb2bc2d858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_debugger" kindref="compound">Debugger</ref> &amp;</type>
+        <definition>Debugger&amp; Debugger::operator=</definition>
+        <argsstring>(const Debugger &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_debugger" kindref="compound">Debugger</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a8184e6b00d991bd5e5c746397f081f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_debugger" kindref="compound">Debugger</ref> &amp;</type>
+        <definition>Debugger&amp; Debugger::operator=</definition>
+        <argsstring>(Debugger &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="class_debugger" kindref="compound">Debugger</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="28" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a0f3b2388a6d48a7dbb479858443c501d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Debugger::Debugger</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Debugger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="29" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::InitDebug</definition>
+        <argsstring>()</argsstring>
+        <name>InitDebug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="31" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="12" bodyend="22"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">E_FATAL_ERROR</references>
+        <references refid="class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa" compoundref="_battle_box_file_manager_8cpp" startline="8" endline="21">BattleBoxFileManager::VerifyOnCreateDirectory</references>
+        <referencedby refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" compoundref="_battle___box_8cpp" startline="8" endline="23">FBattle_BoxModule::StartupModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::SetSeverity</definition>
+        <argsstring>(const MessageType type_)</argsstring>
+        <name>SetSeverity</name>
+        <param>
+          <type>const <ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kindref="member">MessageType</ref></type>
+          <declname>type_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="32" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="35" bodyend="38"/>
+        <referencedby refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" compoundref="_damage_delt_system_8cpp" startline="14" endline="99">DamageDeltSystem::BaseCalculate</referencedby>
+        <referencedby refid="class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd" compoundref="_stat_sheet_object_8cpp" startline="103" endline="113">StatSheetObject::ReturnAbility</referencedby>
+        <referencedby refid="class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b" compoundref="_stat_sheet_object_8cpp" startline="83" endline="92">StatSheetObject::ReturnCommand</referencedby>
+        <referencedby refid="class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a" compoundref="_stat_sheet_object_8cpp" startline="114" endline="123">StatSheetObject::ReturnEquipment</referencedby>
+        <referencedby refid="class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55" compoundref="_stat_sheet_object_8cpp" startline="93" endline="102">StatSheetObject::ReturnItem</referencedby>
+        <referencedby refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" compoundref="_battle___box_8cpp" startline="8" endline="23">FBattle_BoxModule::StartupModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1aef91ed84489c9c928445e1f712d401de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::Info</definition>
+        <argsstring>(const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</argsstring>
+        <name>Info</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>message_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>fileName_</declname>
+        </param>
+        <param>
+          <type>const int32</type>
+          <declname>line_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="33" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="39" bodyend="42"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8">E_INFO</references>
+        <referencedby refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" compoundref="_battle___box_8cpp" startline="8" endline="23">FBattle_BoxModule::StartupModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::Error</definition>
+        <argsstring>(const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</argsstring>
+        <name>Error</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>message_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>fileName_</declname>
+        </param>
+        <param>
+          <type>const int32</type>
+          <declname>line_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="34" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="43" bodyend="46"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <referencedby refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" compoundref="_damage_delt_system_8cpp" startline="14" endline="99">DamageDeltSystem::BaseCalculate</referencedby>
+        <referencedby refid="class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd" compoundref="_stat_sheet_object_8cpp" startline="103" endline="113">StatSheetObject::ReturnAbility</referencedby>
+        <referencedby refid="class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b" compoundref="_stat_sheet_object_8cpp" startline="83" endline="92">StatSheetObject::ReturnCommand</referencedby>
+        <referencedby refid="class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a" compoundref="_stat_sheet_object_8cpp" startline="114" endline="123">StatSheetObject::ReturnEquipment</referencedby>
+        <referencedby refid="class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55" compoundref="_stat_sheet_object_8cpp" startline="93" endline="102">StatSheetObject::ReturnItem</referencedby>
+        <referencedby refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" compoundref="_battle___box_8cpp" startline="8" endline="23">FBattle_BoxModule::StartupModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::Warrning</definition>
+        <argsstring>(const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</argsstring>
+        <name>Warrning</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>message_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>fileName_</declname>
+        </param>
+        <param>
+          <type>const int32</type>
+          <declname>line_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="35" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="47" bodyend="50"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">E_WARNING</references>
+        <referencedby refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" compoundref="_battle___box_8cpp" startline="8" endline="23">FBattle_BoxModule::StartupModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_debugger_1a34151070033a196f3a220dd0297fd3d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Debugger::FatalError</definition>
+        <argsstring>(const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</argsstring>
+        <name>FatalError</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>message_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>fileName_</declname>
+        </param>
+        <param>
+          <type>const int32</type>
+          <declname>line_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="36" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debuger.cpp" bodystart="51" bodyend="54"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3">E_FATAL_ERROR</references>
+        <referencedby refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" compoundref="_battle___box_8cpp" startline="8" endline="23">FBattle_BoxModule::StartupModule</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Debugger</label>
+        <link refid="class_debugger"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" line="18" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Debugger.h" bodystart="17" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_debugger_1ad15844f242e2c8a02fd9bf7595a5ece8" prot="private" virt="non-virtual"><scope>Debugger</scope><name>currentType</name></member>
+      <member refid="class_debugger_1abe3554be440f9a06b0864653bee32b03" prot="private" virt="non-virtual"><scope>Debugger</scope><name>DebugDirectory</name></member>
+      <member refid="class_debugger_1a0ff42aadd2564d22da3ea639dbfff21e" prot="public" virt="non-virtual"><scope>Debugger</scope><name>Debugger</name></member>
+      <member refid="class_debugger_1a42527ab94f2b927aacbe758ff61e37cf" prot="public" virt="non-virtual"><scope>Debugger</scope><name>Debugger</name></member>
+      <member refid="class_debugger_1a0f3b2388a6d48a7dbb479858443c501d" prot="public" virt="non-virtual"><scope>Debugger</scope><name>Debugger</name></member>
+      <member refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" prot="public" virt="non-virtual"><scope>Debugger</scope><name>Error</name></member>
+      <member refid="class_debugger_1a34151070033a196f3a220dd0297fd3d6" prot="public" virt="non-virtual"><scope>Debugger</scope><name>FatalError</name></member>
+      <member refid="class_debugger_1aef91ed84489c9c928445e1f712d401de" prot="public" virt="non-virtual"><scope>Debugger</scope><name>Info</name></member>
+      <member refid="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" prot="public" virt="non-virtual"><scope>Debugger</scope><name>InitDebug</name></member>
+      <member refid="class_debugger_1aed201a492e988e040cf265244dfdd5da" prot="private" virt="non-virtual"><scope>Debugger</scope><name>Log</name></member>
+      <member refid="class_debugger_1a3694e5bc039163c9dfc64e76a1a7f90f" prot="private" virt="non-virtual"><scope>Debugger</scope><name>LogArray</name></member>
+      <member refid="class_debugger_1a66f6b2afc3ca554b5a8d16eb2bc2d858" prot="public" virt="non-virtual"><scope>Debugger</scope><name>operator=</name></member>
+      <member refid="class_debugger_1a8184e6b00d991bd5e5c746397f081f67" prot="public" virt="non-virtual"><scope>Debugger</scope><name>operator=</name></member>
+      <member refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" prot="public" virt="non-virtual"><scope>Debugger</scope><name>SetSeverity</name></member>
+      <member refid="class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3" prot="public" virt="non-virtual"><scope>Debugger</scope><name>Warrning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

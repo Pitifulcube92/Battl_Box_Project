@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_battle_box_file_manager" kind="class" language="C++" prot="public">
+    <compoundname>BattleBoxFileManager</compoundname>
+    <includes refid="_battle_box_file_manager_8h" local="no">BattleBoxFileManager.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_battle_box_file_manager_1aa208c81249e7f64046ac125da5251691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BattleBoxFileManager::BattleBoxFileManager</definition>
+        <argsstring>(const BattleBoxFileManager &amp;)=delete</argsstring>
+        <name>BattleBoxFileManager</name>
+        <param>
+          <type>const <ref refid="class_battle_box_file_manager" kindref="compound">BattleBoxFileManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1a18a8c6620bbb82f0f5bdd098e5eb5d20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BattleBoxFileManager::BattleBoxFileManager</definition>
+        <argsstring>(BattleBoxFileManager &amp;&amp;)=delete</argsstring>
+        <name>BattleBoxFileManager</name>
+        <param>
+          <type><ref refid="class_battle_box_file_manager" kindref="compound">BattleBoxFileManager</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1a4c6958072e3bcd4c4919373d47d16a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_battle_box_file_manager" kindref="compound">BattleBoxFileManager</ref> &amp;</type>
+        <definition>BattleBoxFileManager&amp; BattleBoxFileManager::operator=</definition>
+        <argsstring>(const BattleBoxFileManager &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_battle_box_file_manager" kindref="compound">BattleBoxFileManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="16" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1a0531fe1d9ca69a0f5302154a53e2f4bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_battle_box_file_manager" kindref="compound">BattleBoxFileManager</ref> &amp;</type>
+        <definition>BattleBoxFileManager&amp; BattleBoxFileManager::operator=</definition>
+        <argsstring>(BattleBoxFileManager &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="class_battle_box_file_manager" kindref="compound">BattleBoxFileManager</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="17" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1a990e83630fa54920d542d985cc1719ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BattleBoxFileManager::BattleBoxFileManager</definition>
+        <argsstring>()=delete</argsstring>
+        <name>BattleBoxFileManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="18" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BattleBoxFileManager::VerifyOnCreateDirectory</definition>
+        <argsstring>(const FString &amp;testDir_)</argsstring>
+        <name>VerifyOnCreateDirectory</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>testDir_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="21" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp" bodystart="8" bodyend="21"/>
+        <referencedby refid="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" compoundref="_debuger_8cpp" startline="12" endline="22">Debugger::InitDebug</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1a2afc97bab32b85e1afce4c255e4a7aef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BattleBoxFileManager::GetFileSize</definition>
+        <argsstring>(const FString &amp;sourcePath_)</argsstring>
+        <name>GetFileSize</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>sourcePath_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="23" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp" bodystart="22" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1af12ddc1b9f330c6dac9b59b7768c8a70" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BattleBoxFileManager::DeleteFile</definition>
+        <argsstring>(const FString &amp;sourcePath_)</argsstring>
+        <name>DeleteFile</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>sourcePath_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="25" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1abd4bb207fe330e3d32150bc96978a385" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BattleBoxFileManager::WriteTextFile</definition>
+        <argsstring>(const FString &amp;saveDirectory_, const FString context_, const FString &amp;FileName_, bool const IsOverWrite_)</argsstring>
+        <name>WriteTextFile</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>saveDirectory_</declname>
+        </param>
+        <param>
+          <type>const FString</type>
+          <declname>context_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>FileName_</declname>
+        </param>
+        <param>
+          <type>bool const</type>
+          <declname>IsOverWrite_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="27" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp" bodystart="43" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battle_box_file_manager_1a132a3963cf91131124f5b5ff3d4f4909" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BattleBoxFileManager::WriteTextArrayToFile</definition>
+        <argsstring>(const FString &amp;saveDirectory_, const TArray&lt; FString &gt; textArray_, const FString &amp;FileName_, bool const IsOverWrite_)</argsstring>
+        <name>WriteTextArrayToFile</name>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>saveDirectory_</declname>
+        </param>
+        <param>
+          <type>const TArray&lt; FString &gt;</type>
+          <declname>textArray_</declname>
+        </param>
+        <param>
+          <type>const FString &amp;</type>
+          <declname>FileName_</declname>
+        </param>
+        <param>
+          <type>bool const</type>
+          <declname>IsOverWrite_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="29" column="13" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp" bodystart="57" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BattleBoxFileManager</label>
+        <link refid="class_battle_box_file_manager"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" line="12" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.h" bodystart="11" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_battle_box_file_manager_1aa208c81249e7f64046ac125da5251691" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>BattleBoxFileManager</name></member>
+      <member refid="class_battle_box_file_manager_1a18a8c6620bbb82f0f5bdd098e5eb5d20" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>BattleBoxFileManager</name></member>
+      <member refid="class_battle_box_file_manager_1a990e83630fa54920d542d985cc1719ae" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>BattleBoxFileManager</name></member>
+      <member refid="class_battle_box_file_manager_1af12ddc1b9f330c6dac9b59b7768c8a70" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>DeleteFile</name></member>
+      <member refid="class_battle_box_file_manager_1a2afc97bab32b85e1afce4c255e4a7aef" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>GetFileSize</name></member>
+      <member refid="class_battle_box_file_manager_1a4c6958072e3bcd4c4919373d47d16a18" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>operator=</name></member>
+      <member refid="class_battle_box_file_manager_1a0531fe1d9ca69a0f5302154a53e2f4bf" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>operator=</name></member>
+      <member refid="class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>VerifyOnCreateDirectory</name></member>
+      <member refid="class_battle_box_file_manager_1a132a3963cf91131124f5b5ff3d4f4909" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>WriteTextArrayToFile</name></member>
+      <member refid="class_battle_box_file_manager_1abd4bb207fe330e3d32150bc96978a385" prot="public" virt="non-virtual"><scope>BattleBoxFileManager</scope><name>WriteTextFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__battle___box_8cpp">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Battle_Box.cpp File Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/Battle_Box.cpp</primary></indexterm>
+<programlisting>#include &quot;Battle_Box.h&quot;
+#include &quot;../Private/Debugger.h&quot;
+</programlisting>Include dependency graph for Battle_Box.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_battle___box_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__battle___box_8cpp_1a0de3ae51f3a629a8e5d113f1b9390da7">LOCTEXT_NAMESPACE</link>   &quot;FBattle_BoxModule&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__battle___box_8cpp_1a0de3ae51f3a629a8e5d113f1b9390da7"/>    <section>
+    <title>LOCTEXT_NAMESPACE</title>
+<indexterm><primary>LOCTEXT_NAMESPACE</primary><secondary>Battle_Box.cpp</secondary></indexterm>
+<indexterm><primary>Battle_Box.cpp</primary><secondary>LOCTEXT_NAMESPACE</secondary></indexterm>
+<para><computeroutput>#define LOCTEXT_NAMESPACE   &quot;FBattle_BoxModule&quot;</computeroutput></para></section>
+</section>
+</section>

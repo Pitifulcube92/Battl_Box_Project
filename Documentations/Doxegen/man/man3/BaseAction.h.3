@@ -1,0 +1,195 @@
+.TH "Battle_Box/Private/ActionClasses/BaseAction.h" 3 "Sat Jan 25 2020" "Battle Box Manual" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Battle_Box/Private/ActionClasses/BaseAction.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'CoreMinimal\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBBaseAction\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBACTIONTYPE\fP { \fBACTIONTYPE::E_NONE\fP, \fBACTIONTYPE::E_COMMAND\fP, \fBACTIONTYPE::E_ITEM\fP, \fBACTIONTYPE::E_ABILITY\fP }"
+.br
+.ti -1c
+.RI "enum \fBDAMAGETYPE\fP { \fBDAMAGETYPE::E_NONE\fP, \fBDAMAGETYPE::E_HP_DAMAGE\fP, \fBDAMAGETYPE::E_MP_DAMAGE\fP, \fBDAMAGETYPE::E_HP_RECOVER\fP, \fBDAMAGETYPE::E_MP_RECOVER\fP }"
+.br
+.ti -1c
+.RI "enum \fBELEMENTTYPE\fP { \fBELEMENTTYPE::E_NONE\fP, \fBELEMENTTYPE::E_FLAME\fP, \fBELEMENTTYPE::E_WATER\fP, \fBELEMENTTYPE::E_EARTH\fP, \fBELEMENTTYPE::E_ICE\fP, \fBELEMENTTYPE::E_THUNDER\fP, \fBELEMENTTYPE::E_WIND\fP, \fBELEMENTTYPE::E_LIGHT\fP, \fBELEMENTTYPE::E_DARK\fP }"
+.br
+.ti -1c
+.RI "enum \fBINTERACTIONTYPE\fP { \fBINTERACTIONTYPE::E_NONE\fP, \fBINTERACTIONTYPE::E_PHYSICAL\fP, \fBINTERACTIONTYPE::E_ABILITY\fP, \fBINTERACTIONTYPE::E_PHYSICAL_AND_ABILITY\fP }"
+.br
+.ti -1c
+.RI "enum \fBTARGETTYPE\fP { \fBTARGETTYPE::E_NONE\fP, \fBTARGETTYPE::E_TARGET_ENEMY\fP, \fBTARGETTYPE::E_ALL_ENEMIES\fP, \fBTARGETTYPE::E_RANDOM_ENEMY\fP, \fBTARGETTYPE::E_ALLY\fP, \fBTARGETTYPE::E_ALL_ALLY\fP, \fBTARGETTYPE::E_ALLY_KO\fP, \fBTARGETTYPE::E_ALL_ALLY_KO\fP, \fBTARGETTYPE::E_USER\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBACTIONTYPE\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIE_NONE \fP\fP
+.TP
+\fB\fIE_COMMAND \fP\fP
+.TP
+\fB\fIE_ITEM \fP\fP
+.TP
+\fB\fIE_ABILITY \fP\fP
+.PP
+Definition at line 5 of file BaseAction\&.h\&.
+.PP
+.nf
+6 {
+7      E_NONE,
+8      E_COMMAND,
+9      E_ITEM,
+10      E_ABILITY
+11 };
+.fi
+.SS "enum \fBDAMAGETYPE\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIE_NONE \fP\fP
+.TP
+\fB\fIE_HP_DAMAGE \fP\fP
+.TP
+\fB\fIE_MP_DAMAGE \fP\fP
+.TP
+\fB\fIE_HP_RECOVER \fP\fP
+.TP
+\fB\fIE_MP_RECOVER \fP\fP
+.PP
+Definition at line 34 of file BaseAction\&.h\&.
+.PP
+.nf
+35 {
+36      E_NONE,
+37      E_HP_DAMAGE,
+38      E_MP_DAMAGE,
+39      E_HP_RECOVER,
+40      E_MP_RECOVER
+41 };
+.fi
+.SS "enum \fBELEMENTTYPE\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIE_NONE \fP\fP
+.TP
+\fB\fIE_FLAME \fP\fP
+.TP
+\fB\fIE_WATER \fP\fP
+.TP
+\fB\fIE_EARTH \fP\fP
+.TP
+\fB\fIE_ICE \fP\fP
+.TP
+\fB\fIE_THUNDER \fP\fP
+.TP
+\fB\fIE_WIND \fP\fP
+.TP
+\fB\fIE_LIGHT \fP\fP
+.TP
+\fB\fIE_DARK \fP\fP
+.PP
+Definition at line 43 of file BaseAction\&.h\&.
+.PP
+.nf
+44 {
+45      E_NONE,
+46      E_FLAME,
+47      E_WATER,
+48      E_EARTH,
+49      E_ICE,
+50      E_THUNDER,
+51      E_WIND,
+52      E_LIGHT,
+53      E_DARK
+54 };
+.fi
+.SS "enum \fBINTERACTIONTYPE\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIE_NONE \fP\fP
+.TP
+\fB\fIE_PHYSICAL \fP\fP
+.TP
+\fB\fIE_ABILITY \fP\fP
+.TP
+\fB\fIE_PHYSICAL_AND_ABILITY \fP\fP
+.PP
+Definition at line 26 of file BaseAction\&.h\&.
+.PP
+.nf
+27 {
+28      E_NONE,
+29      E_PHYSICAL,
+30      E_ABILITY,
+31      E_PHYSICAL_AND_ABILITY
+32 };
+.fi
+.SS "enum \fBTARGETTYPE\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIE_NONE \fP\fP
+.TP
+\fB\fIE_TARGET_ENEMY \fP\fP
+.TP
+\fB\fIE_ALL_ENEMIES \fP\fP
+.TP
+\fB\fIE_RANDOM_ENEMY \fP\fP
+.TP
+\fB\fIE_ALLY \fP\fP
+.TP
+\fB\fIE_ALL_ALLY \fP\fP
+.TP
+\fB\fIE_ALLY_KO \fP\fP
+.TP
+\fB\fIE_ALL_ALLY_KO \fP\fP
+.TP
+\fB\fIE_USER \fP\fP
+.PP
+Definition at line 13 of file BaseAction\&.h\&.
+.PP
+.nf
+14 {
+15      E_NONE,
+16      E_TARGET_ENEMY,
+17      E_ALL_ENEMIES,
+18      E_RANDOM_ENEMY,
+19      E_ALLY,
+20      E_ALL_ALLY,
+21      E_ALLY_KO,
+22      E_ALL_ALLY_KO,
+23      E_USER
+24 };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Battle Box Manual from the source code\&.

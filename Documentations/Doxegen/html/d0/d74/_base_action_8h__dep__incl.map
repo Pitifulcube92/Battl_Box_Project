@@ -1,0 +1,11 @@
+<map id="Battle_Box/Private/ActionClasses/BaseAction.h" name="Battle_Box/Private/ActionClasses/BaseAction.h">
+<area shape="rect" id="node1" title=" " alt="" coords="455,5,647,47"/>
+<area shape="rect" id="node2" href="$dc/db6/_ability_action_8h.html" title=" " alt="" coords="104,95,303,136"/>
+<area shape="rect" id="node5" href="$de/d28/_base_action_8cpp.html" title=" " alt="" coords="784,95,991,136"/>
+<area shape="rect" id="node6" href="$d7/d23/_command_action_8h.html" title=" " alt="" coords="327,95,549,136"/>
+<area shape="rect" id="node8" href="$d9/dda/_item_action_8h.html" title=" " alt="" coords="573,95,759,136"/>
+<area shape="rect" id="node3" href="$d8/d03/_ability_action_8cpp.html" title=" " alt="" coords="5,184,217,225"/>
+<area shape="rect" id="node4" href="$d8/d9e/_stat_sheet_object_8cpp.html" title=" " alt="" coords="242,184,389,225"/>
+<area shape="rect" id="node7" href="$dc/d47/_command_action_8cpp.html" title=" " alt="" coords="413,184,647,225"/>
+<area shape="rect" id="node9" href="$d3/d0e/_item_action_8cpp.html" title=" " alt="" coords="672,184,873,225"/>
+</map>

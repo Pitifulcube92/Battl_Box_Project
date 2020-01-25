@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_ability_action" kind="class"><name>AbilityAction</name>
+    <member refid="class_ability_action_1af1b20c800c8bc6f96bc56bd49775057d" kind="variable"><name>duration</name></member>
+    <member refid="class_ability_action_1aef8bac0f72924be136fdade57acb9d34" kind="variable"><name>abilityValue</name></member>
+    <member refid="class_ability_action_1a58fb21fb03457e4dbaebb9617cf82f3e" kind="function"><name>AbilityAction</name></member>
+    <member refid="class_ability_action_1a49bbeeb71bda33bcdaeef5c6db164b9f" kind="function"><name>AbilityAction</name></member>
+    <member refid="class_ability_action_1a772784d3aa39971866fe064fe5da9ec3" kind="function"><name>AbilityAction</name></member>
+    <member refid="class_ability_action_1ab7439e866106b751cf640fb137c9c1c9" kind="function"><name>SetDuration</name></member>
+    <member refid="class_ability_action_1af903bcb271edb3122c66c7c726711b1e" kind="function"><name>ReturnDuration</name></member>
+    <member refid="class_ability_action_1a7b8b9201aa5b7bf4706ac57f5ff6cded" kind="function"><name>CalculateAbilityValue</name></member>
+    <member refid="class_ability_action_1ab8a58b822ce9092d697f1647064a65dc" kind="function"><name>~AbilityAction</name></member>
+  </compound>
+  <compound refid="class_base_action" kind="class"><name>BaseAction</name>
+    <member refid="class_base_action_1a89d98c13f445fa58b96d5c4eff58e134" kind="variable"><name>name</name></member>
+    <member refid="class_base_action_1a513d01865c01cb52756d2d634afda491" kind="variable"><name>discription</name></member>
+    <member refid="class_base_action_1a23cf827d35850a4e4d2859a12a885567" kind="variable"><name>action</name></member>
+    <member refid="class_base_action_1afafdb765a8e836a0eba3a59fb1f23e01" kind="variable"><name>target</name></member>
+    <member refid="class_base_action_1a46af3a3c5512e3d0072fac96989b52ec" kind="variable"><name>interaction</name></member>
+    <member refid="class_base_action_1a050d54574671299fb3f8d854aeb6a190" kind="variable"><name>actionID</name></member>
+    <member refid="class_base_action_1a98568ceec0e6f17054a14ea118d2adeb" kind="variable"><name>statMap</name></member>
+    <member refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" kind="function"><name>BaseAction</name></member>
+    <member refid="class_base_action_1a359a13b822b4da103d91d3d0179d8302" kind="function"><name>BaseAction</name></member>
+    <member refid="class_base_action_1a309dc573513db2dcd5249ca5cc986276" kind="function"><name>BaseAction</name></member>
+    <member refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" kind="function"><name>SetName</name></member>
+    <member refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" kind="function"><name>SetDiscription</name></member>
+    <member refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" kind="function"><name>SetActionType</name></member>
+    <member refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" kind="function"><name>SetTargetType</name></member>
+    <member refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" kind="function"><name>SetInteractionType</name></member>
+    <member refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" kind="function"><name>SetActionID</name></member>
+    <member refid="class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" kind="function"><name>ReturnName</name></member>
+    <member refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" kind="function"><name>ReturnDiscription</name></member>
+    <member refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" kind="function"><name>ReturnActionType</name></member>
+    <member refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" kind="function"><name>ReturnTargetType</name></member>
+    <member refid="class_base_action_1a70d34140345d92808deed0304397b074" kind="function"><name>ReturnInteractionType</name></member>
+    <member refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" kind="function"><name>ReturnActionID</name></member>
+    <member refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kind="function"><name>ReturnStatMap</name></member>
+    <member refid="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" kind="function"><name>~BaseAction</name></member>
+  </compound>
+  <compound refid="class_base_system" kind="class"><name>BaseSystem</name>
+    <member refid="class_base_system_1a94cbf2e076874bb2ef74d4d20e3c68e1" kind="function"><name>BaseCalculate</name></member>
+    <member refid="class_base_system_1a05c74f56b5726d7510b4bc2314dd6a16" kind="function"><name>~BaseSystem</name></member>
+  </compound>
+  <compound refid="class_battle_box_file_manager" kind="class"><name>BattleBoxFileManager</name>
+    <member refid="class_battle_box_file_manager_1aa208c81249e7f64046ac125da5251691" kind="function"><name>BattleBoxFileManager</name></member>
+    <member refid="class_battle_box_file_manager_1a18a8c6620bbb82f0f5bdd098e5eb5d20" kind="function"><name>BattleBoxFileManager</name></member>
+    <member refid="class_battle_box_file_manager_1a4c6958072e3bcd4c4919373d47d16a18" kind="function"><name>operator=</name></member>
+    <member refid="class_battle_box_file_manager_1a0531fe1d9ca69a0f5302154a53e2f4bf" kind="function"><name>operator=</name></member>
+    <member refid="class_battle_box_file_manager_1a990e83630fa54920d542d985cc1719ae" kind="function"><name>BattleBoxFileManager</name></member>
+    <member refid="class_battle_box_file_manager_1aac6c3bb192936f4f22b4e93090cd45aa" kind="function"><name>VerifyOnCreateDirectory</name></member>
+    <member refid="class_battle_box_file_manager_1a2afc97bab32b85e1afce4c255e4a7aef" kind="function"><name>GetFileSize</name></member>
+    <member refid="class_battle_box_file_manager_1af12ddc1b9f330c6dac9b59b7768c8a70" kind="function"><name>DeleteFile</name></member>
+    <member refid="class_battle_box_file_manager_1abd4bb207fe330e3d32150bc96978a385" kind="function"><name>WriteTextFile</name></member>
+    <member refid="class_battle_box_file_manager_1a132a3963cf91131124f5b5ff3d4f4909" kind="function"><name>WriteTextArrayToFile</name></member>
+  </compound>
+  <compound refid="class_command_action" kind="class"><name>CommandAction</name>
+    <member refid="class_command_action_1a8458ced4a5af267f03dae720b3c4ae0e" kind="variable"><name>isActionCommand</name></member>
+    <member refid="class_command_action_1a3fb3b61a06e73ecb893129dbbb7ce5f5" kind="variable"><name>currentweapon</name></member>
+    <member refid="class_command_action_1a9be5bf2c9041a5418f989d3494702416" kind="variable"><name>command</name></member>
+    <member refid="class_command_action_1a9bed07066f01bc031713fe727ef2af68" kind="function"><name>CommandAction</name></member>
+    <member refid="class_command_action_1abf23d117fdcbc02af3d0b67bddb6a410" kind="function"><name>CommandAction</name></member>
+    <member refid="class_command_action_1aaa9704a80750e6a758d76178cfe12b5a" kind="function"><name>CommandAction</name></member>
+    <member refid="class_command_action_1aebe160173438c46ddaac8018cd3d1b22" kind="function"><name>SetWeaponType</name></member>
+    <member refid="class_command_action_1a07a737aaa16805dccea57471b9918324" kind="function"><name>SetCommand</name></member>
+    <member refid="class_command_action_1aed6b4cc73d8dd8e5e184e248c6e102a1" kind="function"><name>ReturnWeaponType</name></member>
+    <member refid="class_command_action_1ae4ad4949defce81722252072e3413d2b" kind="function"><name>ReturnAction</name></member>
+    <member refid="class_command_action_1aae8b568d1642f0bd846f4a8022eba70a" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_command_action_1a82d13a0eb569ad2584dd2d4dcfc6386b" kind="function"><name>~CommandAction</name></member>
+  </compound>
+  <compound refid="class_damage_delt_system" kind="class"><name>DamageDeltSystem</name>
+    <member refid="class_damage_delt_system_1a1fc52d024a2b857a4427fd2d839b396c" kind="variable"><name>singleTarget</name></member>
+    <member refid="class_damage_delt_system_1ae7c9b7ee9de8736c4a373c7eca061735" kind="variable"><name>owner</name></member>
+    <member refid="class_damage_delt_system_1a4fc133e16d60a0511c8c139a56bb41f6" kind="variable"><name>targets</name></member>
+    <member refid="class_damage_delt_system_1acbb16604c2f56234c51adf04317817ac" kind="variable"><name>totalDamageValue</name></member>
+    <member refid="class_damage_delt_system_1addd5bb239f2ae94eac8d1ab402f06c30" kind="variable"><name>totalDamageValues</name></member>
+    <member refid="class_damage_delt_system_1a9c2c58391271d6a546decf7b6d966732" kind="function"><name>CalculateWeaponDamage</name></member>
+    <member refid="class_damage_delt_system_1ac77b81a1237dac09021141090113f43c" kind="function"><name>CalculateAbilityDamage</name></member>
+    <member refid="class_damage_delt_system_1a7b2fc3b7d84fa682d2132143443053be" kind="function"><name>CalculateItemDamage</name></member>
+    <member refid="class_damage_delt_system_1afe23abbc1d1f86ef88484692e4800fb0" kind="function"><name>CalculatePhysicalDefence</name></member>
+    <member refid="class_damage_delt_system_1ab04599079f9f0e8734678800df8bc6d9" kind="function"><name>CalculateMagicalDefence</name></member>
+    <member refid="class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186" kind="function"><name>DamageDeltSystem</name></member>
+    <member refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" kind="function"><name>BaseCalculate</name></member>
+    <member refid="class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a" kind="function"><name>SetOwner</name></member>
+    <member refid="class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7" kind="function"><name>SetTarget</name></member>
+    <member refid="class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb" kind="function"><name>AddTargetToArray</name></member>
+    <member refid="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954" kind="function"><name>ReturnTotalDamageValue</name></member>
+    <member refid="class_damage_delt_system_1afcffaef781f580054ef1b9259255751a" kind="function"><name>ReturnDamageValues</name></member>
+    <member refid="class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c" kind="function"><name>~DamageDeltSystem</name></member>
+  </compound>
+  <compound refid="class_debugger" kind="class"><name>Debugger</name>
+    <member refid="class_debugger_1a3694e5bc039163c9dfc64e76a1a7f90f" kind="variable"><name>LogArray</name></member>
+    <member refid="class_debugger_1ad15844f242e2c8a02fd9bf7595a5ece8" kind="variable"><name>currentType</name></member>
+    <member refid="class_debugger_1abe3554be440f9a06b0864653bee32b03" kind="variable"><name>DebugDirectory</name></member>
+    <member refid="class_debugger_1aed201a492e988e040cf265244dfdd5da" kind="function"><name>Log</name></member>
+    <member refid="class_debugger_1a0ff42aadd2564d22da3ea639dbfff21e" kind="function"><name>Debugger</name></member>
+    <member refid="class_debugger_1a42527ab94f2b927aacbe758ff61e37cf" kind="function"><name>Debugger</name></member>
+    <member refid="class_debugger_1a66f6b2afc3ca554b5a8d16eb2bc2d858" kind="function"><name>operator=</name></member>
+    <member refid="class_debugger_1a8184e6b00d991bd5e5c746397f081f67" kind="function"><name>operator=</name></member>
+    <member refid="class_debugger_1a0f3b2388a6d48a7dbb479858443c501d" kind="function"><name>Debugger</name></member>
+    <member refid="class_debugger_1a9ab35dcd08d8f181e262f4c8fb1ec892" kind="function"><name>InitDebug</name></member>
+    <member refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" kind="function"><name>SetSeverity</name></member>
+    <member refid="class_debugger_1aef91ed84489c9c928445e1f712d401de" kind="function"><name>Info</name></member>
+    <member refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" kind="function"><name>Error</name></member>
+    <member refid="class_debugger_1a6f945a47fa65d5eb4f93a1db124324f3" kind="function"><name>Warrning</name></member>
+    <member refid="class_debugger_1a34151070033a196f3a220dd0297fd3d6" kind="function"><name>FatalError</name></member>
+  </compound>
+  <compound refid="class_effect_system" kind="class"><name>EffectSystem</name>
+    <member refid="class_effect_system_1a1c7d29836af594f9fad93b8f3562e8e7" kind="variable"><name>target</name></member>
+    <member refid="class_effect_system_1a2c4378aa4b2d84795cfcf32157330c4d" kind="variable"><name>targets</name></member>
+    <member refid="class_effect_system_1a232e145c135d885a995e9f96d0aa71dc" kind="variable"><name>targetAction</name></member>
+    <member refid="class_effect_system_1a92be58e865893f0b16340887d2edd606" kind="function"><name>EffectSystem</name></member>
+    <member refid="class_effect_system_1ab5c41ca84888911f7c878be0a3a5d4c0" kind="function"><name>BaseCalculate</name></member>
+    <member refid="class_effect_system_1a6f3268f2b1a70386b505f9a979c89841" kind="function"><name>CallculateEffect</name></member>
+    <member refid="class_effect_system_1a1b599411780ea6013b9de3a94252dc29" kind="function"><name>RemoveEffect</name></member>
+    <member refid="class_effect_system_1a224e059a2e658f9cad40799fdf902fbb" kind="function"><name>SetTarget</name></member>
+    <member refid="class_effect_system_1a1cc71d0093defb7c5dcbccb593876b37" kind="function"><name>Addtarget</name></member>
+    <member refid="class_effect_system_1a9419cd87fd9b4e8519fc3960dedefd22" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_effect_system_1aeacfcab72c0129a58bb18363b4763263" kind="function"><name>~EffectSystem</name></member>
+  </compound>
+  <compound refid="class_f_battle___box_module" kind="class"><name>FBattle_BoxModule</name>
+    <member refid="class_f_battle___box_module_1af9e8a9761586d4c32b376edc5d5f9664" kind="function"><name>StartupModule</name></member>
+    <member refid="class_f_battle___box_module_1af861316d1a9e9cda23763de4e970d3af" kind="function"><name>ShutdownModule</name></member>
+  </compound>
+  <compound refid="class_f_b_b___runtime___system" kind="class"><name>FBB_Runtime_System</name>
+    <member refid="class_f_b_b___runtime___system_1af98a066d4d817555652d5a1274b56885" kind="function"><name>StartupModule</name></member>
+    <member refid="class_f_b_b___runtime___system_1a8c94ff01dfdc5d43225b452f0bb27da4" kind="function"><name>ShutdownModule</name></member>
+  </compound>
+  <compound refid="class_item_action" kind="class"><name>ItemAction</name>
+    <member refid="class_item_action_1a86da96d7beb1b83eceb55297ee397088" kind="variable"><name>type</name></member>
+    <member refid="class_item_action_1ac8676cc277e93d28f1f6789fddf07da0" kind="variable"><name>value</name></member>
+    <member refid="class_item_action_1a1f7abdb1a6ced6acfa28da1767c5cd22" kind="variable"><name>effectList</name></member>
+    <member refid="class_item_action_1a93d8f1fe4fdb7223d77b5f176fcbdba0" kind="variable"><name>damageType</name></member>
+    <member refid="class_item_action_1ac1668162b93e3a97a555cff050593ec1" kind="function"><name>ItemAction</name></member>
+    <member refid="class_item_action_1a4ce5e6d0984f4b9f3352327396bb154f" kind="function"><name>ItemAction</name></member>
+    <member refid="class_item_action_1ae98143bbb738b0d4e6b98b84e1e45e05" kind="function"><name>ItemAction</name></member>
+    <member refid="class_item_action_1ad433b7e82b9144f2301190698799577e" kind="function"><name>SetType</name></member>
+    <member refid="class_item_action_1aa6fdb08d13415443f080d75d2b934773" kind="function"><name>SetValue</name></member>
+    <member refid="class_item_action_1aa40a2cc0d7f23836c8403f0b82f37a23" kind="function"><name>SetDamageType</name></member>
+    <member refid="class_item_action_1ab069950b61fd230fc34e55e546bc1772" kind="function"><name>AddEffect</name></member>
+    <member refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" kind="function"><name>ReturnItemType</name></member>
+    <member refid="class_item_action_1af05b71cc56a5edcc0771aa64d3858f4f" kind="function"><name>ReturnValue</name></member>
+    <member refid="class_item_action_1a4b2e489cc0ae92c10ce4d6d91e6b5b7d" kind="function"><name>ReturnDamageType</name></member>
+    <member refid="class_item_action_1adf02b73e5a94f785a2a5eec11cbfb003" kind="function"><name>ReturnEffectList</name></member>
+    <member refid="class_item_action_1a79871a2e6d401cff1d005fdd161c1120" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_item_action_1a69652c432e3177c89052c5a2fa3819ae" kind="function"><name>~ItemAction</name></member>
+  </compound>
+  <compound refid="class_stat_sheet_object" kind="class"><name>StatSheetObject</name>
+    <member refid="class_stat_sheet_object_1a1a5a1476f919b761c9e99b6acd1aad59" kind="variable"><name>name</name></member>
+    <member refid="class_stat_sheet_object_1a4b56942333d47debc873c70c3378c395" kind="variable"><name>tag</name></member>
+    <member refid="class_stat_sheet_object_1a4c18a652f36830845fc459e691eecafb" kind="variable"><name>commandMap</name></member>
+    <member refid="class_stat_sheet_object_1a0a2c51fc8b3f5f393db89c5db59fe73d" kind="variable"><name>itemMap</name></member>
+    <member refid="class_stat_sheet_object_1ae95872f630491286291359d6a05e62d8" kind="variable"><name>abilityMap</name></member>
+    <member refid="class_stat_sheet_object_1ad6137dd343f6c94c547f7e576a4db881" kind="variable"><name>statMap</name></member>
+    <member refid="class_stat_sheet_object_1a01fd9b3c6bc0b2173da23cb3e771af9a" kind="variable"><name>equipmentMap</name></member>
+    <member refid="class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060" kind="function"><name>StatSheetObject</name></member>
+    <member refid="class_stat_sheet_object_1a43f6237d48c0499e4746f895a462f5d6" kind="function"><name>StatSheetObject</name></member>
+    <member refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" kind="function"><name>StatSheetObject</name></member>
+    <member refid="class_stat_sheet_object_1aea46c857ac7552e6460bbc9605f0caab" kind="function"><name>SetName</name></member>
+    <member refid="class_stat_sheet_object_1a0015a317c575f299b59dc712504b0879" kind="function"><name>SetTag</name></member>
+    <member refid="class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a" kind="function"><name>ReturnName</name></member>
+    <member refid="class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44" kind="function"><name>ReturnTag</name></member>
+    <member refid="class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3" kind="function"><name>AddCommandAction</name></member>
+    <member refid="class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8" kind="function"><name>AddItemAction</name></member>
+    <member refid="class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142" kind="function"><name>AddAbilityAction</name></member>
+    <member refid="class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3" kind="function"><name>AddEquipment</name></member>
+    <member refid="class_stat_sheet_object_1ab22d60ec7f2082cf6a55e759ffc79af0" kind="function"><name>RemoveCommandAction</name></member>
+    <member refid="class_stat_sheet_object_1a3d652cd2a6177ef396a9adc27fbcdac0" kind="function"><name>RemoveItemAction</name></member>
+    <member refid="class_stat_sheet_object_1afa220913560581c6976e720c2f9d6f6a" kind="function"><name>RemoveAbilityAction</name></member>
+    <member refid="class_stat_sheet_object_1a3fe9bd16a83ba7970dcaa2cd2d68f1d5" kind="function"><name>RemoveEquipment</name></member>
+    <member refid="class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2" kind="function"><name>ReturnCommandMap</name></member>
+    <member refid="class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba" kind="function"><name>ReturnItemMap</name></member>
+    <member refid="class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4" kind="function"><name>ReturnAbilityMap</name></member>
+    <member refid="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" kind="function"><name>ReturnStatMap</name></member>
+    <member refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kind="function"><name>ReturnEquipmentMap</name></member>
+    <member refid="class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b" kind="function"><name>ReturnCommand</name></member>
+    <member refid="class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55" kind="function"><name>ReturnItem</name></member>
+    <member refid="class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd" kind="function"><name>ReturnAbility</name></member>
+    <member refid="class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a" kind="function"><name>ReturnEquipment</name></member>
+    <member refid="class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8" kind="function"><name>~StatSheetObject</name></member>
+  </compound>
+  <compound refid="class_stat_system" kind="class"><name>StatSystem</name>
+    <member refid="class_stat_system_1ae09b0274af73fc6ba5984eb00578504a" kind="variable"><name>target</name></member>
+    <member refid="class_stat_system_1ad8897d020748de4b84e6994d858867fe" kind="variable"><name>targetAction</name></member>
+    <member refid="class_stat_system_1a588a9905678c53a72b748e0b0de1fc5a" kind="variable"><name>targets</name></member>
+    <member refid="class_stat_system_1ac75d67d5db20babea9601894aee1e871" kind="function"><name>StatSystem</name></member>
+    <member refid="class_stat_system_1a805454116d5cd0a0c408117b42f413be" kind="function"><name>BaseCalculate</name></member>
+    <member refid="class_stat_system_1a69b98b0b70ffb649aaad4e8cebda95db" kind="function"><name>AddStatModifier</name></member>
+    <member refid="class_stat_system_1a02d648b7bf4890422092ef592ef6d95c" kind="function"><name>RemoveModifier</name></member>
+    <member refid="class_stat_system_1acc44ff7b73bce66d9da24df9608aab65" kind="function"><name>AddTmpModifier</name></member>
+    <member refid="class_stat_system_1a37eb3d84c033799fe52f96ae7371e9a4" kind="function"><name>SetTarget</name></member>
+    <member refid="class_stat_system_1a3db7a7b3be3f83319de0481332947674" kind="function"><name>SetTargetAction</name></member>
+    <member refid="class_stat_system_1afd6ba964080b87f599135a91466474eb" kind="function"><name>Addtarget</name></member>
+    <member refid="class_stat_system_1aa74080624aba5dd9c0836013d684e931" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_stat_system_1ae92847be88226779e422cfea7d9b597c" kind="function"><name>~StatSystem</name></member>
+  </compound>
+  <compound refid="_ability_action_8cpp" kind="file"><name>AbilityAction.cpp</name>
+  </compound>
+  <compound refid="_ability_action_8h" kind="file"><name>AbilityAction.h</name>
+  </compound>
+  <compound refid="_base_action_8cpp" kind="file"><name>BaseAction.cpp</name>
+  </compound>
+  <compound refid="_base_action_8h" kind="file"><name>BaseAction.h</name>
+    <member refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kind="enum"><name>ACTIONTYPE</name></member>
+    <member refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb" kind="enumvalue"><name>E_COMMAND</name></member>
+    <member refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61" kind="enumvalue"><name>E_ITEM</name></member>
+    <member refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920" kind="enumvalue"><name>E_ABILITY</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kind="enum"><name>TARGETTYPE</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d" kind="enumvalue"><name>E_TARGET_ENEMY</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57" kind="enumvalue"><name>E_ALL_ENEMIES</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d" kind="enumvalue"><name>E_RANDOM_ENEMY</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f" kind="enumvalue"><name>E_ALLY</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0" kind="enumvalue"><name>E_ALL_ALLY</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c" kind="enumvalue"><name>E_ALLY_KO</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788" kind="enumvalue"><name>E_ALL_ALLY_KO</name></member>
+    <member refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335" kind="enumvalue"><name>E_USER</name></member>
+    <member refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kind="enum"><name>INTERACTIONTYPE</name></member>
+    <member refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9" kind="enumvalue"><name>E_PHYSICAL</name></member>
+    <member refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920" kind="enumvalue"><name>E_ABILITY</name></member>
+    <member refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb" kind="enumvalue"><name>E_PHYSICAL_AND_ABILITY</name></member>
+    <member refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" kind="enum"><name>DAMAGETYPE</name></member>
+    <member refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d" kind="enumvalue"><name>E_HP_DAMAGE</name></member>
+    <member refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607" kind="enumvalue"><name>E_MP_DAMAGE</name></member>
+    <member refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1" kind="enumvalue"><name>E_HP_RECOVER</name></member>
+    <member refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca" kind="enumvalue"><name>E_MP_RECOVER</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bf" kind="enum"><name>ELEMENTTYPE</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa" kind="enumvalue"><name>E_FLAME</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892" kind="enumvalue"><name>E_WATER</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80" kind="enumvalue"><name>E_EARTH</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c" kind="enumvalue"><name>E_ICE</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c" kind="enumvalue"><name>E_THUNDER</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e" kind="enumvalue"><name>E_WIND</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554" kind="enumvalue"><name>E_LIGHT</name></member>
+    <member refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7" kind="enumvalue"><name>E_DARK</name></member>
+  </compound>
+  <compound refid="_command_action_8cpp" kind="file"><name>CommandAction.cpp</name>
+  </compound>
+  <compound refid="_command_action_8h" kind="file"><name>CommandAction.h</name>
+    <member refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03" kind="enum"><name>WEAPONTYPE</name></member>
+    <member refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a1cc41ef898c7dc5a33b95675fd1ae0a3" kind="enumvalue"><name>E_BLADE</name></member>
+    <member refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a3a4bd5ec1b9e1a449a030e95737fcccb" kind="enumvalue"><name>E_RANGE</name></member>
+    <member refid="_command_action_8h_1a7c40fc58b569c771a25b2d876500bc03a154165a6024f0465ffdb2559926cd465" kind="enumvalue"><name>E_BLUNT_WEAP</name></member>
+  </compound>
+  <compound refid="_item_action_8cpp" kind="file"><name>ItemAction.cpp</name>
+  </compound>
+  <compound refid="_item_action_8h" kind="file"><name>ItemAction.h</name>
+    <member refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746" kind="enum"><name>ITEMTYPE</name></member>
+    <member refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c" kind="enumvalue"><name>E_CONSUMABLE</name></member>
+    <member refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3522a06e460b0cab0962e66d20a4913d" kind="enumvalue"><name>E_ARMOR</name></member>
+    <member refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87" kind="enumvalue"><name>E_WEAPON</name></member>
+    <member refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a3c72ed2815dc6cb034ee0a47d58cc6d6" kind="enumvalue"><name>E_KEY_ITEM</name></member>
+  </compound>
+  <compound refid="_battle___box_8cpp" kind="file"><name>Battle_Box.cpp</name>
+    <member refid="_battle___box_8cpp_1a0de3ae51f3a629a8e5d113f1b9390da7" kind="define"><name>LOCTEXT_NAMESPACE</name></member>
+  </compound>
+  <compound refid="_battle_box_file_manager_8cpp" kind="file"><name>BattleBoxFileManager.cpp</name>
+  </compound>
+  <compound refid="_battle_box_file_manager_8h" kind="file"><name>BattleBoxFileManager.h</name>
+  </compound>
+  <compound refid="_debuger_8cpp" kind="file"><name>Debuger.cpp</name>
+  </compound>
+  <compound refid="_debugger_8h" kind="file"><name>Debugger.h</name>
+    <member refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013" kind="enum"><name>MessageType</name></member>
+    <member refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a60880a7ff476d1de07c31261d81d4100" kind="enumvalue"><name>E_NONE</name></member>
+    <member refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8" kind="enumvalue"><name>E_INFO</name></member>
+    <member refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd" kind="enumvalue"><name>E_WARNING</name></member>
+    <member refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76" kind="enumvalue"><name>E_ERROR</name></member>
+    <member refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3" kind="enumvalue"><name>E_FATAL_ERROR</name></member>
+  </compound>
+  <compound refid="_stat_sheet_object_8cpp" kind="file"><name>StatSheetObject.cpp</name>
+  </compound>
+  <compound refid="_stat_sheet_object_8h" kind="file"><name>StatSheetObject.h</name>
+  </compound>
+  <compound refid="_battle___box_8h" kind="file"><name>Battle_Box.h</name>
+  </compound>
+  <compound refid="_b_b___runtime___system_8cpp" kind="file"><name>BB_Runtime_System.cpp</name>
+    <member refid="_b_b___runtime___system_8cpp_1a0de3ae51f3a629a8e5d113f1b9390da7" kind="define"><name>LOCTEXT_NAMESPACE</name></member>
+  </compound>
+  <compound refid="_base_system_8h" kind="file"><name>BaseSystem.h</name>
+  </compound>
+  <compound refid="_damage_delt_system_8cpp" kind="file"><name>DamageDeltSystem.cpp</name>
+  </compound>
+  <compound refid="_damage_delt_system_8h" kind="file"><name>DamageDeltSystem.h</name>
+  </compound>
+  <compound refid="_effect_system_8cpp" kind="file"><name>EffectSystem.cpp</name>
+  </compound>
+  <compound refid="_effect_system_8h" kind="file"><name>EffectSystem.h</name>
+  </compound>
+  <compound refid="_stat_system_8cpp" kind="file"><name>StatSystem.cpp</name>
+  </compound>
+  <compound refid="_stat_system_8h" kind="file"><name>StatSystem.h</name>
+  </compound>
+  <compound refid="_b_b___runtime___system_8h" kind="file"><name>BB_Runtime_System.h</name>
+  </compound>
+  <compound refid="dir_54749c99862b95bead89026183d4b066" kind="dir"><name>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System</name>
+  </compound>
+  <compound refid="dir_117a8d14e29ac214c34f774cf7266e61" kind="dir"><name>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private</name>
+  </compound>
+  <compound refid="dir_810541451b939e056fa48087c334de95" kind="dir"><name>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Public</name>
+  </compound>
+  <compound refid="dir_97e6c5d0067f5d1d5ec6366dc789372f" kind="dir"><name>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Public</name>
+  </compound>
+  <compound refid="dir_e62df1e735427e812253531f25cd505f" kind="dir"><name>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses</name>
+  </compound>
+</doxygenindex>

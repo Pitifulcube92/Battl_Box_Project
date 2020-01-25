@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_stat_system_8h" kind="file" language="C++">
+    <compoundname>StatSystem.h</compoundname>
+    <includes refid="_base_system_8h" local="yes">BaseSystem.h</includes>
+    <includes local="yes">Containers/Array.h</includes>
+    <includedby refid="_stat_system_8cpp" local="yes">D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Containers/Array.h</label>
+      </node>
+      <node id="2">
+        <label>BaseSystem.h</label>
+        <link refid="_base_system_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h</label>
+        <link refid="_stat_system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h</label>
+        <link refid="_stat_system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp</label>
+        <link refid="_stat_system_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_stat_system" prot="public">StatSystem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>1998-2019<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STATSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STATSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_base_system_8h" kindref="compound">BaseSystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Containers/Array.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_base_action" kindref="compound">BaseAction</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_stat_system" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stat_system" kindref="compound">StatSystem</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_system" kindref="compound">BaseSystem</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/>target;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/>targetAction;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>TArray&lt;StatSheetObject*&gt;<sp/>targets;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_system_1ac75d67d5db20babea9601894aee1e871" kindref="member">StatSystem</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a805454116d5cd0a0c408117b42f413be" kindref="member">BaseCalculate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsSingleTarget_,<sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a69b98b0b70ffb649aaad4e8cebda95db" kindref="member">AddStatModifier</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a02d648b7bf4890422092ef592ef6d95c" kindref="member">RemoveModifier</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1acc44ff7b73bce66d9da24df9608aab65" kindref="member">AddTmpModifier</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/>action_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duration_);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a37eb3d84c033799fe52f96ae7371e9a4" kindref="member">SetTarget</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a3db7a7b3be3f83319de0481332947674" kindref="member">SetTargetAction</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1afd6ba964080b87f599135a91466474eb" kindref="member">Addtarget</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1aa74080624aba5dd9c0836013d684e931" kindref="member">OnDestroy</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat_system_1ae92847be88226779e422cfea7d9b597c" kindref="member">~StatSystem</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!STATSYSTEM_H</highlight></codeline>
+    </programlisting>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_base_action_8h" kind="file" language="C++">
+    <compoundname>BaseAction.h</compoundname>
+    <includes local="yes">CoreMinimal.h</includes>
+    <includedby refid="_ability_action_8h" local="yes">AbilityAction.h</includedby>
+    <includedby refid="_base_action_8cpp" local="yes">BaseAction.cpp</includedby>
+    <includedby refid="_command_action_8h" local="yes">CommandAction.h</includedby>
+    <includedby refid="_item_action_8h" local="yes">ItemAction.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="1">
+        <label>BaseAction.h</label>
+        <link refid="_base_action_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>CommandAction.h</label>
+        <link refid="_command_action_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ItemAction.cpp</label>
+        <link refid="_item_action_8cpp"/>
+      </node>
+      <node id="4">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp</label>
+        <link refid="_stat_sheet_object_8cpp"/>
+      </node>
+      <node id="7">
+        <label>CommandAction.cpp</label>
+        <link refid="_command_action_8cpp"/>
+      </node>
+      <node id="1">
+        <label>BaseAction.h</label>
+        <link refid="_base_action_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AbilityAction.h</label>
+        <link refid="_ability_action_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BaseAction.cpp</label>
+        <link refid="_base_action_8cpp"/>
+      </node>
+      <node id="3">
+        <label>AbilityAction.cpp</label>
+        <link refid="_ability_action_8cpp"/>
+      </node>
+      <node id="8">
+        <label>ItemAction.h</label>
+        <link refid="_item_action_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_base_action" prot="public">BaseAction</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ACTIONTYPE</name>
+        <enumvalue id="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" prot="public">
+          <name>E_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb" prot="public">
+          <name>E_COMMAND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61" prot="public">
+          <name>E_ITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920" prot="public">
+          <name>E_ABILITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="6" column="1" bodyfile="BaseAction.h" bodystart="5" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="enum" id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TARGETTYPE</name>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100" prot="public">
+          <name>E_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d" prot="public">
+          <name>E_TARGET_ENEMY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57" prot="public">
+          <name>E_ALL_ENEMIES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d" prot="public">
+          <name>E_RANDOM_ENEMY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f" prot="public">
+          <name>E_ALLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0" prot="public">
+          <name>E_ALL_ALLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c" prot="public">
+          <name>E_ALLY_KO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788" prot="public">
+          <name>E_ALL_ALLY_KO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335" prot="public">
+          <name>E_USER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="14" column="1" bodyfile="BaseAction.h" bodystart="13" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="enum" id="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>INTERACTIONTYPE</name>
+        <enumvalue id="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100" prot="public">
+          <name>E_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9" prot="public">
+          <name>E_PHYSICAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920" prot="public">
+          <name>E_ABILITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb" prot="public">
+          <name>E_PHYSICAL_AND_ABILITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="27" column="1" bodyfile="BaseAction.h" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>DAMAGETYPE</name>
+        <enumvalue id="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100" prot="public">
+          <name>E_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d" prot="public">
+          <name>E_HP_DAMAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607" prot="public">
+          <name>E_MP_DAMAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1" prot="public">
+          <name>E_HP_RECOVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca" prot="public">
+          <name>E_MP_RECOVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="35" column="1" bodyfile="BaseAction.h" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bf" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ELEMENTTYPE</name>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100" prot="public">
+          <name>E_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa" prot="public">
+          <name>E_FLAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892" prot="public">
+          <name>E_WATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80" prot="public">
+          <name>E_EARTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c" prot="public">
+          <name>E_ICE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c" prot="public">
+          <name>E_THUNDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e" prot="public">
+          <name>E_WIND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554" prot="public">
+          <name>E_LIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7" prot="public">
+          <name>E_DARK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="BaseAction.h" line="44" column="1" bodyfile="BaseAction.h" bodystart="43" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Fill<sp/>out<sp/>your<sp/>copyright<sp/>notice<sp/>in<sp/>the<sp/>Description<sp/>page<sp/>of<sp/>Project<sp/>Settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BASEACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASEACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CoreMinimal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">E_NONE</ref>,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb" kindref="member">E_COMMAND</ref>,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61" kindref="member">E_ITEM</ref>,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920" kindref="member">E_ABILITY</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">E_NONE</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d" kindref="member">E_TARGET_ENEMY</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57" kindref="member">E_ALL_ENEMIES</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d" kindref="member">E_RANDOM_ENEMY</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f" kindref="member">E_ALLY</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0" kindref="member">E_ALL_ALLY</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c" kindref="member">E_ALLY_KO</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788" kindref="member">E_ALL_ALLY_KO</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335" kindref="member">E_USER</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">E_NONE</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9" kindref="member">E_PHYSICAL</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920" kindref="member">E_ABILITY</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb" kindref="member">E_PHYSICAL_AND_ABILITY</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434c" kindref="member">DAMAGETYPE</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">E_NONE</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d" kindref="member">E_HP_DAMAGE</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607" kindref="member">E_MP_DAMAGE</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1" kindref="member">E_HP_RECOVER</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca" kindref="member">E_MP_RECOVER</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bf" kindref="member">ELEMENTTYPE</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100" kindref="member">E_NONE</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa" kindref="member">E_FLAME</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892" kindref="member">E_WATER</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80" kindref="member">E_EARTH</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c" kindref="member">E_ICE</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c" kindref="member">E_THUNDER</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e" kindref="member">E_WIND</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554" kindref="member">E_LIGHT</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7" kindref="member">E_DARK</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_base_action" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_base_action" kindref="compound">BaseAction</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/>name;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/>discription;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref><sp/>action;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref><sp/>target;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref><sp/>interaction;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32<sp/>actionID;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>float&gt;<sp/>statMap;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" kindref="member">BaseAction</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Base<sp/>Construction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" kindref="member">BaseAction</ref>(FString<sp/>name_,<sp/>FString<sp/>discription_,<sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref><sp/>action_,<sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref><sp/>target_,<sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref><sp/>interaction_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32<sp/>actionID_,<sp/>TMap&lt;FString,<sp/>float&gt;<sp/>statMap_);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_action_1a7662eb2bee3cab3daa07fd4f91f9ebd3" kindref="member">BaseAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/>other_);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>Name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1ad307b128f9ded949daa718fc1364919c" kindref="member">SetName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>name_);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>Discription.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1a0a4bd7fd3ce61159e35282a7b05659a7" kindref="member">SetDiscription</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FString<sp/>discription_);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>Actiontype.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1ad040813bdd0c9f622ef5dd42db46f530" kindref="member">SetActionType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref><sp/>type_);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>target<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1a6f0ca61c63f46332e6507fc2ee2b29f8" kindref="member">SetTargetType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref><sp/>type_);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>interaction<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1ae0e83722e14079e10f7d43d54ba4898e" kindref="member">SetInteractionType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref><sp/>type_);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>action<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1a82e6afa7a79dee542492d587904dc380" kindref="member">SetActionID</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32<sp/>actionID_);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1a933e2ff31a35d79bcc96d1d6b7f3c458" kindref="member">OnDestroy</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>Name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/><ref refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" kindref="member">ReturnName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>discription.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>FString<sp/><ref refid="class_base_action_1a66e6fdeaefdcd4606eaa2964e2020049" kindref="member">ReturnDiscription</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>action<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949a" kindref="member">ACTIONTYPE</ref><sp/><ref refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" kindref="member">ReturnActionType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>target<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1a607550079f88dc0df6c9761da9352ec7" kindref="member">TARGETTYPE</ref><sp/><ref refid="class_base_action_1a3286f0bb34ada3b25b0ccb5a7b456f9d" kindref="member">ReturnTargetType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>Interaction<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3" kindref="member">INTERACTIONTYPE</ref><sp/><ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>Action<sp/>ID.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32<sp/><ref refid="class_base_action_1a0954da9087f93b46ea68468de1ecce92" kindref="member">ReturnActionID</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>Stat<sp/>Map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>TMap&lt;FString,<sp/>float&gt;<sp/><ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_base_action_1a8a23c4be7948ffae58850b7f16da3a1a" kindref="member">~BaseAction</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="BaseAction.h"/>
+  </compounddef>
+</doxygen>

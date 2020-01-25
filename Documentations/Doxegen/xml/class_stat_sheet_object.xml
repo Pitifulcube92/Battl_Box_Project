@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_stat_sheet_object" kind="class" language="C++" prot="public">
+    <compoundname>StatSheetObject</compoundname>
+    <includes refid="_stat_sheet_object_8h" local="no">StatSheetObject.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stat_sheet_object_1a1a5a1476f919b761c9e99b6acd1aad59" prot="private" static="no" mutable="no">
+        <type>FString</type>
+        <definition>FString StatSheetObject::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="17" column="9" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_sheet_object_1a4b56942333d47debc873c70c3378c395" prot="private" static="no" mutable="no">
+        <type>FString</type>
+        <definition>FString StatSheetObject::tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="18" column="9" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_sheet_object_1a4c18a652f36830845fc459e691eecafb" prot="private" static="no" mutable="no">
+        <type>TMap&lt; FString, <ref refid="class_command_action" kindref="compound">CommandAction</ref> * &gt;</type>
+        <definition>TMap&lt;FString, CommandAction*&gt; StatSheetObject::commandMap</definition>
+        <argsstring></argsstring>
+        <name>commandMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="19" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_sheet_object_1a0a2c51fc8b3f5f393db89c5db59fe73d" prot="private" static="no" mutable="no">
+        <type>TMap&lt; FString, <ref refid="class_item_action" kindref="compound">ItemAction</ref> * &gt;</type>
+        <definition>TMap&lt;FString, ItemAction*&gt; StatSheetObject::itemMap</definition>
+        <argsstring></argsstring>
+        <name>itemMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="20" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_sheet_object_1ae95872f630491286291359d6a05e62d8" prot="private" static="no" mutable="no">
+        <type>TMap&lt; FString, <ref refid="class_ability_action" kindref="compound">AbilityAction</ref> * &gt;</type>
+        <definition>TMap&lt;FString, AbilityAction*&gt; StatSheetObject::abilityMap</definition>
+        <argsstring></argsstring>
+        <name>abilityMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="21" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_sheet_object_1ad6137dd343f6c94c547f7e576a4db881" prot="private" static="no" mutable="no">
+        <type>TMap&lt; FString, float &gt;</type>
+        <definition>TMap&lt;FString, float&gt; StatSheetObject::statMap</definition>
+        <argsstring></argsstring>
+        <name>statMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="22" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stat_sheet_object_1a01fd9b3c6bc0b2173da23cb3e771af9a" prot="private" static="no" mutable="no">
+        <type>TMap&lt; FString, <ref refid="class_item_action" kindref="compound">ItemAction</ref> * &gt;</type>
+        <definition>TMap&lt;FString, ItemAction*&gt; StatSheetObject::equipmentMap</definition>
+        <argsstring></argsstring>
+        <name>equipmentMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="23" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatSheetObject::StatSheetObject</definition>
+        <argsstring>()</argsstring>
+        <name>StatSheetObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="26" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a43f6237d48c0499e4746f895a462f5d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatSheetObject::StatSheetObject</definition>
+        <argsstring>(const FString name_, const FString tag_, const TMap&lt; FString, CommandAction * &gt; commandMap_, const TMap&lt; FString, ItemAction * &gt; itemMap_, const TMap&lt; FString, AbilityAction * &gt; abilityMap_, const TMap&lt; FString, float &gt; statMap_, const TMap&lt; FString, ItemAction * &gt; equipmentMap_)</argsstring>
+        <name>StatSheetObject</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>const FString</type>
+          <declname>tag_</declname>
+        </param>
+        <param>
+          <type>const TMap&lt; FString, <ref refid="class_command_action" kindref="compound">CommandAction</ref> * &gt;</type>
+          <declname>commandMap_</declname>
+        </param>
+        <param>
+          <type>const TMap&lt; FString, <ref refid="class_item_action" kindref="compound">ItemAction</ref> * &gt;</type>
+          <declname>itemMap_</declname>
+        </param>
+        <param>
+          <type>const TMap&lt; FString, <ref refid="class_ability_action" kindref="compound">AbilityAction</ref> * &gt;</type>
+          <declname>abilityMap_</declname>
+        </param>
+        <param>
+          <type>const TMap&lt; FString, float &gt;</type>
+          <declname>statMap_</declname>
+        </param>
+        <param>
+          <type>const TMap&lt; FString, <ref refid="class_item_action" kindref="compound">ItemAction</ref> * &gt;</type>
+          <declname>equipmentMap_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="27" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatSheetObject::StatSheetObject</definition>
+        <argsstring>(StatSheetObject *const other_)</argsstring>
+        <name>StatSheetObject</name>
+        <param>
+          <type><ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref> *const</type>
+          <declname>other_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="28" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="24" bodyend="34"/>
+        <references refid="class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4" compoundref="_stat_sheet_object_8cpp" startline="132" endline="135">ReturnAbilityMap</references>
+        <references refid="class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2" compoundref="_stat_sheet_object_8cpp" startline="124" endline="127">ReturnCommandMap</references>
+        <references refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" compoundref="_stat_sheet_object_8cpp" startline="140" endline="143">ReturnEquipmentMap</references>
+        <references refid="class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba" compoundref="_stat_sheet_object_8cpp" startline="128" endline="131">ReturnItemMap</references>
+        <references refid="class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a" compoundref="_stat_sheet_object_8cpp" startline="43" endline="46">ReturnName</references>
+        <references refid="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" compoundref="_stat_sheet_object_8cpp" startline="136" endline="139">ReturnStatMap</references>
+        <references refid="class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44" compoundref="_stat_sheet_object_8cpp" startline="47" endline="50">ReturnTag</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1aea46c857ac7552e6460bbc9605f0caab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::SetName</definition>
+        <argsstring>(const FString name_)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="29" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a0015a317c575f299b59dc712504b0879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::SetTag</definition>
+        <argsstring>(const FString tag_)</argsstring>
+        <name>SetTag</name>
+        <param>
+          <type>const FString</type>
+          <declname>tag_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="30" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>FString</type>
+        <definition>FString StatSheetObject::ReturnName</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="31" column="9" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="43" bodyend="46"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>FString</type>
+        <definition>FString StatSheetObject::ReturnTag</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnTag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="32" column="9" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="47" bodyend="50"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::AddCommandAction</definition>
+        <argsstring>(CommandAction *const command_)</argsstring>
+        <name>AddCommandAction</name>
+        <param>
+          <type><ref refid="class_command_action" kindref="compound">CommandAction</ref> *const</type>
+          <declname>command_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="33" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="51" bodyend="54"/>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::AddItemAction</definition>
+        <argsstring>(ItemAction *const item_)</argsstring>
+        <name>AddItemAction</name>
+        <param>
+          <type><ref refid="class_item_action" kindref="compound">ItemAction</ref> *const</type>
+          <declname>item_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="34" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="55" bodyend="58"/>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::AddAbilityAction</definition>
+        <argsstring>(AbilityAction *const ability_)</argsstring>
+        <name>AddAbilityAction</name>
+        <param>
+          <type><ref refid="class_ability_action" kindref="compound">AbilityAction</ref> *const</type>
+          <declname>ability_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="35" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="59" bodyend="62"/>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::AddEquipment</definition>
+        <argsstring>(ItemAction *const equipment_)</argsstring>
+        <name>AddEquipment</name>
+        <param>
+          <type><ref refid="class_item_action" kindref="compound">ItemAction</ref> *const</type>
+          <declname>equipment_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="36" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="63" bodyend="66"/>
+        <references refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2">BaseAction::ReturnName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1ab22d60ec7f2082cf6a55e759ffc79af0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::RemoveCommandAction</definition>
+        <argsstring>(const FString name_)</argsstring>
+        <name>RemoveCommandAction</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="37" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a3d652cd2a6177ef396a9adc27fbcdac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::RemoveItemAction</definition>
+        <argsstring>(const FString name_)</argsstring>
+        <name>RemoveItemAction</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="38" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1afa220913560581c6976e720c2f9d6f6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::RemoveAbilityAction</definition>
+        <argsstring>(const FString name_)</argsstring>
+        <name>RemoveAbilityAction</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="39" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a3fe9bd16a83ba7970dcaa2cd2d68f1d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::RemoveEquipment</definition>
+        <argsstring>(const FString name_)</argsstring>
+        <name>RemoveEquipment</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="40" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMap&lt; FString, <ref refid="class_command_action" kindref="compound">CommandAction</ref> * &gt;</type>
+        <definition>TMap&lt; FString, CommandAction * &gt; StatSheetObject::ReturnCommandMap</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnCommandMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="41" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="124" bodyend="127"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMap&lt; FString, <ref refid="class_item_action" kindref="compound">ItemAction</ref> * &gt;</type>
+        <definition>TMap&lt; FString, ItemAction * &gt; StatSheetObject::ReturnItemMap</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnItemMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="42" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="128" bodyend="131"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMap&lt; FString, <ref refid="class_ability_action" kindref="compound">AbilityAction</ref> * &gt;</type>
+        <definition>TMap&lt; FString, AbilityAction * &gt; StatSheetObject::ReturnAbilityMap</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnAbilityMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="43" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="132" bodyend="135"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMap&lt; FString, float &gt;</type>
+        <definition>TMap&lt; FString, float &gt; StatSheetObject::ReturnStatMap</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnStatMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="44" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="136" bodyend="139"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TMap&lt; FString, <ref refid="class_item_action" kindref="compound">ItemAction</ref> * &gt;</type>
+        <definition>TMap&lt; FString, ItemAction * &gt; StatSheetObject::ReturnEquipmentMap</definition>
+        <argsstring>() const</argsstring>
+        <name>ReturnEquipmentMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="45" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="140" bodyend="143"/>
+        <referencedby refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" compoundref="_stat_sheet_object_8cpp" startline="24" endline="34">StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_command_action" kindref="compound">CommandAction</ref> *</type>
+        <definition>CommandAction * StatSheetObject::ReturnCommand</definition>
+        <argsstring>(FString name_) const</argsstring>
+        <name>ReturnCommand</name>
+        <param>
+          <type>FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="46" column="15" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="83" bodyend="92"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <references refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" compoundref="_debuger_8cpp" startline="43" endline="46">Debugger::Error</references>
+        <references refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" compoundref="_debuger_8cpp" startline="35" endline="38">Debugger::SetSeverity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_item_action" kindref="compound">ItemAction</ref> *</type>
+        <definition>ItemAction * StatSheetObject::ReturnItem</definition>
+        <argsstring>(const FString name_) const</argsstring>
+        <name>ReturnItem</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="47" column="12" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="93" bodyend="102"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <references refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" compoundref="_debuger_8cpp" startline="43" endline="46">Debugger::Error</references>
+        <references refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" compoundref="_debuger_8cpp" startline="35" endline="38">Debugger::SetSeverity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_ability_action" kindref="compound">AbilityAction</ref> *</type>
+        <definition>AbilityAction * StatSheetObject::ReturnAbility</definition>
+        <argsstring>(const FString name_) const</argsstring>
+        <name>ReturnAbility</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="48" column="15" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="103" bodyend="113"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <references refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" compoundref="_debuger_8cpp" startline="43" endline="46">Debugger::Error</references>
+        <references refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" compoundref="_debuger_8cpp" startline="35" endline="38">Debugger::SetSeverity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_item_action" kindref="compound">ItemAction</ref> *</type>
+        <definition>ItemAction * StatSheetObject::ReturnEquipment</definition>
+        <argsstring>(const FString name_) const</argsstring>
+        <name>ReturnEquipment</name>
+        <param>
+          <type>const FString</type>
+          <declname>name_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="49" column="12" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="114" bodyend="123"/>
+        <references refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">E_ERROR</references>
+        <references refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" compoundref="_debuger_8cpp" startline="43" endline="46">Debugger::Error</references>
+        <references refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" compoundref="_debuger_8cpp" startline="35" endline="38">Debugger::SetSeverity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatSheetObject::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="50" column="6" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="144" bodyend="155"/>
+        <referencedby refid="class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8" compoundref="_stat_sheet_object_8cpp" startline="156" endline="159">~StatSheetObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatSheetObject::~StatSheetObject</definition>
+        <argsstring>()</argsstring>
+        <name>~StatSheetObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="51" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" bodystart="156" bodyend="159"/>
+        <references refid="class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d" compoundref="_stat_sheet_object_8cpp" startline="144" endline="155">OnDestroy</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>StatSheetObject</label>
+        <link refid="class_stat_sheet_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" line="15" column="1" bodyfile="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.h" bodystart="14" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_stat_sheet_object_1ae95872f630491286291359d6a05e62d8" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>abilityMap</name></member>
+      <member refid="class_stat_sheet_object_1ad9ec606301ee7f1a0c94217a5cc0b142" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>AddAbilityAction</name></member>
+      <member refid="class_stat_sheet_object_1ad9c4cf7a66ce5f1665b1400015fa8dc3" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>AddCommandAction</name></member>
+      <member refid="class_stat_sheet_object_1a1925be119c8aa3dafca64e7c025b36e3" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>AddEquipment</name></member>
+      <member refid="class_stat_sheet_object_1aec28b9c716aaa3274f5bcd82930b70f8" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>AddItemAction</name></member>
+      <member refid="class_stat_sheet_object_1a4c18a652f36830845fc459e691eecafb" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>commandMap</name></member>
+      <member refid="class_stat_sheet_object_1a01fd9b3c6bc0b2173da23cb3e771af9a" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>equipmentMap</name></member>
+      <member refid="class_stat_sheet_object_1a0a2c51fc8b3f5f393db89c5db59fe73d" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>itemMap</name></member>
+      <member refid="class_stat_sheet_object_1a1a5a1476f919b761c9e99b6acd1aad59" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>name</name></member>
+      <member refid="class_stat_sheet_object_1afb4f166bb980f7e367981397a9c5379d" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>OnDestroy</name></member>
+      <member refid="class_stat_sheet_object_1afa220913560581c6976e720c2f9d6f6a" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>RemoveAbilityAction</name></member>
+      <member refid="class_stat_sheet_object_1ab22d60ec7f2082cf6a55e759ffc79af0" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>RemoveCommandAction</name></member>
+      <member refid="class_stat_sheet_object_1a3fe9bd16a83ba7970dcaa2cd2d68f1d5" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>RemoveEquipment</name></member>
+      <member refid="class_stat_sheet_object_1a3d652cd2a6177ef396a9adc27fbcdac0" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>RemoveItemAction</name></member>
+      <member refid="class_stat_sheet_object_1a4026d7a8088f539e3f34d80613f8dccd" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnAbility</name></member>
+      <member refid="class_stat_sheet_object_1a4b6e004e70d178b864126a93d6ea3df4" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnAbilityMap</name></member>
+      <member refid="class_stat_sheet_object_1adee30a8470b9fd57b32f4892aacac55b" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnCommand</name></member>
+      <member refid="class_stat_sheet_object_1a9b6fcf1480b8d15424f5476ed40604d2" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnCommandMap</name></member>
+      <member refid="class_stat_sheet_object_1ad7e95011555f4015c74ecf7e053e529a" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnEquipment</name></member>
+      <member refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnEquipmentMap</name></member>
+      <member refid="class_stat_sheet_object_1a68ac4e437d66c297c8c74bdc95dcfc55" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnItem</name></member>
+      <member refid="class_stat_sheet_object_1a16559559522d65dfb2d4baf3881bc1ba" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnItemMap</name></member>
+      <member refid="class_stat_sheet_object_1a5b875038059a4d910ef9af1ff8cec26a" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnName</name></member>
+      <member refid="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnStatMap</name></member>
+      <member refid="class_stat_sheet_object_1ac0352b9c1c206b2cecd57e9d2d028e44" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>ReturnTag</name></member>
+      <member refid="class_stat_sheet_object_1aea46c857ac7552e6460bbc9605f0caab" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>SetName</name></member>
+      <member refid="class_stat_sheet_object_1a0015a317c575f299b59dc712504b0879" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>SetTag</name></member>
+      <member refid="class_stat_sheet_object_1ad6137dd343f6c94c547f7e576a4db881" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>statMap</name></member>
+      <member refid="class_stat_sheet_object_1ad888b9681bca9f42638ae6d845012060" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>StatSheetObject</name></member>
+      <member refid="class_stat_sheet_object_1a43f6237d48c0499e4746f895a462f5d6" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>StatSheetObject</name></member>
+      <member refid="class_stat_sheet_object_1a0122cd38668000c17134d6d267b31df2" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>StatSheetObject</name></member>
+      <member refid="class_stat_sheet_object_1a4b56942333d47debc873c70c3378c395" prot="private" virt="non-virtual"><scope>StatSheetObject</scope><name>tag</name></member>
+      <member refid="class_stat_sheet_object_1a5b6b1adcd9e73b5c852cc9bb56c540a8" prot="public" virt="non-virtual"><scope>StatSheetObject</scope><name>~StatSheetObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

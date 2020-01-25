@@ -1,0 +1,100 @@
+\hypertarget{a00119}{}\doxysection{F\+Battle\+\_\+\+Box\+Module Class Reference}
+\label{a00119}\index{FBattle\_BoxModule@{FBattle\_BoxModule}}
+
+
+{\ttfamily \#include $<$Battle\+\_\+\+Box.\+h$>$}
+
+
+
+Inheritance diagram for F\+Battle\+\_\+\+Box\+Module\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{d8/d87/a00118}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for F\+Battle\+\_\+\+Box\+Module\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{d9/d4b/a00117}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{a00119_af861316d1a9e9cda23763de4e970d3af}{Shutdown\+Module}} () override
+\item 
+virtual void \mbox{\hyperlink{a00119_af9e8a9761586d4c32b376edc5d5f9664}{Startup\+Module}} () override
+\begin{DoxyCompactList}\small\item\em I\+Module\+Interface implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file Battle\+\_\+\+Box.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00119_af861316d1a9e9cda23763de4e970d3af}\label{a00119_af861316d1a9e9cda23763de4e970d3af}} 
+\index{FBattle\_BoxModule@{FBattle\_BoxModule}!ShutdownModule@{ShutdownModule}}
+\index{ShutdownModule@{ShutdownModule}!FBattle\_BoxModule@{FBattle\_BoxModule}}
+\doxysubsubsection{\texorpdfstring{ShutdownModule()}{ShutdownModule()}}
+{\footnotesize\ttfamily void F\+Battle\+\_\+\+Box\+Module\+::\+Shutdown\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 25 of file Battle\+\_\+\+Box.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27      \textcolor{comment}{// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,}}
+\DoxyCodeLine{28      \textcolor{comment}{// we call this function before unloading the module.}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00119_af9e8a9761586d4c32b376edc5d5f9664}\label{a00119_af9e8a9761586d4c32b376edc5d5f9664}} 
+\index{FBattle\_BoxModule@{FBattle\_BoxModule}!StartupModule@{StartupModule}}
+\index{StartupModule@{StartupModule}!FBattle\_BoxModule@{FBattle\_BoxModule}}
+\doxysubsubsection{\texorpdfstring{StartupModule()}{StartupModule()}}
+{\footnotesize\ttfamily void F\+Battle\+\_\+\+Box\+Module\+::\+Startup\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+I\+Module\+Interface implementation. 
+
+
+
+Definition at line 8 of file Battle\+\_\+\+Box.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10      \textcolor{comment}{// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-\/module}}
+\DoxyCodeLine{11      \mbox{\hyperlink{a00111_a9ab35dcd08d8f181e262f4c8fb1ec892}{Debugger::InitDebug}}();}
+\DoxyCodeLine{12      \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013ad7d6f2df5e4ec3ea8c26f540467f77a8}{MessageType::E\_INFO}});}
+\DoxyCodeLine{13      \mbox{\hyperlink{a00111_aef91ed84489c9c928445e1f712d401de}{Debugger::Info}}(\textcolor{stringliteral}{"Info is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15      \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
+\DoxyCodeLine{16      \mbox{\hyperlink{a00111_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"Error is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18      \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd}{MessageType::E\_WARNING}});}
+\DoxyCodeLine{19      \mbox{\hyperlink{a00111_a6f945a47fa65d5eb4f93a1db124324f3}{Debugger::Warrning}}(\textcolor{stringliteral}{"Warning is Working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21      \mbox{\hyperlink{a00111_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{a00041_ac6606ebe91c8ac66a2c314c79f5ab013aea87156966d3f9fb099b1919c78a2ea3}{MessageType::E\_FATAL\_ERROR}});}
+\DoxyCodeLine{22      \mbox{\hyperlink{a00111_a34151070033a196f3a220dd0297fd3d6}{Debugger::FatalError}}(\textcolor{stringliteral}{"FatalError is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d6a/a00119_af9e8a9761586d4c32b376edc5d5f9664_cgraph}
+\end{center}
+\end{figure}

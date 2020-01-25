@@ -14,10 +14,14 @@ private:
 	BaseAction* targetAction;
 public:
 	EffectSystem();
-	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
-	void CallculateEffect(BaseAction* action_);
+	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_); \
+	///Calculates the effect	
+	void CallculateEffect(BaseAction* action_);	
+	///Removes the effect by the action.
 	void RemoveEffect(BaseAction* action_);
+	///Sets target
 	void SetTarget(StatSheetObject* target_);
+	///Add target to the target array
 	void Addtarget(StatSheetObject* target_);
 	void OnDestroy();
 	~EffectSystem();

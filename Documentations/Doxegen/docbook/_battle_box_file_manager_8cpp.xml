@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__battle_box_file_manager_8cpp">
+<title>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp File Reference</title>
+<indexterm><primary>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/BattleBoxFileManager.cpp</primary></indexterm>
+<programlisting>#include &quot;BattleBoxFileManager.h&quot;
+#include &quot;HAL/PlatformFilemanager.h&quot;
+#include &quot;GenericPlatform/GenericPlatformFile.h&quot;
+#include &quot;Misc/FileHelper.h&quot;
+</programlisting>Include dependency graph for BattleBoxFileManager.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_battle_box_file_manager_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

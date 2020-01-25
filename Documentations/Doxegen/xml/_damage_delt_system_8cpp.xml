@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_damage_delt_system_8cpp" kind="file" language="C++">
+    <compoundname>DamageDeltSystem.cpp</compoundname>
+    <includes refid="_damage_delt_system_8h" local="yes">DamageDeltSystem.h</includes>
+    <includes local="yes">../Battle_Box/Private/StatSheetObject.h</includes>
+    <includes local="yes">../Battle_Box/Private/Debugger.h</includes>
+    <includes local="yes">../Battle_Box/Private/ActionClasses/BaseAction.h</includes>
+    <includes local="yes">../Battle_Box/Private/ActionClasses/CommandAction.h</includes>
+    <includes local="yes">../Battle_Box/Private/ActionClasses/ItemAction.h</includes>
+    <includes local="yes">../Battle_Box/Private/ActionClasses/AbilityAction.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../Battle_Box/Private/ActionClasses/BaseAction.h</label>
+      </node>
+      <node id="3">
+        <label>CoreMinimal.h</label>
+      </node>
+      <node id="9">
+        <label>../Battle_Box/Private/ActionClasses/CommandAction.h</label>
+      </node>
+      <node id="7">
+        <label>../Battle_Box/Private/Debugger.h</label>
+      </node>
+      <node id="6">
+        <label>../Battle_Box/Private/StatSheetObject.h</label>
+      </node>
+      <node id="5">
+        <label>Containers/Queue.h</label>
+      </node>
+      <node id="4">
+        <label>BaseSystem.h</label>
+        <link refid="_base_system_8h"/>
+      </node>
+      <node id="11">
+        <label>../Battle_Box/Private/ActionClasses/AbilityAction.h</label>
+      </node>
+      <node id="10">
+        <label>../Battle_Box/Private/ActionClasses/ItemAction.h</label>
+      </node>
+      <node id="2">
+        <label>DamageDeltSystem.h</label>
+        <link refid="_damage_delt_system_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp</label>
+        <link refid="_damage_delt_system_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>1998-2019<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_damage_delt_system_8h" kindref="compound">DamageDeltSystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/StatSheetObject.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/Debugger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/ActionClasses/BaseAction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/ActionClasses/CommandAction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/ActionClasses/ItemAction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/ActionClasses/AbilityAction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186" refkind="member"><highlight class="normal"><ref refid="class_damage_delt_system_1a1e8116df2e2fff7732f3b82d287a9186" kindref="member">DamageDeltSystem::DamageDeltSystem</ref>()<sp/>:<sp/>singleTarget(nullptr),<sp/>owner(nullptr),<sp/>targets(TArray&lt;<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*&gt;()),<sp/>totalDamageValues(TArray&lt;float&gt;())</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>totalDamageValue<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14" refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_delt_system_1abd7f711f20dd60d57c896c02f159c663" kindref="member">DamageDeltSystem::BaseCalculate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsSingledTarget_,<sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(IsSingledTarget_)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>will<sp/>claculate<sp/>any<sp/>damage<sp/>for<sp/>a<sp/>single<sp/>target.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(action_-&gt;<ref refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" kindref="member">ReturnActionType</ref>())</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb" kindref="member">ACTIONTYPE::E_COMMAND</ref>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Command<sp/>will<sp/>do<sp/>basic<sp/>act<sp/>with<sp/>basic<sp/>stats</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>Check<sp/>if<sp/>there<sp/>is<sp/>any<sp/>damage<sp/>in<sp/>this<sp/>command.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_action" kindref="compound">CommandAction</ref>*<sp/>command<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_command_action" kindref="compound">CommandAction</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(action_);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61" kindref="member">ACTIONTYPE::E_ITEM</ref>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Item<sp/>will<sp/>be<sp/>sorted<sp/>to<sp/>what<sp/>type<sp/>then<sp/>calculated<sp/>for<sp/>total<sp/>damage.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/>item<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_item_action" kindref="compound">ItemAction</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(action_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item-&gt;<ref refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" kindref="member">ReturnItemType</ref>()<sp/>==<sp/><ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c" kindref="member">ITEMTYPE::E_CONSUMABLE</ref>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalDamageValue<sp/>=<sp/>CalculateItemDamage(item)<sp/>-<sp/>CalculateMagicalDefence(singleTarget)<sp/>+<sp/>CalculatePhysicalDefence(singleTarget);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item-&gt;<ref refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" kindref="member">ReturnItemType</ref>()<sp/>==<sp/><ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87" kindref="member">ITEMTYPE::E_WEAPON</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalDamageValue<sp/>=<sp/>CalculateItemDamage(item)<sp/>-<sp/>CalculateMagicalDefence(singleTarget)<sp/>+<sp/>CalculatePhysicalDefence(singleTarget);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" kindref="member">Debugger::SetSeverity</ref>(<ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76" kindref="member">MessageType::E_ERROR</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" kindref="member">Debugger::Error</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>Item<sp/>to<sp/>contain<sp/>damage<sp/>from:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>item-&gt;<ref refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" kindref="member">ReturnName</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;DamageDeltSystem.cpp&quot;</highlight><highlight class="normal">,<sp/>__LINE__);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920" kindref="member">ACTIONTYPE::E_ABILITY</ref>:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ability<sp/>will<sp/>retreive<sp/>the<sp/>damage<sp/>value<sp/>if<sp/>any.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>create<sp/>an<sp/>enum<sp/>for<sp/>what<sp/>type<sp/>of<sp/>ability<sp/>it<sp/>is.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*<sp/>ability<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(action_);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CalculateAbilityDamage(ability);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>modify<sp/>targets<sp/>HP<sp/>on<sp/>stat<sp/>system.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsSingledTarget_)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>will<sp/>calculate<sp/>any<sp/>damage<sp/>for<sp/>multiple<sp/>targets.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(action_-&gt;<ref refid="class_base_action_1a3c14c6ebf59154d1ad8d60ab546d7888" kindref="member">ReturnActionType</ref>())</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb" kindref="member">ACTIONTYPE::E_COMMAND</ref>:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Command<sp/>will<sp/>do<sp/>basic<sp/>act<sp/>with<sp/>basic<sp/>stats</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>Check<sp/>if<sp/>there<sp/>is<sp/>any<sp/>damage<sp/>in<sp/>this<sp/>command.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_action" kindref="compound">CommandAction</ref>*<sp/>command<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_command_action" kindref="compound">CommandAction</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(action_);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61" kindref="member">ACTIONTYPE::E_ITEM</ref>:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Item<sp/>will<sp/>be<sp/>sorted<sp/>to<sp/>what<sp/>type<sp/>then<sp/>calculated<sp/>for<sp/>total<sp/>damage.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/>item<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_item_action" kindref="compound">ItemAction</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(action_);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item-&gt;<ref refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" kindref="member">ReturnItemType</ref>()<sp/>==<sp/><ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c" kindref="member">ITEMTYPE::E_CONSUMABLE</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>targets.Num();<sp/>i++)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalDamageValues.Add(CalculateItemDamage(item)<sp/>-<sp/>CalculateMagicalDefence(targets[i])<sp/>+<sp/>CalculatePhysicalDefence(targets[i]));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(item-&gt;<ref refid="class_item_action_1aa3322621804e1869f956757c31e4c4b6" kindref="member">ReturnItemType</ref>()<sp/>==<sp/><ref refid="_item_action_8h_1a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87" kindref="member">ITEMTYPE::E_WEAPON</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>targets.Num();<sp/>i++)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalDamageValues.Add(CalculateItemDamage(item)<sp/>-<sp/>CalculateMagicalDefence(targets[i])<sp/>+<sp/>CalculatePhysicalDefence(targets[i]));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debugger_1a2e066519c4fe48fb1268f9bfe2ded3a2" kindref="member">Debugger::SetSeverity</ref>(<ref refid="_debugger_8h_1ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76" kindref="member">MessageType::E_ERROR</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debugger_1a2d1f06f606185f51dc86b782e059ed48" kindref="member">Debugger::Error</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>Item<sp/>to<sp/>contain<sp/>damage<sp/>from:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>item-&gt;<ref refid="class_base_action_1a87fa8929e542db8b7b7e695490f1f0a2" kindref="member">ReturnName</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;DamageDeltSystem.cpp&quot;</highlight><highlight class="normal">,<sp/>__LINE__);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_base_action_8h_1af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920" kindref="member">ACTIONTYPE::E_ABILITY</ref>:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ability<sp/>will<sp/>retreive<sp/>the<sp/>damage<sp/>value<sp/>if<sp/>any.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>create<sp/>an<sp/>enum<sp/>for<sp/>what<sp/>type<sp/>of<sp/>ability<sp/>it<sp/>is.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*<sp/>ability<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(action_);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CalculateAbilityDamage(ability);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>Modify<sp/>stats<sp/>of<sp/>HP<sp/>in<sp/>targets.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TO<sp/>DO:<sp/>After<sp/>modification<sp/>is<sp/>done<sp/>empty<sp/>all<sp/>information.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DamageDeltSystem::CalculateWeaponDamage(<ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>targetWeapon_)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>will<sp/>return<sp/>either<sp/>magic,<sp/>physical<sp/>or<sp/>both<sp/>as<sp/>a<sp/>damage<sp/>value;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(targetWeapon_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/>==<sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9" kindref="member">INTERACTIONTYPE::E_PHYSICAL</ref>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetWeapon_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;Atk&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(targetWeapon_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/>==<sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920" kindref="member">INTERACTIONTYPE::E_ABILITY</ref>)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetWeapon_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;M_Atk&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(targetWeapon_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/>==<sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb" kindref="member">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</ref>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetWeapon_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;Atk&quot;</highlight><highlight class="normal">]<sp/>+<sp/>targetWeapon_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;M_Atk&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/>DamageDeltSystem::CalculateAbilityDamage(<ref refid="class_ability_action" kindref="compound">AbilityAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>targetAbility_)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>the<sp/>target<sp/>action<sp/>and<sp/>get<sp/>the<sp/>damage<sp/>value;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetAbility_-&gt;<ref refid="class_ability_action_1a7b8b9201aa5b7bf4706ac57f5ff6cded" kindref="member">CalculateAbilityValue</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*if<sp/>(targetAbility_-&gt;ReturnInteractionType()<sp/>==<sp/>INTERACTIONTYPE::E_PHYSICAL)</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(targetAbility_-&gt;ReturnInteractionType()<sp/>==<sp/>INTERACTIONTYPE::E_ABILITY)</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"></highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/>if(targetAbility_-&gt;ReturnInteractionType()<sp/>==<sp/>INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"></highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DamageDeltSystem::CalculateItemDamage(<ref refid="class_item_action" kindref="compound">ItemAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>targetItem_)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>the<sp/>target<sp/>and<sp/>get<sp/>the<sp/>damage<sp/>Value;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(targetItem_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/>==<sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9" kindref="member">INTERACTIONTYPE::E_PHYSICAL</ref>)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetItem_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;Atk&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(targetItem_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/>==<sp/><ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920" kindref="member">INTERACTIONTYPE::E_ABILITY</ref>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetItem_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;M_Atk&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(targetItem_-&gt;<ref refid="class_base_action_1a70d34140345d92808deed0304397b074" kindref="member">ReturnInteractionType</ref>()<sp/>==<ref refid="_base_action_8h_1ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb" kindref="member">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</ref>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>targetItem_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;Atk&quot;</highlight><highlight class="normal">]<sp/>+<sp/>targetItem_-&gt;<ref refid="class_base_action_1aa09404d68151b3575c5d3d7d6eda9aba" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;M_Atk&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//switch<sp/>(targetItem_-&gt;ReturnDamageType())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//case<sp/>DAMAGETYPE::E_HP_DAMAGE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>//This<sp/>will<sp/>get<sp/>the<sp/>damage<sp/>from<sp/>the<sp/>stat<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>targetItem_-&gt;ReturnStatMap()[&quot;Atk&quot;];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//case<sp/>DAMAGETYPE::E_HP_RECOVER:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>targetItem_-&gt;ReturnStatMap()[&quot;HP_REC&quot;];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//case<sp/>DAMAGETYPE::E_MP_DAMAGE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>targetItem_-&gt;ReturnStatMap()[&quot;M_Atk&quot;];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//case<sp/>DAMAGETYPE::E_MP_RECOVER:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>return<sp/>targetItem_-&gt;ReturnStatMap()[&quot;M_REC&quot;];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DamageDeltSystem::CalculatePhysicalDefence(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>physicalDefence<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Helment&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Helment&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Chest_Armor&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Chest_Armor&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Leg_Armor&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Leg_Armor&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Boots&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Boots&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Accessory_1&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Accessory_1&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Accesory_2&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Accesory_2&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Weapon_1&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Weapon_1&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Weapon_2&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Weapon_2&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>physicalDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>physicalDefence;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DamageDeltSystem::CalculateMagicalDefence(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magicDefence<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Helment&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Helment&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Chest_Armor&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Chest_Armor&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Leg_Armor&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Leg_Armor&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Boots&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Boots&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Accessory_1&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Accessory_1&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Accesory_2&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Accesory_2&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Weapon_1&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Weapon_1&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>().Contains(</highlight><highlight class="stringliteral">&quot;Weapon_2&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aecfdf70147ffaa33f65b03c3b97232c8" kindref="member">ReturnEquipmentMap</ref>()[</highlight><highlight class="stringliteral">&quot;Weapon_2&quot;</highlight><highlight class="normal">]-&gt;ReturnStatMap()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>magicDefence<sp/>+=<sp/>target_-&gt;<ref refid="class_stat_sheet_object_1aa92a6ba4a423719096ce45fe714491f3" kindref="member">ReturnStatMap</ref>()[</highlight><highlight class="stringliteral">&quot;M_Def&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>magicDefence;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237" refid="class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_delt_system_1a4646a3cb7224ed2e7796f6baaef00d2a" kindref="member">DamageDeltSystem::SetOwner</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>owner_)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>owner<sp/>=<sp/>owner_;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241" refid="class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_delt_system_1adbf10558dcfaec31ffe016ea51f3cfc7" kindref="member">DamageDeltSystem::SetTarget</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>singleTarget<sp/>=<sp/>target_;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245" refid="class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_delt_system_1aba55f72ffb892e2996ec377f62b202fb" kindref="member">DamageDeltSystem::AddTargetToArray</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>targets.Add(target_);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249" refid="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" kindref="member">DamageDeltSystem::OnDestroy</ref>()</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clean<sp/>up<sp/>any<sp/>pointers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(singleTarget)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>singleTarget;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(targets.Num()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>elem<sp/>:<sp/>targets)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>elem;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>targets.Empty();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266" refid="class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_damage_delt_system_1a52ab082a93d8ab975bc5275089a16954" kindref="member">DamageDeltSystem::ReturnTotalDamageValue</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="267"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>totalDamageValue;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270" refid="class_damage_delt_system_1afcffaef781f580054ef1b9259255751a" refkind="member"><highlight class="normal">TArray&lt;float&gt;<sp/><ref refid="class_damage_delt_system_1afcffaef781f580054ef1b9259255751a" kindref="member">DamageDeltSystem::ReturnDamageValues</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="271"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>totalDamageValues;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="274" refid="class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c" refkind="member"><highlight class="normal"><ref refid="class_damage_delt_system_1a83e05f212c7cb033acb9e48394d2706c" kindref="member">DamageDeltSystem::~DamageDeltSystem</ref>()</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_damage_delt_system_1a42f934dffed92d2cda9181bc0657e1c5" kindref="member">OnDestroy</ref>();</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.cpp"/>
+  </compounddef>
+</doxygen>

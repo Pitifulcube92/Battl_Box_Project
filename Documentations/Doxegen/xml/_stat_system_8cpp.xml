@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_stat_system_8cpp" kind="file" language="C++">
+    <compoundname>StatSystem.cpp</compoundname>
+    <includes refid="_stat_system_8h" local="yes">StatSystem.h</includes>
+    <includes local="yes">../Battle_Box/Private/StatSheetObject.h</includes>
+    <includes local="yes">../Battle_Box/Private/ActionClasses/BaseAction.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>../Battle_Box/Private/ActionClasses/BaseAction.h</label>
+      </node>
+      <node id="4">
+        <label>Containers/Array.h</label>
+      </node>
+      <node id="5">
+        <label>../Battle_Box/Private/StatSheetObject.h</label>
+      </node>
+      <node id="3">
+        <label>BaseSystem.h</label>
+        <link refid="_base_system_8h"/>
+      </node>
+      <node id="2">
+        <label>StatSystem.h</label>
+        <link refid="_stat_system_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp</label>
+        <link refid="_stat_system_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>1998-2019<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_stat_system_8h" kindref="compound">StatSystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/StatSheetObject.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Battle_Box/Private/ActionClasses/BaseAction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_stat_system_1ac75d67d5db20babea9601894aee1e871" refkind="member"><highlight class="normal"><ref refid="class_stat_system_1ac75d67d5db20babea9601894aee1e871" kindref="member">StatSystem::StatSystem</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10" refid="class_stat_system_1a805454116d5cd0a0c408117b42f413be" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a805454116d5cd0a0c408117b42f413be" kindref="member">StatSystem::BaseCalculate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsSingledTarget_,<sp/><ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsSingledTarget_)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsSingledTarget_)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20" refid="class_stat_system_1a69b98b0b70ffb649aaad4e8cebda95db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a69b98b0b70ffb649aaad4e8cebda95db" kindref="member">StatSystem::AddStatModifier</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24" refid="class_stat_system_1a02d648b7bf4890422092ef592ef6d95c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a02d648b7bf4890422092ef592ef6d95c" kindref="member">StatSystem::RemoveModifier</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28" refid="class_stat_system_1acc44ff7b73bce66d9da24df9608aab65" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1acc44ff7b73bce66d9da24df9608aab65" kindref="member">StatSystem::AddTmpModifier</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/>action_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duration_)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32" refid="class_stat_system_1a37eb3d84c033799fe52f96ae7371e9a4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a37eb3d84c033799fe52f96ae7371e9a4" kindref="member">StatSystem::SetTarget</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36" refid="class_stat_system_1a3db7a7b3be3f83319de0481332947674" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1a3db7a7b3be3f83319de0481332947674" kindref="member">StatSystem::SetTargetAction</ref>(<ref refid="class_base_action" kindref="compound">BaseAction</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>action_)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40" refid="class_stat_system_1afd6ba964080b87f599135a91466474eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1afd6ba964080b87f599135a91466474eb" kindref="member">StatSystem::Addtarget</ref>(<ref refid="class_stat_sheet_object" kindref="compound">StatSheetObject</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>target_)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44" refid="class_stat_system_1aa74080624aba5dd9c0836013d684e931" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_stat_system_1aa74080624aba5dd9c0836013d684e931" kindref="member">StatSystem::OnDestroy</ref>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48" refid="class_stat_system_1ae92847be88226779e422cfea7d9b597c" refkind="member"><highlight class="normal"><ref refid="class_stat_system_1ae92847be88226779e422cfea7d9b597c" kindref="member">StatSystem::~StatSystem</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/StatSystem.cpp"/>
+  </compounddef>
+</doxygen>
