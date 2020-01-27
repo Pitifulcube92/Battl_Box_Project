@@ -6,20 +6,22 @@
 
 
 
-Inheritance diagram for Command\+Action\+:\nopagebreak
+Inheritance diagram for Command\+Action\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{class_command_action__inherit__graph}
+\includegraphics[width=206pt]{class_command_action__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Command\+Action\+:\nopagebreak
+Collaboration diagram for Command\+Action\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{class_command_action__coll__graph}
+\includegraphics[width=206pt]{class_command_action__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -27,33 +29,86 @@ Collaboration diagram for Command\+Action\+:\nopagebreak
 \item 
 \textbf{ Command\+Action} ()
 \item 
-\textbf{ Command\+Action} (const F\+String name\+\_\+, const F\+String discription\+\_\+, const \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} action\+\_\+, const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} target\+\_\+, const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} interaction\+\_\+, const uint32 action\+I\+D\+\_\+, T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const \textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} current\+Weap\+\_\+, \textbf{ Base\+Action} $\ast$const command\+\_\+)
-\item 
 \textbf{ Command\+Action} (\textbf{ Command\+Action} $\ast$const other\+\_\+)
 \item 
-void \textbf{ Set\+Weapon\+Type} (\textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} type\+\_\+)
-\item 
-void \textbf{ Set\+Command} (\textbf{ Base\+Action} $\ast$action\+\_\+)
-\item 
-\textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} \textbf{ Return\+Weapon\+Type} () const
-\item 
-\textbf{ Base\+Action} $\ast$ \textbf{ Return\+Action} () const
+\textbf{ Command\+Action} (const F\+String name\+\_\+, const F\+String discription\+\_\+, const \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} action\+\_\+, const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} target\+\_\+, const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} interaction\+\_\+, const uint32 action\+I\+D\+\_\+, T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const \textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} current\+Weap\+\_\+, \textbf{ Base\+Action} $\ast$const command\+\_\+)
 \item 
 void \textbf{ On\+Destroy} ()
 \item 
+\textbf{ Base\+Action} $\ast$ \textbf{ Return\+Action} () const
+\begin{DoxyCompactList}\small\item\em Return acton. \end{DoxyCompactList}\item 
+uint32 \textbf{ Return\+Action\+ID} () const
+\begin{DoxyCompactList}\small\item\em Return Action ID. \end{DoxyCompactList}\item 
+\textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} \textbf{ Return\+Action\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return action type. \end{DoxyCompactList}\item 
+F\+String \textbf{ Return\+Discription} () const
+\begin{DoxyCompactList}\small\item\em Return discription. \end{DoxyCompactList}\item 
+\textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} \textbf{ Return\+Interaction\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return Interaction type. \end{DoxyCompactList}\item 
+F\+String \textbf{ Return\+Name} () const
+\begin{DoxyCompactList}\small\item\em Return Name. \end{DoxyCompactList}\item 
+\textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} \textbf{ Return\+Target\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return target type. \end{DoxyCompactList}\item 
+\textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} \textbf{ Return\+Weapon\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return weapon type. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Action\+ID} (const uint32 action\+I\+D\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets action ID. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Action\+Type} (const \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets Actiontype. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Command} (\textbf{ Base\+Action} $\ast$action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the command object. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Discription} (const F\+String discription\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets Discription. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Interaction\+Type} (const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets interaction type. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Name} (const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets Name. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Target\+Type} (const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets target type. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Weapon\+Type} (\textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the weapon type the item is. \end{DoxyCompactList}\item 
 \textbf{ $\sim$\+Command\+Action} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} \textbf{ action}
+\item 
+uint32 \textbf{ action\+ID}
+\item 
+\textbf{ Base\+Action} $\ast$ \textbf{ command}
+\item 
+\textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} \textbf{ currentweapon}
+\item 
+F\+String \textbf{ discription}
+\item 
+\textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} \textbf{ interaction}
+\item 
+bool \textbf{ is\+Action\+Command}
+\item 
+F\+String \textbf{ name}
+\item 
+\textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} \textbf{ target}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
+Definition at line 16 of file Command\+Action.\+h.
+
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_command_action_a9bed07066f01bc031713fe727ef2af68}} 
+\mbox{\label{class_command_action_a9bed07066f01bc031713fe727ef2af68_a9bed07066f01bc031713fe727ef2af68}} 
 \index{CommandAction@{CommandAction}!CommandAction@{CommandAction}}
 \index{CommandAction@{CommandAction}!CommandAction@{CommandAction}}
 \doxysubsubsection{CommandAction()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Command\+Action\+::\+Command\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -71,20 +126,25 @@ void \textbf{ On\+Destroy} ()
 \end{DoxyCode}
 
 
-References E\+\_\+\+N\+O\+NE, Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), and Base\+Action\+::\+Set\+Target\+Type().
+References currentweapon, E\+\_\+\+N\+O\+NE, Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), and Base\+Action\+::\+Set\+Target\+Type().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_a9bed07066f01bc031713fe727ef2af68_cgraph}
+\includegraphics[width=350pt]{class_command_action_a9bed07066f01bc031713fe727ef2af68_a9bed07066f01bc031713fe727ef2af68_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_command_action_abf23d117fdcbc02af3d0b67bddb6a410}} 
+\mbox{\label{class_command_action_abf23d117fdcbc02af3d0b67bddb6a410_abf23d117fdcbc02af3d0b67bddb6a410}} 
 \index{CommandAction@{CommandAction}!CommandAction@{CommandAction}}
 \index{CommandAction@{CommandAction}!CommandAction@{CommandAction}}
 \doxysubsubsection{CommandAction()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Command\+Action\+::\+Command\+Action (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+,  }\item[{const F\+String}]{discription\+\_\+,  }\item[{const \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE}}]{action\+\_\+,  }\item[{const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE}}]{target\+\_\+,  }\item[{const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE}}]{interaction\+\_\+,  }\item[{const uint32}]{action\+I\+D\+\_\+,  }\item[{T\+Map$<$ F\+String, float $>$}]{stat\+Map\+\_\+,  }\item[{const \textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE}}]{current\+Weap\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{command\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -102,20 +162,25 @@ Here is the call graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), and Base\+Action\+::\+Set\+Target\+Type().
+References command, currentweapon, Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), and Base\+Action\+::\+Set\+Target\+Type().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_abf23d117fdcbc02af3d0b67bddb6a410_cgraph}
+\includegraphics[width=350pt]{class_command_action_abf23d117fdcbc02af3d0b67bddb6a410_abf23d117fdcbc02af3d0b67bddb6a410_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_command_action_aaa9704a80750e6a758d76178cfe12b5a}} 
+\mbox{\label{class_command_action_aaa9704a80750e6a758d76178cfe12b5a_aaa9704a80750e6a758d76178cfe12b5a}} 
 \index{CommandAction@{CommandAction}!CommandAction@{CommandAction}}
 \index{CommandAction@{CommandAction}!CommandAction@{CommandAction}}
 \doxysubsubsection{CommandAction()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily Command\+Action\+::\+Command\+Action (\begin{DoxyParamCaption}\item[{\textbf{ Command\+Action} $\ast$const}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -133,20 +198,25 @@ Here is the call graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References Return\+Action(), Base\+Action\+::\+Return\+Action\+I\+D(), Base\+Action\+::\+Return\+Action\+Type(), Base\+Action\+::\+Return\+Discription(), Base\+Action\+::\+Return\+Interaction\+Type(), Base\+Action\+::\+Return\+Name(), Base\+Action\+::\+Return\+Target\+Type(), Return\+Weapon\+Type(), Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), and Base\+Action\+::\+Set\+Target\+Type().
+References command, currentweapon, Return\+Action(), Base\+Action\+::\+Return\+Action\+I\+D(), Base\+Action\+::\+Return\+Action\+Type(), Base\+Action\+::\+Return\+Discription(), Base\+Action\+::\+Return\+Interaction\+Type(), Base\+Action\+::\+Return\+Name(), Base\+Action\+::\+Return\+Target\+Type(), Return\+Weapon\+Type(), Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), and Base\+Action\+::\+Set\+Target\+Type().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_aaa9704a80750e6a758d76178cfe12b5a_cgraph}
+\includegraphics[width=350pt]{class_command_action_aaa9704a80750e6a758d76178cfe12b5a_aaa9704a80750e6a758d76178cfe12b5a_cgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_command_action_a82d13a0eb569ad2584dd2d4dcfc6386b}} 
+\mbox{\label{class_command_action_a82d13a0eb569ad2584dd2d4dcfc6386b_a82d13a0eb569ad2584dd2d4dcfc6386b}} 
 \index{CommandAction@{CommandAction}!````~CommandAction@{$\sim$CommandAction}}
 \index{````~CommandAction@{$\sim$CommandAction}!CommandAction@{CommandAction}}
 \doxysubsubsection{$\sim$CommandAction()}
 {\footnotesize\ttfamily Command\+Action\+::$\sim$\+Command\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -159,21 +229,26 @@ Here is the call graph for this function\+:\nopagebreak
 
 References On\+Destroy().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_a82d13a0eb569ad2584dd2d4dcfc6386b_cgraph}
+\includegraphics[width=350pt]{class_command_action_a82d13a0eb569ad2584dd2d4dcfc6386b_a82d13a0eb569ad2584dd2d4dcfc6386b_cgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\label{class_command_action_aae8b568d1642f0bd846f4a8022eba70a}} 
+\mbox{\label{class_command_action_aae8b568d1642f0bd846f4a8022eba70a_aae8b568d1642f0bd846f4a8022eba70a}} 
 \index{CommandAction@{CommandAction}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!CommandAction@{CommandAction}}
 \doxysubsubsection{OnDestroy()}
 {\footnotesize\ttfamily void Command\+Action\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -186,18 +261,31 @@ Here is the call graph for this function\+:\nopagebreak
 \DoxyCodeLine{61 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+References command.
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_aae8b568d1642f0bd846f4a8022eba70a_icgraph}
+\includegraphics[width=350pt]{class_command_action_aae8b568d1642f0bd846f4a8022eba70a_aae8b568d1642f0bd846f4a8022eba70a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_command_action_ae4ad4949defce81722252072e3413d2b}} 
+\mbox{\label{class_command_action_ae4ad4949defce81722252072e3413d2b_ae4ad4949defce81722252072e3413d2b}} 
 \index{CommandAction@{CommandAction}!ReturnAction@{ReturnAction}}
 \index{ReturnAction@{ReturnAction}!CommandAction@{CommandAction}}
 \doxysubsubsection{ReturnAction()}
 {\footnotesize\ttfamily \textbf{ Base\+Action} $\ast$ Command\+Action\+::\+Return\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return acton. 
+
+
+
+Definition at line 50 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -206,18 +294,214 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{53 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+References command.
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_ae4ad4949defce81722252072e3413d2b_icgraph}
+\includegraphics[width=350pt]{class_command_action_ae4ad4949defce81722252072e3413d2b_ae4ad4949defce81722252072e3413d2b_icgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1}} 
+\mbox{\label{class_base_action_a0954da9087f93b46ea68468de1ecce92_a0954da9087f93b46ea68468de1ecce92}} 
+\index{CommandAction@{CommandAction}!ReturnActionID@{ReturnActionID}}
+\index{ReturnActionID@{ReturnActionID}!CommandAction@{CommandAction}}
+\doxysubsubsection{ReturnActionID()}
+{\footnotesize\ttfamily uint32 Base\+Action\+::\+Return\+Action\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return Action ID. 
+
+
+
+Definition at line 75 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77     \textcolor{keywordflow}{return} actionID;}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::action\+ID.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a0954da9087f93b46ea68468de1ecce92_a0954da9087f93b46ea68468de1ecce92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888_a3c14c6ebf59154d1ad8d60ab546d7888}} 
+\index{CommandAction@{CommandAction}!ReturnActionType@{ReturnActionType}}
+\index{ReturnActionType@{ReturnActionType}!CommandAction@{CommandAction}}
+\doxysubsubsection{ReturnActionType()}
+{\footnotesize\ttfamily \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} Base\+Action\+::\+Return\+Action\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return action type. 
+
+
+
+Definition at line 63 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} action;}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::action.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888_a3c14c6ebf59154d1ad8d60ab546d7888_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_a66e6fdeaefdcd4606eaa2964e2020049_a66e6fdeaefdcd4606eaa2964e2020049}} 
+\index{CommandAction@{CommandAction}!ReturnDiscription@{ReturnDiscription}}
+\index{ReturnDiscription@{ReturnDiscription}!CommandAction@{CommandAction}}
+\doxysubsubsection{ReturnDiscription()}
+{\footnotesize\ttfamily F\+String Base\+Action\+::\+Return\+Discription (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return discription. 
+
+
+
+Definition at line 59 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60 \{}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} discription;}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::discription.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a66e6fdeaefdcd4606eaa2964e2020049_a66e6fdeaefdcd4606eaa2964e2020049_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_a70d34140345d92808deed0304397b074_a70d34140345d92808deed0304397b074}} 
+\index{CommandAction@{CommandAction}!ReturnInteractionType@{ReturnInteractionType}}
+\index{ReturnInteractionType@{ReturnInteractionType}!CommandAction@{CommandAction}}
+\doxysubsubsection{ReturnInteractionType()}
+{\footnotesize\ttfamily \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} Base\+Action\+::\+Return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return Interaction type. 
+
+
+
+Definition at line 71 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72 \{}
+\DoxyCodeLine{73     \textcolor{keywordflow}{return} interaction;}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::interaction.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a70d34140345d92808deed0304397b074_a70d34140345d92808deed0304397b074_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_a87fa8929e542db8b7b7e695490f1f0a2_a87fa8929e542db8b7b7e695490f1f0a2}} 
+\index{CommandAction@{CommandAction}!ReturnName@{ReturnName}}
+\index{ReturnName@{ReturnName}!CommandAction@{CommandAction}}
+\doxysubsubsection{ReturnName()}
+{\footnotesize\ttfamily F\+String Base\+Action\+::\+Return\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return Name. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a87fa8929e542db8b7b7e695490f1f0a2_a87fa8929e542db8b7b7e695490f1f0a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_a3286f0bb34ada3b25b0ccb5a7b456f9d_a3286f0bb34ada3b25b0ccb5a7b456f9d}} 
+\index{CommandAction@{CommandAction}!ReturnTargetType@{ReturnTargetType}}
+\index{ReturnTargetType@{ReturnTargetType}!CommandAction@{CommandAction}}
+\doxysubsubsection{ReturnTargetType()}
+{\footnotesize\ttfamily \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} Base\+Action\+::\+Return\+Target\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return target type. 
+
+
+
+Definition at line 67 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} target;}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::target.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a3286f0bb34ada3b25b0ccb5a7b456f9d_a3286f0bb34ada3b25b0ccb5a7b456f9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1_aed6b4cc73d8dd8e5e184e248c6e102a1}} 
 \index{CommandAction@{CommandAction}!ReturnWeaponType@{ReturnWeaponType}}
 \index{ReturnWeaponType@{ReturnWeaponType}!CommandAction@{CommandAction}}
 \doxysubsubsection{ReturnWeaponType()}
 {\footnotesize\ttfamily \textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} Command\+Action\+::\+Return\+Weapon\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return weapon type. 
+
+
+
+Definition at line 46 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -226,18 +510,97 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{49 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+References currentweapon.
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1_icgraph}
+\includegraphics[width=350pt]{class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1_aed6b4cc73d8dd8e5e184e248c6e102a1_icgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_command_action_a07a737aaa16805dccea57471b9918324}} 
+\mbox{\label{class_base_action_a82e6afa7a79dee542492d587904dc380_a82e6afa7a79dee542492d587904dc380}} 
+\index{CommandAction@{CommandAction}!SetActionID@{SetActionID}}
+\index{SetActionID@{SetActionID}!CommandAction@{CommandAction}}
+\doxysubsubsection{SetActionID()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Action\+ID (\begin{DoxyParamCaption}\item[{const uint32}]{action\+I\+D\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sets action ID. 
+
+
+
+Definition at line 51 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53     actionID = actionID\_;}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::action\+ID.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a82e6afa7a79dee542492d587904dc380_a82e6afa7a79dee542492d587904dc380_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_ad040813bdd0c9f622ef5dd42db46f530_ad040813bdd0c9f622ef5dd42db46f530}} 
+\index{CommandAction@{CommandAction}!SetActionType@{SetActionType}}
+\index{SetActionType@{SetActionType}!CommandAction@{CommandAction}}
+\doxysubsubsection{SetActionType()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Action\+Type (\begin{DoxyParamCaption}\item[{const \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE}}]{type\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sets Actiontype. 
+
+
+
+Definition at line 39 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     action = type\_;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::action.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_ad040813bdd0c9f622ef5dd42db46f530_ad040813bdd0c9f622ef5dd42db46f530_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_command_action_a07a737aaa16805dccea57471b9918324_a07a737aaa16805dccea57471b9918324}} 
 \index{CommandAction@{CommandAction}!SetCommand@{SetCommand}}
 \index{SetCommand@{SetCommand}!CommandAction@{CommandAction}}
 \doxysubsubsection{SetCommand()}
 {\footnotesize\ttfamily void Command\+Action\+::\+Set\+Command (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets the command object. 
+
+
+
+Definition at line 42 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -246,11 +609,155 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{45 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_command_action_aebe160173438c46ddaac8018cd3d1b22}} 
+
+
+References command.
+
+\mbox{\label{class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7_a0a4bd7fd3ce61159e35282a7b05659a7}} 
+\index{CommandAction@{CommandAction}!SetDiscription@{SetDiscription}}
+\index{SetDiscription@{SetDiscription}!CommandAction@{CommandAction}}
+\doxysubsubsection{SetDiscription()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Discription (\begin{DoxyParamCaption}\item[{const F\+String}]{discription\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sets Discription. 
+
+
+
+Definition at line 35 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     discription = discription\_;}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::discription.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7_a0a4bd7fd3ce61159e35282a7b05659a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_ae0e83722e14079e10f7d43d54ba4898e_ae0e83722e14079e10f7d43d54ba4898e}} 
+\index{CommandAction@{CommandAction}!SetInteractionType@{SetInteractionType}}
+\index{SetInteractionType@{SetInteractionType}!CommandAction@{CommandAction}}
+\doxysubsubsection{SetInteractionType()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Interaction\+Type (\begin{DoxyParamCaption}\item[{const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE}}]{type\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sets interaction type. 
+
+
+
+Definition at line 47 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     interaction = type\_;}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::interaction.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_ae0e83722e14079e10f7d43d54ba4898e_ae0e83722e14079e10f7d43d54ba4898e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_ad307b128f9ded949daa718fc1364919c_ad307b128f9ded949daa718fc1364919c}} 
+\index{CommandAction@{CommandAction}!SetName@{SetName}}
+\index{SetName@{SetName}!CommandAction@{CommandAction}}
+\doxysubsubsection{SetName()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sets Name. 
+
+
+
+Definition at line 31 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     name = name\_;}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::name.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_ad307b128f9ded949daa718fc1364919c_ad307b128f9ded949daa718fc1364919c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8_a6f0ca61c63f46332e6507fc2ee2b29f8}} 
+\index{CommandAction@{CommandAction}!SetTargetType@{SetTargetType}}
+\index{SetTargetType@{SetTargetType}!CommandAction@{CommandAction}}
+\doxysubsubsection{SetTargetType()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Target\+Type (\begin{DoxyParamCaption}\item[{const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE}}]{type\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sets target type. 
+
+
+
+Definition at line 43 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     target = type\_;}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::target.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8_a6f0ca61c63f46332e6507fc2ee2b29f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_command_action_aebe160173438c46ddaac8018cd3d1b22_aebe160173438c46ddaac8018cd3d1b22}} 
 \index{CommandAction@{CommandAction}!SetWeaponType@{SetWeaponType}}
 \index{SetWeaponType@{SetWeaponType}!CommandAction@{CommandAction}}
 \doxysubsubsection{SetWeaponType()}
 {\footnotesize\ttfamily void Command\+Action\+::\+Set\+Weapon\+Type (\begin{DoxyParamCaption}\item[{\textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE}}]{type\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets the weapon type the item is. 
+
+
+
+Definition at line 38 of file Command\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -261,7 +768,104 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
+References currentweapon.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_base_action_a23cf827d35850a4e4d2859a12a885567_a23cf827d35850a4e4d2859a12a885567}} 
+\index{CommandAction@{CommandAction}!action@{action}}
+\index{action@{action}!CommandAction@{CommandAction}}
+\doxysubsubsection{action}
+{\footnotesize\ttfamily \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} Base\+Action\+::action\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 67 of file Base\+Action.\+h.
+
+\mbox{\label{class_base_action_a050d54574671299fb3f8d854aeb6a190_a050d54574671299fb3f8d854aeb6a190}} 
+\index{CommandAction@{CommandAction}!actionID@{actionID}}
+\index{actionID@{actionID}!CommandAction@{CommandAction}}
+\doxysubsubsection{actionID}
+{\footnotesize\ttfamily uint32 Base\+Action\+::action\+ID\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 70 of file Base\+Action.\+h.
+
+\mbox{\label{class_command_action_a9be5bf2c9041a5418f989d3494702416_a9be5bf2c9041a5418f989d3494702416}} 
+\index{CommandAction@{CommandAction}!command@{command}}
+\index{command@{command}!CommandAction@{CommandAction}}
+\doxysubsubsection{command}
+{\footnotesize\ttfamily \textbf{ Base\+Action}$\ast$ Command\+Action\+::command\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file Command\+Action.\+h.
+
+\mbox{\label{class_command_action_a3fb3b61a06e73ecb893129dbbb7ce5f5_a3fb3b61a06e73ecb893129dbbb7ce5f5}} 
+\index{CommandAction@{CommandAction}!currentweapon@{currentweapon}}
+\index{currentweapon@{currentweapon}!CommandAction@{CommandAction}}
+\doxysubsubsection{currentweapon}
+{\footnotesize\ttfamily \textbf{ W\+E\+A\+P\+O\+N\+T\+Y\+PE} Command\+Action\+::currentweapon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file Command\+Action.\+h.
+
+\mbox{\label{class_base_action_a513d01865c01cb52756d2d634afda491_a513d01865c01cb52756d2d634afda491}} 
+\index{CommandAction@{CommandAction}!discription@{discription}}
+\index{discription@{discription}!CommandAction@{CommandAction}}
+\doxysubsubsection{discription}
+{\footnotesize\ttfamily F\+String Base\+Action\+::discription\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 66 of file Base\+Action.\+h.
+
+\mbox{\label{class_base_action_a46af3a3c5512e3d0072fac96989b52ec_a46af3a3c5512e3d0072fac96989b52ec}} 
+\index{CommandAction@{CommandAction}!interaction@{interaction}}
+\index{interaction@{interaction}!CommandAction@{CommandAction}}
+\doxysubsubsection{interaction}
+{\footnotesize\ttfamily \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} Base\+Action\+::interaction\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 69 of file Base\+Action.\+h.
+
+\mbox{\label{class_command_action_a8458ced4a5af267f03dae720b3c4ae0e_a8458ced4a5af267f03dae720b3c4ae0e}} 
+\index{CommandAction@{CommandAction}!isActionCommand@{isActionCommand}}
+\index{isActionCommand@{isActionCommand}!CommandAction@{CommandAction}}
+\doxysubsubsection{isActionCommand}
+{\footnotesize\ttfamily bool Command\+Action\+::is\+Action\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file Command\+Action.\+h.
+
+\mbox{\label{class_base_action_a89d98c13f445fa58b96d5c4eff58e134_a89d98c13f445fa58b96d5c4eff58e134}} 
+\index{CommandAction@{CommandAction}!name@{name}}
+\index{name@{name}!CommandAction@{CommandAction}}
+\doxysubsubsection{name}
+{\footnotesize\ttfamily F\+String Base\+Action\+::name\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 65 of file Base\+Action.\+h.
+
+\mbox{\label{class_base_action_afafdb765a8e836a0eba3a59fb1f23e01_afafdb765a8e836a0eba3a59fb1f23e01}} 
+\index{CommandAction@{CommandAction}!target@{target}}
+\index{target@{target}!CommandAction@{CommandAction}}
+\doxysubsubsection{target}
+{\footnotesize\ttfamily \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} Base\+Action\+::target\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 68 of file Base\+Action.\+h.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\textbf{ Command\+Action.\+h}\item 
-\textbf{ Command\+Action.\+cpp}\end{DoxyCompactItemize}
+Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\textbf{ Command\+Action.\+h}\item 
+Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\textbf{ Command\+Action.\+cpp}\end{DoxyCompactItemize}

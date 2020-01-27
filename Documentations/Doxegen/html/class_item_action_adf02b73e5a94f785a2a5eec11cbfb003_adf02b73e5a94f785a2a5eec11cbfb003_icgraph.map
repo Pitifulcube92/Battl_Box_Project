@@ -1,0 +1,5 @@
+<map id="ItemAction::ReturnEffectList" name="ItemAction::ReturnEffectList">
+<area shape="rect" id="node1" title="Returns Effect array." alt="" coords="244,31,428,57"/>
+<area shape="rect" id="node2" href="$class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db" title="This updates the stats debengin on the name." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node3" href="$class_stat_system_a02d648b7bf4890422092ef592ef6d95c.html#a02d648b7bf4890422092ef592ef6d95c" title="Removes the specific modification by the baseaction." alt="" coords="5,56,196,83"/>
+</map>

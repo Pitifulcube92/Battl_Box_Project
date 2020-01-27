@@ -1,0 +1,10 @@
+<map id="StatSheetObject::ReturnStatMap" name="StatSheetObject::ReturnStatMap">
+<area shape="rect" id="node1" title="Returns the statMap." alt="" coords="532,107,745,134"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9.html#ab04599079f9f0e8734678800df8bc6d9" title="Calculates the magical defence of the target." alt="" coords="284,5,484,47"/>
+<area shape="rect" id="node4" href="$class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0.html#afe23abbc1d1f86ef88484692e4800fb0" title="Calculates the physical defence of the target." alt="" coords="284,71,484,112"/>
+<area shape="rect" id="node5" href="$class_stat_system_a88d4e8feb8356439cb70e03c714f147d.html#a88d4e8feb8356439cb70e03c714f147d" title=" " alt="" coords="302,137,466,163"/>
+<area shape="rect" id="node8" href="$class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="292,188,476,229"/>
+<area shape="rect" id="node3" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="5,46,236,73"/>
+<area shape="rect" id="node6" href="$class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db" title="This updates the stats debengin on the name." alt="" coords="25,117,216,143"/>
+<area shape="rect" id="node7" href="$class_stat_system_a02d648b7bf4890422092ef592ef6d95c.html#a02d648b7bf4890422092ef592ef6d95c" title="Removes the specific modification by the baseaction." alt="" coords="25,167,216,194"/>
+</map>

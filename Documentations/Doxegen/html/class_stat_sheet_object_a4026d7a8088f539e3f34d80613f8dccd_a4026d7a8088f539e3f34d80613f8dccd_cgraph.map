@@ -1,0 +1,7 @@
+<map id="StatSheetObject::ReturnAbility" name="StatSheetObject::ReturnAbility">
+<area shape="rect" id="node1" title="Returns a ability action by its name from the ability map." alt="" coords="5,38,205,65"/>
+<area shape="rect" id="node2" href="$class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="272,13,385,39"/>
+<area shape="rect" id="node5" href="$class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="253,63,404,90"/>
+<area shape="rect" id="node3" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="452,13,559,39"/>
+<area shape="rect" id="node4" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="607,5,759,47"/>
+</map>

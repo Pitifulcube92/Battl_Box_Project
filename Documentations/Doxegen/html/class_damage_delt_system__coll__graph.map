@@ -1,4 +1,5 @@
 <map id="DamageDeltSystem" name="DamageDeltSystem">
-<area shape="rect" id="node1" title=" " alt="" coords="5,156,231,380"/>
-<area shape="rect" id="node2" href="$class_base_system.html" title=" " alt="" coords="45,5,191,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="63,395,253,692"/>
+<area shape="rect" id="node2" href="$class_base_system.html" title=" " alt="" coords="5,115,132,207"/>
+<area shape="rect" id="node3" href="$class_stat_sheet_object.html" title=" " alt="" coords="157,5,341,317"/>
 </map>

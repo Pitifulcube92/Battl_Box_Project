@@ -1,0 +1,12 @@
+<map id="Debugger::SetSeverity" name="Debugger::SetSeverity">
+<area shape="rect" id="node1" title="Sets the severity." alt="" coords="523,195,673,221"/>
+<area shape="rect" id="node2" href="$class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db" title="This updates the stats debengin on the name." alt="" coords="5,68,196,95"/>
+<area shape="rect" id="node3" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="244,43,475,69"/>
+<area shape="rect" id="node4" href="$class_stat_system_a88d4e8feb8356439cb70e03c714f147d.html#a88d4e8feb8356439cb70e03c714f147d" title=" " alt="" coords="277,93,441,120"/>
+<area shape="rect" id="node5" href="$class_stat_system_a02d648b7bf4890422092ef592ef6d95c.html#a02d648b7bf4890422092ef592ef6d95c" title="Removes the specific modification by the baseaction." alt="" coords="5,131,196,157"/>
+<area shape="rect" id="node6" href="$class_stat_sheet_object_a4026d7a8088f539e3f34d80613f8dccd.html#a4026d7a8088f539e3f34d80613f8dccd" title="Returns a ability action by its name from the ability map." alt="" coords="259,195,459,221"/>
+<area shape="rect" id="node7" href="$class_stat_sheet_object_adee30a8470b9fd57b32f4892aacac55b.html#adee30a8470b9fd57b32f4892aacac55b" title="Returns a command action by its name from the command map." alt="" coords="248,245,471,272"/>
+<area shape="rect" id="node8" href="$class_stat_sheet_object_ad7e95011555f4015c74ecf7e053e529a.html#ad7e95011555f4015c74ecf7e053e529a" title="Returns a equipment&#45;item action by its name from the equipment map." alt="" coords="246,296,473,323"/>
+<area shape="rect" id="node9" href="$class_stat_sheet_object_a68ac4e437d66c297c8c74bdc95dcfc55.html#a68ac4e437d66c297c8c74bdc95dcfc55" title="Returns a item action by its name from the item map." alt="" coords="265,347,454,373"/>
+<area shape="rect" id="node10" href="$class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664.html#af9e8a9761586d4c32b376edc5d5f9664" title="IModuleInterface implementation." alt="" coords="287,398,431,439"/>
+</map>

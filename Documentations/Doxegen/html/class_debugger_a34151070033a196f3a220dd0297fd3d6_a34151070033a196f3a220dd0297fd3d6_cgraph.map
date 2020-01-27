@@ -1,0 +1,5 @@
+<map id="Debugger::FatalError" name="Debugger::FatalError">
+<area shape="rect" id="node1" title="Sends a warning log to the dugger txt file." alt="" coords="5,13,148,39"/>
+<area shape="rect" id="node2" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="196,13,303,39"/>
+<area shape="rect" id="node3" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="351,5,503,47"/>
+</map>

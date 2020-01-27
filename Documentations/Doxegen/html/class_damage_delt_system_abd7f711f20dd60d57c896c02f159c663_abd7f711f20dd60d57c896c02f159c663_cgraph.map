@@ -1,0 +1,18 @@
+<map id="DamageDeltSystem::BaseCalculate" name="DamageDeltSystem::BaseCalculate">
+<area shape="rect" id="node1" title="System calculation." alt="" coords="5,267,236,294"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system_ac77b81a1237dac09021141090113f43c.html#ac77b81a1237dac09021141090113f43c" title="Calculates the damage of a ability item." alt="" coords="284,5,484,47"/>
+<area shape="rect" id="node3" href="$class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be.html#a7b2fc3b7d84fa682d2132143443053be" title="Calculates the damage of an item." alt="" coords="284,71,484,112"/>
+<area shape="rect" id="node6" href="$class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9.html#ab04599079f9f0e8734678800df8bc6d9" title="Calculates the magical defence of the target." alt="" coords="284,201,484,243"/>
+<area shape="rect" id="node9" href="$class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0.html#afe23abbc1d1f86ef88484692e4800fb0" title="Calculates the physical defence of the target." alt="" coords="284,136,484,177"/>
+<area shape="rect" id="node10" href="$class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="327,267,441,294"/>
+<area shape="rect" id="node13" href="$class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888.html#a3c14c6ebf59154d1ad8d60ab546d7888" title="Return action type." alt="" coords="284,318,484,345"/>
+<area shape="rect" id="node14" href="$class_item_action_aa3322621804e1869f956757c31e4c4b6.html#aa3322621804e1869f956757c31e4c4b6" title="Returns itemType." alt="" coords="293,369,475,395"/>
+<area shape="rect" id="node15" href="$class_base_action_a87fa8929e542db8b7b7e695490f1f0a2.html#a87fa8929e542db8b7b7e695490f1f0a2" title="Return Name." alt="" coords="299,419,469,446"/>
+<area shape="rect" id="node16" href="$class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="309,470,459,497"/>
+<area shape="rect" id="node4" href="$class_base_action_a70d34140345d92808deed0304397b074.html#a70d34140345d92808deed0304397b074" title="Return Interaction type." alt="" coords="546,86,769,113"/>
+<area shape="rect" id="node5" href="$class_item_action_a1e9af3e563063849729fad37d8beb92e.html#a1e9af3e563063849729fad37d8beb92e" title="Return statModMap." alt="" coords="568,35,747,62"/>
+<area shape="rect" id="node7" href="$class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8.html#aecfdf70147ffaa33f65b03c3b97232c8" title="Returns the equipment map." alt="" coords="532,205,783,231"/>
+<area shape="rect" id="node8" href="$class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3" title="Returns the statMap." alt="" coords="551,147,764,174"/>
+<area shape="rect" id="node11" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="604,267,711,294"/>
+<area shape="rect" id="node12" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="831,260,983,301"/>
+</map>

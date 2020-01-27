@@ -1,12 +1,12 @@
-<map id="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp" name="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/Battle_Box/Private/StatSheetObject.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="403,5,649,87"/>
-<area shape="rect" id="node2" href="$_stat_sheet_object_8h.html" title=" " alt="" coords="5,135,153,164"/>
-<area shape="rect" id="node6" href="$_command_action_8h.html" title=" " alt="" coords="663,135,919,164"/>
-<area shape="rect" id="node8" href="$_item_action_8h.html" title=" " alt="" coords="177,135,389,164"/>
-<area shape="rect" id="node9" href="$_ability_action_8h.html" title=" " alt="" coords="413,135,639,164"/>
-<area shape="rect" id="node10" href="$_debugger_8h.html" title=" " alt="" coords="851,212,955,241"/>
-<area shape="rect" id="node3" title=" " alt="" coords="507,289,630,319"/>
-<area shape="rect" id="node4" title=" " alt="" coords="41,212,192,241"/>
-<area shape="rect" id="node5" title=" " alt="" coords="216,212,361,241"/>
-<area shape="rect" id="node7" href="$_base_action_8h.html" title=" " alt="" coords="465,212,579,241"/>
+<map id="Battle_Box/Private/StatSheetObject.cpp" name="Battle_Box/Private/StatSheetObject.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="390,5,537,47"/>
+<area shape="rect" id="node2" href="$_stat_sheet_object_8h.html" title=" " alt="" coords="5,95,135,121"/>
+<area shape="rect" id="node6" href="$_command_action_8h.html" title=" " alt="" coords="585,95,803,121"/>
+<area shape="rect" id="node8" href="$_item_action_8h.html" title=" " alt="" coords="159,95,341,121"/>
+<area shape="rect" id="node9" href="$_ability_action_8h.html" title=" " alt="" coords="366,95,561,121"/>
+<area shape="rect" id="node10" href="$_debugger_8h.html" title=" " alt="" coords="754,169,842,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="452,244,557,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="37,169,167,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="192,169,316,196"/>
+<area shape="rect" id="node7" href="$_base_action_8h.html" title=" " alt="" coords="411,169,511,196"/>
 </map>

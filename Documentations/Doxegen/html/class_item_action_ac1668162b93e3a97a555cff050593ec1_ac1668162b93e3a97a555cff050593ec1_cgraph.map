@@ -1,0 +1,11 @@
+<map id="ItemAction::ItemAction" name="ItemAction::ItemAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,160,209"/>
+<area shape="rect" id="node2" href="$class_base_action_a82e6afa7a79dee542492d587904dc380.html#a82e6afa7a79dee542492d587904dc380" title="Sets action ID." alt="" coords="227,5,394,32"/>
+<area shape="rect" id="node3" href="$class_base_action_ad040813bdd0c9f622ef5dd42db46f530.html#ad040813bdd0c9f622ef5dd42db46f530" title="Sets Actiontype." alt="" coords="219,56,402,83"/>
+<area shape="rect" id="node4" href="$class_item_action_aa40a2cc0d7f23836c8403f0b82f37a23.html#aa40a2cc0d7f23836c8403f0b82f37a23" title="Set Damage type." alt="" coords="217,107,405,133"/>
+<area shape="rect" id="node5" href="$class_base_action_a0a4bd7fd3ce61159e35282a7b05659a7.html#a0a4bd7fd3ce61159e35282a7b05659a7" title="Sets Discription." alt="" coords="221,157,400,184"/>
+<area shape="rect" id="node6" href="$class_base_action_ae0e83722e14079e10f7d43d54ba4898e.html#ae0e83722e14079e10f7d43d54ba4898e" title="Sets interaction type." alt="" coords="208,208,413,235"/>
+<area shape="rect" id="node7" href="$class_base_action_ad307b128f9ded949daa718fc1364919c.html#ad307b128f9ded949daa718fc1364919c" title="Sets Name." alt="" coords="235,259,386,285"/>
+<area shape="rect" id="node8" href="$class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8.html#a6f0ca61c63f46332e6507fc2ee2b29f8" title="Sets target type." alt="" coords="220,309,401,336"/>
+<area shape="rect" id="node9" href="$class_item_action_aa6fdb08d13415443f080d75d2b934773.html#aa6fdb08d13415443f080d75d2b934773" title="Set item Value." alt="" coords="238,360,383,387"/>
+</map>

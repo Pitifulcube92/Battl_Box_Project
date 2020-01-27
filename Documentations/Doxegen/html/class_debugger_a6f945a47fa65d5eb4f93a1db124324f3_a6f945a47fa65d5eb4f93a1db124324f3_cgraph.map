@@ -1,0 +1,5 @@
+<map id="Debugger::Warrning" name="Debugger::Warrning">
+<area shape="rect" id="node1" title="Sends a warrning log to the debugger txt file." alt="" coords="5,13,143,39"/>
+<area shape="rect" id="node2" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="191,13,297,39"/>
+<area shape="rect" id="node3" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="345,5,497,47"/>
+</map>

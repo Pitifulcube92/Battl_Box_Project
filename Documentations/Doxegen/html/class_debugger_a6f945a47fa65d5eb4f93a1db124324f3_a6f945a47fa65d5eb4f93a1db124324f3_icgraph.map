@@ -1,0 +1,7 @@
+<map id="Debugger::Warrning" name="Debugger::Warrning">
+<area shape="rect" id="node1" title="Sends a warrning log to the debugger txt file." alt="" coords="456,60,593,87"/>
+<area shape="rect" id="node2" href="$class_stat_system_a88d4e8feb8356439cb70e03c714f147d.html#a88d4e8feb8356439cb70e03c714f147d" title=" " alt="" coords="244,31,408,57"/>
+<area shape="rect" id="node5" href="$class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664.html#af9e8a9761586d4c32b376edc5d5f9664" title="IModuleInterface implementation." alt="" coords="254,82,398,123"/>
+<area shape="rect" id="node3" href="$class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db" title="This updates the stats debengin on the name." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node4" href="$class_stat_system_a02d648b7bf4890422092ef592ef6d95c.html#a02d648b7bf4890422092ef592ef6d95c" title="Removes the specific modification by the baseaction." alt="" coords="5,56,196,83"/>
+</map>

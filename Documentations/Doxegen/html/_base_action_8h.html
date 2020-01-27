@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Battle Box Documentation: BaseAction.h File Reference</title>
+<title>Battle_Box Documents: Battle_Box/Private/ActionClasses/BaseAction.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,9 +30,24 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Battle Box Documentation
+   <div id="projectname">Battle_Box Documents
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -35,16 +59,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_base_action_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,10 +90,9 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">BaseAction.h File Reference</div>  </div>
@@ -72,316 +102,135 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BaseAction.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_base_action_8h__incl.png" border="0" usemap="#_base_action_8h" alt=""/></div>
-<map name="_base_action_8h" id="_base_action_8h">
-<area shape="rect" title=" " alt="" coords="9,5,124,35"/>
-<area shape="rect" title=" " alt="" coords="5,83,128,112"/>
+<div class="center"><img src="_base_action_8h__incl.png" border="0" usemap="#_battle___box_2_private_2_action_classes_2_base_action_8h" alt=""/></div>
+<map name="_battle___box_2_private_2_action_classes_2_base_action_8h" id="_battle___box_2_private_2_action_classes_2_base_action_8h">
+<area shape="rect" title=" " alt="" coords="5,5,197,47"/>
+<area shape="rect" title=" " alt="" coords="49,95,154,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_base_action_8h__dep__incl.png" border="0" usemap="#_base_action_8hdep" alt=""/></div>
-<map name="_base_action_8hdep" id="_base_action_8hdep">
-<area shape="rect" title=" " alt="" coords="389,5,504,35"/>
-<area shape="rect" href="_ability_action_8h.html" title=" " alt="" coords="151,83,271,112"/>
-<area shape="rect" href="_base_action_8cpp.html" title=" " alt="" coords="601,83,735,112"/>
-<area shape="rect" href="_command_action_8h.html" title=" " alt="" coords="295,83,446,112"/>
-<area shape="rect" href="_item_action_8h.html" title=" " alt="" coords="471,83,577,112"/>
-<area shape="rect" href="_ability_action_8cpp.html" title=" " alt="" coords="5,186,144,215"/>
-<area shape="rect" href="_stat_sheet_object_8cpp.html" title=" " alt="" coords="168,160,413,241"/>
-<area shape="rect" href="_command_action_8cpp.html" title=" " alt="" coords="438,186,607,215"/>
-<area shape="rect" href="_item_action_8cpp.html" title=" " alt="" coords="632,186,757,215"/>
+<div class="center"><img src="_base_action_8h__dep__incl.png" border="0" usemap="#_battle___box_2_private_2_action_classes_2_base_action_8hdep" alt=""/></div>
+<map name="_battle___box_2_private_2_action_classes_2_base_action_8hdep" id="_battle___box_2_private_2_action_classes_2_base_action_8hdep">
+<area shape="rect" title=" " alt="" coords="455,5,647,47"/>
+<area shape="rect" href="_ability_action_8h.html" title=" " alt="" coords="104,95,303,136"/>
+<area shape="rect" href="_base_action_8cpp.html" title=" " alt="" coords="784,95,991,136"/>
+<area shape="rect" href="_command_action_8h.html" title=" " alt="" coords="327,95,549,136"/>
+<area shape="rect" href="_item_action_8h.html" title=" " alt="" coords="573,95,759,136"/>
+<area shape="rect" href="_ability_action_8cpp.html" title=" " alt="" coords="5,184,217,225"/>
+<area shape="rect" href="_stat_sheet_object_8cpp.html" title=" " alt="" coords="242,184,389,225"/>
+<area shape="rect" href="_command_action_8cpp.html" title=" " alt="" coords="413,184,647,225"/>
+<area shape="rect" href="_item_action_8cpp.html" title=" " alt="" coords="672,184,873,225"/>
 </map>
 </div>
 </div>
-<p><a href="">Go to the source code of this file.</a></p>
+<p><a href="_base_action_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_action.html">BaseAction</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:af0b345d735b1ce577e172853a4b8949a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</a> { <a class="el" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</a>, 
-<a class="el" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</a>, 
-<a class="el" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</a>, 
-<a class="el" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</a>
+<tr class="memitem:a9b5d16e70b48e3e5128379faff900f0c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0c">ABILITYTYPE</a> { <a class="el" href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3">ABILITYTYPE::E_MODIFIYER</a>, 
+<a class="el" href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001">ABILITYTYPE::E_TMP_MODIFIYER</a>, 
+<a class="el" href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a">ABILITYTYPE::E_DAMAGE_MODIFYER</a>
+ }</td></tr>
+<tr class="separator:a9b5d16e70b48e3e5128379faff900f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b345d735b1ce577e172853a4b8949a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</a> { <a class="el" href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</a>, 
+<a class="el" href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</a>, 
+<a class="el" href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</a>, 
+<a class="el" href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</a>
  }</td></tr>
 <tr class="separator:af0b345d735b1ce577e172853a4b8949a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a607550079f88dc0df6c9761da9352ec7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</a> { <br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100">TARGETTYPE::E_NONE</a>, 
-<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">TARGETTYPE::E_TARGET_ENEMY</a>, 
-<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">TARGETTYPE::E_ALL_ENEMIES</a>, 
-<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">TARGETTYPE::E_RANDOM_ENEMY</a>, 
+<tr class="memitem:ad49b53f4e7977b4cc867898320c4434c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</a> { <br />
+&#160;&#160;<a class="el" href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100">DAMAGETYPE::E_NONE</a>, 
+<a class="el" href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">DAMAGETYPE::E_HP_DAMAGE</a>, 
+<a class="el" href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">DAMAGETYPE::E_MP_DAMAGE</a>, 
+<a class="el" href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">DAMAGETYPE::E_HP_RECOVER</a>, 
 <br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">TARGETTYPE::E_ALLY</a>, 
-<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">TARGETTYPE::E_ALL_ALLY</a>, 
-<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">TARGETTYPE::E_ALLY_KO</a>, 
-<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">TARGETTYPE::E_ALL_ALLY_KO</a>, 
-<br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">TARGETTYPE::E_USER</a>
-<br />
- }</td></tr>
-<tr class="separator:a607550079f88dc0df6c9761da9352ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2506947a6c3c06e014b556ab6b13ff3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</a> { <a class="el" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100">INTERACTIONTYPE::E_NONE</a>, 
-<a class="el" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">INTERACTIONTYPE::E_PHYSICAL</a>, 
-<a class="el" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920">INTERACTIONTYPE::E_ABILITY</a>, 
-<a class="el" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</a>
- }</td></tr>
-<tr class="separator:ad2506947a6c3c06e014b556ab6b13ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49b53f4e7977b4cc867898320c4434c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</a> { <br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100">DAMAGETYPE::E_NONE</a>, 
-<a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">DAMAGETYPE::E_HP_DAMAGE</a>, 
-<a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">DAMAGETYPE::E_MP_DAMAGE</a>, 
-<a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">DAMAGETYPE::E_HP_RECOVER</a>, 
-<br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">DAMAGETYPE::E_MP_RECOVER</a>
+&#160;&#160;<a class="el" href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">DAMAGETYPE::E_MP_RECOVER</a>
 <br />
  }</td></tr>
 <tr class="separator:ad49b53f4e7977b4cc867898320c4434c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79026db208293d4646c9fa72dabdf1bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bf">ELEMENTTYPE</a> { <br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100">ELEMENTTYPE::E_NONE</a>, 
-<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">ELEMENTTYPE::E_FLAME</a>, 
-<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">ELEMENTTYPE::E_WATER</a>, 
-<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">ELEMENTTYPE::E_EARTH</a>, 
+<tr class="memitem:a79026db208293d4646c9fa72dabdf1bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bf">ELEMENTTYPE</a> { <br />
+&#160;&#160;<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100">ELEMENTTYPE::E_NONE</a>, 
+<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">ELEMENTTYPE::E_FLAME</a>, 
+<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">ELEMENTTYPE::E_WATER</a>, 
+<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">ELEMENTTYPE::E_EARTH</a>, 
 <br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">ELEMENTTYPE::E_ICE</a>, 
-<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">ELEMENTTYPE::E_THUNDER</a>, 
-<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">ELEMENTTYPE::E_WIND</a>, 
-<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">ELEMENTTYPE::E_LIGHT</a>, 
+&#160;&#160;<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">ELEMENTTYPE::E_ICE</a>, 
+<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">ELEMENTTYPE::E_THUNDER</a>, 
+<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">ELEMENTTYPE::E_WIND</a>, 
+<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">ELEMENTTYPE::E_LIGHT</a>, 
 <br />
-&#160;&#160;<a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">ELEMENTTYPE::E_DARK</a>
+&#160;&#160;<a class="el" href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">ELEMENTTYPE::E_DARK</a>
 <br />
  }</td></tr>
 <tr class="separator:a79026db208293d4646c9fa72dabdf1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2506947a6c3c06e014b556ab6b13ff3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</a> { <a class="el" href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100">INTERACTIONTYPE::E_NONE</a>, 
+<a class="el" href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">INTERACTIONTYPE::E_PHYSICAL</a>, 
+<a class="el" href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920">INTERACTIONTYPE::E_ABILITY</a>, 
+<a class="el" href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</a>
+ }</td></tr>
+<tr class="separator:ad2506947a6c3c06e014b556ab6b13ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607550079f88dc0df6c9761da9352ec7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</a> { <br />
+&#160;&#160;<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100">TARGETTYPE::E_NONE</a>, 
+<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">TARGETTYPE::E_TARGET_ENEMY</a>, 
+<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">TARGETTYPE::E_ALL_ENEMIES</a>, 
+<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">TARGETTYPE::E_RANDOM_ENEMY</a>, 
+<br />
+&#160;&#160;<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">TARGETTYPE::E_ALLY</a>, 
+<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">TARGETTYPE::E_ALL_ALLY</a>, 
+<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">TARGETTYPE::E_ALLY_KO</a>, 
+<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">TARGETTYPE::E_ALL_ALLY_KO</a>, 
+<br />
+&#160;&#160;<a class="el" href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">TARGETTYPE::E_USER</a>
+<br />
+ }</td></tr>
+<tr class="separator:a607550079f88dc0df6c9761da9352ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="af0b345d735b1ce577e172853a4b8949a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0b345d735b1ce577e172853a4b8949a">&#9670;&nbsp;</a></span>ACTIONTYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949a">ACTIONTYPE</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"></a>E_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb"></a>E_COMMAND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"></a>E_ITEM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"></a>E_ABILITY&#160;</td><td class="fielddoc"></td></tr>
-</table>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</a>,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">E_COMMAND</a>,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">E_ITEM</a>,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">E_ABILITY</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ad49b53f4e7977b4cc867898320c4434c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad49b53f4e7977b4cc867898320c4434c">&#9670;&nbsp;</a></span>DAMAGETYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434c">DAMAGETYPE</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad49b53f4e7977b4cc867898320c4434ca60880a7ff476d1de07c31261d81d4100"></a>E_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d"></a>E_HP_DAMAGE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607"></a>E_MP_DAMAGE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1"></a>E_HP_RECOVER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca"></a>E_MP_RECOVER&#160;</td><td class="fielddoc"></td></tr>
-</table>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</a>,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">E_HP_DAMAGE</a>,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">E_MP_DAMAGE</a>,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">E_HP_RECOVER</a>,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">E_MP_RECOVER</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a79026db208293d4646c9fa72dabdf1bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79026db208293d4646c9fa72dabdf1bf">&#9670;&nbsp;</a></span>ELEMENTTYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bf">ELEMENTTYPE</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfa60880a7ff476d1de07c31261d81d4100"></a>E_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa"></a>E_FLAME&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892"></a>E_WATER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80"></a>E_EARTH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c"></a>E_ICE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c"></a>E_THUNDER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e"></a>E_WIND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554"></a>E_LIGHT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7"></a>E_DARK&#160;</td><td class="fielddoc"></td></tr>
-</table>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</a>,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">E_FLAME</a>,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">E_WATER</a>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">E_EARTH</a>,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">E_ICE</a>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">E_THUNDER</a>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">E_WIND</a>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">E_LIGHT</a>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">E_DARK</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ad2506947a6c3c06e014b556ab6b13ff3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2506947a6c3c06e014b556ab6b13ff3">&#9670;&nbsp;</a></span>INTERACTIONTYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3">INTERACTIONTYPE</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad2506947a6c3c06e014b556ab6b13ff3a60880a7ff476d1de07c31261d81d4100"></a>E_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"></a>E_PHYSICAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920"></a>E_ABILITY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"></a>E_PHYSICAL_AND_ABILITY&#160;</td><td class="fielddoc"></td></tr>
-</table>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</a>,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">E_PHYSICAL</a>,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">E_ABILITY</a>,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">E_PHYSICAL_AND_ABILITY</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a607550079f88dc0df6c9761da9352ec7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a607550079f88dc0df6c9761da9352ec7">&#9670;&nbsp;</a></span>TARGETTYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7">TARGETTYPE</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100"></a>E_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d"></a>E_TARGET_ENEMY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57"></a>E_ALL_ENEMIES&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d"></a>E_RANDOM_ENEMY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f"></a>E_ALLY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0"></a>E_ALL_ALLY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c"></a>E_ALLY_KO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788"></a>E_ALL_ALLY_KO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335"></a>E_USER&#160;</td><td class="fielddoc"></td></tr>
-</table>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">E_NONE</a>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">E_TARGET_ENEMY</a>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">E_ALL_ENEMIES</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">E_RANDOM_ENEMY</a>,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">E_ALLY</a>,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">E_ALL_ALLY</a>,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">E_ALLY_KO</a>,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">E_ALL_ALLY_KO</a>,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">E_USER</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
-<div class="ttc" id="a_base_action_8h_html_af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"><div class="ttname"><a href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</a></div><div class="ttdeci">@ E_ABILITY</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">ELEMENTTYPE::E_WATER</a></div><div class="ttdeci">@ E_WATER</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">TARGETTYPE::E_TARGET_ENEMY</a></div><div class="ttdeci">@ E_TARGET_ENEMY</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">ELEMENTTYPE::E_WIND</a></div><div class="ttdeci">@ E_WIND</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">ELEMENTTYPE::E_EARTH</a></div><div class="ttdeci">@ E_EARTH</div></div>
-<div class="ttc" id="a_base_action_8h_html_af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"><div class="ttname"><a href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</a></div><div class="ttdeci">@ E_NONE</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">ELEMENTTYPE::E_FLAME</a></div><div class="ttdeci">@ E_FLAME</div></div>
-<div class="ttc" id="a_base_action_8h_html_ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"><div class="ttname"><a href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</a></div><div class="ttdeci">@ E_PHYSICAL_AND_ABILITY</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">ELEMENTTYPE::E_LIGHT</a></div><div class="ttdeci">@ E_LIGHT</div></div>
-<div class="ttc" id="a_base_action_8h_html_af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"><div class="ttname"><a href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</a></div><div class="ttdeci">@ E_ITEM</div></div>
-<div class="ttc" id="a_base_action_8h_html_af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb"><div class="ttname"><a href="_base_action_8h.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</a></div><div class="ttdeci">@ E_COMMAND</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">TARGETTYPE::E_USER</a></div><div class="ttdeci">@ E_USER</div></div>
-<div class="ttc" id="a_base_action_8h_html_ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1"><div class="ttname"><a href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">DAMAGETYPE::E_HP_RECOVER</a></div><div class="ttdeci">@ E_HP_RECOVER</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">TARGETTYPE::E_ALL_ALLY_KO</a></div><div class="ttdeci">@ E_ALL_ALLY_KO</div></div>
-<div class="ttc" id="a_base_action_8h_html_ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca"><div class="ttname"><a href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">DAMAGETYPE::E_MP_RECOVER</a></div><div class="ttdeci">@ E_MP_RECOVER</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">TARGETTYPE::E_RANDOM_ENEMY</a></div><div class="ttdeci">@ E_RANDOM_ENEMY</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">ELEMENTTYPE::E_ICE</a></div><div class="ttdeci">@ E_ICE</div></div>
-<div class="ttc" id="a_base_action_8h_html_ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d"><div class="ttname"><a href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">DAMAGETYPE::E_HP_DAMAGE</a></div><div class="ttdeci">@ E_HP_DAMAGE</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">TARGETTYPE::E_ALLY_KO</a></div><div class="ttdeci">@ E_ALLY_KO</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">TARGETTYPE::E_ALLY</a></div><div class="ttdeci">@ E_ALLY</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">TARGETTYPE::E_ALL_ALLY</a></div><div class="ttdeci">@ E_ALL_ALLY</div></div>
-<div class="ttc" id="a_base_action_8h_html_ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"><div class="ttname"><a href="_base_action_8h.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">INTERACTIONTYPE::E_PHYSICAL</a></div><div class="ttdeci">@ E_PHYSICAL</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">ELEMENTTYPE::E_THUNDER</a></div><div class="ttdeci">@ E_THUNDER</div></div>
-<div class="ttc" id="a_base_action_8h_html_ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607"><div class="ttname"><a href="_base_action_8h.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">DAMAGETYPE::E_MP_DAMAGE</a></div><div class="ttdeci">@ E_MP_DAMAGE</div></div>
-<div class="ttc" id="a_base_action_8h_html_a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7"><div class="ttname"><a href="_base_action_8h.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">ELEMENTTYPE::E_DARK</a></div><div class="ttdeci">@ E_DARK</div></div>
-<div class="ttc" id="a_base_action_8h_html_a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57"><div class="ttname"><a href="_base_action_8h.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">TARGETTYPE::E_ALL_ENEMIES</a></div><div class="ttdeci">@ E_ALL_ENEMIES</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfac4743c2c750d6bd2d8e8f0011769296c">ELEMENTTYPE::E_THUNDER</a></div><div class="ttdeci">@ E_THUNDER</div></div>
+<div class="ttc" id="a_base_action_8h_ad49b53f4e7977b4cc867898320c4434c_html_ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca"><div class="ttname"><a href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434cac3a5ef8a3a36a1f7deec6f18f38a02ca">DAMAGETYPE::E_MP_RECOVER</a></div><div class="ttdeci">@ E_MP_RECOVER</div></div>
+<div class="ttc" id="a_base_action_8h_af0b345d735b1ce577e172853a4b8949a_html_af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100"><div class="ttname"><a href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100">ACTIONTYPE::E_NONE</a></div><div class="ttdeci">@ E_NONE</div></div>
+<div class="ttc" id="a_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_html_a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3"><div class="ttname"><a href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3">ABILITYTYPE::E_MODIFIYER</a></div><div class="ttdeci">@ E_MODIFIYER</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfaa1a51befe114f9bc534204a978d30daa">ELEMENTTYPE::E_FLAME</a></div><div class="ttdeci">@ E_FLAME</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a27b48810fb58df9995aedb0566ac0788">TARGETTYPE::E_ALL_ALLY_KO</a></div><div class="ttdeci">@ E_ALL_ALLY_KO</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a7fbfb9d4f4b043a1ca2abbaa3cfd025d">TARGETTYPE::E_TARGET_ENEMY</a></div><div class="ttdeci">@ E_TARGET_ENEMY</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa199c997d1bb4a4b83602822377d8e892">ELEMENTTYPE::E_WATER</a></div><div class="ttdeci">@ E_WATER</div></div>
+<div class="ttc" id="a_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3_html_ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"><div class="ttname"><a href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">INTERACTIONTYPE::E_PHYSICAL</a></div><div class="ttdeci">@ E_PHYSICAL</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa098db1ee3498f27ad55a373eebff8554">ELEMENTTYPE::E_LIGHT</a></div><div class="ttdeci">@ E_LIGHT</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa1ec7a94f5fc7801902a39d1c9f5e207c">ELEMENTTYPE::E_ICE</a></div><div class="ttdeci">@ E_ICE</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a503c12d5a8daf63e289a38e2e0fe2335">TARGETTYPE::E_USER</a></div><div class="ttdeci">@ E_USER</div></div>
+<div class="ttc" id="a_base_action_8h_af0b345d735b1ce577e172853a4b8949a_html_af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb"><div class="ttname"><a href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb">ACTIONTYPE::E_COMMAND</a></div><div class="ttdeci">@ E_COMMAND</div></div>
+<div class="ttc" id="a_base_action_8h_ad49b53f4e7977b4cc867898320c4434c_html_ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1"><div class="ttname"><a href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca425cb5bb4e795355c33e4cc860fd00c1">DAMAGETYPE::E_HP_RECOVER</a></div><div class="ttdeci">@ E_HP_RECOVER</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a063df2e4ebf71e3d8689f5a2496e2aa0">TARGETTYPE::E_ALL_ALLY</a></div><div class="ttdeci">@ E_ALL_ALLY</div></div>
+<div class="ttc" id="a_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_html_a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001"><div class="ttname"><a href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001">ABILITYTYPE::E_TMP_MODIFIYER</a></div><div class="ttdeci">@ E_TMP_MODIFIYER</div></div>
+<div class="ttc" id="a_base_action_8h_af0b345d735b1ce577e172853a4b8949a_html_af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"><div class="ttname"><a href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</a></div><div class="ttdeci">@ E_ITEM</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a431587d6074a643e54d687d11bd4bc57">TARGETTYPE::E_ALL_ENEMIES</a></div><div class="ttdeci">@ E_ALL_ENEMIES</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa975927d1659c27acb95a0f80b48a715e">ELEMENTTYPE::E_WIND</a></div><div class="ttdeci">@ E_WIND</div></div>
+<div class="ttc" id="a_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_html_a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a"><div class="ttname"><a href="_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a">ABILITYTYPE::E_DAMAGE_MODIFYER</a></div><div class="ttdeci">@ E_DAMAGE_MODIFYER</div></div>
+<div class="ttc" id="a_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3_html_ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"><div class="ttname"><a href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</a></div><div class="ttdeci">@ E_PHYSICAL_AND_ABILITY</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bface003d6a3df870c80145fc52810457e7">ELEMENTTYPE::E_DARK</a></div><div class="ttdeci">@ E_DARK</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a0ef96fd5567e53f0192619d2c0447a3d">TARGETTYPE::E_RANDOM_ENEMY</a></div><div class="ttdeci">@ E_RANDOM_ENEMY</div></div>
+<div class="ttc" id="a_base_action_8h_af0b345d735b1ce577e172853a4b8949a_html_af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"><div class="ttname"><a href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</a></div><div class="ttdeci">@ E_ABILITY</div></div>
+<div class="ttc" id="a_base_action_8h_a79026db208293d4646c9fa72dabdf1bf_html_a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80"><div class="ttname"><a href="_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bfa673b633cfa5ab53ed89cb2cb95795f80">ELEMENTTYPE::E_EARTH</a></div><div class="ttdeci">@ E_EARTH</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a95701f6e1c4ed6f1e88f49622436e76f">TARGETTYPE::E_ALLY</a></div><div class="ttdeci">@ E_ALLY</div></div>
+<div class="ttc" id="a_base_action_8h_a607550079f88dc0df6c9761da9352ec7_html_a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c"><div class="ttname"><a href="_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7acb9df4fa2fd989be61283c61f8083b3c">TARGETTYPE::E_ALLY_KO</a></div><div class="ttdeci">@ E_ALLY_KO</div></div>
+<div class="ttc" id="a_base_action_8h_ad49b53f4e7977b4cc867898320c4434c_html_ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d"><div class="ttname"><a href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca608b040296907e0c5b942ac49a59846d">DAMAGETYPE::E_HP_DAMAGE</a></div><div class="ttdeci">@ E_HP_DAMAGE</div></div>
+<div class="ttc" id="a_base_action_8h_ad49b53f4e7977b4cc867898320c4434c_html_ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607"><div class="ttname"><a href="_base_action_8h_ad49b53f4e7977b4cc867898320c4434c.html#ad49b53f4e7977b4cc867898320c4434ca79c2a0732d5d6876a746bc4fd421f607">DAMAGETYPE::E_MP_DAMAGE</a></div><div class="ttdeci">@ E_MP_DAMAGE</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_40158b6576f6fcf2d5460a174ff9e037.html">Battle_Box</a></li><li class="navelem"><a class="el" href="dir_76d47b75c63d4a783edd144e6515fee5.html">Private</a></li><li class="navelem"><a class="el" href="dir_c706209fbbca3b8626b662f76f839588.html">ActionClasses</a></li><li class="navelem"><a class="el" href="_base_action_8h.html">BaseAction.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

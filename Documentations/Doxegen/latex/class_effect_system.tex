@@ -6,52 +6,72 @@
 
 
 
-Inheritance diagram for Effect\+System\+:\nopagebreak
+Inheritance diagram for Effect\+System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=195pt]{class_effect_system__inherit__graph}
+\includegraphics[width=179pt]{class_effect_system__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Effect\+System\+:\nopagebreak
+Collaboration diagram for Effect\+System\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=195pt]{class_effect_system__coll__graph}
+\includegraphics[width=350pt]{class_effect_system__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Effect\+System} ()
-\item 
-void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
-\item 
-void \textbf{ Callculate\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
-\item 
-void \textbf{ Remove\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
-\item 
-void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
-\item 
 void \textbf{ Addtarget} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Add target to the target array. \end{DoxyCompactList}\item 
+void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Base calculation for any dirieved system classes. \end{DoxyCompactList}\item 
+void \textbf{ Callculate\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calculates the effect ~\newline
+ \end{DoxyCompactList}\item 
+\textbf{ Effect\+System} ()
 \item 
 void \textbf{ On\+Destroy} ()
 \item 
+void \textbf{ Remove\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes the effect by the action. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets target. \end{DoxyCompactList}\item 
 \textbf{ $\sim$\+Effect\+System} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Stat\+Sheet\+Object} $\ast$ \textbf{ target}
+\item 
+\textbf{ Base\+Action} $\ast$ \textbf{ target\+Action}
+\item 
+T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ \textbf{ targets}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
+Definition at line 9 of file Effect\+System.\+h.
+
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_effect_system_a92be58e865893f0b16340887d2edd606}} 
+\mbox{\label{class_effect_system_a92be58e865893f0b16340887d2edd606_a92be58e865893f0b16340887d2edd606}} 
 \index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
 \index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{EffectSystem()}
 {\footnotesize\ttfamily Effect\+System\+::\+Effect\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -60,11 +80,15 @@ void \textbf{ On\+Destroy} ()
 \DoxyCodeLine{9 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_effect_system_aeacfcab72c0129a58bb18363b4763263}} 
+\mbox{\label{class_effect_system_aeacfcab72c0129a58bb18363b4763263_aeacfcab72c0129a58bb18363b4763263}} 
 \index{EffectSystem@{EffectSystem}!````~EffectSystem@{$\sim$EffectSystem}}
 \index{````~EffectSystem@{$\sim$EffectSystem}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{$\sim$EffectSystem()}
 {\footnotesize\ttfamily Effect\+System\+::$\sim$\+Effect\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -76,11 +100,19 @@ void \textbf{ On\+Destroy} ()
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\label{class_effect_system_a1cc71d0093defb7c5dcbccb593876b37}} 
+\mbox{\label{class_effect_system_a1cc71d0093defb7c5dcbccb593876b37_a1cc71d0093defb7c5dcbccb593876b37}} 
 \index{EffectSystem@{EffectSystem}!Addtarget@{Addtarget}}
 \index{Addtarget@{Addtarget}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{Addtarget()}
 {\footnotesize\ttfamily void Effect\+System\+::\+Addtarget (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$}]{target\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Add target to the target array. 
+
+
+
+Definition at line 32 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -89,15 +121,23 @@ void \textbf{ On\+Destroy} ()
 \DoxyCodeLine{35 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0}} 
+\mbox{\label{class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0_ab5c41ca84888911f7c878be0a3a5d4c0}} 
 \index{EffectSystem@{EffectSystem}!BaseCalculate@{BaseCalculate}}
 \index{BaseCalculate@{BaseCalculate}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{BaseCalculate()}
-{\footnotesize\ttfamily void Effect\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Single\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Effect\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Singled\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e076874bb2ef74d4d20e3c68e1}.
+Base calculation for any dirieved system classes. 
+
+
+
+Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e076874bb2ef74d4d20e3c68e1_a94cbf2e076874bb2ef74d4d20e3c68e1}.
+
+
+
+Definition at line 10 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -112,11 +152,20 @@ Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e07687
 \DoxyCodeLine{19 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_effect_system_a6f3268f2b1a70386b505f9a979c89841}} 
+\mbox{\label{class_effect_system_a6f3268f2b1a70386b505f9a979c89841_a6f3268f2b1a70386b505f9a979c89841}} 
 \index{EffectSystem@{EffectSystem}!CallculateEffect@{CallculateEffect}}
 \index{CallculateEffect@{CallculateEffect}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{CallculateEffect()}
 {\footnotesize\ttfamily void Effect\+System\+::\+Callculate\+Effect (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Calculates the effect ~\newline
+ 
+
+
+
+Definition at line 20 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -125,11 +174,15 @@ Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e07687
 \DoxyCodeLine{23 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22}} 
+\mbox{\label{class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22_a9419cd87fd9b4e8519fc3960dedefd22}} 
 \index{EffectSystem@{EffectSystem}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{OnDestroy()}
 {\footnotesize\ttfamily void Effect\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -138,11 +191,19 @@ Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e07687
 \DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_effect_system_a1b599411780ea6013b9de3a94252dc29}} 
+\mbox{\label{class_effect_system_a1b599411780ea6013b9de3a94252dc29_a1b599411780ea6013b9de3a94252dc29}} 
 \index{EffectSystem@{EffectSystem}!RemoveEffect@{RemoveEffect}}
 \index{RemoveEffect@{RemoveEffect}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{RemoveEffect()}
 {\footnotesize\ttfamily void Effect\+System\+::\+Remove\+Effect (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Removes the effect by the action. 
+
+
+
+Definition at line 24 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -151,11 +212,19 @@ Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e07687
 \DoxyCodeLine{27 \}}
 
 \end{DoxyCode}
-\mbox{\label{class_effect_system_a224e059a2e658f9cad40799fdf902fbb}} 
+\mbox{\label{class_effect_system_a224e059a2e658f9cad40799fdf902fbb_a224e059a2e658f9cad40799fdf902fbb}} 
 \index{EffectSystem@{EffectSystem}!SetTarget@{SetTarget}}
 \index{SetTarget@{SetTarget}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{SetTarget()}
 {\footnotesize\ttfamily void Effect\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$}]{target\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets target. 
+
+
+
+Definition at line 28 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -166,7 +235,40 @@ Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e07687
 \end{DoxyCode}
 
 
+\doxysubsection{Field Documentation}
+\mbox{\label{class_effect_system_a1c7d29836af594f9fad93b8f3562e8e7_a1c7d29836af594f9fad93b8f3562e8e7}} 
+\index{EffectSystem@{EffectSystem}!target@{target}}
+\index{target@{target}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{target}
+{\footnotesize\ttfamily \textbf{ Stat\+Sheet\+Object}$\ast$ Effect\+System\+::target\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Effect\+System.\+h.
+
+\mbox{\label{class_effect_system_a232e145c135d885a995e9f96d0aa71dc_a232e145c135d885a995e9f96d0aa71dc}} 
+\index{EffectSystem@{EffectSystem}!targetAction@{targetAction}}
+\index{targetAction@{targetAction}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{targetAction}
+{\footnotesize\ttfamily \textbf{ Base\+Action}$\ast$ Effect\+System\+::target\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Effect\+System.\+h.
+
+\mbox{\label{class_effect_system_a2c4378aa4b2d84795cfcf32157330c4d_a2c4378aa4b2d84795cfcf32157330c4d}} 
+\index{EffectSystem@{EffectSystem}!targets@{targets}}
+\index{targets@{targets}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{targets}
+{\footnotesize\ttfamily T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$ Effect\+System\+::targets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file Effect\+System.\+h.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+h}\item 
-D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+cpp}\end{DoxyCompactItemize}
+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+h}\item 
+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="DamageDeltSystem::CalculateMagicalDefence" name="DamageDeltSystem::CalculateMagicalDefence">
+<area shape="rect" id="node1" title="Calculates the magical defence of the target." alt="" coords="5,23,205,65"/>
+<area shape="rect" id="node2" href="$class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8.html#aecfdf70147ffaa33f65b03c3b97232c8" title="Returns the equipment map." alt="" coords="253,5,504,32"/>
+<area shape="rect" id="node3" href="$class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3" title="Returns the statMap." alt="" coords="272,56,485,83"/>
+</map>

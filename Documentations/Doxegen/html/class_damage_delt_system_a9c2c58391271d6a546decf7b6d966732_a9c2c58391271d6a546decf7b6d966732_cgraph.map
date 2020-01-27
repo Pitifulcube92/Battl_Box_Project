@@ -1,0 +1,5 @@
+<map id="DamageDeltSystem::CalculateWeaponDamage" name="DamageDeltSystem::CalculateWeaponDamage">
+<area shape="rect" id="node1" title="Claculates the damage of a weapon item." alt="" coords="5,23,205,65"/>
+<area shape="rect" id="node2" href="$class_base_action_a70d34140345d92808deed0304397b074.html#a70d34140345d92808deed0304397b074" title="Return Interaction type." alt="" coords="253,5,476,32"/>
+<area shape="rect" id="node3" href="$class_item_action_a1e9af3e563063849729fad37d8beb92e.html#a1e9af3e563063849729fad37d8beb92e" title="Return statModMap." alt="" coords="275,56,454,83"/>
+</map>
