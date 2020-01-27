@@ -65,7 +65,7 @@ DAMAGETYPE ItemAction::ReturnDamageType() const
 }
 TMap<FString, float> ItemAction::ReturnStatMap() const
 {
-	return statMap;
+	return statModMap;
 }
 TArray<AbilityAction*> ItemAction::ReturnEffectList() const 
 {

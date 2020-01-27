@@ -6,14 +6,9 @@ Debugger
 .SH SYNOPSIS
 .br
 .PP
-.PP
-\fC#include <Debugger\&.h>\fP
 .SS "Public Member Functions"
 
 .in +1c
-.ti -1c
-.RI "\fBDebugger\fP ()=delete"
-.br
 .ti -1c
 .RI "\fBDebugger\fP (const \fBDebugger\fP &)=delete"
 .br
@@ -47,7 +42,7 @@ Debugger
 .br
 .RI "Initiates the debugger\&. "
 .ti -1c
-.RI "static void \fBSetSeverity\fP (const \fBMessageType\fP type_)"
+.RI "static void \fBSetSeverity\fP (const MessageType type_)"
 .br
 .RI "Sets the severity\&. "
 .ti -1c
@@ -55,17 +50,29 @@ Debugger
 .br
 .RI "Sends a warrning log to the debugger txt file\&. "
 .in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBLog\fP (const MessageType type_, const FString &message_, const FString &fileName_, const int32 line_)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static MessageType \fBcurrentType\fP = MessageType::E_NONE"
+.br
+.ti -1c
+.RI "static FString \fBDebugDirectory\fP = ''"
+.br
+.ti -1c
+.RI "static TArray< FString > \fBLogArray\fP = TArray<FString>()"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 17 of file Debugger\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "Debugger::Debugger (const \fBDebugger\fP &)\fC [delete]\fP"
-
-.SS "Debugger::Debugger (\fBDebugger\fP &&)\fC [delete]\fP"
-
-.SS "Debugger::Debugger ()\fC [delete]\fP"
-
 .SH "Member Function Documentation"
 .PP 
 .SS "void Debugger::Error (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
@@ -80,8 +87,6 @@ Definition at line 43 of file Debuger\&.cpp\&.
 45      Log(MessageType::E_ERROR,"ERROR: " + message_, fileName_, line_);
 46 }
 .fi
-.PP
-Referenced by DamageDeltSystem::BaseCalculate(), StatSheetObject::ReturnAbility(), StatSheetObject::ReturnCommand(), StatSheetObject::ReturnEquipment(), StatSheetObject::ReturnItem(), and FBattle_BoxModule::StartupModule()\&.
 .SS "void Debugger::FatalError (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
 
 .PP
@@ -94,8 +99,6 @@ Definition at line 51 of file Debuger\&.cpp\&.
 53      Log(MessageType::E_FATAL_ERROR,"FATALERROR: " + message_, fileName_, line_);
 54 }
 .fi
-.PP
-Referenced by FBattle_BoxModule::StartupModule()\&.
 .SS "void Debugger::Info (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
 
 .PP
@@ -108,8 +111,6 @@ Definition at line 39 of file Debuger\&.cpp\&.
 41      Log(MessageType::E_INFO,"INFO: " + message_, fileName_, line_);
 42 }
 .fi
-.PP
-Referenced by FBattle_BoxModule::StartupModule()\&.
 .SS "void Debugger::InitDebug ()\fC [static]\fP"
 
 .PP
@@ -131,11 +132,7 @@ Definition at line 12 of file Debuger\&.cpp\&.
 .fi
 .PP
 Referenced by FBattle_BoxModule::StartupModule()\&.
-.SS "\fBDebugger\fP& Debugger::operator= (const \fBDebugger\fP &)\fC [delete]\fP"
-
-.SS "\fBDebugger\fP& Debugger::operator= (\fBDebugger\fP &&)\fC [delete]\fP"
-
-.SS "void Debugger::SetSeverity (const \fBMessageType\fP type_)\fC [static]\fP"
+.SS "void Debugger::SetSeverity (const MessageType type_)\fC [static]\fP"
 
 .PP
 Sets the severity\&. 
@@ -148,7 +145,7 @@ Definition at line 35 of file Debuger\&.cpp\&.
 38 }
 .fi
 .PP
-Referenced by DamageDeltSystem::BaseCalculate(), StatSheetObject::ReturnAbility(), StatSheetObject::ReturnCommand(), StatSheetObject::ReturnEquipment(), StatSheetObject::ReturnItem(), and FBattle_BoxModule::StartupModule()\&.
+Referenced by StatSheetObject::ReturnAbility(), StatSheetObject::ReturnCommand(), StatSheetObject::ReturnEquipment(), StatSheetObject::ReturnItem(), and FBattle_BoxModule::StartupModule()\&.
 .SS "void Debugger::Warrning (const FString & message_, const FString & fileName_, const int32 line_)\fC [static]\fP"
 
 .PP
@@ -161,8 +158,7 @@ Definition at line 47 of file Debuger\&.cpp\&.
 49      Log(MessageType::E_WARNING,"WARNING: " + message_, fileName_, line_);
 50 }
 .fi
-.PP
-Referenced by FBattle_BoxModule::StartupModule()\&.
+
 
 .SH "Author"
 .PP 

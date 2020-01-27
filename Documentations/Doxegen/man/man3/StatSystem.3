@@ -7,8 +7,6 @@ StatSystem
 .br
 .PP
 .PP
-\fC#include <StatSystem\&.h>\fP
-.PP
 Inherits \fBBaseSystem\fP\&.
 .SS "Public Member Functions"
 
@@ -44,38 +42,23 @@ Inherits \fBBaseSystem\fP\&.
 .RI "void \fBSetTargetAction\fP (\fBBaseAction\fP *const action_)"
 .br
 .RI "Sets target action\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
 .ti -1c
-.RI "\fBStatSystem\fP ()"
+.RI "\fBStatSheetObject\fP * \fBtarget\fP"
 .br
 .ti -1c
-.RI "\fB~StatSystem\fP ()"
+.RI "\fBBaseAction\fP * \fBtargetAction\fP"
+.br
+.ti -1c
+.RI "TArray< \fBStatSheetObject\fP * > \fBtargets\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 9 of file StatSystem\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "StatSystem::StatSystem ()"
-
-.PP
-Definition at line 6 of file StatSystem\&.cpp\&.
-.PP
-.nf
-7 {
-8 
-9 }
-.fi
-.SS "StatSystem::~StatSystem ()"
-
-.PP
-Definition at line 48 of file StatSystem\&.cpp\&.
-.PP
-.nf
-49 {
-50 
-51 }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void StatSystem::AddStatModifier (\fBBaseAction\fP *const action_)"
@@ -133,16 +116,6 @@ Definition at line 10 of file StatSystem\&.cpp\&.
 17 
 18      }
 19 }
-.fi
-.SS "void StatSystem::OnDestroy ()"
-
-.PP
-Definition at line 44 of file StatSystem\&.cpp\&.
-.PP
-.nf
-45 {
-46 
-47 }
 .fi
 .SS "void StatSystem::RemoveModifier (\fBBaseAction\fP *const action_)"
 

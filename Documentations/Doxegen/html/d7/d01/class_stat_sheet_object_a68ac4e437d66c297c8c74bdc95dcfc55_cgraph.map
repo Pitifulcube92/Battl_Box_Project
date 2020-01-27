@@ -1,5 +1,4 @@
 <map id="StatSheetObject::ReturnItem" name="StatSheetObject::ReturnItem">
-<area shape="rect" id="node1" title="Returns a item action by its name from the item map." alt="" coords="5,31,195,57"/>
-<area shape="rect" id="node2" href="$dc/dbf/class_debugger.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="261,5,375,32"/>
-<area shape="rect" id="node3" href="$dc/dbf/class_debugger.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="243,56,393,83"/>
+<area shape="rect" id="node1" title="Returns a item action by its name from the item map." alt="" coords="5,5,195,32"/>
+<area shape="rect" id="node2" href="$dc/dbf/class_debugger.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="243,5,393,32"/>
 </map>

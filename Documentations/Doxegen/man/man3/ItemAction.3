@@ -7,8 +7,6 @@ ItemAction
 .br
 .PP
 .PP
-\fC#include <ItemAction\&.h>\fP
-.PP
 Inherits \fBBaseAction\fP\&.
 .SS "Public Member Functions"
 
@@ -18,10 +16,7 @@ Inherits \fBBaseAction\fP\&.
 .br
 .RI "Adds an effect to the items effects array\&. "
 .ti -1c
-.RI "\fBItemAction\fP ()"
-.br
-.ti -1c
-.RI "\fBItemAction\fP (const FString name_, const FString discription_, const \fBACTIONTYPE\fP action_, const \fBTARGETTYPE\fP target_, const \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const uint32 value_, const \fBDAMAGETYPE\fP damageType_, const TArray< \fBAbilityAction\fP * > effectArray_)"
+.RI "\fBItemAction\fP (const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const uint32 value_, const DAMAGETYPE damageType_, const TArray< \fBAbilityAction\fP * > effectArray_)"
 .br
 .ti -1c
 .RI "\fBItemAction\fP (const \fBItemAction\fP *other_)"
@@ -30,7 +25,7 @@ Inherits \fBBaseAction\fP\&.
 .RI "void \fBOnDestroy\fP ()"
 .br
 .ti -1c
-.RI "\fBDAMAGETYPE\fP \fBReturnDamageType\fP () const"
+.RI "DAMAGETYPE \fBReturnDamageType\fP () const"
 .br
 .RI "Returns Damage type\&. "
 .ti -1c
@@ -38,7 +33,7 @@ Inherits \fBBaseAction\fP\&.
 .br
 .RI "Returns Effect array\&. "
 .ti -1c
-.RI "\fBITEMTYPE\fP \fBReturnItemType\fP () const"
+.RI "ITEMTYPE \fBReturnItemType\fP () const"
 .br
 .RI "Returns itemType\&. "
 .ti -1c
@@ -46,89 +41,37 @@ Inherits \fBBaseAction\fP\&.
 .br
 .RI "Returnsitem value\&. "
 .ti -1c
-.RI "void \fBSetDamageType\fP (const \fBDAMAGETYPE\fP type_)"
+.RI "void \fBSetDamageType\fP (const DAMAGETYPE type_)"
 .br
 .RI "Set Damage type\&. "
 .ti -1c
-.RI "void \fBSetType\fP (const \fBITEMTYPE\fP type_)"
+.RI "void \fBSetType\fP (const ITEMTYPE type_)"
 .br
 .RI "Set Item type\&. "
 .ti -1c
 .RI "void \fBSetValue\fP (const uint32 value_)"
 .br
 .RI "Set item Value\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
 .ti -1c
-.RI "\fB~ItemAction\fP ()"
+.RI "DAMAGETYPE \fBdamageType\fP"
+.br
+.ti -1c
+.RI "TArray< \fBAbilityAction\fP * > \fBeffectList\fP"
+.br
+.ti -1c
+.RI "ITEMTYPE \fBtype\fP"
+.br
+.ti -1c
+.RI "uint32 \fBvalue\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 21 of file ItemAction\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "ItemAction::ItemAction ()"
-
-.PP
-Definition at line 4 of file ItemAction\&.cpp\&.
-.PP
-.nf
-4                        : effectList(TArray<AbilityAction*>())
-5 {
-6      SetName("");
-7      SetDiscription("");
-8      SetActionType(ACTIONTYPE::E_NONE);
-9      SetTargetType(TARGETTYPE::E_NONE);
-10      SetInteractionType(INTERACTIONTYPE::E_NONE);
-11      SetActionID(00);
-12      SetValue(00);
-13      SetDamageType(DAMAGETYPE::E_NONE);
-14 }
-.fi
-.SS "ItemAction::ItemAction (const FString name_, const FString discription_, const \fBACTIONTYPE\fP action_, const \fBTARGETTYPE\fP target_, const \fBINTERACTIONTYPE\fP interaction_, const uint32 actionID_, TMap< FString, float > statMap_, const uint32 value_, const \fBDAMAGETYPE\fP damageType_, const TArray< \fBAbilityAction\fP * > effectArray_)"
-
-.PP
-Definition at line 15 of file ItemAction\&.cpp\&.
-.PP
-.nf
-16 {
-17      SetName(name_);
-18      SetDiscription(discription_);
-19      SetActionType(action_);
-20      SetTargetType(target_); 
-21      SetInteractionType(interaction_);
-22      SetActionID(actionID_);
-23      
-24      value = value_;
-25      effectList = effectArray_;
-26 
-27 }
-.fi
-.SS "ItemAction::ItemAction (const \fBItemAction\fP * other_)"
-
-.PP
-Definition at line 28 of file ItemAction\&.cpp\&.
-.PP
-.nf
-29 {
-30      SetName(other_->ReturnName());
-31      SetDiscription(other_->ReturnDiscription());
-32      SetActionType(other_ ->ReturnActionType());
-33      SetTargetType(other_->ReturnTargetType());
-34      SetInteractionType(other_->ReturnInteractionType());
-35      SetActionID(other_->ReturnActionID());
-36      SetValue(other_->ReturnValue());
-37 }
-.fi
-.SS "ItemAction::~ItemAction ()"
-
-.PP
-Definition at line 78 of file ItemAction\&.cpp\&.
-.PP
-.nf
-79 {
-80      OnDestroy();
-81 }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ItemAction::AddEffect (\fBAbilityAction\fP *const ability_)"
@@ -143,19 +86,7 @@ Definition at line 50 of file ItemAction\&.cpp\&.
 52      effectList\&.Add(ability_);
 53 }
 .fi
-.SS "void ItemAction::OnDestroy ()"
-
-.PP
-Definition at line 74 of file ItemAction\&.cpp\&.
-.PP
-.nf
-75 {
-76      //Clean up method
-77 }
-.fi
-.PP
-Referenced by ~ItemAction()\&.
-.SS "\fBDAMAGETYPE\fP ItemAction::ReturnDamageType () const"
+.SS "DAMAGETYPE ItemAction::ReturnDamageType () const"
 
 .PP
 Returns Damage type\&. 
@@ -179,7 +110,7 @@ Definition at line 70 of file ItemAction\&.cpp\&.
 72      return effectList;
 73 }
 .fi
-.SS "\fBITEMTYPE\fP ItemAction::ReturnItemType () const"
+.SS "ITEMTYPE ItemAction::ReturnItemType () const"
 
 .PP
 Returns itemType\&. 
@@ -191,8 +122,6 @@ Definition at line 54 of file ItemAction\&.cpp\&.
 56      return type;
 57 }
 .fi
-.PP
-Referenced by DamageDeltSystem::BaseCalculate()\&.
 .SS "uint32 ItemAction::ReturnValue () const"
 
 .PP
@@ -205,9 +134,7 @@ Definition at line 58 of file ItemAction\&.cpp\&.
 60      return value;
 61 }
 .fi
-.PP
-Referenced by ItemAction()\&.
-.SS "void ItemAction::SetDamageType (const \fBDAMAGETYPE\fP type_)"
+.SS "void ItemAction::SetDamageType (const DAMAGETYPE type_)"
 
 .PP
 Set Damage type\&. 
@@ -219,9 +146,7 @@ Definition at line 42 of file ItemAction\&.cpp\&.
 44      damageType = type_;
 45 }
 .fi
-.PP
-Referenced by ItemAction()\&.
-.SS "void ItemAction::SetType (const \fBITEMTYPE\fP type_)"
+.SS "void ItemAction::SetType (const ITEMTYPE type_)"
 
 .PP
 Set Item type\&. 
@@ -245,8 +170,7 @@ Definition at line 38 of file ItemAction\&.cpp\&.
 40      value = value_;
 41 }
 .fi
-.PP
-Referenced by ItemAction()\&.
+
 
 .SH "Author"
 .PP 

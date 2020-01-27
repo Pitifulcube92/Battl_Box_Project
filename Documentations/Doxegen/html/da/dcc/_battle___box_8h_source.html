@@ -16,6 +16,11 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -28,6 +33,21 @@
    <div id="projectname">Battle Box Manual
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -39,16 +59,6 @@
 var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="../../menudata.js"></script>
-<script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('../../',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -85,7 +95,7 @@ $(document).ready(function(){initNavTree('da/dcc/_battle___box_8h_source.html','
 <div class="title">Battle_Box.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../da/dcc/_battle___box_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
@@ -97,17 +107,16 @@ $(document).ready(function(){initNavTree('da/dcc/_battle___box_8h_source.html','
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d0b/class_f_battle___box_module.html#af9e8a9761586d4c32b376edc5d5f9664">StartupModule</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d0b/class_f_battle___box_module.html#af861316d1a9e9cda23763de4e970d3af">ShutdownModule</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     <span class="keyword">virtual</span> <span class="keywordtype">void</span> ShutdownModule() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_f_battle___box_module_html_af9e8a9761586d4c32b376edc5d5f9664"><div class="ttname"><a href="../../d5/d0b/class_f_battle___box_module.html#af9e8a9761586d4c32b376edc5d5f9664">FBattle_BoxModule::StartupModule</a></div><div class="ttdeci">virtual void StartupModule() override</div><div class="ttdoc">IModuleInterface implementation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d38/_battle___box_8cpp_source.html#l00008">Battle_Box.cpp:8</a></div></div>
 <div class="ttc" id="aclass_f_battle___box_module_html"><div class="ttname"><a href="../../d5/d0b/class_f_battle___box_module.html">FBattle_BoxModule</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dcc/_battle___box_8h_source.html#l00008">Battle_Box.h:8</a></div></div>
-<div class="ttc" id="aclass_f_battle___box_module_html_af861316d1a9e9cda23763de4e970d3af"><div class="ttname"><a href="../../d5/d0b/class_f_battle___box_module.html#af861316d1a9e9cda23763de4e970d3af">FBattle_BoxModule::ShutdownModule</a></div><div class="ttdeci">virtual void ShutdownModule() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d38/_battle___box_8cpp_source.html#l00025">Battle_Box.cpp:25</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_40158b6576f6fcf2d5460a174ff9e037.html">Battle_Box</a></li><li class="navelem"><a class="el" href="../../dir_810541451b939e056fa48087c334de95.html">Public</a></li><li class="navelem"><a class="el" href="../../da/dcc/_battle___box_8h.html">Battle_Box.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_40158b6576f6fcf2d5460a174ff9e037.html">Battle_Box</a></li><li class="navelem"><a class="el" href="../../dir_810541451b939e056fa48087c334de95.html">Public</a></li><li class="navelem"><b>Battle_Box.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

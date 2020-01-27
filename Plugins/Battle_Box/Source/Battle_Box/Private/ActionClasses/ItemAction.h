@@ -24,27 +24,30 @@ private:
 	ITEMTYPE type;
 	uint32 value;
 	TArray<AbilityAction*> effectList;
+	TMap<FString, float> statModMap;
 	DAMAGETYPE damageType;	
 public:
 	ItemAction();
 	ItemAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const  TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const uint32 value_, const DAMAGETYPE damageType_, const TArray<AbilityAction*> effectArray_);
 	ItemAction(const ItemAction* other_);
-	/// Set Item type
+	///Set Item type
 	void SetType(const ITEMTYPE type_);
-	/// Set item Value 
+	///Set item Value 
 	void SetValue(const uint32 value_);
-	/// Set Damage type
+	///Set Damage type
 	void SetDamageType(const DAMAGETYPE type_);
-	/// Adds an effect to the items effects array
+	///Adds an effect to the items effects array
 	void AddEffect(AbilityAction* const ability_);
-	/// Returns itemType
+	///Returns itemType
 	ITEMTYPE ReturnItemType() const;
-	/// Returnsitem value. 
+	///Returnsitem value. 
 	uint32 ReturnValue() const;
-	/// Returns Damage type.
+	///Returns Damage type.
 	DAMAGETYPE ReturnDamageType() const;
-	/// Returns Effect array.
+	///Returns Effect array.
 	TArray<AbilityAction*> ReturnEffectList() const;
+	///Return statModMap
+	TMap<FString, float> ReturnStatMap() const;
 	void OnDestroy();
 	~ItemAction();
 	//Note: when creating item make the ability be calculated and store in the statsheet.

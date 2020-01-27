@@ -2,10 +2,6 @@
 \label{class_stat_system}\index{StatSystem@{StatSystem}}
 
 
-{\ttfamily \#include $<$Stat\+System.\+h$>$}
-
-
-
 Inheritance diagram for Stat\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -19,7 +15,7 @@ Collaboration diagram for Stat\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=181pt]{df/d50/class_stat_system__coll__graph}
+\includegraphics[width=350pt]{df/d50/class_stat_system__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -33,17 +29,26 @@ void \mbox{\hyperlink{class_stat_system_acc44ff7b73bce66d9da24df9608aab65}{Add\+
 \begin{DoxyCompactList}\small\item\em Adds a temporary modifierby the base action. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stat_system_a805454116d5cd0a0c408117b42f413be}{Base\+Calculate}} (const bool Is\+Single\+Target\+\_\+, \mbox{\hyperlink{class_base_action}{Base\+Action}} $\ast$const action\+\_\+)
 \begin{DoxyCompactList}\small\item\em Base calculation for any dirieved system classes. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_stat_system_aa74080624aba5dd9c0836013d684e931}{On\+Destroy}} ()
+\mbox{\Hypertarget{class_stat_system_aa74080624aba5dd9c0836013d684e931}\label{class_stat_system_aa74080624aba5dd9c0836013d684e931}} 
+void {\bfseries On\+Destroy} ()
 \item 
 void \mbox{\hyperlink{class_stat_system_a02d648b7bf4890422092ef592ef6d95c}{Remove\+Modifier}} (\mbox{\hyperlink{class_base_action}{Base\+Action}} $\ast$const action\+\_\+)
 \begin{DoxyCompactList}\small\item\em Removes the specific modification by the baseaction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stat_system_a37eb3d84c033799fe52f96ae7371e9a4}{Set\+Target}} (\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const target\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets target. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_stat_system_a3db7a7b3be3f83319de0481332947674}{Set\+Target\+Action}} (\mbox{\hyperlink{class_base_action}{Base\+Action}} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets target action. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stat_system_ac75d67d5db20babea9601894aee1e871}{Stat\+System}} ()
+\begin{DoxyCompactList}\small\item\em Sets target action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_stat_system_ae92847be88226779e422cfea7d9b597c}{$\sim$\+Stat\+System}} ()
+\mbox{\Hypertarget{class_stat_system_ae09b0274af73fc6ba5984eb00578504a}\label{class_stat_system_ae09b0274af73fc6ba5984eb00578504a}} 
+\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$ {\bfseries target}
+\item 
+\mbox{\Hypertarget{class_stat_system_ad8897d020748de4b84e6994d858867fe}\label{class_stat_system_ad8897d020748de4b84e6994d858867fe}} 
+\mbox{\hyperlink{class_base_action}{Base\+Action}} $\ast$ {\bfseries target\+Action}
+\item 
+\mbox{\Hypertarget{class_stat_system_a588a9905678c53a72b748e0b0de1fc5a}\label{class_stat_system_a588a9905678c53a72b748e0b0de1fc5a}} 
+T\+Array$<$ \mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$ $>$ {\bfseries targets}
 \end{DoxyCompactItemize}
 
 
@@ -52,43 +57,6 @@ void \mbox{\hyperlink{class_stat_system_a3db7a7b3be3f83319de0481332947674}{Set\+
 
 Definition at line 9 of file Stat\+System.\+h.
 
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_stat_system_ac75d67d5db20babea9601894aee1e871}\label{class_stat_system_ac75d67d5db20babea9601894aee1e871}} 
-\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
-\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
-\doxysubsubsection{\texorpdfstring{StatSystem()}{StatSystem()}}
-{\footnotesize\ttfamily Stat\+System\+::\+Stat\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line 6 of file Stat\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{7 \{}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_stat_system_ae92847be88226779e422cfea7d9b597c}\label{class_stat_system_ae92847be88226779e422cfea7d9b597c}} 
-\index{StatSystem@{StatSystem}!````~StatSystem@{$\sim$StatSystem}}
-\index{````~StatSystem@{$\sim$StatSystem}!StatSystem@{StatSystem}}
-\doxysubsubsection{\texorpdfstring{$\sim$StatSystem()}{~StatSystem()}}
-{\footnotesize\ttfamily Stat\+System\+::$\sim$\+Stat\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line 48 of file Stat\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{49 \{}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{51 \}}
-
-\end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
@@ -184,23 +152,6 @@ Definition at line 10 of file Stat\+System.\+cpp.
 \DoxyCodeLine{17 }
 \DoxyCodeLine{18      \}}
 \DoxyCodeLine{19 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_stat_system_aa74080624aba5dd9c0836013d684e931}\label{class_stat_system_aa74080624aba5dd9c0836013d684e931}} 
-\index{StatSystem@{StatSystem}!OnDestroy@{OnDestroy}}
-\index{OnDestroy@{OnDestroy}!StatSystem@{StatSystem}}
-\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
-{\footnotesize\ttfamily void Stat\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line 44 of file Stat\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{45 \{}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_stat_system_a02d648b7bf4890422092ef592ef6d95c}\label{class_stat_system_a02d648b7bf4890422092ef592ef6d95c}} 

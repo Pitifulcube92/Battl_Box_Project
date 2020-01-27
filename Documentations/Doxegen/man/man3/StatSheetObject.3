@@ -6,8 +6,6 @@ StatSheetObject
 .SH SYNOPSIS
 .br
 .PP
-.PP
-\fC#include <StatSheetObject\&.h>\fP
 .SS "Public Member Functions"
 
 .in +1c
@@ -99,77 +97,40 @@ StatSheetObject
 .br
 .RI "Sets tag\&. "
 .ti -1c
-.RI "\fBStatSheetObject\fP ()"
-.br
-.ti -1c
 .RI "\fBStatSheetObject\fP (const FString name_, const FString tag_, const TMap< FString, \fBCommandAction\fP * > commandMap_, const TMap< FString, \fBItemAction\fP * > itemMap_, const TMap< FString, \fBAbilityAction\fP * > abilityMap_, const TMap< FString, float > statMap_, const TMap< FString, \fBItemAction\fP * > equipmentMap_)"
 .br
 .ti -1c
 .RI "\fBStatSheetObject\fP (\fBStatSheetObject\fP *const other_)"
 .br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
 .ti -1c
-.RI "\fB~StatSheetObject\fP ()"
+.RI "TMap< FString, \fBAbilityAction\fP * > \fBabilityMap\fP"
+.br
+.ti -1c
+.RI "TMap< FString, \fBCommandAction\fP * > \fBcommandMap\fP"
+.br
+.ti -1c
+.RI "TMap< FString, \fBItemAction\fP * > \fBequipmentMap\fP"
+.br
+.ti -1c
+.RI "TMap< FString, \fBItemAction\fP * > \fBitemMap\fP"
+.br
+.ti -1c
+.RI "FString \fBname\fP"
+.br
+.ti -1c
+.RI "TMap< FString, float > \fBstatMap\fP"
+.br
+.ti -1c
+.RI "FString \fBtag\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 14 of file StatSheetObject\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "StatSheetObject::StatSheetObject ()"
-
-.PP
-Definition at line 10 of file StatSheetObject\&.cpp\&.
-.PP
-.nf
-10                                  : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())
-11 {
-12      name = "";
-13      tag = "";
-14 }
-.fi
-.SS "StatSheetObject::StatSheetObject (const FString name_, const FString tag_, const TMap< FString, \fBCommandAction\fP * > commandMap_, const TMap< FString, \fBItemAction\fP * > itemMap_, const TMap< FString, \fBAbilityAction\fP * > abilityMap_, const TMap< FString, float > statMap_, const TMap< FString, \fBItemAction\fP * > equipmentMap_)"
-
-.PP
-Definition at line 15 of file StatSheetObject\&.cpp\&.
-.PP
-.nf
-16 {
-17      name = name_;
-18      tag = tag_;
-19      commandMap = commandMap_;
-20      itemMap = itemMap_;
-21      abilityMap = abilityMap_;
-22      equipmentMap = equipmentMap_;
-23 }
-.fi
-.SS "StatSheetObject::StatSheetObject (\fBStatSheetObject\fP *const other_)"
-
-.PP
-Definition at line 24 of file StatSheetObject\&.cpp\&.
-.PP
-.nf
-25 {
-26      name = other_->ReturnName();
-27      tag = other_->ReturnTag();
-28      commandMap = other_->ReturnCommandMap();
-29      itemMap = other_->ReturnItemMap();
-30      abilityMap = other_->ReturnAbilityMap();
-31      equipmentMap = other_->ReturnEquipmentMap();
-32      statMap = other_->ReturnStatMap();
-33 
-34 }
-.fi
-.SS "StatSheetObject::~StatSheetObject ()"
-
-.PP
-Definition at line 156 of file StatSheetObject\&.cpp\&.
-.PP
-.nf
-157 {
-158      OnDestroy();
-159 }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void StatSheetObject::AddAbilityAction (\fBAbilityAction\fP *const ability_)"
@@ -220,26 +181,6 @@ Definition at line 55 of file StatSheetObject\&.cpp\&.
 57      itemMap\&.Add(item_->ReturnName(), item_);
 58 }
 .fi
-.SS "void StatSheetObject::OnDestroy ()"
-
-.PP
-Definition at line 144 of file StatSheetObject\&.cpp\&.
-.PP
-.nf
-145 {
-146      //Clear out all pointer within the maps
-147      if (commandMap\&.Num() > 0)
-148      {
-149           for(auto command : commandMap)
-150           {
-151                delete command\&.Value;
-152           }
-153           commandMap\&.Empty();
-154      }
-155 }
-.fi
-.PP
-Referenced by ~StatSheetObject()\&.
 .SS "void StatSheetObject::RemoveAbilityAction (const FString name_)"
 
 .PP
@@ -319,8 +260,6 @@ Definition at line 132 of file StatSheetObject\&.cpp\&.
 134      return abilityMap;
 135 }
 .fi
-.PP
-Referenced by StatSheetObject()\&.
 .SS "\fBCommandAction\fP * StatSheetObject::ReturnCommand (FString name_) const"
 
 .PP
@@ -351,8 +290,6 @@ Definition at line 124 of file StatSheetObject\&.cpp\&.
 126      return commandMap;
 127 }
 .fi
-.PP
-Referenced by StatSheetObject()\&.
 .SS "\fBItemAction\fP * StatSheetObject::ReturnEquipment (const FString name_) const"
 
 .PP
@@ -384,7 +321,7 @@ Definition at line 140 of file StatSheetObject\&.cpp\&.
 143 }
 .fi
 .PP
-Referenced by StatSheetObject()\&.
+Referenced by DamageDeltSystem::CalculateMagicalDefence(), and DamageDeltSystem::CalculatePhysicalDefence()\&.
 .SS "\fBItemAction\fP * StatSheetObject::ReturnItem (const FString name_) const"
 
 .PP
@@ -415,8 +352,6 @@ Definition at line 128 of file StatSheetObject\&.cpp\&.
 130      return itemMap;
 131 }
 .fi
-.PP
-Referenced by StatSheetObject()\&.
 .SS "FString StatSheetObject::ReturnName () const"
 
 .PP
@@ -429,8 +364,6 @@ Definition at line 43 of file StatSheetObject\&.cpp\&.
 45      return name;
 46 }
 .fi
-.PP
-Referenced by StatSheetObject()\&.
 .SS "TMap< FString, float > StatSheetObject::ReturnStatMap () const"
 
 .PP
@@ -444,7 +377,7 @@ Definition at line 136 of file StatSheetObject\&.cpp\&.
 139 }
 .fi
 .PP
-Referenced by StatSheetObject()\&.
+Referenced by DamageDeltSystem::CalculateMagicalDefence(), and DamageDeltSystem::CalculatePhysicalDefence()\&.
 .SS "FString StatSheetObject::ReturnTag () const"
 
 .PP
@@ -457,8 +390,6 @@ Definition at line 47 of file StatSheetObject\&.cpp\&.
 49      return tag;
 50 }
 .fi
-.PP
-Referenced by StatSheetObject()\&.
 .SS "void StatSheetObject::SetName (const FString name_)"
 
 .PP

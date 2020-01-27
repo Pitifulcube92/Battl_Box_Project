@@ -17,5 +17,12 @@ var class_base_action =
     [ "SetDiscription", "de/dd1/class_base_action.html#a0a4bd7fd3ce61159e35282a7b05659a7", null ],
     [ "SetInteractionType", "de/dd1/class_base_action.html#ae0e83722e14079e10f7d43d54ba4898e", null ],
     [ "SetName", "de/dd1/class_base_action.html#ad307b128f9ded949daa718fc1364919c", null ],
-    [ "SetTargetType", "de/dd1/class_base_action.html#a6f0ca61c63f46332e6507fc2ee2b29f8", null ]
+    [ "SetTargetType", "de/dd1/class_base_action.html#a6f0ca61c63f46332e6507fc2ee2b29f8", null ],
+    [ "action", "de/dd1/class_base_action.html#a23cf827d35850a4e4d2859a12a885567", null ],
+    [ "actionID", "de/dd1/class_base_action.html#a050d54574671299fb3f8d854aeb6a190", null ],
+    [ "discription", "de/dd1/class_base_action.html#a513d01865c01cb52756d2d634afda491", null ],
+    [ "interaction", "de/dd1/class_base_action.html#a46af3a3c5512e3d0072fac96989b52ec", null ],
+    [ "name", "de/dd1/class_base_action.html#a89d98c13f445fa58b96d5c4eff58e134", null ],
+    [ "statMap", "de/dd1/class_base_action.html#a98568ceec0e6f17054a14ea118d2adeb", null ],
+    [ "target", "de/dd1/class_base_action.html#afafdb765a8e836a0eba3a59fb1f23e01", null ]
 ];

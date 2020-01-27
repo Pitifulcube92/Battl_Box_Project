@@ -9,5 +9,8 @@ var class_stat_system =
     [ "OnDestroy", "da/df9/class_stat_system.html#aa74080624aba5dd9c0836013d684e931", null ],
     [ "RemoveModifier", "da/df9/class_stat_system.html#a02d648b7bf4890422092ef592ef6d95c", null ],
     [ "SetTarget", "da/df9/class_stat_system.html#a37eb3d84c033799fe52f96ae7371e9a4", null ],
-    [ "SetTargetAction", "da/df9/class_stat_system.html#a3db7a7b3be3f83319de0481332947674", null ]
+    [ "SetTargetAction", "da/df9/class_stat_system.html#a3db7a7b3be3f83319de0481332947674", null ],
+    [ "target", "da/df9/class_stat_system.html#ae09b0274af73fc6ba5984eb00578504a", null ],
+    [ "targetAction", "da/df9/class_stat_system.html#ad8897d020748de4b84e6994d858867fe", null ],
+    [ "targets", "da/df9/class_stat_system.html#a588a9905678c53a72b748e0b0de1fc5a", null ]
 ];

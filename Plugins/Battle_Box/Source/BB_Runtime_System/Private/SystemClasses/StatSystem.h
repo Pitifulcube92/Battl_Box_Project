@@ -12,10 +12,14 @@ private:
 	StatSheetObject* target;
 	BaseAction* targetAction;
 	TArray<StatSheetObject*> targets;
+
+	void ModifiyStat(const float value, const FString name_);
+	///Adds the specific modification by the baseaction.
+
 public:
 	StatSystem();
 	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
-	///Adds the specific modification by the baseaction.
+	///This updates the stats debengin on the name. 
 	void AddStatModifier(BaseAction* const action_);
 	///Removes the specific modification by the baseaction.
 	void RemoveModifier(BaseAction* const action_);

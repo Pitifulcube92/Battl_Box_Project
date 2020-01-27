@@ -22,19 +22,20 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Battle Box Manual", "index.html", [
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
+  [ "Battle_Box Documents", "index.html", [
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
+      [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
+      [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", null ]
@@ -45,8 +46,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"dir_c706209fbbca3b8626b662f76f839588.html"
+"_ability_action_8cpp.html",
+"class_debugger_a6f945a47fa65d5eb4f93a1db124324f3.html#a6f945a47fa65d5eb4f93a1db124324f3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

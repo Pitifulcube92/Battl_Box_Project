@@ -1,6 +1,6 @@
 <map id="BaseSystem" name="BaseSystem">
 <area shape="rect" id="node1" title=" " alt="" coords="222,5,349,97"/>
-<area shape="rect" id="node2" href="$df/d3e/class_damage_delt_system.html" title=" " alt="" coords="5,153,195,347"/>
-<area shape="rect" id="node3" href="$d4/dc0/class_effect_system.html" title=" " alt="" coords="219,160,351,340"/>
-<area shape="rect" id="node4" href="$da/df9/class_stat_system.html" title=" " alt="" coords="375,145,510,355"/>
+<area shape="rect" id="node2" href="$df/d3e/class_damage_delt_system.html" title=" " alt="" coords="5,145,195,472"/>
+<area shape="rect" id="node3" href="$d4/dc0/class_effect_system.html" title=" " alt="" coords="219,204,351,413"/>
+<area shape="rect" id="node4" href="$da/df9/class_stat_system.html" title=" " alt="" coords="375,189,510,428"/>
 </map>

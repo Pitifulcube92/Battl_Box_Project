@@ -8,5 +8,8 @@ var class_command_action =
     [ "ReturnAction", "d7/ddb/class_command_action.html#ae4ad4949defce81722252072e3413d2b", null ],
     [ "ReturnWeaponType", "d7/ddb/class_command_action.html#aed6b4cc73d8dd8e5e184e248c6e102a1", null ],
     [ "SetCommand", "d7/ddb/class_command_action.html#a07a737aaa16805dccea57471b9918324", null ],
-    [ "SetWeaponType", "d7/ddb/class_command_action.html#aebe160173438c46ddaac8018cd3d1b22", null ]
+    [ "SetWeaponType", "d7/ddb/class_command_action.html#aebe160173438c46ddaac8018cd3d1b22", null ],
+    [ "command", "d7/ddb/class_command_action.html#a9be5bf2c9041a5418f989d3494702416", null ],
+    [ "currentweapon", "d7/ddb/class_command_action.html#a3fb3b61a06e73ecb893129dbbb7ce5f5", null ],
+    [ "isActionCommand", "d7/ddb/class_command_action.html#a8458ced4a5af267f03dae720b3c4ae0e", null ]
 ];

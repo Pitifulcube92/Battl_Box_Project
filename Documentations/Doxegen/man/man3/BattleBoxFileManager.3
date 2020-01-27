@@ -6,14 +6,9 @@ BattleBoxFileManager
 .SH SYNOPSIS
 .br
 .PP
-.PP
-\fC#include <BattleBoxFileManager\&.h>\fP
 .SS "Public Member Functions"
 
 .in +1c
-.ti -1c
-.RI "\fBBattleBoxFileManager\fP ()=delete"
-.br
 .ti -1c
 .RI "\fBBattleBoxFileManager\fP (\fBBattleBoxFileManager\fP &&)=delete"
 .br
@@ -33,34 +28,33 @@ BattleBoxFileManager
 .ti -1c
 .RI "static void \fBDeleteFile\fP (const FString &sourcePath_)"
 .br
+.RI "Deletes a file\&. "
 .ti -1c
 .RI "static void \fBGetFileSize\fP (const FString &sourcePath_)"
 .br
+.RI "Gets the file size\&. "
 .ti -1c
 .RI "static bool \fBVerifyOnCreateDirectory\fP (const FString &testDir_)"
 .br
+.RI "Check and creates if there is a directory\&. "
 .ti -1c
 .RI "static void \fBWriteTextArrayToFile\fP (const FString &saveDirectory_, const TArray< FString > textArray_, const FString &FileName_, bool const IsOverWrite_)"
 .br
+.RI "write multiple lines of string to a txt file\&. "
 .ti -1c
 .RI "static void \fBWriteTextFile\fP (const FString &saveDirectory_, const FString context_, const FString &FileName_, bool const IsOverWrite_)"
 .br
+.RI "writes to a text file\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 11 of file BattleBoxFileManager\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "BattleBoxFileManager::BattleBoxFileManager (const \fBBattleBoxFileManager\fP &)\fC [delete]\fP"
-
-.SS "BattleBoxFileManager::BattleBoxFileManager (\fBBattleBoxFileManager\fP &&)\fC [delete]\fP"
-
-.SS "BattleBoxFileManager::BattleBoxFileManager ()\fC [delete]\fP"
-
 .SH "Member Function Documentation"
 .PP 
 .SS "void BattleBoxFileManager::DeleteFile (const FString & sourcePath_)\fC [static]\fP"
 
+.PP
+Deletes a file\&. 
 .PP
 Definition at line 35 of file BattleBoxFileManager\&.cpp\&.
 .PP
@@ -75,6 +69,8 @@ Definition at line 35 of file BattleBoxFileManager\&.cpp\&.
 .fi
 .SS "void BattleBoxFileManager::GetFileSize (const FString & sourcePath_)\fC [static]\fP"
 
+.PP
+Gets the file size\&. 
 .PP
 Definition at line 22 of file BattleBoxFileManager\&.cpp\&.
 .PP
@@ -92,12 +88,10 @@ Definition at line 22 of file BattleBoxFileManager\&.cpp\&.
 33 
 34 }
 .fi
-.SS "\fBBattleBoxFileManager\fP& BattleBoxFileManager::operator= (\fBBattleBoxFileManager\fP &&)\fC [delete]\fP"
-
-.SS "\fBBattleBoxFileManager\fP& BattleBoxFileManager::operator= (const \fBBattleBoxFileManager\fP &)\fC [delete]\fP"
-
 .SS "bool BattleBoxFileManager::VerifyOnCreateDirectory (const FString & testDir_)\fC [static]\fP"
 
+.PP
+Check and creates if there is a directory\&. 
 .PP
 Definition at line 8 of file BattleBoxFileManager\&.cpp\&.
 .PP
@@ -120,6 +114,8 @@ Definition at line 8 of file BattleBoxFileManager\&.cpp\&.
 Referenced by Debugger::InitDebug()\&.
 .SS "void BattleBoxFileManager::WriteTextArrayToFile (const FString & saveDirectory_, const TArray< FString > textArray_, const FString & FileName_, bool const IsOverWrite_)\fC [static]\fP"
 
+.PP
+write multiple lines of string to a txt file\&. 
 .PP
 Definition at line 57 of file BattleBoxFileManager\&.cpp\&.
 .PP
@@ -146,6 +142,8 @@ Definition at line 57 of file BattleBoxFileManager\&.cpp\&.
 .fi
 .SS "void BattleBoxFileManager::WriteTextFile (const FString & saveDirectory_, const FString context_, const FString & FileName_, bool const IsOverWrite_)\fC [static]\fP"
 
+.PP
+writes to a text file\&. 
 .PP
 Definition at line 43 of file BattleBoxFileManager\&.cpp\&.
 .PP

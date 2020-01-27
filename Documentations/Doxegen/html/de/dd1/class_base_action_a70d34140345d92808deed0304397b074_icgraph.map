@@ -1,6 +1,9 @@
 <map id="BaseAction::ReturnInteractionType" name="BaseAction::ReturnInteractionType">
-<area shape="rect" id="node1" title=" " alt="" coords="276,56,499,83"/>
-<area shape="rect" id="node2" href="$d3/d53/class_ability_action.html#a772784d3aa39971866fe064fe5da9ec3" title=" " alt="" coords="29,5,205,32"/>
-<area shape="rect" id="node3" href="$d7/ddb/class_command_action.html#aaa9704a80750e6a758d76178cfe12b5a" title=" " alt="" coords="5,56,228,83"/>
-<area shape="rect" id="node4" href="$dd/d44/class_item_action.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="39,107,194,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="555,129,777,156"/>
+<area shape="rect" id="node2" href="$d3/d53/class_ability_action.html#a772784d3aa39971866fe064fe5da9ec3" title=" " alt="" coords="307,5,483,32"/>
+<area shape="rect" id="node3" href="$df/d3e/class_damage_delt_system.html#a7b2fc3b7d84fa682d2132143443053be" title="Calculates the damage of an item." alt="" coords="295,57,495,98"/>
+<area shape="rect" id="node5" href="$df/d3e/class_damage_delt_system.html#a9c2c58391271d6a546decf7b6d966732" title="Claculates the damage of a weapon item." alt="" coords="295,122,495,163"/>
+<area shape="rect" id="node6" href="$d7/ddb/class_command_action.html#aaa9704a80750e6a758d76178cfe12b5a" title=" " alt="" coords="284,188,507,215"/>
+<area shape="rect" id="node7" href="$dd/d44/class_item_action.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="318,239,473,265"/>
+<area shape="rect" id="node4" href="$df/d3e/class_damage_delt_system.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="5,64,236,91"/>
 </map>

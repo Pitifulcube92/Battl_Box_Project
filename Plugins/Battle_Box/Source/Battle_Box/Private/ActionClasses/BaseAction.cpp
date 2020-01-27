@@ -68,10 +68,6 @@ TARGETTYPE BaseAction::ReturnTargetType() const
 {
 	return target;
 }
-TMap<FString, float> BaseAction::ReturnStatMap() const
-{
-	return statMap;
-}
 INTERACTIONTYPE BaseAction::ReturnInteractionType() const
 {
 	return interaction;

@@ -7,8 +7,6 @@ DamageDeltSystem
 .br
 .PP
 .PP
-\fC#include <DamageDeltSystem\&.h>\fP
-.PP
 Inherits \fBBaseSystem\fP\&.
 .SS "Public Member Functions"
 
@@ -16,62 +14,83 @@ Inherits \fBBaseSystem\fP\&.
 .ti -1c
 .RI "void \fBAddTargetToArray\fP (\fBStatSheetObject\fP *const target_)"
 .br
+.RI "Adds another target to the array\&. "
 .ti -1c
 .RI "void \fBBaseCalculate\fP (const bool IsSingledTarget_, \fBBaseAction\fP *const action_)"
 .br
-.RI "Base calculation for any dirieved system classes\&. "
-.ti -1c
-.RI "\fBDamageDeltSystem\fP ()"
-.br
+.RI "System calculation\&. "
 .ti -1c
 .RI "void \fBOnDestroy\fP ()"
 .br
 .ti -1c
 .RI "TArray< float > \fBReturnDamageValues\fP () const"
 .br
+.RI "Returns the damage value array\&. "
 .ti -1c
 .RI "float \fBReturnTotalDamageValue\fP () const"
 .br
+.RI "Returns the damage value\&. "
 .ti -1c
 .RI "void \fBSetOwner\fP (\fBStatSheetObject\fP *const owner_)"
 .br
+.RI "Sets who the owner of the damage\&. "
 .ti -1c
 .RI "void \fBSetTarget\fP (\fBStatSheetObject\fP *const target_)"
 .br
+.RI "Sets the target who is being damaged\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
 .ti -1c
-.RI "\fB~DamageDeltSystem\fP ()"
+.RI "float \fBCalculateAbilityDamage\fP (\fBAbilityAction\fP *const targetAbility_)"
+.br
+.RI "Calculates the damage of a ability item\&. "
+.ti -1c
+.RI "float \fBCalculateItemDamage\fP (\fBItemAction\fP *const targetItem_)"
+.br
+.RI "Calculates the damage of an item\&. "
+.ti -1c
+.RI "float \fBCalculateMagicalDefence\fP (\fBStatSheetObject\fP *const target_)"
+.br
+.RI "Calculates the magical defence of the target\&. "
+.ti -1c
+.RI "float \fBCalculatePhysicalDefence\fP (\fBStatSheetObject\fP *const target_)"
+.br
+.RI "Calculates the physical defence of the target\&. "
+.ti -1c
+.RI "float \fBCalculateWeaponDamage\fP (\fBItemAction\fP *const target_)"
+.br
+.RI "Claculates the damage of a weapon item\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBStatSheetObject\fP * \fBowner\fP"
+.br
+.ti -1c
+.RI "\fBStatSheetObject\fP * \fBsingleTarget\fP"
+.br
+.ti -1c
+.RI "TArray< \fBStatSheetObject\fP * > \fBtargets\fP"
+.br
+.ti -1c
+.RI "float \fBtotalDamageValue\fP"
+.br
+.ti -1c
+.RI "TArray< float > \fBtotalDamageValues\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 12 of file DamageDeltSystem\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "DamageDeltSystem::DamageDeltSystem ()"
-
-.PP
-Definition at line 10 of file DamageDeltSystem\&.cpp\&.
-.PP
-.nf
-10                                    : singleTarget(nullptr), owner(nullptr), targets(TArray<StatSheetObject*>()), totalDamageValues(TArray<float>())
-11 {
-12      totalDamageValue = 0\&.0f;
-13 }
-.fi
-.SS "DamageDeltSystem::~DamageDeltSystem ()"
-
-.PP
-Definition at line 274 of file DamageDeltSystem\&.cpp\&.
-.PP
-.nf
-275 {
-276      OnDestroy();
-277 }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void DamageDeltSystem::AddTargetToArray (\fBStatSheetObject\fP *const target_)"
 
+.PP
+Adds another target to the array\&. 
 .PP
 Definition at line 245 of file DamageDeltSystem\&.cpp\&.
 .PP
@@ -83,7 +102,7 @@ Definition at line 245 of file DamageDeltSystem\&.cpp\&.
 .SS "void DamageDeltSystem::BaseCalculate (const bool IsSingledTarget_, \fBBaseAction\fP *const action_)\fC [virtual]\fP"
 
 .PP
-Base calculation for any dirieved system classes\&. 
+System calculation\&. 
 .PP
 Implements \fBBaseSystem\fP\&.
 .PP
@@ -176,33 +195,187 @@ Definition at line 14 of file DamageDeltSystem\&.cpp\&.
 98 
 99 }
 .fi
-.SS "void DamageDeltSystem::OnDestroy ()"
+.SS "float DamageDeltSystem::CalculateAbilityDamage (\fBAbilityAction\fP *const targetAbility_)\fC [private]\fP"
 
 .PP
-Definition at line 249 of file DamageDeltSystem\&.cpp\&.
+Calculates the damage of a ability item\&. 
+.PP
+Definition at line 116 of file DamageDeltSystem\&.cpp\&.
 .PP
 .nf
-250 {
-251      //clean up any pointers
-252      if(singleTarget)
-253      {
-254           delete singleTarget;
-255      }
-256      if(targets\&.Num() > 0)
-257      {
-258           for(auto& elem : targets)
-259           {
-260                delete elem;
-261                elem = nullptr;
-262           }
-263           targets\&.Empty();
-264      }
-265 }
+117 {
+118      //Get the target action and get the damage value;
+119      return targetAbility_->CalculateAbilityValue();
+120      /*if (targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
+121      {
+122           target
+123      }
+124      if (targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_ABILITY)
+125      {
+126 
+127      }
+128      if(targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)
+129      {
+130 
+131      }*/
+132 }
 .fi
+.SS "float DamageDeltSystem::CalculateItemDamage (\fBItemAction\fP *const targetItem_)\fC [private]\fP"
+
 .PP
-Referenced by ~DamageDeltSystem()\&.
+Calculates the damage of an item\&. 
+.PP
+Definition at line 133 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+134 {
+135      //Get the target and get the damage Value;
+136      if (targetItem_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
+137      {
+138           return targetItem_->ReturnStatMap()["Atk"];
+139      }
+140      if (targetItem_->ReturnInteractionType() == INTERACTIONTYPE::E_ABILITY)
+141      {
+142           return targetItem_->ReturnStatMap()["M_Atk"];
+143      }
+144      if (targetItem_->ReturnInteractionType() ==INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)
+145      {
+146           return targetItem_->ReturnStatMap()["Atk"] + targetItem_->ReturnStatMap()["M_Atk"];
+147      }
+148      //switch (targetItem_->ReturnDamageType())
+149      //{
+150      //case DAMAGETYPE::E_HP_DAMAGE:
+151      //   //This will get the damage from the stat map
+152      //   return targetItem_->ReturnStatMap()["Atk"];
+153      //case DAMAGETYPE::E_HP_RECOVER:
+154      //   return targetItem_->ReturnStatMap()["HP_REC"];
+155      //case DAMAGETYPE::E_MP_DAMAGE:
+156      //   return targetItem_->ReturnStatMap()["M_Atk"];
+157      //case DAMAGETYPE::E_MP_RECOVER:
+158      //   return targetItem_->ReturnStatMap()["M_REC"];
+159      //}
+160 }
+.fi
+.SS "float DamageDeltSystem::CalculateMagicalDefence (\fBStatSheetObject\fP *const target_)\fC [private]\fP"
+
+.PP
+Calculates the magical defence of the target\&. 
+.PP
+Definition at line 199 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+200 {
+201      float magicDefence = 0\&.0f;
+202      if (target_->ReturnEquipmentMap()\&.Contains("Helment"))
+203      {
+204           magicDefence += target_->ReturnEquipmentMap()["Helment"]->ReturnStatMap()["M_Def"];
+205      }
+206      if (target_->ReturnEquipmentMap()\&.Contains("Chest_Armor"))
+207      {
+208           magicDefence += target_->ReturnEquipmentMap()["Chest_Armor"]->ReturnStatMap()["M_Def"];
+209      }
+210      if (target_->ReturnEquipmentMap()\&.Contains("Leg_Armor"))
+211      {
+212           magicDefence += target_->ReturnEquipmentMap()["Leg_Armor"]->ReturnStatMap()["M_Def"];
+213      }
+214      if (target_->ReturnEquipmentMap()\&.Contains("Boots"))
+215      {
+216           magicDefence += target_->ReturnEquipmentMap()["Boots"]->ReturnStatMap()["M_Def"];
+217      }
+218      if (target_->ReturnEquipmentMap()\&.Contains("Accessory_1"))
+219      {
+220           magicDefence += target_->ReturnEquipmentMap()["Accessory_1"]->ReturnStatMap()["M_Def"];
+221      }
+222      if (target_->ReturnEquipmentMap()\&.Contains("Accesory_2"))
+223      {
+224           magicDefence += target_->ReturnEquipmentMap()["Accesory_2"]->ReturnStatMap()["M_Def"];
+225      }
+226      if (target_->ReturnEquipmentMap()\&.Contains("Weapon_1"))
+227      {
+228           magicDefence += target_->ReturnEquipmentMap()["Weapon_1"]->ReturnStatMap()["M_Def"];
+229      }
+230      if (target_->ReturnEquipmentMap()\&.Contains("Weapon_2"))
+231      {
+232           magicDefence += target_->ReturnEquipmentMap()["Weapon_2"]->ReturnStatMap()["M_Def"];
+233      }
+234      magicDefence += target_->ReturnStatMap()["M_Def"];
+235      return magicDefence;
+236 }
+.fi
+.SS "float DamageDeltSystem::CalculatePhysicalDefence (\fBStatSheetObject\fP *const target_)\fC [private]\fP"
+
+.PP
+Calculates the physical defence of the target\&. 
+.PP
+Definition at line 161 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+162 {
+163      float physicalDefence = 0\&.0f;
+164      if(target_->ReturnEquipmentMap()\&.Contains("Helment"))
+165      {
+166           physicalDefence += target_->ReturnEquipmentMap()["Helment"]->ReturnStatMap()["Def"];
+167      }
+168      if(target_->ReturnEquipmentMap()\&.Contains("Chest_Armor"))
+169      {
+170           physicalDefence += target_->ReturnEquipmentMap()["Chest_Armor"]->ReturnStatMap()["Def"];
+171      }
+172      if(target_->ReturnEquipmentMap()\&.Contains("Leg_Armor"))
+173      {
+174           physicalDefence += target_->ReturnEquipmentMap()["Leg_Armor"]->ReturnStatMap()["Def"];
+175      }
+176      if(target_->ReturnEquipmentMap()\&.Contains("Boots"))
+177      {
+178           physicalDefence += target_->ReturnEquipmentMap()["Boots"]->ReturnStatMap()["Def"];
+179      }
+180      if (target_->ReturnEquipmentMap()\&.Contains("Accessory_1"))
+181      {
+182           physicalDefence += target_->ReturnEquipmentMap()["Accessory_1"]->ReturnStatMap()["Def"];
+183      }
+184      if (target_->ReturnEquipmentMap()\&.Contains("Accesory_2"))
+185      {
+186           physicalDefence += target_->ReturnEquipmentMap()["Accesory_2"]->ReturnStatMap()["Def"];
+187      }
+188      if (target_->ReturnEquipmentMap()\&.Contains("Weapon_1"))
+189      {
+190           physicalDefence += target_->ReturnEquipmentMap()["Weapon_1"]->ReturnStatMap()["Def"];
+191      }
+192      if (target_->ReturnEquipmentMap()\&.Contains("Weapon_2"))
+193      {
+194           physicalDefence += target_->ReturnEquipmentMap()["Weapon_2"]->ReturnStatMap()["Def"];
+195      }
+196      physicalDefence += target_->ReturnStatMap()["Def"];
+197      return physicalDefence;
+198 }
+.fi
+.SS "float DamageDeltSystem::CalculateWeaponDamage (\fBItemAction\fP *const target_)\fC [private]\fP"
+
+.PP
+Claculates the damage of a weapon item\&. 
+.PP
+Definition at line 100 of file DamageDeltSystem\&.cpp\&.
+.PP
+.nf
+101 {
+102      //This will return either magic, physical or both as a damage value;
+103      if (targetWeapon_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
+104      {
+105           return targetWeapon_->ReturnStatMap()["Atk"];
+106      }
+107      if (targetWeapon_->ReturnInteractionType() == INTERACTIONTYPE::E_ABILITY)
+108      {
+109           return targetWeapon_->ReturnStatMap()["M_Atk"];
+110      }
+111      if (targetWeapon_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)
+112      {
+113           return targetWeapon_->ReturnStatMap()["Atk"] + targetWeapon_->ReturnStatMap()["M_Atk"];
+114      }
+115 }
+.fi
 .SS "TArray< float > DamageDeltSystem::ReturnDamageValues () const"
 
+.PP
+Returns the damage value array\&. 
 .PP
 Definition at line 270 of file DamageDeltSystem\&.cpp\&.
 .PP
@@ -214,6 +387,8 @@ Definition at line 270 of file DamageDeltSystem\&.cpp\&.
 .SS "float DamageDeltSystem::ReturnTotalDamageValue () const"
 
 .PP
+Returns the damage value\&. 
+.PP
 Definition at line 266 of file DamageDeltSystem\&.cpp\&.
 .PP
 .nf
@@ -224,6 +399,8 @@ Definition at line 266 of file DamageDeltSystem\&.cpp\&.
 .SS "void DamageDeltSystem::SetOwner (\fBStatSheetObject\fP *const owner_)"
 
 .PP
+Sets who the owner of the damage\&. 
+.PP
 Definition at line 237 of file DamageDeltSystem\&.cpp\&.
 .PP
 .nf
@@ -233,6 +410,8 @@ Definition at line 237 of file DamageDeltSystem\&.cpp\&.
 .fi
 .SS "void DamageDeltSystem::SetTarget (\fBStatSheetObject\fP *const target_)"
 
+.PP
+Sets the target who is being damaged\&. 
 .PP
 Definition at line 241 of file DamageDeltSystem\&.cpp\&.
 .PP

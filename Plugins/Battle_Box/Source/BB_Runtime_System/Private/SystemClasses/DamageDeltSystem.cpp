@@ -1,13 +1,12 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #include "DamageDeltSystem.h"
 #include "../Battle_Box/Private/StatSheetObject.h"
-#include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/CommandAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
-DamageDeltSystem::DamageDeltSystem() : singleTarget(nullptr), owner(nullptr), targets(TArray<StatSheetObject*>()), totalDamageValues(TArray<float>())
+DamageDeltSystem::DamageDeltSystem() : singleTarget(nullptr), owner(nullptr), targets(TArray<StatSheetObject*>()), totalDamageValues(TArray<float>()), statModMap(TMap<FString, float>())
 {
 	totalDamageValue = 0.0f;
 }
@@ -27,7 +26,7 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 		case ACTIONTYPE::E_ITEM:
 			//Item will be sorted to what type then calculated for total damage.
 			ItemAction* item = dynamic_cast<ItemAction*>(action_);
-
+			
 			if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
 			{
 				totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
@@ -51,7 +50,7 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 		}	
 		//TO DO: modify targets HP on stat system.
 	}
-	else if (IsSingledTarget_)
+	else if (!IsSingledTarget_)
 	{
 		//This will calculate any damage for multiple targets.
 		switch (action_->ReturnActionType())
@@ -116,7 +115,7 @@ float DamageDeltSystem::CalculateWeaponDamage(ItemAction* const targetWeapon_)
 float  DamageDeltSystem::CalculateAbilityDamage(AbilityAction* const targetAbility_)
 {
 	//Get the target action and get the damage value;
-	return targetAbility_->CalculateAbilityValue();
+	return;
 	/*if (targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
 	{
 		target

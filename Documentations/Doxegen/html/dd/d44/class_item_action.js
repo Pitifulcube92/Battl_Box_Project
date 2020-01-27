@@ -12,5 +12,9 @@ var class_item_action =
     [ "ReturnValue", "dd/d44/class_item_action.html#af05b71cc56a5edcc0771aa64d3858f4f", null ],
     [ "SetDamageType", "dd/d44/class_item_action.html#aa40a2cc0d7f23836c8403f0b82f37a23", null ],
     [ "SetType", "dd/d44/class_item_action.html#ad433b7e82b9144f2301190698799577e", null ],
-    [ "SetValue", "dd/d44/class_item_action.html#aa6fdb08d13415443f080d75d2b934773", null ]
+    [ "SetValue", "dd/d44/class_item_action.html#aa6fdb08d13415443f080d75d2b934773", null ],
+    [ "damageType", "dd/d44/class_item_action.html#a93d8f1fe4fdb7223d77b5f176fcbdba0", null ],
+    [ "effectList", "dd/d44/class_item_action.html#a1f7abdb1a6ced6acfa28da1767c5cd22", null ],
+    [ "type", "dd/d44/class_item_action.html#a86da96d7beb1b83eceb55297ee397088", null ],
+    [ "value", "dd/d44/class_item_action.html#ac8676cc277e93d28f1f6789fddf07da0", null ]
 ];

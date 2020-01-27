@@ -12,9 +12,7 @@ enum class WEAPONTYPE
 	E_RANGE,
 	E_BLUNT_WEAP
 };
-/**
- * 
- */
+
 class CommandAction : public BaseAction
 {
 private:
@@ -26,15 +24,14 @@ public:
 	CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_,const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
 				  const WEAPONTYPE currentWeap_,  BaseAction* const command_);
 	CommandAction(CommandAction* const other_);
-	//Sets the weapon type the item is.
+	///Sets the weapon type the item is.
 	void SetWeaponType(WEAPONTYPE type_);
-	//Sets the command object.
+	///Sets the command object.
 	void SetCommand(BaseAction* action_);
 	//TO DO: Make a method thta can execute a blueprint script
-
-	//Return weapon type.
+	///Return weapon type.
 	WEAPONTYPE ReturnWeaponType() const;
-	//Return acton.
+	///Return acton.
 	BaseAction* ReturnAction() const;
 	void OnDestroy();
 	~CommandAction();

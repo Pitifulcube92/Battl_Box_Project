@@ -25,5 +25,12 @@ var class_stat_sheet_object =
     [ "ReturnStatMap", "d7/d01/class_stat_sheet_object.html#aa92a6ba4a423719096ce45fe714491f3", null ],
     [ "ReturnTag", "d7/d01/class_stat_sheet_object.html#ac0352b9c1c206b2cecd57e9d2d028e44", null ],
     [ "SetName", "d7/d01/class_stat_sheet_object.html#aea46c857ac7552e6460bbc9605f0caab", null ],
-    [ "SetTag", "d7/d01/class_stat_sheet_object.html#a0015a317c575f299b59dc712504b0879", null ]
+    [ "SetTag", "d7/d01/class_stat_sheet_object.html#a0015a317c575f299b59dc712504b0879", null ],
+    [ "abilityMap", "d7/d01/class_stat_sheet_object.html#ae95872f630491286291359d6a05e62d8", null ],
+    [ "commandMap", "d7/d01/class_stat_sheet_object.html#a4c18a652f36830845fc459e691eecafb", null ],
+    [ "equipmentMap", "d7/d01/class_stat_sheet_object.html#a01fd9b3c6bc0b2173da23cb3e771af9a", null ],
+    [ "itemMap", "d7/d01/class_stat_sheet_object.html#a0a2c51fc8b3f5f393db89c5db59fe73d", null ],
+    [ "name", "d7/d01/class_stat_sheet_object.html#a1a5a1476f919b761c9e99b6acd1aad59", null ],
+    [ "statMap", "d7/d01/class_stat_sheet_object.html#ad6137dd343f6c94c547f7e576a4db881", null ],
+    [ "tag", "d7/d01/class_stat_sheet_object.html#a4b56942333d47debc873c70c3378c395", null ]
 ];

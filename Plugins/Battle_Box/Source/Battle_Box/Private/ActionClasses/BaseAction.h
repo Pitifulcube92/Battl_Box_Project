@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #ifndef BASEACTION_H
 #define BASEACTION_H
 #include "CoreMinimal.h"
@@ -53,6 +53,12 @@ enum class ELEMENTTYPE
 	E_DARK
 };
 
+enum class ABILITYTYPE
+{
+	E_MODIFIYER,
+	E_TMP_MODIFIYER,
+	E_DAMAGE_MODIFYER
+};
 class BaseAction
 {
 private:
@@ -62,39 +68,36 @@ private:
 	TARGETTYPE target;
 	INTERACTIONTYPE interaction;
 	uint32 actionID;
-	TMap<FString, float> statMap;
 public:
 	BaseAction();
-	//Base Construction
+	///Base Construction
 	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_);
 	BaseAction(const BaseAction* other_);
-	//Sets Name.
+	///Sets Name.
 	void SetName(const FString name_);
-	//Sets Discription.
+	///Sets Discription.
 	void SetDiscription(const FString discription_);
-	//Sets Actiontype.
+	///Sets Actiontype.
 	void SetActionType(const ACTIONTYPE type_);
-	//Sets target type.
+	///Sets target type.
 	void SetTargetType(const TARGETTYPE type_);
-	//Sets interaction type.
+	///Sets interaction type.
 	void SetInteractionType(const INTERACTIONTYPE type_);
-	//Sets action ID
+	///Sets action ID
 	void SetActionID(const uint32 actionID_);
 	void OnDestroy();
-	//Return Name.
+	///Return Name.
 	FString ReturnName() const;
-	//Return discription.
+	///Return discription.
 	FString ReturnDiscription() const;
-	//Return action type.
+	///Return action type.
 	ACTIONTYPE ReturnActionType() const;
-	//Return target type.
+	///Return target type.
 	TARGETTYPE ReturnTargetType() const;
-	//Return Interaction type.
+	///Return Interaction type.
 	INTERACTIONTYPE ReturnInteractionType() const;
-	//Return Action ID.
+	///Return Action ID.
 	uint32 ReturnActionID() const;
-	//Return Stat Map
-	TMap<FString, float> ReturnStatMap() const;
 	virtual ~BaseAction();
 };
 

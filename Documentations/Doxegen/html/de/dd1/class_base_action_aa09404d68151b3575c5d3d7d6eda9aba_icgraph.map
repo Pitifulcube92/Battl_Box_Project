@@ -1,0 +1,6 @@
+<map id="BaseAction::ReturnStatMap" name="BaseAction::ReturnStatMap">
+<area shape="rect" id="node1" title=" " alt="" coords="532,46,716,73"/>
+<area shape="rect" id="node2" href="$df/d3e/class_damage_delt_system.html#a7b2fc3b7d84fa682d2132143443053be" title="Calculates the damage of an item." alt="" coords="284,5,484,47"/>
+<area shape="rect" id="node4" href="$df/d3e/class_damage_delt_system.html#a9c2c58391271d6a546decf7b6d966732" title="Claculates the damage of a weapon item." alt="" coords="284,71,484,112"/>
+<area shape="rect" id="node3" href="$df/d3e/class_damage_delt_system.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="5,13,236,39"/>
+</map>

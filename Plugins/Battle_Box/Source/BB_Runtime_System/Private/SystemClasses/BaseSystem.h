@@ -3,6 +3,7 @@
 */
 #ifndef BASESYSTEM_H
 #define BASESYSTEM_H
+#include "../Battle_Box/Private/Debugger.h"
 class BaseAction;
 class BaseSystem
 {

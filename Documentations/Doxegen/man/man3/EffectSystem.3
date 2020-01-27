@@ -7,8 +7,6 @@ EffectSystem
 .br
 .PP
 .PP
-\fC#include <EffectSystem\&.h>\fP
-.PP
 Inherits \fBBaseSystem\fP\&.
 .SS "Public Member Functions"
 
@@ -28,9 +26,6 @@ Inherits \fBBaseSystem\fP\&.
 .br
  "
 .ti -1c
-.RI "\fBEffectSystem\fP ()"
-.br
-.ti -1c
 .RI "void \fBOnDestroy\fP ()"
 .br
 .ti -1c
@@ -41,35 +36,23 @@ Inherits \fBBaseSystem\fP\&.
 .RI "void \fBSetTarget\fP (\fBStatSheetObject\fP *target_)"
 .br
 .RI "Sets target\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
 .ti -1c
-.RI "\fB~EffectSystem\fP ()"
+.RI "\fBStatSheetObject\fP * \fBtarget\fP"
+.br
+.ti -1c
+.RI "\fBBaseAction\fP * \fBtargetAction\fP"
+.br
+.ti -1c
+.RI "TArray< \fBStatSheetObject\fP * > \fBtargets\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 9 of file EffectSystem\&.h\&.
-.SH "Constructor & Destructor Documentation"
-.PP 
-.SS "EffectSystem::EffectSystem ()"
-
-.PP
-Definition at line 6 of file EffectSystem\&.cpp\&.
-.PP
-.nf
-7 {
-8 
-9 }
-.fi
-.SS "EffectSystem::~EffectSystem ()"
-
-.PP
-Definition at line 40 of file EffectSystem\&.cpp\&.
-.PP
-.nf
-41 {
-42 
-43 }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void EffectSystem::Addtarget (\fBStatSheetObject\fP * target_)"
@@ -117,16 +100,6 @@ Definition at line 20 of file EffectSystem\&.cpp\&.
 21 {
 22 
 23 }
-.fi
-.SS "void EffectSystem::OnDestroy ()"
-
-.PP
-Definition at line 36 of file EffectSystem\&.cpp\&.
-.PP
-.nf
-37 {
-38 
-39 }
 .fi
 .SS "void EffectSystem::RemoveEffect (\fBBaseAction\fP * action_)"
 

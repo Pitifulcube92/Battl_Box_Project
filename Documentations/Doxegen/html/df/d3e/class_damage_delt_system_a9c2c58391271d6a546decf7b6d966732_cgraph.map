@@ -1,0 +1,5 @@
+<map id="DamageDeltSystem::CalculateWeaponDamage" name="DamageDeltSystem::CalculateWeaponDamage">
+<area shape="rect" id="node1" title="Claculates the damage of a weapon item." alt="" coords="5,23,205,65"/>
+<area shape="rect" id="node2" href="$de/dd1/class_base_action.html#a70d34140345d92808deed0304397b074" title=" " alt="" coords="253,5,476,32"/>
+<area shape="rect" id="node3" href="$de/dd1/class_base_action.html#aa09404d68151b3575c5d3d7d6eda9aba" title=" " alt="" coords="273,56,457,83"/>
+</map>

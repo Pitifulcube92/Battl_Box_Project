@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #ifndef DEBUGER_H
 #define DEBUGER_H
@@ -28,17 +28,17 @@ public:
 	Debugger& operator =(Debugger&&) = delete;
 	Debugger() = delete;
 
-	///Initiates the debugger
+	///Initiates the debugger.
 	static void InitDebug();
-	///Sets the severity
+	///Sets the severity.
 	static void SetSeverity(const MessageType type_);
-	///Sends a info log to the debugger txt file 
+	///Sends a info log to the debugger txt file.
 	static void Info(const FString& message_, const FString& fileName_, const int32 line_);
-	///Sends a error  log to the debugger txt file 
+	///Sends a error  log to the debugger txt file. 
 	static void Error(const FString& message_, const FString& fileName_, const int32 line_);
-	///Sends a warrning log to the debugger txt file 
+	///Sends a warrning log to the debugger txt file. 
 	static void Warrning(const FString& message_, const FString& fileName_, const int32 line_);
-	///Sends a warning log to the dugger txt file 
+	///Sends a warning log to the dugger txt file. 
 	static void FatalError(const FString& message_, const FString& fileName_, const int32 line_);
 };
 #endif // !1

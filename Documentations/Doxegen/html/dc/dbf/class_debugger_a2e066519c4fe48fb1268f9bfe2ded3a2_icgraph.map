@@ -1,9 +1,8 @@
 <map id="Debugger::SetSeverity" name="Debugger::SetSeverity">
-<area shape="rect" id="node1" title="Sets the severity." alt="" coords="284,132,435,159"/>
-<area shape="rect" id="node2" href="$df/d3e/class_damage_delt_system.html#abd7f711f20dd60d57c896c02f159c663" title="Base calculation for any dirieved system classes." alt="" coords="5,5,236,32"/>
-<area shape="rect" id="node3" href="$d7/d01/class_stat_sheet_object.html#a4026d7a8088f539e3f34d80613f8dccd" title="Returns a ability action by its name from the ability map." alt="" coords="21,56,221,83"/>
-<area shape="rect" id="node4" href="$d7/d01/class_stat_sheet_object.html#adee30a8470b9fd57b32f4892aacac55b" title="Returns a command action by its name from the command map." alt="" coords="9,107,232,133"/>
-<area shape="rect" id="node5" href="$d7/d01/class_stat_sheet_object.html#ad7e95011555f4015c74ecf7e053e529a" title="Returns a equipment&#45;item action by its name from the equipment map." alt="" coords="7,157,234,184"/>
-<area shape="rect" id="node6" href="$d7/d01/class_stat_sheet_object.html#a68ac4e437d66c297c8c74bdc95dcfc55" title="Returns a item action by its name from the item map." alt="" coords="26,208,215,235"/>
-<area shape="rect" id="node7" href="$d5/d0b/class_f_battle___box_module.html#af9e8a9761586d4c32b376edc5d5f9664" title="IModuleInterface implementation." alt="" coords="49,259,193,301"/>
+<area shape="rect" id="node1" title="Sets the severity." alt="" coords="280,107,431,133"/>
+<area shape="rect" id="node2" href="$d7/d01/class_stat_sheet_object.html#a4026d7a8088f539e3f34d80613f8dccd" title="Returns a ability action by its name from the ability map." alt="" coords="19,5,219,32"/>
+<area shape="rect" id="node3" href="$d7/d01/class_stat_sheet_object.html#adee30a8470b9fd57b32f4892aacac55b" title="Returns a command action by its name from the command map." alt="" coords="7,56,230,83"/>
+<area shape="rect" id="node4" href="$d7/d01/class_stat_sheet_object.html#ad7e95011555f4015c74ecf7e053e529a" title="Returns a equipment&#45;item action by its name from the equipment map." alt="" coords="5,107,232,133"/>
+<area shape="rect" id="node5" href="$d7/d01/class_stat_sheet_object.html#a68ac4e437d66c297c8c74bdc95dcfc55" title="Returns a item action by its name from the item map." alt="" coords="24,157,213,184"/>
+<area shape="rect" id="node6" href="$d5/d0b/class_f_battle___box_module.html#af9e8a9761586d4c32b376edc5d5f9664" title="IModuleInterface implementation." alt="" coords="47,209,191,250"/>
 </map>

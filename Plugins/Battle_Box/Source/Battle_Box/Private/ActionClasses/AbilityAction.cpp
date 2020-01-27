@@ -12,7 +12,7 @@ AbilityAction::AbilityAction()
 	duration = 0.0f;
 }
 AbilityAction::AbilityAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
-	const float duration_)
+	const float duration_, ABILITYTYPE type_)
 {
 	SetName(name_);
 	SetDiscription(discription_);
@@ -44,6 +44,23 @@ float AbilityAction::ReturnDuration() const
 {
 	return duration;
 }
+TMap<FString, float> AbilityAction::ReturnModStatMap()
+{
+	return modStatMap;
+}
+void AbilityAction::SetAbilityType(const ABILITYTYPE type_)
+{
+	abilityType = type_;
+}
+ABILITYTYPE AbilityAction::ReturnAbilityType() const
+{
+	return abilityType;
+}
+void AbilityAction::OnDestroy()
+{
+	//This will clear out any data.
+}
 AbilityAction::~AbilityAction()
 {
+	OnDestroy();
 }

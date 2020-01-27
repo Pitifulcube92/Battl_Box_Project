@@ -1,4 +1,5 @@
 <map id="StatSheetObject::ReturnEquipmentMap" name="StatSheetObject::ReturnEquipmentMap">
-<area shape="rect" id="node1" title="Returns the equipment map." alt="" coords="237,13,488,39"/>
-<area shape="rect" id="node2" href="$d7/d01/class_stat_sheet_object.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node1" title="Returns the equipment map." alt="" coords="253,46,504,73"/>
+<area shape="rect" id="node2" href="$df/d3e/class_damage_delt_system.html#ab04599079f9f0e8734678800df8bc6d9" title="Calculates the magical defence of the target." alt="" coords="5,5,205,47"/>
+<area shape="rect" id="node3" href="$df/d3e/class_damage_delt_system.html#afe23abbc1d1f86ef88484692e4800fb0" title="Calculates the physical defence of the target." alt="" coords="5,71,205,112"/>
 </map>

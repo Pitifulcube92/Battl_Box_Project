@@ -2,10 +2,6 @@
 \label{class_damage_delt_system}\index{DamageDeltSystem@{DamageDeltSystem}}
 
 
-{\ttfamily \#include $<$Damage\+Delt\+System.\+h$>$}
-
-
-
 Inheritance diagram for Damage\+Delt\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -19,29 +15,57 @@ Collaboration diagram for Damage\+Delt\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=222pt]{dd/dc4/class_damage_delt_system__coll__graph}
+\includegraphics[height=550pt]{dd/dc4/class_damage_delt_system__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_damage_delt_system_aba55f72ffb892e2996ec377f62b202fb}{Add\+Target\+To\+Array}} (\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const target\+\_\+)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds another target to the array. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663}{Base\+Calculate}} (const bool Is\+Singled\+Target\+\_\+, \mbox{\hyperlink{class_base_action}{Base\+Action}} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Base calculation for any dirieved system classes. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_damage_delt_system_a1e8116df2e2fff7732f3b82d287a9186}{Damage\+Delt\+System}} ()
-\item 
-void \mbox{\hyperlink{class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em System calculation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5}\label{class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5}} 
+void {\bfseries On\+Destroy} ()
 \item 
 T\+Array$<$ float $>$ \mbox{\hyperlink{class_damage_delt_system_afcffaef781f580054ef1b9259255751a}{Return\+Damage\+Values}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the damage value array. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_damage_delt_system_a52ab082a93d8ab975bc5275089a16954}{Return\+Total\+Damage\+Value}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the damage value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_damage_delt_system_a4646a3cb7224ed2e7796f6baaef00d2a}{Set\+Owner}} (\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const owner\+\_\+)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets who the owner of the damage. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_damage_delt_system_adbf10558dcfaec31ffe016ea51f3cfc7}{Set\+Target}} (\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the target who is being damaged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c}{$\sim$\+Damage\+Delt\+System}} ()
+float \mbox{\hyperlink{class_damage_delt_system_ac77b81a1237dac09021141090113f43c}{Calculate\+Ability\+Damage}} (\mbox{\hyperlink{class_ability_action}{Ability\+Action}} $\ast$const target\+Ability\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calculates the damage of a ability item. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}{Calculate\+Item\+Damage}} (\mbox{\hyperlink{class_item_action}{Item\+Action}} $\ast$const target\+Item\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calculates the damage of an item. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}{Calculate\+Magical\+Defence}} (\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calculates the magical defence of the target. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}{Calculate\+Physical\+Defence}} (\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calculates the physical defence of the target. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_damage_delt_system_a9c2c58391271d6a546decf7b6d966732}{Calculate\+Weapon\+Damage}} (\mbox{\hyperlink{class_item_action}{Item\+Action}} $\ast$const target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Claculates the damage of a weapon item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_damage_delt_system_ae7c9b7ee9de8736c4a373c7eca061735}\label{class_damage_delt_system_ae7c9b7ee9de8736c4a373c7eca061735}} 
+\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$ {\bfseries owner}
+\item 
+\mbox{\Hypertarget{class_damage_delt_system_a1fc52d024a2b857a4427fd2d839b396c}\label{class_damage_delt_system_a1fc52d024a2b857a4427fd2d839b396c}} 
+\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$ {\bfseries single\+Target}
+\item 
+\mbox{\Hypertarget{class_damage_delt_system_a4fc133e16d60a0511c8c139a56bb41f6}\label{class_damage_delt_system_a4fc133e16d60a0511c8c139a56bb41f6}} 
+T\+Array$<$ \mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$ $>$ {\bfseries targets}
+\item 
+\mbox{\Hypertarget{class_damage_delt_system_acbb16604c2f56234c51adf04317817ac}\label{class_damage_delt_system_acbb16604c2f56234c51adf04317817ac}} 
+float {\bfseries total\+Damage\+Value}
+\item 
+\mbox{\Hypertarget{class_damage_delt_system_addd5bb239f2ae94eac8d1ab402f06c30}\label{class_damage_delt_system_addd5bb239f2ae94eac8d1ab402f06c30}} 
+T\+Array$<$ float $>$ {\bfseries total\+Damage\+Values}
 \end{DoxyCompactItemize}
 
 
@@ -52,57 +76,16 @@ Definition at line 12 of file Damage\+Delt\+System.\+h.
 
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_damage_delt_system_a1e8116df2e2fff7732f3b82d287a9186}\label{class_damage_delt_system_a1e8116df2e2fff7732f3b82d287a9186}} 
-\index{DamageDeltSystem@{DamageDeltSystem}!DamageDeltSystem@{DamageDeltSystem}}
-\index{DamageDeltSystem@{DamageDeltSystem}!DamageDeltSystem@{DamageDeltSystem}}
-\doxysubsubsection{\texorpdfstring{DamageDeltSystem()}{DamageDeltSystem()}}
-{\footnotesize\ttfamily Damage\+Delt\+System\+::\+Damage\+Delt\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line 10 of file Damage\+Delt\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{10                                    : singleTarget(\textcolor{keyword}{nullptr}), owner(\textcolor{keyword}{nullptr}), targets(TArray<StatSheetObject*>()), totalDamageValues(TArray<float>())}
-\DoxyCodeLine{11 \{}
-\DoxyCodeLine{12      totalDamageValue = 0.0f;}
-\DoxyCodeLine{13 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c}\label{class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c}} 
-\index{DamageDeltSystem@{DamageDeltSystem}!````~DamageDeltSystem@{$\sim$DamageDeltSystem}}
-\index{````~DamageDeltSystem@{$\sim$DamageDeltSystem}!DamageDeltSystem@{DamageDeltSystem}}
-\doxysubsubsection{\texorpdfstring{$\sim$DamageDeltSystem()}{~DamageDeltSystem()}}
-{\footnotesize\ttfamily Damage\+Delt\+System\+::$\sim$\+Damage\+Delt\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line 274 of file Damage\+Delt\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{275 \{}
-\DoxyCodeLine{276      \mbox{\hyperlink{class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5}{OnDestroy}}();}
-\DoxyCodeLine{277 \}}
-
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{df/d3e/class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c_cgraph}
-\end{center}
-\end{figure}
-
-
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_damage_delt_system_aba55f72ffb892e2996ec377f62b202fb}\label{class_damage_delt_system_aba55f72ffb892e2996ec377f62b202fb}} 
 \index{DamageDeltSystem@{DamageDeltSystem}!AddTargetToArray@{AddTargetToArray}}
 \index{AddTargetToArray@{AddTargetToArray}!DamageDeltSystem@{DamageDeltSystem}}
 \doxysubsubsection{\texorpdfstring{AddTargetToArray()}{AddTargetToArray()}}
 {\footnotesize\ttfamily void Damage\+Delt\+System\+::\+Add\+Target\+To\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Adds another target to the array. 
 
 
 
@@ -123,7 +106,7 @@ Definition at line 245 of file Damage\+Delt\+System.\+cpp.
 
 
 
-Base calculation for any dirieved system classes. 
+System calculation. 
 
 
 
@@ -139,37 +122,37 @@ Definition at line 14 of file Damage\+Delt\+System.\+cpp.
 \DoxyCodeLine{16      \textcolor{keywordflow}{if}(IsSingledTarget\_)}
 \DoxyCodeLine{17      \{}
 \DoxyCodeLine{18           \textcolor{comment}{//This will claculate any damage for a single target.}}
-\DoxyCodeLine{19           \textcolor{keywordflow}{switch} (action\_-\/>\mbox{\hyperlink{class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888}{ReturnActionType}}())}
+\DoxyCodeLine{19           \textcolor{keywordflow}{switch} (action\_-\/>ReturnActionType())}
 \DoxyCodeLine{20           \{}
-\DoxyCodeLine{21           \textcolor{keywordflow}{case} \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb}{ACTIONTYPE::E\_COMMAND}}:}
+\DoxyCodeLine{21           \textcolor{keywordflow}{case} ACTIONTYPE::E\_COMMAND:}
 \DoxyCodeLine{22                \textcolor{comment}{//Command will do basic act with basic stats}}
 \DoxyCodeLine{23                \textcolor{comment}{//TO DO: Check if there is any damage in this command.}}
 \DoxyCodeLine{24                \mbox{\hyperlink{class_command_action}{CommandAction}}* command = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_command_action}{CommandAction}}*\textcolor{keyword}{>}(action\_);}
 \DoxyCodeLine{25                \textcolor{keywordflow}{break};}
 \DoxyCodeLine{26 }
-\DoxyCodeLine{27           \textcolor{keywordflow}{case} \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61}{ACTIONTYPE::E\_ITEM}}:}
+\DoxyCodeLine{27           \textcolor{keywordflow}{case} ACTIONTYPE::E\_ITEM:}
 \DoxyCodeLine{28                \textcolor{comment}{//Item will be sorted to what type then calculated for total damage.}}
 \DoxyCodeLine{29                \mbox{\hyperlink{class_item_action}{ItemAction}}* item = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_item_action}{ItemAction}}*\textcolor{keyword}{>}(action\_);}
 \DoxyCodeLine{30 }
-\DoxyCodeLine{31                \textcolor{keywordflow}{if} (item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == \mbox{\hyperlink{_item_action_8h_a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c}{ITEMTYPE::E\_CONSUMABLE}})}
+\DoxyCodeLine{31                \textcolor{keywordflow}{if} (item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == ITEMTYPE::E\_CONSUMABLE)}
 \DoxyCodeLine{32                \{}
-\DoxyCodeLine{33                     totalDamageValue = CalculateItemDamage(item) -\/ CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);}
+\DoxyCodeLine{33                     totalDamageValue = \mbox{\hyperlink{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}{CalculateItemDamage}}(item) -\/ \mbox{\hyperlink{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}{CalculateMagicalDefence}}(singleTarget) + \mbox{\hyperlink{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}{CalculatePhysicalDefence}}(singleTarget);}
 \DoxyCodeLine{34                \}}
-\DoxyCodeLine{35                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == \mbox{\hyperlink{_item_action_8h_a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87}{ITEMTYPE::E\_WEAPON}})}
+\DoxyCodeLine{35                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == ITEMTYPE::E\_WEAPON)}
 \DoxyCodeLine{36                \{}
-\DoxyCodeLine{37                     totalDamageValue = CalculateItemDamage(item) -\/ CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);}
+\DoxyCodeLine{37                     totalDamageValue = \mbox{\hyperlink{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}{CalculateItemDamage}}(item) -\/ \mbox{\hyperlink{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}{CalculateMagicalDefence}}(singleTarget) + \mbox{\hyperlink{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}{CalculatePhysicalDefence}}(singleTarget);}
 \DoxyCodeLine{38                \}}
 \DoxyCodeLine{39                \textcolor{keywordflow}{else}}
 \DoxyCodeLine{40                \{}
-\DoxyCodeLine{41                     \mbox{\hyperlink{class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
-\DoxyCodeLine{42                     \mbox{\hyperlink{class_debugger_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>\mbox{\hyperlink{class_base_action_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{41                     \mbox{\hyperlink{class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(MessageType::E\_ERROR);}
+\DoxyCodeLine{42                     \mbox{\hyperlink{class_debugger_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>ReturnName(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
 \DoxyCodeLine{43                \}}
 \DoxyCodeLine{44                \textcolor{keywordflow}{break};}
-\DoxyCodeLine{45           \textcolor{keywordflow}{case} \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920}{ACTIONTYPE::E\_ABILITY}}:}
+\DoxyCodeLine{45           \textcolor{keywordflow}{case} ACTIONTYPE::E\_ABILITY:}
 \DoxyCodeLine{46                \textcolor{comment}{//ability will retreive the damage value if any.}}
 \DoxyCodeLine{47                \textcolor{comment}{//TO DO: create an enum for what type of ability it is.}}
 \DoxyCodeLine{48                \mbox{\hyperlink{class_ability_action}{AbilityAction}}* ability = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_ability_action}{AbilityAction}}*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{49                CalculateAbilityDamage(ability);}
+\DoxyCodeLine{49                \mbox{\hyperlink{class_damage_delt_system_ac77b81a1237dac09021141090113f43c}{CalculateAbilityDamage}}(ability);}
 \DoxyCodeLine{50                \textcolor{keywordflow}{break};}
 \DoxyCodeLine{51           \}    }
 \DoxyCodeLine{52           \textcolor{comment}{//TO DO: modify targets HP on stat system.}}
@@ -177,41 +160,41 @@ Definition at line 14 of file Damage\+Delt\+System.\+cpp.
 \DoxyCodeLine{54      \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (IsSingledTarget\_)}
 \DoxyCodeLine{55      \{}
 \DoxyCodeLine{56           \textcolor{comment}{//This will calculate any damage for multiple targets.}}
-\DoxyCodeLine{57           \textcolor{keywordflow}{switch} (action\_-\/>\mbox{\hyperlink{class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888}{ReturnActionType}}())}
+\DoxyCodeLine{57           \textcolor{keywordflow}{switch} (action\_-\/>ReturnActionType())}
 \DoxyCodeLine{58           \{}
-\DoxyCodeLine{59           \textcolor{keywordflow}{case} \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb}{ACTIONTYPE::E\_COMMAND}}:}
+\DoxyCodeLine{59           \textcolor{keywordflow}{case} ACTIONTYPE::E\_COMMAND:}
 \DoxyCodeLine{60                \textcolor{comment}{//Command will do basic act with basic stats}}
 \DoxyCodeLine{61                \textcolor{comment}{//TO DO: Check if there is any damage in this command.}}
 \DoxyCodeLine{62                \mbox{\hyperlink{class_command_action}{CommandAction}}* command = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_command_action}{CommandAction}}*\textcolor{keyword}{>}(action\_);}
 \DoxyCodeLine{63                \textcolor{keywordflow}{break};}
-\DoxyCodeLine{64           \textcolor{keywordflow}{case} \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61}{ACTIONTYPE::E\_ITEM}}:}
+\DoxyCodeLine{64           \textcolor{keywordflow}{case} ACTIONTYPE::E\_ITEM:}
 \DoxyCodeLine{65                \textcolor{comment}{//Item will be sorted to what type then calculated for total damage.}}
 \DoxyCodeLine{66                \mbox{\hyperlink{class_item_action}{ItemAction}}* item = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_item_action}{ItemAction}}*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{67                \textcolor{keywordflow}{if} (item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == \mbox{\hyperlink{_item_action_8h_a8164105d3663e42053d5b6daa79a9746af97c29bd3626749fdc1dfeae9975d42c}{ITEMTYPE::E\_CONSUMABLE}})}
+\DoxyCodeLine{67                \textcolor{keywordflow}{if} (item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == ITEMTYPE::E\_CONSUMABLE)}
 \DoxyCodeLine{68                \{}
 \DoxyCodeLine{69                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
 \DoxyCodeLine{70                     \{}
-\DoxyCodeLine{71                          totalDamageValues.Add(CalculateItemDamage(item) -\/ CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));}
+\DoxyCodeLine{71                          totalDamageValues.Add(\mbox{\hyperlink{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}{CalculateItemDamage}}(item) -\/ \mbox{\hyperlink{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}{CalculateMagicalDefence}}(targets[i]) + \mbox{\hyperlink{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}{CalculatePhysicalDefence}}(targets[i]));}
 \DoxyCodeLine{72                     \}}
 \DoxyCodeLine{73                \}}
-\DoxyCodeLine{74                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == \mbox{\hyperlink{_item_action_8h_a8164105d3663e42053d5b6daa79a9746a330226fb30fb4976213fa499fa9fde87}{ITEMTYPE::E\_WEAPON}})}
+\DoxyCodeLine{74                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(item-\/>\mbox{\hyperlink{class_item_action_aa3322621804e1869f956757c31e4c4b6}{ReturnItemType}}() == ITEMTYPE::E\_WEAPON)}
 \DoxyCodeLine{75                \{}
 \DoxyCodeLine{76                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
 \DoxyCodeLine{77                     \{}
-\DoxyCodeLine{78                          totalDamageValues.Add(CalculateItemDamage(item) -\/ CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));}
+\DoxyCodeLine{78                          totalDamageValues.Add(\mbox{\hyperlink{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}{CalculateItemDamage}}(item) -\/ \mbox{\hyperlink{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}{CalculateMagicalDefence}}(targets[i]) + \mbox{\hyperlink{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}{CalculatePhysicalDefence}}(targets[i]));}
 \DoxyCodeLine{79                     \}}
 \DoxyCodeLine{80                \}}
 \DoxyCodeLine{81                \textcolor{keywordflow}{else}}
 \DoxyCodeLine{82                \{}
-\DoxyCodeLine{83                     \mbox{\hyperlink{class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(\mbox{\hyperlink{_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76}{MessageType::E\_ERROR}});}
-\DoxyCodeLine{84                     \mbox{\hyperlink{class_debugger_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>\mbox{\hyperlink{class_base_action_a87fa8929e542db8b7b7e695490f1f0a2}{ReturnName}}(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{83                     \mbox{\hyperlink{class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2}{Debugger::SetSeverity}}(MessageType::E\_ERROR);}
+\DoxyCodeLine{84                     \mbox{\hyperlink{class_debugger_a2d1f06f606185f51dc86b782e059ed48}{Debugger::Error}}(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>ReturnName(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
 \DoxyCodeLine{85                \}}
 \DoxyCodeLine{86                \textcolor{keywordflow}{break};}
-\DoxyCodeLine{87           \textcolor{keywordflow}{case} \mbox{\hyperlink{_base_action_8h_af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920}{ACTIONTYPE::E\_ABILITY}}:}
+\DoxyCodeLine{87           \textcolor{keywordflow}{case} ACTIONTYPE::E\_ABILITY:}
 \DoxyCodeLine{88                \textcolor{comment}{//ability will retreive the damage value if any.}}
 \DoxyCodeLine{89                \textcolor{comment}{//TO DO: create an enum for what type of ability it is.}}
 \DoxyCodeLine{90                \mbox{\hyperlink{class_ability_action}{AbilityAction}}* ability = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_ability_action}{AbilityAction}}*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{91                CalculateAbilityDamage(ability);}
+\DoxyCodeLine{91                \mbox{\hyperlink{class_damage_delt_system_ac77b81a1237dac09021141090113f43c}{CalculateAbilityDamage}}(ability);}
 \DoxyCodeLine{92                \textcolor{keywordflow}{break};}
 \DoxyCodeLine{93           \}}
 \DoxyCodeLine{94           \textcolor{comment}{//TO DO: Modify stats of HP in targets.}}
@@ -222,59 +205,251 @@ Definition at line 14 of file Damage\+Delt\+System.\+cpp.
 \DoxyCodeLine{99 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{class_damage_delt_system_ac77b81a1237dac09021141090113f43c}\label{class_damage_delt_system_ac77b81a1237dac09021141090113f43c}} 
+\index{DamageDeltSystem@{DamageDeltSystem}!CalculateAbilityDamage@{CalculateAbilityDamage}}
+\index{CalculateAbilityDamage@{CalculateAbilityDamage}!DamageDeltSystem@{DamageDeltSystem}}
+\doxysubsubsection{\texorpdfstring{CalculateAbilityDamage()}{CalculateAbilityDamage()}}
+{\footnotesize\ttfamily float Damage\+Delt\+System\+::\+Calculate\+Ability\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ability_action}{Ability\+Action}} $\ast$const}]{target\+Ability\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates the damage of a ability item. 
+
+
+
+Definition at line 116 of file Damage\+Delt\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117 \{}
+\DoxyCodeLine{118      \textcolor{comment}{//Get the target action and get the damage value;}}
+\DoxyCodeLine{119      \textcolor{keywordflow}{return} targetAbility\_-\/>CalculateAbilityValue();}
+\DoxyCodeLine{120      \textcolor{comment}{/*if (targetAbility\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}}
+\DoxyCodeLine{121 \textcolor{comment}{     \{}}
+\DoxyCodeLine{122 \textcolor{comment}{          target}}
+\DoxyCodeLine{123 \textcolor{comment}{     \}}}
+\DoxyCodeLine{124 \textcolor{comment}{     if (targetAbility\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}}
+\DoxyCodeLine{125 \textcolor{comment}{     \{}}
+\DoxyCodeLine{126 \textcolor{comment}{}}
+\DoxyCodeLine{127 \textcolor{comment}{     \}}}
+\DoxyCodeLine{128 \textcolor{comment}{     if(targetAbility\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}}
+\DoxyCodeLine{129 \textcolor{comment}{     \{}}
+\DoxyCodeLine{130 \textcolor{comment}{}}
+\DoxyCodeLine{131 \textcolor{comment}{     \}*/}}
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}\label{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be}} 
+\index{DamageDeltSystem@{DamageDeltSystem}!CalculateItemDamage@{CalculateItemDamage}}
+\index{CalculateItemDamage@{CalculateItemDamage}!DamageDeltSystem@{DamageDeltSystem}}
+\doxysubsubsection{\texorpdfstring{CalculateItemDamage()}{CalculateItemDamage()}}
+{\footnotesize\ttfamily float Damage\+Delt\+System\+::\+Calculate\+Item\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_action}{Item\+Action}} $\ast$const}]{target\+Item\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates the damage of an item. 
+
+
+
+Definition at line 133 of file Damage\+Delt\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134 \{}
+\DoxyCodeLine{135      \textcolor{comment}{//Get the target and get the damage Value;}}
+\DoxyCodeLine{136      \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
+\DoxyCodeLine{137      \{}
+\DoxyCodeLine{138           \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}];}
+\DoxyCodeLine{139      \}}
+\DoxyCodeLine{140      \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{141      \{}
+\DoxyCodeLine{142           \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{143      \}}
+\DoxyCodeLine{144      \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() ==INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
+\DoxyCodeLine{145      \{}
+\DoxyCodeLine{146           \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}] + targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{147      \}}
+\DoxyCodeLine{148      \textcolor{comment}{//switch (targetItem\_-\/>ReturnDamageType())}}
+\DoxyCodeLine{149      \textcolor{comment}{//\{}}
+\DoxyCodeLine{150      \textcolor{comment}{//case DAMAGETYPE::E\_HP\_DAMAGE:}}
+\DoxyCodeLine{151      \textcolor{comment}{//   //This will get the damage from the stat map}}
+\DoxyCodeLine{152      \textcolor{comment}{//   return targetItem\_-\/>ReturnStatMap()["Atk"];}}
+\DoxyCodeLine{153      \textcolor{comment}{//case DAMAGETYPE::E\_HP\_RECOVER:}}
+\DoxyCodeLine{154      \textcolor{comment}{//   return targetItem\_-\/>ReturnStatMap()["HP\_REC"];}}
+\DoxyCodeLine{155      \textcolor{comment}{//case DAMAGETYPE::E\_MP\_DAMAGE:}}
+\DoxyCodeLine{156      \textcolor{comment}{//   return targetItem\_-\/>ReturnStatMap()["M\_Atk"];}}
+\DoxyCodeLine{157      \textcolor{comment}{//case DAMAGETYPE::E\_MP\_RECOVER:}}
+\DoxyCodeLine{158      \textcolor{comment}{//   return targetItem\_-\/>ReturnStatMap()["M\_REC"];}}
+\DoxyCodeLine{159      \textcolor{comment}{//\}}}
+\DoxyCodeLine{160 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}\label{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9}} 
+\index{DamageDeltSystem@{DamageDeltSystem}!CalculateMagicalDefence@{CalculateMagicalDefence}}
+\index{CalculateMagicalDefence@{CalculateMagicalDefence}!DamageDeltSystem@{DamageDeltSystem}}
+\doxysubsubsection{\texorpdfstring{CalculateMagicalDefence()}{CalculateMagicalDefence()}}
+{\footnotesize\ttfamily float Damage\+Delt\+System\+::\+Calculate\+Magical\+Defence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates the magical defence of the target. 
+
+
+
+Definition at line 199 of file Damage\+Delt\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200 \{}
+\DoxyCodeLine{201      \textcolor{keywordtype}{float} magicDefence = 0.0f;}
+\DoxyCodeLine{202      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Helment"}))}
+\DoxyCodeLine{203      \{}
+\DoxyCodeLine{204           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Helment"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{205      \}}
+\DoxyCodeLine{206      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Chest\_Armor"}))}
+\DoxyCodeLine{207      \{}
+\DoxyCodeLine{208           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Chest\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{209      \}}
+\DoxyCodeLine{210      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Leg\_Armor"}))}
+\DoxyCodeLine{211      \{}
+\DoxyCodeLine{212           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Leg\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{213      \}}
+\DoxyCodeLine{214      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Boots"}))}
+\DoxyCodeLine{215      \{}
+\DoxyCodeLine{216           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Boots"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{217      \}}
+\DoxyCodeLine{218      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Accessory\_1"}))}
+\DoxyCodeLine{219      \{}
+\DoxyCodeLine{220           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Accessory\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{221      \}}
+\DoxyCodeLine{222      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Accesory\_2"}))}
+\DoxyCodeLine{223      \{}
+\DoxyCodeLine{224           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Accesory\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{225      \}}
+\DoxyCodeLine{226      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Weapon\_1"}))}
+\DoxyCodeLine{227      \{}
+\DoxyCodeLine{228           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Weapon\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{229      \}}
+\DoxyCodeLine{230      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Weapon\_2"}))}
+\DoxyCodeLine{231      \{}
+\DoxyCodeLine{232           magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Weapon\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{233      \}}
+\DoxyCodeLine{234      magicDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3}{ReturnStatMap}}()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{235      \textcolor{keywordflow}{return} magicDefence;}
+\DoxyCodeLine{236 \}}
+
+\end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{df/d3e/class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663_cgraph}
+\includegraphics[width=350pt]{df/d3e/class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5}\label{class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5}} 
-\index{DamageDeltSystem@{DamageDeltSystem}!OnDestroy@{OnDestroy}}
-\index{OnDestroy@{OnDestroy}!DamageDeltSystem@{DamageDeltSystem}}
-\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
-{\footnotesize\ttfamily void Damage\+Delt\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}\label{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0}} 
+\index{DamageDeltSystem@{DamageDeltSystem}!CalculatePhysicalDefence@{CalculatePhysicalDefence}}
+\index{CalculatePhysicalDefence@{CalculatePhysicalDefence}!DamageDeltSystem@{DamageDeltSystem}}
+\doxysubsubsection{\texorpdfstring{CalculatePhysicalDefence()}{CalculatePhysicalDefence()}}
+{\footnotesize\ttfamily float Damage\+Delt\+System\+::\+Calculate\+Physical\+Defence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line 249 of file Damage\+Delt\+System.\+cpp.
+Calculates the physical defence of the target. 
+
+
+
+Definition at line 161 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{250 \{}
-\DoxyCodeLine{251      \textcolor{comment}{//clean up any pointers}}
-\DoxyCodeLine{252      \textcolor{keywordflow}{if}(singleTarget)}
-\DoxyCodeLine{253      \{}
-\DoxyCodeLine{254           \textcolor{keyword}{delete} singleTarget;}
-\DoxyCodeLine{255      \}}
-\DoxyCodeLine{256      \textcolor{keywordflow}{if}(targets.Num() > 0)}
-\DoxyCodeLine{257      \{}
-\DoxyCodeLine{258           \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& elem : targets)}
-\DoxyCodeLine{259           \{}
-\DoxyCodeLine{260                \textcolor{keyword}{delete} elem;}
-\DoxyCodeLine{261                elem = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{262           \}}
-\DoxyCodeLine{263           targets.Empty();}
-\DoxyCodeLine{264      \}}
-\DoxyCodeLine{265 \}}
+\DoxyCodeLine{162 \{}
+\DoxyCodeLine{163      \textcolor{keywordtype}{float} physicalDefence = 0.0f;}
+\DoxyCodeLine{164      \textcolor{keywordflow}{if}(target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Helment"}))}
+\DoxyCodeLine{165      \{}
+\DoxyCodeLine{166           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Helment"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{167      \}}
+\DoxyCodeLine{168      \textcolor{keywordflow}{if}(target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Chest\_Armor"}))}
+\DoxyCodeLine{169      \{}
+\DoxyCodeLine{170           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Chest\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{171      \}}
+\DoxyCodeLine{172      \textcolor{keywordflow}{if}(target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Leg\_Armor"}))}
+\DoxyCodeLine{173      \{}
+\DoxyCodeLine{174           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Leg\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{175      \}}
+\DoxyCodeLine{176      \textcolor{keywordflow}{if}(target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Boots"}))}
+\DoxyCodeLine{177      \{}
+\DoxyCodeLine{178           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Boots"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{179      \}}
+\DoxyCodeLine{180      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Accessory\_1"}))}
+\DoxyCodeLine{181      \{}
+\DoxyCodeLine{182           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Accessory\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{183      \}}
+\DoxyCodeLine{184      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Accesory\_2"}))}
+\DoxyCodeLine{185      \{}
+\DoxyCodeLine{186           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Accesory\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{187      \}}
+\DoxyCodeLine{188      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Weapon\_1"}))}
+\DoxyCodeLine{189      \{}
+\DoxyCodeLine{190           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Weapon\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{191      \}}
+\DoxyCodeLine{192      \textcolor{keywordflow}{if} (target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}().Contains(\textcolor{stringliteral}{"Weapon\_2"}))}
+\DoxyCodeLine{193      \{}
+\DoxyCodeLine{194           physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8}{ReturnEquipmentMap}}()[\textcolor{stringliteral}{"Weapon\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{195      \}}
+\DoxyCodeLine{196      physicalDefence += target\_-\/>\mbox{\hyperlink{class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3}{ReturnStatMap}}()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{197      \textcolor{keywordflow}{return} physicalDefence;}
+\DoxyCodeLine{198 \}}
 
 \end{DoxyCode}
-
-
-Referenced by $\sim$\+Damage\+Delt\+System().
-
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{df/d3e/class_damage_delt_system_a42f934dffed92d2cda9181bc0657e1c5_icgraph}
+\includegraphics[width=350pt]{df/d3e/class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_damage_delt_system_a9c2c58391271d6a546decf7b6d966732}\label{class_damage_delt_system_a9c2c58391271d6a546decf7b6d966732}} 
+\index{DamageDeltSystem@{DamageDeltSystem}!CalculateWeaponDamage@{CalculateWeaponDamage}}
+\index{CalculateWeaponDamage@{CalculateWeaponDamage}!DamageDeltSystem@{DamageDeltSystem}}
+\doxysubsubsection{\texorpdfstring{CalculateWeaponDamage()}{CalculateWeaponDamage()}}
+{\footnotesize\ttfamily float Damage\+Delt\+System\+::\+Calculate\+Weapon\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item_action}{Item\+Action}} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Claculates the damage of a weapon item. 
+
+
+
+Definition at line 100 of file Damage\+Delt\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101 \{}
+\DoxyCodeLine{102      \textcolor{comment}{//This will return either magic, physical or both as a damage value;}}
+\DoxyCodeLine{103      \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
+\DoxyCodeLine{104      \{}
+\DoxyCodeLine{105           \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}];}
+\DoxyCodeLine{106      \}}
+\DoxyCodeLine{107      \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{108      \{}
+\DoxyCodeLine{109           \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{110      \}}
+\DoxyCodeLine{111      \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
+\DoxyCodeLine{112      \{}
+\DoxyCodeLine{113           \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}] + targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{114      \}}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_damage_delt_system_afcffaef781f580054ef1b9259255751a}\label{class_damage_delt_system_afcffaef781f580054ef1b9259255751a}} 
 \index{DamageDeltSystem@{DamageDeltSystem}!ReturnDamageValues@{ReturnDamageValues}}
 \index{ReturnDamageValues@{ReturnDamageValues}!DamageDeltSystem@{DamageDeltSystem}}
 \doxysubsubsection{\texorpdfstring{ReturnDamageValues()}{ReturnDamageValues()}}
 {\footnotesize\ttfamily T\+Array$<$ float $>$ Damage\+Delt\+System\+::\+Return\+Damage\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the damage value array. 
 
 
 
@@ -295,6 +470,10 @@ Definition at line 270 of file Damage\+Delt\+System.\+cpp.
 
 
 
+Returns the damage value. 
+
+
+
 Definition at line 266 of file Damage\+Delt\+System.\+cpp.
 
 
@@ -312,6 +491,10 @@ Definition at line 266 of file Damage\+Delt\+System.\+cpp.
 
 
 
+Sets who the owner of the damage. 
+
+
+
 Definition at line 237 of file Damage\+Delt\+System.\+cpp.
 
 
@@ -326,6 +509,10 @@ Definition at line 237 of file Damage\+Delt\+System.\+cpp.
 \index{SetTarget@{SetTarget}!DamageDeltSystem@{DamageDeltSystem}}
 \doxysubsubsection{\texorpdfstring{SetTarget()}{SetTarget()}}
 {\footnotesize\ttfamily void Damage\+Delt\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stat_sheet_object}{Stat\+Sheet\+Object}} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets the target who is being damaged. 
 
 
 
