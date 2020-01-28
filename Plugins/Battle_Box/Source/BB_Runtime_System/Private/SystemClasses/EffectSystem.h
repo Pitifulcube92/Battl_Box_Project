@@ -13,8 +13,13 @@ private:
 	TArray<StatSheetObject*> targets;
 	BaseAction* targetAction;
 public:
-	EffectSystem();
-	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_); \
+	EffectSystem(const EffectSystem&) = delete;
+	EffectSystem(EffectSystem&&) = delete;
+	EffectSystem& operator =(const EffectSystem&) = delete;
+	EffectSystem& operator =(EffectSystem&&) = delete;
+	EffectSystem() = delete;
+
+	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_); 
 	///Calculates the effect	
 	void CallculateEffect(BaseAction* action_);	
 	///Removes the effect by the action.

@@ -1,4 +1,5 @@
 <map id="DamageDeltSystem::CalculateAbilityDamage" name="DamageDeltSystem::CalculateAbilityDamage">
-<area shape="rect" id="node1" title="Calculates the damage of a ability item." alt="" coords="284,5,484,47"/>
-<area shape="rect" id="node2" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="5,13,236,39"/>
+<area shape="rect" id="node1" title="Calculates the damage of a ability item." alt="" coords="532,5,732,47"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="253,13,484,39"/>
+<area shape="rect" id="node3" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="5,5,205,47"/>
 </map>

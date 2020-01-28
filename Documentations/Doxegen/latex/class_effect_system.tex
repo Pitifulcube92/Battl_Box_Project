@@ -34,9 +34,17 @@ void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Ba
 void \textbf{ Callculate\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
 \begin{DoxyCompactList}\small\item\em Calculates the effect ~\newline
  \end{DoxyCompactList}\item 
-\textbf{ Effect\+System} ()
+\textbf{ Effect\+System} ()=delete
+\item 
+\textbf{ Effect\+System} (const \textbf{ Effect\+System} \&)=delete
+\item 
+\textbf{ Effect\+System} (\textbf{ Effect\+System} \&\&)=delete
 \item 
 void \textbf{ On\+Destroy} ()
+\item 
+\textbf{ Effect\+System} \& \textbf{ operator=} (const \textbf{ Effect\+System} \&)=delete
+\item 
+\textbf{ Effect\+System} \& \textbf{ operator=} (\textbf{ Effect\+System} \&\&)=delete
 \item 
 void \textbf{ Remove\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
 \begin{DoxyCompactList}\small\item\em Removes the effect by the action. \end{DoxyCompactList}\item 
@@ -63,11 +71,23 @@ Definition at line 9 of file Effect\+System.\+h.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_effect_system_a92be58e865893f0b16340887d2edd606_a92be58e865893f0b16340887d2edd606}} 
+\mbox{\label{class_effect_system_aabd3b1848a87d03e264cdc1c0782f052_aabd3b1848a87d03e264cdc1c0782f052}} 
 \index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
 \index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
-\doxysubsubsection{EffectSystem()}
-{\footnotesize\ttfamily Effect\+System\+::\+Effect\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{EffectSystem()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Effect\+System\+::\+Effect\+System (\begin{DoxyParamCaption}\item[{const \textbf{ Effect\+System} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_effect_system_a3e1afa089deeb4ebe0ae0358079650ff_a3e1afa089deeb4ebe0ae0358079650ff}} 
+\index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
+\index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{EffectSystem()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Effect\+System\+::\+Effect\+System (\begin{DoxyParamCaption}\item[{\textbf{ Effect\+System} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_effect_system_ac6fabb6f1486d0dda2a7abf205c620ac_ac6fabb6f1486d0dda2a7abf205c620ac}} 
+\index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
+\index{EffectSystem@{EffectSystem}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{EffectSystem()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Effect\+System\+::\+Effect\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
 
@@ -191,6 +211,18 @@ Definition at line 36 of file Effect\+System.\+cpp.
 \DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
+\mbox{\label{class_effect_system_aa26e38a802738b9aec48a1e43c691124_aa26e38a802738b9aec48a1e43c691124}} 
+\index{EffectSystem@{EffectSystem}!operator=@{operator=}}
+\index{operator=@{operator=}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Effect\+System}\& Effect\+System\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Effect\+System} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_effect_system_ac81d39fd702a2a56c2aa4d00e4d66208_ac81d39fd702a2a56c2aa4d00e4d66208}} 
+\index{EffectSystem@{EffectSystem}!operator=@{operator=}}
+\index{operator=@{operator=}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Effect\+System}\& Effect\+System\+::operator= (\begin{DoxyParamCaption}\item[{\textbf{ Effect\+System} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
 \mbox{\label{class_effect_system_a1b599411780ea6013b9de3a94252dc29_a1b599411780ea6013b9de3a94252dc29}} 
 \index{EffectSystem@{EffectSystem}!RemoveEffect@{RemoveEffect}}
 \index{RemoveEffect@{RemoveEffect}!EffectSystem@{EffectSystem}}
@@ -270,5 +302,5 @@ Definition at line 13 of file Effect\+System.\+h.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+h}\item 
-B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+cpp}\end{DoxyCompactItemize}
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Effect\+System.\+cpp}\end{DoxyCompactItemize}

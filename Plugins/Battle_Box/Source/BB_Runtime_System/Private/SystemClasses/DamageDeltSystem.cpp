@@ -1,100 +1,131 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #include "DamageDeltSystem.h"
+#include "StatSystem.h"
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/CommandAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
-DamageDeltSystem::DamageDeltSystem() : singleTarget(nullptr), owner(nullptr), targets(TArray<StatSheetObject*>()), totalDamageValues(TArray<float>()), statModMap(TMap<FString, float>())
-{
-	totalDamageValue = 0.0f;
-}
+StatSheetObject* DamageDeltSystem::singleTarget = nullptr;
+StatSheetObject* DamageDeltSystem::owner = nullptr;
+TArray<StatSheetObject*> DamageDeltSystem::targets = TArray<StatSheetObject*>();
+float DamageDeltSystem::totalDamageValue = 0.0f;
+TArray<float> DamageDeltSystem::totalDamageValues = TArray<float>();
+
 void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
 {
 	if(IsSingledTarget_)
 	{
-		//This will claculate any damage for a single target.
-		switch (action_->ReturnActionType())
+		if (singleTarget == nullptr)
 		{
-		case ACTIONTYPE::E_COMMAND:
-			//Command will do basic act with basic stats
-			//TO DO: Check if there is any damage in this command.
-			CommandAction* command = dynamic_cast<CommandAction*>(action_);
-			break;
+			//This will claculate any damage for a single target.
+			switch (action_->ReturnActionType())
+			{
+			case ACTIONTYPE::E_COMMAND:
+				//Command will do basic act with basic stats
+				//TO DO: Check if there is any damage in this command.
+				CommandAction* command = dynamic_cast<CommandAction*>(action_);
+				break;
 
-		case ACTIONTYPE::E_ITEM:
-			//Item will be sorted to what type then calculated for total damage.
-			ItemAction* item = dynamic_cast<ItemAction*>(action_);
-			
-			if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
-			{
-				totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
+			case ACTIONTYPE::E_ITEM:
+				//Item will be sorted to what type then calculated for total damage.
+				ItemAction* item = dynamic_cast<ItemAction*>(action_);
+
+				if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
+				{
+					totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
+				}
+				else if (item->ReturnItemType() == ITEMTYPE::E_WEAPON)
+				{
+					totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
+				}
+				else
+				{
+					Debugger::SetSeverity(MessageType::E_ERROR);
+					Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem.cpp", __LINE__);
+					return;
+				}
+				break;
+			case ACTIONTYPE::E_ABILITY:
+				//ability will retreive the damage value if any.
+				//TO DO: create an enum for what type of ability it is.
+				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+				CalculateAbilityDamage(ability);
+				break;
 			}
-			else if (item->ReturnItemType() == ITEMTYPE::E_WEAPON)
-			{
-				totalDamageValue = CalculateItemDamage(item) - CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);
-			}
-			else
-			{
-				Debugger::SetSeverity(MessageType::E_ERROR);
-				Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem.cpp", __LINE__);
-			}
-			break;
-		case ACTIONTYPE::E_ABILITY:
-			//ability will retreive the damage value if any.
-			//TO DO: create an enum for what type of ability it is.
-			AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
-			CalculateAbilityDamage(ability);
-			break;
-		}	
-		//TO DO: modify targets HP on stat system.
+			//TO DO: modify targets HP on stat system.
+			StatSystem::ModifiyStat(singleTarget, totalDamageValue, "HP");
+		}
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("Target not avalable. Please set target if null", "DamageDeltSystem.cpp", __LINE__);
+			return;
+		}
 	}
 	else if (!IsSingledTarget_)
 	{
-		//This will calculate any damage for multiple targets.
-		switch (action_->ReturnActionType())
+		if (targets.Num > 0)
 		{
-		case ACTIONTYPE::E_COMMAND:
-			//Command will do basic act with basic stats
-			//TO DO: Check if there is any damage in this command.
-			CommandAction* command = dynamic_cast<CommandAction*>(action_);
-			break;
-		case ACTIONTYPE::E_ITEM:
-			//Item will be sorted to what type then calculated for total damage.
-			ItemAction* item = dynamic_cast<ItemAction*>(action_);
-			if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
+			//This will calculate any damage for multiple targets.
+			switch (action_->ReturnActionType())
 			{
-				for (int i = 0; i < targets.Num(); i++)
+			case ACTIONTYPE::E_COMMAND:
+				//Command will do basic act with basic stats
+				//TO DO: Check if there is any damage in this command.
+				CommandAction* command = dynamic_cast<CommandAction*>(action_);
+				break;
+			case ACTIONTYPE::E_ITEM:
+				//Item will be sorted to what type then calculated for total damage.
+				ItemAction* item = dynamic_cast<ItemAction*>(action_);
+				if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
 				{
-					totalDamageValues.Add(CalculateItemDamage(item) - CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));
+					for (int i = 0; i < targets.Num(); i++)
+					{
+						totalDamageValues.Add(CalculateItemDamage(item) - CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));
+					}
 				}
-			}
-			else if(item->ReturnItemType() == ITEMTYPE::E_WEAPON)
-			{
-				for(int i = 0; i < targets.Num(); i++)
+				else if (item->ReturnItemType() == ITEMTYPE::E_WEAPON)
 				{
-					totalDamageValues.Add(CalculateItemDamage(item) - CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));
+					for (int i = 0; i < targets.Num(); i++)
+					{
+						totalDamageValues.Add(CalculateItemDamage(item) - CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));
+					}
 				}
+				else
+				{
+					Debugger::SetSeverity(MessageType::E_ERROR);
+					Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem.cpp", __LINE__);
+					return;
+				}
+				break;
+			case ACTIONTYPE::E_ABILITY:
+				//ability will retreive the damage value if any.
+				//TO DO: create an enum for what type of ability it is.
+				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+				CalculateAbilityDamage(ability);
+				break;
 			}
-			else
+			//TO DO: Modify stats of HP in targets.
+			for (int i = 0; i < targets.Num; i++)
 			{
-				Debugger::SetSeverity(MessageType::E_ERROR);
-				Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem.cpp", __LINE__);
+				StatSystem::ModifiyStat(targets[i], totalDamageValues[i], "HP");
 			}
-			break;
-		case ACTIONTYPE::E_ABILITY:
-			//ability will retreive the damage value if any.
-			//TO DO: create an enum for what type of ability it is.
-			AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
-			CalculateAbilityDamage(ability);
-			break;
 		}
-		//TO DO: Modify stats of HP in targets.
-
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("No targets avalable it the array. Please insert a target before calculating.", "DamageDeltSystem.cpp", __LINE__);
+			return;
+		}
 	}
 	//TO DO: After modification is done empty all information.
-
+	OnDestroy();
+}
+void DamageDeltSystem::CalculateDamage(const bool IsSingledTarget_, BaseAction* const action_)
+{
+	BaseCalculate(IsSingledTarget_, action_);
 }
 float DamageDeltSystem::CalculateWeaponDamage(ItemAction* const targetWeapon_)
 {
@@ -251,6 +282,12 @@ void DamageDeltSystem::OnDestroy()
 	if(singleTarget)
 	{
 		delete singleTarget;
+		singleTarget = nullptr;
+	}
+	if(owner)
+	{
+		delete owner;
+		owner = nullptr;
 	}
 	if(targets.Num() > 0)
 	{
@@ -261,12 +298,21 @@ void DamageDeltSystem::OnDestroy()
 		}
 		targets.Empty();
 	}
+	totalDamageValue = 0.0f;
+	if (totalDamageValues.Num > 0)
+	{
+		for (auto n : totalDamageValues)
+		{
+			n = 0.0f;
+		}
+		targets.Empty();
+	}
 }
-float DamageDeltSystem::ReturnTotalDamageValue() const
+float const DamageDeltSystem::ReturnTotalDamageValue() 
 {
 	return totalDamageValue;
 }
-TArray<float> DamageDeltSystem::ReturnDamageValues() const
+TArray<float> const DamageDeltSystem::ReturnDamageValues() 
 {
 	return totalDamageValues;
 }

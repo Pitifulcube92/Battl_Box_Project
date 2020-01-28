@@ -53,6 +53,8 @@ T\+Array$<$ \textbf{ Ability\+Action} $\ast$ $>$ \textbf{ Return\+Effect\+List} 
 \begin{DoxyCompactList}\small\item\em Returns item\+Type. \end{DoxyCompactList}\item 
 F\+String \textbf{ Return\+Name} () const
 \begin{DoxyCompactList}\small\item\em Return Name. \end{DoxyCompactList}\item 
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON} \textbf{ Return\+Stat\+Action\+Type} () const
+\begin{DoxyCompactList}\small\item\em Returns the stat action type. \end{DoxyCompactList}\item 
 T\+Map$<$ F\+String, float $>$ \textbf{ Return\+Stat\+Map} () const
 \begin{DoxyCompactList}\small\item\em Return stat\+Mod\+Map. \end{DoxyCompactList}\item 
 \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} \textbf{ Return\+Target\+Type} () const
@@ -71,6 +73,8 @@ void \textbf{ Set\+Interaction\+Type} (const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\
 \begin{DoxyCompactList}\small\item\em Sets interaction type. \end{DoxyCompactList}\item 
 void \textbf{ Set\+Name} (const F\+String name\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets Name. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Stat\+Action\+Type} (const \textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON} type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set Stat Action type. \end{DoxyCompactList}\item 
 void \textbf{ Set\+Target\+Type} (const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} type\+\_\+)
 \begin{DoxyCompactList}\small\item\em Sets target type. \end{DoxyCompactList}\item 
 void \textbf{ Set\+Type} (const \textbf{ I\+T\+E\+M\+T\+Y\+PE} type\+\_\+)
@@ -95,6 +99,8 @@ T\+Array$<$ \textbf{ Ability\+Action} $\ast$ $>$ \textbf{ effect\+List}
 \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} \textbf{ interaction}
 \item 
 F\+String \textbf{ name}
+\item 
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON} \textbf{ stat\+Action}
 \item 
 T\+Map$<$ F\+String, float $>$ \textbf{ stat\+Mod\+Map}
 \item 
@@ -143,8 +149,7 @@ Definition at line 4 of file Item\+Action.\+cpp.
 
 References E\+\_\+\+N\+O\+NE, Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Set\+Damage\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), Base\+Action\+::\+Set\+Target\+Type(), and Set\+Value().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -181,8 +186,7 @@ Definition at line 15 of file Item\+Action.\+cpp.
 
 References effect\+List, Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), Base\+Action\+::\+Set\+Target\+Type(), and value.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,8 +220,7 @@ Definition at line 28 of file Item\+Action.\+cpp.
 
 References Base\+Action\+::\+Return\+Action\+I\+D(), Base\+Action\+::\+Return\+Action\+Type(), Base\+Action\+::\+Return\+Discription(), Base\+Action\+::\+Return\+Interaction\+Type(), Base\+Action\+::\+Return\+Name(), Base\+Action\+::\+Return\+Target\+Type(), Return\+Value(), Base\+Action\+::\+Set\+Action\+I\+D(), Base\+Action\+::\+Set\+Action\+Type(), Base\+Action\+::\+Set\+Discription(), Base\+Action\+::\+Set\+Interaction\+Type(), Base\+Action\+::\+Set\+Name(), Base\+Action\+::\+Set\+Target\+Type(), and Set\+Value().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -245,8 +248,7 @@ Definition at line 78 of file Item\+Action.\+cpp.
 
 References On\+Destroy().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -298,8 +300,7 @@ Definition at line 74 of file Item\+Action.\+cpp.
 \DoxyCodeLine{77 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -318,21 +319,20 @@ Return Action ID.
 
 
 
-Definition at line 75 of file Base\+Action.\+cpp.
+Definition at line 85 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{76 \{}
-\DoxyCodeLine{77     \textcolor{keywordflow}{return} actionID;}
-\DoxyCodeLine{78 \}}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87     \textcolor{keywordflow}{return} actionID;}
+\DoxyCodeLine{88 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::action\+ID.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -351,13 +351,13 @@ Return action type.
 
 
 
-Definition at line 63 of file Base\+Action.\+cpp.
+Definition at line 69 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64 \{}
-\DoxyCodeLine{65     \textcolor{keywordflow}{return} action;}
-\DoxyCodeLine{66 \}}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{return} action;}
+\DoxyCodeLine{72 \}}
 
 \end{DoxyCode}
 
@@ -409,21 +409,20 @@ Return discription.
 
 
 
-Definition at line 59 of file Base\+Action.\+cpp.
+Definition at line 65 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{60 \{}
-\DoxyCodeLine{61     \textcolor{keywordflow}{return} discription;}
-\DoxyCodeLine{62 \}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} discription;}
+\DoxyCodeLine{68 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::discription.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -475,13 +474,13 @@ Return Interaction type.
 
 
 
-Definition at line 71 of file Base\+Action.\+cpp.
+Definition at line 77 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{72 \{}
-\DoxyCodeLine{73     \textcolor{keywordflow}{return} interaction;}
-\DoxyCodeLine{74 \}}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79     \textcolor{keywordflow}{return} interaction;}
+\DoxyCodeLine{80 \}}
 
 \end{DoxyCode}
 
@@ -547,6 +546,39 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_base_action_a87fa8929e542db8b7b7e695490f1f0a2_a87fa8929e542db8b7b7e695490f1f0a2_icgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_base_action_aef05e8457330e3a0d8f60c5689667e38_aef05e8457330e3a0d8f60c5689667e38}} 
+\index{ItemAction@{ItemAction}!ReturnStatActionType@{ReturnStatActionType}}
+\index{ReturnStatActionType@{ReturnStatActionType}!ItemAction@{ItemAction}}
+\doxysubsubsection{ReturnStatActionType()}
+{\footnotesize\ttfamily \textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON} Base\+Action\+::\+Return\+Stat\+Action\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Returns the stat action type. 
+
+
+
+Definition at line 81 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} statAction;}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::stat\+Action.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_aef05e8457330e3a0d8f60c5689667e38_aef05e8457330e3a0d8f60c5689667e38_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_item_action_a1e9af3e563063849729fad37d8beb92e_a1e9af3e563063849729fad37d8beb92e}} 
 \index{ItemAction@{ItemAction}!ReturnStatMap@{ReturnStatMap}}
 \index{ReturnStatMap@{ReturnStatMap}!ItemAction@{ItemAction}}
@@ -592,21 +624,20 @@ Return target type.
 
 
 
-Definition at line 67 of file Base\+Action.\+cpp.
+Definition at line 73 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{68 \{}
-\DoxyCodeLine{69     \textcolor{keywordflow}{return} target;}
-\DoxyCodeLine{70 \}}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} target;}
+\DoxyCodeLine{76 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::target.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -638,8 +669,7 @@ Definition at line 58 of file Item\+Action.\+cpp.
 
 References value.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -658,21 +688,20 @@ Sets action ID.
 
 
 
-Definition at line 51 of file Base\+Action.\+cpp.
+Definition at line 57 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{52 \{}
-\DoxyCodeLine{53     actionID = actionID\_;}
-\DoxyCodeLine{54 \}}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     actionID = actionID\_;}
+\DoxyCodeLine{60 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::action\+ID.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -691,21 +720,20 @@ Sets Actiontype.
 
 
 
-Definition at line 39 of file Base\+Action.\+cpp.
+Definition at line 41 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{40 \{}
-\DoxyCodeLine{41     action = type\_;}
-\DoxyCodeLine{42 \}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     action = type\_;}
+\DoxyCodeLine{44 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::action.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -737,8 +765,7 @@ Definition at line 42 of file Item\+Action.\+cpp.
 
 References damage\+Type.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -757,21 +784,20 @@ Sets Discription.
 
 
 
-Definition at line 35 of file Base\+Action.\+cpp.
+Definition at line 37 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{36 \{}
-\DoxyCodeLine{37     discription = discription\_;}
-\DoxyCodeLine{38 \}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     discription = discription\_;}
+\DoxyCodeLine{40 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::discription.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -790,21 +816,20 @@ Sets interaction type.
 
 
 
-Definition at line 47 of file Base\+Action.\+cpp.
+Definition at line 49 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{48 \{}
-\DoxyCodeLine{49     interaction = type\_;}
-\DoxyCodeLine{50 \}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     interaction = type\_;}
+\DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::interaction.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -823,27 +848,51 @@ Sets Name.
 
 
 
-Definition at line 31 of file Base\+Action.\+cpp.
+Definition at line 33 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{32 \{}
-\DoxyCodeLine{33     name = name\_;}
-\DoxyCodeLine{34 \}}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     name = name\_;}
+\DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::name.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_base_action_ad307b128f9ded949daa718fc1364919c_ad307b128f9ded949daa718fc1364919c_icgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_base_action_a3b5c34eafd3b50c8b28b805c596b021f_a3b5c34eafd3b50c8b28b805c596b021f}} 
+\index{ItemAction@{ItemAction}!SetStatActionType@{SetStatActionType}}
+\index{SetStatActionType@{SetStatActionType}!ItemAction@{ItemAction}}
+\doxysubsubsection{SetStatActionType()}
+{\footnotesize\ttfamily void Base\+Action\+::\+Set\+Stat\+Action\+Type (\begin{DoxyParamCaption}\item[{const \textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON}}]{type\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Set Stat Action type. 
+
+
+
+Definition at line 53 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     statAction = type\_;}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Action\+::stat\+Action.
+
 \mbox{\label{class_base_action_a6f0ca61c63f46332e6507fc2ee2b29f8_a6f0ca61c63f46332e6507fc2ee2b29f8}} 
 \index{ItemAction@{ItemAction}!SetTargetType@{SetTargetType}}
 \index{SetTargetType@{SetTargetType}!ItemAction@{ItemAction}}
@@ -856,21 +905,20 @@ Sets target type.
 
 
 
-Definition at line 43 of file Base\+Action.\+cpp.
+Definition at line 45 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{44 \{}
-\DoxyCodeLine{45     target = type\_;}
-\DoxyCodeLine{46 \}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47     target = type\_;}
+\DoxyCodeLine{48 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::target.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -927,8 +975,7 @@ Definition at line 38 of file Item\+Action.\+cpp.
 
 References value.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -946,7 +993,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 67 of file Base\+Action.\+h.
+Definition at line 70 of file Base\+Action.\+h.
 
 \mbox{\label{class_base_action_a050d54574671299fb3f8d854aeb6a190_a050d54574671299fb3f8d854aeb6a190}} 
 \index{ItemAction@{ItemAction}!actionID@{actionID}}
@@ -956,7 +1003,7 @@ Definition at line 67 of file Base\+Action.\+h.
 
 
 
-Definition at line 70 of file Base\+Action.\+h.
+Definition at line 74 of file Base\+Action.\+h.
 
 \mbox{\label{class_item_action_a93d8f1fe4fdb7223d77b5f176fcbdba0_a93d8f1fe4fdb7223d77b5f176fcbdba0}} 
 \index{ItemAction@{ItemAction}!damageType@{damageType}}
@@ -976,7 +1023,7 @@ Definition at line 28 of file Item\+Action.\+h.
 
 
 
-Definition at line 66 of file Base\+Action.\+h.
+Definition at line 69 of file Base\+Action.\+h.
 
 \mbox{\label{class_item_action_a1f7abdb1a6ced6acfa28da1767c5cd22_a1f7abdb1a6ced6acfa28da1767c5cd22}} 
 \index{ItemAction@{ItemAction}!effectList@{effectList}}
@@ -996,7 +1043,7 @@ Definition at line 26 of file Item\+Action.\+h.
 
 
 
-Definition at line 69 of file Base\+Action.\+h.
+Definition at line 73 of file Base\+Action.\+h.
 
 \mbox{\label{class_base_action_a89d98c13f445fa58b96d5c4eff58e134_a89d98c13f445fa58b96d5c4eff58e134}} 
 \index{ItemAction@{ItemAction}!name@{name}}
@@ -1006,7 +1053,17 @@ Definition at line 69 of file Base\+Action.\+h.
 
 
 
-Definition at line 65 of file Base\+Action.\+h.
+Definition at line 68 of file Base\+Action.\+h.
+
+\mbox{\label{class_base_action_a3e4fc5e6e14315257ed1ac2875580859_a3e4fc5e6e14315257ed1ac2875580859}} 
+\index{ItemAction@{ItemAction}!statAction@{statAction}}
+\index{statAction@{statAction}!ItemAction@{ItemAction}}
+\doxysubsubsection{statAction}
+{\footnotesize\ttfamily \textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON} Base\+Action\+::stat\+Action\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 72 of file Base\+Action.\+h.
 
 \mbox{\label{class_item_action_a6d2085fe8637753f593bae9df6993bf0_a6d2085fe8637753f593bae9df6993bf0}} 
 \index{ItemAction@{ItemAction}!statModMap@{statModMap}}
@@ -1026,7 +1083,7 @@ Definition at line 27 of file Item\+Action.\+h.
 
 
 
-Definition at line 68 of file Base\+Action.\+h.
+Definition at line 71 of file Base\+Action.\+h.
 
 \mbox{\label{class_item_action_a86da96d7beb1b83eceb55297ee397088_a86da96d7beb1b83eceb55297ee397088}} 
 \index{ItemAction@{ItemAction}!type@{type}}
@@ -1052,5 +1109,5 @@ Definition at line 25 of file Item\+Action.\+h.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\textbf{ Item\+Action.\+h}\item 
-Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\textbf{ Item\+Action.\+cpp}\end{DoxyCompactItemize}
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\textbf{ Item\+Action.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\textbf{ Item\+Action.\+cpp}\end{DoxyCompactItemize}

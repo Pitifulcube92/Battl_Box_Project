@@ -53,12 +53,15 @@ enum class ELEMENTTYPE
 	E_DARK
 };
 
-enum class ABILITYTYPE
+enum class STATACTION
 {
-	E_MODIFIYER,
-	E_TMP_MODIFIYER,
-	E_DAMAGE_MODIFYER
+	E_NONE,
+	E_ADD,
+	E_REMOVE,
+	E_TMP_ADD,
+	E_TMP_REMOVE
 };
+
 class BaseAction
 {
 private:
@@ -66,12 +69,13 @@ private:
 	FString discription;
 	ACTIONTYPE action;
 	TARGETTYPE target;
+	STATACTION statAction;
 	INTERACTIONTYPE interaction;
 	uint32 actionID;
 public:
 	BaseAction();
 	///Base Construction
-	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_);
+	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_);
 	BaseAction(const BaseAction* other_);
 	///Sets Name.
 	void SetName(const FString name_);
@@ -83,6 +87,8 @@ public:
 	void SetTargetType(const TARGETTYPE type_);
 	///Sets interaction type.
 	void SetInteractionType(const INTERACTIONTYPE type_);
+	///Set Stat Action type.
+	void SetStatActionType(const STATACTION type_);
 	///Sets action ID
 	void SetActionID(const uint32 actionID_);
 	void OnDestroy();
@@ -96,6 +102,8 @@ public:
 	TARGETTYPE ReturnTargetType() const;
 	///Return Interaction type.
 	INTERACTIONTYPE ReturnInteractionType() const;
+	///Returns the stat action type.
+	STATACTION ReturnStatActionType() const;
 	///Return Action ID.
 	uint32 ReturnActionID() const;
 	virtual ~BaseAction();

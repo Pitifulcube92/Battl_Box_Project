@@ -11,7 +11,7 @@ Inheritance diagram for Stat\+System\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=181pt]{class_stat_system__inherit__graph}
+\includegraphics[width=196pt]{class_stat_system__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -21,45 +21,56 @@ Collaboration diagram for Stat\+System\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_stat_system__coll__graph}
+\includegraphics[height=550pt]{class_stat_system__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Add\+Stat\+Modifier} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em This updates the stats debengin on the name. \end{DoxyCompactList}\item 
-void \textbf{ Addtarget} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+)
-\begin{DoxyCompactList}\small\item\em Adds another target to the target array. \end{DoxyCompactList}\item 
-void \textbf{ Add\+Tmp\+Modifier} (\textbf{ Base\+Action} $\ast$action\+\_\+, const float duration\+\_\+)
-\begin{DoxyCompactList}\small\item\em Adds a temporary modifierby the base action. \end{DoxyCompactList}\item 
-void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Base calculation for any dirieved system classes. \end{DoxyCompactList}\item 
-void \textbf{ On\+Destroy} ()
+\textbf{ Stat\+System} \& \textbf{ operator=} (const \textbf{ Stat\+System} \&)=delete
 \item 
-void \textbf{ Remove\+Modifier} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Removes the specific modification by the baseaction. \end{DoxyCompactList}\item 
-void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets target. \end{DoxyCompactList}\item 
-void \textbf{ Set\+Target\+Action} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets target action. \end{DoxyCompactList}\item 
-\textbf{ Stat\+System} ()
-\begin{DoxyCompactList}\small\item\em Adds the specific modification by the baseaction. \end{DoxyCompactList}\item 
+\textbf{ Stat\+System} \& \textbf{ operator=} (\textbf{ Stat\+System} \&\&)=delete
+\item 
+\textbf{ Stat\+System} ()=delete
+\item 
+\textbf{ Stat\+System} (const \textbf{ Stat\+System} \&)=delete
+\item 
+\textbf{ Stat\+System} (\textbf{ Stat\+System} \&\&)=delete
+\item 
 \textbf{ $\sim$\+Stat\+System} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Modifiy\+Stat} (const float value, const F\+String name\+\_\+)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+static void \textbf{ Addtarget} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds another target to the target array. \end{DoxyCompactList}\item 
+static void \textbf{ Calculate\+Stat} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
+\item 
+static void \textbf{ Modifiy\+Stat} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+, const float value, const F\+String name\+\_\+)
+\begin{DoxyCompactList}\small\item\em This updates the stats based on the name. \end{DoxyCompactList}\item 
+static void \textbf{ On\+Destroy} ()
+\item 
+static void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Stat\+Sheet\+Object} $\ast$ \textbf{ target}
+static void \textbf{ Add\+Stat\+Modifier} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds the specific modification by the baseaction. \end{DoxyCompactList}\item 
+static void \textbf{ Add\+Tmp\+Modifier} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+, const float duration\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds a modificationtemporarly. \end{DoxyCompactList}\item 
+static void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Base calculation for any dirieved system classes. \end{DoxyCompactList}\item 
+static void \textbf{ Remove\+Modifier} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes the specific modification by the baseaction. \end{DoxyCompactList}\item 
+static void \textbf{ Remove\+Tmp\+Modifier} (\textbf{ Stat\+Sheet\+Object} $\ast$const target\+\_\+, \textbf{ Base\+Action} $\ast$action\+\_\+, const float duration\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes a modification temporarly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\textbf{ Base\+Action} $\ast$ \textbf{ target\+Action}
+static \textbf{ Stat\+Sheet\+Object} $\ast$ \textbf{ target} = nullptr
 \item 
-T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ \textbf{ targets}
+static T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ \textbf{ targets} = T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$()
 \end{DoxyCompactItemize}
 
 
@@ -71,27 +82,24 @@ Definition at line 9 of file Stat\+System.\+h.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_stat_system_ac75d67d5db20babea9601894aee1e871_ac75d67d5db20babea9601894aee1e871}} 
+\mbox{\label{class_stat_system_a72ed1fe5c28700b27eee75b6a1019ae6_a72ed1fe5c28700b27eee75b6a1019ae6}} 
 \index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
 \index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
-\doxysubsubsection{StatSystem()}
-{\footnotesize\ttfamily Stat\+System\+::\+Stat\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{StatSystem()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Stat\+System\+::\+Stat\+System (\begin{DoxyParamCaption}\item[{const \textbf{ Stat\+System} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+\mbox{\label{class_stat_system_aa4bab5c4e999f176a2eae118d90ea2bb_aa4bab5c4e999f176a2eae118d90ea2bb}} 
+\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
+\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
+\doxysubsubsection{StatSystem()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Stat\+System\+::\+Stat\+System (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+System} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+\mbox{\label{class_stat_system_a997b61bba7a82246a29981be207226a2_a997b61bba7a82246a29981be207226a2}} 
+\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
+\index{StatSystem@{StatSystem}!StatSystem@{StatSystem}}
+\doxysubsubsection{StatSystem()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Stat\+System\+::\+Stat\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
-Adds the specific modification by the baseaction. 
-
-
-
-Definition at line 10 of file Stat\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{11 \{}
-\DoxyCodeLine{12 }
-\DoxyCodeLine{13 \}}
-
-\end{DoxyCode}
 \mbox{\label{class_stat_system_ae92847be88226779e422cfea7d9b597c_ae92847be88226779e422cfea7d9b597c}} 
 \index{StatSystem@{StatSystem}!````~StatSystem@{$\sim$StatSystem}}
 \index{````~StatSystem@{$\sim$StatSystem}!StatSystem@{StatSystem}}
@@ -100,22 +108,21 @@ Definition at line 10 of file Stat\+System.\+cpp.
 
 
 
-Definition at line 142 of file Stat\+System.\+cpp.
+Definition at line 296 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{143 \{}
-\DoxyCodeLine{144     OnDestroy();}
-\DoxyCodeLine{145 }
-\DoxyCodeLine{146 \}}
+\DoxyCodeLine{297 \{}
+\DoxyCodeLine{298     OnDestroy();}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \}}
 
 \end{DoxyCode}
 
 
 References On\+Destroy().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -125,75 +132,75 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\label{class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db_a69b98b0b70ffb649aaad4e8cebda95db}} 
+\mbox{\label{class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642_a2a37cf57a91f13fb5f640a342d5d0642}} 
 \index{StatSystem@{StatSystem}!AddStatModifier@{AddStatModifier}}
 \index{AddStatModifier@{AddStatModifier}!StatSystem@{StatSystem}}
 \doxysubsubsection{AddStatModifier()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Add\+Stat\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Stat\+System\+::\+Add\+Stat\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-This updates the stats debengin on the name. 
+Adds the specific modification by the baseaction. 
 
 
 
-Definition at line 40 of file Stat\+System.\+cpp.
+Definition at line 190 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{41 \{}
-\DoxyCodeLine{42     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
-\DoxyCodeLine{43     \{}
-\DoxyCodeLine{44         ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{45         \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_CONSUMABLE)}
-\DoxyCodeLine{46         \{}
-\DoxyCodeLine{47             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& effect : item-\/>ReturnEffectList())}
-\DoxyCodeLine{48             \{}
-\DoxyCodeLine{49                 \textcolor{keywordflow}{if} (effect-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
-\DoxyCodeLine{50                 \{}
-\DoxyCodeLine{51                     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& statMod : effect-\/>ReturnModStatMap())}
-\DoxyCodeLine{52                     \{}
-\DoxyCodeLine{53                         ModifiyStat(statMod.Value, statMod.Key);}
-\DoxyCodeLine{54                     \}}
-\DoxyCodeLine{55                 \}}
-\DoxyCodeLine{56                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (effect-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
-\DoxyCodeLine{57                 \{}
-\DoxyCodeLine{58                     \textcolor{comment}{//This will go throught the modifyer process }}
-\DoxyCodeLine{59                     \textcolor{comment}{//TO DO: Finish the proccess code for the tmp modifiyer.}}
-\DoxyCodeLine{60                 \}}
-\DoxyCodeLine{61                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (effect-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
-\DoxyCodeLine{62                 \{}
-\DoxyCodeLine{63                     \textcolor{comment}{//TO DO: turn systems to static classes.}}
-\DoxyCodeLine{64                 \}}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66             \}}
-\DoxyCodeLine{67         \}}
-\DoxyCodeLine{68         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_ARMOR || item-\/>ReturnItemType() == ITEMTYPE::E\_WEAPON)}
-\DoxyCodeLine{69         \{}
-\DoxyCodeLine{70             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& effect : item-\/>ReturnEffectList())}
-\DoxyCodeLine{71             \{   }
-\DoxyCodeLine{72                 \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& statMod : effect-\/>ReturnModStatMap())}
-\DoxyCodeLine{73                 \{ }
-\DoxyCodeLine{74                     ModifiyStat(statMod.Value, statMod.Key);}
-\DoxyCodeLine{75                 \}}
-\DoxyCodeLine{76             \}}
-\DoxyCodeLine{77         \}}
-\DoxyCodeLine{78     \}}
-\DoxyCodeLine{79     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
-\DoxyCodeLine{80     \{}
-\DoxyCodeLine{81         AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{82         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& statMod : ability-\/>ReturnModStatMap())}
-\DoxyCodeLine{83         \{}
-\DoxyCodeLine{84             ModifiyStat(statMod.Value, statMod.Key);}
-\DoxyCodeLine{85         \}}
-\DoxyCodeLine{86     \}}
-\DoxyCodeLine{87     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{88     \{}
-\DoxyCodeLine{89         Debugger::SetSeverity(MessageType::E\_ERROR);}
-\DoxyCodeLine{90         Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" does not have an modification in this action."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{91         \textcolor{keywordflow}{return};}
-\DoxyCodeLine{92     \}}
-\DoxyCodeLine{93 \}}
+\DoxyCodeLine{191 \{}
+\DoxyCodeLine{192     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{193     \{}
+\DoxyCodeLine{194         ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{195         \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_CONSUMABLE)}
+\DoxyCodeLine{196         \{}
+\DoxyCodeLine{197             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& effect : item-\/>ReturnEffectList())}
+\DoxyCodeLine{198             \{}
+\DoxyCodeLine{199                 \textcolor{keywordflow}{if} (effect-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{200                 \{}
+\DoxyCodeLine{201                     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& statMod : effect-\/>ReturnModStatMap())}
+\DoxyCodeLine{202                     \{}
+\DoxyCodeLine{203                         ModifiyStat(target\_, statMod.Value, statMod.Key);}
+\DoxyCodeLine{204                     \}}
+\DoxyCodeLine{205                 \}}
+\DoxyCodeLine{206                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (effect-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{207                 \{}
+\DoxyCodeLine{208                     \textcolor{comment}{//This will go throught the modifyer process }}
+\DoxyCodeLine{209                     \textcolor{comment}{//TO DO: Finish the proccess code for the tmp modifiyer.}}
+\DoxyCodeLine{210                 \}}
+\DoxyCodeLine{211                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (effect-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{212                 \{}
+\DoxyCodeLine{213                     \textcolor{comment}{//TO DO: turn systems to static classes.}}
+\DoxyCodeLine{214                 \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216             \}}
+\DoxyCodeLine{217         \}}
+\DoxyCodeLine{218         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_ARMOR || item-\/>ReturnItemType() == ITEMTYPE::E\_WEAPON)}
+\DoxyCodeLine{219         \{}
+\DoxyCodeLine{220             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& effect : item-\/>ReturnEffectList())}
+\DoxyCodeLine{221             \{   }
+\DoxyCodeLine{222                 \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& statMod : effect-\/>ReturnModStatMap())}
+\DoxyCodeLine{223                 \{ }
+\DoxyCodeLine{224                     ModifiyStat(target\_, statMod.Value, statMod.Key);}
+\DoxyCodeLine{225                 \}}
+\DoxyCodeLine{226             \}}
+\DoxyCodeLine{227         \}}
+\DoxyCodeLine{228     \}}
+\DoxyCodeLine{229     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{230     \{}
+\DoxyCodeLine{231         AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{232         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& statMod : ability-\/>ReturnModStatMap())}
+\DoxyCodeLine{233         \{}
+\DoxyCodeLine{234             ModifiyStat(target\_, statMod.Value, statMod.Key);}
+\DoxyCodeLine{235         \}}
+\DoxyCodeLine{236     \}}
+\DoxyCodeLine{237     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{238     \{}
+\DoxyCodeLine{239         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{240         Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" does not have an modification in this action."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{241         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243 \}}
 
 \end{DoxyCode}
 
@@ -205,14 +212,22 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db_a69b98b0b70ffb649aaad4e8cebda95db_cgraph}
+\includegraphics[width=350pt]{class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642_a2a37cf57a91f13fb5f640a342d5d0642_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642_a2a37cf57a91f13fb5f640a342d5d0642_icgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_stat_system_afd6ba964080b87f599135a91466474eb_afd6ba964080b87f599135a91466474eb}} 
 \index{StatSystem@{StatSystem}!Addtarget@{Addtarget}}
 \index{Addtarget@{Addtarget}!StatSystem@{StatSystem}}
 \doxysubsubsection{Addtarget()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Addtarget (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Stat\+System\+::\+Addtarget (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -220,45 +235,53 @@ Adds another target to the target array.
 
 
 
-Definition at line 134 of file Stat\+System.\+cpp.
+Definition at line 288 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{135 \{}
-\DoxyCodeLine{136     targets.Add(target\_);}
-\DoxyCodeLine{137 \}}
+\DoxyCodeLine{289 \{}
+\DoxyCodeLine{290     targets.Add(target\_);}
+\DoxyCodeLine{291 \}}
 
 \end{DoxyCode}
 
 
 References targets.
 
-\mbox{\label{class_stat_system_acc44ff7b73bce66d9da24df9608aab65_acc44ff7b73bce66d9da24df9608aab65}} 
+\mbox{\label{class_stat_system_a2ca1d5ee47433f0a949a4aa93a3d8c84_a2ca1d5ee47433f0a949a4aa93a3d8c84}} 
 \index{StatSystem@{StatSystem}!AddTmpModifier@{AddTmpModifier}}
 \index{AddTmpModifier@{AddTmpModifier}!StatSystem@{StatSystem}}
 \doxysubsubsection{AddTmpModifier()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Add\+Tmp\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+,  }\item[{const float}]{duration\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Stat\+System\+::\+Add\+Tmp\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+,  }\item[{const float}]{duration\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-Adds a temporary modifierby the base action. 
+Adds a modificationtemporarly. 
 
 
 
-Definition at line 122 of file Stat\+System.\+cpp.
+Definition at line 272 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{123 \{}
-\DoxyCodeLine{124     \textcolor{comment}{//This will basiclly add a modifier then remove it in a timer.}}
-\DoxyCodeLine{125 \}}
+\DoxyCodeLine{273 \{}
+\DoxyCodeLine{274     \textcolor{comment}{//This will add a modifier then remove it in a timer.}}
+\DoxyCodeLine{275 \}}
 
 \end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_a2ca1d5ee47433f0a949a4aa93a3d8c84_a2ca1d5ee47433f0a949a4aa93a3d8c84_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_stat_system_a805454116d5cd0a0c408117b42f413be_a805454116d5cd0a0c408117b42f413be}} 
 \index{StatSystem@{StatSystem}!BaseCalculate@{BaseCalculate}}
 \index{BaseCalculate@{BaseCalculate}!StatSystem@{StatSystem}}
 \doxysubsubsection{BaseCalculate()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Singled\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Stat\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Singled\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
 
 
 
@@ -270,64 +293,181 @@ Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e07687
 
 
 
-Definition at line 14 of file Stat\+System.\+cpp.
+Definition at line 17 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{15 \{}
-\DoxyCodeLine{16     \textcolor{keywordflow}{if} (!IsSingledTarget\_)}
-\DoxyCodeLine{17     \{}
-\DoxyCodeLine{18         }
-\DoxyCodeLine{19     \}}
-\DoxyCodeLine{20     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!IsSingledTarget\_)}
-\DoxyCodeLine{21     \{}
-\DoxyCodeLine{22         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& target : targets)}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (IsSingledTarget\_)}
 \DoxyCodeLine{23         \{}
-\DoxyCodeLine{24             }
-\DoxyCodeLine{25         \}}
-\DoxyCodeLine{26     \}}
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{24             \textcolor{keywordflow}{if} (target == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{25             \{}
+\DoxyCodeLine{26                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{27                 \{}
+\DoxyCodeLine{28                     \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_ADD)}
+\DoxyCodeLine{29                     \{}
+\DoxyCodeLine{30                         AddStatModifier(target, action\_);}
+\DoxyCodeLine{31                     \}}
+\DoxyCodeLine{32                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_REMOVE)}
+\DoxyCodeLine{33                     \{}
+\DoxyCodeLine{34                         RemoveModifier(target, ability);}
+\DoxyCodeLine{35                     \}}
+\DoxyCodeLine{36                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_ADD)}
+\DoxyCodeLine{37                     \{}
+\DoxyCodeLine{38                         AddTmpModifier(target, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{39                     \}}
+\DoxyCodeLine{40                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_REMOVE)}
+\DoxyCodeLine{41                     \{}
+\DoxyCodeLine{42                         RemoveTmpModifier(target, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{43                     \}}
+\DoxyCodeLine{44                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{45                     \{}
+\DoxyCodeLine{46                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{47                         Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" Could not be modified"}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{48                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{49                     \}}
+\DoxyCodeLine{50                 \}}
+\DoxyCodeLine{51             \}}
+\DoxyCodeLine{52             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{53             \{}
+\DoxyCodeLine{54                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{55                 Debugger::Error(\textcolor{stringliteral}{"Target not avalable. Please set target if null"}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{56                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{57             \}}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!IsSingledTarget\_)}
+\DoxyCodeLine{60         \{}
+\DoxyCodeLine{61             \textcolor{keywordflow}{if} (targets.Num > 0)}
+\DoxyCodeLine{62             \{}
+\DoxyCodeLine{63                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : targets)}
+\DoxyCodeLine{64                 \{}
+\DoxyCodeLine{65                     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{66                     \{}
+\DoxyCodeLine{67                         \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_ADD)}
+\DoxyCodeLine{68                         \{}
+\DoxyCodeLine{69                             AddStatModifier(i, action\_);}
+\DoxyCodeLine{70                         \}}
+\DoxyCodeLine{71                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_REMOVE)}
+\DoxyCodeLine{72                         \{}
+\DoxyCodeLine{73                             RemoveModifier(i, ability);}
+\DoxyCodeLine{74                         \}}
+\DoxyCodeLine{75                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_ADD)}
+\DoxyCodeLine{76                         \{}
+\DoxyCodeLine{77                             AddTmpModifier(i, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{78                         \}}
+\DoxyCodeLine{79                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_REMOVE)}
+\DoxyCodeLine{80                         \{}
+\DoxyCodeLine{81                             RemoveTmpModifier(i, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{82                         \}}
+\DoxyCodeLine{83                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{84                         \{}
+\DoxyCodeLine{85                             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{86                             Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" Could not be modified"}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{87                             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{88                         \}}
+\DoxyCodeLine{89                     \}}
+\DoxyCodeLine{90                 \}}
+\DoxyCodeLine{91             \}}
+\DoxyCodeLine{92             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{93             \{}
+\DoxyCodeLine{94                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{95                 Debugger::Error(\textcolor{stringliteral}{"No targets avalable it the array. Please insert a target before calculating."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{96                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{97             \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{102     \{}
+\DoxyCodeLine{103         AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{104         \textcolor{keywordflow}{if} (IsSingledTarget\_)}
+\DoxyCodeLine{105         \{}
+\DoxyCodeLine{106             \textcolor{keywordflow}{if} (target == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{107             \{}
+\DoxyCodeLine{108                 \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_ADD)}
+\DoxyCodeLine{109                 \{}
+\DoxyCodeLine{110                     AddStatModifier(target, action\_);}
+\DoxyCodeLine{111                 \}}
+\DoxyCodeLine{112                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_REMOVE)}
+\DoxyCodeLine{113                 \{}
+\DoxyCodeLine{114                     RemoveModifier(target, ability);}
+\DoxyCodeLine{115                 \}}
+\DoxyCodeLine{116                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_ADD)}
+\DoxyCodeLine{117                 \{}
+\DoxyCodeLine{118                     AddTmpModifier(target, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{119                 \}}
+\DoxyCodeLine{120                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_REMOVE)}
+\DoxyCodeLine{121                 \{}
+\DoxyCodeLine{122                     RemoveTmpModifier(target, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{123                 \}}
+\DoxyCodeLine{124                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{125                 \{}
+\DoxyCodeLine{126                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{127                     Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" Could not be modified"}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{128                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{129                 \}}
+\DoxyCodeLine{130             \}}
+\DoxyCodeLine{131             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{132             \{}
+\DoxyCodeLine{133                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{134                 Debugger::Error(\textcolor{stringliteral}{"Target not avalable. Please set target if null"}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{135                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{136             \}}
+\DoxyCodeLine{137         \}}
+\DoxyCodeLine{138         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!IsSingledTarget\_) }
+\DoxyCodeLine{139         \{}
+\DoxyCodeLine{140             \textcolor{keywordflow}{if} (targets.Num > 0)}
+\DoxyCodeLine{141             \{}
+\DoxyCodeLine{142                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : targets)}
+\DoxyCodeLine{143                 \{}
+\DoxyCodeLine{144                     \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_ADD)}
+\DoxyCodeLine{145                     \{}
+\DoxyCodeLine{146                         AddStatModifier(i, action\_);}
+\DoxyCodeLine{147                     \}}
+\DoxyCodeLine{148                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_REMOVE)}
+\DoxyCodeLine{149                     \{}
+\DoxyCodeLine{150                         RemoveModifier(i, ability);}
+\DoxyCodeLine{151                     \}}
+\DoxyCodeLine{152                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_ADD)}
+\DoxyCodeLine{153                     \{}
+\DoxyCodeLine{154                         AddTmpModifier(i, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{155                     \}}
+\DoxyCodeLine{156                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnStatActionType() == STATACTION::E\_TMP\_REMOVE)}
+\DoxyCodeLine{157                     \{}
+\DoxyCodeLine{158                         RemoveTmpModifier(i, ability, ability-\/>ReturnDuration());}
+\DoxyCodeLine{159                     \}}
+\DoxyCodeLine{160                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{161                     \{}
+\DoxyCodeLine{162                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{163                         Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" Could not be modified"}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{164                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{165                     \}}
+\DoxyCodeLine{166                 \}}
+\DoxyCodeLine{167             \}}
+\DoxyCodeLine{168             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{169             \{}
+\DoxyCodeLine{170                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{171                 Debugger::Error(\textcolor{stringliteral}{"No targets avalable it the array. Please insert a target before calculating."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{172                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{173             \}}
+\DoxyCodeLine{174         \}}
+\DoxyCodeLine{175     \}}
+\DoxyCodeLine{176 \}}
 
 \end{DoxyCode}
 
 
-References target, and targets.
-
-\mbox{\label{class_stat_system_a88d4e8feb8356439cb70e03c714f147d_a88d4e8feb8356439cb70e03c714f147d}} 
-\index{StatSystem@{StatSystem}!ModifiyStat@{ModifiyStat}}
-\index{ModifiyStat@{ModifiyStat}!StatSystem@{StatSystem}}
-\doxysubsubsection{ModifiyStat()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Modifiy\+Stat (\begin{DoxyParamCaption}\item[{const float}]{value,  }\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 28 of file Stat\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{29 \{}
-\DoxyCodeLine{30     \textcolor{keywordflow}{if} (target-\/>ReturnStatMap().Contains(name\_))}
-\DoxyCodeLine{31     \{}
-\DoxyCodeLine{32         target-\/>ReturnStatMap()[name\_] += value;}
-\DoxyCodeLine{33     \}}
-\DoxyCodeLine{34     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{35     \{}
-\DoxyCodeLine{36         Debugger::SetSeverity(MessageType::E\_WARNING);}
-\DoxyCodeLine{37         Debugger::Warrning(name\_ + \textcolor{stringliteral}{" is not found in the stat sheet."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{38     \}}
-\DoxyCodeLine{39 \}}
-
-\end{DoxyCode}
-
-
-References E\+\_\+\+W\+A\+R\+N\+I\+NG, Stat\+Sheet\+Object\+::\+Return\+Stat\+Map(), Debugger\+::\+Set\+Severity(), target, and Debugger\+::\+Warrning().
+References Add\+Stat\+Modifier(), Add\+Tmp\+Modifier(), E\+\_\+\+A\+B\+I\+L\+I\+TY, E\+\_\+\+A\+DD, E\+\_\+\+E\+R\+R\+OR, E\+\_\+\+I\+T\+EM, E\+\_\+\+R\+E\+M\+O\+VE, E\+\_\+\+T\+M\+P\+\_\+\+A\+DD, E\+\_\+\+T\+M\+P\+\_\+\+R\+E\+M\+O\+VE, Debugger\+::\+Error(), Remove\+Modifier(), Remove\+Tmp\+Modifier(), Base\+Action\+::\+Return\+Action\+Type(), Ability\+Action\+::\+Return\+Duration(), Item\+Action\+::\+Return\+Effect\+List(), Base\+Action\+::\+Return\+Name(), Base\+Action\+::\+Return\+Stat\+Action\+Type(), Debugger\+::\+Set\+Severity(), target, and targets.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_stat_system_a88d4e8feb8356439cb70e03c714f147d_a88d4e8feb8356439cb70e03c714f147d_cgraph}
+\includegraphics[width=350pt]{class_stat_system_a805454116d5cd0a0c408117b42f413be_a805454116d5cd0a0c408117b42f413be_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -335,38 +475,127 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_stat_system_a88d4e8feb8356439cb70e03c714f147d_a88d4e8feb8356439cb70e03c714f147d_icgraph}
+\includegraphics[width=350pt]{class_stat_system_a805454116d5cd0a0c408117b42f413be_a805454116d5cd0a0c408117b42f413be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68_a3aa6ceee9134f792fa0f632a7d798a68}} 
+\index{StatSystem@{StatSystem}!CalculateStat@{CalculateStat}}
+\index{CalculateStat@{CalculateStat}!StatSystem@{StatSystem}}
+\doxysubsubsection{CalculateStat()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Calculate\+Stat (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Single\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 13 of file Stat\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     BaseCalculate(IsSingleTarget\_, action\_);}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+
+
+References Base\+Calculate().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68_a3aa6ceee9134f792fa0f632a7d798a68_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_system_adf6b0dd03c3494e535587c692daf582d_adf6b0dd03c3494e535587c692daf582d}} 
+\index{StatSystem@{StatSystem}!ModifiyStat@{ModifiyStat}}
+\index{ModifiyStat@{ModifiyStat}!StatSystem@{StatSystem}}
+\doxysubsubsection{ModifiyStat()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Modifiy\+Stat (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+,  }\item[{const float}]{value,  }\item[{const F\+String}]{name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This updates the stats based on the name. 
+
+
+
+Definition at line 178 of file Stat\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179 \{}
+\DoxyCodeLine{180     \textcolor{keywordflow}{if} (target\_-\/>ReturnStatMap().Contains(name\_))}
+\DoxyCodeLine{181     \{}
+\DoxyCodeLine{182         target\_-\/>ReturnStatMap()[name\_] += value;}
+\DoxyCodeLine{183     \}}
+\DoxyCodeLine{184     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{185     \{}
+\DoxyCodeLine{186         Debugger::SetSeverity(MessageType::E\_WARNING);}
+\DoxyCodeLine{187         Debugger::Warrning(name\_ + \textcolor{stringliteral}{" is not found in the stat sheet."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{188     \}}
+\DoxyCodeLine{189 \}}
+
+\end{DoxyCode}
+
+
+References E\+\_\+\+W\+A\+R\+N\+I\+NG, Stat\+Sheet\+Object\+::\+Return\+Stat\+Map(), Debugger\+::\+Set\+Severity(), and Debugger\+::\+Warrning().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_adf6b0dd03c3494e535587c692daf582d_adf6b0dd03c3494e535587c692daf582d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_adf6b0dd03c3494e535587c692daf582d_adf6b0dd03c3494e535587c692daf582d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_stat_system_aa74080624aba5dd9c0836013d684e931_aa74080624aba5dd9c0836013d684e931}} 
 \index{StatSystem@{StatSystem}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!StatSystem@{StatSystem}}
 \doxysubsubsection{OnDestroy()}
-{\footnotesize\ttfamily void Stat\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Stat\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 This will clearout any function data.
 
-Definition at line 138 of file Stat\+System.\+cpp.
+Definition at line 292 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{139 \{}
-\DoxyCodeLine{141 \}}
+\DoxyCodeLine{293 \{}
+\DoxyCodeLine{295 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_stat_system_aa74080624aba5dd9c0836013d684e931_aa74080624aba5dd9c0836013d684e931_icgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_stat_system_a02d648b7bf4890422092ef592ef6d95c_a02d648b7bf4890422092ef592ef6d95c}} 
+\mbox{\label{class_stat_system_a3178d39d5d5db8fb1d09f736b7fcef15_a3178d39d5d5db8fb1d09f736b7fcef15}} 
+\index{StatSystem@{StatSystem}!operator=@{operator=}}
+\index{operator=@{operator=}!StatSystem@{StatSystem}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Stat\+System}\& Stat\+System\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Stat\+System} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_stat_system_aea395c6e7f32b7944f3bc1b6fe1bed81_aea395c6e7f32b7944f3bc1b6fe1bed81}} 
+\index{StatSystem@{StatSystem}!operator=@{operator=}}
+\index{operator=@{operator=}!StatSystem@{StatSystem}}
+\doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Stat\+System}\& Stat\+System\+::operator= (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+System} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\label{class_stat_system_a96853e2e03a30b508ceed1bcf36a58af_a96853e2e03a30b508ceed1bcf36a58af}} 
 \index{StatSystem@{StatSystem}!RemoveModifier@{RemoveModifier}}
 \index{RemoveModifier@{RemoveModifier}!StatSystem@{StatSystem}}
 \doxysubsubsection{RemoveModifier()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Remove\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Stat\+System\+::\+Remove\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -374,37 +603,37 @@ Removes the specific modification by the baseaction.
 
 
 
-Definition at line 94 of file Stat\+System.\+cpp.
+Definition at line 244 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{95 \{}
-\DoxyCodeLine{96     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
-\DoxyCodeLine{97     \{}
-\DoxyCodeLine{98         ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{99         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& effect : item-\/>ReturnEffectList())}
-\DoxyCodeLine{100         \{}
-\DoxyCodeLine{101             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& statMod : effect-\/>ReturnModStatMap())}
-\DoxyCodeLine{102             \{}
-\DoxyCodeLine{103                 ModifiyStat(-\/statMod.Value, statMod.Key);}
-\DoxyCodeLine{104             \}}
-\DoxyCodeLine{105         \}}
-\DoxyCodeLine{106     \}}
-\DoxyCodeLine{107     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
-\DoxyCodeLine{108     \{}
-\DoxyCodeLine{109         AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{110         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& statMod : ability-\/>ReturnModStatMap())}
-\DoxyCodeLine{111         \{}
-\DoxyCodeLine{112             ModifiyStat(-\/statMod.Value, statMod.Key);}
-\DoxyCodeLine{113         \}}
-\DoxyCodeLine{114     \}}
-\DoxyCodeLine{115     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{116     \{}
-\DoxyCodeLine{117         Debugger::SetSeverity(MessageType::E\_ERROR);}
-\DoxyCodeLine{118         Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" does not have an modification in this action."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{119         \textcolor{keywordflow}{return};}
-\DoxyCodeLine{120     \}}
-\DoxyCodeLine{121 \}}
+\DoxyCodeLine{245 \{}
+\DoxyCodeLine{246     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{247     \{}
+\DoxyCodeLine{248         ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{249         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& effect : item-\/>ReturnEffectList())}
+\DoxyCodeLine{250         \{}
+\DoxyCodeLine{251             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& statMod : effect-\/>ReturnModStatMap())}
+\DoxyCodeLine{252             \{}
+\DoxyCodeLine{253                 ModifiyStat(target\_,-\/statMod.Value, statMod.Key);}
+\DoxyCodeLine{254             \}}
+\DoxyCodeLine{255         \}}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{258     \{}
+\DoxyCodeLine{259         AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{260         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& statMod : ability-\/>ReturnModStatMap())}
+\DoxyCodeLine{261         \{}
+\DoxyCodeLine{262             ModifiyStat(target\_,-\/statMod.Value, statMod.Key);}
+\DoxyCodeLine{263         \}}
+\DoxyCodeLine{264     \}}
+\DoxyCodeLine{265     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{266     \{}
+\DoxyCodeLine{267         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{268         Debugger::Error(action\_-\/>ReturnName() + \textcolor{stringliteral}{" does not have an modification in this action."}, \textcolor{stringliteral}{"StatSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{269         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{270     \}}
+\DoxyCodeLine{271 \}}
 
 \end{DoxyCode}
 
@@ -416,14 +645,51 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_stat_system_a02d648b7bf4890422092ef592ef6d95c_a02d648b7bf4890422092ef592ef6d95c_cgraph}
+\includegraphics[width=350pt]{class_stat_system_a96853e2e03a30b508ceed1bcf36a58af_a96853e2e03a30b508ceed1bcf36a58af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_a96853e2e03a30b508ceed1bcf36a58af_a96853e2e03a30b508ceed1bcf36a58af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_stat_system_ac7fa65c5844f1ab06670fca49a8d0539_ac7fa65c5844f1ab06670fca49a8d0539}} 
+\index{StatSystem@{StatSystem}!RemoveTmpModifier@{RemoveTmpModifier}}
+\index{RemoveTmpModifier@{RemoveTmpModifier}!StatSystem@{StatSystem}}
+\doxysubsubsection{RemoveTmpModifier()}
+{\footnotesize\ttfamily void Stat\+System\+::\+Remove\+Tmp\+Modifier (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+,  }\item[{const float}]{duration\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Removes a modification temporarly. 
+
+
+
+Definition at line 276 of file Stat\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{277 \{}
+\DoxyCodeLine{278     \textcolor{comment}{//This will remove a modifier then add it in a timer.}}
+\DoxyCodeLine{279 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stat_system_ac7fa65c5844f1ab06670fca49a8d0539_ac7fa65c5844f1ab06670fca49a8d0539_icgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_stat_system_a37eb3d84c033799fe52f96ae7371e9a4_a37eb3d84c033799fe52f96ae7371e9a4}} 
 \index{StatSystem@{StatSystem}!SetTarget@{SetTarget}}
 \index{SetTarget@{SetTarget}!StatSystem@{StatSystem}}
 \doxysubsubsection{SetTarget()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Stat\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -431,80 +697,45 @@ Sets target.
 
 
 
-Definition at line 126 of file Stat\+System.\+cpp.
+Definition at line 280 of file Stat\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{127 \{}
-\DoxyCodeLine{128     target = target\_;}
-\DoxyCodeLine{129 \}}
+\DoxyCodeLine{281 \{}
+\DoxyCodeLine{282     target = target\_;}
+\DoxyCodeLine{283 \}}
 
 \end{DoxyCode}
 
 
 References target.
 
-\mbox{\label{class_stat_system_a3db7a7b3be3f83319de0481332947674_a3db7a7b3be3f83319de0481332947674}} 
-\index{StatSystem@{StatSystem}!SetTargetAction@{SetTargetAction}}
-\index{SetTargetAction@{SetTargetAction}!StatSystem@{StatSystem}}
-\doxysubsubsection{SetTargetAction()}
-{\footnotesize\ttfamily void Stat\+System\+::\+Set\+Target\+Action (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
-
-
-
-Sets target action. 
-
-
-
-Definition at line 130 of file Stat\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{131 \{}
-\DoxyCodeLine{132     targetAction = action\_;}
-\DoxyCodeLine{133 \}}
-
-\end{DoxyCode}
-
-
-References target\+Action.
-
 
 
 \doxysubsection{Field Documentation}
-\mbox{\label{class_stat_system_ae09b0274af73fc6ba5984eb00578504a_ae09b0274af73fc6ba5984eb00578504a}} 
+\mbox{\label{class_stat_system_a5209420271837dec0dc6b3f87e1d85cb_a5209420271837dec0dc6b3f87e1d85cb}} 
 \index{StatSystem@{StatSystem}!target@{target}}
 \index{target@{target}!StatSystem@{StatSystem}}
 \doxysubsubsection{target}
-{\footnotesize\ttfamily \textbf{ Stat\+Sheet\+Object}$\ast$ Stat\+System\+::target\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \textbf{ Stat\+Sheet\+Object} $\ast$ Stat\+System\+::target = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
 Definition at line 12 of file Stat\+System.\+h.
 
-\mbox{\label{class_stat_system_ad8897d020748de4b84e6994d858867fe_ad8897d020748de4b84e6994d858867fe}} 
-\index{StatSystem@{StatSystem}!targetAction@{targetAction}}
-\index{targetAction@{targetAction}!StatSystem@{StatSystem}}
-\doxysubsubsection{targetAction}
-{\footnotesize\ttfamily \textbf{ Base\+Action}$\ast$ Stat\+System\+::target\+Action\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\label{class_stat_system_ad087654fd24e28b4265023e6c7f6c66d_ad087654fd24e28b4265023e6c7f6c66d}} 
+\index{StatSystem@{StatSystem}!targets@{targets}}
+\index{targets@{targets}!StatSystem@{StatSystem}}
+\doxysubsubsection{targets}
+{\footnotesize\ttfamily T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ Stat\+System\+::targets = T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
 Definition at line 13 of file Stat\+System.\+h.
 
-\mbox{\label{class_stat_system_a588a9905678c53a72b748e0b0de1fc5a_a588a9905678c53a72b748e0b0de1fc5a}} 
-\index{StatSystem@{StatSystem}!targets@{targets}}
-\index{targets@{targets}!StatSystem@{StatSystem}}
-\doxysubsubsection{targets}
-{\footnotesize\ttfamily T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$ Stat\+System\+::targets\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 14 of file Stat\+System.\+h.
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Stat\+System.\+h}\item 
-B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Stat\+System.\+cpp}\end{DoxyCompactItemize}
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Stat\+System.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+B\+B\+\_\+\+Runtime\+\_\+\+System/\+Private/\+System\+Classes/\textbf{ Stat\+System.\+cpp}\end{DoxyCompactItemize}

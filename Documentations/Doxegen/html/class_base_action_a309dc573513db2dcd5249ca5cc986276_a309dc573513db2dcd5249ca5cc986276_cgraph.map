@@ -1,7 +1,8 @@
 <map id="BaseAction::BaseAction" name="BaseAction::BaseAction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,169,108"/>
-<area shape="rect" id="node2" href="$class_base_action_a0954da9087f93b46ea68468de1ecce92.html#a0954da9087f93b46ea68468de1ecce92" title="Return Action ID." alt="" coords="225,5,409,32"/>
-<area shape="rect" id="node3" href="$class_base_action_a66e6fdeaefdcd4606eaa2964e2020049.html#a66e6fdeaefdcd4606eaa2964e2020049" title="Return discription." alt="" coords="219,56,415,83"/>
-<area shape="rect" id="node4" href="$class_base_action_a87fa8929e542db8b7b7e695490f1f0a2.html#a87fa8929e542db8b7b7e695490f1f0a2" title="Return Name." alt="" coords="232,107,401,133"/>
-<area shape="rect" id="node5" href="$class_base_action_a3286f0bb34ada3b25b0ccb5a7b456f9d.html#a3286f0bb34ada3b25b0ccb5a7b456f9d" title="Return target type." alt="" coords="217,157,416,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,169,133"/>
+<area shape="rect" id="node2" href="$class_base_action_a0954da9087f93b46ea68468de1ecce92.html#a0954da9087f93b46ea68468de1ecce92" title="Return Action ID." alt="" coords="237,5,421,32"/>
+<area shape="rect" id="node3" href="$class_base_action_a66e6fdeaefdcd4606eaa2964e2020049.html#a66e6fdeaefdcd4606eaa2964e2020049" title="Return discription." alt="" coords="231,56,427,83"/>
+<area shape="rect" id="node4" href="$class_base_action_a87fa8929e542db8b7b7e695490f1f0a2.html#a87fa8929e542db8b7b7e695490f1f0a2" title="Return Name." alt="" coords="245,107,414,133"/>
+<area shape="rect" id="node5" href="$class_base_action_aef05e8457330e3a0d8f60c5689667e38.html#aef05e8457330e3a0d8f60c5689667e38" title="Returns the stat action type." alt="" coords="217,157,441,184"/>
+<area shape="rect" id="node6" href="$class_base_action_a3286f0bb34ada3b25b0ccb5a7b456f9d.html#a3286f0bb34ada3b25b0ccb5a7b456f9d" title="Return target type." alt="" coords="230,208,429,235"/>
 </map>

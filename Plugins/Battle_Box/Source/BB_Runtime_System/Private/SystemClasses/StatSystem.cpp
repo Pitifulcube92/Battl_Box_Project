@@ -7,29 +7,179 @@
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 
-StatSystem::StatSystem()
-{
+StatSheetObject* StatSystem::target = nullptr;
+TArray<StatSheetObject*> StatSystem::targets = TArray<StatSheetObject*>();
 
+void StatSystem::CalculateStat(const bool IsSingleTarget_, BaseAction* const action_)
+{
+	BaseCalculate(IsSingleTarget_, action_);
 }
 void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
 {
-	if (!IsSingledTarget_)
+	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
-		
-	}
-	else if (!IsSingledTarget_)
-	{
-		for (auto& target : targets)
+		ItemAction* item = dynamic_cast<ItemAction*>(action_);
+		if (IsSingledTarget_)
 		{
-			
+			if (target == nullptr)
+			{
+				for (auto& ability : item->ReturnEffectList())
+				{
+					if (ability->ReturnStatActionType() == STATACTION::E_ADD)
+					{
+						AddStatModifier(target, action_);
+					}
+					else if (ability->ReturnStatActionType() == STATACTION::E_REMOVE)
+					{
+						RemoveModifier(target, ability);
+					}
+					else if (ability->ReturnStatActionType() == STATACTION::E_TMP_ADD)
+					{
+						AddTmpModifier(target, ability, ability->ReturnDuration());
+					}
+					else if (ability->ReturnStatActionType() == STATACTION::E_TMP_REMOVE)
+					{
+						RemoveTmpModifier(target, ability, ability->ReturnDuration());
+					}
+					else
+					{
+						Debugger::SetSeverity(MessageType::E_ERROR);
+						Debugger::Error(action_->ReturnName() + " Could not be modified", "StatSystem.cpp", __LINE__);
+						return;
+					}
+				}
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Target not avalable. Please set target if null", "StatSystem.cpp", __LINE__);
+				return;
+			}
+		}
+		else if (!IsSingledTarget_)
+		{
+			if (targets.Num > 0)
+			{
+				for (auto& i : targets)
+				{
+					for (auto& ability : item->ReturnEffectList())
+					{
+						if (ability->ReturnStatActionType() == STATACTION::E_ADD)
+						{
+							AddStatModifier(i, action_);
+						}
+						else if (ability->ReturnStatActionType() == STATACTION::E_REMOVE)
+						{
+							RemoveModifier(i, ability);
+						}
+						else if (ability->ReturnStatActionType() == STATACTION::E_TMP_ADD)
+						{
+							AddTmpModifier(i, ability, ability->ReturnDuration());
+						}
+						else if (ability->ReturnStatActionType() == STATACTION::E_TMP_REMOVE)
+						{
+							RemoveTmpModifier(i, ability, ability->ReturnDuration());
+						}
+						else
+						{
+							Debugger::SetSeverity(MessageType::E_ERROR);
+							Debugger::Error(action_->ReturnName() + " Could not be modified", "StatSystem.cpp", __LINE__);
+							return;
+						}
+					}
+				}
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("No targets avalable it the array. Please insert a target before calculating.", "StatSystem.cpp", __LINE__);
+				return;
+			}
+
+		}
+	}
+	else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+	{
+		AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+		if (IsSingledTarget_)
+		{
+			if (target == nullptr)
+			{
+				if (ability->ReturnStatActionType() == STATACTION::E_ADD)
+				{
+					AddStatModifier(target, action_);
+				}
+				else if (ability->ReturnStatActionType() == STATACTION::E_REMOVE)
+				{
+					RemoveModifier(target, ability);
+				}
+				else if (ability->ReturnStatActionType() == STATACTION::E_TMP_ADD)
+				{
+					AddTmpModifier(target, ability, ability->ReturnDuration());
+				}
+				else if (ability->ReturnStatActionType() == STATACTION::E_TMP_REMOVE)
+				{
+					RemoveTmpModifier(target, ability, ability->ReturnDuration());
+				}
+				else
+				{
+					Debugger::SetSeverity(MessageType::E_ERROR);
+					Debugger::Error(action_->ReturnName() + " Could not be modified", "StatSystem.cpp", __LINE__);
+					return;
+				}
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Target not avalable. Please set target if null", "StatSystem.cpp", __LINE__);
+				return;
+			}
+		}
+		else if(!IsSingledTarget_) 
+		{
+			if (targets.Num > 0)
+			{
+				for (auto& i : targets)
+				{
+					if (ability->ReturnStatActionType() == STATACTION::E_ADD)
+					{
+						AddStatModifier(i, action_);
+					}
+					else if (ability->ReturnStatActionType() == STATACTION::E_REMOVE)
+					{
+						RemoveModifier(i, ability);
+					}
+					else if (ability->ReturnStatActionType() == STATACTION::E_TMP_ADD)
+					{
+						AddTmpModifier(i, ability, ability->ReturnDuration());
+					}
+					else if (ability->ReturnStatActionType() == STATACTION::E_TMP_REMOVE)
+					{
+						RemoveTmpModifier(i, ability, ability->ReturnDuration());
+					}
+					else
+					{
+						Debugger::SetSeverity(MessageType::E_ERROR);
+						Debugger::Error(action_->ReturnName() + " Could not be modified", "StatSystem.cpp", __LINE__);
+						return;
+					}
+				}
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("No targets avalable it the array. Please insert a target before calculating.", "StatSystem.cpp", __LINE__);
+				return;
+			}
 		}
 	}
 }
-void StatSystem::ModifiyStat(const float value, const FString name_)
+
+void StatSystem::ModifiyStat(StatSheetObject* const target_, const float value, const FString name_)
 {
-	if (target->ReturnStatMap().Contains(name_))
+	if (target_->ReturnStatMap().Contains(name_))
 	{
-		target->ReturnStatMap()[name_] += value;
+		target_->ReturnStatMap()[name_] += value;
 	}
 	else
 	{
@@ -37,7 +187,7 @@ void StatSystem::ModifiyStat(const float value, const FString name_)
 		Debugger::Warrning(name_ + " is not found in the stat sheet.", "StatSystem.cpp", __LINE__);
 	}
 }
-void StatSystem::AddStatModifier(BaseAction* const action_)
+void StatSystem::AddStatModifier(StatSheetObject* const target_, BaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
@@ -50,7 +200,7 @@ void StatSystem::AddStatModifier(BaseAction* const action_)
 				{
 					for (auto& statMod : effect->ReturnModStatMap())
 					{
-						ModifiyStat(statMod.Value, statMod.Key);
+						ModifiyStat(target_, statMod.Value, statMod.Key);
 					}
 				}
 				else if (effect->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
@@ -71,7 +221,7 @@ void StatSystem::AddStatModifier(BaseAction* const action_)
 			{	
 				for(auto& statMod : effect->ReturnModStatMap())
 				{ 
-					ModifiyStat(statMod.Value, statMod.Key);
+					ModifiyStat(target_, statMod.Value, statMod.Key);
 				}
 			}
 		}
@@ -81,7 +231,7 @@ void StatSystem::AddStatModifier(BaseAction* const action_)
 		AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
 		for(auto& statMod : ability->ReturnModStatMap())
 		{
-			ModifiyStat(statMod.Value, statMod.Key);
+			ModifiyStat(target_, statMod.Value, statMod.Key);
 		}
 	}
 	else
@@ -91,7 +241,7 @@ void StatSystem::AddStatModifier(BaseAction* const action_)
 		return;
 	}
 }
-void StatSystem::RemoveModifier(BaseAction* const action_)
+void StatSystem::RemoveModifier(StatSheetObject* const target_, BaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
@@ -100,7 +250,7 @@ void StatSystem::RemoveModifier(BaseAction* const action_)
 		{
 			for (auto& statMod : effect->ReturnModStatMap())
 			{
-				ModifiyStat(-statMod.Value, statMod.Key);
+				ModifiyStat(target_,-statMod.Value, statMod.Key);
 			}
 		}
 	}
@@ -109,7 +259,7 @@ void StatSystem::RemoveModifier(BaseAction* const action_)
 		AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
 		for (auto& statMod : ability->ReturnModStatMap())
 		{
-			ModifiyStat(-statMod.Value, statMod.Key);
+			ModifiyStat(target_,-statMod.Value, statMod.Key);
 		}
 	}
 	else
@@ -119,17 +269,17 @@ void StatSystem::RemoveModifier(BaseAction* const action_)
 		return;
 	}
 }
-void StatSystem::AddTmpModifier(BaseAction* action_, const float duration_)
+void StatSystem::AddTmpModifier(StatSheetObject* const target_, BaseAction* const  action_, const float duration_)
 {
-	//This will basiclly add a modifier then remove it in a timer.
+	//This will add a modifier then remove it in a timer.
+}
+void StatSystem::RemoveTmpModifier(StatSheetObject* const target_, BaseAction* action_, const float duration_)
+{
+	//This will remove a modifier then add it in a timer.
 }
 void StatSystem::SetTarget(StatSheetObject* const target_)
 {
 	target = target_;
-}
-void StatSystem::SetTargetAction(BaseAction* const action_)
-{
-	targetAction = action_;
 }
 void StatSystem::Addtarget(StatSheetObject* const target_)
 {

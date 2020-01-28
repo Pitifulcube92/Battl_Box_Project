@@ -1,6 +1,6 @@
 <map id="BaseSystem" name="BaseSystem">
 <area shape="rect" id="node1" title=" " alt="" coords="222,5,349,97"/>
-<area shape="rect" id="node2" href="$class_damage_delt_system.html" title=" " alt="" coords="5,145,195,472"/>
-<area shape="rect" id="node3" href="$class_effect_system.html" title=" " alt="" coords="219,204,351,413"/>
-<area shape="rect" id="node4" href="$class_stat_system.html" title=" " alt="" coords="375,182,510,435"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system.html" title=" " alt="" coords="5,145,195,545"/>
+<area shape="rect" id="node3" href="$class_effect_system.html" title=" " alt="" coords="219,211,351,479"/>
+<area shape="rect" id="node4" href="$class_stat_system.html" title=" " alt="" coords="376,189,531,501"/>
 </map>

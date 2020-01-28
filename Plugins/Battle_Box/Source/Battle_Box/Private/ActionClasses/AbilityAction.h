@@ -6,7 +6,12 @@
 #include "BaseAction.h"
 /****/
 
-
+enum class ABILITYTYPE
+{
+	E_MODIFIYER,
+	E_TMP_MODIFIYER,
+	E_DAMAGE_MODIFYER
+};
 class AbilityAction : public BaseAction
 {
 private: 

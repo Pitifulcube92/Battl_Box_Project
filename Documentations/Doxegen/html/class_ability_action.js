@@ -14,6 +14,7 @@ var class_ability_action =
     [ "ReturnInteractionType", "class_ability_action.html#a70d34140345d92808deed0304397b074", null ],
     [ "ReturnModStatMap", "class_ability_action_a1a0c8a6f774ee3959c64bc3daf4ec709.html#a1a0c8a6f774ee3959c64bc3daf4ec709", null ],
     [ "ReturnName", "class_ability_action.html#a87fa8929e542db8b7b7e695490f1f0a2", null ],
+    [ "ReturnStatActionType", "class_ability_action.html#aef05e8457330e3a0d8f60c5689667e38", null ],
     [ "ReturnTargetType", "class_ability_action.html#a3286f0bb34ada3b25b0ccb5a7b456f9d", null ],
     [ "SetAbilityType", "class_ability_action_abaeae280b7c50188291c357a4cf3af53.html#abaeae280b7c50188291c357a4cf3af53", null ],
     [ "SetActionID", "class_ability_action.html#a82e6afa7a79dee542492d587904dc380", null ],
@@ -22,6 +23,7 @@ var class_ability_action =
     [ "SetDuration", "class_ability_action_ab7439e866106b751cf640fb137c9c1c9.html#ab7439e866106b751cf640fb137c9c1c9", null ],
     [ "SetInteractionType", "class_ability_action.html#ae0e83722e14079e10f7d43d54ba4898e", null ],
     [ "SetName", "class_ability_action.html#ad307b128f9ded949daa718fc1364919c", null ],
+    [ "SetStatActionType", "class_ability_action.html#a3b5c34eafd3b50c8b28b805c596b021f", null ],
     [ "SetTargetType", "class_ability_action.html#a6f0ca61c63f46332e6507fc2ee2b29f8", null ],
     [ "abilityType", "class_ability_action_a88f76596d78e3392a55f51a82d1e1036.html#a88f76596d78e3392a55f51a82d1e1036", null ],
     [ "abilityValue", "class_ability_action_aef8bac0f72924be136fdade57acb9d34.html#aef8bac0f72924be136fdade57acb9d34", null ],
@@ -32,5 +34,6 @@ var class_ability_action =
     [ "interaction", "class_ability_action.html#a46af3a3c5512e3d0072fac96989b52ec", null ],
     [ "modStatMap", "class_ability_action_a3f5072b22ebb8945f9b628c55c2eb1f5.html#a3f5072b22ebb8945f9b628c55c2eb1f5", null ],
     [ "name", "class_ability_action.html#a89d98c13f445fa58b96d5c4eff58e134", null ],
+    [ "statAction", "class_ability_action.html#a3e4fc5e6e14315257ed1ac2875580859", null ],
     [ "target", "class_ability_action.html#afafdb765a8e836a0eba3a59fb1f23e01", null ]
 ];

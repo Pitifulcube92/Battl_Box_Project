@@ -1,0 +1,6 @@
+<map id="BaseAction::ReturnStatActionType" name="BaseAction::ReturnStatActionType">
+<area shape="rect" id="node1" title="Returns the stat action type." alt="" coords="461,31,685,57"/>
+<area shape="rect" id="node2" href="$class_base_action_a309dc573513db2dcd5249ca5cc986276.html#a309dc573513db2dcd5249ca5cc986276" title=" " alt="" coords="240,5,404,32"/>
+<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="231,56,413,83"/>
+<area shape="rect" id="node4" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,56,183,83"/>
+</map>

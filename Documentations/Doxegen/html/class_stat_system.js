@@ -1,17 +1,21 @@
 var class_stat_system =
 [
-    [ "StatSystem", "class_stat_system_ac75d67d5db20babea9601894aee1e871.html#ac75d67d5db20babea9601894aee1e871", null ],
+    [ "StatSystem", "class_stat_system_a72ed1fe5c28700b27eee75b6a1019ae6.html#a72ed1fe5c28700b27eee75b6a1019ae6", null ],
+    [ "StatSystem", "class_stat_system_aa4bab5c4e999f176a2eae118d90ea2bb.html#aa4bab5c4e999f176a2eae118d90ea2bb", null ],
+    [ "StatSystem", "class_stat_system_a997b61bba7a82246a29981be207226a2.html#a997b61bba7a82246a29981be207226a2", null ],
     [ "~StatSystem", "class_stat_system_ae92847be88226779e422cfea7d9b597c.html#ae92847be88226779e422cfea7d9b597c", null ],
-    [ "AddStatModifier", "class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db", null ],
+    [ "AddStatModifier", "class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642", null ],
     [ "Addtarget", "class_stat_system_afd6ba964080b87f599135a91466474eb.html#afd6ba964080b87f599135a91466474eb", null ],
-    [ "AddTmpModifier", "class_stat_system_acc44ff7b73bce66d9da24df9608aab65.html#acc44ff7b73bce66d9da24df9608aab65", null ],
+    [ "AddTmpModifier", "class_stat_system_a2ca1d5ee47433f0a949a4aa93a3d8c84.html#a2ca1d5ee47433f0a949a4aa93a3d8c84", null ],
     [ "BaseCalculate", "class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be", null ],
-    [ "ModifiyStat", "class_stat_system_a88d4e8feb8356439cb70e03c714f147d.html#a88d4e8feb8356439cb70e03c714f147d", null ],
+    [ "CalculateStat", "class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68", null ],
+    [ "ModifiyStat", "class_stat_system_adf6b0dd03c3494e535587c692daf582d.html#adf6b0dd03c3494e535587c692daf582d", null ],
     [ "OnDestroy", "class_stat_system_aa74080624aba5dd9c0836013d684e931.html#aa74080624aba5dd9c0836013d684e931", null ],
-    [ "RemoveModifier", "class_stat_system_a02d648b7bf4890422092ef592ef6d95c.html#a02d648b7bf4890422092ef592ef6d95c", null ],
+    [ "operator=", "class_stat_system_a3178d39d5d5db8fb1d09f736b7fcef15.html#a3178d39d5d5db8fb1d09f736b7fcef15", null ],
+    [ "operator=", "class_stat_system_aea395c6e7f32b7944f3bc1b6fe1bed81.html#aea395c6e7f32b7944f3bc1b6fe1bed81", null ],
+    [ "RemoveModifier", "class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af", null ],
+    [ "RemoveTmpModifier", "class_stat_system_ac7fa65c5844f1ab06670fca49a8d0539.html#ac7fa65c5844f1ab06670fca49a8d0539", null ],
     [ "SetTarget", "class_stat_system_a37eb3d84c033799fe52f96ae7371e9a4.html#a37eb3d84c033799fe52f96ae7371e9a4", null ],
-    [ "SetTargetAction", "class_stat_system_a3db7a7b3be3f83319de0481332947674.html#a3db7a7b3be3f83319de0481332947674", null ],
-    [ "target", "class_stat_system_ae09b0274af73fc6ba5984eb00578504a.html#ae09b0274af73fc6ba5984eb00578504a", null ],
-    [ "targetAction", "class_stat_system_ad8897d020748de4b84e6994d858867fe.html#ad8897d020748de4b84e6994d858867fe", null ],
-    [ "targets", "class_stat_system_a588a9905678c53a72b748e0b0de1fc5a.html#a588a9905678c53a72b748e0b0de1fc5a", null ]
+    [ "target", "class_stat_system_a5209420271837dec0dc6b3f87e1d85cb.html#a5209420271837dec0dc6b3f87e1d85cb", null ],
+    [ "targets", "class_stat_system_ad087654fd24e28b4265023e6c7f6c66d.html#ad087654fd24e28b4265023e6c7f6c66d", null ]
 ];

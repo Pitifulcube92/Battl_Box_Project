@@ -1,11 +1,6 @@
 var _base_action_8h =
 [
     [ "BaseAction", "class_base_action.html", "class_base_action" ],
-    [ "ABILITYTYPE", "_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0c", [
-      [ "E_MODIFIYER", "_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3", null ],
-      [ "E_TMP_MODIFIYER", "_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001", null ],
-      [ "E_DAMAGE_MODIFYER", "_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a", null ]
-    ] ],
     [ "ACTIONTYPE", "_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949a", [
       [ "E_NONE", "_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aa60880a7ff476d1de07c31261d81d4100", null ],
       [ "E_COMMAND", "_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aad1f85d55d8bf4806e9ea83a927600cfb", null ],
@@ -35,6 +30,13 @@ var _base_action_8h =
       [ "E_PHYSICAL", "_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9", null ],
       [ "E_ABILITY", "_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920", null ],
       [ "E_PHYSICAL_AND_ABILITY", "_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb", null ]
+    ] ],
+    [ "STATACTION", "_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6", [
+      [ "E_NONE", "_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6a60880a7ff476d1de07c31261d81d4100", null ],
+      [ "E_ADD", "_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6a400393c08881dd22bceeb52e2872cbcf", null ],
+      [ "E_REMOVE", "_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6aade147585efc0e3ed039e8d63dff8383", null ],
+      [ "E_TMP_ADD", "_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6a0d465c9ed15a4da32838c7bdf5457e37", null ],
+      [ "E_TMP_REMOVE", "_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6a4cbb4157e87df984f14fecf580b9d7e7", null ]
     ] ],
     [ "TARGETTYPE", "_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7", [
       [ "E_NONE", "_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7a60880a7ff476d1de07c31261d81d4100", null ],

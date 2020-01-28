@@ -1,5 +1,7 @@
 <map id="AbilityAction::ReturnModStatMap" name="AbilityAction::ReturnModStatMap">
-<area shape="rect" id="node1" title=" " alt="" coords="244,23,411,65"/>
-<area shape="rect" id="node2" href="$class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db" title="This updates the stats debengin on the name." alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node3" href="$class_stat_system_a02d648b7bf4890422092ef592ef6d95c.html#a02d648b7bf4890422092ef592ef6d95c" title="Removes the specific modification by the baseaction." alt="" coords="5,56,196,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="700,23,867,65"/>
+<area shape="rect" id="node2" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="461,5,652,32"/>
+<area shape="rect" id="node5" href="$class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="461,56,652,83"/>
+<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="231,31,413,57"/>
+<area shape="rect" id="node4" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,31,183,57"/>
 </map>

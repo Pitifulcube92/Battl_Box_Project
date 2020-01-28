@@ -1,12 +1,12 @@
-\doxysection{Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\+Base\+Action.h File Reference}
-\label{_base_action_8h}\index{Battle\_Box/Private/ActionClasses/BaseAction.h@{Battle\_Box/Private/ActionClasses/BaseAction.h}}
+\doxysection{D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\+Action\+Classes/\+Base\+Action.h File Reference}
+\label{_base_action_8h}\index{D:/UNrealProjects/Battl\_Box\_Project/Plugins/Battle\_Box/Source/Battle\_Box/Private/ActionClasses/BaseAction.h@{D:/UNrealProjects/Battl\_Box\_Project/Plugins/Battle\_Box/Source/Battle\_Box/Private/ActionClasses/BaseAction.h}}
 {\ttfamily \#include \char`\"{}Core\+Minimal.\+h\char`\"{}}\newline
 Include dependency graph for Base\+Action.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=224pt]{_base_action_8h__incl}
+\includegraphics[width=236pt]{_base_action_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -24,11 +24,6 @@ class \textbf{ Base\+Action}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
-\item 
-enum \textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+PE} \{ \textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+P\+E\+::\+E\+\_\+\+M\+O\+D\+I\+F\+I\+Y\+ER}, 
-\textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+P\+E\+::\+E\+\_\+\+T\+M\+P\+\_\+\+M\+O\+D\+I\+F\+I\+Y\+ER}, 
-\textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+P\+E\+::\+E\+\_\+\+D\+A\+M\+A\+G\+E\+\_\+\+M\+O\+D\+I\+F\+Y\+ER}
- \}
 \item 
 enum \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} \{ \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+P\+E\+::\+E\+\_\+\+N\+O\+NE}, 
 \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+P\+E\+::\+E\+\_\+\+C\+O\+M\+M\+A\+ND}, 
@@ -65,6 +60,15 @@ enum \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} \{ \textbf{ I\+N\+T\+E\
 \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+P\+E\+::\+E\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+A\+N\+D\+\_\+\+A\+B\+I\+L\+I\+TY}
  \}
 \item 
+enum \textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON} \{ \newline
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+O\+N\+::\+E\+\_\+\+N\+O\+NE}, 
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+O\+N\+::\+E\+\_\+\+A\+DD}, 
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+O\+N\+::\+E\+\_\+\+R\+E\+M\+O\+VE}, 
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+O\+N\+::\+E\+\_\+\+T\+M\+P\+\_\+\+A\+DD}, 
+\newline
+\textbf{ S\+T\+A\+T\+A\+C\+T\+I\+O\+N\+::\+E\+\_\+\+T\+M\+P\+\_\+\+R\+E\+M\+O\+VE}
+ \}
+\item 
 enum \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} \{ \newline
 \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+P\+E\+::\+E\+\_\+\+N\+O\+NE}, 
 \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+P\+E\+::\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+E\+N\+E\+MY}, 
@@ -82,39 +86,6 @@ enum \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} \{ \newline
 
 
 \doxysubsection{Enumeration Type Documentation}
-\mbox{\label{_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_a9b5d16e70b48e3e5128379faff900f0c}} 
-\index{BaseAction.h@{BaseAction.h}!ABILITYTYPE@{ABILITYTYPE}}
-\index{ABILITYTYPE@{ABILITYTYPE}!BaseAction.h@{BaseAction.h}}
-\doxysubsubsection{ABILITYTYPE}
-{\footnotesize\ttfamily enum \textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+PE}\hspace{0.3cm}{\ttfamily [strong]}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_MODIFIYER@{E\_MODIFIYER}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_MODIFIYER@{E\_MODIFIYER}}}\mbox{\label{_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3}} 
-E\+\_\+\+M\+O\+D\+I\+F\+I\+Y\+ER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_TMP\_MODIFIYER@{E\_TMP\_MODIFIYER}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_TMP\_MODIFIYER@{E\_TMP\_MODIFIYER}}}\mbox{\label{_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001}} 
-E\+\_\+\+T\+M\+P\+\_\+\+M\+O\+D\+I\+F\+I\+Y\+ER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_DAMAGE\_MODIFYER@{E\_DAMAGE\_MODIFYER}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_DAMAGE\_MODIFYER@{E\_DAMAGE\_MODIFYER}}}\mbox{\label{_base_action_8h_a9b5d16e70b48e3e5128379faff900f0c_a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a}} 
-E\+\_\+\+D\+A\+M\+A\+G\+E\+\_\+\+M\+O\+D\+I\+F\+Y\+ER&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-Definition at line 56 of file Base\+Action.\+h.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{57 \{}
-\DoxyCodeLine{58     E\_MODIFIYER,}
-\DoxyCodeLine{59     E\_TMP\_MODIFIYER,}
-\DoxyCodeLine{60     E\_DAMAGE\_MODIFYER}
-\DoxyCodeLine{61 \};}
-
-\end{DoxyCode}
 \mbox{\label{_base_action_8h_af0b345d735b1ce577e172853a4b8949a_af0b345d735b1ce577e172853a4b8949a}} 
 \index{BaseAction.h@{BaseAction.h}!ACTIONTYPE@{ACTIONTYPE}}
 \index{ACTIONTYPE@{ACTIONTYPE}!BaseAction.h@{BaseAction.h}}
@@ -295,6 +266,49 @@ Definition at line 26 of file Base\+Action.\+h.
 \DoxyCodeLine{30     E\_ABILITY,}
 \DoxyCodeLine{31     E\_PHYSICAL\_AND\_ABILITY}
 \DoxyCodeLine{32 \};}
+
+\end{DoxyCode}
+\mbox{\label{_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6_afbc44a11aeb08cf5b7146b7d16f7c2b6}} 
+\index{BaseAction.h@{BaseAction.h}!STATACTION@{STATACTION}}
+\index{STATACTION@{STATACTION}!BaseAction.h@{BaseAction.h}}
+\doxysubsubsection{STATACTION}
+{\footnotesize\ttfamily enum \textbf{ S\+T\+A\+T\+A\+C\+T\+I\+ON}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_NONE@{E\_NONE}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_NONE@{E\_NONE}}}\mbox{\label{_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6_afbc44a11aeb08cf5b7146b7d16f7c2b6a60880a7ff476d1de07c31261d81d4100}} 
+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_ADD@{E\_ADD}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_ADD@{E\_ADD}}}\mbox{\label{_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6_afbc44a11aeb08cf5b7146b7d16f7c2b6a400393c08881dd22bceeb52e2872cbcf}} 
+E\+\_\+\+A\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_REMOVE@{E\_REMOVE}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_REMOVE@{E\_REMOVE}}}\mbox{\label{_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6_afbc44a11aeb08cf5b7146b7d16f7c2b6aade147585efc0e3ed039e8d63dff8383}} 
+E\+\_\+\+R\+E\+M\+O\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_TMP\_ADD@{E\_TMP\_ADD}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_TMP\_ADD@{E\_TMP\_ADD}}}\mbox{\label{_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6_afbc44a11aeb08cf5b7146b7d16f7c2b6a0d465c9ed15a4da32838c7bdf5457e37}} 
+E\+\_\+\+T\+M\+P\+\_\+\+A\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_TMP\_REMOVE@{E\_TMP\_REMOVE}!BaseAction.h@{BaseAction.h}}\index{BaseAction.h@{BaseAction.h}!E\_TMP\_REMOVE@{E\_TMP\_REMOVE}}}\mbox{\label{_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6_afbc44a11aeb08cf5b7146b7d16f7c2b6a4cbb4157e87df984f14fecf580b9d7e7}} 
+E\+\_\+\+T\+M\+P\+\_\+\+R\+E\+M\+O\+VE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 56 of file Base\+Action.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57 \{}
+\DoxyCodeLine{58     E\_NONE,}
+\DoxyCodeLine{59     E\_ADD,}
+\DoxyCodeLine{60     E\_REMOVE,}
+\DoxyCodeLine{61     E\_TMP\_ADD,}
+\DoxyCodeLine{62     E\_TMP\_REMOVE}
+\DoxyCodeLine{63 \};}
 
 \end{DoxyCode}
 \mbox{\label{_base_action_8h_a607550079f88dc0df6c9761da9352ec7_a607550079f88dc0df6c9761da9352ec7}} 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['targettype_403',['TARGETTYPE',['../_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7',1,'BaseAction.h']]]
+  ['stataction_417',['STATACTION',['../_base_action_8h_afbc44a11aeb08cf5b7146b7d16f7c2b6.html#afbc44a11aeb08cf5b7146b7d16f7c2b6',1,'BaseAction.h']]]
 ];

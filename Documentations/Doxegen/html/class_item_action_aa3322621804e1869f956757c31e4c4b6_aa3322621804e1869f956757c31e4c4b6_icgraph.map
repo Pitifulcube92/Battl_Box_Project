@@ -1,5 +1,8 @@
 <map id="ItemAction::ReturnItemType" name="ItemAction::ReturnItemType">
-<area shape="rect" id="node1" title="Returns itemType." alt="" coords="284,31,467,57"/>
-<area shape="rect" id="node2" href="$class_stat_system_a69b98b0b70ffb649aaad4e8cebda95db.html#a69b98b0b70ffb649aaad4e8cebda95db" title="This updates the stats debengin on the name." alt="" coords="25,5,216,32"/>
-<area shape="rect" id="node3" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="5,56,236,83"/>
+<area shape="rect" id="node1" title="Returns itemType." alt="" coords="757,35,940,61"/>
+<area shape="rect" id="node2" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,8,689,35"/>
+<area shape="rect" id="node5" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,60,709,87"/>
+<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="239,5,422,32"/>
+<area shape="rect" id="node4" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node6" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,57,431,98"/>
 </map>

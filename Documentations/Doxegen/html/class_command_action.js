@@ -11,6 +11,7 @@ var class_command_action =
     [ "ReturnDiscription", "class_command_action.html#a66e6fdeaefdcd4606eaa2964e2020049", null ],
     [ "ReturnInteractionType", "class_command_action.html#a70d34140345d92808deed0304397b074", null ],
     [ "ReturnName", "class_command_action.html#a87fa8929e542db8b7b7e695490f1f0a2", null ],
+    [ "ReturnStatActionType", "class_command_action.html#aef05e8457330e3a0d8f60c5689667e38", null ],
     [ "ReturnTargetType", "class_command_action.html#a3286f0bb34ada3b25b0ccb5a7b456f9d", null ],
     [ "ReturnWeaponType", "class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1.html#aed6b4cc73d8dd8e5e184e248c6e102a1", null ],
     [ "SetActionID", "class_command_action.html#a82e6afa7a79dee542492d587904dc380", null ],
@@ -19,6 +20,7 @@ var class_command_action =
     [ "SetDiscription", "class_command_action.html#a0a4bd7fd3ce61159e35282a7b05659a7", null ],
     [ "SetInteractionType", "class_command_action.html#ae0e83722e14079e10f7d43d54ba4898e", null ],
     [ "SetName", "class_command_action.html#ad307b128f9ded949daa718fc1364919c", null ],
+    [ "SetStatActionType", "class_command_action.html#a3b5c34eafd3b50c8b28b805c596b021f", null ],
     [ "SetTargetType", "class_command_action.html#a6f0ca61c63f46332e6507fc2ee2b29f8", null ],
     [ "SetWeaponType", "class_command_action_aebe160173438c46ddaac8018cd3d1b22.html#aebe160173438c46ddaac8018cd3d1b22", null ],
     [ "action", "class_command_action.html#a23cf827d35850a4e4d2859a12a885567", null ],
@@ -29,5 +31,6 @@ var class_command_action =
     [ "interaction", "class_command_action.html#a46af3a3c5512e3d0072fac96989b52ec", null ],
     [ "isActionCommand", "class_command_action_a8458ced4a5af267f03dae720b3c4ae0e.html#a8458ced4a5af267f03dae720b3c4ae0e", null ],
     [ "name", "class_command_action.html#a89d98c13f445fa58b96d5c4eff58e134", null ],
+    [ "statAction", "class_command_action.html#a3e4fc5e6e14315257ed1ac2875580859", null ],
     [ "target", "class_command_action.html#afafdb765a8e836a0eba3a59fb1f23e01", null ]
 ];

@@ -1,4 +1,6 @@
 <map id="DamageDeltSystem::OnDestroy" name="DamageDeltSystem::OnDestroy">
-<area shape="rect" id="node1" title=" " alt="" coords="200,13,408,39"/>
-<area shape="rect" id="node2" href="$class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c.html#a83e05f212c7cb033acb9e48394d2706c" title=" " alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="532,42,740,69"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="253,13,484,39"/>
+<area shape="rect" id="node4" href="$class_damage_delt_system_a83e05f212c7cb033acb9e48394d2706c.html#a83e05f212c7cb033acb9e48394d2706c" title=" " alt="" coords="295,64,442,105"/>
+<area shape="rect" id="node3" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="5,5,205,47"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="EffectSystem" name="EffectSystem">
-<area shape="rect" id="node1" title=" " alt="" coords="175,380,307,560"/>
+<area shape="rect" id="node1" title=" " alt="" coords="175,380,307,619"/>
 <area shape="rect" id="node2" href="$class_base_system.html" title=" " alt="" coords="5,115,132,207"/>
-<area shape="rect" id="node3" href="$class_base_action.html" title=" " alt="" coords="157,13,325,310"/>
-<area shape="rect" id="node4" href="$class_stat_sheet_object.html" title=" " alt="" coords="349,5,533,317"/>
+<area shape="rect" id="node3" href="$class_base_action.html" title=" " alt="" coords="156,5,325,317"/>
+<area shape="rect" id="node4" href="$class_stat_sheet_object.html" title=" " alt="" coords="350,5,534,317"/>
 </map>
