@@ -2,14 +2,14 @@
 #ifndef DAMAGEDELTSYSTEM_H
 #define DAMAGEDELTSYSTEM_H
 #include "CoreMinimal.h"
-#include "BaseSystem.h"
 #include "Containers/Queue.h"
 class StatSheetObject;
 class ItemAction;
 class AbilityAction;
 class CommandAction;
+class BaseAction;
 
-class DamageDeltSystem : public BaseSystem
+class DamageDeltSystem
 {
 private:
 	static StatSheetObject* singleTarget;
