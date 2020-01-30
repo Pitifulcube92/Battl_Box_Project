@@ -1,12 +1,11 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #ifndef STATSYSTEM_H
 #define STATSYSTEM_H
-#include "BaseSystem.h"
 #include "Containers/Array.h"
 class BaseAction;
 class StatSheetObject;
 
-class StatSystem : public BaseSystem
+class StatSystem
 {
 private:
 	static StatSheetObject* target;
