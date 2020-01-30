@@ -20,15 +20,14 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 		if (singleTarget == nullptr)
 		{
 			//This will claculate any damage for a single target.
-			switch (action_->ReturnActionType())
+			if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 			{
-			case ACTIONTYPE::E_COMMAND:
 				//Command will do basic act with basic stats
 				//TO DO: Check if there is any damage in this command.
 				CommandAction* command = dynamic_cast<CommandAction*>(action_);
-				break;
-
-			case ACTIONTYPE::E_ITEM:
+			}
+			else if(action_->ReturnActionType() == ACTIONTYPE::E_ITEM) 
+			{
 				//Item will be sorted to what type then calculated for total damage.
 				ItemAction* item = dynamic_cast<ItemAction*>(action_);
 
@@ -46,13 +45,13 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 					Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem.cpp", __LINE__);
 					return;
 				}
-				break;
-			case ACTIONTYPE::E_ABILITY:
+			}
+			else if(action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+			{
 				//ability will retreive the damage value if any.
 				//TO DO: create an enum for what type of ability it is.
 				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
 				CalculateAbilityDamage(ability);
-				break;
 			}
 			//TO DO: modify targets HP on stat system.
 			StatSystem::ModifiyStat(singleTarget, totalDamageValue, "HP");
@@ -66,17 +65,18 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 	}
 	else if (!IsSingledTarget_)
 	{
-		if (targets.Num > 0)
+		if (targets.Num() > 0)
 		{
 			//This will calculate any damage for multiple targets.
-			switch (action_->ReturnActionType())
+			if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 			{
-			case ACTIONTYPE::E_COMMAND:
 				//Command will do basic act with basic stats
 				//TO DO: Check if there is any damage in this command.
 				CommandAction* command = dynamic_cast<CommandAction*>(action_);
-				break;
-			case ACTIONTYPE::E_ITEM:
+			}
+			else if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
+			{
+
 				//Item will be sorted to what type then calculated for total damage.
 				ItemAction* item = dynamic_cast<ItemAction*>(action_);
 				if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
@@ -99,16 +99,23 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 					Debugger::Error("No Item to contain damage from: " + item->ReturnName(), "DamageDeltSystem.cpp", __LINE__);
 					return;
 				}
-				break;
-			case ACTIONTYPE::E_ABILITY:
+			}
+			else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+			{
+
 				//ability will retreive the damage value if any.
 				//TO DO: create an enum for what type of ability it is.
 				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
 				CalculateAbilityDamage(ability);
-				break;
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("No specified action was found!", "DamageDeltSystem.cpp", __LINE__);
+				return;
 			}
 			//TO DO: Modify stats of HP in targets.
-			for (int i = 0; i < targets.Num; i++)
+			for (int i = 0; i < targets.Num(); i++)
 			{
 				StatSystem::ModifiyStat(targets[i], totalDamageValues[i], "HP");
 			}
@@ -146,7 +153,8 @@ float DamageDeltSystem::CalculateWeaponDamage(ItemAction* const targetWeapon_)
 float  DamageDeltSystem::CalculateAbilityDamage(AbilityAction* const targetAbility_)
 {
 	//Get the target action and get the damage value;
-	return;
+	float tmp = 0.0f;
+	return tmp;
 	/*if (targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
 	{
 		target
@@ -299,7 +307,7 @@ void DamageDeltSystem::OnDestroy()
 		targets.Empty();
 	}
 	totalDamageValue = 0.0f;
-	if (totalDamageValues.Num > 0)
+	if (totalDamageValues.Num() > 0)
 	{
 		for (auto n : totalDamageValues)
 		{

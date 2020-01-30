@@ -3,10 +3,6 @@
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 
-EffectSystem::EffectSystem()
-{
-
-}
 void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
 {
 	if (IsSingledTarget_)

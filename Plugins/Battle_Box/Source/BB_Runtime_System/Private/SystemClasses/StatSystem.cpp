@@ -58,7 +58,7 @@ void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const ac
 		}
 		else if (!IsSingledTarget_)
 		{
-			if (targets.Num > 0)
+			if (targets.Num() > 0)
 			{
 				for (auto& i : targets)
 				{
@@ -137,7 +137,7 @@ void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const ac
 		}
 		else if(!IsSingledTarget_) 
 		{
-			if (targets.Num > 0)
+			if (targets.Num() > 0)
 			{
 				for (auto& i : targets)
 				{

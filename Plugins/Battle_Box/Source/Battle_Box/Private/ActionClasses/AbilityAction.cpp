@@ -35,6 +35,8 @@ AbilityAction::AbilityAction(AbilityAction* const other_)
 float AbilityAction::CalculateAbilityValue()
 {
 	//TO DO: implement an equation class.
+	float tmp = 0.0f;
+	return tmp;
 }
 void AbilityAction::SetDuration(const float duration_)
 {
