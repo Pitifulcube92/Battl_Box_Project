@@ -119,5 +119,5 @@ void EffectSystem::OnDestroy()
 }
 EffectSystem::~EffectSystem()
 {
-
+	OnDestroy();
 }
