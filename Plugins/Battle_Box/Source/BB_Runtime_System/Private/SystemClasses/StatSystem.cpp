@@ -174,6 +174,7 @@ void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const ac
 			}
 		}
 	}
+	OnDestroy();
 }
 
 void StatSystem::ModifiyStat(StatSheetObject* const target_, const float value, const FString name_)
