@@ -1,15 +1,34 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
-#pragma once
-
+#ifndef JSONRECEIVER_H
+#define JSONRECEIVER_H
 #include "CoreMinimal.h"
-
+#include "Templates/SharedPointer.h"
+#include "Serialization/JsonWriter.h"
+class StatSheetObject;
+class BaseAction;
+class FJsonObject;
 /**
  * 
  */
 class JsonReceiver
 {
+private:
+	TSharedPtr<FJsonObject> JsonObject;
+	TSharedPtr<TJsonWriter<>> JsonWriter;
+	FString*	JsonFileString;
 public:
 	JsonReceiver();
+	void initJsonObject();
+	void ReadStatSheetObject();
+	void ReadActionObject();
+	void ReadEquationObject();
+	void WriteStatSheetObject(StatSheetObject* const sheet_);
+	void WriteActionObject(BaseAction* const action_);
+	void WriteEquationObject();
+	void OnDestroy();
 	~JsonReceiver();
 };
+
+#endif // !
+
