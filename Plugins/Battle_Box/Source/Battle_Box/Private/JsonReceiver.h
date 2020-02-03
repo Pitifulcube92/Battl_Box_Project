@@ -16,17 +16,17 @@ class JsonReceiver
 private:
 	TSharedPtr<FJsonObject> JsonObject;
 	TSharedPtr<TJsonWriter<>> JsonWriter;
-	FString*	JsonFileString;
+	FString Directory;
+	FString JsonFileString;
 public:
 	JsonReceiver();
-	void initJsonObject();
+	void InitiateClass();
 	void ReadStatSheetObject();
 	void ReadActionObject();
 	void ReadEquationObject();
 	void WriteStatSheetObject(StatSheetObject* const sheet_);
 	void WriteActionObject(BaseAction* const action_);
 	void WriteEquationObject();
-	void OnDestroy();
 	~JsonReceiver();
 };
 

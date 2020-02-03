@@ -4,14 +4,22 @@
 #include "JsonReceiver.h"
 #include "Dom/JsonObject.h"
 #include "BattleBoxFileManager.h"
+#include "../Battle_Box/Private/StatSheetObject.h"
+#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
+#include "../Battle_Box/Private/ActionClasses/CommandAction.h"
+#include "../Battle_Box/Private/ActionClasses/ItemAction.h"
+#include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
+#include "Misc/Paths.h"
+
 
 JsonReceiver::JsonReceiver()
 {
 }
-void JsonReceiver::initJsonObject()
+void JsonReceiver::InitiateClass()
 {
 	JsonObject = MakeShareable(new FJsonObject);
-	JsonWriter = TJsonWriterFactory<>::Create(&JsonFileString); 
+	Directory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
+	BattleBoxFileManager::VerifyOnCreateDirectory(Directory);
 }
 void JsonReceiver::ReadStatSheetObject()
 {
@@ -32,27 +40,22 @@ void JsonReceiver::WriteStatSheetObject(StatSheetObject* const sheet_)
 {
 	//This will write to a json file for a statsheetobject
 	//TODO:: Write the object, serialize, save it to a file.
-	JsonObject.Get()->SetStringField();
-	JsonObject.Get()->SetStringField();
 
-
-	BattleBoxFileManager::WriteTextFile();
+	JsonWriter = TJsonWriterFactory<>::Create(&JsonFileString);
+	BattleBoxFileManager::WriteTextFile(Directory, JsonFileString, sheet_->ReturnName() + ".json", false);
 }
 void JsonReceiver::WriteActionObject(BaseAction* const action_)
 {
 	//This will write to a json file for a action object
 	//TODO:: Write the object, serialize, save it to a file.
+	JsonWriter = TJsonWriterFactory<>::Create(&JsonFileString);
+	BattleBoxFileManager::WriteTextFile(Directory, JsonFileString, action_->ReturnName() + ".json", false);
 }
 void JsonReceiver::WriteEquationObject()
 {
 	//This will write to a json file for a equation object.
 	//TODO:: Write the object, serialize, save it to a file.
 }
-void JsonReceiver::OnDestroy()
-{
-	//TODO:: clear any private data variables.
-}
 JsonReceiver::~JsonReceiver()
 {
-	OnDestroy();
 }
