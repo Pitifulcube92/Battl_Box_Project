@@ -12,7 +12,7 @@ enum class ABILITYTYPE
 	E_TMP_MODIFIYER,
 	E_DAMAGE_MODIFYER
 };
-class AbilityAction : public BaseAction
+class BATTLE_BOX_API AbilityAction : public BaseAction
 {
 private: 
 	float duration;

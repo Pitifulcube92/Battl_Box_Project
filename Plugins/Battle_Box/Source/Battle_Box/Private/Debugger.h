@@ -14,7 +14,7 @@ enum class MessageType
 	E_ERROR,
 	E_FATAL_ERROR
 };
-class Debugger 
+class BATTLE_BOX_API Debugger
 {
 private:
 	static void Log(const MessageType type_, const FString& message_, const FString& fileName_, const int32 line_);

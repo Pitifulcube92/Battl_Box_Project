@@ -13,7 +13,7 @@ enum class WEAPONTYPE
 	E_BLUNT_WEAP
 };
 
-class CommandAction : public BaseAction
+class BATTLE_BOX_API CommandAction : public BaseAction
 {
 private:
 	bool isActionCommand;

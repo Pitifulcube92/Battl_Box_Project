@@ -11,7 +11,7 @@ class AbilityAction;
 /**
  * 
  */
-class StatSheetObject
+class BATTLE_BOX_API StatSheetObject
 {
 private:
 	FString name;

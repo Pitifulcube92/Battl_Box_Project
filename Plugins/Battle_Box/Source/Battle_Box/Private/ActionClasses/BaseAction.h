@@ -62,7 +62,7 @@ enum class STATACTION
 	E_TMP_REMOVE
 };
 
-class BaseAction
+class BATTLE_BOX_API BaseAction
 {
 private:
 	FString name;

@@ -18,7 +18,7 @@ enum class ITEMTYPE
 	E_WEAPON,
 	E_KEY_ITEM
 };
-class ItemAction : public BaseAction 
+class BATTLE_BOX_API ItemAction : public BaseAction
 {
 private:
 	ITEMTYPE type;

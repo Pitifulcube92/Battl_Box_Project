@@ -8,7 +8,7 @@
 /**
  * 
  */
-class BattleBoxFileManager
+class BATTLE_BOX_API BattleBoxFileManager
 {
 public:
 	BattleBoxFileManager(const BattleBoxFileManager&) = delete;

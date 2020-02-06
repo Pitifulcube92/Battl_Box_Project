@@ -2,11 +2,15 @@
 #include "EffectSystem.h"
 #include "StatSystem.h"
 #include "DamageDeltSystem.h"
+#include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
+StatSheetObject*  EffectSystem::target = nullptr;
+TArray<StatSheetObject*> EffectSystem::targets = TArray<StatSheetObject*>();
+BaseAction* EffectSystem::targetAction = nullptr;
 
 void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
 {
@@ -58,26 +62,23 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 					{
 						for (auto ability : item->ReturnEffectList())
 						{
-							for (auto ability : item->ReturnEffectList())
+							if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
 							{
-								if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
-								{
-									//Communicate with stat System
-								}
-								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
-								{
-									//Communicate with stat System
-								}
-								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
-								{
-									//Communicate with Damage System
-								}
-								else
-								{
-									Debugger::SetSeverity(MessageType::E_ERROR);
-									Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
-									return;
-								}
+								//Communicate with stat System
+							}
+							else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
+							{
+								//Communicate with stat System
+							}
+							else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
+							{
+								//Communicate with Damage System
+							}
+							else
+							{
+								Debugger::SetSeverity(MessageType::E_ERROR);
+								Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
+								return;
 							}
 						}
 					}
@@ -93,28 +94,26 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 					//calculate for physical and ability attributes
 					if (item->ReturnEffectList().Num() > 0)
 					{
+
 						for (auto ability : item->ReturnEffectList())
 						{
-							for (auto ability : item->ReturnEffectList())
+							if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
 							{
-								if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
-								{
-									//Communicate with stat System
-								}
-								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
-								{
-									//Communicate with stat System
-								}
-								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
-								{
-									//Communicate with Damage System
-								}
-								else
-								{
-									Debugger::SetSeverity(MessageType::E_ERROR);
-									Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
-									return;
-								}
+								//Communicate with stat System
+							}
+							else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
+							{
+								//Communicate with stat System
+							}
+							else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
+							{
+								//Communicate with Damage System
+							}
+							else
+							{
+								Debugger::SetSeverity(MessageType::E_ERROR);
+								Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
+								return;
 							}
 						}
 					}
@@ -175,160 +174,145 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 		{
 			for (auto target : targets)
 			{
-				if (target)
+				if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 				{
-					if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
+					ItemAction* item = dynamic_cast<ItemAction*>(action_);
+					if (item->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
 					{
-						ItemAction* item = dynamic_cast<ItemAction*>(action_);
-						if (item->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
+						//calculate for physical attributes
+						if (item->ReturnEffectList().Num() > 0)
 						{
-							//calculate for physical attributes
-							if (item->ReturnEffectList().Num() > 0)
+							for (auto ability : item->ReturnEffectList())
 							{
-								for (auto ability : item->ReturnEffectList())
+								if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
 								{
-									if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
-									{
-										//Communicate with stat System
-									}
-									else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
-									{
-										//Communicate with stat System
-									}
-									else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
-									{
-										//Communicate with Damage System
-									}
-									else
-									{
-										Debugger::SetSeverity(MessageType::E_ERROR);
-										Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
-										return;
-									}
+									//Communicate with stat System
 								}
-							}
-							else
-							{
-								Debugger::SetSeverity(MessageType::E_ERROR);
-								Debugger::Error("No ability found or is null.", "EffectSystem.cpp", __LINE__);
-								return;
-							}
-						}
-						else if (item->ReturnInteractionType() == INTERACTIONTYPE::E_ABILITY)
-						{
-							//calculate for ability attributes
-							if (item->ReturnEffectList().Num() > 0)
-							{
-								for (auto ability : item->ReturnEffectList())
+								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
 								{
-									for (auto ability : item->ReturnEffectList())
-									{
-										if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
-										{
-											//Communicate with stat System
-										}
-										else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
-										{
-											//Communicate with stat System
-										}
-										else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
-										{
-											//Communicate with Damage System
-										}
-										else
-										{
-											Debugger::SetSeverity(MessageType::E_ERROR);
-											Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
-											return;
-										}
-									}
+									//Communicate with stat System
 								}
-							}
-							else
-							{
-								Debugger::SetSeverity(MessageType::E_ERROR);
-								Debugger::Error("No ability found or is null.", "EffectSystem.cpp", __LINE__);
-								return;
-							}
-						}
-						else if (item->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)
-						{
-							//calculate for physical and ability attributes
-							if (item->ReturnEffectList().Num() > 0)
-							{
-								for (auto ability : item->ReturnEffectList())
+								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
 								{
-									for (auto ability : item->ReturnEffectList())
-									{
-										if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
-										{
-											//Communicate with stat System
-										}
-										else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
-										{
-											//Communicate with stat System
-										}
-										else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
-										{
-											//Communicate with Damage System
-										}
-										else
-										{
-											Debugger::SetSeverity(MessageType::E_ERROR);
-											Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
-											return;
-										}
-									}
+									//Communicate with Damage System
 								}
-							}
-							else
-							{
-								Debugger::SetSeverity(MessageType::E_ERROR);
-								Debugger::Error("No ability found or is null.", "EffectSystem.cpp", __LINE__);
-								return;
+								else
+								{
+									Debugger::SetSeverity(MessageType::E_ERROR);
+									Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
+									return;
+								}
 							}
 						}
 						else
 						{
 							Debugger::SetSeverity(MessageType::E_ERROR);
-							Debugger::Error("No interaction fits the criteria.", "EffectSystem.cpp", __LINE__);
+							Debugger::Error("No ability found or is null.", "EffectSystem.cpp", __LINE__);
 							return;
 						}
 					}
-					else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+					else if (item->ReturnInteractionType() == INTERACTIONTYPE::E_ABILITY)
 					{
-						AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
-
-						if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
+						//calculate for ability attributes
+						if (item->ReturnEffectList().Num() > 0)
 						{
-							//Communicate with stat System
-						}
-						else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
-						{
-							//Communicate with stat System
-						}
-						else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
-						{
-							//Communicate with Damage System
+							for (auto ability : item->ReturnEffectList())
+							{
+								if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
+								{
+									//Communicate with stat System
+								}
+								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
+								{
+									//Communicate with stat System
+								}
+								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
+								{
+									//Communicate with Damage System
+								}
+								else
+								{
+									Debugger::SetSeverity(MessageType::E_ERROR);
+									Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
+									return;
+								}
+							}
 						}
 						else
 						{
 							Debugger::SetSeverity(MessageType::E_ERROR);
-							Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
+							Debugger::Error("No ability found or is null.", "EffectSystem.cpp", __LINE__);
+							return;
+						}
+					}
+					else if (item->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)
+					{
+						//calculate for physical and ability attributes
+						if (item->ReturnEffectList().Num() > 0)
+						{
+							for (auto ability : item->ReturnEffectList())
+							{
+								if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
+								{
+									//Communicate with stat System
+								}
+								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
+								{
+									//Communicate with stat System
+								}
+								else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
+								{
+									//Communicate with Damage System
+								}
+								else
+								{
+									Debugger::SetSeverity(MessageType::E_ERROR);
+									Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
+									return;
+								}
+							}
+						}
+						else
+						{
+							Debugger::SetSeverity(MessageType::E_ERROR);
+							Debugger::Error("No ability found or is null.", "EffectSystem.cpp", __LINE__);
 							return;
 						}
 					}
 					else
 					{
 						Debugger::SetSeverity(MessageType::E_ERROR);
-						Debugger::Error("action does not meet the effect criteria.", "EffectSystem.cpp", __LINE__);
+						Debugger::Error("No interaction fits the criteria.", "EffectSystem.cpp", __LINE__);
+						return;
+					}
+				}
+				else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+				{
+					AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+
+					if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
+					{
+						//Communicate with stat System
+					}
+					else if (ability->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
+					{
+						//Communicate with stat System
+					}
+					else if (ability->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
+					{
+						//Communicate with Damage System
+					}
+					else
+					{
+						Debugger::SetSeverity(MessageType::E_ERROR);
+						Debugger::Error("No ability type is found and cannot calculate.", "EffectSystem.cpp", __LINE__);
 						return;
 					}
 				}
 				else
 				{
 					Debugger::SetSeverity(MessageType::E_ERROR);
-					Debugger::Error("target was not set.", "EffectSystem.cpp", __LINE__);
+					Debugger::Error("action does not meet the effect criteria.", "EffectSystem.cpp", __LINE__);
 					return;
 				}
 			}
