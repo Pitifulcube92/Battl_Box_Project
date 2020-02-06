@@ -5,9 +5,11 @@
 #include "CoreMinimal.h"
 #include "Templates/SharedPointer.h"
 #include "Serialization/JsonWriter.h"
+#include "Containers/Array.h"
 class StatSheetObject;
 class BaseAction;
 class FJsonObject;
+class FJsonValueNUmber;
 /**
  * 
  */
@@ -18,6 +20,8 @@ private:
 	TSharedPtr<TJsonWriter<>> JsonWriter;
 	FString Directory;
 	FString JsonFileString;
+
+	TArray<TSharedPtr<FJsonValueNumber>> MakeIDJsonArray(StatSheetObject* const sheet_, FString Name_);
 public:
 	JsonReceiver();
 	void InitiateClass();

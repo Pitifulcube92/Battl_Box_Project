@@ -7,7 +7,7 @@ public class Battle_Box : ModuleRules
 	public Battle_Box(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
+        bUseRTTI = true;
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
