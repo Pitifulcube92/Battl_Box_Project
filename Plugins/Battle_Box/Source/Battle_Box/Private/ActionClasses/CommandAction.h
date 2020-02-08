@@ -7,7 +7,7 @@
 
 enum class WEAPONTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_BLADE,
 	E_RANGE,
 	E_BLUNT_WEAP

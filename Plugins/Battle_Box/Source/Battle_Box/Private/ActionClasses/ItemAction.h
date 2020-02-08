@@ -12,7 +12,7 @@ class AbilityAction;
  */
 enum class ITEMTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_CONSUMABLE,
 	E_ARMOR,
 	E_WEAPON,

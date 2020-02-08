@@ -4,28 +4,28 @@
 #include "CoreMinimal.h"
 enum class ACTIONTYPE
 {
-	E_NONE,
-	E_COMMAND,
+	E_NONE = 1,
+	E_COMMAND ,
 	E_ITEM,
 	E_ABILITY
 };
 
 enum class TARGETTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_TARGET_ENEMY,
 	E_ALL_ENEMIES,
 	E_RANDOM_ENEMY,
 	E_ALLY,
 	E_ALL_ALLY,
 	E_ALLY_KO,
-	E_ALL_ALLY_KO,
+	E_ALL_ALLY_KO ,
 	E_USER
 };
 
 enum class INTERACTIONTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_PHYSICAL,
 	E_ABILITY,
 	E_PHYSICAL_AND_ABILITY
@@ -33,7 +33,7 @@ enum class INTERACTIONTYPE
 
 enum class DAMAGETYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_HP_DAMAGE,
 	E_MP_DAMAGE,
 	E_HP_RECOVER,
@@ -42,7 +42,7 @@ enum class DAMAGETYPE
 
 enum class ELEMENTTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_FLAME,
 	E_WATER,
 	E_EARTH,
@@ -55,7 +55,7 @@ enum class ELEMENTTYPE
 
 enum class STATACTION
 {
-	E_NONE,
+	E_NONE = 1,
 	E_ADD,
 	E_REMOVE,
 	E_TMP_ADD,

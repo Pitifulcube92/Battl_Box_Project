@@ -9,7 +9,7 @@
 class StatSheetObject;
 class BaseAction;
 class FJsonObject;
-class FJsonValueNUmber;
+class FJsonValue;
 /**
  * 
  */
@@ -21,9 +21,10 @@ private:
 	FString Directory;
 	FString JsonFileString;
 
-	TArray<TSharedPtr<FJsonValueNumber>> MakeIDJsonArray(StatSheetObject* const sheet_, FString Name_);
+	TArray<TSharedPtr<FJsonValue>> MakeIDJsonArray(StatSheetObject* const sheet_, const FString Name_);
 public:
 	JsonReceiver();
+	bool ResetJsonObject();
 	void InitiateClass();
 	void ReadStatSheetObject();
 	void ReadActionObject();

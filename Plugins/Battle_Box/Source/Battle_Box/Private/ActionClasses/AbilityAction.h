@@ -8,9 +8,9 @@
 
 enum class ABILITYTYPE
 {
-	E_MODIFIYER,
+	E_MODIFIYER = 1,
 	E_TMP_MODIFIYER,
-	E_DAMAGE_MODIFYER
+	E_DAMAGE_MODIFYER 
 };
 class BATTLE_BOX_API AbilityAction : public BaseAction
 {
