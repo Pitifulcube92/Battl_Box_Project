@@ -29,6 +29,7 @@ public:
 	void SetAbilityType(const ABILITYTYPE type_);
 	void SetDuration(const float duration_);
 	float ReturnDuration() const;
+	float ReturnAbilityValue() const;
 	TMap<FString, float> ReturnModStatMap();
 	ABILITYTYPE ReturnAbilityType() const;
 	void OnDestroy();

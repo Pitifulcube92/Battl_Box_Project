@@ -2,6 +2,8 @@
 
 #include "Battle_Box.h"
 #include "../Private/Debugger.h"
+#include "BattleBoxFileManager.h"
+#include "Misc/Paths.h"
 
 #define LOCTEXT_NAMESPACE "FBattle_BoxModule"
 
@@ -10,16 +12,14 @@ void FBattle_BoxModule::StartupModule()
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	Debugger::InitDebug();
 	Debugger::SetSeverity(MessageType::E_INFO);
-	Debugger::Info("Info is working.", "Battle_Box.cpp", __LINE__);
+	if (BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource") ||
+		BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/StatSheets") ||
+		BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/ActionSheets"))
+	{
+		Debugger::SetSeverity(MessageType::E_ERROR);
+		Debugger::Error("One of the Directories did not work or make!", "Battle_Box.cpp", __LINE__);
+	}
 
-	Debugger::SetSeverity(MessageType::E_ERROR);
-	Debugger::Error("Error is working.", "Battle_Box.cpp", __LINE__);
-
-	Debugger::SetSeverity(MessageType::E_WARNING);
-	Debugger::Warrning("Warning is Working.", "Battle_Box.cpp", __LINE__);
-
-	Debugger::SetSeverity(MessageType::E_FATAL_ERROR);
-	Debugger::FatalError("FatalError is working.", "Battle_Box.cpp", __LINE__);
 }
 
 void FBattle_BoxModule::ShutdownModule()

@@ -58,6 +58,10 @@ ABILITYTYPE AbilityAction::ReturnAbilityType() const
 {
 	return abilityType;
 }
+float AbilityAction::ReturnAbilityValue() const
+{
+	return abilityValue;
+}
 void AbilityAction::OnDestroy()
 {
 	//This will clear out any data.
