@@ -5,9 +5,10 @@
 #include "Dom/JsonObject.h"
 #include "Dom/JsonValue.h"
 #include "Misc/Paths.h"
+#include "Templates/Casts.h"
 #include "BattleBoxFileManager.h"
 #include "Serialization/JsonSerializer.h"
-#include "Templates/Casts.h"
+
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/CommandAction.h"
@@ -46,7 +47,7 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 	JsonReader = TJsonReaderFactory<>::Create(readFileString);
 	if (FJsonSerializer::Deserialize(JsonReader.ToSharedRef(), JsonObject))
 	{
-		ACTIONTYPE action =  dynamic_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
+		ACTIONTYPE action =  static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
 		if (action == ACTIONTYPE::E_COMMAND)
 		{
 
@@ -97,9 +98,8 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 	TArray<TSharedPtr<FJsonValue>> Array;
 	TSharedPtr<FJsonObject> statObject;
 
-	switch (action_->ReturnActionType())
+	if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 	{
-	case ACTIONTYPE::E_COMMAND:
 		CommandAction* command = dynamic_cast<CommandAction*>(action_);
 
 		JsonObject.Get()->SetStringField("Name", command->ReturnName());
@@ -111,8 +111,9 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("InteractionType", static_cast<double>(command->ReturnInteractionType()));
 		JsonObject.Get()->SetNumberField("CurrentWeapon", static_cast<double>(command->ReturnWeaponType()));
 		JsonObject.Get()->SetNumberField("BaseActionID", static_cast<double>(command->ReturnAction()->ReturnActionID()));
-			break;
-	case ACTIONTYPE::E_ITEM:
+	}
+	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
+	{
 		ItemAction* Item = dynamic_cast<ItemAction*>(action_);
 
 		JsonObject.Get()->SetStringField("Name", Item->ReturnName());
@@ -136,8 +137,9 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		{
 			statObject.Get()->SetNumberField(i.Key, i.Value);
 		}
-			break;
-	case ACTIONTYPE::E_ABILITY: 
+	}
+	if(action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+	{
 		AbilityAction* Ability = dynamic_cast<AbilityAction*>(action_);
 
 		JsonObject.Get()->SetStringField("Name", Ability->ReturnName());
@@ -156,9 +158,7 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 			statObject.Get()->SetNumberField(i.Key,i.Value);
 		}
 		JsonObject.Get()->SetObjectField("StatObject", statObject);
-			break;
 	}
-
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
 	BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
 	statObject.Reset();
@@ -213,7 +213,9 @@ bool JsonReceiver::ResetJsonObject()
 	if (JsonObject.Get())
 	{
 		JsonObject.Reset();
+		return true;
 	}
+	return false;
 }
 JsonReceiver::~JsonReceiver()
 {

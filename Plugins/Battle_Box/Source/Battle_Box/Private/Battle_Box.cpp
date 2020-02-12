@@ -12,12 +12,17 @@ void FBattle_BoxModule::StartupModule()
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	Debugger::InitDebug();
 	Debugger::SetSeverity(MessageType::E_INFO);
-	if (BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource") ||
-		BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/StatSheets") ||
+	if (BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource") &&
+		BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/StatSheets") &&
 		BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/ActionSheets"))
 	{
-		Debugger::SetSeverity(MessageType::E_ERROR);
-		Debugger::Error("One of the Directories did not work or make!", "Battle_Box.cpp", __LINE__);
+		Debugger::SetSeverity(MessageType::E_INFO);
+		Debugger::Info("All Directories are made!", "Battle_Box.cpp", __LINE__);
+	}
+	else
+	{
+		Debugger::SetSeverity(MessageType::E_INFO);
+		Debugger::Error("A Directoy was not made!", "Battle_Box.cpp", __LINE__);
 	}
 
 }
