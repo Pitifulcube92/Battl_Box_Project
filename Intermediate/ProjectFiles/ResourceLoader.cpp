@@ -1,6 +1,5 @@
 
 #include "ResourceLoader.h"
-#include "RESOURCELOADER.H"
 
 ResourceLoader::ResourceLoader()
 {
@@ -31,4 +30,3 @@ void ResourceLoader::LoadActionSheet(const std::string & filename_)
 void ResourceLoader::LoadStatSheet(const std::string & filename_)
 {
 }
->>>>>>> Stashed changes
