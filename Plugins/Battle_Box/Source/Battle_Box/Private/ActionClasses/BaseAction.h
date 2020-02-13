@@ -77,6 +77,7 @@ public:
 	///Base Construction
 	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_);
 	BaseAction(const BaseAction* other_);
+	uint32 GenerateID();
 	///Sets Name.
 	void SetName(const FString name_);
 	///Sets Discription.

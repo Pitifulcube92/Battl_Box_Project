@@ -16,6 +16,49 @@
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
 
+struct commandData
+{
+	FString name;
+	FString discription;
+	uint32 actionID;
+	ACTIONTYPE actionType;
+	TARGETTYPE targetType;
+	STATACTION statAction;
+	INTERACTIONTYPE interactionType;
+	WEAPONTYPE currentWeapon;
+	uint32 commandActionID;
+};
+struct ItemData
+{
+	FString name;
+	FString discription;
+	uint32 actionID;
+	ACTIONTYPE actionType;
+	TARGETTYPE targetType;
+	STATACTION statAction;
+	INTERACTIONTYPE interactionType;
+	ITEMTYPE itemType;
+	DAMAGETYPE damageType;
+	uint32 value;
+	TArray<uint32> effectIDList;
+	TMap<FString, float> statModMap;
+
+};
+struct AbilityData
+{
+	FString name;
+	FString discription;
+	uint32 actionID;
+	ACTIONTYPE actionType;
+	TARGETTYPE targetType;
+	STATACTION statAction;
+	INTERACTIONTYPE interactionType;
+	float duration;
+	float abilityValue;
+	ABILITYTYPE abilityType;
+	TMap<FString, float> modStatMap;
+};
+
 JsonReceiver::JsonReceiver()
 {
 }
@@ -50,15 +93,50 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 		ACTIONTYPE action =  static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
 		if (action == ACTIONTYPE::E_COMMAND)
 		{
-
+			commandData data;
+			data.name = JsonObject.Get()->GetStringField("Name");
+			data.discription = JsonObject.Get()->GetStringField("Discription");
+			data.actionID = static_cast<uint32>((int)JsonObject.Get()->GetNumberField("ActionID"));
+			data.actionType = static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
+			data.targetType = static_cast<TARGETTYPE>((int)JsonObject.Get()->GetNumberField("TargetType"));
+			
+			double tmp;
+			if (JsonObject.Get()->TryGetNumberField("StatAction", tmp))
+				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
+			else
+				data.statAction = STATACTION::E_NONE;
+			data.currentWeapon = static_cast<WEAPONTYPE>((int)JsonObject.Get()->GetNumberField("CurrentWeapon"));
+			data.commandActionID = static_cast<uint32>(JsonObject.Get()->GetNumberField("BaseActionID"));
 		}
 		if (action == ACTIONTYPE::E_ITEM)
 		{
+			ItemData data;
+			data.name = JsonObject.Get()->GetStringField("Name");
+			data.discription = JsonObject.Get()->GetStringField("Discription");
+			data.actionID = static_cast<uint32>((int)JsonObject.Get()->GetNumberField("ActionID"));
+			data.actionType = static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
+			data.targetType = static_cast<TARGETTYPE>((int)JsonObject.Get()->GetNumberField("TargetType"));
 
+			double tmp;
+			if (JsonObject.Get()->TryGetNumberField("StatAction", tmp))
+				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
+			else
+				data.statAction = STATACTION::E_NONE;
 		}
 		if (action == ACTIONTYPE::E_ABILITY)
 		{
+			AbilityData data;
+			data.name = JsonObject.Get()->GetStringField("Name");
+			data.discription = JsonObject.Get()->GetStringField("Discription");
+			data.actionID = static_cast<uint32>((int)JsonObject.Get()->GetNumberField("ActionID"));
+			data.actionType = static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
+			data.targetType = static_cast<TARGETTYPE>((int)JsonObject.Get()->GetNumberField("TargetType"));
 
+			double tmp;
+			if (JsonObject.Get()->TryGetNumberField("StatAction", tmp))
+				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
+			else
+				data.statAction = STATACTION::E_NONE;
 		}
 
 	}

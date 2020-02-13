@@ -2,6 +2,7 @@
 
 
 #include "BaseAction.h"
+#include "Math/UnrealMathUtility.h"
 
 BaseAction::BaseAction()
 {
@@ -29,6 +30,10 @@ BaseAction::BaseAction(const BaseAction* other_)
 	target = other_->ReturnTargetType();
 	actionID = other_->ReturnActionID();
 	statAction = other_->ReturnStatActionType();
+}
+uint32 BaseAction::GenerateID()
+{
+	return (uint32)FMath::FRandRange(0.0f, 100000.0f);
 }
 void BaseAction::SetName(const FString name_)
 {
