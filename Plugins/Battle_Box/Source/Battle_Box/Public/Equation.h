@@ -38,7 +38,7 @@ private:
 	float damageReducer = 1.5f;
 	float generalScalar, rise, run, xIntercept;
 
-	//f(x) = ab^x
+	//f(x) = a^x + b
 	float Exponential(float input_);
 	// x/y
 	float Div(float input_);
@@ -48,7 +48,7 @@ private:
 	float Cosine(float input_);
 	// y = f(x) = a + bx
 	float Linear(float input_);
-	// fx = ax^2 + bx + c;
+	// fx = x^2 + bx + c;
 	float Quadratic(float input_);
 };
 
