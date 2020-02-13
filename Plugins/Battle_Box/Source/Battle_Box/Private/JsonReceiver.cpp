@@ -15,7 +15,16 @@
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
-
+struct statSheetData
+{
+	FString name;
+	FString tag;
+	TMap<FString, uint32> commandMapID;
+	TMap<FString, uint32> itemMapID;
+	TMap<FString, uint32> abilityMapID;
+	TMap<FString, uint32> equipmentMapID;
+	TMap<FString, float> statMap;
+};
 struct commandData
 {
 	FString name;
@@ -122,6 +131,11 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
 			else
 				data.statAction = STATACTION::E_NONE;
+			data.itemType = static_cast<ITEMTYPE>((int)JsonObject.Get()->GetIntegerField("ItemAction"));
+			data.value = JsonObject.Get()->GetIntegerField("Value");
+
+			TShared<FJsonObject statObject = JsonObject.Get()->GetObjectField("StatObject");
+
 		}
 		if (action == ACTIONTYPE::E_ABILITY)
 		{
@@ -137,6 +151,7 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
 			else
 				data.statAction = STATACTION::E_NONE;
+
 		}
 
 	}
@@ -158,6 +173,7 @@ void JsonReceiver::WriteStatSheetObject(StatSheetObject* const sheet_)
 	JsonObject.Get()->SetArrayField("abilities", MakeIDJsonArray(sheet_, "abilites"));
 	JsonObject.Get()->SetArrayField("equipment", MakeIDJsonArray(sheet_, "equipment"));
 	TSharedPtr<FJsonObject> StatObject;
+	//This does not work when you re-enginer.
 	for (auto& i : sheet_->ReturnStatMap())
 	{
 		StatObject.Get()->SetNumberField(i.Key, (double)i.Value);
