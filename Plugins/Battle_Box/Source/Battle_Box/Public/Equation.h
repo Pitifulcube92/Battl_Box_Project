@@ -4,6 +4,7 @@
 #define EQUATIONS_H
 #include "CoreMinimal.h"
 #include "ActionClasses/BaseAction.h"
+#include "Debugger.h"
 #include "Math/UnrealMathUtility.h"
 
 class AbilityAction;

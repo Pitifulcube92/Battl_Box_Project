@@ -48,6 +48,7 @@ float Equation::DetermineEquation(EQUATION_TYPE equationType_, float input_)
 		foo = Cosine(input_);
 		return foo;
 	default:
+		Debugger::Error("Equation type not valid", "Equation.cpp", __LINE__);
 		break;
 	}
 	return 0.0f;
@@ -57,12 +58,18 @@ float Equation::Exponential(float input_) // exponential function
 {
 	//x is the constant
 	//fx = ab^x 
+	if (input_ == 0.0f) {
+		Debugger::Warrning("Input is 0", "Equation.cpp", __LINE__);
+	}
 	float f = FMath::Pow(generalScalar, input_) + rise;
 	return f;
 }
 
 float Equation::Div(float input_)
 {
+	if (input_ == 0.0f) {
+		Debugger::Warrning("Input is 0", "Equation.cpp", __LINE__);
+	}
 	float f = input_ / 2;
 
 	return f;

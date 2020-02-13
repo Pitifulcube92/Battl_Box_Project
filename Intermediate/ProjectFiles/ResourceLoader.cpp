@@ -1,7 +1,5 @@
-<<<<<<< Updated upstream
 
 #include "ResourceLoader.h"
-=======
 #include "RESOURCELOADER.H"
 
 ResourceLoader::ResourceLoader()
