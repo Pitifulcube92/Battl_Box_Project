@@ -133,8 +133,11 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = STATACTION::E_NONE;
 			data.itemType = static_cast<ITEMTYPE>((int)JsonObject.Get()->GetIntegerField("ItemAction"));
 			data.value = JsonObject.Get()->GetIntegerField("Value");
+			data.effectIDList = TArray<uint32>(JsonObject.Get()->GetArrayField("EffectListID"));
 
-			TShared<FJsonObject statObject = JsonObject.Get()->GetObjectField("StatObject");
+			TSharedPtr<FJsonObject> statObject = JsonObject.Get()->GetObjectField("StatObject");
+
+			data.statModMap
 
 		}
 		if (action == ACTIONTYPE::E_ABILITY)

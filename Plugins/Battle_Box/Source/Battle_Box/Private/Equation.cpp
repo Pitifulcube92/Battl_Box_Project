@@ -19,11 +19,32 @@ Equation::Equation(float scalar_, float rise_, float run_, float xIntercept_)
 	run = run_;
 	xIntercept = xIntercept_;
 }
-
+Equation::Equation(Equation& const other_)
+{
+	generalScalar = other_.ReturnGenrealScale();
+	rise = other_.ReturnRise();
+	run = other_.ReturnRun();
+	xIntercept = other_.ReturnXIntercept();
+}
 Equation::~Equation()
 {
 }
-
+float Equation::ReturnGenrealScale() const
+{
+	return generalScalar;
+}
+float Equation::ReturnRise() const
+{
+	return rise;
+}
+float Equation::ReturnRun() const
+{
+	return run;
+}
+float Equation::ReturnXIntercept() const
+{
+	return xIntercept;
+}
 float Equation::DetermineEquation(EQUATION_TYPE equationType_, float input_)
 {
 	float foo; // foo is the final number from each equation

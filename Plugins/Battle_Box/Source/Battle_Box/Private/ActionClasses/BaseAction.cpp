@@ -13,15 +13,20 @@ BaseAction::BaseAction()
 	interaction = INTERACTIONTYPE::E_NONE;
 	actionID = 00;
 }
-BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_)
+BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_, bool IsFirstInstance_)
 {
 	name = name_;
 	discription = discription_;
 	action = action_;
 	target = target_;
 	interaction = interaction_;
-	actionID = actionID_;
 	statAction = statAction_;
+	//This will check if this instance is the first time.
+	if (IsFirstInstance_)
+		actionID = GenerateID();
+	else
+		actionID = actionID_;
+
 }
 BaseAction::BaseAction(const BaseAction* other_)
 {
@@ -33,6 +38,7 @@ BaseAction::BaseAction(const BaseAction* other_)
 }
 uint32 BaseAction::GenerateID()
 {
+	//Generate a uniqe ID for the action when made.
 	return (uint32)FMath::FRandRange(0.0f, 100000.0f);
 }
 void BaseAction::SetName(const FString name_)

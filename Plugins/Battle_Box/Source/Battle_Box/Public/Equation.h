@@ -27,6 +27,7 @@ class BATTLE_BOX_API Equation
 public:
 	Equation();
 	Equation(float scalar_, float rise_, float run_, float xIntercept_);
+	Equation(Equation& const other_);
 	~Equation();
 	float DetermineEquation(EQUATION_TYPE equationType_, float input_);
 
@@ -51,6 +52,11 @@ private:
 	float Linear(float input_);
 	// fx = x^2 + bx + c;
 	float Quadratic(float input_);
+
+	float ReturnGenrealScale() const;
+	float ReturnRise() const;
+	float ReturnRun() const;
+	float ReturnXIntercept() const;
 };
 
 #endif 
