@@ -1,15 +1,16 @@
 <map id="Debugger::SetSeverity" name="Debugger::SetSeverity">
-<area shape="rect" id="node1" title="Sets the severity." alt="" coords="1032,245,1183,271"/>
-<area shape="rect" id="node2" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,118,689,145"/>
-<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="239,67,422,94"/>
-<area shape="rect" id="node5" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,194,709,221"/>
-<area shape="rect" id="node7" href="$class_stat_system_adf6b0dd03c3494e535587c692daf582d.html#adf6b0dd03c3494e535587c692daf582d" title="This updates the stats based on the name." alt="" coords="789,118,953,145"/>
-<area shape="rect" id="node8" href="$class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="499,67,689,94"/>
-<area shape="rect" id="node9" href="$class_stat_sheet_object_a4026d7a8088f539e3f34d80613f8dccd.html#a4026d7a8088f539e3f34d80613f8dccd" title="Returns a ability action by its name from the ability map." alt="" coords="771,270,971,297"/>
-<area shape="rect" id="node10" href="$class_stat_sheet_object_adee30a8470b9fd57b32f4892aacac55b.html#adee30a8470b9fd57b32f4892aacac55b" title="Returns a command action by its name from the command map." alt="" coords="759,321,982,347"/>
-<area shape="rect" id="node11" href="$class_stat_sheet_object_ad7e95011555f4015c74ecf7e053e529a.html#ad7e95011555f4015c74ecf7e053e529a" title="Returns a equipment&#45;item action by its name from the equipment map." alt="" coords="757,371,984,398"/>
-<area shape="rect" id="node12" href="$class_stat_sheet_object_a68ac4e437d66c297c8c74bdc95dcfc55.html#a68ac4e437d66c297c8c74bdc95dcfc55" title="Returns a item action by its name from the item map." alt="" coords="776,422,965,449"/>
-<area shape="rect" id="node13" href="$class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664.html#af9e8a9761586d4c32b376edc5d5f9664" title="IModuleInterface implementation." alt="" coords="799,473,943,515"/>
-<area shape="rect" id="node4" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,67,183,94"/>
-<area shape="rect" id="node6" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,187,431,228"/>
+<area shape="rect" id="node1" title="Sets the severity." alt="" coords="1032,274,1183,301"/>
+<area shape="rect" id="node2" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,122,689,149"/>
+<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title=" " alt="" coords="239,71,422,98"/>
+<area shape="rect" id="node5" href="$class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0.html#ab5c41ca84888911f7c878be0a3a5d4c0" title=" " alt="" coords="775,274,967,301"/>
+<area shape="rect" id="node6" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,198,709,225"/>
+<area shape="rect" id="node8" href="$class_stat_system_adf6b0dd03c3494e535587c692daf582d.html#adf6b0dd03c3494e535587c692daf582d" title="This updates the stats based on the name." alt="" coords="789,122,953,149"/>
+<area shape="rect" id="node9" href="$class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="499,71,689,98"/>
+<area shape="rect" id="node10" href="$class_stat_sheet_object_a4026d7a8088f539e3f34d80613f8dccd.html#a4026d7a8088f539e3f34d80613f8dccd" title="Returns a ability action by its name from the ability map." alt="" coords="771,325,971,351"/>
+<area shape="rect" id="node11" href="$class_stat_sheet_object_adee30a8470b9fd57b32f4892aacac55b.html#adee30a8470b9fd57b32f4892aacac55b" title="Returns a command action by its name from the command map." alt="" coords="759,375,982,402"/>
+<area shape="rect" id="node12" href="$class_stat_sheet_object_ad7e95011555f4015c74ecf7e053e529a.html#ad7e95011555f4015c74ecf7e053e529a" title="Returns a equipment&#45;item action by its name from the equipment map." alt="" coords="757,426,984,453"/>
+<area shape="rect" id="node13" href="$class_stat_sheet_object_a68ac4e437d66c297c8c74bdc95dcfc55.html#a68ac4e437d66c297c8c74bdc95dcfc55" title="Returns a item action by its name from the item map." alt="" coords="776,477,965,503"/>
+<area shape="rect" id="node14" href="$class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664.html#af9e8a9761586d4c32b376edc5d5f9664" title="IModuleInterface implementation." alt="" coords="799,528,943,569"/>
+<area shape="rect" id="node4" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,71,183,98"/>
+<area shape="rect" id="node7" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,191,431,232"/>
 </map>

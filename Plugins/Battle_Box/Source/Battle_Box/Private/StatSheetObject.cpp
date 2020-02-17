@@ -5,6 +5,7 @@
 #include "ActionClasses/CommandAction.h"
 #include "ActionClasses/ItemAction.h"
 #include "ActionClasses/AbilityAction.h"
+#include "JsonReceiver.h"
 #include "Debugger.h"
 
 StatSheetObject::StatSheetObject() : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())
@@ -31,6 +32,23 @@ StatSheetObject::StatSheetObject(StatSheetObject* const other_)
 	equipmentMap = other_->ReturnEquipmentMap();
 	statMap = other_->ReturnStatMap();
 
+}
+StatSheetObject::StatSheetObject(StatSheetData const data_)
+{
+	name = data_.name;
+	tag = data_.tag;
+	statMap = data_.statMap;
+	//Note: This part is where you search through the id list 
+	//and find the action in the resource class
+	//data.commandIDs
+	//data.ItemIDs
+	//data.abilityIDs
+	//data.equipmentIDs
+	
+}
+StatSheetObject::StatSheetObject(StatSheetData const data_)
+{
+	name = data_.name;
 }
 void StatSheetObject::SetName(const FString name_)
 {

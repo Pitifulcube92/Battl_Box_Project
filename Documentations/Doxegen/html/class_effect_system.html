@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('class_effect_system.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">EffectSystem Class Reference</div>  </div>
 </div><!--header-->
@@ -101,77 +102,89 @@ $(document).ready(function(){initNavTree('class_effect_system.html',''); initRes
 
 <p><code>#include &lt;<a class="el" href="_effect_system_8h_source.html">EffectSystem.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for EffectSystem:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_effect_system__inherit__graph.png" border="0" usemap="#_effect_system_inherit__map" alt="Inheritance graph"/></div>
-<map name="_effect_system_inherit__map" id="_effect_system_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,145,137,413"/>
-<area shape="rect" href="class_base_system.html" title=" " alt="" coords="8,5,135,97"/>
-</map>
-</div>
-<div class="dynheader">
 Collaboration diagram for EffectSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_effect_system__coll__graph.png" border="0" usemap="#_effect_system_coll__map" alt="Collaboration graph"/></div>
 <map name="_effect_system_coll__map" id="_effect_system_coll__map">
-<area shape="rect" title=" " alt="" coords="175,380,307,619"/>
-<area shape="rect" href="class_base_system.html" title=" " alt="" coords="5,115,132,207"/>
-<area shape="rect" href="class_base_action.html" title=" " alt="" coords="156,5,325,317"/>
-<area shape="rect" href="class_stat_sheet_object.html" title=" " alt="" coords="350,5,534,317"/>
+<area shape="rect" title=" " alt="" coords="123,380,255,619"/>
+<area shape="rect" href="class_base_action.html" title=" " alt="" coords="5,5,173,317"/>
+<area shape="rect" href="class_stat_sheet_object.html" title=" " alt="" coords="197,5,381,317"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1cc71d0093defb7c5dcbccb593876b37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a1cc71d0093defb7c5dcbccb593876b37.html#a1cc71d0093defb7c5dcbccb593876b37">Addtarget</a> (<a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> *target_)</td></tr>
-<tr class="memdesc:a1cc71d0093defb7c5dcbccb593876b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add target to the target array.  <a href="class_effect_system_a1cc71d0093defb7c5dcbccb593876b37.html#a1cc71d0093defb7c5dcbccb593876b37">More...</a><br /></td></tr>
-<tr class="separator:a1cc71d0093defb7c5dcbccb593876b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5c41ca84888911f7c878be0a3a5d4c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0.html#ab5c41ca84888911f7c878be0a3a5d4c0">BaseCalculate</a> (const bool IsSingleTarget_, <a class="el" href="class_base_action.html">BaseAction</a> *const action_)</td></tr>
-<tr class="memdesc:ab5c41ca84888911f7c878be0a3a5d4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base calculation for any dirieved system classes.  <a href="class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0.html#ab5c41ca84888911f7c878be0a3a5d4c0">More...</a><br /></td></tr>
-<tr class="separator:ab5c41ca84888911f7c878be0a3a5d4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3268f2b1a70386b505f9a979c89841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a6f3268f2b1a70386b505f9a979c89841.html#a6f3268f2b1a70386b505f9a979c89841">CallculateEffect</a> (<a class="el" href="class_base_action.html">BaseAction</a> *action_)</td></tr>
-<tr class="memdesc:a6f3268f2b1a70386b505f9a979c89841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the effect <br  />
-  <a href="class_effect_system_a6f3268f2b1a70386b505f9a979c89841.html#a6f3268f2b1a70386b505f9a979c89841">More...</a><br /></td></tr>
-<tr class="separator:a6f3268f2b1a70386b505f9a979c89841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6fabb6f1486d0dda2a7abf205c620ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_ac6fabb6f1486d0dda2a7abf205c620ac.html#ac6fabb6f1486d0dda2a7abf205c620ac">EffectSystem</a> ()=delete</td></tr>
 <tr class="separator:ac6fabb6f1486d0dda2a7abf205c620ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd3b1848a87d03e264cdc1c0782f052"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_aabd3b1848a87d03e264cdc1c0782f052.html#aabd3b1848a87d03e264cdc1c0782f052">EffectSystem</a> (const <a class="el" href="class_effect_system.html">EffectSystem</a> &amp;)=delete</td></tr>
 <tr class="separator:aabd3b1848a87d03e264cdc1c0782f052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1afa089deeb4ebe0ae0358079650ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a3e1afa089deeb4ebe0ae0358079650ff.html#a3e1afa089deeb4ebe0ae0358079650ff">EffectSystem</a> (<a class="el" href="class_effect_system.html">EffectSystem</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a3e1afa089deeb4ebe0ae0358079650ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9419cd87fd9b4e8519fc3960dedefd22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22.html#a9419cd87fd9b4e8519fc3960dedefd22">OnDestroy</a> ()</td></tr>
-<tr class="separator:a9419cd87fd9b4e8519fc3960dedefd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa26e38a802738b9aec48a1e43c691124"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effect_system.html">EffectSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_aa26e38a802738b9aec48a1e43c691124.html#aa26e38a802738b9aec48a1e43c691124">operator=</a> (const <a class="el" href="class_effect_system.html">EffectSystem</a> &amp;)=delete</td></tr>
 <tr class="separator:aa26e38a802738b9aec48a1e43c691124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac81d39fd702a2a56c2aa4d00e4d66208"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_effect_system.html">EffectSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_ac81d39fd702a2a56c2aa4d00e4d66208.html#ac81d39fd702a2a56c2aa4d00e4d66208">operator=</a> (<a class="el" href="class_effect_system.html">EffectSystem</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:ac81d39fd702a2a56c2aa4d00e4d66208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b599411780ea6013b9de3a94252dc29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a1b599411780ea6013b9de3a94252dc29.html#a1b599411780ea6013b9de3a94252dc29">RemoveEffect</a> (<a class="el" href="class_base_action.html">BaseAction</a> *action_)</td></tr>
-<tr class="memdesc:a1b599411780ea6013b9de3a94252dc29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the effect by the action.  <a href="class_effect_system_a1b599411780ea6013b9de3a94252dc29.html#a1b599411780ea6013b9de3a94252dc29">More...</a><br /></td></tr>
-<tr class="separator:a1b599411780ea6013b9de3a94252dc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224e059a2e658f9cad40799fdf902fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a224e059a2e658f9cad40799fdf902fbb.html#a224e059a2e658f9cad40799fdf902fbb">SetTarget</a> (<a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> *target_)</td></tr>
-<tr class="memdesc:a224e059a2e658f9cad40799fdf902fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets target.  <a href="class_effect_system_a224e059a2e658f9cad40799fdf902fbb.html#a224e059a2e658f9cad40799fdf902fbb">More...</a><br /></td></tr>
-<tr class="separator:a224e059a2e658f9cad40799fdf902fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeacfcab72c0129a58bb18363b4763263"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_aeacfcab72c0129a58bb18363b4763263.html#aeacfcab72c0129a58bb18363b4763263">~EffectSystem</a> ()</td></tr>
 <tr class="separator:aeacfcab72c0129a58bb18363b4763263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a1c7d29836af594f9fad93b8f3562e8e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a1c7d29836af594f9fad93b8f3562e8e7.html#a1c7d29836af594f9fad93b8f3562e8e7">target</a></td></tr>
-<tr class="separator:a1c7d29836af594f9fad93b8f3562e8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a232e145c135d885a995e9f96d0aa71dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_action.html">BaseAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a232e145c135d885a995e9f96d0aa71dc.html#a232e145c135d885a995e9f96d0aa71dc">targetAction</a></td></tr>
-<tr class="separator:a232e145c135d885a995e9f96d0aa71dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c4378aa4b2d84795cfcf32157330c4d"><td class="memItemLeft" align="right" valign="top">TArray&lt; <a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a2c4378aa4b2d84795cfcf32157330c4d.html#a2c4378aa4b2d84795cfcf32157330c4d">targets</a></td></tr>
-<tr class="separator:a2c4378aa4b2d84795cfcf32157330c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1cc71d0093defb7c5dcbccb593876b37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a1cc71d0093defb7c5dcbccb593876b37.html#a1cc71d0093defb7c5dcbccb593876b37">Addtarget</a> (<a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> *target_)</td></tr>
+<tr class="memdesc:a1cc71d0093defb7c5dcbccb593876b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add target to the target array.  <a href="class_effect_system_a1cc71d0093defb7c5dcbccb593876b37.html#a1cc71d0093defb7c5dcbccb593876b37">More...</a><br /></td></tr>
+<tr class="separator:a1cc71d0093defb7c5dcbccb593876b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c41ca84888911f7c878be0a3a5d4c0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0.html#ab5c41ca84888911f7c878be0a3a5d4c0">BaseCalculate</a> (const bool IsSingleTarget_, <a class="el" href="class_base_action.html">BaseAction</a> *const action_)</td></tr>
+<tr class="separator:ab5c41ca84888911f7c878be0a3a5d4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3268f2b1a70386b505f9a979c89841"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a6f3268f2b1a70386b505f9a979c89841.html#a6f3268f2b1a70386b505f9a979c89841">CallculateEffect</a> (<a class="el" href="class_base_action.html">BaseAction</a> *action_)</td></tr>
+<tr class="memdesc:a6f3268f2b1a70386b505f9a979c89841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the effect <br  />
+  <a href="class_effect_system_a6f3268f2b1a70386b505f9a979c89841.html#a6f3268f2b1a70386b505f9a979c89841">More...</a><br /></td></tr>
+<tr class="separator:a6f3268f2b1a70386b505f9a979c89841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9419cd87fd9b4e8519fc3960dedefd22"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22.html#a9419cd87fd9b4e8519fc3960dedefd22">OnDestroy</a> ()</td></tr>
+<tr class="separator:a9419cd87fd9b4e8519fc3960dedefd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b599411780ea6013b9de3a94252dc29"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a1b599411780ea6013b9de3a94252dc29.html#a1b599411780ea6013b9de3a94252dc29">RemoveEffect</a> (<a class="el" href="class_base_action.html">BaseAction</a> *action_)</td></tr>
+<tr class="memdesc:a1b599411780ea6013b9de3a94252dc29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the effect by the action.  <a href="class_effect_system_a1b599411780ea6013b9de3a94252dc29.html#a1b599411780ea6013b9de3a94252dc29">More...</a><br /></td></tr>
+<tr class="separator:a1b599411780ea6013b9de3a94252dc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224e059a2e658f9cad40799fdf902fbb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a224e059a2e658f9cad40799fdf902fbb.html#a224e059a2e658f9cad40799fdf902fbb">SetTarget</a> (<a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> *target_)</td></tr>
+<tr class="memdesc:a224e059a2e658f9cad40799fdf902fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets target.  <a href="class_effect_system_a224e059a2e658f9cad40799fdf902fbb.html#a224e059a2e658f9cad40799fdf902fbb">More...</a><br /></td></tr>
+<tr class="separator:a224e059a2e658f9cad40799fdf902fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac45054ffdea14736e379e3f32d48c2fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_ac45054ffdea14736e379e3f32d48c2fd.html#ac45054ffdea14736e379e3f32d48c2fd">target</a> = nullptr</td></tr>
+<tr class="separator:ac45054ffdea14736e379e3f32d48c2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d660fcd77dd282d4c550945f19eeecf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_base_action.html">BaseAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_a3d660fcd77dd282d4c550945f19eeecf.html#a3d660fcd77dd282d4c550945f19eeecf">targetAction</a> = nullptr</td></tr>
+<tr class="separator:a3d660fcd77dd282d4c550945f19eeecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bd59a4d40340e1c1cdfdb457c54ba0"><td class="memItemLeft" align="right" valign="top">static TArray&lt; <a class="el" href="class_stat_sheet_object.html">StatSheetObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_effect_system_af7bd59a4d40340e1c1cdfdb457c54ba0.html#af7bd59a4d40340e1c1cdfdb457c54ba0">targets</a> = TArray&lt;<a class="el" href="class_stat_sheet_object.html">StatSheetObject</a>*&gt;()</td></tr>
+<tr class="separator:af7bd59a4d40340e1c1cdfdb457c54ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_effect_system_8h_source.html#l00009">9</a> of file <a class="el" href="_effect_system_8h_source.html">EffectSystem.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_effect_system_8h_source.html#l00008">8</a> of file <a class="el" href="_effect_system_8h_source.html">EffectSystem.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<a class="el" href="_effect_system_8h_source.html">EffectSystem.h</a></li>
 <li>D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/<a class="el" href="_effect_system_8cpp_source.html">EffectSystem.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="a_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3_html_ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920"><div class="ttname"><a href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3acff1ff30f27faae0d8d0cf2dc4925920">INTERACTIONTYPE::E_ABILITY</a></div><div class="ttdeci">@ E_ABILITY</div></div>
+<div class="ttc" id="aclass_ability_action_html"><div class="ttname"><a href="class_ability_action.html">AbilityAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_ability_action_8h_source.html#l00015">AbilityAction.h:15</a></div></div>
+<div class="ttc" id="aclass_item_action_adf02b73e5a94f785a2a5eec11cbfb003_html_adf02b73e5a94f785a2a5eec11cbfb003"><div class="ttname"><a href="class_item_action_adf02b73e5a94f785a2a5eec11cbfb003.html#adf02b73e5a94f785a2a5eec11cbfb003">ItemAction::ReturnEffectList</a></div><div class="ttdeci">TArray&lt; AbilityAction * &gt; ReturnEffectList() const</div><div class="ttdoc">Returns Effect array.</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cpp_source.html#l00070">ItemAction.cpp:70</a></div></div>
+<div class="ttc" id="aclass_effect_system_a9419cd87fd9b4e8519fc3960dedefd22_html_a9419cd87fd9b4e8519fc3960dedefd22"><div class="ttname"><a href="class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22.html#a9419cd87fd9b4e8519fc3960dedefd22">EffectSystem::OnDestroy</a></div><div class="ttdeci">static void OnDestroy()</div><div class="ttdef"><b>Definition:</b> <a href="_effect_system_8cpp_source.html#l00345">EffectSystem.cpp:345</a></div></div>
+<div class="ttc" id="a_ability_action_8h_a9b5d16e70b48e3e5128379faff900f0c_html_a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a"><div class="ttname"><a href="_ability_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0ca1c2eec47a9197e728e9b93f1958af92a">ABILITYTYPE::E_DAMAGE_MODIFYER</a></div><div class="ttdeci">@ E_DAMAGE_MODIFYER</div></div>
+<div class="ttc" id="a_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3_html_ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9"><div class="ttname"><a href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3aaa0eab8ec65a1970b8540f1d9a2580d9">INTERACTIONTYPE::E_PHYSICAL</a></div><div class="ttdeci">@ E_PHYSICAL</div></div>
+<div class="ttc" id="aclass_ability_action_a8a618f375b60b470cd110f6c004f6657_html_a8a618f375b60b470cd110f6c004f6657"><div class="ttname"><a href="class_ability_action_a8a618f375b60b470cd110f6c004f6657.html#a8a618f375b60b470cd110f6c004f6657">AbilityAction::ReturnAbilityType</a></div><div class="ttdeci">ABILITYTYPE ReturnAbilityType() const</div><div class="ttdef"><b>Definition:</b> <a href="_ability_action_8cpp_source.html#l00057">AbilityAction.cpp:57</a></div></div>
+<div class="ttc" id="a_ability_action_8h_a9b5d16e70b48e3e5128379faff900f0c_html_a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001"><div class="ttname"><a href="_ability_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cab44acb9d47da718dfbe4f274b0e26001">ABILITYTYPE::E_TMP_MODIFIYER</a></div><div class="ttdeci">@ E_TMP_MODIFIYER</div></div>
+<div class="ttc" id="a_base_action_8h_af0b345d735b1ce577e172853a4b8949a_html_af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61"><div class="ttname"><a href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aad74be6a9cf2fa6e008c9da7f2b618e61">ACTIONTYPE::E_ITEM</a></div><div class="ttdeci">@ E_ITEM</div></div>
+<div class="ttc" id="a_ability_action_8h_a9b5d16e70b48e3e5128379faff900f0c_html_a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3"><div class="ttname"><a href="_ability_action_8h_a9b5d16e70b48e3e5128379faff900f0c.html#a9b5d16e70b48e3e5128379faff900f0cacfdba491bfd7b0946ed1f8f79bc7c9e3">ABILITYTYPE::E_MODIFIYER</a></div><div class="ttdeci">@ E_MODIFIYER</div></div>
+<div class="ttc" id="aclass_debugger_a2d1f06f606185f51dc86b782e059ed48_html_a2d1f06f606185f51dc86b782e059ed48"><div class="ttname"><a href="class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48">Debugger::Error</a></div><div class="ttdeci">static void Error(const FString &amp;message_, const FString &amp;fileName_, const int32 line_)</div><div class="ttdoc">Sends a error log to the debugger txt file.</div><div class="ttdef"><b>Definition:</b> <a href="_debuger_8cpp_source.html#l00043">Debuger.cpp:43</a></div></div>
+<div class="ttc" id="aclass_effect_system_ac45054ffdea14736e379e3f32d48c2fd_html_ac45054ffdea14736e379e3f32d48c2fd"><div class="ttname"><a href="class_effect_system_ac45054ffdea14736e379e3f32d48c2fd.html#ac45054ffdea14736e379e3f32d48c2fd">EffectSystem::target</a></div><div class="ttdeci">static StatSheetObject * target</div><div class="ttdef"><b>Definition:</b> <a href="_effect_system_8h_source.html#l00011">EffectSystem.h:11</a></div></div>
+<div class="ttc" id="a_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3_html_ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb"><div class="ttname"><a href="_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3ac2b7c01fe4e36d2ff3f78db92d2df5bb">INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY</a></div><div class="ttdeci">@ E_PHYSICAL_AND_ABILITY</div></div>
+<div class="ttc" id="aclass_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2_html_a2e066519c4fe48fb1268f9bfe2ded3a2"><div class="ttname"><a href="class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</a></div><div class="ttdeci">static void SetSeverity(const MessageType type_)</div><div class="ttdoc">Sets the severity.</div><div class="ttdef"><b>Definition:</b> <a href="_debuger_8cpp_source.html#l00035">Debuger.cpp:35</a></div></div>
+<div class="ttc" id="aclass_effect_system_af7bd59a4d40340e1c1cdfdb457c54ba0_html_af7bd59a4d40340e1c1cdfdb457c54ba0"><div class="ttname"><a href="class_effect_system_af7bd59a4d40340e1c1cdfdb457c54ba0.html#af7bd59a4d40340e1c1cdfdb457c54ba0">EffectSystem::targets</a></div><div class="ttdeci">static TArray&lt; StatSheetObject * &gt; targets</div><div class="ttdef"><b>Definition:</b> <a href="_effect_system_8h_source.html#l00012">EffectSystem.h:12</a></div></div>
+<div class="ttc" id="a_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013_html_ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76"><div class="ttname"><a href="_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013.html#ac6606ebe91c8ac66a2c314c79f5ab013a80e070750e5ff70ab6a0e04cf55b8d76">MessageType::E_ERROR</a></div><div class="ttdeci">@ E_ERROR</div></div>
+<div class="ttc" id="aclass_base_action_a70d34140345d92808deed0304397b074_html_a70d34140345d92808deed0304397b074"><div class="ttname"><a href="class_base_action_a70d34140345d92808deed0304397b074.html#a70d34140345d92808deed0304397b074">BaseAction::ReturnInteractionType</a></div><div class="ttdeci">INTERACTIONTYPE ReturnInteractionType() const</div><div class="ttdoc">Return Interaction type.</div><div class="ttdef"><b>Definition:</b> <a href="_base_action_8cpp_source.html#l00088">BaseAction.cpp:88</a></div></div>
+<div class="ttc" id="aclass_item_action_html"><div class="ttname"><a href="class_item_action.html">ItemAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8h_source.html#l00021">ItemAction.h:21</a></div></div>
+<div class="ttc" id="a_base_action_8h_af0b345d735b1ce577e172853a4b8949a_html_af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920"><div class="ttname"><a href="_base_action_8h_af0b345d735b1ce577e172853a4b8949a.html#af0b345d735b1ce577e172853a4b8949aacff1ff30f27faae0d8d0cf2dc4925920">ACTIONTYPE::E_ABILITY</a></div><div class="ttdeci">@ E_ABILITY</div></div>
+<div class="ttc" id="aclass_base_action_a3c14c6ebf59154d1ad8d60ab546d7888_html_a3c14c6ebf59154d1ad8d60ab546d7888"><div class="ttname"><a href="class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888.html#a3c14c6ebf59154d1ad8d60ab546d7888">BaseAction::ReturnActionType</a></div><div class="ttdeci">ACTIONTYPE ReturnActionType() const</div><div class="ttdoc">Return action type.</div><div class="ttdef"><b>Definition:</b> <a href="_base_action_8cpp_source.html#l00080">BaseAction.cpp:80</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

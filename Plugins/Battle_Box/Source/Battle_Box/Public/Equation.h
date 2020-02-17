@@ -3,9 +3,9 @@
 #ifndef EQUATIONS_H		
 #define EQUATIONS_H
 #include "CoreMinimal.h"
-#include "ActionClasses/BaseAction.h"
-#include "Debugger.h"
 #include "Math/UnrealMathUtility.h"
+class BaseAction;
+class Debugger;
 
 class AbilityAction;
 class ItemAction;
@@ -31,10 +31,15 @@ public:
 	~Equation();
 	float DetermineEquation(EQUATION_TYPE equationType_, float input_);
 
-	float GetDamageMultiplier();
+	float GetDamageMultiplier() const;
 	void SetDamageMultiplier(float x_);
-	float GetDamageReducer();
+	float GetDamageReducer() const;
 	void SetDamageReducer(float x_);
+
+	float ReturnGenrealScale() const;
+	float ReturnRise() const;
+	float ReturnRun() const;
+	float ReturnXIntercept() const;
 private:
 	float damageMultipier = 1.5f;
 	float damageReducer = 1.5f;
@@ -53,10 +58,10 @@ private:
 	// fx = x^2 + bx + c;
 	float Quadratic(float input_);
 
-	float ReturnGenrealScale() const;
-	float ReturnRise() const;
-	float ReturnRun() const;
-	float ReturnXIntercept() const;
+	
+	
+	
+	
 };
 
 #endif 

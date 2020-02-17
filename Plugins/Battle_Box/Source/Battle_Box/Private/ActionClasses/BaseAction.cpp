@@ -39,6 +39,9 @@ BaseAction::BaseAction(const BaseAction* other_)
 uint32 BaseAction::GenerateID()
 {
 	//Generate a uniqe ID for the action when made.
+
+	//NOTE:This Function need to communicate with the resource system so that
+	//we can check if there is no duplication
 	return (uint32)FMath::FRandRange(0.0f, 100000.0f);
 }
 void BaseAction::SetName(const FString name_)

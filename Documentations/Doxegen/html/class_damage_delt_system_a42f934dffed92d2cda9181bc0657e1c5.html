@@ -114,38 +114,38 @@ $(document).ready(function(){initNavTree('class_damage_delt_system_a42f934dffed9
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_damage_delt_system_8cpp_source.html#l00279">279</a> of file <a class="el" href="_damage_delt_system_8cpp_source.html">DamageDeltSystem.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">//clean up any pointers</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_damage_delt_system_ac2c5fbc66a4d4bae977e8cbb116034f3.html#ac2c5fbc66a4d4bae977e8cbb116034f3">singleTarget</a>)</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_damage_delt_system_ac2c5fbc66a4d4bae977e8cbb116034f3.html#ac2c5fbc66a4d4bae977e8cbb116034f3">singleTarget</a>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="class_damage_delt_system_ac2c5fbc66a4d4bae977e8cbb116034f3.html#ac2c5fbc66a4d4bae977e8cbb116034f3">singleTarget</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272">owner</a>)</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272">owner</a>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272">owner</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>.Num() &gt; 0)</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; elem : <a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keyword">delete</span> elem;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            elem = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>.Empty();</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="class_damage_delt_system_acbb16604c2f56234c51adf04317817ac.html#acbb16604c2f56234c51adf04317817ac">totalDamageValue</a> = 0.0f;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_damage_delt_system_ad1eb7204eb7e409717ab32bcdd894bd9.html#ad1eb7204eb7e409717ab32bcdd894bd9">totalDamageValues</a>.Num &gt; 0)</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> n : <a class="code" href="class_damage_delt_system_ad1eb7204eb7e409717ab32bcdd894bd9.html#ad1eb7204eb7e409717ab32bcdd894bd9">totalDamageValues</a>)</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            n = 0.0f;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>.Empty();</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="_damage_delt_system_8cpp_source.html#l00267">267</a> of file <a class="el" href="_damage_delt_system_8cpp_source.html">DamageDeltSystem.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;{</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">//clean up any pointers</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_damage_delt_system_ac2c5fbc66a4d4bae977e8cbb116034f3.html#ac2c5fbc66a4d4bae977e8cbb116034f3">singleTarget</a>)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_damage_delt_system_ac2c5fbc66a4d4bae977e8cbb116034f3.html#ac2c5fbc66a4d4bae977e8cbb116034f3">singleTarget</a>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="class_damage_delt_system_ac2c5fbc66a4d4bae977e8cbb116034f3.html#ac2c5fbc66a4d4bae977e8cbb116034f3">singleTarget</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272">owner</a>)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272">owner</a>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <a class="code" href="class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272">owner</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>.Num() &gt; 0)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; elem : <a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keyword">delete</span> elem;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            elem = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>.Empty();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="class_damage_delt_system_acbb16604c2f56234c51adf04317817ac.html#acbb16604c2f56234c51adf04317817ac">totalDamageValue</a> = 0.0f;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_damage_delt_system_ad1eb7204eb7e409717ab32bcdd894bd9.html#ad1eb7204eb7e409717ab32bcdd894bd9">totalDamageValues</a>.Num() &gt; 0)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> n : <a class="code" href="class_damage_delt_system_ad1eb7204eb7e409717ab32bcdd894bd9.html#ad1eb7204eb7e409717ab32bcdd894bd9">totalDamageValues</a>)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            n = 0.0f;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <a class="code" href="class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b">targets</a>.Empty();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_damage_delt_system_8h_source.html#l00016">owner</a>, <a class="el" href="_damage_delt_system_8h_source.html#l00015">singleTarget</a>, <a class="el" href="_damage_delt_system_8h_source.html#l00017">targets</a>, <a class="el" href="_damage_delt_system_8h_source.html#l00018">totalDamageValue</a>, and <a class="el" href="_damage_delt_system_8h_source.html#l00019">totalDamageValues</a>.</p>
 <div class="dynheader">

@@ -1,0 +1,13 @@
+<map id="JsonReceiver::WriteStatSheetObject" name="JsonReceiver::WriteStatSheetObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,209,200,250"/>
+<area shape="rect" id="node2" href="$class_json_receiver_a3f71507aa4bef59295d61e4230f3fb64.html#a3f71507aa4bef59295d61e4230f3fb64" title=" " alt="" coords="266,74,443,115"/>
+<area shape="rect" id="node7" href="$class_json_receiver_a4e02b363c5368da749d81d872ab70185.html#a4e02b363c5368da749d81d872ab70185" title=" " alt="" coords="252,140,457,167"/>
+<area shape="rect" id="node8" href="$class_stat_sheet_object_a5b875038059a4d910ef9af1ff8cec26a.html#a5b875038059a4d910ef9af1ff8cec26a" title="Returns name." alt="" coords="255,191,454,217"/>
+<area shape="rect" id="node9" href="$class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3" title="Returns the statMap." alt="" coords="248,241,461,268"/>
+<area shape="rect" id="node10" href="$class_stat_sheet_object_ac0352b9c1c206b2cecd57e9d2d028e44.html#ac0352b9c1c206b2cecd57e9d2d028e44" title="Returns tag." alt="" coords="262,292,447,319"/>
+<area shape="rect" id="node11" href="$class_battle_box_file_manager_abd4bb207fe330e3d32150bc96978a385.html#abd4bb207fe330e3d32150bc96978a385" title="writes to a text file." alt="" coords="279,343,430,385"/>
+<area shape="rect" id="node3" href="$class_stat_sheet_object_a4b6e004e70d178b864126a93d6ea3df4.html#a4b6e004e70d178b864126a93d6ea3df4" title="Returns the ability map." alt="" coords="522,5,747,32"/>
+<area shape="rect" id="node4" href="$class_stat_sheet_object_a9b6fcf1480b8d15424f5476ed40604d2.html#a9b6fcf1480b8d15424f5476ed40604d2" title="Returns the commmand map." alt="" coords="511,56,759,83"/>
+<area shape="rect" id="node5" href="$class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8.html#aecfdf70147ffaa33f65b03c3b97232c8" title="Returns the equipment map." alt="" coords="509,107,760,133"/>
+<area shape="rect" id="node6" href="$class_stat_sheet_object_a16559559522d65dfb2d4baf3881bc1ba.html#a16559559522d65dfb2d4baf3881bc1ba" title="Returns the item map." alt="" coords="527,157,742,184"/>
+</map>

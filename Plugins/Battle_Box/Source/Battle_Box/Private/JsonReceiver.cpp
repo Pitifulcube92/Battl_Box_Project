@@ -5,68 +5,65 @@
 #include "Dom/JsonObject.h"
 #include "Dom/JsonValue.h"
 #include "Misc/Paths.h"
+#include "Equation.h"
 #include "Templates/Casts.h"
 #include "BattleBoxFileManager.h"
 #include "Serialization/JsonSerializer.h"
-
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/CommandAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
-struct statSheetData
-{
-	FString name;
-	FString tag;
-	TMap<FString, uint32> commandMapID;
-	TMap<FString, uint32> itemMapID;
-	TMap<FString, uint32> abilityMapID;
-	TMap<FString, uint32> equipmentMapID;
-	TMap<FString, float> statMap;
-};
-struct commandData
-{
-	FString name;
-	FString discription;
-	uint32 actionID;
-	ACTIONTYPE actionType;
-	TARGETTYPE targetType;
-	STATACTION statAction;
-	INTERACTIONTYPE interactionType;
-	WEAPONTYPE currentWeapon;
-	uint32 commandActionID;
-};
-struct ItemData
-{
-	FString name;
-	FString discription;
-	uint32 actionID;
-	ACTIONTYPE actionType;
-	TARGETTYPE targetType;
-	STATACTION statAction;
-	INTERACTIONTYPE interactionType;
-	ITEMTYPE itemType;
-	DAMAGETYPE damageType;
-	uint32 value;
-	TArray<uint32> effectIDList;
-	TMap<FString, float> statModMap;
+///////////////////////////////////////////////////////
+//	*STAT_SHEET_INFO*
+//NAME 
+//TAG
+//COMMAND_ID_LIST
+//ITEM_ID_LIST
+//ABILITY_ID_LIST
+//STAT_ID_LIST
+//EQUIPMENT_ID_LIST
+//////////////////////////////////////////////////////
+//		*COMMAND_ACTION_INFO*
+//	NAME 
+//	DISCRIPTION
+//	ACTIONTYPE
+//	TARGETTYPE
+//	STATTYPE
+//	INTERACTIONTYPE
+//	ACTION_ID
+//	WEAPONTYPE
+//	COMMAND
+//////////////////////////////////////////////////////
+//		*ITEM_ACTION_INFO*
+//	NAME 
+//	DISCRIPTION
+//	ACTIONTYPE
+//	TARGETTYPE
+//	STATTYPE
+//	INTERACTIONTYPE
+//	ACTION_ID
+//	ITEMTYPE 
+//	VALUE
+//	EFFECT_ID_LIST 
+//	STAT_MOD_LIST
+//	DAMAGETYPE
+//////////////////////////////////////////////////////
+//		*ABILITY_ACTION_INFO*
+//	NAME 
+//	DISCRIPTION
+//	ACTIONTYPE
+//	TARGETTYPE
+//	STATTYPE
+//	INTERACTIONTYPE
+//	ACTION_ID
+//	DURATION
+//	ABILITY_VALUE
+//	MODSTAT_LIST
+//////////////////////////////////////////////////////
 
-};
-struct AbilityData
-{
-	FString name;
-	FString discription;
-	uint32 actionID;
-	ACTIONTYPE actionType;
-	TARGETTYPE targetType;
-	STATACTION statAction;
-	INTERACTIONTYPE interactionType;
-	float duration;
-	float abilityValue;
-	ABILITYTYPE abilityType;
-	TMap<FString, float> modStatMap;
-};
+
 
 JsonReceiver::JsonReceiver()
 {
@@ -78,7 +75,7 @@ void JsonReceiver::InitiateClass()
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
 	BattleBoxFileManager::VerifyOnCreateDirectory(Directory);
 }
-void JsonReceiver::ReadStatSheetObject(const FString fileName_)
+StatSheetObject* JsonReceiver::ReadStatSheetObject(const FString fileName_)
 {		
 	//This will read from a json file for statsheetobject
 	//TODO:: 
@@ -86,23 +83,37 @@ void JsonReceiver::ReadStatSheetObject(const FString fileName_)
 	JsonReader = TJsonReaderFactory<>::Create(readFileString);
 	if (FJsonSerializer::Deserialize(JsonReader.ToSharedRef(), JsonObject))
 	{
-		JsonObject.Get()->GetStringField("Name");
-		JsonObject.Get()->GetStringField("Tag");
-	}
+		StatSheetData data;
+		data.name = JsonObject.Get()->GetStringField("Name");
+		data.tag = JsonObject.Get()->GetStringField("Tag");
 
+		TSharedPtr<FJsonObject> statObject = JsonObject.Get()->GetObjectField("StatObject");
+
+		data.statMap.Add("HP", (float)statObject.Get()->GetNumberField("HP"));
+		data.statMap.Add("HP", (float)statObject.Get()->GetNumberField("MP"));
+		data.statMap.Add("Atk", (float)statObject.Get()->GetNumberField("Atk"));
+		data.statMap.Add("MagicAttack", (float)statObject.Get()->GetNumberField("SpecialAttack"));
+		data.statMap.Add("Defence", (float)statObject.Get()->GetNumberField("Defence"));
+		data.statMap.Add("MagicDefence", (float)statObject.Get()->GetNumberField("MagicDefence"));
+	}
+	//Create the sheet then
+	//Note:This function should return the StatSheetObject.
 }
-void JsonReceiver::ReadActionObject(const FString& fileName_)
+BaseAction* JsonReceiver::ReadActionObject(const FString& fileName_)
 {
 	//This will read from a json file for action object
-	//TODO::
+	//TODO:: Get the Functiuon to return a base action.
+	//Create the dirived class and return it as a base action.
+
 	readFileString = BattleBoxFileManager::ReadFile(Directory + "/ActionSheets", fileName_);
 	JsonReader = TJsonReaderFactory<>::Create(readFileString);
 	if (FJsonSerializer::Deserialize(JsonReader.ToSharedRef(), JsonObject))
 	{
+		//RTTI to find what the dirived action is 
 		ACTIONTYPE action =  static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
 		if (action == ACTIONTYPE::E_COMMAND)
 		{
-			commandData data;
+			CommandData data;
 			data.name = JsonObject.Get()->GetStringField("Name");
 			data.discription = JsonObject.Get()->GetStringField("Discription");
 			data.actionID = static_cast<uint32>((int)JsonObject.Get()->GetNumberField("ActionID"));
@@ -116,6 +127,9 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = STATACTION::E_NONE;
 			data.currentWeapon = static_cast<WEAPONTYPE>((int)JsonObject.Get()->GetNumberField("CurrentWeapon"));
 			data.commandActionID = static_cast<uint32>(JsonObject.Get()->GetNumberField("BaseActionID"));
+
+			//Instatiate CommandAction
+			//Return CommandAction
 		}
 		if (action == ACTIONTYPE::E_ITEM)
 		{
@@ -131,14 +145,13 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
 			else
 				data.statAction = STATACTION::E_NONE;
+
 			data.itemType = static_cast<ITEMTYPE>((int)JsonObject.Get()->GetIntegerField("ItemAction"));
 			data.value = JsonObject.Get()->GetIntegerField("Value");
 			data.effectIDList = TArray<uint32>(JsonObject.Get()->GetArrayField("EffectListID"));
 
-			TSharedPtr<FJsonObject> statObject = JsonObject.Get()->GetObjectField("StatObject");
-
-			data.statModMap
-
+			//Instantiate ItemAction
+			//Return ItemAction
 		}
 		if (action == ACTIONTYPE::E_ABILITY)
 		{
@@ -154,12 +167,16 @@ void JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = static_cast<STATACTION>((int)JsonObject.Get()->GetNumberField("StatAction"));
 			else
 				data.statAction = STATACTION::E_NONE;
+			data.abilityType = static_cast<ABILITYTYPE>((int)JsonObject.Get()->GetNumberField("AbilityType"));
+			data.duration = static_cast<float>(JsonObject.Get()->GetNumberField("Duration"));
+			data.abilityValue = static_cast<float>(JsonObject.Get()->GetNumberField("AbilityValue"));
 
+			//Instatiate AbilityAction
+			//return AbilityAction
 		}
-
 	}
 }
-void JsonReceiver::ReadEquationObject(const FString& fileName_)
+Equation* JsonReceiver::ReadEquationObject(const FString& fileName_)
 {
 	//This will read from a json file for equation object
 	//TODO::
@@ -167,7 +184,8 @@ void JsonReceiver::ReadEquationObject(const FString& fileName_)
 void JsonReceiver::WriteStatSheetObject(StatSheetObject* const sheet_)
 {
 	//This will write to a json file for a statsheetobject
-	//TODO:: Write the object, serialize, save it to a file
+	//TODO: Write the object, serialize, save it to a file
+	//Note: Make that takes in IDs instead of than actual maps.
 
 	JsonObject.Get()->SetStringField("Name", sheet_->ReturnName());
 	JsonObject.Get()->SetStringField("Tag", sheet_->ReturnTag());
@@ -176,6 +194,7 @@ void JsonReceiver::WriteStatSheetObject(StatSheetObject* const sheet_)
 	JsonObject.Get()->SetArrayField("abilities", MakeIDJsonArray(sheet_, "abilites"));
 	JsonObject.Get()->SetArrayField("equipment", MakeIDJsonArray(sheet_, "equipment"));
 	TSharedPtr<FJsonObject> StatObject;
+
 	//This does not work when you re-enginer.
 	for (auto& i : sheet_->ReturnStatMap())
 	{
@@ -192,8 +211,7 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 {
 	//This will write to a json file for a action object
 	//TODO:: Write the object, serialize, save it to a file.
-	TArray<TSharedPtr<FJsonValue>> Array;
-	TSharedPtr<FJsonObject> statObject;
+	
 
 	if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 	{
@@ -208,6 +226,9 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("InteractionType", static_cast<double>(command->ReturnInteractionType()));
 		JsonObject.Get()->SetNumberField("CurrentWeapon", static_cast<double>(command->ReturnWeaponType()));
 		JsonObject.Get()->SetNumberField("BaseActionID", static_cast<double>(command->ReturnAction()->ReturnActionID()));
+
+		JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
+		BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
 	}
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
@@ -224,6 +245,9 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("Value", static_cast<double>(Item->ReturnValue()));
 		JsonObject.Get()->SetNumberField("DamageType", static_cast<double>(Item->ReturnDamageType()));
 
+		TArray<TSharedPtr<FJsonValue>> Array;
+		TSharedPtr<FJsonObject> statObject;
+		
 		for (auto& i : Item->ReturnEffectList())
 		{
 			TSharedPtr<FJsonValue> value = MakeShareable(new FJsonValueNumber(i->ReturnActionID()));
@@ -234,6 +258,8 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		{
 			statObject.Get()->SetNumberField(i.Key, i.Value);
 		}
+		JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
+		BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
 	}
 	if(action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 	{
@@ -248,18 +274,12 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("InteractionType", static_cast<double>(Ability->ReturnInteractionType()));
 		JsonObject.Get()->SetNumberField("Duration", static_cast<double>(Ability->ReturnDuration()));
 		JsonObject.Get()->SetNumberField("AbilityValue", static_cast<double>(Ability->ReturnAbilityValue()));
-		JsonObject.Get()->SetNumberField("StatAction", static_cast<double>(Ability->ReturnStatActionType()));
-
-		for (auto& i : Ability->ReturnModStatMap())
-		{
-			statObject.Get()->SetNumberField(i.Key,i.Value);
-		}
-		JsonObject.Get()->SetObjectField("StatObject", statObject);
-	}
+		JsonObject.Get()->SetNumberField("AbilityType", static_cast<double>(Ability->ReturnAbilityType()));
+		TArray<TSharedPtr<FJsonValue>> Array;
+		
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
 	BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
-	statObject.Reset();
-	Array.Reset();
+	}
 	ResetJsonObject();
 }
 void JsonReceiver::WriteEquationObject()

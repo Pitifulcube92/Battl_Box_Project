@@ -1,0 +1,4 @@
+<map id="ItemAction::ReturnDamageType" name="ItemAction::ReturnDamageType">
+<area shape="rect" id="node1" title="Returns Damage type." alt="" coords="228,13,435,39"/>
+<area shape="rect" id="node2" href="$class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942.html#ac033b297e7d4cb4ec8172e465bf00942" title=" " alt="" coords="5,5,180,47"/>
+</map>

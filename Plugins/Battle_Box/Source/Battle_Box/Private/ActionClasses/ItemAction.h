@@ -7,6 +7,7 @@
 #include "Containers/Array.h"
 #include "Containers/Map.h"
 class AbilityAction;
+struct ItemData;
 /**
  * 
  */
@@ -18,6 +19,7 @@ enum class ITEMTYPE
 	E_WEAPON,
 	E_KEY_ITEM
 };
+
 class BATTLE_BOX_API ItemAction : public BaseAction
 {
 private:
@@ -30,6 +32,7 @@ public:
 	ItemAction();
 	ItemAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const  TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const uint32 value_, const DAMAGETYPE damageType_, const TArray<AbilityAction*> effectArray_);
 	ItemAction(const ItemAction* other_);
+	ItemAction(ItemData const data_);
 	///Set Item type
 	void SetType(const ITEMTYPE type_);
 	///Set item Value 

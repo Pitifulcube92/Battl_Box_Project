@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['abilitymap_376',['abilityMap',['../class_stat_sheet_object_ae95872f630491286291359d6a05e62d8.html#ae95872f630491286291359d6a05e62d8',1,'StatSheetObject']]],
-  ['abilitytype_377',['abilityType',['../class_ability_action_a88f76596d78e3392a55f51a82d1e1036.html#a88f76596d78e3392a55f51a82d1e1036',1,'AbilityAction']]],
-  ['abilityvalue_378',['abilityValue',['../class_ability_action_aef8bac0f72924be136fdade57acb9d34.html#aef8bac0f72924be136fdade57acb9d34',1,'AbilityAction']]],
-  ['action_379',['action',['../class_base_action_a23cf827d35850a4e4d2859a12a885567.html#a23cf827d35850a4e4d2859a12a885567',1,'BaseAction']]],
-  ['actionid_380',['actionID',['../class_base_action_a050d54574671299fb3f8d854aeb6a190.html#a050d54574671299fb3f8d854aeb6a190',1,'BaseAction']]]
+  ['abilitymap_478',['abilityMap',['../class_stat_sheet_object_ae95872f630491286291359d6a05e62d8.html#ae95872f630491286291359d6a05e62d8',1,'StatSheetObject']]],
+  ['abilitymapid_479',['abilityMapID',['../structstat_sheet_data_aab524b6b06ebca365989e8c9c25613d1.html#aab524b6b06ebca365989e8c9c25613d1',1,'statSheetData']]],
+  ['abilitytype_480',['abilityType',['../class_ability_action_a88f76596d78e3392a55f51a82d1e1036.html#a88f76596d78e3392a55f51a82d1e1036',1,'AbilityAction::abilityType()'],['../struct_ability_data_a87ff6a4b16de261b9592fc9b35662974.html#a87ff6a4b16de261b9592fc9b35662974',1,'AbilityData::abilityType()']]],
+  ['abilityvalue_481',['abilityValue',['../class_ability_action_aef8bac0f72924be136fdade57acb9d34.html#aef8bac0f72924be136fdade57acb9d34',1,'AbilityAction::abilityValue()'],['../struct_ability_data_a35fb7cc37597671843b519369aa9af01.html#a35fb7cc37597671843b519369aa9af01',1,'AbilityData::abilityValue()']]],
+  ['action_482',['action',['../class_base_action_a23cf827d35850a4e4d2859a12a885567.html#a23cf827d35850a4e4d2859a12a885567',1,'BaseAction']]],
+  ['actionid_483',['actionID',['../class_base_action_a050d54574671299fb3f8d854aeb6a190.html#a050d54574671299fb3f8d854aeb6a190',1,'BaseAction::actionID()'],['../structcommand_data_a4f01252cc1e2cf75f3b8b26e75f11540.html#a4f01252cc1e2cf75f3b8b26e75f11540',1,'commandData::actionID()'],['../struct_item_data_ad73449cb6db52c03e4706218747faa59.html#ad73449cb6db52c03e4706218747faa59',1,'ItemData::actionID()'],['../struct_ability_data_a74348b4a31e87984b0d7a57f7c911db8.html#a74348b4a31e87984b0d7a57f7c911db8',1,'AbilityData::actionID()']]],
+  ['actiontype_484',['actionType',['../structcommand_data_aaa8ffe7b9fc25dbcacfec040d4190de1.html#aaa8ffe7b9fc25dbcacfec040d4190de1',1,'commandData::actionType()'],['../struct_item_data_a3ab359bbd568dc0cb1d938b9222a7fd4.html#a3ab359bbd568dc0cb1d938b9222a7fd4',1,'ItemData::actionType()'],['../struct_ability_data_ac6ac72f8e7705828fd3feaebcca2bc41.html#ac6ac72f8e7705828fd3feaebcca2bc41',1,'AbilityData::actionType()']]]
 ];

@@ -1,5 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "ActionClasses/AbilityAction.h"
+#include "JsonReceiver.h"
 
 AbilityAction::AbilityAction()
 {
@@ -12,7 +13,7 @@ AbilityAction::AbilityAction()
 	duration = 0.0f;
 }
 AbilityAction::AbilityAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
-	const float duration_, ABILITYTYPE type_)
+	const float duration_, const ABILITYTYPE type_, const float abilityValue_)
 {
 	SetName(name_);
 	SetDiscription(discription_);
@@ -21,16 +22,30 @@ AbilityAction::AbilityAction(const FString name_, const FString discription_, co
 	SetInteractionType(interaction_);
 	SetActionID(actionID_);
 	duration = duration_;
+	abilityValue = abilityValue_;
 }
 AbilityAction::AbilityAction(AbilityAction* const other_)
 {
 	SetName(other_->ReturnName());
 	SetDiscription(other_->ReturnDiscription());
 	SetActionType(other_->ReturnActionType());
+	SetTargetType(other_->ReturnTargetType());
 	SetInteractionType(other_->ReturnInteractionType());
 	SetActionID(other_->ReturnActionID());
 	duration = other_->ReturnDuration();
+	abilityValue = other_->ReturnAbilityValue();
 
+}
+AbilityAction::AbilityAction(AbilityData const data_)
+{
+	SetName(data_.name);
+	SetDiscription(data_.discription);
+	SetActionType(data_.actionType);
+	SetActionID(data_.actionID);
+	SetInteractionType(data_.interactionType);
+	SetTargetType(data_.targetType);
+	duration = data_.duration;
+	abilityValue = data_.abilityValue;
 }
 float AbilityAction::CalculateAbilityValue()
 {
@@ -57,6 +72,10 @@ void AbilityAction::SetAbilityType(const ABILITYTYPE type_)
 ABILITYTYPE AbilityAction::ReturnAbilityType() const
 {
 	return abilityType;
+}
+void AbilityAction::SetAbilityValue(const float value_)
+{
+	abilityValue = value_;
 }
 float AbilityAction::ReturnAbilityValue() const
 {

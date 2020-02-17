@@ -1,0 +1,12 @@
+<map id="EffectSystem::BaseCalculate" name="EffectSystem::BaseCalculate">
+<area shape="rect" id="node1" title=" " alt="" coords="5,165,197,191"/>
+<area shape="rect" id="node2" href="$class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="300,13,413,39"/>
+<area shape="rect" id="node5" href="$class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22.html#a9419cd87fd9b4e8519fc3960dedefd22" title=" " alt="" coords="271,63,442,90"/>
+<area shape="rect" id="node6" href="$class_ability_action_a8a618f375b60b470cd110f6c004f6657.html#a8a618f375b60b470cd110f6c004f6657" title=" " alt="" coords="254,114,459,141"/>
+<area shape="rect" id="node7" href="$class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888.html#a3c14c6ebf59154d1ad8d60ab546d7888" title="Return action type." alt="" coords="257,165,457,191"/>
+<area shape="rect" id="node8" href="$class_item_action_adf02b73e5a94f785a2a5eec11cbfb003.html#adf02b73e5a94f785a2a5eec11cbfb003" title="Returns Effect array." alt="" coords="265,215,449,242"/>
+<area shape="rect" id="node9" href="$class_base_action_a70d34140345d92808deed0304397b074.html#a70d34140345d92808deed0304397b074" title="Return Interaction type." alt="" coords="245,266,468,293"/>
+<area shape="rect" id="node10" href="$class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="281,317,432,343"/>
+<area shape="rect" id="node3" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="516,13,623,39"/>
+<area shape="rect" id="node4" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="671,5,823,47"/>
+</map>

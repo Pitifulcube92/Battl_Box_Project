@@ -2,6 +2,8 @@
 
 
 #include "Equation.h"
+#include "Debugger.h"
+#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 Equation::Equation()
@@ -121,7 +123,7 @@ float Equation::Quadratic(float input_)
 	return y;
 }
 
-float Equation::GetDamageMultiplier()
+float Equation::GetDamageMultiplier() const
 {
 	return damageMultipier;
 }
@@ -131,7 +133,7 @@ void Equation::SetDamageMultiplier(float x_)
 	damageMultipier = x_;
 }
 
-float Equation::GetDamageReducer()
+float Equation::GetDamageReducer() const
 {
 	return damageReducer;
 }
