@@ -25,6 +25,7 @@ public:
 private:
 	ResourceLoader();
 	~ResourceLoader();
+
 	static TMap<FString,const BaseAction*> actionMap;
 	static TMap<FString,const StatSheetObject*> statSheetMap;
 	static uint32 GetActionID(const std::string& key_);
