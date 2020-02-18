@@ -1,5 +1,6 @@
 
 #include "ResourceLoader.h"
+std::unique_ptr<ResourceLoader> ResourceLoader::resourceInstance = nullptr;
 
 ResourceLoader::ResourceLoader()
 {
@@ -49,22 +50,53 @@ void ResourceLoader::OnDestroy()
 	}
 }
 
+ResourceLoader * ResourceLoader::GetInstance()
+{
+	if (resourceInstance == nullptr) {
+		resourceInstance.reset(new ResourceLoader);
+	}
+	return resourceInstance.get();
+}
+
 void ResourceLoader::LoadActionSheet(BaseAction* action_){
-	actionMap.Add(action_->ReturnName(), action_);
+	if (action_->ReturnName() == "") {// if the name is emtpy create name 
+		FString newName = "action " + actionMap.Num();
+		action_->SetName(newName);
+		actionMap.Add(action_->ReturnName(), action_);
+	}
+	else if (!actionMap.Contains(action_->ReturnName())) { // if new action is first of it's name
+		actionMap.Add(action_->ReturnName(), action_);
+	}
+	else {
+		Debugger::Error("Action Object exists with name " + action_->ReturnName(), "ResourceLoader.cpp", __LINE__);
+		FString newName = "action " + statSheetMap.Num();
+		action_->SetName(newName);
+		actionMap.Add(action_->ReturnName(), action_);
+	}
 }
 
 void ResourceLoader::LoadStatSheet(StatSheetObject* statSheet_){
-	if (statSheet_->ReturnName() == "") {
-		FString foo = "statSheet " + std::to_string(statSheetMap.Num())
-		statSheet_->SetName();
+	if (statSheet_->ReturnName() == "") { // if the Name is empty create name based on the amount in map
+		FString newName = "statSheet " + statSheetMap.Num();
+		statSheet_->SetName(newName);
+		statSheetMap.Add(statSheet_->ReturnName(), statSheet_);
 	}
-	statSheetMap.Add(statSheet_->ReturnName(), statSheet_);
+	else if (!statSheetMap.Contains(statSheet_->ReturnName())) { // statsheet name is not empty and does not contain the current name
+		statSheetMap.Add(statSheet_->ReturnName(), statSheet_); // add to the statsheetmap
+	}
+	else { // if the name is in the map 
+		Debugger::Error("Statsheet Object exists with name " + statSheet_->ReturnName(), "ResourceLoader.cpp", __LINE__);
+		FString newName = "statSheet " + statSheetMap.Num();
+		statSheet_->SetName(newName);
+		statSheetMap.Add(statSheet_->ReturnName(), statSheet_);
+	}
+	
 }
 
 uint32 ResourceLoader::GetActionID(const std::string& key_)
 {
 	FString key = key_.c_str();//because the map is Fstring conversion must occur
-	BaseAction* base;
+	const BaseAction* base;
 	if((base = *actionMap.Find(key)) != nullptr){ // object is found at key 
 		return base->ReturnActionID(); // Return Action Key is call by the object then returned
 	}
