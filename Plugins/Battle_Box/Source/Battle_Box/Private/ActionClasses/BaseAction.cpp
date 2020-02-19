@@ -13,7 +13,7 @@ BaseAction::BaseAction()
 	interaction = INTERACTIONTYPE::E_NONE;
 	actionID = 00;
 }
-BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_, bool IsFirstInstance_)
+BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, bool IsFirstInstance_)
 {
 	name = name_;
 	discription = discription_;
