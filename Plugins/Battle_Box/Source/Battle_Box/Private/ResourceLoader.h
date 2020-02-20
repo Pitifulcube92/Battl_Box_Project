@@ -1,12 +1,13 @@
-
 #pragma once
 #ifndef RESOURCELOADER_H
 #define RESOURCELOADER_H
 
 #include <sstream>
 #include "ActionClasses/BaseAction.h"
+#include "BattleBoxFileManager.h"
 #include "Containers/Map.h"
 #include "Debugger.h"
+#include "JsonReceiver.h"
 #include "StatSheetObject.h"
 
 class BaseAction;

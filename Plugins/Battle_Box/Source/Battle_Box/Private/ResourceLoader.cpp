@@ -1,5 +1,7 @@
 
 #include "ResourceLoader.h"
+#include "Misc/Paths.h"
+#include "FileManager.h" // remove if not needed
 std::unique_ptr<ResourceLoader> ResourceLoader::resourceInstance = nullptr;
 
 ResourceLoader::ResourceLoader()
@@ -39,7 +41,7 @@ BaseAction * ResourceLoader::ReturnAction(const uint32 id_)
 StatSheetObject * ResourceLoader::ReturnStatSheet(const FString name_)
 {
 	if (statSheetMap.Contains(name_)) {
-		StatSheetObject* statSheet = new StatSheetObject(statSheetMap[name_]->ReturnName(), statSheetMap[name_]->ReturnTag(), statSheetMap[name_]->ReturnCommand(), statSheetMap[name_]->ReturnItemMap(), statSheetMap[name_]->ReturnAbilityMap(), statSheetMap[name_]->ReturnStatMap(), , statSheetMap[name_]->ReturnEquipmentMap());
+		StatSheetObject* statSheet = new StatSheetObject(statSheetMap[name_]->ReturnName(), statSheetMap[name_]->ReturnTag(),statSheetMap[name_]->ReturnCommandMap(), statSheetMap[name_]->ReturnItemMap(), statSheetMap[name_]->ReturnAbilityMap(), statSheetMap[name_]->ReturnStatMap(), statSheetMap[name_]->ReturnEquipmentMap());
 		return statSheet;
 	}
 	Debugger::SetSeverity(MessageType::E_ERROR);
@@ -64,9 +66,9 @@ bool ResourceLoader::CheckAction(const uint32 id_)
 			return true;
 		}
 	}
-	
+
 	Debugger::SetSeverity(MessageType::E_INFO);
-	Debugger::Info("Action of ID: "  "does not exist in resoruces", "ResourceLoader.cpp", __LINE__);
+	Debugger::Info("Action of ID: " + FString::FromInt(id_) +  "does not exist in resoruces", "ResourceLoader.cpp", __LINE__);
 	return false;
 }
 
@@ -82,11 +84,27 @@ bool ResourceLoader::CheckStatSheet(const FString name_)
 
 
 void ResourceLoader::OnCreate(){
-	// create in order comand, abilty, items, then load into map.  
+	// create in order command, abilty, items, then load into map.  
 	// use file manager
+	/// Get the Path for each Directory
+	FString CommandDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource"/*/Name of Command folder*/;
+	FString AbiltyDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource"/*/Name of Command folder*/;
+	FString ItemsDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource"/*/Name of Command folder*/;
 
+	/// Verifiy that these Directories exist
+	BattleBoxFileManager::VerifyOnCreateDirectory(CommandDirectory);
+	BattleBoxFileManager::VerifyOnCreateDirectory(AbiltyDirectory);
+	BattleBoxFileManager::VerifyOnCreateDirectory(ItemsDirectory);
+	// Use the paths with the Json Receiver to get each object
+	// find the amount of files in the directory then call jsonRecevier to then add into the maps
+	JsonReceiver* json = new JsonReceiver();
+	json->InitiateClass();
 	// 
 	// create stat sheet objects
+	FString StatSheetDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
+
+	/// Verifiy that these Directories exist
+	BattleBoxFileManager::VerifyOnCreateDirectory(CommandDirectory);
 	// 
 }
 
