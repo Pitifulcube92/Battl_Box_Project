@@ -66,7 +66,6 @@ bool ResourceLoader::CheckAction(const uint32 id_)
 			return true;
 		}
 	}
-
 	Debugger::SetSeverity(MessageType::E_INFO);
 	Debugger::Info("Action of ID: " + FString::FromInt(id_) +  "does not exist in resoruces", "ResourceLoader.cpp", __LINE__);
 	return false;

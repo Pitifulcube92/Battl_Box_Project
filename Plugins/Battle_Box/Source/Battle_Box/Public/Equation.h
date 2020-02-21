@@ -15,7 +15,8 @@ enum class EQUATION_MOD_TYPE {
 };
 
 enum class EQUATION_TYPE {
-	E_EXPONENT = 1, 
+	E_NONE = 1,
+	E_EXPONENT, 
 	E_DIV,
 	E_SINE,
 	E_COSINE, 
@@ -26,10 +27,10 @@ class BATTLE_BOX_API Equation
 {
 public:
 	Equation();
-	Equation(float scalar_, float rise_, float run_, float xIntercept_);
+	Equation(float scalar_, float rise_, float run_, float xIntercept_, EQUATION_TYPE equationType_);
 	Equation(Equation& const other_);
 	~Equation();
-	float DetermineEquation(EQUATION_TYPE equationType_, float input_);
+	float DetermineEquation(float input_);
 
 	float GetDamageMultiplier() const;
 	void SetDamageMultiplier(float x_);
@@ -58,7 +59,7 @@ private:
 	// fx = x^2 + bx + c;
 	float Quadratic(float input_);
 
-	
+	EQUATION_TYPE equationType;
 	
 	
 	
