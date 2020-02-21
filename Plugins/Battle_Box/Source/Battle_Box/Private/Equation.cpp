@@ -104,7 +104,10 @@ float Equation::Div(float input_)
 
 	return f;
 }
-
+EQUATION_TYPE Equation::RetrunEquationType() const
+{
+	return equationType;
+}
 float Equation::Sine(float input_)
 {
 	float f = FMath::Sin(input_);

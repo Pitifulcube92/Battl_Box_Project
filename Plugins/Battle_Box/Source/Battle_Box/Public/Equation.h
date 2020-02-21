@@ -36,7 +36,8 @@ public:
 	void SetDamageMultiplier(float x_);
 	float GetDamageReducer() const;
 	void SetDamageReducer(float x_);
-
+	
+	EQUATION_TYPE RetrunEquationType() const;
 	float ReturnGenrealScale() const;
 	float ReturnRise() const;
 	float ReturnRun() const;

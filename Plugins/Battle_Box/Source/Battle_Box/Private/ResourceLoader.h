@@ -7,7 +7,7 @@
 #include "BattleBoxFileManager.h"
 #include "Containers/Map.h"
 #include "Debugger.h"
-#include "JsonReceiver.h"
+#include "JsonParse.h"
 #include "StatSheetObject.h"
 
 class BaseAction;

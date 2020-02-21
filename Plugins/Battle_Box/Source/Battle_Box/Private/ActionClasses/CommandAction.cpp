@@ -2,7 +2,7 @@
 
 
 #include "CommandAction.h"
-#include "JsonReceiver.h"
+#include "JsonParse.h"
 
 CommandAction::CommandAction() : command(nullptr)
 {

@@ -3,6 +3,8 @@
 
 #include "BaseAction.h"
 #include "Math/UnrealMathUtility.h"
+#include "JsonParse.h"
+#include "ResourceLoader.h"
 
 BaseAction::BaseAction()
 {
@@ -42,7 +44,19 @@ uint32 BaseAction::GenerateID()
 
 	//NOTE:This Function need to communicate with the resource system so that
 	//we can check if there is no duplication
-	return (uint32)FMath::FRandRange(0.0f, 100000.0f);
+	uint32 tmpID = (uint32)FMath::FRandRange(0.0f, 100000.0f);
+
+	bool IsUniqeID = true;
+	while (IsUniqeID)
+	{		
+		if (ResourceLoader::GetInstance()->CheckAction(tmpID))
+		{
+			IsUniqeID = false;
+			break;
+		}
+		tmpID = (uint32)FMath::FRandRange(0.0f, 100000.0f);
+	}
+	return tmpID;
 }
 void BaseAction::SetName(const FString name_)
 {

@@ -96,7 +96,7 @@ void ResourceLoader::OnCreate(){
 	BattleBoxFileManager::VerifyOnCreateDirectory(ItemsDirectory);
 	// Use the paths with the Json Receiver to get each object
 	// find the amount of files in the directory then call jsonRecevier to then add into the maps
-	JsonReceiver* json = new JsonReceiver();
+	JsonParse* json = new JsonParse();
 	json->InitiateClass();
 	// 
 	// create stat sheet objects

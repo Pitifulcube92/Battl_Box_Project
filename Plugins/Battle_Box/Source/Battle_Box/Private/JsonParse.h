@@ -3,26 +3,28 @@
 #ifndef JSONRECEIVER_H
 #define JSONRECEIVER_H
 #include "CoreMinimal.h"
+#include "Equation.h"
 #include "Templates/SharedPointer.h"
 #include "Serialization/JsonWriter.h"
 #include "Serialization/JsonReader.h"
+#include "Battle_Box/Private/ActionClasses/AbilityAction.h"
+#include "Battle_Box/Private/ActionClasses/CommandAction.h"
+#include "Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "Containers/Array.h"
+
 class StatSheetObject;
 class BaseAction;
-class Equation;
 class FJsonObject;
 class FJsonValue;
-/**
- * 
- */
+
 struct StatSheetData
 {
 	FString name;
 	FString tag;
-	TMap<FString, uint32> commandMapID;
-	TMap<FString, uint32> itemMapID;
-	TMap<FString, uint32> abilityMapID;
-	TMap<FString, uint32> equipmentMapID;
+	TArray<uint32> commandMapID;
+	TArray<uint32> itemMapID;
+	TArray<uint32> abilityMapID;
+	TArray<uint32> equipmentMapID;
 	TMap<FString, float> statMap;
 };
 struct CommandData
@@ -61,12 +63,17 @@ struct AbilityData
 	TARGETTYPE targetType;
 	STATACTION statAction;
 	INTERACTIONTYPE interactionType;
-	float duration;
-	float abilityValue;
 	ABILITYTYPE abilityType;
+	EQUATION_TYPE equationType;
+	float abilityValue;
+	float duration;
+	float generalScaler;
+	float rise;
+	float run;
+	float xIntercept;
 };
 
-class JsonReceiver
+class JsonParse
 {
 private:
 	TSharedPtr<FJsonObject> JsonObject;
@@ -78,16 +85,14 @@ private:
 
 	TArray<TSharedPtr<FJsonValue>> MakeIDJsonArray(StatSheetObject* const sheet_, const FString Name_);
 public:
-	JsonReceiver();
+	JsonParse();
 	bool ResetJsonObject();
 	void InitiateClass();
 	StatSheetObject* ReadStatSheetObject(const FString fileName_);
 	BaseAction* ReadActionObject(const FString& fileName_);
-	Equation* ReadEquationObject(const FString& fileName_);
 	void WriteStatSheetObject(StatSheetObject* const sheet_);
 	void WriteActionObject(BaseAction* const action_);
-	void WriteEquationObject();
-	~JsonReceiver();
+	~JsonParse();
 };
 
 #endif // !

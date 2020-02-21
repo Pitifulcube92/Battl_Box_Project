@@ -1,19 +1,17 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 
-#include "JsonReceiver.h"
+#include "JsonParse.h"
 #include "Dom/JsonObject.h"
 #include "Dom/JsonValue.h"
 #include "Misc/Paths.h"
 #include "Equation.h"
 #include "Templates/Casts.h"
 #include "BattleBoxFileManager.h"
+#include "ResourceLoader.h"
 #include "Serialization/JsonSerializer.h"
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
-#include "../Battle_Box/Private/ActionClasses/CommandAction.h"
-#include "../Battle_Box/Private/ActionClasses/ItemAction.h"
-#include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
 ///////////////////////////////////////////////////////
 //	*STAT_SHEET_INFO*
@@ -64,18 +62,17 @@
 //////////////////////////////////////////////////////
 
 
-
-JsonReceiver::JsonReceiver()
+JsonParse::JsonParse()
 {
 }
-void JsonReceiver::InitiateClass()
+void JsonParse::InitiateClass()
 {
 	JsonObject = MakeShareable(new FJsonObject);
 	Directory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
 	BattleBoxFileManager::VerifyOnCreateDirectory(Directory);
 }
-StatSheetObject* JsonReceiver::ReadStatSheetObject(const FString fileName_)
+StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 {		
 	//This will read from a json file for statsheetobject
 	//TODO:: 
@@ -95,11 +92,15 @@ StatSheetObject* JsonReceiver::ReadStatSheetObject(const FString fileName_)
 		data.statMap.Add("MagicAttack", (float)statObject.Get()->GetNumberField("SpecialAttack"));
 		data.statMap.Add("Defence", (float)statObject.Get()->GetNumberField("Defence"));
 		data.statMap.Add("MagicDefence", (float)statObject.Get()->GetNumberField("MagicDefence"));
+
+		StatSheetObject* tmp = new StatSheetObject(data);
+		return tmp;
 	}
 	//Create the sheet then
 	//Note:This function should return the StatSheetObject.
+	
 }
-BaseAction* JsonReceiver::ReadActionObject(const FString& fileName_)
+BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 {
 	//This will read from a json file for action object
 	//TODO:: Get the Functiuon to return a base action.
@@ -127,9 +128,9 @@ BaseAction* JsonReceiver::ReadActionObject(const FString& fileName_)
 				data.statAction = STATACTION::E_NONE;
 			data.currentWeapon = static_cast<WEAPONTYPE>((int)JsonObject.Get()->GetNumberField("CurrentWeapon"));
 			data.commandActionID = static_cast<uint32>(JsonObject.Get()->GetNumberField("BaseActionID"));
-
-			//Instatiate CommandAction
-			//Return CommandAction
+			
+			CommandAction* tmp = new CommandAction(data);
+			return dynamic_cast<BaseAction*>(data);
 		}
 		if (action == ACTIONTYPE::E_ITEM)
 		{
@@ -150,8 +151,9 @@ BaseAction* JsonReceiver::ReadActionObject(const FString& fileName_)
 			data.value = JsonObject.Get()->GetIntegerField("Value");
 			data.effectIDList = TArray<uint32>(JsonObject.Get()->GetArrayField("EffectListID"));
 
-			//Instantiate ItemAction
-			//Return ItemAction
+			ItemAction* tmp = new ItemAction(data);
+			return dynamic_cast<BaseAction*>(tmp);
+		
 		}
 		if (action == ACTIONTYPE::E_ABILITY)
 		{
@@ -170,18 +172,20 @@ BaseAction* JsonReceiver::ReadActionObject(const FString& fileName_)
 			data.abilityType = static_cast<ABILITYTYPE>((int)JsonObject.Get()->GetNumberField("AbilityType"));
 			data.duration = static_cast<float>(JsonObject.Get()->GetNumberField("Duration"));
 			data.abilityValue = static_cast<float>(JsonObject.Get()->GetNumberField("AbilityValue"));
+			TSharedPtr<FJsonObject> equationObject = JsonObject.Get()->GetObjectField("EquationObject");
+			data.equationType = static_cast<EQUATION_TYPE>(equationObject.Get()->GetIntegerField("EquationObject"));
+			data.generalScaler = equationObject.Get()->GetNumberField("generalScale");
+			data.rise = equationObject.Get()->GetNumberField("rise");
+			data.run = equationObject.Get()->GetNumberField("run");
+			data.xIntercept = equationObject.Get()->GetNumberField("xIntercept");
 
-			//Instatiate AbilityAction
-			//return AbilityAction
+			AbilityAction* tmp = new AbilityAction(data);
+			return dynamic_cast<BaseAction*>(tmp);
+		
 		}
 	}
 }
-Equation* JsonReceiver::ReadEquationObject(const FString& fileName_)
-{
-	//This will read from a json file for equation object
-	//TODO::
-}
-void JsonReceiver::WriteStatSheetObject(StatSheetObject* const sheet_)
+void JsonParse::WriteStatSheetObject(StatSheetObject* const sheet_)
 {
 	//This will write to a json file for a statsheetobject
 	//TODO: Write the object, serialize, save it to a file
@@ -207,7 +211,7 @@ void JsonReceiver::WriteStatSheetObject(StatSheetObject* const sheet_)
 	BattleBoxFileManager::WriteTextFile(Directory, writeFileString, sheet_->ReturnName() + ".json", false);
 	ResetJsonObject();
 }
-void JsonReceiver::WriteActionObject(BaseAction* const action_)
+void JsonParse::WriteActionObject(BaseAction* const action_)
 {
 	//This will write to a json file for a action object
 	//TODO:: Write the object, serialize, save it to a file.
@@ -275,6 +279,13 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("Duration", static_cast<double>(Ability->ReturnDuration()));
 		JsonObject.Get()->SetNumberField("AbilityValue", static_cast<double>(Ability->ReturnAbilityValue()));
 		JsonObject.Get()->SetNumberField("AbilityType", static_cast<double>(Ability->ReturnAbilityType()));
+		TSharedPtr<FJsonObject> equationObject;
+		equationObject.Get()->SetNumberField("generalScaler", static_cast<double>(Ability->ReturnEquationObject()->ReturnGenrealScale()));
+		equationObject.Get()->SetNumberField("rise", static_cast<double>(Ability->ReturnEquationObject()->ReturnRise()));
+		equationObject.Get()->SetNumberField("run", static_cast<double>(Ability->ReturnEquationObject()->ReturnRun()));
+		equationObject.Get()->SetNumberField("xIntercept", static_cast<double>(Ability->ReturnEquationObject()->ReturnXIntercept()));
+		equationObject.Get()->SetNumberField("EquationType", static_cast<double>(Ability->ReturnEquationObject()->RetrunEquationType()));
+		JsonObject.Get()->SetObjectField("EquationObject", equationObject);
 		TArray<TSharedPtr<FJsonValue>> Array;
 		
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
@@ -282,12 +293,7 @@ void JsonReceiver::WriteActionObject(BaseAction* const action_)
 	}
 	ResetJsonObject();
 }
-void JsonReceiver::WriteEquationObject()
-{
-	//This will write to a json file for a equation object.
-	//TODO:: Write the object, serialize, save it to a file.
-}
-TArray<TSharedPtr<FJsonValue>> JsonReceiver::MakeIDJsonArray(StatSheetObject* const sheet_, const FString Name_)
+TArray<TSharedPtr<FJsonValue>> JsonParse::MakeIDJsonArray(StatSheetObject* const sheet_, const FString Name_)
 {
 	TArray<TSharedPtr<FJsonValue>> Array;
 	
@@ -325,7 +331,7 @@ TArray<TSharedPtr<FJsonValue>> JsonReceiver::MakeIDJsonArray(StatSheetObject* co
 	}
 	return Array;
 }
-bool JsonReceiver::ResetJsonObject()
+bool JsonParse::ResetJsonObject()
 {
 	if (JsonObject.Get())
 	{
@@ -334,6 +340,6 @@ bool JsonReceiver::ResetJsonObject()
 	}
 	return false;
 }
-JsonReceiver::~JsonReceiver()
+JsonParse::~JsonParse()
 {
 }
