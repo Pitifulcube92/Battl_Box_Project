@@ -78,9 +78,10 @@ FString BattleBoxFileManager::ReadFile(const FString& Directory_, const FString&
 {
 	FString tmp;
 	FString absoluteFilePath = Directory_ + "/" + FileName_;
-	IPlatformFile& platFormFile = FPlatformFileManager::Get().GetPlatformFile();
+	IPlatformFile& platFormFile = FPlatformFileManager::Get().GetPlatformFile(); //.GetPlatformFile();
 
-	IFileHandle* FileHandle = platFormFile.OpenRead(*FileName_);
+	platFormFile.OpenRead(*FileName_);
+	IFileHandle* FileHandle = platFormFile.OpenRead(*FileName_); // IFileHandel Failed to read;
 	if(FileHandle)
 	{
 		FFileHelper::LoadFileToString(tmp, *FileName_);

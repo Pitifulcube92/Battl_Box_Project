@@ -23,7 +23,7 @@ AbilityAction::AbilityAction(const FString name_, const FString discription_, co
 	SetInteractionType(interaction_);
 	SetActionID(actionID_);
 	duration = duration_;
-	equationObject = new Equation(data_.generalScalar, data_.rise, data_.run, data_.xIntercept, data_.equationtype);
+	equationObject = new Equation(data_.generalScalar, data_.rise, data_.run, data_.xIntercept, data_.equationType);
 }
 AbilityAction::AbilityAction(AbilityAction* const other_)
 {

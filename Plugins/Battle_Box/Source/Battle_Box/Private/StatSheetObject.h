@@ -8,7 +8,7 @@
 class ItemAction;
 class CommandAction;
 class AbilityAction;
-class StatSheetData;
+struct StatSheetData;
 /**
  * 
  */

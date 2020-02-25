@@ -4,13 +4,15 @@
 #define ABILITYACTION_H
 #include "CoreMinimal.h"
 #include "BaseAction.h"
+#include "Equation.h"
+
 class Equation;
 struct AbilityData;
 /****/
 
 struct EquationData
 {
-	EQUATION_TYPE equationtype;
+	EQUATION_TYPE equationType;
 	float generalScalar;
 	float rise;
 	float run;

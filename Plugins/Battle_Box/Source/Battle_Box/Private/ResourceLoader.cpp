@@ -3,21 +3,21 @@
 #include "Misc/Paths.h"
 #include "FileManager.h" // remove if not needed
 std::unique_ptr<ResourceLoader> ResourceLoader::resourceInstance = nullptr;
-
+TMap<const FString, BaseAction *const> ResourceLoader::actionMap = TMap<const FString, BaseAction *const>();
+TMap<const FString, StatSheetObject* const> ResourceLoader::statSheetMap = TMap<const FString, StatSheetObject* const>();
 ResourceLoader::ResourceLoader()
 {
 	OnCreate();
 }
 
-ResourceLoader::~ResourceLoader()
-{
+ResourceLoader::~ResourceLoader() {
 	OnDestroy();
 }
 
 BaseAction * ResourceLoader::ReturnAction(const FString name_)
 {
 	if (actionMap.Contains(name_)) {
-		BaseAction* baseAction = new BaseAction(actionMap[name_]->ReturnName(), actionMap[name_]->ReturnDiscription, actionMap[name_]->ReturnActionType(), actionMap[name_]->ReturnTargetType(), actionMap[name_]->ReturnInteractionType(), actionMap[name_]->ReturnStatActionType, actionMap[name_]->ReturnActionID(), false);
+		BaseAction* baseAction = new BaseAction(actionMap[name_]->ReturnName(), actionMap[name_]->ReturnDiscription(), actionMap[name_]->ReturnActionType(), actionMap[name_]->ReturnTargetType(), actionMap[name_]->ReturnInteractionType(), actionMap[name_]->ReturnStatActionType(), actionMap[name_]->ReturnActionID(), false);
 		return baseAction;
 	}
 	Debugger::SetSeverity(MessageType::E_ERROR);
@@ -62,7 +62,7 @@ bool ResourceLoader::CheckAction(const FString name_)
 bool ResourceLoader::CheckAction(const uint32 id_)
 {
 	for (auto actions : actionMap) {
-		if (actions.Value->ReturnActionID == id_) {
+		if (actions.Value->ReturnActionID() == id_) {
 			return true;
 		}
 	}
@@ -86,18 +86,17 @@ void ResourceLoader::OnCreate(){
 	// create in order command, abilty, items, then load into map.  
 	// use file manager
 	/// Get the Path for each Directory
-	FString CommandDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource"/*/Name of Command folder*/;
-	FString AbiltyDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource"/*/Name of Command folder*/;
-	FString ItemsDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource"/*/Name of Command folder*/;
+	FString ActionDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/ActionSheets"/*/Name of Command folder*/;
 
 	/// Verifiy that these Directories exist
-	BattleBoxFileManager::VerifyOnCreateDirectory(CommandDirectory);
-	BattleBoxFileManager::VerifyOnCreateDirectory(AbiltyDirectory);
-	BattleBoxFileManager::VerifyOnCreateDirectory(ItemsDirectory);
+	BattleBoxFileManager::VerifyOnCreateDirectory(ActionDirectory);
 	// Use the paths with the Json Receiver to get each object
 	// find the amount of files in the directory then call jsonRecevier to then add into the maps
-	JsonParse* json = new JsonParse();
+	JsonParse* json;
 	json->InitiateClass();
+	TArray<FString> FoundFiles; // TArray of found Files;
+	IFileManager::FindFiles(&FoundFiles, TCHAR_TO_ANSI(*ActionDirectory), ".json");
+	IFileManager::FindFiles()
 	// 
 	// create stat sheet objects
 	FString StatSheetDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
@@ -109,18 +108,20 @@ void ResourceLoader::OnCreate(){
 
 void ResourceLoader::OnDestroy()
 {
-	if (actionMap.Num > 0) {
+	if (actionMap.Num() > 0) {
 		for (auto actions : actionMap) {
 			delete actions.Value;
 			//actions.Value = nullptr;
 		}
 	}
-	if (statSheetMap.Num > 0) {
+	actionMap.Empty();
+	if (statSheetMap.Num() > 0) {
 		for (auto statSheet : statSheetMap) {
 			delete statSheet.Value;
 			//statSheet.Value = nullptr;
 		}
 	}
+	statSheetMap.Empty();
 }
 
 ResourceLoader * ResourceLoader::GetInstance()

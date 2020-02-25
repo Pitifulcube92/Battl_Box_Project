@@ -23,7 +23,7 @@ Equation::Equation(float scalar_, float rise_, float run_, float xIntercept_, EQ
 	xIntercept = xIntercept_;
 	equationType = equationType_;
 }
-Equation::Equation(Equation& const other_)
+Equation::Equation(const Equation&  other_)
 {
 	generalScalar = other_.ReturnGenrealScale();
 	rise = other_.ReturnRise();
@@ -129,7 +129,7 @@ float Equation::Linear(float input_)
 float Equation::Quadratic(float input_)
 {
 	// y = x^2 + x*b + c;
-	float y = FMath::Pow(input_, 2.0f);  + (xIntercept * input_) + rise;
+	float y = FMath::Pow(input_, 2.0f) + (xIntercept * input_) + rise;
 	return y;
 }
 

@@ -132,10 +132,10 @@ StatSheetObject::StatSheetObject(StatSheetData const data_)
 	//data.equipmentIDs
 	
 }
-StatSheetObject::StatSheetObject(StatSheetData const data_)
-{
-	name = data_.name;
-}
+//StatSheetObject::StatSheetObject(StatSheetData const data_) 
+//{
+//	name = data_.name;
+//}
 void StatSheetObject::SetName(const FString name_)
 {
 	name = name_;

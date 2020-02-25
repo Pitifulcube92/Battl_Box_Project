@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "ItemAction.h"
-#include "JsonReceiver.h"
+#include "JsonParse.h"
 
 
 ItemAction::ItemAction() : effectList(TArray<AbilityAction*>())

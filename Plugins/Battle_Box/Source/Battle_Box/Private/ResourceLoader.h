@@ -51,10 +51,10 @@ public:// Singleton stuff
 
 	void OnCreate(); 
 	void OnDestroy();
-
+	~ResourceLoader();
 private:
 	ResourceLoader();
-	~ResourceLoader();
+
 	static TMap<const FString, BaseAction* const> actionMap;
 	static TMap<const FString, StatSheetObject* const> statSheetMap;
 	static uint32 GetActionID(const std::string& key_);

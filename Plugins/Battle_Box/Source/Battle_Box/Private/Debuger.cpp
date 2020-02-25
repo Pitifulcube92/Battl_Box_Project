@@ -19,6 +19,9 @@ void Debugger::InitDebug()
 	}
 	currentType = MessageType::E_FATAL_ERROR;
 	UE_LOG(LogTemp, Log, TEXT("Debug Directory has been made!"));
+
+	
+	
 }
 void Debugger::Log(const MessageType type_, const FString& message_, const FString& fileName_, const int32 line_)
 {

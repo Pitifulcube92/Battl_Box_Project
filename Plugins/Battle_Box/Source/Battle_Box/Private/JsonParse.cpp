@@ -70,6 +70,7 @@ void JsonParse::InitiateClass()
 	JsonObject = MakeShareable(new FJsonObject);
 	Directory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
+	JsonReader = TJsonReaderFactory<>::Create(readFileString);
 	BattleBoxFileManager::VerifyOnCreateDirectory(Directory);
 }
 StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
@@ -98,18 +99,22 @@ StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 	}
 	//Create the sheet then
 	//Note:This function should return the StatSheetObject.
-	
+	Debugger::SetSeverity(MessageType::E_ERROR);
+	Debugger::Error("Json Parser Failed to parse StatSheetObject", "JsonParse.cpp", __LINE__);
+	return nullptr;
 }
 BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 {
 	//This will read from a json file for action object
 	//TODO:: Get the Functiuon to return a base action.
 	//Create the dirived class and return it as a base action.
-
+	
 	readFileString = BattleBoxFileManager::ReadFile(Directory + "/ActionSheets", fileName_);
 	JsonReader = TJsonReaderFactory<>::Create(readFileString);
+	
 	if (FJsonSerializer::Deserialize(JsonReader.ToSharedRef(), JsonObject))
 	{
+
 		//RTTI to find what the dirived action is 
 		ACTIONTYPE action =  static_cast<ACTIONTYPE>((int)JsonObject.Get()->GetNumberField("ActionType"));
 		if (action == ACTIONTYPE::E_COMMAND)
@@ -129,8 +134,8 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 			data.currentWeapon = static_cast<WEAPONTYPE>((int)JsonObject.Get()->GetNumberField("CurrentWeapon"));
 			data.commandActionID = static_cast<uint32>(JsonObject.Get()->GetNumberField("BaseActionID"));
 			
-			CommandAction* tmp = new CommandAction(data);
-			return dynamic_cast<BaseAction*>(data);
+			CommandAction* temp = new CommandAction(data);
+			return dynamic_cast<BaseAction*>(temp);
 		}
 		if (action == ACTIONTYPE::E_ITEM)
 		{
@@ -149,10 +154,11 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 
 			data.itemType = static_cast<ITEMTYPE>((int)JsonObject.Get()->GetIntegerField("ItemAction"));
 			data.value = JsonObject.Get()->GetIntegerField("Value");
-			data.effectIDList = TArray<uint32>(JsonObject.Get()->GetArrayField("EffectListID"));
-
-			ItemAction* tmp = new ItemAction(data);
-			return dynamic_cast<BaseAction*>(tmp);
+ 
+		//	data.effectIDList = (JsonObject.Get()->GetArrayField("EffectListID"));// this is causing a memory Conversion Error2440
+			
+			ItemAction* temp = new ItemAction(data);
+			return dynamic_cast<BaseAction*>(temp);
 		
 		}
 		if (action == ACTIONTYPE::E_ABILITY)
@@ -179,19 +185,27 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 			data.run = equationObject.Get()->GetNumberField("run");
 			data.xIntercept = equationObject.Get()->GetNumberField("xIntercept");
 
-			AbilityAction* tmp = new AbilityAction(data);
-			return dynamic_cast<BaseAction*>(tmp);
+			AbilityAction* temp = new AbilityAction(data);
+			return dynamic_cast<BaseAction*>(temp);
 		
 		}
+		Debugger::SetSeverity(MessageType::E_ERROR);
+		Debugger::Error("Json Parser Failed to parse ActionObject ActionType", "JsonParse.cpp", __LINE__);
+		return nullptr;
 	}
+	Debugger::SetSeverity(MessageType::E_ERROR);
+	Debugger::Error("Json Parser Failed to parse ActionObject", "JsonParse.cpp", __LINE__);
+	return nullptr;
 }
 void JsonParse::WriteStatSheetObject(StatSheetObject* const sheet_)
 {
 	//This will write to a json file for a statsheetobject
 	//TODO: Write the object, serialize, save it to a file
 	//Note: Make that takes in IDs instead of than actual maps.
+	Debugger::SetSeverity(MessageType::E_INFO);
+	Debugger::Info(sheet_->ReturnName(), "JsonParser.cpp", __LINE__);
 
-	JsonObject.Get()->SetStringField("Name", sheet_->ReturnName());
+	JsonObject.Get()->SetStringField("Name",sheet_->ReturnName());
 	JsonObject.Get()->SetStringField("Tag", sheet_->ReturnTag());
 	JsonObject.Get()->SetArrayField("Commands", MakeIDJsonArray(sheet_, "commands"));
 	JsonObject.Get()->SetArrayField("Items", MakeIDJsonArray(sheet_, "items"));
@@ -208,20 +222,21 @@ void JsonParse::WriteStatSheetObject(StatSheetObject* const sheet_)
 
 	
 	FJsonSerializer::Serialize(JsonObject.ToSharedRef(), JsonWriter.ToSharedRef());
-	BattleBoxFileManager::WriteTextFile(Directory, writeFileString, sheet_->ReturnName() + ".json", false);
+	BattleBoxFileManager::WriteTextFile(Directory + "/StatSheets", writeFileString,  sheet_->ReturnName()+".json", false);
 	ResetJsonObject();
 }
 void JsonParse::WriteActionObject(BaseAction* const action_)
 {
 	//This will write to a json file for a action object
 	//TODO:: Write the object, serialize, save it to a file.
+	Debugger::SetSeverity(MessageType::E_INFO);
 	
-
 	if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 	{
 		CommandAction* command = dynamic_cast<CommandAction*>(action_);
 
-		JsonObject.Get()->SetStringField("Name", command->ReturnName());
+
+		JsonObject.Get()->SetStringField("Name", command->ReturnDiscription());
 		JsonObject.Get()->SetStringField("Discription", command->ReturnDiscription());
 		JsonObject.Get()->SetNumberField("ActionID", static_cast<double>(command->ReturnActionID()));
 		JsonObject.Get()->SetNumberField("ActionType", static_cast<double>(command->ReturnActionID()));
@@ -232,7 +247,9 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("BaseActionID", static_cast<double>(command->ReturnAction()->ReturnActionID()));
 
 		JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
-		BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
+
+		FJsonSerializer::Serialize(JsonObject.ToSharedRef(), JsonWriter.ToSharedRef());
+		BattleBoxFileManager::WriteTextFile(Directory + "/ActionSheets", writeFileString, action_->ReturnName() + ".json", false);
 	}
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
@@ -262,8 +279,11 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 		{
 			statObject.Get()->SetNumberField(i.Key, i.Value);
 		}
+
 		JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
-		BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
+
+		FJsonSerializer::Serialize(JsonObject.ToSharedRef(), JsonWriter.ToSharedRef());
+		BattleBoxFileManager::WriteTextFile(Directory + "/ActionSheets", writeFileString, action_->ReturnName() + ".json", false);
 	}
 	if(action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 	{
@@ -279,7 +299,7 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetNumberField("Duration", static_cast<double>(Ability->ReturnDuration()));
 		JsonObject.Get()->SetNumberField("AbilityValue", static_cast<double>(Ability->ReturnAbilityValue()));
 		JsonObject.Get()->SetNumberField("AbilityType", static_cast<double>(Ability->ReturnAbilityType()));
-		TSharedPtr<FJsonObject> equationObject;
+		TSharedPtr<FJsonObject> equationObject = MakeShareable(new FJsonObject);
 		equationObject.Get()->SetNumberField("generalScaler", static_cast<double>(Ability->ReturnEquationObject()->ReturnGenrealScale()));
 		equationObject.Get()->SetNumberField("rise", static_cast<double>(Ability->ReturnEquationObject()->ReturnRise()));
 		equationObject.Get()->SetNumberField("run", static_cast<double>(Ability->ReturnEquationObject()->ReturnRun()));
@@ -288,8 +308,10 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 		JsonObject.Get()->SetObjectField("EquationObject", equationObject);
 		TArray<TSharedPtr<FJsonValue>> Array;
 		
-	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
-	BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action_->ReturnName() + ".json", false);
+		JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
+
+		FJsonSerializer::Serialize(JsonObject.ToSharedRef(), JsonWriter.ToSharedRef());
+		BattleBoxFileManager::WriteTextFile(Directory + "/ActionSheets", writeFileString, action_->ReturnName() + ".json", false);
 	}
 	ResetJsonObject();
 }

@@ -28,7 +28,7 @@ class BATTLE_BOX_API Equation
 public:
 	Equation();
 	Equation(float scalar_, float rise_, float run_, float xIntercept_, EQUATION_TYPE equationType_);
-	Equation(Equation& const other_);
+	Equation(const Equation& other_);
 	~Equation();
 	float DetermineEquation(float input_);
 

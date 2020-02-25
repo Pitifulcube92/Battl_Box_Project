@@ -1,4 +1,10 @@
-INFO: Info is working. in Battle_Box.cpp. Line: 13
-ERROR: Error is working. in Battle_Box.cpp. Line: 16
-WARNING: Warning is Working. in Battle_Box.cpp. Line: 19
-FATALERROR: FatalError is working. in Battle_Box.cpp. Line: 22
+INFO: Resouce Abilty Check done correctly in Debugger.cpp. Line: 93
+INFO: Resouce Abilty Check done correctly in Debugger.cpp. Line: 98
+INFO: Resouce Abilty Check done correctly in Debugger.cpp. Line: 103
+INFO: Return Action Test: Name in Debuger.cpp. Line: 106
+INFO: Action of name: Namedoes not exist in resoruces in ResourceLoader.cpp. Line: 58
+INFO: Resouce Delete Check done correctly in Debugger.cpp. Line: 111
+INFO: Resouce StatSheetObject Check done correctly in Debugger.cpp. Line: 129
+INFO: ReturnStatSheetTest name is: StatSheetName in Debugger.cpp. Line: 131
+INFO: StatSheet of name: StatSheetNamedoes not exist in resoruces in ResourceLoader.cpp. Line: 80
+INFO: All Directories are made! in Battle_Box.cpp. Line: 20
