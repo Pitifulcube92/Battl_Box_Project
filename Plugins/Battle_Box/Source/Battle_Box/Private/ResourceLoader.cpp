@@ -86,23 +86,49 @@ void ResourceLoader::OnCreate(){
 	// create in order command, abilty, items, then load into map.  
 	// use file manager
 	/// Get the Path for each Directory
-	FString ActionDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/ActionSheets"/*/Name of Command folder*/;
-
+	FString ActionDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/ActionSheets";
+	TCHAR* fileEnd = _T(".json");	
 	/// Verifiy that these Directories exist
 	BattleBoxFileManager::VerifyOnCreateDirectory(ActionDirectory);
 	// Use the paths with the Json Receiver to get each object
 	// find the amount of files in the directory then call jsonRecevier to then add into the maps
-	JsonParse* json;
-	json->InitiateClass();
-	TArray<FString> FoundFiles; // TArray of found Files;
-	IFileManager::FindFiles(&FoundFiles, TCHAR_TO_ANSI(*ActionDirectory), ".json");
-	IFileManager::FindFiles()
-	// 
+	JsonParse* json = new JsonParse(); // create Json parser 
+	json->InitiateClass(); // initate class
+	TArray<FString> foundFiles;
+	IFileManager* DirectoryCheck =  &IFileManager::Get(); // IFilemanger
+	DirectoryCheck->FindFiles(foundFiles, *ActionDirectory, fileEnd); // found files will hold all the .json files in directory;
+	for (auto files : foundFiles) {
+		BaseAction* action = json->ReadActionObject(files);
+		if (action != nullptr) {
+			AddAction(action);
+			Debugger::SetSeverity(MessageType::E_INFO);
+			Debugger::Info("Action File with name: " + action->ReturnName() + " loaded", "ResourceLoader.cpp", __LINE__);
+		}
+		else {
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("Action File with name: " + files + " cannont be loaded", "ResourceLoader.cpp", __LINE__);
+		}
+	}
+	foundFiles.Empty();
+	 
 	// create stat sheet objects
-	FString StatSheetDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
+	FString StatSheetDirectory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource/StatSheets";
 
 	/// Verifiy that these Directories exist
-	BattleBoxFileManager::VerifyOnCreateDirectory(CommandDirectory);
+	BattleBoxFileManager::VerifyOnCreateDirectory(StatSheetDirectory);
+	DirectoryCheck->FindFiles(foundFiles, *StatSheetDirectory, fileEnd); // found files will hold all the .json files in directory;
+	for (auto files : foundFiles) {
+		StatSheetObject* statSheet = json->ReadStatSheetObject(files);
+		if (statSheet != nullptr) {
+			AddStatSheet(statSheet);
+			Debugger::SetSeverity(MessageType::E_INFO);
+			Debugger::Info("StatSheet File with name: " + statSheet->ReturnName() + " loaded", "ResourceLoader.cpp", __LINE__);
+		}
+		else {
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("StatSheet File with name: " + statSheet->ReturnName() + " cannont be loaded", "ResourceLoader.cpp", __LINE__);
+		}
+	}
 	// 
 }
 
