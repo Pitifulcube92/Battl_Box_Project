@@ -88,7 +88,7 @@ private:
 public:
 	JsonParse();
 	bool ResetJsonObject();
-	void InitiateClass();
+	bool InitiateClass();
 	StatSheetObject* ReadStatSheetObject(const FString fileName_);
 	BaseAction* ReadActionObject(const FString& fileName_);
 	void WriteStatSheetObject(StatSheetObject* const sheet_);

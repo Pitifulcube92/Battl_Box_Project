@@ -1,10 +1,1 @@
-INFO: Action File with name: Name loaded in ResourceLoader.cpp. Line: 105
-INFO: StatSheet File with name: StatSheetName loaded in ResourceLoader.cpp. Line: 125
-INFO: Action File with name: Name loaded in ResourceLoader.cpp. Line: 105
-INFO: StatSheet File with name: StatSheetName loaded in ResourceLoader.cpp. Line: 125
-INFO: Action File with name: Name loaded in ResourceLoader.cpp. Line: 105
-INFO: StatSheet File with name: StatSheetName loaded in ResourceLoader.cpp. Line: 125
-INFO: Resouce StatSheetObject Check done correctly in Debugger.cpp. Line: 105
-INFO: ReturnStatSheetTest name is: StatSheetName in Debugger.cpp. Line: 107
-INFO: StatSheet of name: StatSheetNamedoes not exist in resoruces in ResourceLoader.cpp. Line: 80
-INFO: All Directories are made! in Battle_Box.cpp. Line: 20
+INFO: All Directories are made! in Battle_Box.cpp. Line: 24

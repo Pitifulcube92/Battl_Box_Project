@@ -10,6 +10,10 @@
 void FBattle_BoxModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	//if (Debugger::InitDebug())
+	//{
+	//	ShutdownModule();
+	//}
 	Debugger::InitDebug();
 	Debugger::SetSeverity(MessageType::E_INFO);
 	if (BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource") &&
@@ -24,7 +28,6 @@ void FBattle_BoxModule::StartupModule()
 		Debugger::SetSeverity(MessageType::E_INFO);
 		Debugger::Error("A Directoy was not made!", "Battle_Box.cpp", __LINE__);
 	}
-
 }
 
 void FBattle_BoxModule::ShutdownModule()

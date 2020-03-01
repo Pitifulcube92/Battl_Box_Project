@@ -65,13 +65,17 @@
 JsonParse::JsonParse()
 {
 }
-void JsonParse::InitiateClass()
+bool JsonParse::InitiateClass()
 {
 	JsonObject = MakeShareable(new FJsonObject);
 	Directory = FPaths::ProjectPluginsDir() + "/Battle_Box/FileResource";
 	JsonWriter = TJsonWriterFactory<>::Create(&writeFileString);
 	JsonReader = TJsonReaderFactory<>::Create(readFileString);
-	BattleBoxFileManager::VerifyOnCreateDirectory(Directory);
+
+	if (JsonObject && JsonWriter && JsonReader &&BattleBoxFileManager::VerifyOnCreateDirectory(Directory))
+		return true;
+	else
+		return false;
 }
 StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 {		
@@ -234,7 +238,6 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 	if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 	{
 		CommandAction* command = dynamic_cast<CommandAction*>(action_);
-
 
 		JsonObject.Get()->SetStringField("Name", command->ReturnDiscription());
 		JsonObject.Get()->SetStringField("Discription", command->ReturnDiscription());
