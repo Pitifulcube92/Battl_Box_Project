@@ -1,12 +1,10 @@
 <map id="FBattle_BoxModule::StartupModule" name="FBattle_BoxModule::StartupModule">
-<area shape="rect" id="node1" title="IModuleInterface implementation." alt="" coords="5,125,149,166"/>
-<area shape="rect" id="node2" href="$class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="216,107,329,133"/>
-<area shape="rect" id="node5" href="$class_debugger_a34151070033a196f3a220dd0297fd3d6.html#a34151070033a196f3a220dd0297fd3d6" title="Sends a warning log to the dugger txt file." alt="" coords="201,157,344,184"/>
-<area shape="rect" id="node6" href="$class_debugger_aef91ed84489c9c928445e1f712d401de.html#aef91ed84489c9c928445e1f712d401de" title="Sends a info log to the debugger txt file." alt="" coords="220,5,325,32"/>
-<area shape="rect" id="node7" href="$class_debugger_a9ab35dcd08d8f181e262f4c8fb1ec892.html#a9ab35dcd08d8f181e262f4c8fb1ec892" title="Initiates the debugger." alt="" coords="203,259,342,285"/>
-<area shape="rect" id="node9" href="$class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="197,208,348,235"/>
-<area shape="rect" id="node10" href="$class_debugger_a6f945a47fa65d5eb4f93a1db124324f3.html#a6f945a47fa65d5eb4f93a1db124324f3" title="Sends a warrning log to the debugger txt file." alt="" coords="204,56,341,83"/>
-<area shape="rect" id="node3" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="428,107,535,133"/>
-<area shape="rect" id="node4" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="615,99,767,141"/>
-<area shape="rect" id="node8" href="$class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa.html#aac6c3bb192936f4f22b4e93090cd45aa" title="Check and creates if there is a directory." alt="" coords="396,251,567,293"/>
+<area shape="rect" id="node1" title="IModuleInterface implementation." alt="" coords="5,99,149,141"/>
+<area shape="rect" id="node2" href="$class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="216,5,329,32"/>
+<area shape="rect" id="node5" href="$class_debugger_aef91ed84489c9c928445e1f712d401de.html#aef91ed84489c9c928445e1f712d401de" title="Sends a info log to the debugger txt file." alt="" coords="220,56,325,83"/>
+<area shape="rect" id="node6" href="$class_debugger_a9ab35dcd08d8f181e262f4c8fb1ec892.html#a9ab35dcd08d8f181e262f4c8fb1ec892" title="Initiates the debugger." alt="" coords="203,107,342,133"/>
+<area shape="rect" id="node7" href="$class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa.html#aac6c3bb192936f4f22b4e93090cd45aa" title="Check and creates if there is a directory." alt="" coords="396,129,567,170"/>
+<area shape="rect" id="node8" href="$class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2" title="Sets the severity." alt="" coords="197,208,348,235"/>
+<area shape="rect" id="node3" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="428,56,535,83"/>
+<area shape="rect" id="node4" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="615,49,767,90"/>
 </map>

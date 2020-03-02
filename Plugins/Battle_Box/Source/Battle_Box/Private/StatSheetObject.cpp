@@ -5,6 +5,7 @@
 #include "ActionClasses/CommandAction.h"
 #include "ActionClasses/ItemAction.h"
 #include "ActionClasses/AbilityAction.h"
+#include "ResourceLoader.h"
 #include "Debugger.h"
 
 StatSheetObject::StatSheetObject() : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())
@@ -32,6 +33,109 @@ StatSheetObject::StatSheetObject(StatSheetObject* const other_)
 	statMap = other_->ReturnStatMap();
 
 }
+StatSheetObject::StatSheetObject(StatSheetData const data_)
+{
+	name = data_.name;
+	tag = data_.tag;
+	statMap = data_.statMap;
+	for(uint32 ID : data_.commandMapID)
+	{
+		if (ResourceLoader::GetInstance()->CheckAction(ID))
+		{
+			if(ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_COMMAND)
+			{
+				CommandAction* command = dynamic_cast<CommandAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				commandMap.Add(command->ReturnName(), command);
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Action command was not Added to the map.", "StatSheetObject.cpp", __LINE__);
+			}
+		}
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("No Action command was found with this ID.", "StatSheetObject.cpp", __LINE__);
+		}
+	}
+
+	for (uint32 ID : data_.itemMapID)
+	{
+		if (ResourceLoader::GetInstance()->CheckAction(ID))
+		{
+			if (ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_ITEM)
+			{
+				ItemAction* command = dynamic_cast<ItemAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				itemMap.Add(command->ReturnName(), command);
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Action Item was not Added to the map.", "StatSheetObject.cpp", __LINE__);
+			}
+		}
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("No Action Item was found with this ID.", "StatSheetObject.cpp", __LINE__);
+		}
+	}
+	for (uint32 ID : data_.abilityMapID)
+	{
+		if (ResourceLoader::GetInstance()->CheckAction(ID))
+		{
+			if (ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_ABILITY)
+			{
+				AbilityAction* command = dynamic_cast<AbilityAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				abilityMap.Add(command->ReturnName(), command);
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Action Ability was not Added to the map.", "StatSheetObject.cpp", __LINE__);
+			}
+		}
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("No Action Ability was found with this ID.", "StatSheetObject.cpp", __LINE__);
+		}
+	}
+	for (uint32 ID : data_.equipmentMapID)
+	{
+
+		if (ResourceLoader::GetInstance()->CheckAction(ID))
+		{
+			if (ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_ITEM)
+			{
+				ItemAction* command = dynamic_cast<ItemAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				equipmentMap.Add(command->ReturnName(), command);
+			}
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Action Equipment was not Added to the map.", "StatSheetObject.cpp", __LINE__);
+			}
+		}
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("No Action Item was found with this ID.", "StatSheetObject.cpp", __LINE__);
+		}
+	}
+	//Note: This part is where you search through the id list 
+	//and find the action in the resource class
+	//data.commandIDs
+	//data.ItemIDs
+	//data.abilityIDs
+	//data.equipmentIDs
+	
+}
+//StatSheetObject::StatSheetObject(StatSheetData const data_) 
+//{
+//	name = data_.name;
+//}
 void StatSheetObject::SetName(const FString name_)
 {
 	name = name_;

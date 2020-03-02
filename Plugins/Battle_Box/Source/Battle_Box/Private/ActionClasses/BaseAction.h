@@ -4,28 +4,28 @@
 #include "CoreMinimal.h"
 enum class ACTIONTYPE
 {
-	E_NONE,
-	E_COMMAND,
+	E_NONE = 1,
+	E_COMMAND ,
 	E_ITEM,
 	E_ABILITY
 };
 
 enum class TARGETTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_TARGET_ENEMY,
 	E_ALL_ENEMIES,
 	E_RANDOM_ENEMY,
 	E_ALLY,
 	E_ALL_ALLY,
 	E_ALLY_KO,
-	E_ALL_ALLY_KO,
+	E_ALL_ALLY_KO ,
 	E_USER
 };
 
 enum class INTERACTIONTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_PHYSICAL,
 	E_ABILITY,
 	E_PHYSICAL_AND_ABILITY
@@ -33,7 +33,7 @@ enum class INTERACTIONTYPE
 
 enum class DAMAGETYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_HP_DAMAGE,
 	E_MP_DAMAGE,
 	E_HP_RECOVER,
@@ -42,7 +42,7 @@ enum class DAMAGETYPE
 
 enum class ELEMENTTYPE
 {
-	E_NONE,
+	E_NONE = 1,
 	E_FLAME,
 	E_WATER,
 	E_EARTH,
@@ -55,14 +55,14 @@ enum class ELEMENTTYPE
 
 enum class STATACTION
 {
-	E_NONE,
+	E_NONE = 1,
 	E_ADD,
 	E_REMOVE,
 	E_TMP_ADD,
 	E_TMP_REMOVE
 };
 
-class BaseAction
+class BATTLE_BOX_API BaseAction
 {
 private:
 	FString name;
@@ -75,8 +75,9 @@ private:
 public:
 	BaseAction();
 	///Base Construction
-	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_);
+	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, bool IsFirstInstance_);
 	BaseAction(const BaseAction* other_);
+	uint32 GenerateID();
 	///Sets Name.
 	void SetName(const FString name_);
 	///Sets Discription.

@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Ability\+Action\+:
-\nopagebreak
+Inheritance diagram for Ability\+Action\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Ability\+Action\+:
 \end{figure}
 
 
-Collaboration diagram for Ability\+Action\+:
-\nopagebreak
+Collaboration diagram for Ability\+Action\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,9 +31,13 @@ Collaboration diagram for Ability\+Action\+:
 \item 
 \textbf{ Ability\+Action} (const F\+String name\+\_\+, const F\+String discription\+\_\+, const \textbf{ A\+C\+T\+I\+O\+N\+T\+Y\+PE} action\+\_\+, const \textbf{ T\+A\+R\+G\+E\+T\+T\+Y\+PE} target\+\_\+, const \textbf{ I\+N\+T\+E\+R\+A\+C\+T\+I\+O\+N\+T\+Y\+PE} interaction\+\_\+, const uint32 action\+I\+D\+\_\+, T\+Map$<$ F\+String, float $>$ stat\+Map\+\_\+, const float duration\+\_\+, \textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+PE} type\+\_\+)
 \item 
+uint32 \textbf{ Generate\+ID} ()
+\item 
 void \textbf{ On\+Destroy} ()
 \item 
 \textbf{ A\+B\+I\+L\+I\+T\+Y\+T\+Y\+PE} \textbf{ Return\+Ability\+Type} () const
+\item 
+float \textbf{ Return\+Ability\+Value} () const
 \item 
 uint32 \textbf{ Return\+Action\+ID} () const
 \begin{DoxyCompactList}\small\item\em Return Action ID. \end{DoxyCompactList}\item 
@@ -225,13 +227,13 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 63 of file Ability\+Action.\+cpp.
+Definition at line 69 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64 \{}
-\DoxyCodeLine{65     OnDestroy();}
-\DoxyCodeLine{66 \}}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71     OnDestroy();}
+\DoxyCodeLine{72 \}}
 
 \end{DoxyCode}
 
@@ -262,9 +264,36 @@ Definition at line 35 of file Ability\+Action.\+cpp.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{36 \{}
 \DoxyCodeLine{37     \textcolor{comment}{//TO DO: implement an equation class.}}
-\DoxyCodeLine{38 \}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{float} tmp = 0.0f;}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} tmp;}
+\DoxyCodeLine{40 \}}
 
 \end{DoxyCode}
+\mbox{\label{class_base_action_a80dc1d2e5e063d01e7e52f17639fda66_a80dc1d2e5e063d01e7e52f17639fda66}} 
+\index{AbilityAction@{AbilityAction}!GenerateID@{GenerateID}}
+\index{GenerateID@{GenerateID}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{GenerateID()}
+{\footnotesize\ttfamily uint32 Base\+Action\+::\+Generate\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 39 of file Base\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{comment}{//Generate a uniqe ID for the action when made.}}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} (uint32)FMath::FRandRange(0.0f, 100000.0f);}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_action_a80dc1d2e5e063d01e7e52f17639fda66_a80dc1d2e5e063d01e7e52f17639fda66_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_ability_action_a3cfd96681aa0b7d4207abff747cb9731_a3cfd96681aa0b7d4207abff747cb9731}} 
 \index{AbilityAction@{AbilityAction}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!AbilityAction@{AbilityAction}}
@@ -273,13 +302,13 @@ Definition at line 35 of file Ability\+Action.\+cpp.
 
 
 
-Definition at line 59 of file Ability\+Action.\+cpp.
+Definition at line 65 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{60 \{}
-\DoxyCodeLine{61     \textcolor{comment}{//This will clear out any data.}}
-\DoxyCodeLine{62 \}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67     \textcolor{comment}{//This will clear out any data.}}
+\DoxyCodeLine{68 \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
@@ -297,19 +326,54 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 55 of file Ability\+Action.\+cpp.
+Definition at line 57 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56 \{}
-\DoxyCodeLine{57     \textcolor{keywordflow}{return} abilityType;}
-\DoxyCodeLine{58 \}}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} abilityType;}
+\DoxyCodeLine{60 \}}
 
 \end{DoxyCode}
 
 
 References ability\+Type.
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ability_action_a8a618f375b60b470cd110f6c004f6657_a8a618f375b60b470cd110f6c004f6657_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_ability_action_ade9f4676b3ef86dcef8abd98a3c61084_ade9f4676b3ef86dcef8abd98a3c61084}} 
+\index{AbilityAction@{AbilityAction}!ReturnAbilityValue@{ReturnAbilityValue}}
+\index{ReturnAbilityValue@{ReturnAbilityValue}!AbilityAction@{AbilityAction}}
+\doxysubsubsection{ReturnAbilityValue()}
+{\footnotesize\ttfamily float Ability\+Action\+::\+Return\+Ability\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 61 of file Ability\+Action.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} abilityValue;}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+
+
+References ability\+Value.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ability_action_ade9f4676b3ef86dcef8abd98a3c61084_ade9f4676b3ef86dcef8abd98a3c61084_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_base_action_a0954da9087f93b46ea68468de1ecce92_a0954da9087f93b46ea68468de1ecce92}} 
 \index{AbilityAction@{AbilityAction}!ReturnActionID@{ReturnActionID}}
 \index{ReturnActionID@{ReturnActionID}!AbilityAction@{AbilityAction}}
@@ -322,13 +386,13 @@ Return Action ID.
 
 
 
-Definition at line 85 of file Base\+Action.\+cpp.
+Definition at line 96 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{86 \{}
-\DoxyCodeLine{87     \textcolor{keywordflow}{return} actionID;}
-\DoxyCodeLine{88 \}}
+\DoxyCodeLine{97 \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{return} actionID;}
+\DoxyCodeLine{99 \}}
 
 \end{DoxyCode}
 
@@ -354,21 +418,20 @@ Return action type.
 
 
 
-Definition at line 69 of file Base\+Action.\+cpp.
+Definition at line 80 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{70 \{}
-\DoxyCodeLine{71     \textcolor{keywordflow}{return} action;}
-\DoxyCodeLine{72 \}}
+\DoxyCodeLine{81 \{}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} action;}
+\DoxyCodeLine{83 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::action.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -387,13 +450,13 @@ Return discription.
 
 
 
-Definition at line 65 of file Base\+Action.\+cpp.
+Definition at line 76 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{66 \{}
-\DoxyCodeLine{67     \textcolor{keywordflow}{return} discription;}
-\DoxyCodeLine{68 \}}
+\DoxyCodeLine{77 \{}
+\DoxyCodeLine{78     \textcolor{keywordflow}{return} discription;}
+\DoxyCodeLine{79 \}}
 
 \end{DoxyCode}
 
@@ -415,21 +478,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 43 of file Ability\+Action.\+cpp.
+Definition at line 45 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{44 \{}
-\DoxyCodeLine{45     \textcolor{keywordflow}{return} duration;}
-\DoxyCodeLine{46 \}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} duration;}
+\DoxyCodeLine{48 \}}
 
 \end{DoxyCode}
 
 
 References duration.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -448,21 +510,20 @@ Return Interaction type.
 
 
 
-Definition at line 77 of file Base\+Action.\+cpp.
+Definition at line 88 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{78 \{}
-\DoxyCodeLine{79     \textcolor{keywordflow}{return} interaction;}
-\DoxyCodeLine{80 \}}
+\DoxyCodeLine{89 \{}
+\DoxyCodeLine{90     \textcolor{keywordflow}{return} interaction;}
+\DoxyCodeLine{91 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::interaction.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -477,21 +538,20 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 47 of file Ability\+Action.\+cpp.
+Definition at line 49 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{48 \{}
-\DoxyCodeLine{49     \textcolor{keywordflow}{return} modStatMap;}
-\DoxyCodeLine{50 \}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} modStatMap;}
+\DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
 
 
 References mod\+Stat\+Map.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -508,8 +568,7 @@ Here is the caller graph for this function\+:
 
 Return Name. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -528,21 +587,20 @@ Returns the stat action type.
 
 
 
-Definition at line 81 of file Base\+Action.\+cpp.
+Definition at line 92 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{82 \{}
-\DoxyCodeLine{83     \textcolor{keywordflow}{return} statAction;}
-\DoxyCodeLine{84 \}}
+\DoxyCodeLine{93 \{}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} statAction;}
+\DoxyCodeLine{95 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Action\+::stat\+Action.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -561,13 +619,13 @@ Return target type.
 
 
 
-Definition at line 73 of file Base\+Action.\+cpp.
+Definition at line 84 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{74 \{}
-\DoxyCodeLine{75     \textcolor{keywordflow}{return} target;}
-\DoxyCodeLine{76 \}}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} target;}
+\DoxyCodeLine{87 \}}
 
 \end{DoxyCode}
 
@@ -589,13 +647,13 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 51 of file Ability\+Action.\+cpp.
+Definition at line 53 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{52 \{}
-\DoxyCodeLine{53     abilityType = type\_;}
-\DoxyCodeLine{54 \}}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     abilityType = type\_;}
+\DoxyCodeLine{56 \}}
 
 \end{DoxyCode}
 
@@ -614,13 +672,13 @@ Sets action ID.
 
 
 
-Definition at line 57 of file Base\+Action.\+cpp.
+Definition at line 68 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{58 \{}
-\DoxyCodeLine{59     actionID = actionID\_;}
-\DoxyCodeLine{60 \}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     actionID = actionID\_;}
+\DoxyCodeLine{71 \}}
 
 \end{DoxyCode}
 
@@ -646,13 +704,13 @@ Sets Actiontype.
 
 
 
-Definition at line 41 of file Base\+Action.\+cpp.
+Definition at line 52 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{42 \{}
-\DoxyCodeLine{43     action = type\_;}
-\DoxyCodeLine{44 \}}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54     action = type\_;}
+\DoxyCodeLine{55 \}}
 
 \end{DoxyCode}
 
@@ -678,13 +736,13 @@ Sets Discription.
 
 
 
-Definition at line 37 of file Base\+Action.\+cpp.
+Definition at line 48 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38 \{}
-\DoxyCodeLine{39     discription = discription\_;}
-\DoxyCodeLine{40 \}}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50     discription = discription\_;}
+\DoxyCodeLine{51 \}}
 
 \end{DoxyCode}
 
@@ -706,13 +764,13 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 39 of file Ability\+Action.\+cpp.
+Definition at line 41 of file Ability\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{40 \{}
-\DoxyCodeLine{41     duration = duration\_;}
-\DoxyCodeLine{42 \}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     duration = duration\_;}
+\DoxyCodeLine{44 \}}
 
 \end{DoxyCode}
 
@@ -731,13 +789,13 @@ Sets interaction type.
 
 
 
-Definition at line 49 of file Base\+Action.\+cpp.
+Definition at line 60 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{50 \{}
-\DoxyCodeLine{51     interaction = type\_;}
-\DoxyCodeLine{52 \}}
+\DoxyCodeLine{61 \{}
+\DoxyCodeLine{62     interaction = type\_;}
+\DoxyCodeLine{63 \}}
 
 \end{DoxyCode}
 
@@ -763,13 +821,13 @@ Sets Name.
 
 
 
-Definition at line 33 of file Base\+Action.\+cpp.
+Definition at line 44 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{34 \{}
-\DoxyCodeLine{35     name = name\_;}
-\DoxyCodeLine{36 \}}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     name = name\_;}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 
@@ -795,13 +853,13 @@ Set Stat Action type.
 
 
 
-Definition at line 53 of file Base\+Action.\+cpp.
+Definition at line 64 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{54 \{}
-\DoxyCodeLine{55     statAction = type\_;}
-\DoxyCodeLine{56 \}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66     statAction = type\_;}
+\DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
 
@@ -820,13 +878,13 @@ Sets target type.
 
 
 
-Definition at line 45 of file Base\+Action.\+cpp.
+Definition at line 56 of file Base\+Action.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{46 \{}
-\DoxyCodeLine{47     target = type\_;}
-\DoxyCodeLine{48 \}}
+\DoxyCodeLine{57 \{}
+\DoxyCodeLine{58     target = type\_;}
+\DoxyCodeLine{59 \}}
 
 \end{DoxyCode}
 

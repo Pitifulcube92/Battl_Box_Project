@@ -6,18 +6,7 @@
 
 
 
-Inheritance diagram for Damage\+Delt\+System\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=222pt]{class_damage_delt_system__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for Damage\+Delt\+System\+:
-\nopagebreak
+Collaboration diagram for Damage\+Delt\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -120,13 +109,13 @@ Definition at line 12 of file Damage\+Delt\+System.\+h.
 
 
 
-Definition at line 319 of file Damage\+Delt\+System.\+cpp.
+Definition at line 307 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{320 \{}
-\DoxyCodeLine{321     OnDestroy();}
-\DoxyCodeLine{322 \}}
+\DoxyCodeLine{308 \{}
+\DoxyCodeLine{309     OnDestroy();}
+\DoxyCodeLine{310 \}}
 
 \end{DoxyCode}
 
@@ -155,13 +144,13 @@ Adds another target to the array.
 
 
 
-Definition at line 275 of file Damage\+Delt\+System.\+cpp.
+Definition at line 263 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{276 \{}
-\DoxyCodeLine{277     targets.Add(target\_);}
-\DoxyCodeLine{278 \}}
+\DoxyCodeLine{264 \{}
+\DoxyCodeLine{265     targets.Add(target\_);}
+\DoxyCodeLine{266 \}}
 
 \end{DoxyCode}
 
@@ -172,7 +161,7 @@ References targets.
 \index{DamageDeltSystem@{DamageDeltSystem}!BaseCalculate@{BaseCalculate}}
 \index{BaseCalculate@{BaseCalculate}!DamageDeltSystem@{DamageDeltSystem}}
 \doxysubsubsection{BaseCalculate()}
-{\footnotesize\ttfamily void Damage\+Delt\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Singled\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Damage\+Delt\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Singled\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -180,139 +169,140 @@ System calculation.
 
 
 
-Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e076874bb2ef74d4d20e3c68e1_a94cbf2e076874bb2ef74d4d20e3c68e1}.
-
-
-
-Definition at line 16 of file Damage\+Delt\+System.\+cpp.
+Definition at line 18 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17 \{}
-\DoxyCodeLine{18     \textcolor{keywordflow}{if}(IsSingledTarget\_)}
-\DoxyCodeLine{19     \{}
-\DoxyCodeLine{20         \textcolor{keywordflow}{if} (singleTarget == \textcolor{keyword}{nullptr})}
-\DoxyCodeLine{21         \{}
-\DoxyCodeLine{22             \textcolor{comment}{//This will claculate any damage for a single target.}}
-\DoxyCodeLine{23             \textcolor{keywordflow}{switch} (action\_-\/>ReturnActionType())}
-\DoxyCodeLine{24             \{}
-\DoxyCodeLine{25             \textcolor{keywordflow}{case} ACTIONTYPE::E\_COMMAND:}
-\DoxyCodeLine{26                 \textcolor{comment}{//Command will do basic act with basic stats}}
-\DoxyCodeLine{27                 \textcolor{comment}{//TO DO: Check if there is any damage in this command.}}
-\DoxyCodeLine{28                 CommandAction* command = \textcolor{keyword}{dynamic\_cast<}CommandAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{29                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31             \textcolor{keywordflow}{case} ACTIONTYPE::E\_ITEM:}
-\DoxyCodeLine{32                 \textcolor{comment}{//Item will be sorted to what type then calculated for total damage.}}
-\DoxyCodeLine{33                 ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35                 \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_CONSUMABLE)}
-\DoxyCodeLine{36                 \{}
-\DoxyCodeLine{37                     totalDamageValue = CalculateItemDamage(item) -\/ CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);}
-\DoxyCodeLine{38                 \}}
-\DoxyCodeLine{39                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_WEAPON)}
-\DoxyCodeLine{40                 \{}
-\DoxyCodeLine{41                     totalDamageValue = CalculateItemDamage(item) -\/ CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);}
-\DoxyCodeLine{42                 \}}
-\DoxyCodeLine{43                 \textcolor{keywordflow}{else}}
-\DoxyCodeLine{44                 \{}
-\DoxyCodeLine{45                     Debugger::SetSeverity(MessageType::E\_ERROR);}
-\DoxyCodeLine{46                     Debugger::Error(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>ReturnName(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{47                     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{48                 \}}
-\DoxyCodeLine{49                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{50             \textcolor{keywordflow}{case} ACTIONTYPE::E\_ABILITY:}
-\DoxyCodeLine{51                 \textcolor{comment}{//ability will retreive the damage value if any.}}
-\DoxyCodeLine{52                 \textcolor{comment}{//TO DO: create an enum for what type of ability it is.}}
-\DoxyCodeLine{53                 AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{54                 CalculateAbilityDamage(ability);}
-\DoxyCodeLine{55                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{56             \}}
-\DoxyCodeLine{57             \textcolor{comment}{//TO DO: modify targets HP on stat system.}}
-\DoxyCodeLine{58             StatSystem::ModifiyStat(singleTarget, totalDamageValue, \textcolor{stringliteral}{"HP"});}
-\DoxyCodeLine{59         \}}
-\DoxyCodeLine{60         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{61         \{}
-\DoxyCodeLine{62             Debugger::SetSeverity(MessageType::E\_ERROR);}
-\DoxyCodeLine{63             Debugger::Error(\textcolor{stringliteral}{"Target not avalable. Please set target if null"}, \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{64             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{65         \}}
-\DoxyCodeLine{66     \}}
-\DoxyCodeLine{67     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!IsSingledTarget\_)}
-\DoxyCodeLine{68     \{}
-\DoxyCodeLine{69         \textcolor{keywordflow}{if} (targets.Num > 0)}
-\DoxyCodeLine{70         \{}
-\DoxyCodeLine{71             \textcolor{comment}{//This will calculate any damage for multiple targets.}}
-\DoxyCodeLine{72             \textcolor{keywordflow}{switch} (action\_-\/>ReturnActionType())}
-\DoxyCodeLine{73             \{}
-\DoxyCodeLine{74             \textcolor{keywordflow}{case} ACTIONTYPE::E\_COMMAND:}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if}(IsSingledTarget\_)}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (singleTarget == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{23         \{}
+\DoxyCodeLine{24             \textcolor{comment}{//This will claculate any damage for a single target.}}
+\DoxyCodeLine{25             \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_COMMAND)}
+\DoxyCodeLine{26             \{}
+\DoxyCodeLine{27                 \textcolor{comment}{//Command will do basic act with basic stats}}
+\DoxyCodeLine{28                 \textcolor{comment}{//TO DO: Check if there is any damage in this command.}}
+\DoxyCodeLine{29                 CommandAction* command = \textcolor{keyword}{dynamic\_cast<}CommandAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{30             \}}
+\DoxyCodeLine{31             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM) }
+\DoxyCodeLine{32             \{}
+\DoxyCodeLine{33                 \textcolor{comment}{//Item will be sorted to what type then calculated for total damage.}}
+\DoxyCodeLine{34                 ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36                 \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_CONSUMABLE)}
+\DoxyCodeLine{37                 \{}
+\DoxyCodeLine{38                     totalDamageValue = CalculateItemDamage(item) -\/ CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);}
+\DoxyCodeLine{39                 \}}
+\DoxyCodeLine{40                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_WEAPON)}
+\DoxyCodeLine{41                 \{}
+\DoxyCodeLine{42                     totalDamageValue = CalculateItemDamage(item) -\/ CalculateMagicalDefence(singleTarget) + CalculatePhysicalDefence(singleTarget);}
+\DoxyCodeLine{43                 \}}
+\DoxyCodeLine{44                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{45                 \{}
+\DoxyCodeLine{46                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{47                     Debugger::Error(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>ReturnName(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{48                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{49                 \}}
+\DoxyCodeLine{50             \}}
+\DoxyCodeLine{51             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{52             \{}
+\DoxyCodeLine{53                 \textcolor{comment}{//ability will retreive the damage value if any.}}
+\DoxyCodeLine{54                 \textcolor{comment}{//TO DO: create an enum for what type of ability it is.}}
+\DoxyCodeLine{55                 AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{56                 CalculateAbilityDamage(ability);}
+\DoxyCodeLine{57             \}}
+\DoxyCodeLine{58             \textcolor{comment}{//TO DO: modify targets HP on stat system.}}
+\DoxyCodeLine{59             StatSystem::ModifiyStat(singleTarget, totalDamageValue, \textcolor{stringliteral}{"HP"});}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{62         \{}
+\DoxyCodeLine{63             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{64             Debugger::Error(\textcolor{stringliteral}{"Target not avalable. Please set target if null"}, \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{65             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!IsSingledTarget\_)}
+\DoxyCodeLine{69     \{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{if} (targets.Num() > 0)}
+\DoxyCodeLine{71         \{}
+\DoxyCodeLine{72             \textcolor{comment}{//This will calculate any damage for multiple targets.}}
+\DoxyCodeLine{73             \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_COMMAND)}
+\DoxyCodeLine{74             \{}
 \DoxyCodeLine{75                 \textcolor{comment}{//Command will do basic act with basic stats}}
 \DoxyCodeLine{76                 \textcolor{comment}{//TO DO: Check if there is any damage in this command.}}
 \DoxyCodeLine{77                 CommandAction* command = \textcolor{keyword}{dynamic\_cast<}CommandAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{78                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{79             \textcolor{keywordflow}{case} ACTIONTYPE::E\_ITEM:}
-\DoxyCodeLine{80                 \textcolor{comment}{//Item will be sorted to what type then calculated for total damage.}}
-\DoxyCodeLine{81                 ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{82                 \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_CONSUMABLE)}
-\DoxyCodeLine{83                 \{}
-\DoxyCodeLine{84                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
-\DoxyCodeLine{85                     \{}
-\DoxyCodeLine{86                         totalDamageValues.Add(CalculateItemDamage(item) -\/ CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));}
-\DoxyCodeLine{87                     \}}
-\DoxyCodeLine{88                 \}}
-\DoxyCodeLine{89                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_WEAPON)}
-\DoxyCodeLine{90                 \{}
-\DoxyCodeLine{91                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
-\DoxyCodeLine{92                     \{}
-\DoxyCodeLine{93                         totalDamageValues.Add(CalculateItemDamage(item) -\/ CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));}
-\DoxyCodeLine{94                     \}}
-\DoxyCodeLine{95                 \}}
-\DoxyCodeLine{96                 \textcolor{keywordflow}{else}}
-\DoxyCodeLine{97                 \{}
-\DoxyCodeLine{98                     Debugger::SetSeverity(MessageType::E\_ERROR);}
-\DoxyCodeLine{99                     Debugger::Error(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>ReturnName(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{100                     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{101                 \}}
-\DoxyCodeLine{102                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{103             \textcolor{keywordflow}{case} ACTIONTYPE::E\_ABILITY:}
-\DoxyCodeLine{104                 \textcolor{comment}{//ability will retreive the damage value if any.}}
-\DoxyCodeLine{105                 \textcolor{comment}{//TO DO: create an enum for what type of ability it is.}}
-\DoxyCodeLine{106                 AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
-\DoxyCodeLine{107                 CalculateAbilityDamage(ability);}
-\DoxyCodeLine{108                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{109             \}}
-\DoxyCodeLine{110             \textcolor{comment}{//TO DO: Modify stats of HP in targets.}}
-\DoxyCodeLine{111             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num; i++)}
-\DoxyCodeLine{112             \{}
-\DoxyCodeLine{113                 StatSystem::ModifiyStat(targets[i], totalDamageValues[i], \textcolor{stringliteral}{"HP"});}
-\DoxyCodeLine{114             \}}
-\DoxyCodeLine{115         \}}
-\DoxyCodeLine{116         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{117         \{}
-\DoxyCodeLine{118             Debugger::SetSeverity(MessageType::E\_ERROR);}
-\DoxyCodeLine{119             Debugger::Error(\textcolor{stringliteral}{"No targets avalable it the array. Please insert a target before calculating."}, \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{120             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{121         \}}
-\DoxyCodeLine{122     \}}
-\DoxyCodeLine{123     \textcolor{comment}{//TO DO: After modification is done empty all information.}}
-\DoxyCodeLine{124     OnDestroy();}
-\DoxyCodeLine{125 \}}
+\DoxyCodeLine{78             \}}
+\DoxyCodeLine{79             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{80             \{}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82                 \textcolor{comment}{//Item will be sorted to what type then calculated for total damage.}}
+\DoxyCodeLine{83                 ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{84                 \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_CONSUMABLE)}
+\DoxyCodeLine{85                 \{}
+\DoxyCodeLine{86                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
+\DoxyCodeLine{87                     \{}
+\DoxyCodeLine{88                         totalDamageValues.Add(CalculateItemDamage(item) -\/ CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));}
+\DoxyCodeLine{89                     \}}
+\DoxyCodeLine{90                 \}}
+\DoxyCodeLine{91                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnItemType() == ITEMTYPE::E\_WEAPON)}
+\DoxyCodeLine{92                 \{}
+\DoxyCodeLine{93                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
+\DoxyCodeLine{94                     \{}
+\DoxyCodeLine{95                         totalDamageValues.Add(CalculateItemDamage(item) -\/ CalculateMagicalDefence(targets[i]) + CalculatePhysicalDefence(targets[i]));}
+\DoxyCodeLine{96                     \}}
+\DoxyCodeLine{97                 \}}
+\DoxyCodeLine{98                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{99                 \{}
+\DoxyCodeLine{100                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{101                     Debugger::Error(\textcolor{stringliteral}{"No Item to contain damage from: "} + item-\/>ReturnName(), \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{102                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{103                 \}}
+\DoxyCodeLine{104             \}}
+\DoxyCodeLine{105             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{106             \{}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108                 \textcolor{comment}{//ability will retreive the damage value if any.}}
+\DoxyCodeLine{109                 \textcolor{comment}{//TO DO: create an enum for what type of ability it is.}}
+\DoxyCodeLine{110                 AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{111                 CalculateAbilityDamage(ability);}
+\DoxyCodeLine{112             \}}
+\DoxyCodeLine{113             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{114             \{}
+\DoxyCodeLine{115                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{116                 Debugger::Error(\textcolor{stringliteral}{"No specified action was found!"}, \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{118             \}}
+\DoxyCodeLine{119             \textcolor{comment}{//TO DO: Modify stats of HP in targets.}}
+\DoxyCodeLine{120             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < targets.Num(); i++)}
+\DoxyCodeLine{121             \{}
+\DoxyCodeLine{122                 StatSystem::ModifiyStat(targets[i], totalDamageValues[i], \textcolor{stringliteral}{"HP"});}
+\DoxyCodeLine{123             \}}
+\DoxyCodeLine{124         \}}
+\DoxyCodeLine{125         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{126         \{}
+\DoxyCodeLine{127             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{128             Debugger::Error(\textcolor{stringliteral}{"No targets avalable it the array. Please insert a target before calculating."}, \textcolor{stringliteral}{"DamageDeltSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{129             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{130         \}}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132     \textcolor{comment}{//TO DO: After modification is done empty all information.}}
+\DoxyCodeLine{133     OnDestroy();}
+\DoxyCodeLine{134 \}}
 
 \end{DoxyCode}
 
 
 References Calculate\+Ability\+Damage(), Calculate\+Item\+Damage(), Calculate\+Magical\+Defence(), Calculate\+Physical\+Defence(), E\+\_\+\+A\+B\+I\+L\+I\+TY, E\+\_\+\+C\+O\+M\+M\+A\+ND, E\+\_\+\+C\+O\+N\+S\+U\+M\+A\+B\+LE, E\+\_\+\+E\+R\+R\+OR, E\+\_\+\+I\+T\+EM, E\+\_\+\+W\+E\+A\+P\+ON, Debugger\+::\+Error(), Stat\+System\+::\+Modifiy\+Stat(), On\+Destroy(), Base\+Action\+::\+Return\+Action\+Type(), Item\+Action\+::\+Return\+Item\+Type(), Base\+Action\+::\+Return\+Name(), Debugger\+::\+Set\+Severity(), single\+Target, targets, total\+Damage\+Value, and total\+Damage\+Values.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663_abd7f711f20dd60d57c896c02f159c663_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -331,30 +321,18 @@ Calculates the damage of a ability item.
 
 
 
-Definition at line 146 of file Damage\+Delt\+System.\+cpp.
+Definition at line 156 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{147 \{}
-\DoxyCodeLine{148     \textcolor{comment}{//Get the target action and get the damage value;}}
-\DoxyCodeLine{149     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{150     \textcolor{comment}{/*if (targetAbility\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}}
-\DoxyCodeLine{151 \textcolor{comment}{    \{}}
-\DoxyCodeLine{152 \textcolor{comment}{        target}}
-\DoxyCodeLine{153 \textcolor{comment}{    \}}}
-\DoxyCodeLine{154 \textcolor{comment}{    if (targetAbility\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}}
-\DoxyCodeLine{155 \textcolor{comment}{    \{}}
-\DoxyCodeLine{156 \textcolor{comment}{}}
-\DoxyCodeLine{157 \textcolor{comment}{    \}}}
-\DoxyCodeLine{158 \textcolor{comment}{    if(targetAbility\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}}
-\DoxyCodeLine{159 \textcolor{comment}{    \{}}
-\DoxyCodeLine{160 \textcolor{comment}{}}
-\DoxyCodeLine{161 \textcolor{comment}{    \}*/}}
-\DoxyCodeLine{162 \}}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158     \textcolor{comment}{//Get the target action and get the damage value;}}
+\DoxyCodeLine{159     \textcolor{keywordtype}{float} tmp = 0.0f;}
+\DoxyCodeLine{160     \textcolor{keywordflow}{return} tmp;}
+\DoxyCodeLine{161 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -373,21 +351,20 @@ Static moethod for the base function.
 
 
 
-Definition at line 126 of file Damage\+Delt\+System.\+cpp.
+Definition at line 135 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{127 \{}
-\DoxyCodeLine{128     BaseCalculate(IsSingledTarget\_, action\_);}
-\DoxyCodeLine{129 \}}
+\DoxyCodeLine{136 \{}
+\DoxyCodeLine{137     BaseCalculate(IsSingledTarget\_, action\_);}
+\DoxyCodeLine{138 \}}
 
 \end{DoxyCode}
 
 
 References Base\+Calculate().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -406,37 +383,26 @@ Calculates the damage of an item.
 
 
 
-Definition at line 163 of file Damage\+Delt\+System.\+cpp.
+Definition at line 162 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{164 \{}
-\DoxyCodeLine{165     \textcolor{comment}{//Get the target and get the damage Value;}}
-\DoxyCodeLine{166     \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
-\DoxyCodeLine{167     \{}
-\DoxyCodeLine{168         \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}];}
-\DoxyCodeLine{169     \}}
-\DoxyCodeLine{170     \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
-\DoxyCodeLine{171     \{}
-\DoxyCodeLine{172         \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
-\DoxyCodeLine{173     \}}
-\DoxyCodeLine{174     \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() ==INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
-\DoxyCodeLine{175     \{}
-\DoxyCodeLine{176         \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}] + targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
-\DoxyCodeLine{177     \}}
-\DoxyCodeLine{178     \textcolor{comment}{//switch (targetItem\_-\/>ReturnDamageType())}}
-\DoxyCodeLine{179     \textcolor{comment}{//\{}}
-\DoxyCodeLine{180     \textcolor{comment}{//case DAMAGETYPE::E\_HP\_DAMAGE:}}
-\DoxyCodeLine{181     \textcolor{comment}{//  //This will get the damage from the stat map}}
-\DoxyCodeLine{182     \textcolor{comment}{//  return targetItem\_-\/>ReturnStatMap()["Atk"];}}
-\DoxyCodeLine{183     \textcolor{comment}{//case DAMAGETYPE::E\_HP\_RECOVER:}}
-\DoxyCodeLine{184     \textcolor{comment}{//  return targetItem\_-\/>ReturnStatMap()["HP\_REC"];}}
-\DoxyCodeLine{185     \textcolor{comment}{//case DAMAGETYPE::E\_MP\_DAMAGE:}}
-\DoxyCodeLine{186     \textcolor{comment}{//  return targetItem\_-\/>ReturnStatMap()["M\_Atk"];}}
-\DoxyCodeLine{187     \textcolor{comment}{//case DAMAGETYPE::E\_MP\_RECOVER:}}
-\DoxyCodeLine{188     \textcolor{comment}{//  return targetItem\_-\/>ReturnStatMap()["M\_REC"];}}
-\DoxyCodeLine{189     \textcolor{comment}{//\}}}
-\DoxyCodeLine{190 \}}
+\DoxyCodeLine{163 \{}
+\DoxyCodeLine{164     \textcolor{comment}{//Get the target and get the damage Value;}}
+\DoxyCodeLine{165     \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
+\DoxyCodeLine{166     \{}
+\DoxyCodeLine{167         \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}];}
+\DoxyCodeLine{168     \}}
+\DoxyCodeLine{169     \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{170     \{}
+\DoxyCodeLine{171         \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173     \textcolor{keywordflow}{if} (targetItem\_-\/>ReturnInteractionType() ==INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
+\DoxyCodeLine{174     \{}
+\DoxyCodeLine{175         \textcolor{keywordflow}{return} targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}] + targetItem\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{176     \}}
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} 0.0f;}
+\DoxyCodeLine{178 \}}
 
 \end{DoxyCode}
 
@@ -450,8 +416,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be_a7b2fc3b7d84fa682d2132143443053be_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -470,47 +435,47 @@ Calculates the magical defence of the target.
 
 
 
-Definition at line 229 of file Damage\+Delt\+System.\+cpp.
+Definition at line 217 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{230 \{}
-\DoxyCodeLine{231     \textcolor{keywordtype}{float} magicDefence = 0.0f;}
-\DoxyCodeLine{232     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Helment"}))}
+\DoxyCodeLine{218 \{}
+\DoxyCodeLine{219     \textcolor{keywordtype}{float} magicDefence = 0.0f;}
+\DoxyCodeLine{220     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Helment"}))}
+\DoxyCodeLine{221     \{}
+\DoxyCodeLine{222         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Helment"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{223     \}}
+\DoxyCodeLine{224     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Chest\_Armor"}))}
+\DoxyCodeLine{225     \{}
+\DoxyCodeLine{226         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Chest\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Leg\_Armor"}))}
+\DoxyCodeLine{229     \{}
+\DoxyCodeLine{230         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Leg\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{231     \}}
+\DoxyCodeLine{232     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Boots"}))}
 \DoxyCodeLine{233     \{}
-\DoxyCodeLine{234         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Helment"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{234         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Boots"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
 \DoxyCodeLine{235     \}}
-\DoxyCodeLine{236     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Chest\_Armor"}))}
+\DoxyCodeLine{236     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accessory\_1"}))}
 \DoxyCodeLine{237     \{}
-\DoxyCodeLine{238         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Chest\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{238         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accessory\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
 \DoxyCodeLine{239     \}}
-\DoxyCodeLine{240     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Leg\_Armor"}))}
+\DoxyCodeLine{240     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accesory\_2"}))}
 \DoxyCodeLine{241     \{}
-\DoxyCodeLine{242         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Leg\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{242         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accesory\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
 \DoxyCodeLine{243     \}}
-\DoxyCodeLine{244     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Boots"}))}
+\DoxyCodeLine{244     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_1"}))}
 \DoxyCodeLine{245     \{}
-\DoxyCodeLine{246         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Boots"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{246         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
 \DoxyCodeLine{247     \}}
-\DoxyCodeLine{248     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accessory\_1"}))}
+\DoxyCodeLine{248     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_2"}))}
 \DoxyCodeLine{249     \{}
-\DoxyCodeLine{250         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accessory\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{250         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
 \DoxyCodeLine{251     \}}
-\DoxyCodeLine{252     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accesory\_2"}))}
-\DoxyCodeLine{253     \{}
-\DoxyCodeLine{254         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accesory\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
-\DoxyCodeLine{255     \}}
-\DoxyCodeLine{256     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_1"}))}
-\DoxyCodeLine{257     \{}
-\DoxyCodeLine{258         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
-\DoxyCodeLine{259     \}}
-\DoxyCodeLine{260     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_2"}))}
-\DoxyCodeLine{261     \{}
-\DoxyCodeLine{262         magicDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
-\DoxyCodeLine{263     \}}
-\DoxyCodeLine{264     magicDefence += target\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
-\DoxyCodeLine{265     \textcolor{keywordflow}{return} magicDefence;}
-\DoxyCodeLine{266 \}}
+\DoxyCodeLine{252     magicDefence += target\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Def"}];}
+\DoxyCodeLine{253     \textcolor{keywordflow}{return} magicDefence;}
+\DoxyCodeLine{254 \}}
 
 \end{DoxyCode}
 
@@ -524,8 +489,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9_ab04599079f9f0e8734678800df8bc6d9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -544,47 +508,47 @@ Calculates the physical defence of the target.
 
 
 
-Definition at line 191 of file Damage\+Delt\+System.\+cpp.
+Definition at line 179 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{192 \{}
-\DoxyCodeLine{193     \textcolor{keywordtype}{float} physicalDefence = 0.0f;}
-\DoxyCodeLine{194     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Helment"}))}
+\DoxyCodeLine{180 \{}
+\DoxyCodeLine{181     \textcolor{keywordtype}{float} physicalDefence = 0.0f;}
+\DoxyCodeLine{182     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Helment"}))}
+\DoxyCodeLine{183     \{}
+\DoxyCodeLine{184         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Helment"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{185     \}}
+\DoxyCodeLine{186     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Chest\_Armor"}))}
+\DoxyCodeLine{187     \{}
+\DoxyCodeLine{188         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Chest\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{189     \}}
+\DoxyCodeLine{190     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Leg\_Armor"}))}
+\DoxyCodeLine{191     \{}
+\DoxyCodeLine{192         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Leg\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Boots"}))}
 \DoxyCodeLine{195     \{}
-\DoxyCodeLine{196         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Helment"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{196         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Boots"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
 \DoxyCodeLine{197     \}}
-\DoxyCodeLine{198     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Chest\_Armor"}))}
+\DoxyCodeLine{198     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accessory\_1"}))}
 \DoxyCodeLine{199     \{}
-\DoxyCodeLine{200         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Chest\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{200         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accessory\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
 \DoxyCodeLine{201     \}}
-\DoxyCodeLine{202     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Leg\_Armor"}))}
+\DoxyCodeLine{202     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accesory\_2"}))}
 \DoxyCodeLine{203     \{}
-\DoxyCodeLine{204         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Leg\_Armor"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{204         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accesory\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
 \DoxyCodeLine{205     \}}
-\DoxyCodeLine{206     \textcolor{keywordflow}{if}(target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Boots"}))}
+\DoxyCodeLine{206     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_1"}))}
 \DoxyCodeLine{207     \{}
-\DoxyCodeLine{208         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Boots"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{208         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
 \DoxyCodeLine{209     \}}
-\DoxyCodeLine{210     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accessory\_1"}))}
+\DoxyCodeLine{210     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_2"}))}
 \DoxyCodeLine{211     \{}
-\DoxyCodeLine{212         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accessory\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{212         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
 \DoxyCodeLine{213     \}}
-\DoxyCodeLine{214     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Accesory\_2"}))}
-\DoxyCodeLine{215     \{}
-\DoxyCodeLine{216         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Accesory\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
-\DoxyCodeLine{217     \}}
-\DoxyCodeLine{218     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_1"}))}
-\DoxyCodeLine{219     \{}
-\DoxyCodeLine{220         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_1"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
-\DoxyCodeLine{221     \}}
-\DoxyCodeLine{222     \textcolor{keywordflow}{if} (target\_-\/>ReturnEquipmentMap().Contains(\textcolor{stringliteral}{"Weapon\_2"}))}
-\DoxyCodeLine{223     \{}
-\DoxyCodeLine{224         physicalDefence += target\_-\/>ReturnEquipmentMap()[\textcolor{stringliteral}{"Weapon\_2"}]-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
-\DoxyCodeLine{225     \}}
-\DoxyCodeLine{226     physicalDefence += target\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
-\DoxyCodeLine{227     \textcolor{keywordflow}{return} physicalDefence;}
-\DoxyCodeLine{228 \}}
+\DoxyCodeLine{214     physicalDefence += target\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Def"}];}
+\DoxyCodeLine{215     \textcolor{keywordflow}{return} physicalDefence;}
+\DoxyCodeLine{216 \}}
 
 \end{DoxyCode}
 
@@ -598,8 +562,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0_afe23abbc1d1f86ef88484692e4800fb0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -618,25 +581,26 @@ Claculates the damage of a weapon item.
 
 
 
-Definition at line 130 of file Damage\+Delt\+System.\+cpp.
+Definition at line 139 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{131 \{}
-\DoxyCodeLine{132     \textcolor{comment}{//This will return either magic, physical or both as a damage value;}}
-\DoxyCodeLine{133     \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
-\DoxyCodeLine{134     \{}
-\DoxyCodeLine{135         \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}];}
-\DoxyCodeLine{136     \}}
-\DoxyCodeLine{137     \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
-\DoxyCodeLine{138     \{}
-\DoxyCodeLine{139         \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
-\DoxyCodeLine{140     \}}
-\DoxyCodeLine{141     \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
-\DoxyCodeLine{142     \{}
-\DoxyCodeLine{143         \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}] + targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
-\DoxyCodeLine{144     \}}
-\DoxyCodeLine{145 \}}
+\DoxyCodeLine{140 \{}
+\DoxyCodeLine{141     \textcolor{comment}{//This will return either magic, physical or both as a damage value;}}
+\DoxyCodeLine{142     \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
+\DoxyCodeLine{143     \{}
+\DoxyCodeLine{144         \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}];}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146     \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{147     \{}
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (targetWeapon\_-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
+\DoxyCodeLine{151     \{}
+\DoxyCodeLine{152         \textcolor{keywordflow}{return} targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"Atk"}] + targetWeapon\_-\/>ReturnStatMap()[\textcolor{stringliteral}{"M\_Atk"}];}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154     \textcolor{keywordflow}{return} 0.0f;}
+\DoxyCodeLine{155 \}}
 
 \end{DoxyCode}
 
@@ -658,49 +622,48 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 279 of file Damage\+Delt\+System.\+cpp.
+Definition at line 267 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{280 \{}
-\DoxyCodeLine{281     \textcolor{comment}{//clean up any pointers}}
-\DoxyCodeLine{282     \textcolor{keywordflow}{if}(singleTarget)}
-\DoxyCodeLine{283     \{}
-\DoxyCodeLine{284         \textcolor{keyword}{delete} singleTarget;}
-\DoxyCodeLine{285         singleTarget = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{286     \}}
-\DoxyCodeLine{287     \textcolor{keywordflow}{if}(owner)}
-\DoxyCodeLine{288     \{}
-\DoxyCodeLine{289         \textcolor{keyword}{delete} owner;}
-\DoxyCodeLine{290         owner = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{291     \}}
-\DoxyCodeLine{292     \textcolor{keywordflow}{if}(targets.Num() > 0)}
-\DoxyCodeLine{293     \{}
-\DoxyCodeLine{294         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& elem : targets)}
-\DoxyCodeLine{295         \{}
-\DoxyCodeLine{296             \textcolor{keyword}{delete} elem;}
-\DoxyCodeLine{297             elem = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{298         \}}
-\DoxyCodeLine{299         targets.Empty();}
-\DoxyCodeLine{300     \}}
-\DoxyCodeLine{301     totalDamageValue = 0.0f;}
-\DoxyCodeLine{302     \textcolor{keywordflow}{if} (totalDamageValues.Num > 0)}
-\DoxyCodeLine{303     \{}
-\DoxyCodeLine{304         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} n : totalDamageValues)}
-\DoxyCodeLine{305         \{}
-\DoxyCodeLine{306             n = 0.0f;}
-\DoxyCodeLine{307         \}}
-\DoxyCodeLine{308         targets.Empty();}
-\DoxyCodeLine{309     \}}
-\DoxyCodeLine{310 \}}
+\DoxyCodeLine{268 \{}
+\DoxyCodeLine{269     \textcolor{comment}{//clean up any pointers}}
+\DoxyCodeLine{270     \textcolor{keywordflow}{if}(singleTarget)}
+\DoxyCodeLine{271     \{}
+\DoxyCodeLine{272         \textcolor{keyword}{delete} singleTarget;}
+\DoxyCodeLine{273         singleTarget = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{274     \}}
+\DoxyCodeLine{275     \textcolor{keywordflow}{if}(owner)}
+\DoxyCodeLine{276     \{}
+\DoxyCodeLine{277         \textcolor{keyword}{delete} owner;}
+\DoxyCodeLine{278         owner = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{279     \}}
+\DoxyCodeLine{280     \textcolor{keywordflow}{if}(targets.Num() > 0)}
+\DoxyCodeLine{281     \{}
+\DoxyCodeLine{282         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& elem : targets)}
+\DoxyCodeLine{283         \{}
+\DoxyCodeLine{284             \textcolor{keyword}{delete} elem;}
+\DoxyCodeLine{285             elem = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{286         \}}
+\DoxyCodeLine{287         targets.Empty();}
+\DoxyCodeLine{288     \}}
+\DoxyCodeLine{289     totalDamageValue = 0.0f;}
+\DoxyCodeLine{290     \textcolor{keywordflow}{if} (totalDamageValues.Num() > 0)}
+\DoxyCodeLine{291     \{}
+\DoxyCodeLine{292         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} n : totalDamageValues)}
+\DoxyCodeLine{293         \{}
+\DoxyCodeLine{294             n = 0.0f;}
+\DoxyCodeLine{295         \}}
+\DoxyCodeLine{296         targets.Empty();}
+\DoxyCodeLine{297     \}}
+\DoxyCodeLine{298 \}}
 
 \end{DoxyCode}
 
 
 References owner, single\+Target, targets, total\+Damage\+Value, and total\+Damage\+Values.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -731,13 +694,13 @@ Returns the damage value array.
 
 
 
-Definition at line 315 of file Damage\+Delt\+System.\+cpp.
+Definition at line 303 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{316 \{}
-\DoxyCodeLine{317     \textcolor{keywordflow}{return} totalDamageValues;}
-\DoxyCodeLine{318 \}}
+\DoxyCodeLine{304 \{}
+\DoxyCodeLine{305     \textcolor{keywordflow}{return} totalDamageValues;}
+\DoxyCodeLine{306 \}}
 
 \end{DoxyCode}
 
@@ -756,13 +719,13 @@ Returns the damage value.
 
 
 
-Definition at line 311 of file Damage\+Delt\+System.\+cpp.
+Definition at line 299 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{312 \{}
-\DoxyCodeLine{313     \textcolor{keywordflow}{return} totalDamageValue;}
-\DoxyCodeLine{314 \}}
+\DoxyCodeLine{300 \{}
+\DoxyCodeLine{301     \textcolor{keywordflow}{return} totalDamageValue;}
+\DoxyCodeLine{302 \}}
 
 \end{DoxyCode}
 
@@ -781,13 +744,13 @@ Sets who the owner of the damage.
 
 
 
-Definition at line 267 of file Damage\+Delt\+System.\+cpp.
+Definition at line 255 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{268 \{}
-\DoxyCodeLine{269     owner = owner\_;}
-\DoxyCodeLine{270 \}}
+\DoxyCodeLine{256 \{}
+\DoxyCodeLine{257     owner = owner\_;}
+\DoxyCodeLine{258 \}}
 
 \end{DoxyCode}
 
@@ -806,13 +769,13 @@ Sets the target who is being damaged.
 
 
 
-Definition at line 271 of file Damage\+Delt\+System.\+cpp.
+Definition at line 259 of file Damage\+Delt\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{272 \{}
-\DoxyCodeLine{273     singleTarget = target\_;}
-\DoxyCodeLine{274 \}}
+\DoxyCodeLine{260 \{}
+\DoxyCodeLine{261     singleTarget = target\_;}
+\DoxyCodeLine{262 \}}
 
 \end{DoxyCode}
 

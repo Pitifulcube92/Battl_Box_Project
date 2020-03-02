@@ -1,5 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "ItemAction.h"
+#include "ResourceLoader.h"
+#include "Private/ActionClasses/AbilityAction.h"
+#include "Debugger.h"
+
 
 ItemAction::ItemAction() : effectList(TArray<AbilityAction*>())
 {
@@ -34,6 +38,31 @@ ItemAction::ItemAction(const ItemAction* other_)
 	SetInteractionType(other_->ReturnInteractionType());
 	SetActionID(other_->ReturnActionID());
 	SetValue(other_->ReturnValue());
+}
+ItemAction::ItemAction(ItemData const data_)
+{
+	SetName(data_.name);
+	SetDiscription(data_.discription);
+	SetActionType(data_.actionType);
+	SetTargetType(data_.targetType);
+	SetInteractionType(data_.interactionType);
+	SetActionID(data_.actionID);
+	SetValue(data_.value);
+	//Note: This part it where we instantiate/find all the id actions to the 
+	//resource class.
+	for (uint32 i : data_.effectIDList)
+	{
+		if (ResourceLoader::CheckAction(i))
+		{
+			AbilityAction* tmp = dynamic_cast<AbilityAction*>(ResourceLoader::ReturnAction(i));
+			AddEffect(tmp);
+		}
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("Action is not found or does not exist.", "ItemAction.cpp", __LINE__);
+		}
+	}
 }
 void ItemAction::SetValue(const uint32 value_)
 {

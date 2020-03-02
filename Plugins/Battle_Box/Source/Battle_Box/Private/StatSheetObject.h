@@ -8,10 +8,11 @@
 class ItemAction;
 class CommandAction;
 class AbilityAction;
+struct StatSheetData;
 /**
  * 
  */
-class StatSheetObject
+class BATTLE_BOX_API StatSheetObject
 {
 private:
 	FString name;
@@ -26,6 +27,7 @@ public:
 	StatSheetObject();
 	StatSheetObject(const FString name_, const FString tag_, const TMap<FString, CommandAction*> commandMap_, const TMap<FString, ItemAction*> itemMap_, const TMap<FString, AbilityAction*> abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, ItemAction*> equipmentMap_);
 	StatSheetObject(StatSheetObject* const other_);
+	StatSheetObject(StatSheetData const data_);
 	///Sets name 
 	void SetName(const FString name_);
 	///Sets tag

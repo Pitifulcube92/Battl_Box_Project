@@ -1,4 +1,5 @@
 <map id="ItemAction::ReturnValue" name="ItemAction::ReturnValue">
-<area shape="rect" id="node1" title="Returnsitem value." alt="" coords="208,5,371,32"/>
-<area shape="rect" id="node2" href="$class_item_action_ae98143bbb738b0d4e6b98b84e1e45e05.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node1" title="Returnsitem value." alt="" coords="228,35,391,61"/>
+<area shape="rect" id="node2" href="$class_item_action_ae98143bbb738b0d4e6b98b84e1e45e05.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="15,5,170,32"/>
+<area shape="rect" id="node3" href="$class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942.html#ac033b297e7d4cb4ec8172e465bf00942" title=" " alt="" coords="5,57,180,98"/>
 </map>

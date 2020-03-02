@@ -1,0 +1,13 @@
+<map id="Equation::DetermineEquation" name="Equation::DetermineEquation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,196,184"/>
+<area shape="rect" id="node2" href="$class_equation_aa290f173368c66d2357412deb9482bfa.html#aa290f173368c66d2357412deb9482bfa" title=" " alt="" coords="258,5,379,32"/>
+<area shape="rect" id="node3" href="$class_equation_aa31b66402124f375460e12afcef8d624.html#aa31b66402124f375460e12afcef8d624" title=" " alt="" coords="269,56,368,83"/>
+<area shape="rect" id="node7" href="$class_debugger_a2d1f06f606185f51dc86b782e059ed48.html#a2d1f06f606185f51dc86b782e059ed48" title="Sends a error log to the debugger txt file." alt="" coords="453,157,567,184"/>
+<area shape="rect" id="node8" href="$class_equation_a15e43be45c5c7bfb8db493a7ced266f7.html#a15e43be45c5c7bfb8db493a7ced266f7" title=" " alt="" coords="244,107,393,133"/>
+<area shape="rect" id="node9" href="$class_equation_a25ef87522ac2a8d47c9cc0a70c222681.html#a25ef87522ac2a8d47c9cc0a70c222681" title=" " alt="" coords="261,208,377,235"/>
+<area shape="rect" id="node10" href="$class_equation_a4fe66e4dc05ec140bba3553c287eb0f8.html#a4fe66e4dc05ec140bba3553c287eb0f8" title=" " alt="" coords="250,259,387,285"/>
+<area shape="rect" id="node11" href="$class_equation_a4d0a72f3bf6cd5eb55e94e5f95a4f652.html#a4d0a72f3bf6cd5eb55e94e5f95a4f652" title=" " alt="" coords="265,309,372,336"/>
+<area shape="rect" id="node4" href="$class_debugger_a6f945a47fa65d5eb4f93a1db124324f3.html#a6f945a47fa65d5eb4f93a1db124324f3" title="Sends a warrning log to the debugger txt file." alt="" coords="441,107,579,133"/>
+<area shape="rect" id="node5" href="$class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da" title=" " alt="" coords="627,132,733,159"/>
+<area shape="rect" id="node6" href="$class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909" title="write multiple lines of string to a txt file." alt="" coords="781,125,933,166"/>
+</map>

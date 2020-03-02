@@ -1,5 +1,4 @@
 <map id="StatSystem" name="StatSystem">
-<area shape="rect" id="node1" title=" " alt="" coords="81,380,235,677"/>
-<area shape="rect" id="node2" href="$class_base_system.html" title=" " alt="" coords="5,115,132,207"/>
-<area shape="rect" id="node3" href="$class_stat_sheet_object.html" title=" " alt="" coords="157,5,341,317"/>
+<area shape="rect" id="node1" title=" " alt="" coords="20,380,175,677"/>
+<area shape="rect" id="node2" href="$class_stat_sheet_object.html" title=" " alt="" coords="5,5,189,317"/>
 </map>

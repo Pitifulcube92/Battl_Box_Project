@@ -1,6 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #include "StatSystem.h"
 #include "Containers/Map.h"
+#include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../SystemClasses/DamageDeltSystem.h"
@@ -174,6 +175,7 @@ void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const ac
 			}
 		}
 	}
+	OnDestroy();
 }
 
 void StatSystem::ModifiyStat(StatSheetObject* const target_, const float value, const FString name_)

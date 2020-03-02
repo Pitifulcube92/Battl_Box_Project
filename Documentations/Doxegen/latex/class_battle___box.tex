@@ -48,7 +48,7 @@ Definition at line 7 of file Battle\+\_\+\+Box.\+Build.\+cs.
 \DoxyCodeLine{7                                                   : base(Target)}
 \DoxyCodeLine{8     \{}
 \DoxyCodeLine{9         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;}
-\DoxyCodeLine{10         }
+\DoxyCodeLine{10         bUseRTTI = \textcolor{keyword}{true};}
 \DoxyCodeLine{11         PublicIncludePaths.AddRange(}
 \DoxyCodeLine{12             \textcolor{keyword}{new} \textcolor{keywordtype}{string}[] \{}
 \DoxyCodeLine{13                 \textcolor{comment}{// ... add public include paths required here ...}}
@@ -80,19 +80,21 @@ Definition at line 7 of file Battle\+\_\+\+Box.\+Build.\+cs.
 \DoxyCodeLine{39                 \textcolor{stringliteral}{"Engine"},}
 \DoxyCodeLine{40                 \textcolor{stringliteral}{"Slate"},}
 \DoxyCodeLine{41                 \textcolor{stringliteral}{"SlateCore"},}
-\DoxyCodeLine{42                 \textcolor{stringliteral}{"BB\_Runtime\_System"}}
-\DoxyCodeLine{43                 \textcolor{comment}{// ...   add private dependencies that you statically link with here ...    }}
-\DoxyCodeLine{44             \}}
-\DoxyCodeLine{45             );}
-\DoxyCodeLine{46         }
-\DoxyCodeLine{47         }
-\DoxyCodeLine{48         DynamicallyLoadedModuleNames.AddRange(}
-\DoxyCodeLine{49             \textcolor{keyword}{new} \textcolor{keywordtype}{string}[]}
-\DoxyCodeLine{50             \{}
-\DoxyCodeLine{51                 \textcolor{comment}{// ... add any modules that your module loads dynamically here ...}}
-\DoxyCodeLine{52             \}}
-\DoxyCodeLine{53             );}
-\DoxyCodeLine{54     \}}
+\DoxyCodeLine{42                 \textcolor{stringliteral}{"Json"},}
+\DoxyCodeLine{43                 \textcolor{stringliteral}{"JsonUtilities"},}
+\DoxyCodeLine{44                 \textcolor{stringliteral}{"BB\_Runtime\_System"}}
+\DoxyCodeLine{45                 \textcolor{comment}{// ...   add private dependencies that you statically link with here ...    }}
+\DoxyCodeLine{46             \}}
+\DoxyCodeLine{47             );}
+\DoxyCodeLine{48         }
+\DoxyCodeLine{49         }
+\DoxyCodeLine{50         DynamicallyLoadedModuleNames.AddRange(}
+\DoxyCodeLine{51             \textcolor{keyword}{new} \textcolor{keywordtype}{string}[]}
+\DoxyCodeLine{52             \{}
+\DoxyCodeLine{53                 \textcolor{comment}{// ... add any modules that your module loads dynamically here ...}}
+\DoxyCodeLine{54             \}}
+\DoxyCodeLine{55             );}
+\DoxyCodeLine{56     \}}
 
 \end{DoxyCode}
 

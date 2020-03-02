@@ -7,7 +7,7 @@ public class BB_Runtime_System : ModuleRules
     public BB_Runtime_System(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-
+        bUseRTTI = true;
         PublicIncludePaths.AddRange(
             new string[] {
 				// ... add public include paths required here ...

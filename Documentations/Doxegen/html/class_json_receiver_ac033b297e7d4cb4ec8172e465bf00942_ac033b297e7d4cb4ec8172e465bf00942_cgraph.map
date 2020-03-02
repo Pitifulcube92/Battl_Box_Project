@@ -1,0 +1,22 @@
+<map id="JsonReceiver::WriteActionObject" name="JsonReceiver::WriteActionObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,470,180,511"/>
+<area shape="rect" id="node2" href="$class_json_receiver_a4e02b363c5368da749d81d872ab70185.html#a4e02b363c5368da749d81d872ab70185" title=" " alt="" coords="245,5,451,32"/>
+<area shape="rect" id="node3" href="$class_ability_action_a8a618f375b60b470cd110f6c004f6657.html#a8a618f375b60b470cd110f6c004f6657" title=" " alt="" coords="245,56,451,83"/>
+<area shape="rect" id="node4" href="$class_ability_action_ade9f4676b3ef86dcef8abd98a3c61084.html#ade9f4676b3ef86dcef8abd98a3c61084" title=" " alt="" coords="259,107,437,149"/>
+<area shape="rect" id="node5" href="$class_command_action_ae4ad4949defce81722252072e3413d2b.html#ae4ad4949defce81722252072e3413d2b" title="Return acton." alt="" coords="247,173,449,200"/>
+<area shape="rect" id="node6" href="$class_base_action_a0954da9087f93b46ea68468de1ecce92.html#a0954da9087f93b46ea68468de1ecce92" title="Return Action ID." alt="" coords="256,224,440,251"/>
+<area shape="rect" id="node7" href="$class_base_action_a3c14c6ebf59154d1ad8d60ab546d7888.html#a3c14c6ebf59154d1ad8d60ab546d7888" title="Return action type." alt="" coords="248,275,448,301"/>
+<area shape="rect" id="node8" href="$class_item_action_a4b2e489cc0ae92c10ce4d6d91e6b5b7d.html#a4b2e489cc0ae92c10ce4d6d91e6b5b7d" title="Returns Damage type." alt="" coords="245,325,451,352"/>
+<area shape="rect" id="node9" href="$class_base_action_a66e6fdeaefdcd4606eaa2964e2020049.html#a66e6fdeaefdcd4606eaa2964e2020049" title="Return discription." alt="" coords="250,376,446,403"/>
+<area shape="rect" id="node10" href="$class_ability_action_af903bcb271edb3122c66c7c726711b1e.html#af903bcb271edb3122c66c7c726711b1e" title=" " alt="" coords="253,427,443,453"/>
+<area shape="rect" id="node11" href="$class_item_action_adf02b73e5a94f785a2a5eec11cbfb003.html#adf02b73e5a94f785a2a5eec11cbfb003" title="Returns Effect array." alt="" coords="256,477,440,504"/>
+<area shape="rect" id="node12" href="$class_base_action_a70d34140345d92808deed0304397b074.html#a70d34140345d92808deed0304397b074" title="Return Interaction type." alt="" coords="237,528,459,555"/>
+<area shape="rect" id="node13" href="$class_item_action_aa3322621804e1869f956757c31e4c4b6.html#aa3322621804e1869f956757c31e4c4b6" title="Returns itemType." alt="" coords="257,579,439,605"/>
+<area shape="rect" id="node14" href="$class_base_action_a87fa8929e542db8b7b7e695490f1f0a2.html#a87fa8929e542db8b7b7e695490f1f0a2" title="Return Name." alt="" coords="263,629,433,656"/>
+<area shape="rect" id="node15" href="$class_base_action_aef05e8457330e3a0d8f60c5689667e38.html#aef05e8457330e3a0d8f60c5689667e38" title="Returns the stat action type." alt="" coords="236,680,460,707"/>
+<area shape="rect" id="node16" href="$class_item_action_a1e9af3e563063849729fad37d8beb92e.html#a1e9af3e563063849729fad37d8beb92e" title="Return statModMap." alt="" coords="259,731,437,757"/>
+<area shape="rect" id="node17" href="$class_base_action_a3286f0bb34ada3b25b0ccb5a7b456f9d.html#a3286f0bb34ada3b25b0ccb5a7b456f9d" title="Return target type." alt="" coords="249,781,447,808"/>
+<area shape="rect" id="node18" href="$class_item_action_af05b71cc56a5edcc0771aa64d3858f4f.html#af05b71cc56a5edcc0771aa64d3858f4f" title="Returnsitem value." alt="" coords="267,832,429,859"/>
+<area shape="rect" id="node19" href="$class_command_action_aed6b4cc73d8dd8e5e184e248c6e102a1.html#aed6b4cc73d8dd8e5e184e248c6e102a1" title="Return weapon type." alt="" coords="228,883,468,909"/>
+<area shape="rect" id="node20" href="$class_battle_box_file_manager_abd4bb207fe330e3d32150bc96978a385.html#abd4bb207fe330e3d32150bc96978a385" title="writes to a text file." alt="" coords="273,934,423,975"/>
+</map>
