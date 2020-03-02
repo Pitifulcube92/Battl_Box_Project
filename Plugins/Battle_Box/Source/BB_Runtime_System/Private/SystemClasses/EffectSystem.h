@@ -8,9 +8,9 @@ class BaseAction;
 class EffectSystem 
 {
 private:
-	StatSheetObject* target;
-	TArray<StatSheetObject*> targets;
-	BaseAction* targetAction;
+	static StatSheetObject* target;
+	static TArray<StatSheetObject*> targets;
+	static BaseAction* targetAction;
 public:
 	EffectSystem(const EffectSystem&) = delete;
 	EffectSystem(EffectSystem&&) = delete;
@@ -18,16 +18,16 @@ public:
 	EffectSystem& operator =(EffectSystem&&) = delete;
 	EffectSystem() = delete;
 
-	void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_); 
+	static void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
 	///Calculates the effect	
-	void CallculateEffect(BaseAction* action_);	
+	static void CallculateEffect(BaseAction* action_);
 	///Removes the effect by the action.
-	void RemoveEffect(BaseAction* action_);
+	static void RemoveEffect(BaseAction* action_);
 	///Sets target
-	void SetTarget(StatSheetObject* target_);
+	static void SetTarget(StatSheetObject* target_);
 	///Add target to the target array
-	void Addtarget(StatSheetObject* target_);
-	void OnDestroy();
+	static void Addtarget(StatSheetObject* target_);
+	static void OnDestroy();
 	~EffectSystem();
 };
 #endif // !EFFECTSYSTEM_H

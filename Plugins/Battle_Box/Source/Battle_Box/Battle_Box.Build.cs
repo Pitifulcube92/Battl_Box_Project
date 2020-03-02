@@ -7,7 +7,7 @@ public class Battle_Box : ModuleRules
 	public Battle_Box(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
+        bUseRTTI = true;
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
@@ -39,6 +39,8 @@ public class Battle_Box : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "Json",
+                "JsonUtilities",
                 "BB_Runtime_System"
 				// ...   add private dependencies that you statically link with here ...	
 			}

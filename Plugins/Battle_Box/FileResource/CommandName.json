@@ -1,0 +1,11 @@
+{
+	"Name": "CommandDesc",
+	"Discription": "CommandDesc",
+	"ActionID": 42,
+	"ActionType": 42,
+	"TargetType": 4,
+	"StatAction": 1,
+	"InteractionType": 2,
+	"CurrentWeapon": 2,
+	"BaseActionID": 0
+}

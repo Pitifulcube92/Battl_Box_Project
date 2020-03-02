@@ -6,18 +6,7 @@
 
 
 
-Inheritance diagram for Effect\+System\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=179pt]{class_effect_system__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for Effect\+System\+:
-\nopagebreak
+Collaboration diagram for Effect\+System\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,46 +16,49 @@ Collaboration diagram for Effect\+System\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Addtarget} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
-\begin{DoxyCompactList}\small\item\em Add target to the target array. \end{DoxyCompactList}\item 
-void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Base calculation for any dirieved system classes. \end{DoxyCompactList}\item 
-void \textbf{ Callculate\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Calculates the effect ~\newline
- \end{DoxyCompactList}\item 
 \textbf{ Effect\+System} ()=delete
 \item 
 \textbf{ Effect\+System} (const \textbf{ Effect\+System} \&)=delete
 \item 
 \textbf{ Effect\+System} (\textbf{ Effect\+System} \&\&)=delete
 \item 
-void \textbf{ On\+Destroy} ()
-\item 
 \textbf{ Effect\+System} \& \textbf{ operator=} (const \textbf{ Effect\+System} \&)=delete
 \item 
 \textbf{ Effect\+System} \& \textbf{ operator=} (\textbf{ Effect\+System} \&\&)=delete
 \item 
-void \textbf{ Remove\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
-\begin{DoxyCompactList}\small\item\em Removes the effect by the action. \end{DoxyCompactList}\item 
-void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
-\begin{DoxyCompactList}\small\item\em Sets target. \end{DoxyCompactList}\item 
 \textbf{ $\sim$\+Effect\+System} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Stat\+Sheet\+Object} $\ast$ \textbf{ target}
+static void \textbf{ Addtarget} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Add target to the target array. \end{DoxyCompactList}\item 
+static void \textbf{ Base\+Calculate} (const bool Is\+Single\+Target\+\_\+, \textbf{ Base\+Action} $\ast$const action\+\_\+)
 \item 
-\textbf{ Base\+Action} $\ast$ \textbf{ target\+Action}
+static void \textbf{ Callculate\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calculates the effect ~\newline
+ \end{DoxyCompactList}\item 
+static void \textbf{ On\+Destroy} ()
 \item 
-T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ \textbf{ targets}
+static void \textbf{ Remove\+Effect} (\textbf{ Base\+Action} $\ast$action\+\_\+)
+\begin{DoxyCompactList}\small\item\em Removes the effect by the action. \end{DoxyCompactList}\item 
+static void \textbf{ Set\+Target} (\textbf{ Stat\+Sheet\+Object} $\ast$target\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Stat\+Sheet\+Object} $\ast$ \textbf{ target} = nullptr
+\item 
+static \textbf{ Base\+Action} $\ast$ \textbf{ target\+Action} = nullptr
+\item 
+static T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ \textbf{ targets} = T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 9 of file Effect\+System.\+h.
+Definition at line 8 of file Effect\+System.\+h.
 
 
 
@@ -89,17 +81,6 @@ Definition at line 9 of file Effect\+System.\+h.
 \doxysubsubsection{EffectSystem()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily Effect\+System\+::\+Effect\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
-
-
-Definition at line 6 of file Effect\+System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{7 \{}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9 \}}
-
-\end{DoxyCode}
 \mbox{\label{class_effect_system_aeacfcab72c0129a58bb18363b4763263_aeacfcab72c0129a58bb18363b4763263}} 
 \index{EffectSystem@{EffectSystem}!````~EffectSystem@{$\sim$EffectSystem}}
 \index{````~EffectSystem@{$\sim$EffectSystem}!EffectSystem@{EffectSystem}}
@@ -108,15 +89,26 @@ Definition at line 6 of file Effect\+System.\+cpp.
 
 
 
-Definition at line 40 of file Effect\+System.\+cpp.
+Definition at line 363 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{41 \{}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43 \}}
+\DoxyCodeLine{364 \{}
+\DoxyCodeLine{365     OnDestroy();}
+\DoxyCodeLine{366 \}}
 
 \end{DoxyCode}
+
+
+References On\+Destroy().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_effect_system_aeacfcab72c0129a58bb18363b4763263_aeacfcab72c0129a58bb18363b4763263_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
@@ -124,7 +116,7 @@ Definition at line 40 of file Effect\+System.\+cpp.
 \index{EffectSystem@{EffectSystem}!Addtarget@{Addtarget}}
 \index{Addtarget@{Addtarget}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{Addtarget()}
-{\footnotesize\ttfamily void Effect\+System\+::\+Addtarget (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$}]{target\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Effect\+System\+::\+Addtarget (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -132,51 +124,362 @@ Add target to the target array.
 
 
 
-Definition at line 32 of file Effect\+System.\+cpp.
+Definition at line 341 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33 \{}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35 \}}
+\DoxyCodeLine{342 \{}
+\DoxyCodeLine{343     targets.Add(target\_);}
+\DoxyCodeLine{344 \}}
 
 \end{DoxyCode}
+
+
+References targets.
+
 \mbox{\label{class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0_ab5c41ca84888911f7c878be0a3a5d4c0}} 
 \index{EffectSystem@{EffectSystem}!BaseCalculate@{BaseCalculate}}
 \index{BaseCalculate@{BaseCalculate}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{BaseCalculate()}
-{\footnotesize\ttfamily void Effect\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Singled\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Effect\+System\+::\+Base\+Calculate (\begin{DoxyParamCaption}\item[{const bool}]{Is\+Single\+Target\+\_\+,  }\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Base calculation for any dirieved system classes. 
-
-
-
-Implements \textbf{ Base\+System} \doxyref{}{p.}{class_base_system_a94cbf2e076874bb2ef74d4d20e3c68e1_a94cbf2e076874bb2ef74d4d20e3c68e1}.
-
-
-
-Definition at line 10 of file Effect\+System.\+cpp.
+Definition at line 15 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11 \{}
-\DoxyCodeLine{12     \textcolor{keywordflow}{if} (IsSingledTarget\_)}
-\DoxyCodeLine{13     \{}
-\DoxyCodeLine{14     \}}
-\DoxyCodeLine{15     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (IsSingledTarget\_)}
-\DoxyCodeLine{16     \{}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18     \}}
-\DoxyCodeLine{19 \}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordflow}{if} (IsSingledTarget\_)}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         \textcolor{keywordflow}{if} (target)}
+\DoxyCodeLine{20         \{}
+\DoxyCodeLine{21             \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{22             \{}
+\DoxyCodeLine{23                 ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{24                 \textcolor{keywordflow}{if} (item-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
+\DoxyCodeLine{25                 \{}
+\DoxyCodeLine{26                     \textcolor{comment}{//calculate for physical attributes}}
+\DoxyCodeLine{27                     \textcolor{keywordflow}{if} (item-\/>ReturnEffectList().Num() > 0)}
+\DoxyCodeLine{28                     \{}
+\DoxyCodeLine{29                         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{30                         \{}
+\DoxyCodeLine{31                             \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{32                             \{}
+\DoxyCodeLine{33                                 \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{34                             \}}
+\DoxyCodeLine{35                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{36                             \{}
+\DoxyCodeLine{37                                 \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{38                             \}}
+\DoxyCodeLine{39                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{40                             \{}
+\DoxyCodeLine{41                                 \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{42                             \}}
+\DoxyCodeLine{43                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{44                             \{}
+\DoxyCodeLine{45                                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{46                                 Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{47                                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{48                             \}}
+\DoxyCodeLine{49                         \}}
+\DoxyCodeLine{50                     \}}
+\DoxyCodeLine{51                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{52                     \{}
+\DoxyCodeLine{53                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{54                         Debugger::Error(\textcolor{stringliteral}{"No ability found or is null."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{55                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{56                     \}}
+\DoxyCodeLine{57                 \}}
+\DoxyCodeLine{58                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{59                 \{}
+\DoxyCodeLine{60                     \textcolor{comment}{//calculate for ability attributes}}
+\DoxyCodeLine{61                     \textcolor{keywordflow}{if} (item-\/>ReturnEffectList().Num() > 0)}
+\DoxyCodeLine{62                     \{}
+\DoxyCodeLine{63                         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{64                         \{}
+\DoxyCodeLine{65                             \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{66                             \{}
+\DoxyCodeLine{67                                 \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{68                             \}}
+\DoxyCodeLine{69                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{70                             \{}
+\DoxyCodeLine{71                                 \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{72                             \}}
+\DoxyCodeLine{73                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{74                             \{}
+\DoxyCodeLine{75                                 \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{76                             \}}
+\DoxyCodeLine{77                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{78                             \{}
+\DoxyCodeLine{79                                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{80                                 Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{81                                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{82                             \}}
+\DoxyCodeLine{83                         \}}
+\DoxyCodeLine{84                     \}}
+\DoxyCodeLine{85                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{86                     \{}
+\DoxyCodeLine{87                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{88                         Debugger::Error(\textcolor{stringliteral}{"No ability found or is null."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{89                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{90                     \}}
+\DoxyCodeLine{91                 \}}
+\DoxyCodeLine{92                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
+\DoxyCodeLine{93                 \{}
+\DoxyCodeLine{94                     \textcolor{comment}{//calculate for physical and ability attributes}}
+\DoxyCodeLine{95                     \textcolor{keywordflow}{if} (item-\/>ReturnEffectList().Num() > 0)}
+\DoxyCodeLine{96                     \{}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98                         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{99                         \{}
+\DoxyCodeLine{100                             \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{101                             \{}
+\DoxyCodeLine{102                                 \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{103                             \}}
+\DoxyCodeLine{104                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{105                             \{}
+\DoxyCodeLine{106                                 \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{107                             \}}
+\DoxyCodeLine{108                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{109                             \{}
+\DoxyCodeLine{110                                 \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{111                             \}}
+\DoxyCodeLine{112                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{113                             \{}
+\DoxyCodeLine{114                                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{115                                 Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{116                                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{117                             \}}
+\DoxyCodeLine{118                         \}}
+\DoxyCodeLine{119                     \}}
+\DoxyCodeLine{120                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{121                     \{}
+\DoxyCodeLine{122                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{123                         Debugger::Error(\textcolor{stringliteral}{"No ability found or is null."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{124                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{125                     \}}
+\DoxyCodeLine{126                 \}}
+\DoxyCodeLine{127                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{128                 \{}
+\DoxyCodeLine{129                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{130                     Debugger::Error(\textcolor{stringliteral}{"No interaction fits the criteria."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{131                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{132                 \}}
+\DoxyCodeLine{133             \}}
+\DoxyCodeLine{134             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{135             \{}
+\DoxyCodeLine{136                 AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138                 \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{139                 \{}
+\DoxyCodeLine{140                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{141                 \}}
+\DoxyCodeLine{142                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{143                 \{}
+\DoxyCodeLine{144                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{145                 \}}
+\DoxyCodeLine{146                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{147                 \{}
+\DoxyCodeLine{148                     \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{149                 \}}
+\DoxyCodeLine{150                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{151                 \{}
+\DoxyCodeLine{152                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{153                     Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{154                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{155                 \}}
+\DoxyCodeLine{156             \}}
+\DoxyCodeLine{157             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{158             \{}
+\DoxyCodeLine{159                 Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{160                 Debugger::Error(\textcolor{stringliteral}{"action does not meet the effect criteria."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{161                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{162             \}}
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{165         \{}
+\DoxyCodeLine{166             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{167             Debugger::Error(\textcolor{stringliteral}{"target was not set."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{168             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{169         \}}
+\DoxyCodeLine{170     \}}
+\DoxyCodeLine{171     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!IsSingledTarget\_)}
+\DoxyCodeLine{172     \{}
+\DoxyCodeLine{173         \textcolor{keywordflow}{if} (targets.Num() > 0)}
+\DoxyCodeLine{174         \{}
+\DoxyCodeLine{175             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} target : targets)}
+\DoxyCodeLine{176             \{}
+\DoxyCodeLine{177                 \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{178                 \{}
+\DoxyCodeLine{179                     ItemAction* item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{180                     \textcolor{keywordflow}{if} (item-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL)}
+\DoxyCodeLine{181                     \{}
+\DoxyCodeLine{182                         \textcolor{comment}{//calculate for physical attributes}}
+\DoxyCodeLine{183                         \textcolor{keywordflow}{if} (item-\/>ReturnEffectList().Num() > 0)}
+\DoxyCodeLine{184                         \{}
+\DoxyCodeLine{185                             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{186                             \{}
+\DoxyCodeLine{187                                 \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{188                                 \{}
+\DoxyCodeLine{189                                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{190                                 \}}
+\DoxyCodeLine{191                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{192                                 \{}
+\DoxyCodeLine{193                                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{194                                 \}}
+\DoxyCodeLine{195                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{196                                 \{}
+\DoxyCodeLine{197                                     \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{198                                 \}}
+\DoxyCodeLine{199                                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{200                                 \{}
+\DoxyCodeLine{201                                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{202                                     Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{203                                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{204                                 \}}
+\DoxyCodeLine{205                             \}}
+\DoxyCodeLine{206                         \}}
+\DoxyCodeLine{207                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{208                         \{}
+\DoxyCodeLine{209                             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{210                             Debugger::Error(\textcolor{stringliteral}{"No ability found or is null."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{211                             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{212                         \}}
+\DoxyCodeLine{213                     \}}
+\DoxyCodeLine{214                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{215                     \{}
+\DoxyCodeLine{216                         \textcolor{comment}{//calculate for ability attributes}}
+\DoxyCodeLine{217                         \textcolor{keywordflow}{if} (item-\/>ReturnEffectList().Num() > 0)}
+\DoxyCodeLine{218                         \{}
+\DoxyCodeLine{219                             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{220                             \{}
+\DoxyCodeLine{221                                 \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{222                                 \{}
+\DoxyCodeLine{223                                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{224                                 \}}
+\DoxyCodeLine{225                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{226                                 \{}
+\DoxyCodeLine{227                                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{228                                 \}}
+\DoxyCodeLine{229                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{230                                 \{}
+\DoxyCodeLine{231                                     \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{232                                 \}}
+\DoxyCodeLine{233                                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{234                                 \{}
+\DoxyCodeLine{235                                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{236                                     Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{237                                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{238                                 \}}
+\DoxyCodeLine{239                             \}}
+\DoxyCodeLine{240                         \}}
+\DoxyCodeLine{241                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{242                         \{}
+\DoxyCodeLine{243                             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{244                             Debugger::Error(\textcolor{stringliteral}{"No ability found or is null."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{245                             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{246                         \}}
+\DoxyCodeLine{247                     \}}
+\DoxyCodeLine{248                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item-\/>ReturnInteractionType() == INTERACTIONTYPE::E\_PHYSICAL\_AND\_ABILITY)}
+\DoxyCodeLine{249                     \{}
+\DoxyCodeLine{250                         \textcolor{comment}{//calculate for physical and ability attributes}}
+\DoxyCodeLine{251                         \textcolor{keywordflow}{if} (item-\/>ReturnEffectList().Num() > 0)}
+\DoxyCodeLine{252                         \{}
+\DoxyCodeLine{253                             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ability : item-\/>ReturnEffectList())}
+\DoxyCodeLine{254                             \{}
+\DoxyCodeLine{255                                 \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{256                                 \{}
+\DoxyCodeLine{257                                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{258                                 \}}
+\DoxyCodeLine{259                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{260                                 \{}
+\DoxyCodeLine{261                                     \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{262                                 \}}
+\DoxyCodeLine{263                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{264                                 \{}
+\DoxyCodeLine{265                                     \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{266                                 \}}
+\DoxyCodeLine{267                                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{268                                 \{}
+\DoxyCodeLine{269                                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{270                                     Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{271                                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{272                                 \}}
+\DoxyCodeLine{273                             \}}
+\DoxyCodeLine{274                         \}}
+\DoxyCodeLine{275                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{276                         \{}
+\DoxyCodeLine{277                             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{278                             Debugger::Error(\textcolor{stringliteral}{"No ability found or is null."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{279                             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{280                         \}}
+\DoxyCodeLine{281                     \}}
+\DoxyCodeLine{282                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{283                     \{}
+\DoxyCodeLine{284                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{285                         Debugger::Error(\textcolor{stringliteral}{"No interaction fits the criteria."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{286                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{287                     \}}
+\DoxyCodeLine{288                 \}}
+\DoxyCodeLine{289                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{290                 \{}
+\DoxyCodeLine{291                     AbilityAction* ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293                     \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_MODIFIYER)}
+\DoxyCodeLine{294                     \{}
+\DoxyCodeLine{295                         \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{296                     \}}
+\DoxyCodeLine{297                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_TMP\_MODIFIYER)}
+\DoxyCodeLine{298                     \{}
+\DoxyCodeLine{299                         \textcolor{comment}{//Communicate with stat System}}
+\DoxyCodeLine{300                     \}}
+\DoxyCodeLine{301                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ability-\/>ReturnAbilityType() == ABILITYTYPE::E\_DAMAGE\_MODIFYER)}
+\DoxyCodeLine{302                     \{}
+\DoxyCodeLine{303                         \textcolor{comment}{//Communicate with Damage System}}
+\DoxyCodeLine{304                     \}}
+\DoxyCodeLine{305                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{306                     \{}
+\DoxyCodeLine{307                         Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{308                         Debugger::Error(\textcolor{stringliteral}{"No ability type is found and cannot calculate."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{309                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{310                     \}}
+\DoxyCodeLine{311                 \}}
+\DoxyCodeLine{312                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{313                 \{}
+\DoxyCodeLine{314                     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{315                     Debugger::Error(\textcolor{stringliteral}{"action does not meet the effect criteria."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{316                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{317                 \}}
+\DoxyCodeLine{318             \}}
+\DoxyCodeLine{319         \}}
+\DoxyCodeLine{320         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{321         \{}
+\DoxyCodeLine{322             Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{323             Debugger::Error(\textcolor{stringliteral}{"target array is empty."}, \textcolor{stringliteral}{"EffectSystem.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{324             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{325         \}}
+\DoxyCodeLine{326     \}}
+\DoxyCodeLine{327     OnDestroy();}
+\DoxyCodeLine{328 \}}
 
 \end{DoxyCode}
+
+
+References E\+\_\+\+A\+B\+I\+L\+I\+TY, E\+\_\+\+D\+A\+M\+A\+G\+E\+\_\+\+M\+O\+D\+I\+F\+Y\+ER, E\+\_\+\+E\+R\+R\+OR, E\+\_\+\+I\+T\+EM, E\+\_\+\+M\+O\+D\+I\+F\+I\+Y\+ER, E\+\_\+\+P\+H\+Y\+S\+I\+C\+AL, E\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+A\+N\+D\+\_\+\+A\+B\+I\+L\+I\+TY, E\+\_\+\+T\+M\+P\+\_\+\+M\+O\+D\+I\+F\+I\+Y\+ER, Debugger\+::\+Error(), On\+Destroy(), Ability\+Action\+::\+Return\+Ability\+Type(), Base\+Action\+::\+Return\+Action\+Type(), Item\+Action\+::\+Return\+Effect\+List(), Base\+Action\+::\+Return\+Interaction\+Type(), Debugger\+::\+Set\+Severity(), target, and targets.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0_ab5c41ca84888911f7c878be0a3a5d4c0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_effect_system_a6f3268f2b1a70386b505f9a979c89841_a6f3268f2b1a70386b505f9a979c89841}} 
 \index{EffectSystem@{EffectSystem}!CallculateEffect@{CallculateEffect}}
 \index{CallculateEffect@{CallculateEffect}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{CallculateEffect()}
-{\footnotesize\ttfamily void Effect\+System\+::\+Callculate\+Effect (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Effect\+System\+::\+Callculate\+Effect (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -185,32 +488,57 @@ Calculates the effect ~\newline
 
 
 
-Definition at line 20 of file Effect\+System.\+cpp.
+Definition at line 329 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21 \{}
-\DoxyCodeLine{22 }
-\DoxyCodeLine{23 \}}
+\DoxyCodeLine{330 \{}
+\DoxyCodeLine{331     \textcolor{comment}{//This will extract the equation class and calculate the values needed.}}
+\DoxyCodeLine{332 \}}
 
 \end{DoxyCode}
 \mbox{\label{class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22_a9419cd87fd9b4e8519fc3960dedefd22}} 
 \index{EffectSystem@{EffectSystem}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{OnDestroy()}
-{\footnotesize\ttfamily void Effect\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Effect\+System\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line 36 of file Effect\+System.\+cpp.
+Definition at line 345 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37 \{}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39 \}}
+\DoxyCodeLine{346 \{}
+\DoxyCodeLine{347     \textcolor{comment}{//clear all variables.}}
+\DoxyCodeLine{348     \textcolor{keywordflow}{if} (target)}
+\DoxyCodeLine{349     \{}
+\DoxyCodeLine{350         \textcolor{keyword}{delete} target;}
+\DoxyCodeLine{351         target = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{352     \}}
+\DoxyCodeLine{353     \textcolor{keywordflow}{if} (targets.Num() > 0)}
+\DoxyCodeLine{354     \{}
+\DoxyCodeLine{355         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} t : targets)}
+\DoxyCodeLine{356         \{}
+\DoxyCodeLine{357             \textcolor{keyword}{delete} t;}
+\DoxyCodeLine{358             t = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{359         \}}
+\DoxyCodeLine{360         targets.Empty();}
+\DoxyCodeLine{361     \}}
+\DoxyCodeLine{362 \}}
 
 \end{DoxyCode}
+
+
+References target, and targets.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_effect_system_a9419cd87fd9b4e8519fc3960dedefd22_a9419cd87fd9b4e8519fc3960dedefd22_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_effect_system_aa26e38a802738b9aec48a1e43c691124_aa26e38a802738b9aec48a1e43c691124}} 
 \index{EffectSystem@{EffectSystem}!operator=@{operator=}}
 \index{operator=@{operator=}!EffectSystem@{EffectSystem}}
@@ -227,7 +555,7 @@ Definition at line 36 of file Effect\+System.\+cpp.
 \index{EffectSystem@{EffectSystem}!RemoveEffect@{RemoveEffect}}
 \index{RemoveEffect@{RemoveEffect}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{RemoveEffect()}
-{\footnotesize\ttfamily void Effect\+System\+::\+Remove\+Effect (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Effect\+System\+::\+Remove\+Effect (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$}]{action\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -235,20 +563,20 @@ Removes the effect by the action.
 
 
 
-Definition at line 24 of file Effect\+System.\+cpp.
+Definition at line 333 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25 \{}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{334 \{}
+\DoxyCodeLine{335     \textcolor{comment}{//Same process as the equation and reverse calculate the value needed.}}
+\DoxyCodeLine{336 \}}
 
 \end{DoxyCode}
 \mbox{\label{class_effect_system_a224e059a2e658f9cad40799fdf902fbb_a224e059a2e658f9cad40799fdf902fbb}} 
 \index{EffectSystem@{EffectSystem}!SetTarget@{SetTarget}}
 \index{SetTarget@{SetTarget}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{SetTarget()}
-{\footnotesize\ttfamily void Effect\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$}]{target\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Effect\+System\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$}]{target\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -256,47 +584,51 @@ Sets target.
 
 
 
-Definition at line 28 of file Effect\+System.\+cpp.
+Definition at line 337 of file Effect\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29 \{}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31 \}}
+\DoxyCodeLine{338 \{}
+\DoxyCodeLine{339     target = target\_;}
+\DoxyCodeLine{340 \}}
 
 \end{DoxyCode}
 
 
+References target.
+
+
+
 \doxysubsection{Field Documentation}
-\mbox{\label{class_effect_system_a1c7d29836af594f9fad93b8f3562e8e7_a1c7d29836af594f9fad93b8f3562e8e7}} 
+\mbox{\label{class_effect_system_ac45054ffdea14736e379e3f32d48c2fd_ac45054ffdea14736e379e3f32d48c2fd}} 
 \index{EffectSystem@{EffectSystem}!target@{target}}
 \index{target@{target}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{target}
-{\footnotesize\ttfamily \textbf{ Stat\+Sheet\+Object}$\ast$ Effect\+System\+::target\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \textbf{ Stat\+Sheet\+Object} $\ast$ Effect\+System\+::target = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-Definition at line 12 of file Effect\+System.\+h.
+Definition at line 11 of file Effect\+System.\+h.
 
-\mbox{\label{class_effect_system_a232e145c135d885a995e9f96d0aa71dc_a232e145c135d885a995e9f96d0aa71dc}} 
+\mbox{\label{class_effect_system_a3d660fcd77dd282d4c550945f19eeecf_a3d660fcd77dd282d4c550945f19eeecf}} 
 \index{EffectSystem@{EffectSystem}!targetAction@{targetAction}}
 \index{targetAction@{targetAction}!EffectSystem@{EffectSystem}}
 \doxysubsubsection{targetAction}
-{\footnotesize\ttfamily \textbf{ Base\+Action}$\ast$ Effect\+System\+::target\+Action\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 14 of file Effect\+System.\+h.
-
-\mbox{\label{class_effect_system_a2c4378aa4b2d84795cfcf32157330c4d_a2c4378aa4b2d84795cfcf32157330c4d}} 
-\index{EffectSystem@{EffectSystem}!targets@{targets}}
-\index{targets@{targets}!EffectSystem@{EffectSystem}}
-\doxysubsubsection{targets}
-{\footnotesize\ttfamily T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$ Effect\+System\+::targets\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \textbf{ Base\+Action} $\ast$ Effect\+System\+::target\+Action = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
 Definition at line 13 of file Effect\+System.\+h.
+
+\mbox{\label{class_effect_system_af7bd59a4d40340e1c1cdfdb457c54ba0_af7bd59a4d40340e1c1cdfdb457c54ba0}} 
+\index{EffectSystem@{EffectSystem}!targets@{targets}}
+\index{targets@{targets}!EffectSystem@{EffectSystem}}
+\doxysubsubsection{targets}
+{\footnotesize\ttfamily T\+Array$<$ \textbf{ Stat\+Sheet\+Object} $\ast$ $>$ Effect\+System\+::targets = T\+Array$<$\textbf{ Stat\+Sheet\+Object}$\ast$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Effect\+System.\+h.
 
 
 

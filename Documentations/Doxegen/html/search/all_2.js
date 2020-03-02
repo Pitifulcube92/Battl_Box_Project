@@ -13,7 +13,11 @@ var searchData=
   ['commandaction_45',['CommandAction',['../class_command_action.html',1,'CommandAction'],['../class_command_action_a9bed07066f01bc031713fe727ef2af68.html#a9bed07066f01bc031713fe727ef2af68',1,'CommandAction::CommandAction()'],['../class_command_action_abf23d117fdcbc02af3d0b67bddb6a410.html#abf23d117fdcbc02af3d0b67bddb6a410',1,'CommandAction::CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap&lt; FString, float &gt; statMap_, const WEAPONTYPE currentWeap_, BaseAction *const command_)'],['../class_command_action_aaa9704a80750e6a758d76178cfe12b5a.html#aaa9704a80750e6a758d76178cfe12b5a',1,'CommandAction::CommandAction(CommandAction *const other_)']]],
   ['commandaction_2ecpp_46',['CommandAction.cpp',['../_command_action_8cpp.html',1,'']]],
   ['commandaction_2eh_47',['CommandAction.h',['../_command_action_8h.html',1,'']]],
-  ['commandmap_48',['commandMap',['../class_stat_sheet_object_a4c18a652f36830845fc459e691eecafb.html#a4c18a652f36830845fc459e691eecafb',1,'StatSheetObject']]],
-  ['currenttype_49',['currentType',['../class_debugger_ad15844f242e2c8a02fd9bf7595a5ece8.html#ad15844f242e2c8a02fd9bf7595a5ece8',1,'Debugger']]],
-  ['currentweapon_50',['currentweapon',['../class_command_action_a3fb3b61a06e73ecb893129dbbb7ce5f5.html#a3fb3b61a06e73ecb893129dbbb7ce5f5',1,'CommandAction']]]
+  ['commandactionid_48',['commandActionID',['../structcommand_data_a966fe2bda46154e1c6a69ca7eb7f9359.html#a966fe2bda46154e1c6a69ca7eb7f9359',1,'commandData']]],
+  ['commanddata_49',['commandData',['../structcommand_data.html',1,'']]],
+  ['commandmap_50',['commandMap',['../class_stat_sheet_object_a4c18a652f36830845fc459e691eecafb.html#a4c18a652f36830845fc459e691eecafb',1,'StatSheetObject']]],
+  ['commandmapid_51',['commandMapID',['../structstat_sheet_data_a6b5e1bbd3d2a37367ccf67a595fbc3e0.html#a6b5e1bbd3d2a37367ccf67a595fbc3e0',1,'statSheetData']]],
+  ['cosine_52',['Cosine',['../class_equation_aa290f173368c66d2357412deb9482bfa.html#aa290f173368c66d2357412deb9482bfa',1,'Equation']]],
+  ['currenttype_53',['currentType',['../class_debugger_ad15844f242e2c8a02fd9bf7595a5ece8.html#ad15844f242e2c8a02fd9bf7595a5ece8',1,'Debugger']]],
+  ['currentweapon_54',['currentWeapon',['../structcommand_data_a1da87ead3f29153455af333ca3f0a916.html#a1da87ead3f29153455af333ca3f0a916',1,'commandData::currentWeapon()'],['../class_command_action_a3fb3b61a06e73ecb893129dbbb7ce5f5.html#a3fb3b61a06e73ecb893129dbbb7ce5f5',1,'CommandAction::currentweapon()']]]
 ];

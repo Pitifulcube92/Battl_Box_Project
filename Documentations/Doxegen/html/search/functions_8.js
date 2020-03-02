@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_302',['Log',['../class_debugger_aed201a492e988e040cf265244dfdd5da.html#aed201a492e988e040cf265244dfdd5da',1,'Debugger']]]
+  ['jsonreceiver_383',['JsonReceiver',['../class_json_receiver_a11e7f2740ee9db8344474d24b2f46735.html#a11e7f2740ee9db8344474d24b2f46735',1,'JsonReceiver']]]
 ];

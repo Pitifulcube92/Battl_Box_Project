@@ -2,6 +2,7 @@
 
 
 #include "CommandAction.h"
+#include "JsonParse.h"
 
 CommandAction::CommandAction() : command(nullptr)
 {
@@ -34,6 +35,16 @@ CommandAction::CommandAction(CommandAction* const other_)
 	SetActionID(other_->ReturnActionID());
 	currentweapon = ReturnWeaponType();
 	command = ReturnAction();
+}
+CommandAction::CommandAction(CommandData const data_)
+{
+	SetName(data_.name);
+	SetDiscription(data_.discription);
+	SetActionID(data_.actionID);
+	SetActionType(data_.actionType);
+	SetTargetType(data_.targetType);
+	currentweapon = data_.currentWeapon;
+	//This part is where we search for the actual base action.
 }
 void CommandAction::SetWeaponType(WEAPONTYPE type_)
 {

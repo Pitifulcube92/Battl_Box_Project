@@ -2,6 +2,9 @@
 
 
 #include "BaseAction.h"
+#include "Math/UnrealMathUtility.h"
+#include "JsonParse.h"
+#include "ResourceLoader.h"
 
 BaseAction::BaseAction()
 {
@@ -10,17 +13,23 @@ BaseAction::BaseAction()
 	action = ACTIONTYPE::E_NONE;
 	target = TARGETTYPE::E_NONE;
 	interaction = INTERACTIONTYPE::E_NONE;
+	statAction = STATACTION::E_NONE;
 	actionID = 00;
 }
-BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, TMap<FString, float> statMap_)
+BaseAction::BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, bool IsFirstInstance_)
 {
 	name = name_;
 	discription = discription_;
 	action = action_;
 	target = target_;
 	interaction = interaction_;
-	actionID = actionID_;
 	statAction = statAction_;
+	//This will check if this instance is the first time.
+	if (IsFirstInstance_)
+		actionID = GenerateID();
+	else
+		actionID = actionID_;
+
 }
 BaseAction::BaseAction(const BaseAction* other_)
 {
@@ -29,6 +38,26 @@ BaseAction::BaseAction(const BaseAction* other_)
 	target = other_->ReturnTargetType();
 	actionID = other_->ReturnActionID();
 	statAction = other_->ReturnStatActionType();
+}
+uint32 BaseAction::GenerateID()
+{
+	//Generate a uniqe ID for the action when made.
+
+	//NOTE:This Function need to communicate with the resource system so that
+	//we can check if there is no duplication
+	uint32 tmpID = (uint32)FMath::FRandRange(0.0f, 100000.0f);
+
+	bool IsUniqeID = true;
+	while (IsUniqeID)
+	{		
+		if (ResourceLoader::GetInstance()->CheckAction(tmpID))
+		{
+			IsUniqeID = false;
+			break;
+		}
+		tmpID = (uint32)FMath::FRandRange(0.0f, 100000.0f);
+	}
+	return tmpID;
 }
 void BaseAction::SetName(const FString name_)
 {

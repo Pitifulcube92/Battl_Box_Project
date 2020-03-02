@@ -1,0 +1,616 @@
+\doxysection{Json\+Receiver Class Reference}
+\label{class_json_receiver}\index{JsonReceiver@{JsonReceiver}}
+
+
+{\ttfamily \#include $<$Json\+Receiver.\+h$>$}
+
+
+
+Collaboration diagram for Json\+Receiver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_json_receiver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Initiate\+Class} ()
+\item 
+\textbf{ Json\+Receiver} ()
+\item 
+void \textbf{ Read\+Action\+Object} (const F\+String \&file\+Name\+\_\+)
+\item 
+void \textbf{ Read\+Equation\+Object} (const F\+String \&file\+Name\+\_\+)
+\item 
+void \textbf{ Read\+Stat\+Sheet\+Object} (const F\+String file\+Name\+\_\+)
+\item 
+bool \textbf{ Reset\+Json\+Object} ()
+\item 
+void \textbf{ Write\+Action\+Object} (\textbf{ Base\+Action} $\ast$const action\+\_\+)
+\item 
+void \textbf{ Write\+Equation\+Object} ()
+\item 
+void \textbf{ Write\+Stat\+Sheet\+Object} (\textbf{ Stat\+Sheet\+Object} $\ast$const sheet\+\_\+)
+\item 
+\textbf{ $\sim$\+Json\+Receiver} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+Array$<$ T\+Shared\+Ptr$<$ F\+Json\+Value $>$ $>$ \textbf{ Make\+I\+D\+Json\+Array} (\textbf{ Stat\+Sheet\+Object} $\ast$const sheet\+\_\+, const F\+String Name\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\+String \textbf{ Directory}
+\item 
+T\+Shared\+Ptr$<$ F\+Json\+Object $>$ \textbf{ Json\+Object}
+\item 
+T\+Shared\+Ptr$<$ T\+Json\+Reader$<$$>$ $>$ \textbf{ Json\+Reader}
+\item 
+T\+Shared\+Ptr$<$ T\+Json\+Writer$<$$>$ $>$ \textbf{ Json\+Writer}
+\item 
+F\+String \textbf{ read\+File\+String}
+\item 
+F\+String \textbf{ write\+File\+String}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file Json\+Receiver.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_json_receiver_a11e7f2740ee9db8344474d24b2f46735_a11e7f2740ee9db8344474d24b2f46735}} 
+\index{JsonReceiver@{JsonReceiver}!JsonReceiver@{JsonReceiver}}
+\index{JsonReceiver@{JsonReceiver}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{JsonReceiver()}
+{\footnotesize\ttfamily Json\+Receiver\+::\+Json\+Receiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_json_receiver_ad0b534a26cf70c1a35c96ccd2955e3cc_ad0b534a26cf70c1a35c96ccd2955e3cc}} 
+\index{JsonReceiver@{JsonReceiver}!````~JsonReceiver@{$\sim$JsonReceiver}}
+\index{````~JsonReceiver@{$\sim$JsonReceiver}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{$\sim$JsonReceiver()}
+{\footnotesize\ttfamily Json\+Receiver\+::$\sim$\+Json\+Receiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 364 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{365 \{}
+\DoxyCodeLine{366 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_json_receiver_abf6aa12c112bc20c4da1a71e97aaf451_abf6aa12c112bc20c4da1a71e97aaf451}} 
+\index{JsonReceiver@{JsonReceiver}!InitiateClass@{InitiateClass}}
+\index{InitiateClass@{InitiateClass}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{InitiateClass()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Initiate\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123     JsonObject = MakeShareable(\textcolor{keyword}{new} FJsonObject);}
+\DoxyCodeLine{124     Directory = FPaths::ProjectPluginsDir() + \textcolor{stringliteral}{"/Battle\_Box/FileResource"};}
+\DoxyCodeLine{125     JsonWriter = TJsonWriterFactory<>::Create(\&writeFileString);}
+\DoxyCodeLine{126     BattleBoxFileManager::VerifyOnCreateDirectory(Directory);}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+
+
+References Directory, Json\+Object, Json\+Writer, Battle\+Box\+File\+Manager\+::\+Verify\+On\+Create\+Directory(), and write\+File\+String.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_abf6aa12c112bc20c4da1a71e97aaf451_abf6aa12c112bc20c4da1a71e97aaf451_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_json_receiver_a3f71507aa4bef59295d61e4230f3fb64_a3f71507aa4bef59295d61e4230f3fb64}} 
+\index{JsonReceiver@{JsonReceiver}!MakeIDJsonArray@{MakeIDJsonArray}}
+\index{MakeIDJsonArray@{MakeIDJsonArray}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{MakeIDJsonArray()}
+{\footnotesize\ttfamily T\+Array$<$ T\+Shared\+Ptr$<$ F\+Json\+Value $>$ $>$ Json\+Receiver\+::\+Make\+I\+D\+Json\+Array (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{sheet\+\_\+,  }\item[{const F\+String}]{Name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 317 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{318 \{}
+\DoxyCodeLine{319     TArray<TSharedPtr<FJsonValue>> Array;}
+\DoxyCodeLine{320     }
+\DoxyCodeLine{321     \textcolor{keywordflow}{if} (Name\_ == \textcolor{stringliteral}{"commands"})}
+\DoxyCodeLine{322     \{}
+\DoxyCodeLine{323         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : sheet\_-\/>ReturnCommandMap())}
+\DoxyCodeLine{324         \{}
+\DoxyCodeLine{325             TSharedPtr<FJsonValue> value = MakeShareable(\textcolor{keyword}{new} FJsonValueNumber(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(i.Value-\/>ReturnActionID())));}
+\DoxyCodeLine{326             Array.Add(value);}
+\DoxyCodeLine{327         \}}
+\DoxyCodeLine{328     \}}
+\DoxyCodeLine{329     \textcolor{keywordflow}{if} (Name\_ == \textcolor{stringliteral}{"items"})}
+\DoxyCodeLine{330     \{}
+\DoxyCodeLine{331         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : sheet\_-\/>ReturnItemMap())}
+\DoxyCodeLine{332         \{}
+\DoxyCodeLine{333             TSharedPtr<FJsonValue> value = MakeShareable(\textcolor{keyword}{new} FJsonValueNumber(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(i.Value-\/>ReturnActionID())));}
+\DoxyCodeLine{334             Array.Add(value);}
+\DoxyCodeLine{335         \}}
+\DoxyCodeLine{336     \}}
+\DoxyCodeLine{337     \textcolor{keywordflow}{if} (Name\_ == \textcolor{stringliteral}{"abilities"})}
+\DoxyCodeLine{338     \{}
+\DoxyCodeLine{339         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : sheet\_-\/>ReturnAbilityMap())}
+\DoxyCodeLine{340         \{}
+\DoxyCodeLine{341             TSharedPtr<FJsonValue> value = MakeShareable(\textcolor{keyword}{new} FJsonValueNumber(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(i.Value-\/>ReturnActionID())));}
+\DoxyCodeLine{342             Array.Add(value);}
+\DoxyCodeLine{343         \}}
+\DoxyCodeLine{344     \}}
+\DoxyCodeLine{345     \textcolor{keywordflow}{if} (Name\_ == \textcolor{stringliteral}{"equipmint"})}
+\DoxyCodeLine{346     \{}
+\DoxyCodeLine{347         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : sheet\_-\/>ReturnEquipmentMap())}
+\DoxyCodeLine{348         \{}
+\DoxyCodeLine{349             TSharedPtr<FJsonValue> value = MakeShareable(\textcolor{keyword}{new} FJsonValueNumber(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(i.Value-\/>ReturnActionID())));}
+\DoxyCodeLine{350             Array.Add(value);}
+\DoxyCodeLine{351         \}}
+\DoxyCodeLine{352     \}}
+\DoxyCodeLine{353     \textcolor{keywordflow}{return} Array;}
+\DoxyCodeLine{354 \}}
+
+\end{DoxyCode}
+
+
+References Stat\+Sheet\+Object\+::\+Return\+Ability\+Map(), Stat\+Sheet\+Object\+::\+Return\+Command\+Map(), Stat\+Sheet\+Object\+::\+Return\+Equipment\+Map(), and Stat\+Sheet\+Object\+::\+Return\+Item\+Map().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_a3f71507aa4bef59295d61e4230f3fb64_a3f71507aa4bef59295d61e4230f3fb64_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_a3f71507aa4bef59295d61e4230f3fb64_a3f71507aa4bef59295d61e4230f3fb64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_json_receiver_a911fd69a872faebae4f3880e718ed74b_a911fd69a872faebae4f3880e718ed74b}} 
+\index{JsonReceiver@{JsonReceiver}!ReadActionObject@{ReadActionObject}}
+\index{ReadActionObject@{ReadActionObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{ReadActionObject()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Read\+Action\+Object (\begin{DoxyParamCaption}\item[{const F\+String \&}]{file\+Name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142     \textcolor{comment}{//This will read from a json file for action object}}
+\DoxyCodeLine{143     \textcolor{comment}{//TODO::}}
+\DoxyCodeLine{144     readFileString = BattleBoxFileManager::ReadFile(Directory + \textcolor{stringliteral}{"/ActionSheets"}, fileName\_);}
+\DoxyCodeLine{145     JsonReader = TJsonReaderFactory<>::Create(readFileString);}
+\DoxyCodeLine{146     \textcolor{keywordflow}{if} (FJsonSerializer::Deserialize(JsonReader.ToSharedRef(), JsonObject))}
+\DoxyCodeLine{147     \{}
+\DoxyCodeLine{148         \textcolor{comment}{//RTTI to find what the dirived action is }}
+\DoxyCodeLine{149         ACTIONTYPE action =  \textcolor{keyword}{static\_cast<}ACTIONTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionType"}));}
+\DoxyCodeLine{150         \textcolor{keywordflow}{if} (action == ACTIONTYPE::E\_COMMAND)}
+\DoxyCodeLine{151         \{}
+\DoxyCodeLine{152             commandData data;}
+\DoxyCodeLine{153             data.name = JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Name"});}
+\DoxyCodeLine{154             data.discription = JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Discription"});}
+\DoxyCodeLine{155             data.actionID = \textcolor{keyword}{static\_cast<}uint32\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionID"}));}
+\DoxyCodeLine{156             data.actionType = \textcolor{keyword}{static\_cast<}ACTIONTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionType"}));}
+\DoxyCodeLine{157             data.targetType = \textcolor{keyword}{static\_cast<}TARGETTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"TargetType"}));}
+\DoxyCodeLine{158             }
+\DoxyCodeLine{159             \textcolor{keywordtype}{double} tmp;}
+\DoxyCodeLine{160             \textcolor{keywordflow}{if} (JsonObject.Get()-\/>TryGetNumberField(\textcolor{stringliteral}{"StatAction"}, tmp))}
+\DoxyCodeLine{161                 data.statAction = \textcolor{keyword}{static\_cast<}STATACTION\textcolor{keyword}{>}((\textcolor{keywordtype}{int})JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"StatAction"}));}
+\DoxyCodeLine{162             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{163                 data.statAction = STATACTION::E\_NONE;}
+\DoxyCodeLine{164             data.currentWeapon = \textcolor{keyword}{static\_cast<}WEAPONTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"CurrentWeapon"}));}
+\DoxyCodeLine{165             data.commandActionID = \textcolor{keyword}{static\_cast<}uint32\textcolor{keyword}{>}(JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"BaseActionID"}));}
+\DoxyCodeLine{166         \}}
+\DoxyCodeLine{167         \textcolor{keywordflow}{if} (action == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{168         \{}
+\DoxyCodeLine{169             ItemData data;}
+\DoxyCodeLine{170             data.name = JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Name"});}
+\DoxyCodeLine{171             data.discription = JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Discription"});}
+\DoxyCodeLine{172             data.actionID = \textcolor{keyword}{static\_cast<}uint32\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionID"}));}
+\DoxyCodeLine{173             data.actionType = \textcolor{keyword}{static\_cast<}ACTIONTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionType"}));}
+\DoxyCodeLine{174             data.targetType = \textcolor{keyword}{static\_cast<}TARGETTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"TargetType"}));}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176             \textcolor{keywordtype}{double} tmp;}
+\DoxyCodeLine{177             \textcolor{keywordflow}{if} (JsonObject.Get()-\/>TryGetNumberField(\textcolor{stringliteral}{"StatAction"}, tmp))}
+\DoxyCodeLine{178                 data.statAction = \textcolor{keyword}{static\_cast<}STATACTION\textcolor{keyword}{>}((\textcolor{keywordtype}{int})JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"StatAction"}));}
+\DoxyCodeLine{179             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{180                 data.statAction = STATACTION::E\_NONE;}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182             data.itemType = \textcolor{keyword}{static\_cast<}ITEMTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetIntegerField(\textcolor{stringliteral}{"ItemAction"}));}
+\DoxyCodeLine{183             data.value = JsonObject.Get()-\/>GetIntegerField(\textcolor{stringliteral}{"Value"});}
+\DoxyCodeLine{184             data.effectIDList = TArray<uint32>(JsonObject.Get()-\/>GetArrayField(\textcolor{stringliteral}{"EffectListID"}));}
+\DoxyCodeLine{185         \}}
+\DoxyCodeLine{186         \textcolor{keywordflow}{if} (action == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{187         \{}
+\DoxyCodeLine{188             AbilityData data;}
+\DoxyCodeLine{189             data.name = JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Name"});}
+\DoxyCodeLine{190             data.discription = JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Discription"});}
+\DoxyCodeLine{191             data.actionID = \textcolor{keyword}{static\_cast<}uint32\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionID"}));}
+\DoxyCodeLine{192             data.actionType = \textcolor{keyword}{static\_cast<}ACTIONTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"ActionType"}));}
+\DoxyCodeLine{193             data.targetType = \textcolor{keyword}{static\_cast<}TARGETTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"TargetType"}));}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195             \textcolor{keywordtype}{double} tmp;}
+\DoxyCodeLine{196             \textcolor{keywordflow}{if} (JsonObject.Get()-\/>TryGetNumberField(\textcolor{stringliteral}{"StatAction"}, tmp))}
+\DoxyCodeLine{197                 data.statAction = \textcolor{keyword}{static\_cast<}STATACTION\textcolor{keyword}{>}((\textcolor{keywordtype}{int})JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"StatAction"}));}
+\DoxyCodeLine{198             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{199                 data.statAction = STATACTION::E\_NONE;}
+\DoxyCodeLine{200             data.abilityType = \textcolor{keyword}{static\_cast<}ABILITYTYPE\textcolor{keyword}{>}((int)JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"AbilityType"}));}
+\DoxyCodeLine{201             data.duration = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"Duration"}));}
+\DoxyCodeLine{202             data.abilityValue = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(JsonObject.Get()-\/>GetNumberField(\textcolor{stringliteral}{"AbilityValue"}));}
+\DoxyCodeLine{203         \}}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205     \}}
+\DoxyCodeLine{206 \}}
+
+\end{DoxyCode}
+
+
+References Ability\+Data\+::ability\+Type, Ability\+Data\+::ability\+Value, command\+Data\+::action\+ID, Item\+Data\+::action\+ID, Ability\+Data\+::action\+ID, command\+Data\+::action\+Type, Item\+Data\+::action\+Type, Ability\+Data\+::action\+Type, command\+Data\+::command\+Action\+ID, command\+Data\+::current\+Weapon, Directory, command\+Data\+::discription, Item\+Data\+::discription, Ability\+Data\+::discription, Ability\+Data\+::duration, E\+\_\+\+A\+B\+I\+L\+I\+TY, E\+\_\+\+C\+O\+M\+M\+A\+ND, E\+\_\+\+I\+T\+EM, E\+\_\+\+N\+O\+NE, Item\+Data\+::effect\+I\+D\+List, Item\+Data\+::item\+Type, Json\+Object, Json\+Reader, command\+Data\+::name, Item\+Data\+::name, Ability\+Data\+::name, Battle\+Box\+File\+Manager\+::\+Read\+File(), read\+File\+String, command\+Data\+::stat\+Action, Item\+Data\+::stat\+Action, Ability\+Data\+::stat\+Action, command\+Data\+::target\+Type, Item\+Data\+::target\+Type, Ability\+Data\+::target\+Type, and Item\+Data\+::value.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_a911fd69a872faebae4f3880e718ed74b_a911fd69a872faebae4f3880e718ed74b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_json_receiver_ab29d91652390dbec3bea605562451ba8_ab29d91652390dbec3bea605562451ba8}} 
+\index{JsonReceiver@{JsonReceiver}!ReadEquationObject@{ReadEquationObject}}
+\index{ReadEquationObject@{ReadEquationObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{ReadEquationObject()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Read\+Equation\+Object (\begin{DoxyParamCaption}\item[{const F\+String \&}]{file\+Name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{208 \{}
+\DoxyCodeLine{209     \textcolor{comment}{//This will read from a json file for equation object}}
+\DoxyCodeLine{210     \textcolor{comment}{//TODO::}}
+\DoxyCodeLine{211 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_json_receiver_a85a75e423da7f74e84ab38fea43325b6_a85a75e423da7f74e84ab38fea43325b6}} 
+\index{JsonReceiver@{JsonReceiver}!ReadStatSheetObject@{ReadStatSheetObject}}
+\index{ReadStatSheetObject@{ReadStatSheetObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{ReadStatSheetObject()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Read\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}\item[{const F\+String}]{file\+Name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129 \{       }
+\DoxyCodeLine{130     \textcolor{comment}{//This will read from a json file for statsheetobject}}
+\DoxyCodeLine{131     \textcolor{comment}{//TODO:: }}
+\DoxyCodeLine{132     readFileString = BattleBoxFileManager::ReadFile(Directory + \textcolor{stringliteral}{"/StatSheets"}, fileName\_);}
+\DoxyCodeLine{133     JsonReader = TJsonReaderFactory<>::Create(readFileString);}
+\DoxyCodeLine{134     \textcolor{keywordflow}{if} (FJsonSerializer::Deserialize(JsonReader.ToSharedRef(), JsonObject))}
+\DoxyCodeLine{135     \{}
+\DoxyCodeLine{136         JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Name"});}
+\DoxyCodeLine{137         JsonObject.Get()-\/>GetStringField(\textcolor{stringliteral}{"Tag"});}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139 \}}
+
+\end{DoxyCode}
+
+
+References Directory, Json\+Object, Json\+Reader, Battle\+Box\+File\+Manager\+::\+Read\+File(), and read\+File\+String.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_a85a75e423da7f74e84ab38fea43325b6_a85a75e423da7f74e84ab38fea43325b6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_json_receiver_a4e02b363c5368da749d81d872ab70185_a4e02b363c5368da749d81d872ab70185}} 
+\index{JsonReceiver@{JsonReceiver}!ResetJsonObject@{ResetJsonObject}}
+\index{ResetJsonObject@{ResetJsonObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{ResetJsonObject()}
+{\footnotesize\ttfamily bool Json\+Receiver\+::\+Reset\+Json\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 355 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{356 \{}
+\DoxyCodeLine{357     \textcolor{keywordflow}{if} (JsonObject.Get())}
+\DoxyCodeLine{358     \{}
+\DoxyCodeLine{359         JsonObject.Reset();}
+\DoxyCodeLine{360         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{361     \}}
+\DoxyCodeLine{362     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{363 \}}
+
+\end{DoxyCode}
+
+
+References Json\+Object.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_a4e02b363c5368da749d81d872ab70185_a4e02b363c5368da749d81d872ab70185_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942_ac033b297e7d4cb4ec8172e465bf00942}} 
+\index{JsonReceiver@{JsonReceiver}!WriteActionObject@{WriteActionObject}}
+\index{WriteActionObject@{WriteActionObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{WriteActionObject()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Write\+Action\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Base\+Action} $\ast$const}]{action\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{238 \{}
+\DoxyCodeLine{239     \textcolor{comment}{//This will write to a json file for a action object}}
+\DoxyCodeLine{240     \textcolor{comment}{//TODO:: Write the object, serialize, save it to a file.}}
+\DoxyCodeLine{241     }
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_COMMAND)}
+\DoxyCodeLine{244     \{}
+\DoxyCodeLine{245         CommandAction* command = \textcolor{keyword}{dynamic\_cast<}CommandAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247         JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Name"}, command-\/>ReturnName());}
+\DoxyCodeLine{248         JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Discription"}, command-\/>ReturnDiscription());}
+\DoxyCodeLine{249         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ActionID"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnActionID()));}
+\DoxyCodeLine{250         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ActionType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnActionID()));}
+\DoxyCodeLine{251         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"TargetType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnTargetType()));}
+\DoxyCodeLine{252         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"StatAction"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnStatActionType()));}
+\DoxyCodeLine{253         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"InteractionType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnInteractionType()));}
+\DoxyCodeLine{254         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"CurrentWeapon"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnWeaponType()));}
+\DoxyCodeLine{255         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"BaseActionID"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(command-\/>ReturnAction()-\/>ReturnActionID()));}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257         JsonWriter = TJsonWriterFactory<>::Create(\&writeFileString);}
+\DoxyCodeLine{258         BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action\_-\/>ReturnName() + \textcolor{stringliteral}{".json"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{259     \}}
+\DoxyCodeLine{260     \textcolor{keywordflow}{if} (action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ITEM)}
+\DoxyCodeLine{261     \{}
+\DoxyCodeLine{262         ItemAction* Item = \textcolor{keyword}{dynamic\_cast<}ItemAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264         JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Name"}, Item-\/>ReturnName());}
+\DoxyCodeLine{265         JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Discription"}, Item-\/>ReturnDiscription());}
+\DoxyCodeLine{266         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ActionID"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnActionID()));}
+\DoxyCodeLine{267         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ActionType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnActionID()));}
+\DoxyCodeLine{268         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"TargetType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnTargetType()));}
+\DoxyCodeLine{269         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"StatAction"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnStatActionType()));}
+\DoxyCodeLine{270         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"InteractionType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnInteractionType()));}
+\DoxyCodeLine{271         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ItemType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnItemType()));}
+\DoxyCodeLine{272         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"Value"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnValue()));}
+\DoxyCodeLine{273         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"DamageType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Item-\/>ReturnDamageType()));}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275         TArray<TSharedPtr<FJsonValue>> Array;}
+\DoxyCodeLine{276         TSharedPtr<FJsonObject> statObject;}
+\DoxyCodeLine{277         }
+\DoxyCodeLine{278         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : Item-\/>ReturnEffectList())}
+\DoxyCodeLine{279         \{}
+\DoxyCodeLine{280             TSharedPtr<FJsonValue> value = MakeShareable(\textcolor{keyword}{new} FJsonValueNumber(i-\/>ReturnActionID()));}
+\DoxyCodeLine{281             Array.Add(value);}
+\DoxyCodeLine{282         \}}
+\DoxyCodeLine{283         JsonObject.Get()-\/>SetArrayField(\textcolor{stringliteral}{"EffectListID"}, Array);}
+\DoxyCodeLine{284         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : Item-\/>ReturnStatMap())}
+\DoxyCodeLine{285         \{}
+\DoxyCodeLine{286             statObject.Get()-\/>SetNumberField(i.Key, i.Value);}
+\DoxyCodeLine{287         \}}
+\DoxyCodeLine{288         JsonWriter = TJsonWriterFactory<>::Create(\&writeFileString);}
+\DoxyCodeLine{289         BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action\_-\/>ReturnName() + \textcolor{stringliteral}{".json"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291     \textcolor{keywordflow}{if}(action\_-\/>ReturnActionType() == ACTIONTYPE::E\_ABILITY)}
+\DoxyCodeLine{292     \{}
+\DoxyCodeLine{293         AbilityAction* Ability = \textcolor{keyword}{dynamic\_cast<}AbilityAction*\textcolor{keyword}{>}(action\_);}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295         JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Name"}, Ability-\/>ReturnName());}
+\DoxyCodeLine{296         JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Discription"}, Ability-\/>ReturnDiscription());}
+\DoxyCodeLine{297         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ActionID"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnActionID()));}
+\DoxyCodeLine{298         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"ActionType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnActionID()));}
+\DoxyCodeLine{299         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"TargetType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnTargetType()));}
+\DoxyCodeLine{300         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"StatAction"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnStatActionType()));}
+\DoxyCodeLine{301         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"InteractionType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnInteractionType()));}
+\DoxyCodeLine{302         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"Duration"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnDuration()));}
+\DoxyCodeLine{303         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"AbilityValue"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnAbilityValue()));}
+\DoxyCodeLine{304         JsonObject.Get()-\/>SetNumberField(\textcolor{stringliteral}{"AbilityType"}, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(Ability-\/>ReturnAbilityType()));}
+\DoxyCodeLine{305         TArray<TSharedPtr<FJsonValue>> Array;}
+\DoxyCodeLine{306         }
+\DoxyCodeLine{307     JsonWriter = TJsonWriterFactory<>::Create(\&writeFileString);}
+\DoxyCodeLine{308     BattleBoxFileManager::WriteTextFile(Directory, writeFileString, action\_-\/>ReturnName() + \textcolor{stringliteral}{".json"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{309     \}}
+\DoxyCodeLine{310     ResetJsonObject();}
+\DoxyCodeLine{311 \}}
+
+\end{DoxyCode}
+
+
+References Directory, E\+\_\+\+A\+B\+I\+L\+I\+TY, E\+\_\+\+C\+O\+M\+M\+A\+ND, E\+\_\+\+I\+T\+EM, Json\+Object, Json\+Writer, Reset\+Json\+Object(), Ability\+Action\+::\+Return\+Ability\+Type(), Ability\+Action\+::\+Return\+Ability\+Value(), Command\+Action\+::\+Return\+Action(), Base\+Action\+::\+Return\+Action\+I\+D(), Base\+Action\+::\+Return\+Action\+Type(), Item\+Action\+::\+Return\+Damage\+Type(), Base\+Action\+::\+Return\+Discription(), Ability\+Action\+::\+Return\+Duration(), Item\+Action\+::\+Return\+Effect\+List(), Base\+Action\+::\+Return\+Interaction\+Type(), Item\+Action\+::\+Return\+Item\+Type(), Base\+Action\+::\+Return\+Name(), Base\+Action\+::\+Return\+Stat\+Action\+Type(), Item\+Action\+::\+Return\+Stat\+Map(), Base\+Action\+::\+Return\+Target\+Type(), Item\+Action\+::\+Return\+Value(), Command\+Action\+::\+Return\+Weapon\+Type(), write\+File\+String, and Battle\+Box\+File\+Manager\+::\+Write\+Text\+File().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942_ac033b297e7d4cb4ec8172e465bf00942_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_json_receiver_a6e7370d85a0588d87ba9ec3328680ad4_a6e7370d85a0588d87ba9ec3328680ad4}} 
+\index{JsonReceiver@{JsonReceiver}!WriteEquationObject@{WriteEquationObject}}
+\index{WriteEquationObject@{WriteEquationObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{WriteEquationObject()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Write\+Equation\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 312 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{313 \{}
+\DoxyCodeLine{314     \textcolor{comment}{//This will write to a json file for a equation object.}}
+\DoxyCodeLine{315     \textcolor{comment}{//TODO:: Write the object, serialize, save it to a file.}}
+\DoxyCodeLine{316 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_json_receiver_a3ad8f8479a0410f169114a302b3d268f_a3ad8f8479a0410f169114a302b3d268f}} 
+\index{JsonReceiver@{JsonReceiver}!WriteStatSheetObject@{WriteStatSheetObject}}
+\index{WriteStatSheetObject@{WriteStatSheetObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{WriteStatSheetObject()}
+{\footnotesize\ttfamily void Json\+Receiver\+::\+Write\+Stat\+Sheet\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Stat\+Sheet\+Object} $\ast$const}]{sheet\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file Json\+Receiver.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{213 \{}
+\DoxyCodeLine{214     \textcolor{comment}{//This will write to a json file for a statsheetobject}}
+\DoxyCodeLine{215     \textcolor{comment}{//TODO:: Write the object, serialize, save it to a file}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217     JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Name"}, sheet\_-\/>ReturnName());}
+\DoxyCodeLine{218     JsonObject.Get()-\/>SetStringField(\textcolor{stringliteral}{"Tag"}, sheet\_-\/>ReturnTag());}
+\DoxyCodeLine{219     JsonObject.Get()-\/>SetArrayField(\textcolor{stringliteral}{"Commands"}, MakeIDJsonArray(sheet\_, \textcolor{stringliteral}{"commands"}));}
+\DoxyCodeLine{220     JsonObject.Get()-\/>SetArrayField(\textcolor{stringliteral}{"Items"}, MakeIDJsonArray(sheet\_, \textcolor{stringliteral}{"items"}));}
+\DoxyCodeLine{221     JsonObject.Get()-\/>SetArrayField(\textcolor{stringliteral}{"abilities"}, MakeIDJsonArray(sheet\_, \textcolor{stringliteral}{"abilites"}));}
+\DoxyCodeLine{222     JsonObject.Get()-\/>SetArrayField(\textcolor{stringliteral}{"equipment"}, MakeIDJsonArray(sheet\_, \textcolor{stringliteral}{"equipment"}));}
+\DoxyCodeLine{223     TSharedPtr<FJsonObject> StatObject;}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225     \textcolor{comment}{//This does not work when you re-\/enginer.}}
+\DoxyCodeLine{226     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& i : sheet\_-\/>ReturnStatMap())}
+\DoxyCodeLine{227     \{}
+\DoxyCodeLine{228         StatObject.Get()-\/>SetNumberField(i.Key, (\textcolor{keywordtype}{double})i.Value);}
+\DoxyCodeLine{229     \}}
+\DoxyCodeLine{230     JsonObject.Get()-\/>SetObjectField(\textcolor{stringliteral}{"StatObject"}, StatObject);}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232     }
+\DoxyCodeLine{233     FJsonSerializer::Serialize(JsonObject.ToSharedRef(), JsonWriter.ToSharedRef());}
+\DoxyCodeLine{234     BattleBoxFileManager::WriteTextFile(Directory, writeFileString, sheet\_-\/>ReturnName() + \textcolor{stringliteral}{".json"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{235     ResetJsonObject();}
+\DoxyCodeLine{236 \}}
+
+\end{DoxyCode}
+
+
+References Directory, Json\+Object, Json\+Writer, Make\+I\+D\+Json\+Array(), Reset\+Json\+Object(), Stat\+Sheet\+Object\+::\+Return\+Name(), Stat\+Sheet\+Object\+::\+Return\+Stat\+Map(), Stat\+Sheet\+Object\+::\+Return\+Tag(), write\+File\+String, and Battle\+Box\+File\+Manager\+::\+Write\+Text\+File().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_json_receiver_a3ad8f8479a0410f169114a302b3d268f_a3ad8f8479a0410f169114a302b3d268f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_json_receiver_ae4cdcd5ca50b3dfe04b73c05af72624d_ae4cdcd5ca50b3dfe04b73c05af72624d}} 
+\index{JsonReceiver@{JsonReceiver}!Directory@{Directory}}
+\index{Directory@{Directory}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{Directory}
+{\footnotesize\ttfamily F\+String Json\+Receiver\+::\+Directory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file Json\+Receiver.\+h.
+
+\mbox{\label{class_json_receiver_a438340de494655ec5f3935cff71b40a1_a438340de494655ec5f3935cff71b40a1}} 
+\index{JsonReceiver@{JsonReceiver}!JsonObject@{JsonObject}}
+\index{JsonObject@{JsonObject}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{JsonObject}
+{\footnotesize\ttfamily T\+Shared\+Ptr$<$F\+Json\+Object$>$ Json\+Receiver\+::\+Json\+Object\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file Json\+Receiver.\+h.
+
+\mbox{\label{class_json_receiver_a204718473197be068738d7f708b35456_a204718473197be068738d7f708b35456}} 
+\index{JsonReceiver@{JsonReceiver}!JsonReader@{JsonReader}}
+\index{JsonReader@{JsonReader}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{JsonReader}
+{\footnotesize\ttfamily T\+Shared\+Ptr$<$T\+Json\+Reader$<$$>$ $>$ Json\+Receiver\+::\+Json\+Reader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file Json\+Receiver.\+h.
+
+\mbox{\label{class_json_receiver_a0ded622485e91ff967ca4075a1463cd7_a0ded622485e91ff967ca4075a1463cd7}} 
+\index{JsonReceiver@{JsonReceiver}!JsonWriter@{JsonWriter}}
+\index{JsonWriter@{JsonWriter}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{JsonWriter}
+{\footnotesize\ttfamily T\+Shared\+Ptr$<$T\+Json\+Writer$<$$>$ $>$ Json\+Receiver\+::\+Json\+Writer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 21 of file Json\+Receiver.\+h.
+
+\mbox{\label{class_json_receiver_a85002cac41ddde67768c0145b7681da9_a85002cac41ddde67768c0145b7681da9}} 
+\index{JsonReceiver@{JsonReceiver}!readFileString@{readFileString}}
+\index{readFileString@{readFileString}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{readFileString}
+{\footnotesize\ttfamily F\+String Json\+Receiver\+::read\+File\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file Json\+Receiver.\+h.
+
+\mbox{\label{class_json_receiver_a8ce0b58aa56db0881b313fcbaff6160a_a8ce0b58aa56db0881b313fcbaff6160a}} 
+\index{JsonReceiver@{JsonReceiver}!writeFileString@{writeFileString}}
+\index{writeFileString@{writeFileString}!JsonReceiver@{JsonReceiver}}
+\doxysubsubsection{writeFileString}
+{\footnotesize\ttfamily F\+String Json\+Receiver\+::write\+File\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 25 of file Json\+Receiver.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Json\+Receiver.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Json\+Receiver.\+cpp}\end{DoxyCompactItemize}
