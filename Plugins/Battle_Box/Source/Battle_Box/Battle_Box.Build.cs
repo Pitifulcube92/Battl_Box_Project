@@ -8,9 +8,10 @@ public class Battle_Box : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
         bUseRTTI = true;
-		PublicIncludePaths.AddRange(
-			new string[] {
+        PublicIncludePaths.AddRange(
+            new string[] {
 				// ... add public include paths required here ...
+               // "Battle_Box/Public"
 			}
 			);
 				

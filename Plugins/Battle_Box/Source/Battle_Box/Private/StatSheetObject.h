@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Containers/Array.h"
 #include "Containers/Map.h"
+
 class ItemAction;
 class CommandAction;
 class AbilityAction;
@@ -12,6 +13,7 @@ struct StatSheetData;
 /**
  * 
  */
+//UCLASS(ClassGroup = (Custom), BlueprintType)
 class BATTLE_BOX_API StatSheetObject
 {
 private:

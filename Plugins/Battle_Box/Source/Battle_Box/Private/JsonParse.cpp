@@ -94,7 +94,7 @@ StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 		data.statMap.Add("HP", (float)statObject.Get()->GetNumberField("HP"));
 		data.statMap.Add("HP", (float)statObject.Get()->GetNumberField("MP"));
 		data.statMap.Add("Atk", (float)statObject.Get()->GetNumberField("Atk"));
-		data.statMap.Add("MagicAttack", (float)statObject.Get()->GetNumberField("SpecialAttack"));
+		data.statMap.Add("MagicAttack", (float)statObject.Get()->GetNumberField("MagicAttack"));
 		data.statMap.Add("Defence", (float)statObject.Get()->GetNumberField("Defence"));
 		data.statMap.Add("MagicDefence", (float)statObject.Get()->GetNumberField("MagicDefence"));
 
