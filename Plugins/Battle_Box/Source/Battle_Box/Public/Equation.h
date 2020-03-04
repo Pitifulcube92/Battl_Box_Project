@@ -3,9 +3,9 @@
 #ifndef EQUATIONS_H		
 #define EQUATIONS_H
 #include "CoreMinimal.h"
+#include "ActionClasses/BaseAction.h"
+#include "Debugger.h"
 #include "Math/UnrealMathUtility.h"
-class BaseAction;
-class Debugger;
 
 class AbilityAction;
 class ItemAction;
@@ -15,8 +15,7 @@ enum class EQUATION_MOD_TYPE {
 };
 
 enum class EQUATION_TYPE {
-	E_NONE = 1,
-	E_EXPONENT, 
+	E_EXPONENT = 1, 
 	E_DIV,
 	E_SINE,
 	E_COSINE, 
@@ -27,21 +26,14 @@ class BATTLE_BOX_API Equation
 {
 public:
 	Equation();
-	Equation(float scalar_, float rise_, float run_, float xIntercept_, EQUATION_TYPE equationType_);
-	Equation(const Equation& other_);
+	Equation(float scalar_, float rise_, float run_, float xIntercept_);
 	~Equation();
-	float DetermineEquation(float input_);
+	float DetermineEquation(EQUATION_TYPE equationType_, float input_);
 
-	float GetDamageMultiplier() const;
+	float GetDamageMultiplier();
 	void SetDamageMultiplier(float x_);
-	float GetDamageReducer() const;
+	float GetDamageReducer();
 	void SetDamageReducer(float x_);
-	
-	EQUATION_TYPE RetrunEquationType() const;
-	float ReturnGenrealScale() const;
-	float ReturnRise() const;
-	float ReturnRun() const;
-	float ReturnXIntercept() const;
 private:
 	float damageMultipier = 1.5f;
 	float damageReducer = 1.5f;
@@ -59,11 +51,6 @@ private:
 	float Linear(float input_);
 	// fx = x^2 + bx + c;
 	float Quadratic(float input_);
-
-	EQUATION_TYPE equationType;
-	
-	
-	
 };
 
 #endif 

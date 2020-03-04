@@ -1,6 +1,6 @@
 <map id="BaseAction" name="BaseAction">
-<area shape="rect" id="node1" title=" " alt="" coords="185,5,353,317"/>
-<area shape="rect" id="node2" href="$class_ability_action.html" title=" " alt="" coords="5,387,167,670"/>
+<area shape="rect" id="node1" title=" " alt="" coords="184,5,353,317"/>
+<area shape="rect" id="node2" href="$class_ability_action.html" title=" " alt="" coords="5,395,167,663"/>
 <area shape="rect" id="node3" href="$class_command_action.html" title=" " alt="" coords="191,417,347,641"/>
 <area shape="rect" id="node4" href="$class_item_action.html" title=" " alt="" coords="371,365,527,692"/>
 </map>

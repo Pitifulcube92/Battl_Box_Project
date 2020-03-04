@@ -1,14 +1,12 @@
 <map id="BaseAction::ReturnActionType" name="BaseAction::ReturnActionType">
-<area shape="rect" id="node1" title="Return action type." alt="" coords="757,208,957,235"/>
+<area shape="rect" id="node1" title="Return action type." alt="" coords="757,157,957,184"/>
 <area shape="rect" id="node2" href="$class_ability_action_a772784d3aa39971866fe064fe5da9ec3.html#a772784d3aa39971866fe064fe5da9ec3" title=" " alt="" coords="506,5,682,32"/>
-<area shape="rect" id="node3" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,56,689,83"/>
-<area shape="rect" id="node4" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title=" " alt="" coords="239,107,422,133"/>
-<area shape="rect" id="node6" href="$class_effect_system_ab5c41ca84888911f7c878be0a3a5d4c0.html#ab5c41ca84888911f7c878be0a3a5d4c0" title=" " alt="" coords="498,157,690,184"/>
-<area shape="rect" id="node7" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,360,709,387"/>
-<area shape="rect" id="node9" href="$class_command_action_aaa9704a80750e6a758d76178cfe12b5a.html#aaa9704a80750e6a758d76178cfe12b5a" title=" " alt="" coords="483,259,705,285"/>
-<area shape="rect" id="node10" href="$class_item_action_ae98143bbb738b0d4e6b98b84e1e45e05.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="517,309,671,336"/>
-<area shape="rect" id="node11" href="$class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="499,208,689,235"/>
-<area shape="rect" id="node12" href="$class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942.html#ac033b297e7d4cb4ec8172e465bf00942" title=" " alt="" coords="507,411,681,453"/>
+<area shape="rect" id="node3" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,107,689,133"/>
+<area shape="rect" id="node4" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="239,107,422,133"/>
+<area shape="rect" id="node6" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,309,709,336"/>
+<area shape="rect" id="node8" href="$class_command_action_aaa9704a80750e6a758d76178cfe12b5a.html#aaa9704a80750e6a758d76178cfe12b5a" title=" " alt="" coords="483,208,705,235"/>
+<area shape="rect" id="node9" href="$class_item_action_ae98143bbb738b0d4e6b98b84e1e45e05.html#ae98143bbb738b0d4e6b98b84e1e45e05" title=" " alt="" coords="517,259,671,285"/>
+<area shape="rect" id="node10" href="$class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="499,56,689,83"/>
 <area shape="rect" id="node5" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,107,183,133"/>
-<area shape="rect" id="node8" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,353,431,394"/>
+<area shape="rect" id="node7" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,302,431,343"/>
 </map>

@@ -4,18 +4,16 @@
 #define COMMANDACTION_H
 #include "CoreMinimal.h"
 #include "BaseAction.h"
-struct CommandData;
-
 
 enum class WEAPONTYPE
 {
-	E_NONE = 1,
+	E_NONE,
 	E_BLADE,
 	E_RANGE,
 	E_BLUNT_WEAP
 };
 
-class BATTLE_BOX_API CommandAction : public BaseAction
+class CommandAction : public BaseAction
 {
 private:
 	bool isActionCommand;
@@ -26,7 +24,6 @@ public:
 	CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_,const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
 				  const WEAPONTYPE currentWeap_,  BaseAction* const command_);
 	CommandAction(CommandAction* const other_);
-	CommandAction(CommandData const data);
 	///Sets the weapon type the item is.
 	void SetWeaponType(WEAPONTYPE type_);
 	///Sets the command object.

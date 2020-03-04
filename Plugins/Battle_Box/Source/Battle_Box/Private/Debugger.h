@@ -14,7 +14,7 @@ enum class MessageType
 	E_ERROR,
 	E_FATAL_ERROR
 };
-class BATTLE_BOX_API Debugger
+class Debugger 
 {
 private:
 	static void Log(const MessageType type_, const FString& message_, const FString& fileName_, const int32 line_);
@@ -40,7 +40,5 @@ public:
 	static void Warrning(const FString& message_, const FString& fileName_, const int32 line_);
 	///Sends a warning log to the dugger txt file. 
 	static void FatalError(const FString& message_, const FString& fileName_, const int32 line_);
-	///Tests ALL Classes;
-	//static void TESTALLCLASSES();
 };
 #endif // !1

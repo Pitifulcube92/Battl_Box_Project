@@ -47,14 +47,14 @@ Definition at line 8 of file Battle\+\_\+\+Box.\+h.
 
 
 
-Definition at line 30 of file Battle\+\_\+\+Box.\+cpp.
+Definition at line 25 of file Battle\+\_\+\+Box.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{31 \{}
-\DoxyCodeLine{32     \textcolor{comment}{// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,}}
-\DoxyCodeLine{33     \textcolor{comment}{// we call this function before unloading the module.}}
-\DoxyCodeLine{34 \}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{comment}{// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,}}
+\DoxyCodeLine{28     \textcolor{comment}{// we call this function before unloading the module.}}
+\DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
 \mbox{\label{class_f_battle___box_module_af9e8a9761586d4c32b376edc5d5f9664_af9e8a9761586d4c32b376edc5d5f9664}} 
@@ -69,33 +69,30 @@ I\+Module\+Interface implementation.
 
 
 
-Definition at line 10 of file Battle\+\_\+\+Box.\+cpp.
+Definition at line 8 of file Battle\+\_\+\+Box.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11 \{}
-\DoxyCodeLine{12     \textcolor{comment}{// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-\/module}}
-\DoxyCodeLine{13     Debugger::InitDebug();}
-\DoxyCodeLine{14     Debugger::SetSeverity(MessageType::E\_INFO);}
-\DoxyCodeLine{15     \textcolor{keywordflow}{if} (BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + \textcolor{stringliteral}{"/Battle\_Box/FileResource"}) \&\&}
-\DoxyCodeLine{16         BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + \textcolor{stringliteral}{"/Battle\_Box/FileResource/StatSheets"}) \&\&}
-\DoxyCodeLine{17         BattleBoxFileManager::VerifyOnCreateDirectory(FPaths::ProjectPluginsDir() + \textcolor{stringliteral}{"/Battle\_Box/FileResource/ActionSheets"}))}
-\DoxyCodeLine{18     \{}
-\DoxyCodeLine{19         Debugger::SetSeverity(MessageType::E\_INFO);}
-\DoxyCodeLine{20         Debugger::Info(\textcolor{stringliteral}{"All Directories are made!"}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{21     \}}
-\DoxyCodeLine{22     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{23     \{}
-\DoxyCodeLine{24         Debugger::SetSeverity(MessageType::E\_INFO);}
-\DoxyCodeLine{25         Debugger::Error(\textcolor{stringliteral}{"A Directoy was not made!"}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
-\DoxyCodeLine{26     \}}
-\DoxyCodeLine{27 }
-\DoxyCodeLine{28 \}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-\/module}}
+\DoxyCodeLine{11     Debugger::InitDebug();}
+\DoxyCodeLine{12     Debugger::SetSeverity(MessageType::E\_INFO);}
+\DoxyCodeLine{13     Debugger::Info(\textcolor{stringliteral}{"Info is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     Debugger::SetSeverity(MessageType::E\_ERROR);}
+\DoxyCodeLine{16     Debugger::Error(\textcolor{stringliteral}{"Error is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     Debugger::SetSeverity(MessageType::E\_WARNING);}
+\DoxyCodeLine{19     Debugger::Warrning(\textcolor{stringliteral}{"Warning is Working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     Debugger::SetSeverity(MessageType::E\_FATAL\_ERROR);}
+\DoxyCodeLine{22     Debugger::FatalError(\textcolor{stringliteral}{"FatalError is working."}, \textcolor{stringliteral}{"Battle\_Box.cpp"}, \_\_LINE\_\_);}
+\DoxyCodeLine{23 \}}
 
 \end{DoxyCode}
 
 
-References E\+\_\+\+I\+N\+FO, Debugger\+::\+Error(), Debugger\+::\+Info(), Debugger\+::\+Init\+Debug(), Debugger\+::\+Set\+Severity(), and Battle\+Box\+File\+Manager\+::\+Verify\+On\+Create\+Directory().
+References E\+\_\+\+E\+R\+R\+OR, E\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR, E\+\_\+\+I\+N\+FO, E\+\_\+\+W\+A\+R\+N\+I\+NG, Debugger\+::\+Error(), Debugger\+::\+Fatal\+Error(), Debugger\+::\+Info(), Debugger\+::\+Init\+Debug(), Debugger\+::\+Set\+Severity(), and Debugger\+::\+Warrning().
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

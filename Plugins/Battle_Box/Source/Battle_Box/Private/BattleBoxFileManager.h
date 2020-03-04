@@ -8,7 +8,7 @@
 /**
  * 
  */
-class BATTLE_BOX_API BattleBoxFileManager
+class BattleBoxFileManager
 {
 public:
 	BattleBoxFileManager(const BattleBoxFileManager&) = delete;
@@ -27,6 +27,5 @@ public:
 	static void WriteTextFile(const FString& saveDirectory_, const FString context_, const FString& FileName_, bool const IsOverWrite_);
 	///write multiple lines of string to a txt file.
 	static void WriteTextArrayToFile(const FString& saveDirectory_, const TArray<FString> textArray_, const FString& FileName_, bool const IsOverWrite_);
-	static FString ReadFile(const FString Directory_, const FString FileName_);
 };
 #endif // !

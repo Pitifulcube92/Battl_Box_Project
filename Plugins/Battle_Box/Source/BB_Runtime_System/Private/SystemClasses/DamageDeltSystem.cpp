@@ -1,7 +1,6 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #include "DamageDeltSystem.h"
 #include "StatSystem.h"
-#include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/StatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
@@ -151,13 +150,24 @@ float DamageDeltSystem::CalculateWeaponDamage(ItemAction* const targetWeapon_)
 	{
 		return targetWeapon_->ReturnStatMap()["Atk"] + targetWeapon_->ReturnStatMap()["M_Atk"];
 	}
-	return 0.0f;
 }
 float  DamageDeltSystem::CalculateAbilityDamage(AbilityAction* const targetAbility_)
 {
 	//Get the target action and get the damage value;
 	float tmp = 0.0f;
 	return tmp;
+	/*if (targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
+	{
+		target
+	}
+	if (targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_ABILITY)
+	{
+
+	}
+	if(targetAbility_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY)
+	{
+
+	}*/
 }
 float DamageDeltSystem::CalculateItemDamage(ItemAction* const targetItem_)
 {
@@ -174,7 +184,18 @@ float DamageDeltSystem::CalculateItemDamage(ItemAction* const targetItem_)
 	{
 		return targetItem_->ReturnStatMap()["Atk"] + targetItem_->ReturnStatMap()["M_Atk"];
 	}
-	return 0.0f;
+	//switch (targetItem_->ReturnDamageType())
+	//{
+	//case DAMAGETYPE::E_HP_DAMAGE:
+	//	//This will get the damage from the stat map
+	//	return targetItem_->ReturnStatMap()["Atk"];
+	//case DAMAGETYPE::E_HP_RECOVER:
+	//	return targetItem_->ReturnStatMap()["HP_REC"];
+	//case DAMAGETYPE::E_MP_DAMAGE:
+	//	return targetItem_->ReturnStatMap()["M_Atk"];
+	//case DAMAGETYPE::E_MP_RECOVER:
+	//	return targetItem_->ReturnStatMap()["M_REC"];
+	//}
 }
 float DamageDeltSystem::CalculatePhysicalDefence(StatSheetObject* const target_)
 {

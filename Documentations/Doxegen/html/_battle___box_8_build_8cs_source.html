@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('_battle___box_8_build_8cs_source.html'
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_battle___box_a3cedcf74184e2b8bb3fd4c3ec012a6a9.html#a3cedcf74184e2b8bb3fd4c3ec012a6a9">    7</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_battle___box_a3cedcf74184e2b8bb3fd4c3ec012a6a9.html#a3cedcf74184e2b8bb3fd4c3ec012a6a9">Battle_Box</a>(ReadOnlyTargetRules Target) : base(Target)</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        bUseRTTI = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        PublicIncludePaths.AddRange(</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keyword">new</span> <span class="keywordtype">string</span>[] {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                <span class="comment">// ... add public include paths required here ...</span></div>
@@ -136,22 +136,20 @@ $(document).ready(function(){initNavTree('_battle___box_8_build_8cs_source.html'
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="stringliteral">&quot;Engine&quot;</span>,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="stringliteral">&quot;Slate&quot;</span>,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="stringliteral">&quot;SlateCore&quot;</span>,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="stringliteral">&quot;Json&quot;</span>,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="stringliteral">&quot;JsonUtilities&quot;</span>,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="stringliteral">&quot;BB_Runtime_System&quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">// ...   add private dependencies that you statically link with here ...    </span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        DynamicallyLoadedModuleNames.AddRange(</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">// ... add any modules that your module loads dynamically here ...</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="stringliteral">&quot;BB_Runtime_System&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="comment">// ...   add private dependencies that you statically link with here ...    </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        DynamicallyLoadedModuleNames.AddRange(</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="comment">// ... add any modules that your module loads dynamically here ...</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_battle___box_html"><div class="ttname"><a href="class_battle___box.html">Battle_Box</a></div><div class="ttdef"><b>Definition:</b> <a href="_battle___box_8_build_8cs_source.html#l00005">Battle_Box.Build.cs:5</a></div></div>

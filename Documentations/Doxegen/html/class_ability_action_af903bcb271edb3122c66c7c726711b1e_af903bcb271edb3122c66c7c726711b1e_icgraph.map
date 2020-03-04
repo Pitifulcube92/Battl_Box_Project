@@ -1,7 +1,6 @@
 <map id="AbilityAction::ReturnDuration" name="AbilityAction::ReturnDuration">
-<area shape="rect" id="node1" title=" " alt="" coords="461,56,651,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="461,31,651,57"/>
 <area shape="rect" id="node2" href="$class_ability_action_a772784d3aa39971866fe064fe5da9ec3.html#a772784d3aa39971866fe064fe5da9ec3" title=" " alt="" coords="234,5,410,32"/>
-<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title=" " alt="" coords="231,56,413,83"/>
-<area shape="rect" id="node5" href="$class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942.html#ac033b297e7d4cb4ec8172e465bf00942" title=" " alt="" coords="235,107,409,149"/>
+<area shape="rect" id="node3" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="231,56,413,83"/>
 <area shape="rect" id="node4" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,56,183,83"/>
 </map>

@@ -1,8 +1,7 @@
 <map id="ItemAction::ReturnStatMap" name="ItemAction::ReturnStatMap">
-<area shape="rect" id="node1" title="Return statModMap." alt="" coords="780,78,959,105"/>
+<area shape="rect" id="node1" title="Return statModMap." alt="" coords="780,46,959,73"/>
 <area shape="rect" id="node2" href="$class_damage_delt_system_a7b2fc3b7d84fa682d2132143443053be.html#a7b2fc3b7d84fa682d2132143443053be" title="Calculates the damage of an item." alt="" coords="532,5,732,47"/>
 <area shape="rect" id="node5" href="$class_damage_delt_system_a9c2c58391271d6a546decf7b6d966732.html#a9c2c58391271d6a546decf7b6d966732" title="Claculates the damage of a weapon item." alt="" coords="532,71,732,112"/>
-<area shape="rect" id="node6" href="$class_json_receiver_ac033b297e7d4cb4ec8172e465bf00942.html#ac033b297e7d4cb4ec8172e465bf00942" title=" " alt="" coords="545,136,719,177"/>
 <area shape="rect" id="node3" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="253,13,484,39"/>
 <area shape="rect" id="node4" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="5,5,205,47"/>
 </map>

@@ -1,6 +1,4 @@
 <map id="StatSheetObject::ReturnCommandMap" name="StatSheetObject::ReturnCommandMap">
-<area shape="rect" id="node1" title="Returns the commmand map." alt="" coords="480,46,728,73"/>
-<area shape="rect" id="node2" href="$class_json_receiver_a3f71507aa4bef59295d61e4230f3fb64.html#a3f71507aa4bef59295d61e4230f3fb64" title=" " alt="" coords="251,5,429,47"/>
-<area shape="rect" id="node4" href="$class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="248,71,432,112"/>
-<area shape="rect" id="node3" href="$class_json_receiver_a3ad8f8479a0410f169114a302b3d268f.html#a3ad8f8479a0410f169114a302b3d268f" title=" " alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node1" title="Returns the commmand map." alt="" coords="237,13,485,39"/>
+<area shape="rect" id="node2" href="$class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="5,5,189,47"/>
 </map>

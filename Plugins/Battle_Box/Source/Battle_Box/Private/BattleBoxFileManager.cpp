@@ -74,27 +74,5 @@ void  BattleBoxFileManager::WriteTextArrayToFile(const FString& saveDirectory_, 
 	FString absoluteFilePath = saveDirectory_ + "/" + FileName_;
 	FFileHelper::SaveStringToFile(*FinalString, *absoluteFilePath);
 }
-FString BattleBoxFileManager::ReadFile(const FString Directory_, const FString FileName_)
-{
-	IPlatformFile& PlatFormFile = FPlatformFileManager::Get().GetPlatformFile();
-	FString absoluteFilePath = Directory_ + "/" + FileName_;
-	FString tmp;
-	if (PlatFormFile.FileExists(*absoluteFilePath))
-	{
-		bool passed = FFileHelper::LoadFileToString(tmp, *absoluteFilePath);
-		if (passed == true) { tmp = tmp; }
-		return tmp;
-	}
 
-	//FString tmp;
-	//FString absoluteFilePath = Directory_ + "/" + FileName_;
-	//IPlatformFile& platFormFile = FPlatformFileManager::Get().GetPlatformFile(); //.GetPlatformFile();
-	//platFormFile.OpenRead(*FileName_);
-	//IFileHandle* FileHandle = platFormFile.OpenRead(*FileName_); // IFileHandel Failed to read;
-	//if(FileHandle)
-	//{
-	//	FFileHelper::LoadFileToString(tmp, *FileName_);
-	//}
-	return tmp;
-}
 
