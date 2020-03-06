@@ -96,8 +96,8 @@ float Equation::Linear(float input_)
 float Equation::Quadratic(float input_)
 {
 	// y = x^2 + x*b + c;
-	float y = FMath::Pow(input_, 2.0f);  + (xIntercept * input_) + rise;
-	return y;
+	//float y = FMath::Pow(input_, 2.0f);  + (xIntercept * input_) + rise;
+	return 5;
 }
 
 float Equation::GetDamageMultiplier()
