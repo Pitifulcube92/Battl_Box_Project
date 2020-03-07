@@ -3,14 +3,14 @@
 #include "Containers/Map.h"
 #include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
-#include "../Battle_Box/Private/StatSheetObject.h"
+#include "../Battle_Box/Private/UStatSheetObject.h"
 #include "../SystemClasses/DamageDeltSystem.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 
-StatSheetObject* StatSystem::target = nullptr;
-TArray<StatSheetObject*> StatSystem::targets = TArray<StatSheetObject*>();
+UStatSheetObject* StatSystem::target = nullptr;
+TArray<UStatSheetObject*> StatSystem::targets = TArray<UStatSheetObject*>();
 
 void StatSystem::CalculateStat(const bool IsSingleTarget_, BaseAction* const action_)
 {
@@ -178,7 +178,7 @@ void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const ac
 	OnDestroy();
 }
 
-void StatSystem::ModifiyStat(StatSheetObject* const target_, const float value, const FString name_)
+void StatSystem::ModifiyStat(UStatSheetObject* const target_, const float value, const FString name_)
 {
 	if (target_->ReturnStatMap().Contains(name_))
 	{
@@ -190,7 +190,7 @@ void StatSystem::ModifiyStat(StatSheetObject* const target_, const float value, 
 		Debugger::Warrning(name_ + " is not found in the stat sheet.", "StatSystem.cpp", __LINE__);
 	}
 }
-void StatSystem::AddStatModifier(StatSheetObject* const target_, BaseAction* const action_)
+void StatSystem::AddStatModifier(UStatSheetObject* const target_, BaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
@@ -244,7 +244,7 @@ void StatSystem::AddStatModifier(StatSheetObject* const target_, BaseAction* con
 		return;
 	}
 }
-void StatSystem::RemoveModifier(StatSheetObject* const target_, BaseAction* const action_)
+void StatSystem::RemoveModifier(UStatSheetObject* const target_, BaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
@@ -272,19 +272,19 @@ void StatSystem::RemoveModifier(StatSheetObject* const target_, BaseAction* cons
 		return;
 	}
 }
-void StatSystem::AddTmpModifier(StatSheetObject* const target_, BaseAction* const  action_, const float duration_)
+void StatSystem::AddTmpModifier(UStatSheetObject* const target_, BaseAction* const  action_, const float duration_)
 {
 	//This will add a modifier then remove it in a timer.
 }
-void StatSystem::RemoveTmpModifier(StatSheetObject* const target_, BaseAction* action_, const float duration_)
+void StatSystem::RemoveTmpModifier(UStatSheetObject* const target_, BaseAction* action_, const float duration_)
 {
 	//This will remove a modifier then add it in a timer.
 }
-void StatSystem::SetTarget(StatSheetObject* const target_)
+void StatSystem::SetTarget(UStatSheetObject* const target_)
 {
 	target = target_;
 }
-void StatSystem::Addtarget(StatSheetObject* const target_)
+void StatSystem::Addtarget(UStatSheetObject* const target_)
 {
 	targets.Add(target_);
 }

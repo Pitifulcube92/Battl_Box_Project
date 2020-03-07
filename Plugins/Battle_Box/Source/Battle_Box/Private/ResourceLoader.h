@@ -8,10 +8,10 @@
 #include "Containers/Map.h"
 #include "Debugger.h"
 #include "JsonParse.h"
-#include "StatSheetObject.h"
+#include "UStatSheetObject.h"
 
 class BaseAction;
-class StatSheetObject;
+class UStatSheetObject;
 
 class ResourceLoader
 {
@@ -26,7 +26,7 @@ public:// Singleton stuff
 	// Will Add action based on name
 	static void AddAction( BaseAction* const action_);
 	// will add a statsheet based on name
-	static void AddStatSheet(StatSheetObject* conststatSheet_);
+	static void AddStatSheet(UStatSheetObject* conststatSheet_);
 	
 	// Deletes action by name 
 	static void DeleteAction(const FString name_); 
@@ -40,7 +40,7 @@ public:// Singleton stuff
 	// returns object by id
 	static BaseAction* ReturnAction(const uint32 id_); 
 	 // returns object by name
-	static StatSheetObject* ReturnStatSheet(const FString name_);
+	static UStatSheetObject* ReturnStatSheet(const FString name_);
 
 	// this will check if object is in the map and return bool;
 	static bool CheckAction(const FString name_); 
@@ -56,7 +56,7 @@ private:
 	ResourceLoader();
 
 	static TMap<const FString, BaseAction* const> actionMap;
-	static TMap<const FString, StatSheetObject* const> statSheetMap;
+	static TMap<const FString, UStatSheetObject* const> statSheetMap;
 	static uint32 GetActionID(const std::string& key_);
 	static std::unique_ptr<ResourceLoader> resourceInstance;
 };

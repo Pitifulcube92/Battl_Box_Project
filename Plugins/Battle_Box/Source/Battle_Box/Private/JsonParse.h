@@ -13,7 +13,7 @@
 #include "Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "Containers/Array.h"
 
-class StatSheetObject;
+class UStatSheetObject;
 class BaseAction;
 class FJsonObject;
 class FJsonValue;
@@ -84,14 +84,14 @@ private:
 	FString readFileString;
 	FString writeFileString;
 
-	TArray<TSharedPtr<FJsonValue>> MakeIDJsonArray(StatSheetObject* const sheet_, const FString Name_);
+	TArray<TSharedPtr<FJsonValue>> MakeIDJsonArray(UStatSheetObject* const sheet_, const FString Name_);
 public:
 	JsonParse();
 	bool ResetJsonObject();
 	bool InitiateClass();
-	StatSheetObject* ReadStatSheetObject(const FString fileName_);
+	UStatSheetObject* ReadStatSheetObject(const FString fileName_);
 	BaseAction* ReadActionObject(const FString& fileName_);
-	void WriteStatSheetObject(StatSheetObject* const sheet_);
+	void WriteStatSheetObject(UStatSheetObject* const sheet_);
 	void WriteActionObject(BaseAction* const action_);
 	~JsonParse();
 };

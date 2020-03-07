@@ -4,12 +4,12 @@
 #include "DamageDeltSystem.h"
 #include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
-#include "../Battle_Box/Private/StatSheetObject.h"
+#include "../Battle_Box/Private/UStatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
-StatSheetObject*  EffectSystem::target = nullptr;
-TArray<StatSheetObject*> EffectSystem::targets = TArray<StatSheetObject*>();
+UStatSheetObject*  EffectSystem::target = nullptr;
+TArray<UStatSheetObject*> EffectSystem::targets = TArray<UStatSheetObject*>();
 BaseAction* EffectSystem::targetAction = nullptr;
 
 void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
@@ -334,11 +334,11 @@ void EffectSystem::RemoveEffect(BaseAction* action_)
 {
 	//Same process as the equation and reverse calculate the value needed.
 }
-void EffectSystem::SetTarget(StatSheetObject* target_)
+void EffectSystem::SetTarget(UStatSheetObject* target_)
 {
 	target = target_;
 }
-void EffectSystem::Addtarget(StatSheetObject* target_)
+void EffectSystem::Addtarget(UStatSheetObject* target_)
 {
 	targets.Add(target_);
 }

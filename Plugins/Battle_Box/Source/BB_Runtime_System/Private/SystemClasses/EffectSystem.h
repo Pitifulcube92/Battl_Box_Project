@@ -2,20 +2,20 @@
 #ifndef EFFECTSYSTEM_H
 #define EFFECTSYSTEM_H
 #include "Containers/Array.h"
-class StatSheetObject;
+class UStatSheetObject;
 class BaseAction;
 
 class EffectSystem 
 {
 private:
-	static StatSheetObject* target;
-	static TArray<StatSheetObject*> targets;
+	static UStatSheetObject* target;
+	static TArray<UStatSheetObject*> targets;
 	static BaseAction* targetAction;
 public:
 	EffectSystem(const EffectSystem&) = delete;
 	EffectSystem(EffectSystem&&) = delete;
-	EffectSystem& operator =(const EffectSystem&) = delete;
-	EffectSystem& operator =(EffectSystem&&) = delete;
+	EffectSystem& operator = (const EffectSystem&) = delete;
+	EffectSystem& operator = (EffectSystem&&) = delete;
 	EffectSystem() = delete;
 
 	static void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
@@ -24,9 +24,9 @@ public:
 	///Removes the effect by the action.
 	static void RemoveEffect(BaseAction* action_);
 	///Sets target
-	static void SetTarget(StatSheetObject* target_);
+	static void SetTarget(UStatSheetObject* target_);
 	///Add target to the target array
-	static void Addtarget(StatSheetObject* target_);
+	static void Addtarget(UStatSheetObject* target_);
 	static void OnDestroy();
 	~EffectSystem();
 };

@@ -5,7 +5,7 @@
 #include "BattleBoxFileManager.h"
 ///destroy all this 
 #include "ActionClasses/BaseAction.h"
-#include "StatSheetObject.h"
+#include "UStatSheetObject.h"
 #include "ActionClasses/AbilityAction.h"
 #include "ActionClasses/ItemAction.h"
 #include "ActionClasses/CommandAction.h"

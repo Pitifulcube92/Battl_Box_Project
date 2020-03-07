@@ -1,10 +1,12 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
-#ifndef STATSHEETOBJECT_H
-#define STATSHEETOBJECT_H
+#pragma once
+
 #include "CoreMinimal.h"
 #include "Containers/Array.h"
 #include "Containers/Map.h"
+#include "UObject/Object.h"
+#include "UStatSheetObject.generated.h"
 
 class ItemAction;
 class CommandAction;
@@ -13,9 +15,10 @@ struct StatSheetData;
 /**
  * 
  */
-//UCLASS(ClassGroup = (Custom), BlueprintType)
-class BATTLE_BOX_API StatSheetObject
+UCLASS()
+class BATTLE_BOX_API UStatSheetObject : public UObject
 {
+	GENERATED_BODY()
 private:
 	FString name;
 	FString tag;
@@ -26,10 +29,10 @@ private:
 	TMap<FString, ItemAction*> equipmentMap;
 	
 public:
-	StatSheetObject();
-	StatSheetObject(const FString name_, const FString tag_, const TMap<FString, CommandAction*> commandMap_, const TMap<FString, ItemAction*> itemMap_, const TMap<FString, AbilityAction*> abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, ItemAction*> equipmentMap_);
-	StatSheetObject(StatSheetObject* const other_);
-	StatSheetObject(StatSheetData const data_);
+	UStatSheetObject();
+	UStatSheetObject(const FString name_, const FString tag_, const TMap<FString, CommandAction*> commandMap_, const TMap<FString, ItemAction*> itemMap_, const TMap<FString, AbilityAction*> abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, ItemAction*> equipmentMap_);
+	UStatSheetObject(UStatSheetObject* const other_);
+	UStatSheetObject(StatSheetData const data_);
 	///Sets name 
 	void SetName(const FString name_);
 	///Sets tag
@@ -73,6 +76,5 @@ public:
 	///Returns a equipment-item action by its name from the equipment map
 	ItemAction* ReturnEquipment(const FString name_) const;
 	void OnDestroy();
-	~StatSheetObject();
+	~UStatSheetObject();
 };
-#endif // !1

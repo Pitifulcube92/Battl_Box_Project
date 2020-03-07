@@ -10,7 +10,7 @@
 #include "BattleBoxFileManager.h"
 #include "ResourceLoader.h"
 #include "Serialization/JsonSerializer.h"
-#include "../Battle_Box/Private/StatSheetObject.h"
+#include "../Battle_Box/Private/UStatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 
 ///////////////////////////////////////////////////////
@@ -77,9 +77,9 @@ bool JsonParse::InitiateClass()
 	else
 		return false;
 }
-StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
+UStatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 {		
-	//This will read from a json file for statsheetobject
+	//This will read from a json file for UStatSheetObject
 	//TODO:: 
 	readFileString = BattleBoxFileManager::ReadFile(Directory + "/StatSheets", fileName_);
 	JsonReader = TJsonReaderFactory<>::Create(readFileString);
@@ -98,13 +98,13 @@ StatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 		data.statMap.Add("Defence", (float)statObject.Get()->GetNumberField("Defence"));
 		data.statMap.Add("MagicDefence", (float)statObject.Get()->GetNumberField("MagicDefence"));
 
-		StatSheetObject* tmp = new StatSheetObject(data);
+		UStatSheetObject* tmp = new UStatSheetObject(data);
 		return tmp;
 	}
 	//Create the sheet then
-	//Note:This function should return the StatSheetObject.
+	//Note:This function should return the UStatSheetObject.
 	Debugger::SetSeverity(MessageType::E_ERROR);
-	Debugger::Error("Json Parser Failed to parse StatSheetObject", "JsonParse.cpp", __LINE__);
+	Debugger::Error("Json Parser Failed to parse UStatSheetObject", "JsonParse.cpp", __LINE__);
 	return nullptr;
 }
 BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
@@ -201,9 +201,9 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 	Debugger::Error("Json Parser Failed to parse ActionObject", "JsonParse.cpp", __LINE__);
 	return nullptr;
 }
-void JsonParse::WriteStatSheetObject(StatSheetObject* const sheet_)
+void JsonParse::WriteStatSheetObject(UStatSheetObject* const sheet_)
 {
-	//This will write to a json file for a statsheetobject
+	//This will write to a json file for a UStatSheetObject
 	//TODO: Write the object, serialize, save it to a file
 	//Note: Make that takes in IDs instead of than actual maps.
 	Debugger::SetSeverity(MessageType::E_INFO);
@@ -318,7 +318,7 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 	}
 	ResetJsonObject();
 }
-TArray<TSharedPtr<FJsonValue>> JsonParse::MakeIDJsonArray(StatSheetObject* const sheet_, const FString Name_)
+TArray<TSharedPtr<FJsonValue>> JsonParse::MakeIDJsonArray(UStatSheetObject* const sheet_, const FString Name_)
 {
 	TArray<TSharedPtr<FJsonValue>> Array;
 	

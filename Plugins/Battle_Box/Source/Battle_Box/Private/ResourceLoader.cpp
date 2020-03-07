@@ -4,7 +4,7 @@
 #include "FileManager.h" // remove if not needed
 std::unique_ptr<ResourceLoader> ResourceLoader::resourceInstance = nullptr;
 TMap<const FString, BaseAction *const> ResourceLoader::actionMap = TMap<const FString, BaseAction *const>();
-TMap<const FString, StatSheetObject* const> ResourceLoader::statSheetMap = TMap<const FString, StatSheetObject* const>();
+TMap<const FString, UStatSheetObject* const> ResourceLoader::statSheetMap = TMap<const FString, UStatSheetObject* const>();
 ResourceLoader::ResourceLoader()
 {
 	OnCreate();
@@ -38,10 +38,10 @@ BaseAction * ResourceLoader::ReturnAction(const uint32 id_)
 	return nullptr;
 }
 
-StatSheetObject * ResourceLoader::ReturnStatSheet(const FString name_)
+UStatSheetObject * ResourceLoader::ReturnStatSheet(const FString name_)
 {
 	if (statSheetMap.Contains(name_)) {
-		StatSheetObject* statSheet = new StatSheetObject(statSheetMap[name_]->ReturnName(), statSheetMap[name_]->ReturnTag(),statSheetMap[name_]->ReturnCommandMap(), statSheetMap[name_]->ReturnItemMap(), statSheetMap[name_]->ReturnAbilityMap(), statSheetMap[name_]->ReturnStatMap(), statSheetMap[name_]->ReturnEquipmentMap());
+		UStatSheetObject* statSheet = new UStatSheetObject(statSheetMap[name_]->ReturnName(), statSheetMap[name_]->ReturnTag(),statSheetMap[name_]->ReturnCommandMap(), statSheetMap[name_]->ReturnItemMap(), statSheetMap[name_]->ReturnAbilityMap(), statSheetMap[name_]->ReturnStatMap(), statSheetMap[name_]->ReturnEquipmentMap());
 		return statSheet;
 	}
 	Debugger::SetSeverity(MessageType::E_ERROR);
@@ -118,7 +118,7 @@ void ResourceLoader::OnCreate(){
 	BattleBoxFileManager::VerifyOnCreateDirectory(StatSheetDirectory);
 	DirectoryCheck->FindFiles(foundFiles, *StatSheetDirectory, fileEnd); // found files will hold all the .json files in directory;
 	for (auto files : foundFiles) {
-		StatSheetObject* statSheet = json->ReadStatSheetObject(files);
+		UStatSheetObject* statSheet = json->ReadStatSheetObject(files);
 		if (statSheet != nullptr) {
 			AddStatSheet(statSheet);
 			Debugger::SetSeverity(MessageType::E_INFO);
@@ -163,7 +163,7 @@ void ResourceLoader::AddAction(BaseAction * const action_)
 	actionMap.Add(action_->ReturnName(), action_);
 }
 
-void ResourceLoader::AddStatSheet(StatSheetObject * const statSheet_)
+void ResourceLoader::AddStatSheet(UStatSheetObject * const statSheet_)
 {
 	statSheetMap.Add(statSheet_->ReturnName(), statSheet_);
 }

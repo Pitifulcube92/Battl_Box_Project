@@ -3,15 +3,15 @@
 #include "StatSystem.h"
 #include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
-#include "../Battle_Box/Private/StatSheetObject.h"
+#include "../Battle_Box/Private/UStatSheetObject.h"
 #include "../Battle_Box/Private/ActionClasses/BaseAction.h"
 #include "../Battle_Box/Private/ActionClasses/CommandAction.h"
 #include "../Battle_Box/Private/ActionClasses/ItemAction.h"
 #include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
 
-StatSheetObject* DamageDeltSystem::singleTarget = nullptr;
-StatSheetObject* DamageDeltSystem::owner = nullptr;
-TArray<StatSheetObject*> DamageDeltSystem::targets = TArray<StatSheetObject*>();
+UStatSheetObject* DamageDeltSystem::singleTarget = nullptr;
+UStatSheetObject* DamageDeltSystem::owner = nullptr;
+TArray<UStatSheetObject*> DamageDeltSystem::targets = TArray<UStatSheetObject*>();
 float DamageDeltSystem::totalDamageValue = 0.0f;
 TArray<float> DamageDeltSystem::totalDamageValues = TArray<float>();
 
@@ -176,7 +176,7 @@ float DamageDeltSystem::CalculateItemDamage(ItemAction* const targetItem_)
 	}
 	return 0.0f;
 }
-float DamageDeltSystem::CalculatePhysicalDefence(StatSheetObject* const target_)
+float DamageDeltSystem::CalculatePhysicalDefence(UStatSheetObject* const target_)
 {
 	float physicalDefence = 0.0f;
 	if(target_->ReturnEquipmentMap().Contains("Helment"))
@@ -214,7 +214,7 @@ float DamageDeltSystem::CalculatePhysicalDefence(StatSheetObject* const target_)
 	physicalDefence += target_->ReturnStatMap()["Def"];
 	return physicalDefence;
 }
-float DamageDeltSystem::CalculateMagicalDefence(StatSheetObject* const target_)
+float DamageDeltSystem::CalculateMagicalDefence(UStatSheetObject* const target_)
 {
 	float magicDefence = 0.0f;
 	if (target_->ReturnEquipmentMap().Contains("Helment"))
@@ -252,15 +252,15 @@ float DamageDeltSystem::CalculateMagicalDefence(StatSheetObject* const target_)
 	magicDefence += target_->ReturnStatMap()["M_Def"];
 	return magicDefence;
 }
-void DamageDeltSystem::SetOwner(StatSheetObject* const owner_)
+void DamageDeltSystem::SetOwner(UStatSheetObject* const owner_)
 {
 	owner = owner_;
 }
-void DamageDeltSystem::SetTarget(StatSheetObject* const target_)
+void DamageDeltSystem::SetTarget(UStatSheetObject* const target_)
 {
 	singleTarget = target_;
 }
-void DamageDeltSystem::AddTargetToArray(StatSheetObject* const target_)
+void DamageDeltSystem::AddTargetToArray(UStatSheetObject* const target_)
 {
 	targets.Add(target_);
 }

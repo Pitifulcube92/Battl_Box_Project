@@ -3,7 +3,7 @@
 #define DAMAGEDELTSYSTEM_H
 #include "CoreMinimal.h"
 #include "Containers/Queue.h"
-class StatSheetObject;
+class UStatSheetObject;
 class ItemAction;
 class AbilityAction;
 class CommandAction;
@@ -12,9 +12,9 @@ class BaseAction;
 class DamageDeltSystem
 {
 private:
-	static StatSheetObject* singleTarget;
-	static StatSheetObject* owner;
-	static TArray<StatSheetObject*> targets;
+	static UStatSheetObject* singleTarget;
+	static UStatSheetObject* owner;
+	static TArray<UStatSheetObject*> targets;
 	static float totalDamageValue;
 	static TArray<float> totalDamageValues;
 
@@ -27,9 +27,9 @@ private:
 	///Calculates the damage of an item.
 	static float CalculateItemDamage(ItemAction* const targetItem_);
 	///Calculates the physical defence of the target. 
-	static float CalculatePhysicalDefence(StatSheetObject* const target_);
+	static float CalculatePhysicalDefence(UStatSheetObject* const target_);
 	///Calculates the magical defence of the target.
-	static float CalculateMagicalDefence(StatSheetObject* const target_);
+	static float CalculateMagicalDefence(UStatSheetObject* const target_);
 public:
 	DamageDeltSystem(const DamageDeltSystem&) = delete;
 	DamageDeltSystem(DamageDeltSystem&&) = delete;
@@ -40,11 +40,11 @@ public:
 	///Static moethod for the base function
 	static void CalculateDamage(const bool IsSingledTarget_, BaseAction* const action_);
 	///Sets who the owner of the damage.
-	static void SetOwner(StatSheetObject* const owner_);
+	static void SetOwner(UStatSheetObject* const owner_);
 	///Sets the target who is being damaged.
-	static void SetTarget(StatSheetObject* const target_);
+	static void SetTarget(UStatSheetObject* const target_);
 	///Adds another target to the array.
-	static void AddTargetToArray(StatSheetObject* const target_);
+	static void AddTargetToArray(UStatSheetObject* const target_);
 	static void OnDestroy();
 	///Returns the damage value.
 	static const float ReturnTotalDamageValue() ;
