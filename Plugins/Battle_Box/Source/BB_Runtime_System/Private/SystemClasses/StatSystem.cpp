@@ -5,22 +5,22 @@
 #include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/UStatSheetObject.h"
 #include "../SystemClasses/DamageDeltSystem.h"
-#include "../Battle_Box/Private/ActionClasses/ItemAction.h"
-#include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
-#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
+#include "../Battle_Box/Private/ActionClasses/UItemAction.h"
+#include "../Battle_Box/Private/ActionClasses/UAbilityAction.h"
+#include "../Battle_Box/Private/ActionClasses/UBaseAction.h"
 
 UStatSheetObject* StatSystem::target = nullptr;
 TArray<UStatSheetObject*> StatSystem::targets = TArray<UStatSheetObject*>();
 
-void StatSystem::CalculateStat(const bool IsSingleTarget_, BaseAction* const action_)
+void StatSystem::CalculateStat(const bool IsSingleTarget_, UBaseAction* const action_)
 {
 	BaseCalculate(IsSingleTarget_, action_);
 }
-void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
+void StatSystem::BaseCalculate(const bool IsSingledTarget_, UBaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
-		ItemAction* item = dynamic_cast<ItemAction*>(action_);
+		UItemAction* item = dynamic_cast<UItemAction*>(action_);
 		if (IsSingledTarget_)
 		{
 			if (target == nullptr)
@@ -102,7 +102,7 @@ void StatSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const ac
 	}
 	else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 	{
-		AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+		UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 		if (IsSingledTarget_)
 		{
 			if (target == nullptr)
@@ -190,11 +190,11 @@ void StatSystem::ModifiyStat(UStatSheetObject* const target_, const float value,
 		Debugger::Warrning(name_ + " is not found in the stat sheet.", "StatSystem.cpp", __LINE__);
 	}
 }
-void StatSystem::AddStatModifier(UStatSheetObject* const target_, BaseAction* const action_)
+void StatSystem::AddStatModifier(UStatSheetObject* const target_, UBaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
-		ItemAction* item = dynamic_cast<ItemAction*>(action_);
+		UItemAction* item = dynamic_cast<UItemAction*>(action_);
 		if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
 		{
 			for (auto& effect : item->ReturnEffectList())
@@ -231,7 +231,7 @@ void StatSystem::AddStatModifier(UStatSheetObject* const target_, BaseAction* co
 	}
 	else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 	{
-		AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+		UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 		for(auto& statMod : ability->ReturnModStatMap())
 		{
 			ModifiyStat(target_, statMod.Value, statMod.Key);
@@ -244,11 +244,11 @@ void StatSystem::AddStatModifier(UStatSheetObject* const target_, BaseAction* co
 		return;
 	}
 }
-void StatSystem::RemoveModifier(UStatSheetObject* const target_, BaseAction* const action_)
+void StatSystem::RemoveModifier(UStatSheetObject* const target_, UBaseAction* const action_)
 {
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
-		ItemAction* item = dynamic_cast<ItemAction*>(action_);
+		UItemAction* item = dynamic_cast<UItemAction*>(action_);
 		for (auto& effect : item->ReturnEffectList())
 		{
 			for (auto& statMod : effect->ReturnModStatMap())
@@ -259,7 +259,7 @@ void StatSystem::RemoveModifier(UStatSheetObject* const target_, BaseAction* con
 	}
 	else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 	{
-		AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+		UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 		for (auto& statMod : ability->ReturnModStatMap())
 		{
 			ModifiyStat(target_,-statMod.Value, statMod.Key);
@@ -272,11 +272,11 @@ void StatSystem::RemoveModifier(UStatSheetObject* const target_, BaseAction* con
 		return;
 	}
 }
-void StatSystem::AddTmpModifier(UStatSheetObject* const target_, BaseAction* const  action_, const float duration_)
+void StatSystem::AddTmpModifier(UStatSheetObject* const target_, UBaseAction* const  action_, const float duration_)
 {
 	//This will add a modifier then remove it in a timer.
 }
-void StatSystem::RemoveTmpModifier(UStatSheetObject* const target_, BaseAction* action_, const float duration_)
+void StatSystem::RemoveTmpModifier(UStatSheetObject* const target_, UBaseAction* action_, const float duration_)
 {
 	//This will remove a modifier then add it in a timer.
 }

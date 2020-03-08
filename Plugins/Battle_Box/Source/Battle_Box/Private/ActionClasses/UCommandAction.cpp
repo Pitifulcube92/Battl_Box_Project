@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "CommandAction.h"
+#include "UCommandAction.h"
 #include "JsonParse.h"
 
-CommandAction::CommandAction() : command(nullptr)
+UCommandAction::UCommandAction() : command(nullptr)
 {
 	SetName("");
 	SetDiscription("");
@@ -14,7 +14,7 @@ CommandAction::CommandAction() : command(nullptr)
 	SetActionID(00);
 	currentweapon = WEAPONTYPE::E_NONE;
 }
-CommandAction::CommandAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const WEAPONTYPE currentWeap_,  BaseAction* const command_)
+bool UCommandAction::Init(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const WEAPONTYPE currentWeap_,  UBaseAction* const command_)
 {
 	SetName(name_);
 	SetDiscription(discription_);
@@ -24,8 +24,12 @@ CommandAction::CommandAction(const FString name_, const FString discription_, co
 	SetActionID(actionID_);
 	currentweapon = currentWeap_;
 	command = command_;
+	if (&command)
+		return true;
+	else
+		return false;
 }
-CommandAction::CommandAction(CommandAction* const other_)
+bool UCommandAction::Init(UCommandAction* const other_)
 {
 	SetName(other_->ReturnName());
 	SetDiscription(other_->ReturnDiscription());
@@ -35,8 +39,13 @@ CommandAction::CommandAction(CommandAction* const other_)
 	SetActionID(other_->ReturnActionID());
 	currentweapon = ReturnWeaponType();
 	command = ReturnAction();
+
+	if (&command)
+		return true;
+	else
+		return false;
 }
-CommandAction::CommandAction(CommandData const data_)
+bool UCommandAction::Init(CommandData const data_)
 {
 	SetName(data_.name);
 	SetDiscription(data_.discription);
@@ -45,24 +54,29 @@ CommandAction::CommandAction(CommandData const data_)
 	SetTargetType(data_.targetType);
 	currentweapon = data_.currentWeapon;
 	//This part is where we search for the actual base action.
+
+	if (&command)
+		return true;
+	else
+		return false;
 }
-void CommandAction::SetWeaponType(WEAPONTYPE type_)
+void UCommandAction::SetWeaponType(WEAPONTYPE type_)
 {
 	currentweapon = type_;
 }
-void CommandAction::SetCommand(BaseAction* action_)
+void UCommandAction::SetCommand(UBaseAction* action_)
 {
 	command = action_;
 }
-WEAPONTYPE CommandAction::ReturnWeaponType() const
+WEAPONTYPE UCommandAction::ReturnWeaponType() const
 {
 	return currentweapon;
 }
-BaseAction* CommandAction::ReturnAction() const
+UBaseAction* UCommandAction::ReturnAction() const
 {
 	return command;
 }
-void CommandAction::OnDestroy()
+void UCommandAction::OnDestroy()
 {
 	if(command)
 	{
@@ -70,7 +84,7 @@ void CommandAction::OnDestroy()
 		command = nullptr;
 	}
 }
-CommandAction::~CommandAction()
+UCommandAction::~UCommandAction()
 {
 	OnDestroy();
 }

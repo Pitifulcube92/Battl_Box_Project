@@ -8,31 +8,31 @@
 #include "UObject/Object.h"
 #include "UStatSheetObject.generated.h"
 
-class ItemAction;
-class CommandAction;
-class AbilityAction;
+class UItemAction;
+class UCommandAction;
+class UAbilityAction;
 struct StatSheetData;
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable, ClassGroup = "Battle_Box")
 class BATTLE_BOX_API UStatSheetObject : public UObject
 {
 	GENERATED_BODY()
 private:
 	FString name;
 	FString tag;
-	TMap<FString, CommandAction*> commandMap;
-	TMap<FString, ItemAction*> itemMap;
-	TMap<FString, AbilityAction*> abilityMap;
+	TMap<FString, UCommandAction*> commandMap;
+	TMap<FString, UItemAction*> itemMap;
+	TMap<FString, UAbilityAction*> abilityMap;
 	TMap<FString, float> statMap;
-	TMap<FString, ItemAction*> equipmentMap;
+	TMap<FString, UItemAction*> equipmentMap;
 	
 public:
 	UStatSheetObject();
-	UStatSheetObject(const FString name_, const FString tag_, const TMap<FString, CommandAction*> commandMap_, const TMap<FString, ItemAction*> itemMap_, const TMap<FString, AbilityAction*> abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, ItemAction*> equipmentMap_);
-	UStatSheetObject(UStatSheetObject* const other_);
-	UStatSheetObject(StatSheetData const data_);
+	bool Init(const FString name_, const FString tag_, const TMap<FString, UCommandAction*> commandMap_, const TMap<FString, UItemAction*> itemMap_, const TMap<FString, UAbilityAction*> abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, UItemAction*> equipmentMap_);
+	bool Init(UStatSheetObject* const other_);
+	bool Init(StatSheetData const data_);
 	///Sets name 
 	void SetName(const FString name_);
 	///Sets tag
@@ -42,13 +42,13 @@ public:
 	///Returns tag
 	FString ReturnTag() const;
 	///Adds a command action the command map
-	void AddCommandAction(CommandAction* const command_);
+	void AddCommandAction(UCommandAction* const command_);
 	///Adds a item action to the item map
-	void AddItemAction(ItemAction* const item_);
+	void AddItemAction(UItemAction* const item_);
 	///Adds a ability action to the ability map
-	void AddAbilityAction(AbilityAction* const ability_);
+	void AddAbilityAction(UAbilityAction* const ability_);
 	///Adds a eqquipment-item action  to the equipmnet map
-	void AddEquipment(ItemAction* const equipment_);
+	void AddEquipment(UItemAction* const equipment_);
 	///Removes a command action if there is one in the map
 	void RemoveCommandAction(const FString name_);
 	///Removes a item action if there is one in the map
@@ -58,23 +58,23 @@ public:
 	///Removes a equipment-type action if there is one in the map
 	void RemoveEquipment(const FString name_);
 	///Returns the commmand map 
-	TMap<FString, CommandAction*> ReturnCommandMap() const;
+	TMap<FString, UCommandAction*> ReturnCommandMap() const;
 	///Returns the item map
-	TMap<FString, ItemAction*> ReturnItemMap() const;
+	TMap<FString, UItemAction*> ReturnItemMap() const;
 	///Returns the ability map
-	TMap<FString, AbilityAction*> ReturnAbilityMap() const;
+	TMap<FString, UAbilityAction*> ReturnAbilityMap() const;
 	///Returns the statMap
 	TMap<FString, float> ReturnStatMap() const;
 	///Returns the equipment map
-	TMap<FString, ItemAction*> ReturnEquipmentMap() const;
+	TMap<FString, UItemAction*> ReturnEquipmentMap() const;
 	///Returns a command action by its name from the command map 
-	CommandAction* ReturnCommand(FString name_) const;
+	UCommandAction* ReturnCommand(FString name_) const;
 	///Returns a item action by its name from the item map
-	ItemAction* ReturnItem(const FString name_) const;
+	UItemAction* ReturnItem(const FString name_) const;
 	///Returns a ability action by its name from the ability map
-	AbilityAction* ReturnAbility(const FString name_) const;
+	UAbilityAction* ReturnAbility(const FString name_) const;
 	///Returns a equipment-item action by its name from the equipment map
-	ItemAction* ReturnEquipment(const FString name_) const;
+	UItemAction* ReturnEquipment(const FString name_) const;
 	void OnDestroy();
 	~UStatSheetObject();
 };

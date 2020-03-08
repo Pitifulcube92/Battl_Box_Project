@@ -8,13 +8,13 @@
 #include "Templates/SharedPointer.h"
 #include "Serialization/JsonWriter.h"
 #include "Serialization/JsonReader.h"
-#include "Battle_Box/Private/ActionClasses/AbilityAction.h"
-#include "Battle_Box/Private/ActionClasses/CommandAction.h"
-#include "Battle_Box/Private/ActionClasses/ItemAction.h"
-#include "Containers/Array.h"
+#include "Battle_Box/Private/ActionClasses/UAbilityAction.h"
+#include "Battle_Box/Private/ActionClasses/UCommandAction.h"
+#include "Battle_Box/Private/ActionClasses/UItemAction.h"
+#include "Containers/Array.h"			   
 
 class UStatSheetObject;
-class BaseAction;
+class UBaseAction;
 class FJsonObject;
 class FJsonValue;
 
@@ -90,9 +90,9 @@ public:
 	bool ResetJsonObject();
 	bool InitiateClass();
 	UStatSheetObject* ReadStatSheetObject(const FString fileName_);
-	BaseAction* ReadActionObject(const FString& fileName_);
+	UBaseAction* ReadActionObject(const FString& fileName_);
 	void WriteStatSheetObject(UStatSheetObject* const sheet_);
-	void WriteActionObject(BaseAction* const action_);
+	void WriteActionObject(UBaseAction* const action_);
 	~JsonParse();
 };
 

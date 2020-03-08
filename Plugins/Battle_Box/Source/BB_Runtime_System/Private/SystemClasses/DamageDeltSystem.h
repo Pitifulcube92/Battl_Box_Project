@@ -4,10 +4,10 @@
 #include "CoreMinimal.h"
 #include "Containers/Queue.h"
 class UStatSheetObject;
-class ItemAction;
-class AbilityAction;
-class CommandAction;
-class BaseAction;
+class UItemAction;
+class UAbilityAction;
+class UCommandAction;
+class UBaseAction;
 
 class DamageDeltSystem
 {
@@ -19,13 +19,13 @@ private:
 	static TArray<float> totalDamageValues;
 
 	///System calculation.
-	static void BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_);
+	static void BaseCalculate(const bool IsSingledTarget_, UBaseAction* const action_);
 	///Claculates the damage of a weapon item.
-	static float CalculateWeaponDamage(ItemAction* const target_);
+	static float CalculateWeaponDamage(UItemAction* const target_);
 	///Calculates the damage of a ability item.
-	static float CalculateAbilityDamage(AbilityAction* const targetAbility_);
+	static float CalculateAbilityDamage(UAbilityAction* const targetAbility_);
 	///Calculates the damage of an item.
-	static float CalculateItemDamage(ItemAction* const targetItem_);
+	static float CalculateItemDamage(UItemAction* const targetItem_);
 	///Calculates the physical defence of the target. 
 	static float CalculatePhysicalDefence(UStatSheetObject* const target_);
 	///Calculates the magical defence of the target.
@@ -38,7 +38,7 @@ public:
 	DamageDeltSystem() = delete;
 
 	///Static moethod for the base function
-	static void CalculateDamage(const bool IsSingledTarget_, BaseAction* const action_);
+	static void CalculateDamage(const bool IsSingledTarget_, UBaseAction* const action_);
 	///Sets who the owner of the damage.
 	static void SetOwner(UStatSheetObject* const owner_);
 	///Sets the target who is being damaged.

@@ -5,14 +5,14 @@
 #include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/UStatSheetObject.h"
-#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
-#include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
-#include "../Battle_Box/Private/ActionClasses/ItemAction.h"
+#include "../Battle_Box/Private/ActionClasses/UBaseAction.h"
+#include "../Battle_Box/Private/ActionClasses/UAbilityAction.h"
+#include "../Battle_Box/Private/ActionClasses/UItemAction.h"
 UStatSheetObject*  EffectSystem::target = nullptr;
 TArray<UStatSheetObject*> EffectSystem::targets = TArray<UStatSheetObject*>();
-BaseAction* EffectSystem::targetAction = nullptr;
+UBaseAction* EffectSystem::targetAction = nullptr;
 
-void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
+void EffectSystem::BaseCalculate(const bool IsSingledTarget_, UBaseAction* const action_)
 {
 	if (IsSingledTarget_)
 	{
@@ -20,7 +20,7 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 		{
 			if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 			{
-				ItemAction* item = dynamic_cast<ItemAction*>(action_);
+				UItemAction* item = dynamic_cast<UItemAction*>(action_);
 				if (item->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
 				{
 					//calculate for physical attributes
@@ -133,7 +133,7 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 			}
 			else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 			{
-				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+				UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 
 				if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
 				{
@@ -176,7 +176,7 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 			{
 				if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 				{
-					ItemAction* item = dynamic_cast<ItemAction*>(action_);
+					UItemAction* item = dynamic_cast<UItemAction*>(action_);
 					if (item->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
 					{
 						//calculate for physical attributes
@@ -288,7 +288,7 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 				}
 				else if (action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 				{
-					AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+					UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 
 					if (ability->ReturnAbilityType() == ABILITYTYPE::E_MODIFIYER)
 					{
@@ -326,11 +326,11 @@ void EffectSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const 
 	}
 	OnDestroy();
 }
-void EffectSystem::CallculateEffect(BaseAction* action_)
+void EffectSystem::CallculateEffect(UBaseAction* action_)
 {
 	//This will extract the equation class and calculate the values needed.
 }
-void EffectSystem::RemoveEffect(BaseAction* action_)
+void EffectSystem::RemoveEffect(UBaseAction* action_)
 {
 	//Same process as the equation and reverse calculate the value needed.
 }

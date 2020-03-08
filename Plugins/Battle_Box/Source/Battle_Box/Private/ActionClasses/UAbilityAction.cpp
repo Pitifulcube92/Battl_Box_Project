@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-#include "ActionClasses/AbilityAction.h"
+#include "ActionClasses/UAbilityAction.h"
 #include "Equation.h"
 #include "JsonParse.h"
 
-AbilityAction::AbilityAction()
+UAbilityAction::UAbilityAction()
 {
 	SetName("");
 	SetDiscription("");
@@ -13,7 +13,7 @@ AbilityAction::AbilityAction()
 	SetActionID(00);
 	duration = 0.0f;
 }
-AbilityAction::AbilityAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
+bool UAbilityAction::Init(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_,
 	const float duration_, const ABILITYTYPE type_, const EquationData data_)
 {
 	SetName(name_);
@@ -24,8 +24,13 @@ AbilityAction::AbilityAction(const FString name_, const FString discription_, co
 	SetActionID(actionID_);
 	duration = duration_;
 	equationObject = new Equation(data_.generalScalar, data_.rise, data_.run, data_.xIntercept, data_.equationType);
+	
+	if (&modStatMap && &equationObject)
+		return true;
+	else
+		return false;
 }
-AbilityAction::AbilityAction(AbilityAction* const other_)
+bool UAbilityAction::Init(UAbilityAction* const other_)
 {
 	SetName(other_->ReturnName());
 	SetDiscription(other_->ReturnDiscription());
@@ -37,8 +42,13 @@ AbilityAction::AbilityAction(AbilityAction* const other_)
 	abilityValue = other_->ReturnAbilityValue();
 	equationObject = other_->ReturnEquationObject();
 
+	if (&modStatMap && &equationObject)
+		return true;
+	else
+		return false;
+
 }
-AbilityAction::AbilityAction(AbilityData const data_)
+bool UAbilityAction::Init(AbilityData const data_)
 {
 	SetName(data_.name);
 	SetDiscription(data_.discription);
@@ -49,49 +59,53 @@ AbilityAction::AbilityAction(AbilityData const data_)
 	duration = data_.duration;
 	abilityValue = data_.abilityValue;
 	equationObject = new Equation(data_.generalScaler, data_.rise, data_.run, data_.xIntercept, data_.equationType);
+	if (&modStatMap && &equationObject)
+		return true;
+	else
+		return false;
 }
-float AbilityAction::CalculateAbilityValue()
+float UAbilityAction::CalculateAbilityValue()
 {
 	//TO DO: implement an equation class.
 	return equationObject->DetermineEquation(abilityValue);
 }
-void AbilityAction::SetDuration(const float duration_)
+void UAbilityAction::SetDuration(const float duration_)
 {
 	duration = duration_;
 }
-float AbilityAction::ReturnDuration() const
+float UAbilityAction::ReturnDuration() const
 {
 	return duration;
 }
-TMap<FString, float> AbilityAction::ReturnModStatMap()
+TMap<FString, float> UAbilityAction::ReturnModStatMap()
 {
 	return modStatMap;
 }
-void AbilityAction::SetAbilityType(const ABILITYTYPE type_)
+void UAbilityAction::SetAbilityType(const ABILITYTYPE type_)
 {
 	abilityType = type_;
 }
-ABILITYTYPE AbilityAction::ReturnAbilityType() const
+ABILITYTYPE UAbilityAction::ReturnAbilityType() const
 {
 	return abilityType;
 }
-void AbilityAction::SetAbilityValue(const float value_)
+void UAbilityAction::SetAbilityValue(const float value_)
 {
 	abilityValue = value_;
 }
-float AbilityAction::ReturnAbilityValue() const
+float UAbilityAction::ReturnAbilityValue() const
 {
 	return abilityValue;
 }
-void AbilityAction::OnDestroy()
+void UAbilityAction::OnDestroy()
 {
 	//This will clear out any data.
 }
-Equation* AbilityAction::ReturnEquationObject() const
+Equation* UAbilityAction::ReturnEquationObject() const
 {
 	return equationObject;
 }
-AbilityAction::~AbilityAction()
+UAbilityAction::~UAbilityAction()
 {
 	OnDestroy();
 }

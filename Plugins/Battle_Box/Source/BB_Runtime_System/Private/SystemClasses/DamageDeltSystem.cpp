@@ -4,10 +4,10 @@
 #include "Templates/Casts.h"
 #include "../Battle_Box/Private/Debugger.h"
 #include "../Battle_Box/Private/UStatSheetObject.h"
-#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
-#include "../Battle_Box/Private/ActionClasses/CommandAction.h"
-#include "../Battle_Box/Private/ActionClasses/ItemAction.h"
-#include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
+#include "../Battle_Box/Private/ActionClasses/UBaseAction.h"
+#include "../Battle_Box/Private/ActionClasses/UCommandAction.h"
+#include "../Battle_Box/Private/ActionClasses/UItemAction.h"
+#include "../Battle_Box/Private/ActionClasses/UAbilityAction.h"
 
 UStatSheetObject* DamageDeltSystem::singleTarget = nullptr;
 UStatSheetObject* DamageDeltSystem::owner = nullptr;
@@ -15,7 +15,7 @@ TArray<UStatSheetObject*> DamageDeltSystem::targets = TArray<UStatSheetObject*>(
 float DamageDeltSystem::totalDamageValue = 0.0f;
 TArray<float> DamageDeltSystem::totalDamageValues = TArray<float>();
 
-void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* const action_)
+void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, UBaseAction* const action_)
 {
 	if(IsSingledTarget_)
 	{
@@ -26,12 +26,12 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 			{
 				//Command will do basic act with basic stats
 				//TO DO: Check if there is any damage in this command.
-				CommandAction* command = dynamic_cast<CommandAction*>(action_);
+				UCommandAction* command = dynamic_cast<UCommandAction*>(action_);
 			}
 			else if(action_->ReturnActionType() == ACTIONTYPE::E_ITEM) 
 			{
 				//Item will be sorted to what type then calculated for total damage.
-				ItemAction* item = dynamic_cast<ItemAction*>(action_);
+				UItemAction* item = dynamic_cast<UItemAction*>(action_);
 
 				if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
 				{
@@ -52,7 +52,7 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 			{
 				//ability will retreive the damage value if any.
 				//TO DO: create an enum for what type of ability it is.
-				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+				UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 				CalculateAbilityDamage(ability);
 			}
 			//TO DO: modify targets HP on stat system.
@@ -74,13 +74,13 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 			{
 				//Command will do basic act with basic stats
 				//TO DO: Check if there is any damage in this command.
-				CommandAction* command = dynamic_cast<CommandAction*>(action_);
+				UCommandAction* command = dynamic_cast<UCommandAction*>(action_);
 			}
 			else if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 			{
 
 				//Item will be sorted to what type then calculated for total damage.
-				ItemAction* item = dynamic_cast<ItemAction*>(action_);
+				UItemAction* item = dynamic_cast<UItemAction*>(action_);
 				if (item->ReturnItemType() == ITEMTYPE::E_CONSUMABLE)
 				{
 					for (int i = 0; i < targets.Num(); i++)
@@ -107,7 +107,7 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 
 				//ability will retreive the damage value if any.
 				//TO DO: create an enum for what type of ability it is.
-				AbilityAction* ability = dynamic_cast<AbilityAction*>(action_);
+				UAbilityAction* ability = dynamic_cast<UAbilityAction*>(action_);
 				CalculateAbilityDamage(ability);
 			}
 			else
@@ -132,11 +132,11 @@ void DamageDeltSystem::BaseCalculate(const bool IsSingledTarget_, BaseAction* co
 	//TO DO: After modification is done empty all information.
 	OnDestroy();
 }
-void DamageDeltSystem::CalculateDamage(const bool IsSingledTarget_, BaseAction* const action_)
+void DamageDeltSystem::CalculateDamage(const bool IsSingledTarget_, UBaseAction* const action_)
 {
 	BaseCalculate(IsSingledTarget_, action_);
 }
-float DamageDeltSystem::CalculateWeaponDamage(ItemAction* const targetWeapon_)
+float DamageDeltSystem::CalculateWeaponDamage(UItemAction* const targetWeapon_)
 {
 	//This will return either magic, physical or both as a damage value;
 	if (targetWeapon_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)
@@ -153,13 +153,13 @@ float DamageDeltSystem::CalculateWeaponDamage(ItemAction* const targetWeapon_)
 	}
 	return 0.0f;
 }
-float  DamageDeltSystem::CalculateAbilityDamage(AbilityAction* const targetAbility_)
+float  DamageDeltSystem::CalculateAbilityDamage(UAbilityAction* const targetAbility_)
 {
 	//Get the target action and get the damage value;
 	float tmp = 0.0f;
 	return tmp;
 }
-float DamageDeltSystem::CalculateItemDamage(ItemAction* const targetItem_)
+float DamageDeltSystem::CalculateItemDamage(UItemAction* const targetItem_)
 {
 	//Get the target and get the damage Value;
 	if (targetItem_->ReturnInteractionType() == INTERACTIONTYPE::E_PHYSICAL)

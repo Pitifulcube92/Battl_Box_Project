@@ -4,11 +4,11 @@
 #include "Debugger.h"
 #include "BattleBoxFileManager.h"
 ///destroy all this 
-#include "ActionClasses/BaseAction.h"
+#include "ActionClasses/UBaseAction.h"
 #include "UStatSheetObject.h"
-#include "ActionClasses/AbilityAction.h"
-#include "ActionClasses/ItemAction.h"
-#include "ActionClasses/CommandAction.h"
+#include "ActionClasses/UAbilityAction.h"
+#include "ActionClasses/UItemAction.h"
+#include "ActionClasses/UCommandAction.h"
 #include "ResourceLoader.h"
 #include <string>
 #include "JsonParse.h"

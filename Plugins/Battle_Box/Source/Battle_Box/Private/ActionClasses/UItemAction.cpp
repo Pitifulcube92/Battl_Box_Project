@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-#include "ItemAction.h"
+#include "UItemAction.h"
 #include "ResourceLoader.h"
-#include "Private/ActionClasses/AbilityAction.h"
+#include "Private/ActionClasses/UAbilityAction.h"
 #include "Debugger.h"
 
 
-ItemAction::ItemAction() : effectList(TArray<AbilityAction*>())
+UItemAction::UItemAction() : effectList(TArray<UAbilityAction*>())
 {
 	SetName("");
 	SetDiscription("");
@@ -16,7 +16,7 @@ ItemAction::ItemAction() : effectList(TArray<AbilityAction*>())
 	SetValue(00);
 	SetDamageType(DAMAGETYPE::E_NONE);
 }
-ItemAction::ItemAction(const FString name_, const FString discription_, const ACTIONTYPE action_, const  TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const uint32 value_, const DAMAGETYPE damageType_, const TArray<AbilityAction*> effectArray_)
+bool UItemAction::Init(const FString name_, const FString discription_, const ACTIONTYPE action_, const  TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_, TMap<FString, float> statMap_, const uint32 value_, const DAMAGETYPE damageType_, const TArray<UAbilityAction*> effectArray_)
 {
 	SetName(name_);
 	SetDiscription(discription_);
@@ -27,9 +27,12 @@ ItemAction::ItemAction(const FString name_, const FString discription_, const AC
 	
 	value = value_;
 	effectList = effectArray_;
-
+	if (&effectList && &statModMap)
+		return true;
+	else
+		return false;
 }
-ItemAction::ItemAction(const ItemAction* other_)
+bool UItemAction::Init(const UItemAction* other_)
 {
 	SetName(other_->ReturnName());
 	SetDiscription(other_->ReturnDiscription());
@@ -38,8 +41,13 @@ ItemAction::ItemAction(const ItemAction* other_)
 	SetInteractionType(other_->ReturnInteractionType());
 	SetActionID(other_->ReturnActionID());
 	SetValue(other_->ReturnValue());
+
+	if (&effectList && &statModMap)
+		return true;
+	else
+		return false;
 }
-ItemAction::ItemAction(ItemData const data_)
+bool UItemAction::Init(ItemData const data_)
 {
 	SetName(data_.name);
 	SetDiscription(data_.discription);
@@ -54,57 +62,62 @@ ItemAction::ItemAction(ItemData const data_)
 	{
 		if (ResourceLoader::CheckAction(i))
 		{
-			AbilityAction* tmp = dynamic_cast<AbilityAction*>(ResourceLoader::ReturnAction(i));
+			UAbilityAction* tmp = dynamic_cast<UAbilityAction*>(ResourceLoader::ReturnAction(i));
 			AddEffect(tmp);
 		}
 		else
 		{
 			Debugger::SetSeverity(MessageType::E_ERROR);
-			Debugger::Error("Action is not found or does not exist.", "ItemAction.cpp", __LINE__);
+			Debugger::Error("Action is not found or does not exist.", "UItemAction.cpp", __LINE__);
 		}
 	}
+
+	if (&effectList && &statModMap)
+		return true;
+	else
+		return false;
 }
-void ItemAction::SetValue(const uint32 value_)
+void UItemAction::SetValue(const uint32 value_)
 {
 	value = value_;
 }
-void ItemAction::SetDamageType(const DAMAGETYPE type_)
+void UItemAction::SetDamageType(const DAMAGETYPE type_)
 {
 	damageType = type_;
 }
-void ItemAction::SetType(const ITEMTYPE type_)
+void UItemAction::SetType(const ITEMTYPE type_)
 {
 	type = type_;
 }
-void ItemAction::AddEffect(AbilityAction* const ability_)
+void UItemAction::AddEffect(UAbilityAction* const ability_)
 {
 	effectList.Add(ability_);
 }
-ITEMTYPE ItemAction::ReturnItemType() const
+ITEMTYPE UItemAction::ReturnItemType() const
 {
 	return type;
 }
-uint32 ItemAction::ReturnValue() const 
+uint32 UItemAction::ReturnValue() const 
 {
 	return value;
 }
-DAMAGETYPE ItemAction::ReturnDamageType() const
+DAMAGETYPE UItemAction::ReturnDamageType() const
 {
 	return damageType;
 }
-TMap<FString, float> ItemAction::ReturnStatMap() const
+TMap<FString, float> UItemAction::ReturnStatMap() const
 {
 	return statModMap;
 }
-TArray<AbilityAction*> ItemAction::ReturnEffectList() const 
+TArray<UAbilityAction*> UItemAction::ReturnEffectList() const 
 {
 	return effectList;
 }
-void ItemAction::OnDestroy()
+void UItemAction::OnDestroy()
 {
 	//Clean up method
 }
-ItemAction::~ItemAction()
+UItemAction::~UItemAction()
 {
 	OnDestroy();
 }

@@ -3,9 +3,9 @@
 
 #include "Equation.h"
 #include "Debugger.h"
-#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
-#include "../Battle_Box/Private/ActionClasses/ItemAction.h"
-#include "../Battle_Box/Private/ActionClasses/AbilityAction.h"
+//#include "../Battle_Box/Private/ActionClasses/UBaseAction.h"
+//#include "../Battle_Box/Private/ActionClasses/UItemAction.h"
+//#include "../Battle_Box/Private/ActionClasses/UAbilityAction.h"
 Equation::Equation()
 {
 generalScalar = 2.0f;

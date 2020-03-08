@@ -3,7 +3,7 @@
 #include "Misc/Paths.h"
 #include "FileManager.h" // remove if not needed
 std::unique_ptr<ResourceLoader> ResourceLoader::resourceInstance = nullptr;
-TMap<const FString, BaseAction *const> ResourceLoader::actionMap = TMap<const FString, BaseAction *const>();
+TMap<const FString, UBaseAction *const> ResourceLoader::actionMap = TMap<const FString, UBaseAction *const>();
 TMap<const FString, UStatSheetObject* const> ResourceLoader::statSheetMap = TMap<const FString, UStatSheetObject* const>();
 ResourceLoader::ResourceLoader()
 {
@@ -14,23 +14,37 @@ ResourceLoader::~ResourceLoader() {
 	OnDestroy();
 }
 
-BaseAction * ResourceLoader::ReturnAction(const FString name_)
+UBaseAction * ResourceLoader::ReturnAction(const FString name_)
 {
 	if (actionMap.Contains(name_)) {
-		BaseAction* baseAction = new BaseAction(actionMap[name_]->ReturnName(), actionMap[name_]->ReturnDiscription(), actionMap[name_]->ReturnActionType(), actionMap[name_]->ReturnTargetType(), actionMap[name_]->ReturnInteractionType(), actionMap[name_]->ReturnStatActionType(), actionMap[name_]->ReturnActionID(), false);
-		return baseAction;
+		UBaseAction* BaseAction = NewObject<UBaseAction>();
+		if(BaseAction->Init(actionMap[name_]->ReturnName(), actionMap[name_]->ReturnDiscription(), actionMap[name_]->ReturnActionType(), actionMap[name_]->ReturnTargetType(), actionMap[name_]->ReturnInteractionType(), actionMap[name_]->ReturnStatActionType(), actionMap[name_]->ReturnActionID(), false))
+			return BaseAction;
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("Action not found in Resources returning Nullptr", "ResourceLoader.cpp", __LINE__);
+			return nullptr;
+		}
 	}
 	Debugger::SetSeverity(MessageType::E_ERROR);
 	Debugger::Error("Action not found in Resources returning Nullptr", "ResourceLoader.cpp", __LINE__);
 	return nullptr;
 }
 
-BaseAction * ResourceLoader::ReturnAction(const uint32 id_)
+UBaseAction * ResourceLoader::ReturnAction(const uint32 id_)
 {
 	for (auto actions : actionMap) {
 		if (actions.Value->ReturnActionID() == id_) {
-			BaseAction * baseAction = new BaseAction(actions.Value);
-			return baseAction;
+			UBaseAction * BaseAction = NewObject<UBaseAction>();
+			if(BaseAction->Init(actions.Value))
+				return BaseAction;
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Action not found in Resources returning Nullptr", "ResourceLoader.cpp", __LINE__);
+				return nullptr;
+			}
 		}
 	}
 	Debugger::SetSeverity(MessageType::E_ERROR);
@@ -41,8 +55,15 @@ BaseAction * ResourceLoader::ReturnAction(const uint32 id_)
 UStatSheetObject * ResourceLoader::ReturnStatSheet(const FString name_)
 {
 	if (statSheetMap.Contains(name_)) {
-		UStatSheetObject* statSheet = new UStatSheetObject(statSheetMap[name_]->ReturnName(), statSheetMap[name_]->ReturnTag(),statSheetMap[name_]->ReturnCommandMap(), statSheetMap[name_]->ReturnItemMap(), statSheetMap[name_]->ReturnAbilityMap(), statSheetMap[name_]->ReturnStatMap(), statSheetMap[name_]->ReturnEquipmentMap());
+		UStatSheetObject* statSheet = NewObject<UStatSheetObject>();
+		if(statSheet->Init(statSheetMap[name_]->ReturnName(), statSheetMap[name_]->ReturnTag(),statSheetMap[name_]->ReturnCommandMap(), statSheetMap[name_]->ReturnItemMap(), statSheetMap[name_]->ReturnAbilityMap(), statSheetMap[name_]->ReturnStatMap(), statSheetMap[name_]->ReturnEquipmentMap()))
 		return statSheet;
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("StatSheet object not found in Resources", "ResourceLoader.cpp", __LINE__);
+			return nullptr;
+		}
 	}
 	Debugger::SetSeverity(MessageType::E_ERROR);
 	Debugger::Error("StatSheet object not found in Resources", "ResourceLoader.cpp", __LINE__);
@@ -98,7 +119,7 @@ void ResourceLoader::OnCreate(){
 	IFileManager* DirectoryCheck =  &IFileManager::Get(); // IFilemanger
 	DirectoryCheck->FindFiles(foundFiles, *ActionDirectory, fileEnd); // found files will hold all the .json files in directory;
 	for (auto files : foundFiles) {
-		BaseAction* action = json->ReadActionObject(files);
+		UBaseAction* action = json->ReadActionObject(files);
 		if (action != nullptr) {
 			AddAction(action);
 			Debugger::SetSeverity(MessageType::E_INFO);
@@ -158,7 +179,7 @@ ResourceLoader * ResourceLoader::GetInstance()
 	return resourceInstance.get();
 }
 
-void ResourceLoader::AddAction(BaseAction * const action_)
+void ResourceLoader::AddAction(UBaseAction * const action_)
 {
 	actionMap.Add(action_->ReturnName(), action_);
 }
@@ -201,30 +222,30 @@ void ResourceLoader::DeleteAction(const uint32 id_)
 
 //void ResourceLoader::AddAction(const FString name_)
 //{
-//	BaseAction* baseAction;// = /////// Will pull info from the Json Parser
+//	UBaseAction* UBaseAction;// = /////// Will pull info from the Json Parser
 //
 //
 //
-//	if (baseAction->ReturnName() == "") { // if the Name is empty create name based on the amount in map
+//	if (UBaseAction->ReturnName() == "") { // if the Name is empty create name based on the amount in map
 //		FString newName = "action " + actionMap.Num();
-//		baseAction->SetName(newName);
-//		actionMap.Add(baseAction->ReturnName(), baseAction);
+//		UBaseAction->SetName(newName);
+//		actionMap.Add(UBaseAction->ReturnName(), UBaseAction);
 //	}
-//	else if (!actionMap.Contains(baseAction->ReturnName())) { // statsheet name is not empty and does not contain the current name
-//		actionMap.Add(baseAction->ReturnName(), baseAction); // add to the statsheetmap
+//	else if (!actionMap.Contains(UBaseAction->ReturnName())) { // statsheet name is not empty and does not contain the current name
+//		actionMap.Add(UBaseAction->ReturnName(), UBaseAction); // add to the statsheetmap
 //	}
 //	else { // if the name is in the map 
-//		Debugger::Error("Action Object exists with name " + baseAction->ReturnName(), "ResourceLoader.cpp", __LINE__);
+//		Debugger::Error("Action Object exists with name " + UBaseAction->ReturnName(), "ResourceLoader.cpp", __LINE__);
 //		FString newName = "Action " + statSheetMap.Num();
-//		baseAction->SetName(newName);
-//		actionMap.Add(baseAction->ReturnName(), baseAction);
+//		UBaseAction->SetName(newName);
+//		actionMap.Add(UBaseAction->ReturnName(), UBaseAction);
 //	}
 //}
 
 uint32 ResourceLoader::GetActionID(const std::string& key_)
 {
 	FString key = key_.c_str();//because the map is Fstring conversion must occur
-	const BaseAction* base;
+	const UBaseAction* base;
 	if((base = *actionMap.Find(key)) != nullptr){ // object is found at key 
 		return base->ReturnActionID(); // Return Action Key is call by the object then returned
 	}

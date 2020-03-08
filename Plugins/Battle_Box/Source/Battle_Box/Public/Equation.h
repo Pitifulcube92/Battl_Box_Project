@@ -4,11 +4,11 @@
 #define EQUATIONS_H
 #include "CoreMinimal.h"
 #include "Math/UnrealMathUtility.h"
-class BaseAction;
+class UBaseAction;
 class Debugger;
 
-class AbilityAction;
-class ItemAction;
+class UAbilityAction;
+class UItemAction;
 enum class EQUATION_MOD_TYPE {
 	E_NULL = 1,
 	E_ATTRIBUTE

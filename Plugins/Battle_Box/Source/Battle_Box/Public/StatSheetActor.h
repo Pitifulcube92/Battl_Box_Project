@@ -7,7 +7,7 @@
 #include "../Battle_Box/Private/UStatSheetObject.h"
 #include "StatSheetActor.generated.h"
 
-UCLASS()
+UCLASS(BlueprintType, ClassGroup = "Battle_Box")
 class BATTLE_BOX_API AStatSheetActor : public AActor
 {
 	GENERATED_BODY()
@@ -16,8 +16,8 @@ public:
 	// Sets default values for this actor's properties
 	AStatSheetActor();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		UStatSheetObject* statSheet;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "StatSheet")
+		class UStatSheetObject* statSheet = NewObject<UStatSheetObject>();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -26,4 +26,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable, Category = "StatSheet")
+	void SetName(const FString name_);
+	UFUNCTION(BlueprintCallable, Category = "StatSheet")
+	void SetTag(const FString tag_);
 };

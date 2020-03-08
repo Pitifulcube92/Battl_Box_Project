@@ -1,7 +1,9 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
-#ifndef BASEACTION_H
-#define BASEACTION_H
+
+#pragma once
+
 #include "CoreMinimal.h"
+#include "UObject/Object.h"
 enum class ACTIONTYPE
 {
 	E_NONE = 1,
@@ -62,7 +64,7 @@ enum class STATACTION
 	E_TMP_REMOVE
 };
 
-class BATTLE_BOX_API BaseAction
+class BATTLE_BOX_API UBaseAction : public UObject
 {
 private:
 	FString name;
@@ -73,10 +75,10 @@ private:
 	INTERACTIONTYPE interaction;
 	uint32 actionID;
 public:
-	BaseAction();
+	UBaseAction();
 	///Base Construction
-	BaseAction(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, bool IsFirstInstance_);
-	BaseAction(const BaseAction* other_);
+	bool Init(FString name_, FString discription_, ACTIONTYPE action_, TARGETTYPE target_, INTERACTIONTYPE interaction_, STATACTION statAction_, const uint32 actionID_, bool IsFirstInstance_);
+	bool Init(const UBaseAction* other_);
 	uint32 GenerateID();
 	///Sets Name.
 	void SetName(const FString name_);
@@ -107,9 +109,5 @@ public:
 	STATACTION ReturnStatActionType() const;
 	///Return Action ID.
 	uint32 ReturnActionID() const;
-	virtual ~BaseAction();
+	virtual ~UBaseAction();
 };
-
-
-#endif // !1
-

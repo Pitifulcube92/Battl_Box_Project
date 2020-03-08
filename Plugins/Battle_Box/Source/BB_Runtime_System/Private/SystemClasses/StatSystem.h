@@ -2,7 +2,7 @@
 #ifndef STATSYSTEM_H
 #define STATSYSTEM_H
 #include "Containers/Array.h"
-class BaseAction;
+class UBaseAction;
 class UStatSheetObject;
 
 class StatSystem
@@ -11,15 +11,15 @@ private:
 	static UStatSheetObject* target;
 	static TArray<UStatSheetObject*> targets;
 
-	static void BaseCalculate(const bool IsSingleTarget_, BaseAction* const action_);
-	///Adds the specific modification by the baseaction.
-	static void AddStatModifier(UStatSheetObject* const target_, BaseAction* const action_);
-	///Removes the specific modification by the baseaction.
-	static void RemoveModifier(UStatSheetObject* const target_, BaseAction* const action_);
+	static void BaseCalculate(const bool IsSingleTarget_, UBaseAction* const action_);
+	///Adds the specific modification by the UBaseAction.
+	static void AddStatModifier(UStatSheetObject* const target_, UBaseAction* const action_);
+	///Removes the specific modification by the UBaseAction.
+	static void RemoveModifier(UStatSheetObject* const target_, UBaseAction* const action_);
 	///Adds a modificationtemporarly.
-	static void AddTmpModifier(UStatSheetObject* const target_, BaseAction* const action_, const float duration_);
+	static void AddTmpModifier(UStatSheetObject* const target_, UBaseAction* const action_, const float duration_);
 	///Removes a modification temporarly.
-	static void RemoveTmpModifier(UStatSheetObject* const target_, BaseAction*  action_, const float duration_);
+	static void RemoveTmpModifier(UStatSheetObject* const target_, UBaseAction*  action_, const float duration_);
 public:
 	StatSystem(const StatSystem&) = delete;
 	StatSystem(StatSystem&&) = delete;
@@ -27,7 +27,7 @@ public:
 	StatSystem& operator =(StatSystem&&) = delete;
 	StatSystem() = delete;
 
-	static void CalculateStat(const bool IsSingleTarget_, BaseAction* const action_);
+	static void CalculateStat(const bool IsSingleTarget_, UBaseAction* const action_);
 	///This updates the stats based on the name. 
 	static void ModifiyStat(UStatSheetObject* const target_, const float value, const FString name_);
 	///Sets target.

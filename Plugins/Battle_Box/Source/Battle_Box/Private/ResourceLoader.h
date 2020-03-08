@@ -3,14 +3,14 @@
 #define RESOURCELOADER_H
 
 #include <sstream>
-#include "ActionClasses/BaseAction.h"
+#include "ActionClasses/UBaseAction.h"
 #include "BattleBoxFileManager.h"
 #include "Containers/Map.h"
 #include "Debugger.h"
 #include "JsonParse.h"
 #include "UStatSheetObject.h"
 
-class BaseAction;
+class UBaseAction;
 class UStatSheetObject;
 
 class ResourceLoader
@@ -24,7 +24,7 @@ public:// Singleton stuff
 	static ResourceLoader* GetInstance(); // The Instance of Resrouce Loader
 
 	// Will Add action based on name
-	static void AddAction( BaseAction* const action_);
+	static void AddAction( UBaseAction* const action_);
 	// will add a statsheet based on name
 	static void AddStatSheet(UStatSheetObject* conststatSheet_);
 	
@@ -36,9 +36,9 @@ public:// Singleton stuff
 	static void DeleteAction(const uint32 id_); 
 
 	// Returns Object if inside 
-	static BaseAction* ReturnAction(const FString name_);
+	static UBaseAction* ReturnAction(const FString name_);
 	// returns object by id
-	static BaseAction* ReturnAction(const uint32 id_); 
+	static UBaseAction* ReturnAction(const uint32 id_); 
 	 // returns object by name
 	static UStatSheetObject* ReturnStatSheet(const FString name_);
 
@@ -55,7 +55,7 @@ public:// Singleton stuff
 private:
 	ResourceLoader();
 
-	static TMap<const FString, BaseAction* const> actionMap;
+	static TMap<const FString, UBaseAction* const> actionMap;
 	static TMap<const FString, UStatSheetObject* const> statSheetMap;
 	static uint32 GetActionID(const std::string& key_);
 	static std::unique_ptr<ResourceLoader> resourceInstance;

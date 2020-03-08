@@ -11,7 +11,7 @@
 #include "ResourceLoader.h"
 #include "Serialization/JsonSerializer.h"
 #include "../Battle_Box/Private/UStatSheetObject.h"
-#include "../Battle_Box/Private/ActionClasses/BaseAction.h"
+#include "../Battle_Box/Private/ActionClasses/UBaseAction.h"
 
 ///////////////////////////////////////////////////////
 //	*STAT_SHEET_INFO*
@@ -61,7 +61,6 @@
 //	MODSTAT_LIST
 //////////////////////////////////////////////////////
 
-
 JsonParse::JsonParse()
 {
 }
@@ -98,8 +97,15 @@ UStatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 		data.statMap.Add("Defence", (float)statObject.Get()->GetNumberField("Defence"));
 		data.statMap.Add("MagicDefence", (float)statObject.Get()->GetNumberField("MagicDefence"));
 
-		UStatSheetObject* tmp = new UStatSheetObject(data);
-		return tmp;
+		UStatSheetObject* tmp = NewObject<UStatSheetObject>();
+		if(tmp->Init(data))
+			return tmp;
+		else
+		{
+			Debugger::SetSeverity(MessageType::E_ERROR);
+			Debugger::Error("Json Parser Failed to parse UStatSheetObject", "JsonParse.cpp", __LINE__);
+			return nullptr;
+		}
 	}
 	//Create the sheet then
 	//Note:This function should return the UStatSheetObject.
@@ -107,7 +113,7 @@ UStatSheetObject* JsonParse::ReadStatSheetObject(const FString fileName_)
 	Debugger::Error("Json Parser Failed to parse UStatSheetObject", "JsonParse.cpp", __LINE__);
 	return nullptr;
 }
-BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
+UBaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 {
 	//This will read from a json file for action object
 	//TODO:: Get the Functiuon to return a base action.
@@ -138,8 +144,15 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 			data.currentWeapon = static_cast<WEAPONTYPE>((int)JsonObject.Get()->GetNumberField("CurrentWeapon"));
 			data.commandActionID = static_cast<uint32>(JsonObject.Get()->GetNumberField("BaseActionID"));
 			
-			CommandAction* temp = new CommandAction(data);
-			return dynamic_cast<BaseAction*>(temp);
+			UCommandAction* temp =  NewObject<UCommandAction>();
+			if(temp->Init(data))
+				return dynamic_cast<UBaseAction*>(temp);
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Json Parser Failed to parse ActionObject", "JsonParse.cpp", __LINE__);
+				return nullptr;
+			}
 		}
 		if (action == ACTIONTYPE::E_ITEM)
 		{
@@ -159,11 +172,17 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 			data.itemType = static_cast<ITEMTYPE>((int)JsonObject.Get()->GetIntegerField("ItemAction"));
 			data.value = JsonObject.Get()->GetIntegerField("Value");
  
-		//	data.effectIDList = (JsonObject.Get()->GetArrayField("EffectListID"));// this is causing a memory Conversion Error2440
+			//data.effectIDList = (JsonObject.Get()->GetArrayField("EffectListID"));// this is causing a memory Conversion Error2440
 			
-			ItemAction* temp = new ItemAction(data);
-			return dynamic_cast<BaseAction*>(temp);
-		
+			UItemAction* temp = NewObject<UItemAction>();
+			if(temp->Init(data))
+				return dynamic_cast<UBaseAction*>(temp);
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Json Parser Failed to parse ActionObject", "JsonParse.cpp", __LINE__);
+				return nullptr;
+			}
 		}
 		if (action == ACTIONTYPE::E_ABILITY)
 		{
@@ -189,9 +208,15 @@ BaseAction* JsonParse::ReadActionObject(const FString& fileName_)
 			data.run = equationObject.Get()->GetNumberField("run");
 			data.xIntercept = equationObject.Get()->GetNumberField("xIntercept");
 
-			AbilityAction* temp = new AbilityAction(data);
-			return dynamic_cast<BaseAction*>(temp);
-		
+			UAbilityAction* temp =	NewObject<UAbilityAction>();
+			if(temp->Init(data))
+				return dynamic_cast<UBaseAction*>(temp);
+			else
+			{
+				Debugger::SetSeverity(MessageType::E_ERROR);
+				Debugger::Error("Json Parser Failed to parse ActionObject", "JsonParse.cpp", __LINE__);
+				return nullptr;
+			}
 		}
 		Debugger::SetSeverity(MessageType::E_ERROR);
 		Debugger::Error("Json Parser Failed to parse ActionObject ActionType", "JsonParse.cpp", __LINE__);
@@ -229,7 +254,7 @@ void JsonParse::WriteStatSheetObject(UStatSheetObject* const sheet_)
 	BattleBoxFileManager::WriteTextFile(Directory + "/StatSheets", writeFileString,  sheet_->ReturnName()+".json", false);
 	ResetJsonObject();
 }
-void JsonParse::WriteActionObject(BaseAction* const action_)
+void JsonParse::WriteActionObject(UBaseAction* const action_)
 {
 	//This will write to a json file for a action object
 	//TODO:: Write the object, serialize, save it to a file.
@@ -237,7 +262,7 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 	
 	if (action_->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 	{
-		CommandAction* command = dynamic_cast<CommandAction*>(action_);
+		UCommandAction* command = dynamic_cast<UCommandAction*>(action_);
 
 		JsonObject.Get()->SetStringField("Name", command->ReturnDiscription());
 		JsonObject.Get()->SetStringField("Discription", command->ReturnDiscription());
@@ -256,7 +281,7 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 	}
 	if (action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 	{
-		ItemAction* Item = dynamic_cast<ItemAction*>(action_);
+		UItemAction* Item = dynamic_cast<UItemAction*>(action_);
 
 		JsonObject.Get()->SetStringField("Name", Item->ReturnName());
 		JsonObject.Get()->SetStringField("Discription", Item->ReturnDiscription());
@@ -290,7 +315,7 @@ void JsonParse::WriteActionObject(BaseAction* const action_)
 	}
 	if(action_->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 	{
-		AbilityAction* Ability = dynamic_cast<AbilityAction*>(action_);
+		UAbilityAction* Ability = dynamic_cast<UAbilityAction*>(action_);
 
 		JsonObject.Get()->SetStringField("Name", Ability->ReturnName());
 		JsonObject.Get()->SetStringField("Discription", Ability->ReturnDiscription());

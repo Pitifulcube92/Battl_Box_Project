@@ -2,18 +2,18 @@
 
 
 #include "UStatSheetObject.h"
-#include "ActionClasses/CommandAction.h"
-#include "ActionClasses/ItemAction.h"
-#include "ActionClasses/AbilityAction.h"
+#include "ActionClasses/UCommandAction.h"
+#include "ActionClasses/UItemAction.h"
+#include "ActionClasses/UAbilityAction.h"
 #include "ResourceLoader.h"
 #include "Debugger.h"
 
-UStatSheetObject::UStatSheetObject() : commandMap(TMap<FString, CommandAction*>()), itemMap(TMap<FString, ItemAction*>()), abilityMap(TMap<FString, AbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, ItemAction*>())
+UStatSheetObject::UStatSheetObject() : commandMap(TMap<FString, UCommandAction*>()), itemMap(TMap<FString, UItemAction*>()), abilityMap(TMap<FString, UAbilityAction*>()), statMap(TMap<FString, float>()), equipmentMap(TMap<FString, UItemAction*>())
 {
 	name = "";
 	tag = "";
 }
-UStatSheetObject::UStatSheetObject(const FString name_, const FString tag_, const TMap<FString, CommandAction*>  commandMap_, const TMap<FString, ItemAction*>  itemMap_, const TMap<FString, AbilityAction*>  abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, ItemAction*>  equipmentMap_)
+bool UStatSheetObject::Init(const FString name_, const FString tag_, const TMap<FString, UCommandAction*>  commandMap_, const TMap<FString, UItemAction*>  itemMap_, const TMap<FString, UAbilityAction*>  abilityMap_, const TMap<FString, float> statMap_, const TMap<FString, UItemAction*>  equipmentMap_)
 {
 	name = name_;
 	tag = tag_;
@@ -21,8 +21,12 @@ UStatSheetObject::UStatSheetObject(const FString name_, const FString tag_, cons
 	itemMap = itemMap_;
 	abilityMap = abilityMap_;
 	equipmentMap = equipmentMap_;
+	if (&commandMap || &itemMap || &abilityMap || &equipmentMap)
+		return true;
+	else
+		return false;
 }
-UStatSheetObject::UStatSheetObject(UStatSheetObject* const other_)
+bool UStatSheetObject::Init(UStatSheetObject* const other_)
 {
 	name = other_->ReturnName();
 	tag = other_->ReturnTag();
@@ -31,9 +35,12 @@ UStatSheetObject::UStatSheetObject(UStatSheetObject* const other_)
 	abilityMap = other_->ReturnAbilityMap();
 	equipmentMap = other_->ReturnEquipmentMap();
 	statMap = other_->ReturnStatMap();
-
+	if (&commandMap || &itemMap || &abilityMap || &equipmentMap)
+		return true;
+	else
+		return false;
 }
-UStatSheetObject::UStatSheetObject(StatSheetData const data_)
+bool UStatSheetObject::Init(StatSheetData const data_)
 {
 	name = data_.name;
 	tag = data_.tag;
@@ -44,7 +51,7 @@ UStatSheetObject::UStatSheetObject(StatSheetData const data_)
 		{
 			if(ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_COMMAND)
 			{
-				CommandAction* command = dynamic_cast<CommandAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				UCommandAction* command = dynamic_cast<UCommandAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
 				commandMap.Add(command->ReturnName(), command);
 			}
 			else
@@ -66,8 +73,8 @@ UStatSheetObject::UStatSheetObject(StatSheetData const data_)
 		{
 			if (ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_ITEM)
 			{
-				ItemAction* command = dynamic_cast<ItemAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
-				itemMap.Add(command->ReturnName(), command);
+				UItemAction* item = dynamic_cast<UItemAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				itemMap.Add(item->ReturnName(), item);
 			}
 			else
 			{
@@ -87,8 +94,8 @@ UStatSheetObject::UStatSheetObject(StatSheetData const data_)
 		{
 			if (ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_ABILITY)
 			{
-				AbilityAction* command = dynamic_cast<AbilityAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
-				abilityMap.Add(command->ReturnName(), command);
+				UAbilityAction* ability = dynamic_cast<UAbilityAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				abilityMap.Add(ability->ReturnName(), ability);
 			}
 			else
 			{
@@ -109,8 +116,8 @@ UStatSheetObject::UStatSheetObject(StatSheetData const data_)
 		{
 			if (ResourceLoader::GetInstance()->ReturnAction(ID)->ReturnActionType() == ACTIONTYPE::E_ITEM)
 			{
-				ItemAction* command = dynamic_cast<ItemAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
-				equipmentMap.Add(command->ReturnName(), command);
+				UItemAction* equipment = dynamic_cast<UItemAction*>(ResourceLoader::GetInstance()->ReturnAction(ID));
+				equipmentMap.Add(equipment->ReturnName(), equipment);
 			}
 			else
 			{
@@ -130,12 +137,12 @@ UStatSheetObject::UStatSheetObject(StatSheetData const data_)
 	//data.ItemIDs
 	//data.abilityIDs
 	//data.equipmentIDs
+	if (&commandMap || &itemMap || &abilityMap || &equipmentMap)
+		return true;
+	else
+		return false;
 	
 }
-//UStatSheetObject::UStatSheetObject(StatSheetData const data_) 
-//{
-//	name = data_.name;
-//}
 void UStatSheetObject::SetName(const FString name_)
 {
 	name = name_;
@@ -152,19 +159,19 @@ FString UStatSheetObject::ReturnTag() const
 {
 	return tag;
 }
-void UStatSheetObject::AddCommandAction(CommandAction* const command_)
+void UStatSheetObject::AddCommandAction(UCommandAction* const command_)
 {
 	commandMap.Add(command_->ReturnName(), command_);
 }
-void UStatSheetObject::AddItemAction(ItemAction* const item_)
+void UStatSheetObject::AddItemAction(UItemAction* const item_)
 {
 	itemMap.Add(item_->ReturnName(), item_);
 }
-void UStatSheetObject::AddAbilityAction(AbilityAction* const ability_)
+void UStatSheetObject::AddAbilityAction(UAbilityAction* const ability_)
 {
 	abilityMap.Add(ability_->ReturnName(), ability_);
 }
-void UStatSheetObject::AddEquipment(ItemAction* const equipment_)
+void UStatSheetObject::AddEquipment(UItemAction* const equipment_)
 {
 	equipmentMap.Add(equipment_->ReturnName(), equipment_);
 }
@@ -184,7 +191,7 @@ void UStatSheetObject::RemoveEquipment(const FString name_)
 {
 	equipmentMap.Remove(name);
 }
-CommandAction* UStatSheetObject::ReturnCommand(FString name_) const
+UCommandAction* UStatSheetObject::ReturnCommand(FString name_) const
 {
 	if (!commandMap.Find(name_))
 	{
@@ -194,7 +201,7 @@ CommandAction* UStatSheetObject::ReturnCommand(FString name_) const
 	}
 		return commandMap[name_];
 }
-ItemAction* UStatSheetObject::ReturnItem(const FString name_) const
+UItemAction* UStatSheetObject::ReturnItem(const FString name_) const
 {
 	if (!itemMap.Find(name_))
 	{
@@ -204,7 +211,7 @@ ItemAction* UStatSheetObject::ReturnItem(const FString name_) const
 	}
 		return itemMap[name_];
 }
-AbilityAction* UStatSheetObject::ReturnAbility(const FString name_) const
+UAbilityAction* UStatSheetObject::ReturnAbility(const FString name_) const
 {
 	if (!abilityMap.Find(name_))
 	{
@@ -215,7 +222,7 @@ AbilityAction* UStatSheetObject::ReturnAbility(const FString name_) const
 	
 	return abilityMap[name_];
 }
-ItemAction* UStatSheetObject::ReturnEquipment(const FString name_) const
+UItemAction* UStatSheetObject::ReturnEquipment(const FString name_) const
 {
 	if (!equipmentMap.Find(name_))
 	{
@@ -225,15 +232,15 @@ ItemAction* UStatSheetObject::ReturnEquipment(const FString name_) const
 	}
 		return equipmentMap[name_];
 }
-TMap<FString, CommandAction*> UStatSheetObject::ReturnCommandMap() const
+TMap<FString, UCommandAction*> UStatSheetObject::ReturnCommandMap() const
 {
 	return commandMap;
 }
-TMap<FString, ItemAction*> UStatSheetObject::ReturnItemMap() const
+TMap<FString, UItemAction*> UStatSheetObject::ReturnItemMap() const
 {
 	return itemMap;
 }
-TMap<FString, AbilityAction*> UStatSheetObject::ReturnAbilityMap() const
+TMap<FString, UAbilityAction*> UStatSheetObject::ReturnAbilityMap() const
 {
 	return abilityMap;
 }
@@ -241,7 +248,7 @@ TMap<FString, float> UStatSheetObject::ReturnStatMap() const
 {
 	return statMap;
 }
-TMap<FString, ItemAction*> UStatSheetObject::ReturnEquipmentMap() const
+TMap<FString, UItemAction*> UStatSheetObject::ReturnEquipmentMap() const
 {
 	return equipmentMap;
 }
