@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "Engine/DataAsset.h"
 enum class ACTIONTYPE
 {
 	E_NONE = 1,
@@ -64,7 +64,7 @@ enum class STATACTION
 	E_TMP_REMOVE
 };
 
-class BATTLE_BOX_API UBaseAction : public UObject
+class BATTLE_BOX_API UBaseAction : public UDataAsset
 {
 private:
 	FString name;

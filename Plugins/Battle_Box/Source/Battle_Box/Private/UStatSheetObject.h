@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Containers/Array.h"
 #include "Containers/Map.h"
-#include "UObject/Object.h"
+#include "Engine/DataAsset.h"
 #include "UStatSheetObject.generated.h"
 
 class UItemAction;
@@ -16,7 +16,7 @@ struct StatSheetData;
  * 
  */
 UCLASS(Blueprintable, ClassGroup = "Battle_Box")
-class BATTLE_BOX_API UStatSheetObject : public UObject
+class BATTLE_BOX_API UStatSheetObject : public UDataAsset
 {
 	GENERATED_BODY()
 private:
