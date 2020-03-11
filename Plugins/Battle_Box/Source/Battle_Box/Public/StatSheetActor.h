@@ -16,8 +16,8 @@ public:
 	// Sets default values for this actor's properties
 	AStatSheetActor();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "StatSheet")
-		class UStatSheetObject* statSheet = NewObject<UStatSheetObject>();
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "StatSheet")
+		//class UStatSheetObject* statSheet = NewObject<UStatSheetObject>();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

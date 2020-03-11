@@ -3,6 +3,7 @@
 #include "Battle_Box.h"
 #include "../Private/Debugger.h"
 #include "BattleBoxFileManager.h"
+#include "Battle_Box_Enums.h"
 #include "Misc/Paths.h"
 
 #define LOCTEXT_NAMESPACE "FBattle_BoxModule"

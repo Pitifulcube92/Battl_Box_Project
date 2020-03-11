@@ -9,9 +9,9 @@
 #include "ActionClasses/UAbilityAction.h"
 #include "ActionClasses/UItemAction.h"
 #include "ActionClasses/UCommandAction.h"
-#include "ResourceLoader.h"
+#include "../Public/Battle_Box_Enums.h"
 #include <string>
-#include "JsonParse.h"
+
 ///destroy all this
 #include "Misc/Paths.h"
 

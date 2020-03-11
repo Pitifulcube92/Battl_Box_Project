@@ -4,51 +4,33 @@
 
 #include "CoreMinimal.h"
 #include "UBaseAction.h"
-#include "Equation.h"
+#include "UAbilityAction.generated.h"
 
-class Equation;
-struct AbilityData;
-/****/
 
-struct EquationData
+USTRUCT()
+struct BATTLE_BOX_API FAbilityAction_Info
 {
-	EQUATION_TYPE equationType;
-	float generalScalar;
-	float rise;
-	float run;
-	float xIntercept;
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY()
+	float duration;
+	UPROPERTY()
+	float abilityValue;
+	UPROPERTY()
+	ABILITYTYPE abilityType;
+	UPROPERTY()
+	TMap<FString, float> modStatMap;
+
 };
-enum class ABILITYTYPE
-{
-	E_MODIFIYER = 1,
-	E_TMP_MODIFIYER,
-	E_DAMAGE_MODIFYER 
-};
+
+
+
+UCLASS()
 class BATTLE_BOX_API UAbilityAction : public UBaseAction
 {
-private: 
-	float duration;
-	float abilityValue;
-	ABILITYTYPE abilityType;
-	TMap<FString, float> modStatMap;
-	Equation* equationObject;
-	float CalculateAbilityValue();
-
+	GENERATED_BODY()
 public:
-	UAbilityAction();
-	bool Init(const FString name_, const FString discription_, const ACTIONTYPE action_, const TARGETTYPE target_, const INTERACTIONTYPE interaction_, const uint32 actionID_,
-				  TMap<FString, float> statMap_, const float duration_, const ABILITYTYPE type_, const EquationData data_);
-	bool Init(UAbilityAction* const other_);
-	bool Init(AbilityData const data_);
+	UPROPERTY()
+		FAbilityAction_Info abilityInfo;
 
-	void SetAbilityType(const ABILITYTYPE type_);
-	void SetAbilityValue(const float value_);
-	void SetDuration(const float duration_);
-	Equation* ReturnEquationObject() const;
-	float ReturnDuration() const;
-	float ReturnAbilityValue() const;
-	TMap<FString, float> ReturnModStatMap();
-	ABILITYTYPE ReturnAbilityType() const;
-	void OnDestroy();
-	~UAbilityAction();
 };

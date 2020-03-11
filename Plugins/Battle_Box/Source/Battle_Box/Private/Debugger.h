@@ -3,17 +3,10 @@
 #ifndef DEBUGER_H
 #define DEBUGER_H
 #include "CoreMinimal.h"
+#include "../Public/Battle_Box_Enums.h"
 /**
  * 
  */
-enum class MessageType
-{
-	E_NONE = 0,
-	E_INFO,
-	E_WARNING,
-	E_ERROR,
-	E_FATAL_ERROR
-};
 class BATTLE_BOX_API Debugger
 {
 private:
