@@ -28,7 +28,7 @@
 //				//TO DO: Check if there is any damage in this command.
 //				UCommandAction* command = dynamic_cast<UCommandAction*>(action_);
 //			}
-//			else if(action_->ReturnActionType() == ACTIONTYPE::E_ITEM) 
+//			else if(action_->ReturnActionType() == ACTIONTYPE::E_ITEM)
 //			{
 //				//Item will be sorted to what type then calculated for total damage.
 //				UItemAction* item = dynamic_cast<UItemAction*>(action_);
@@ -296,11 +296,11 @@
 //		targets.Empty();
 //	}
 //}
-//float const DamageDeltSystem::ReturnTotalDamageValue() 
+//float const DamageDeltSystem::ReturnTotalDamageValue()
 //{
 //	return totalDamageValue;
 //}
-//TArray<float> const DamageDeltSystem::ReturnDamageValues() 
+//TArray<float> const DamageDeltSystem::ReturnDamageValues()
 //{
 //	return totalDamageValues;
 //}

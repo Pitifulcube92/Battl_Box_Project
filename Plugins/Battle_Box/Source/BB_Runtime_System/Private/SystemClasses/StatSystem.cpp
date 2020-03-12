@@ -137,7 +137,7 @@
 //				return;
 //			}
 //		}
-//		else if(!IsSingledTarget_) 
+//		else if(!IsSingledTarget_)
 //		{
 //			if (targets.Num() > 0)
 //			{
@@ -208,7 +208,7 @@
 //				}
 //				else if (effect->ReturnAbilityType() == ABILITYTYPE::E_TMP_MODIFIYER)
 //				{
-//					//This will go throught the modifyer process 
+//					//This will go throught the modifyer process
 //					//TO DO: Finish the proccess code for the tmp modifiyer.
 //				}
 //				else if (effect->ReturnAbilityType() == ABILITYTYPE::E_DAMAGE_MODIFYER)
@@ -221,9 +221,9 @@
 //		else if (item->ReturnItemType() == ITEMTYPE::E_ARMOR || item->ReturnItemType() == ITEMTYPE::E_WEAPON)
 //		{
 //			for (auto& effect : item->ReturnEffectList())
-//			{	
+//			{
 //				for(auto& statMod : effect->ReturnModStatMap())
-//				{ 
+//				{
 //					ModifiyStat(target_, statMod.Value, statMod.Key);
 //				}
 //			}
