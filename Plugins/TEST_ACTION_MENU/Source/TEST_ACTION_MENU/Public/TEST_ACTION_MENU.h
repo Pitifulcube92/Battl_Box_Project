@@ -11,11 +11,10 @@ class FMenuBuilder;
 class FTEST_ACTION_MENUModule : public IModuleInterface
 {
 public:
-
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
-	
+
 	/** This function will be bound to Command (by default it will bring up plugin window) */
 	void PluginButtonClicked();
 
@@ -25,8 +24,13 @@ private:
 	void AddMenuExtension(FMenuBuilder& Builder);
 
 	TSharedRef<class SDockTab> OnSpawnPluginTab(const class FSpawnTabArgs& SpawnTabArgs);
-	
-	TSharedRef<class SWindow> OpenStatSheetTab();
+
+	FReply OpenStatSheetTab();
+	FReply OpenActionTab();
+	//
+	TSharedPtr<FUICommandList> CommandList;
+	TSharedPtr<const FExtender> Extender;
+	ISlateStyle* slateStyle;
 	// Buttons
 	TSharedPtr<SButton> ActionButton;
 	TSharedPtr<SButton> StatSheetButton;

@@ -6,22 +6,22 @@ public class Battle_Box : ModuleRules
 {
 	public Battle_Box(ReadOnlyTargetRules Target) : base(Target)
 	{
+
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
-		PublicIncludePaths.AddRange(
-			new string[] {
-				// ... add public include paths required here ...
-			}
+        bUseRTTI = true;
+        PublicIncludePaths.AddRange(
+            new string[] { }
+
 			);
-				
-		
+
+
 		PrivateIncludePaths.AddRange(
 			new string[] {
 				// ... add other private include paths required here ...
 			}
 			);
-			
-		
+
+
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
@@ -30,8 +30,8 @@ public class Battle_Box : ModuleRules
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
-			
-		
+
+
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
@@ -40,11 +40,11 @@ public class Battle_Box : ModuleRules
 				"Slate",
 				"SlateCore",
                 "BB_Runtime_System"
-				// ...   add private dependencies that you statically link with here ...	
+				// ...   add private dependencies that you statically link with here ...
 			}
 			);
-		
-		
+
+
 		DynamicallyLoadedModuleNames.AddRange(
 			new string[]
 			{

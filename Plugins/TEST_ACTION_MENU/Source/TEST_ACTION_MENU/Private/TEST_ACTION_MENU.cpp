@@ -7,6 +7,7 @@
 #include "Widgets/Docking/SDockTab.h"
 #include "Widgets/Layout/SBox.h"
 #include "Widgets/Text/STextBlock.h"
+#include "Widgets/Input/SEditableTextBox.h"
 #include "Widgets/Input/SButton.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
 
@@ -18,35 +19,35 @@ static const FName TEST_ACTION_MENUTabName("TEST_ACTION_MENU");
 void FTEST_ACTION_MENUModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	
+
 	FTEST_ACTION_MENUStyle::Initialize();
 	FTEST_ACTION_MENUStyle::ReloadTextures();
 
 	FTEST_ACTION_MENUCommands::Register();
-	
+
 	PluginCommands = MakeShareable(new FUICommandList);
 
 	PluginCommands->MapAction(
 		FTEST_ACTION_MENUCommands::Get().OpenPluginWindow,
 		FExecuteAction::CreateRaw(this, &FTEST_ACTION_MENUModule::PluginButtonClicked),
 		FCanExecuteAction());
-		
+
 	FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
-	
+
 	{
 		TSharedPtr<FExtender> MenuExtender = MakeShareable(new FExtender());
 		MenuExtender->AddMenuExtension("WindowLayout", EExtensionHook::After, PluginCommands, FMenuExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddMenuExtension));
 
 		LevelEditorModule.GetMenuExtensibilityManager()->AddExtender(MenuExtender);
 	}
-	
+
 	{
 		TSharedPtr<FExtender> ToolbarExtender = MakeShareable(new FExtender);
 		ToolbarExtender->AddToolBarExtension("Settings", EExtensionHook::After, PluginCommands, FToolBarExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddToolbarExtension));
-		
+
 		LevelEditorModule.GetToolBarExtensibilityManager()->AddExtender(ToolbarExtender);
 	}
-	
+
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
 		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "TEST_ACTION_MENU"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
@@ -71,10 +72,6 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 		FText::FromString(TEXT("TEST_ACTION_MENU.cpp"))
 	);
 
-	FSlateColor buttonColor;
-	buttonColor.GetSpecifiedColor();
-	buttonColor.IsColorSpecified();
-
 	return SNew(SDockTab)
 		.TabRole(ETabRole::NomadTab)
 		[
@@ -94,7 +91,7 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 					//.FillHeight()
 						[
 						SAssignNew(ActionButton, SButton) // Action Button
-						.OnClicked(this, &FTEST_ACTION_MENUModule::OpenStatSheetTab)
+						.OnClicked_Raw(this,  &FTEST_ACTION_MENUModule::OpenActionTab)
 							[
 							SNew(SBorder)
 							.Padding(FMargin(3))
@@ -114,6 +111,7 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 					.Padding(0, 0, 0, 10)
 						[
 						SAssignNew(StatSheetButton, SButton)
+						.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::OpenStatSheetTab)
 							[
 							SNew(SBorder)
 							.Padding(FMargin(3))
@@ -151,16 +149,167 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 		];
 }
 
-TSharedRef<SWindow> FTEST_ACTION_MENUModule::OpenStatSheetTab()
+FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 {
-	return SNew(SWindow)
+	auto MyWindow = SNew(SWindow)
 		.ClientSize(FVector2D(640, 640))
+		//.IsPopupWindow(true)
+		.IsEnabled(true)
+		.bDragAnywhere(true)
+		.Content()
 		[
-			SNew(STextBlock)
-			.Text(LOCTEXT("DeBug", "Set New"))
+			SNew(SVerticalBox)
+			+ SVerticalBox::Slot()
+			[
+				SNew(STextBlock)
+				.Text(LOCTEXT( "Menu Name Stat","Create StatSheet"))
+			]
+			+SVerticalBox::Slot()
+			[
+				SNew(SHorizontalBox)
+				+SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("StatName", "Name: "))
+					.AutoWrapText(true)
+				]
+				+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(SEditableTextBox)
+
+				]
+			]
+			+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+ SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+					[
+						SNew(STextBlock)
+						.Text(LOCTEXT("StatTag", "Tag: "))
+						.AutoWrapText(true)
+
+					]
+					+ SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+					[
+						SNew(SEditableTextBox)
+					]
+				]
+			+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+					[
+						SNew(STextBlock)
+						.Text(LOCTEXT("StatActionMap", "Action Maps"))
+					]
+				]
 		];
+	UE_LOG(LogTemp, Log, TEXT("Stat Window Open"));
+	FSlateApplication::Get().AddWindow(MyWindow, true);
+	return FReply::Handled();
 }
 
+FReply FTEST_ACTION_MENUModule::OpenActionTab() {
+
+//	FMenuBarBuilder MenuBarBuilder(CommandList, Exenter, FCoreStyle::Get(), FName("test"));
+	auto MyWindow = SNew(SWindow)
+		.ClientSize(FVector2D(640, 640))
+		//.IsPopupWindow(true)
+		.IsEnabled(true)
+		.bDragAnywhere(true)
+		.Content()[
+			SNew(SVerticalBox)
+			+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+						[
+							SNew(STextBlock)
+							.Text(LOCTEXT("Action Title Text", "Action Creation Menu"))
+						]
+				]
+			+SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+						[
+							SNew(STextBlock)
+							.Text(LOCTEXT("Action type", "Choose Action Type"))
+						]
+					+SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+						[
+							SNew(SComboButton)
+							.ButtonContent()
+							[
+								SNew(STextBlock)
+								.Text(LOCTEXT("ComboButtonText", "Choose Action Type"))
+							]
+							.MenuContent()
+							[
+								SNew(SButton)
+								.Text(LOCTEXT("Base Action", "Base Action"))
+							]
+						]
+				]
+			+SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+					[
+						SAssignNew(ListViewWidget, SListView<TSharedPtr<FString>>)
+						.ItemHeight(24)
+						.ListItemsSource(&Items) //The Items array is the source of this listview
+						//.OnGenerateRow(this, &FTEST_ACTION_MENUModule::OnGenerateRowForList)
+					]
+		/*			+SHorizontalBox::Slot()
+					.VAlign(VAlign_Center)
+					[
+						SNew(SButton)
+						.OnClicked(this, &FTEST_ACTION_MENUModule::ButtonPressed)
+					]*/
+				]
+		];
+
+	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
+	FSlateApplication::Get().AddWindow(MyWindow, true);
+	return FReply::Handled();
+}
+// SList Test Function
+//TSharedRef<ITableRow> FTEST_ACTION_MENUModule::OnGenerateRowForList(TSharedPtr<FString> Item, const TSharedRef<STableViewBase>& OwnerTable)
+//{
+//	if (!Item.Get() || !Item.IsValid()) // Error catcher
+//		return
+//		SNew(STableRow< TSharedPtr< FString > >, OwnerTable)
+//		[
+//			SNew(SBox)
+//		];
+//	else {
+//		SNew(STableRow< TSharedPtr< FString > >, OwnerTable)
+//			[
+//				SNew(STextBlock)
+//				//.Text(*Item.Get())
+//			];
+//	}
+//}
+FReply FTEST_ACTION_MENUModule::ButtonPressed()
+{
+	//Adds a new item to the array (do whatever you want with this)
+	Items.Add(MakeShareable(new FString("Hello 1")));
+
+	//Update the listview
+	ListViewWidget->RequestListRefresh();
+
+	return FReply::Handled();
+}
 void FTEST_ACTION_MENUModule::PluginButtonClicked()
 {
 	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
@@ -177,5 +326,5 @@ void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
 }
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FTEST_ACTION_MENUModule, TEST_ACTION_MENU)

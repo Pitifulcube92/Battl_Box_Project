@@ -3,6 +3,16 @@
 
 #include "Debugger.h"
 #include "BattleBoxFileManager.h"
+///destroy all this
+#include "ActionClasses/UBaseAction.h"
+#include "UStatSheetObject.h"
+#include "ActionClasses/UAbilityAction.h"
+#include "ActionClasses/UItemAction.h"
+#include "ActionClasses/UCommandAction.h"
+#include "../Public/Battle_Box_Enums.h"
+#include <string>
+
+///destroy all this
 #include "Misc/Paths.h"
 
 MessageType Debugger::currentType = MessageType::E_NONE;
