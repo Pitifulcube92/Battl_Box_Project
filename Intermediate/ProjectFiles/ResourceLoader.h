@@ -13,6 +13,8 @@ public:
 	ResourceLoader();
 	~ResourceLoader();
 	void DetermineLoadType(); // determine what data from a file will take in
+	void OnCreate();
+	void OnDestroy();
 
 private:
 	void LoadActionSheet(const std::string& filename_); // once file type is determined will load a Action
