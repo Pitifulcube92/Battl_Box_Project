@@ -264,12 +264,12 @@ FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 					SNew(SHorizontalBox)
 					+SHorizontalBox::Slot()
 					.VAlign(VAlign_Center)
-					[
-						SAssignNew(ListViewWidget, SListView<TSharedPtr<FString>>)
-						.ItemHeight(24)
-						.ListItemsSource(&Items) //The Items array is the source of this listview
-						//.OnGenerateRow(this, &FTEST_ACTION_MENUModule::OnGenerateRowForList)
-					]
+					//[
+					//	SAssignNew(ListViewWidget, SListView<TSharedPtr<FString>>)
+					//	.ItemHeight(24)
+					//	.ListItemsSource(&Items) //The Items array is the source of this listview
+					//	//.OnGenerateRow(this, &FTEST_ACTION_MENUModule::OnGenerateRowForList)
+					//]
 		/*			+SHorizontalBox::Slot()
 					.VAlign(VAlign_Center)
 					[
@@ -300,16 +300,16 @@ FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 //			];
 //	}
 //}
-FReply FTEST_ACTION_MENUModule::ButtonPressed()
-{
-	//Adds a new item to the array (do whatever you want with this)
-	Items.Add(MakeShareable(new FString("Hello 1")));
-
-	//Update the listview
-	ListViewWidget->RequestListRefresh();
-
-	return FReply::Handled();
-}
+//FReply FTEST_ACTION_MENUModule::ButtonPressed()
+//{
+//	//Adds a new item to the array (do whatever you want with this)
+//	Items.Add(MakeShareable(new FString("Hello 1")));
+//
+//	//Update the listview
+//	ListViewWidget->RequestListRefresh();
+//
+//	return FReply::Handled();
+//}
 void FTEST_ACTION_MENUModule::PluginButtonClicked()
 {
 	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
