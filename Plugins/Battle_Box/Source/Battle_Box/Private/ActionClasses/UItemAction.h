@@ -1,28 +1,27 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#pragma once
 
 #include "CoreMinimal.h"
-#include "../Public/ActionClasses/UBaseAction.h"
+#include "UBaseAction.h"
 #include "Containers/Array.h"
 #include "Containers/Map.h"
 #include "UItemAction.generated.h"
-class UAbilityAction;
 
-USTRUCT(BlueprintType, Category = "Battle_Box")
+USTRUCT()
 struct BATTLE_BOX_API FItemAction_Info
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	ITEMTYPE type;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	uint32 value;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	TArray<UAbilityAction*> effectList;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	TMap<FString, float> statModMap;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	DAMAGETYPE damageType;
 };
 
@@ -32,8 +31,6 @@ class BATTLE_BOX_API UItemAction : public UBaseAction
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY()
 		FItemAction_Info itemInfo;
-	UFUNCTION(BlueprintCallable)
-		FItemAction_Info GetItemInfo() const;
 };

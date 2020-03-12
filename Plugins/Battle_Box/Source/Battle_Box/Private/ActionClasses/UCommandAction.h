@@ -1,31 +1,29 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#pragma once
 
 #include "CoreMinimal.h"
-#include "../Public/ActionClasses/UBaseAction.h"
+#include "UBaseAction.h"
 #include "UCommandAction.generated.h"
 
-USTRUCT(BlueprintType, Category = "Battle_Box")
+USTRUCT()
 struct BATTLE_BOX_API FCommandAction_Info
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	bool isActionCommand;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	WEAPONTYPE currentweapon;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	UBaseAction* command;
 };
 
-UCLASS(Blueprintable, BlueprintType, Category="Battle_Box")
+UCLASS()
 class BATTLE_BOX_API UCommandAction : public UBaseAction
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY()
 		FCommandAction_Info commandInfo;
-	UFUNCTION(BlueprintCallable)
-		FCommandAction_Info GetCommandInfo() const;
 };

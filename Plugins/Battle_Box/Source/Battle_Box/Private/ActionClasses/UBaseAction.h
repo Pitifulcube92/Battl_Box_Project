@@ -8,7 +8,7 @@
 #include "UBaseAction.generated.h"
 
 
-USTRUCT(BlueprintType, Category="Battle_Box")
+USTRUCT(BlueprintType)
 struct BATTLE_BOX_API FBaseAction_Info
 {
 	GENERATED_USTRUCT_BODY()
@@ -29,16 +29,13 @@ struct BATTLE_BOX_API FBaseAction_Info
 		uint32 actionID;
 };
 
-UCLASS(Abstract, Category="Battle_Box")
+UCLASS(BlueprintType)
 class BATTLE_BOX_API UBaseAction : public UDataAsset
 {
 
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditAnywhere)
 		FBaseAction_Info baseInfo;
-	UFUNCTION(BlueprintCallable)
-		FBaseAction_Info GetBaseInfo() const;
-	
 };
