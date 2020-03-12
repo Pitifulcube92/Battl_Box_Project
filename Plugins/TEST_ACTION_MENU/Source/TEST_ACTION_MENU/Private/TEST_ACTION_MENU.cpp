@@ -19,35 +19,35 @@ static const FName TEST_ACTION_MENUTabName("TEST_ACTION_MENU");
 void FTEST_ACTION_MENUModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	
+
 	FTEST_ACTION_MENUStyle::Initialize();
 	FTEST_ACTION_MENUStyle::ReloadTextures();
 
 	FTEST_ACTION_MENUCommands::Register();
-	
+
 	PluginCommands = MakeShareable(new FUICommandList);
 
 	PluginCommands->MapAction(
 		FTEST_ACTION_MENUCommands::Get().OpenPluginWindow,
 		FExecuteAction::CreateRaw(this, &FTEST_ACTION_MENUModule::PluginButtonClicked),
 		FCanExecuteAction());
-		
+
 	FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
-	
+
 	{
 		TSharedPtr<FExtender> MenuExtender = MakeShareable(new FExtender());
 		MenuExtender->AddMenuExtension("WindowLayout", EExtensionHook::After, PluginCommands, FMenuExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddMenuExtension));
 
 		LevelEditorModule.GetMenuExtensibilityManager()->AddExtender(MenuExtender);
 	}
-	
+
 	{
 		TSharedPtr<FExtender> ToolbarExtender = MakeShareable(new FExtender);
 		ToolbarExtender->AddToolBarExtension("Settings", EExtensionHook::After, PluginCommands, FToolBarExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddToolbarExtension));
-		
+
 		LevelEditorModule.GetToolBarExtensibilityManager()->AddExtender(ToolbarExtender);
 	}
-	
+
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
 		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "TEST_ACTION_MENU"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
@@ -178,7 +178,7 @@ FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 				.VAlign(VAlign_Center)
 				[
 					SNew(SEditableTextBox)
-					
+
 				]
 			]
 			+ SVerticalBox::Slot()
@@ -190,7 +190,7 @@ FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 						SNew(STextBlock)
 						.Text(LOCTEXT("StatTag", "Tag: "))
 						.AutoWrapText(true)
-						
+
 					]
 					+ SHorizontalBox::Slot()
 					.VAlign(VAlign_Center)
@@ -326,5 +326,5 @@ void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
 }
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FTEST_ACTION_MENUModule, TEST_ACTION_MENU)

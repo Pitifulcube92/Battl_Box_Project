@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "../Public/Battle_Box_Enums.h"
 /**
- * 
+ *
  */
 class BATTLE_BOX_API Debugger
 {
@@ -27,13 +27,11 @@ public:
 	static void SetSeverity(const MessageType type_);
 	///Sends a info log to the debugger txt file.
 	static void Info(const FString& message_, const FString& fileName_, const int32 line_);
-	///Sends a error  log to the debugger txt file. 
+	///Sends a error  log to the debugger txt file.
 	static void Error(const FString& message_, const FString& fileName_, const int32 line_);
-	///Sends a warrning log to the debugger txt file. 
+	///Sends a warrning log to the debugger txt file.
 	static void Warrning(const FString& message_, const FString& fileName_, const int32 line_);
-	///Sends a warning log to the dugger txt file. 
+	///Sends a warning log to the dugger txt file.
 	static void FatalError(const FString& message_, const FString& fileName_, const int32 line_);
-	///Tests ALL Classes;
-	//static void TESTALLCLASSES();
 };
 #endif // !1

@@ -133,18 +133,18 @@ $(document).ready(function(){initNavTree('class_stat_system_adf6b0dd03c3494e5355
 
 <p>This updates the stats based on the name. </p>
 
-<p class="definition">Definition at line <a class="el" href="_stat_system_8cpp_source.html#l00181">181</a> of file <a class="el" href="_stat_system_8cpp_source.html">StatSystem.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (target_-&gt;<a class="code" href="class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3">ReturnStatMap</a>().Contains(name_))</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        target_-&gt;<a class="code" href="class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3">ReturnStatMap</a>()[name_] += value;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</a>(<a class="code" href="_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013.html#ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">MessageType::E_WARNING</a>);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <a class="code" href="class_debugger_a6f945a47fa65d5eb4f93a1db124324f3.html#a6f945a47fa65d5eb4f93a1db124324f3">Debugger::Warrning</a>(name_ + <span class="stringliteral">&quot; is not found in the stat sheet.&quot;</span>, <span class="stringliteral">&quot;StatSystem.cpp&quot;</span>, __LINE__);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="_stat_system_8cpp_source.html#l00178">178</a> of file <a class="el" href="_stat_system_8cpp_source.html">StatSystem.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span> (target_-&gt;<a class="code" href="class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3">ReturnStatMap</a>().Contains(name_))</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        target_-&gt;<a class="code" href="class_stat_sheet_object_aa92a6ba4a423719096ce45fe714491f3.html#aa92a6ba4a423719096ce45fe714491f3">ReturnStatMap</a>()[name_] += value;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="class_debugger_a2e066519c4fe48fb1268f9bfe2ded3a2.html#a2e066519c4fe48fb1268f9bfe2ded3a2">Debugger::SetSeverity</a>(<a class="code" href="_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013.html#ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">MessageType::E_WARNING</a>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="class_debugger_a6f945a47fa65d5eb4f93a1db124324f3.html#a6f945a47fa65d5eb4f93a1db124324f3">Debugger::Warrning</a>(name_ + <span class="stringliteral">&quot; is not found in the stat sheet.&quot;</span>, <span class="stringliteral">&quot;StatSystem.cpp&quot;</span>, __LINE__);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013.html#ac6606ebe91c8ac66a2c314c79f5ab013a4d35ba8085c7861a319c75f014ec3dcd">E_WARNING</a>, <a class="el" href="_stat_sheet_object_8cpp_source.html#l00136">StatSheetObject::ReturnStatMap()</a>, <a class="el" href="_debuger_8cpp_source.html#l00035">Debugger::SetSeverity()</a>, and <a class="el" href="_debuger_8cpp_source.html#l00047">Debugger::Warrning()</a>.</p>
 <div class="dynheader">
@@ -169,7 +169,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,5,689,32"/>
 <area shape="rect" href="class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,107,709,133"/>
 <area shape="rect" href="class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="499,56,689,83"/>
-<area shape="rect" href="class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title=" " alt="" coords="239,27,422,53"/>
+<area shape="rect" href="class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="239,27,422,53"/>
 <area shape="rect" href="class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,27,183,53"/>
 <area shape="rect" href="class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,99,431,141"/>
 </map>

@@ -1,10 +1,8 @@
 <map id="StatSheetObject::ReturnEquipmentMap" name="StatSheetObject::ReturnEquipmentMap">
-<area shape="rect" id="node1" title="Returns the equipment map." alt="" coords="780,111,1031,138"/>
+<area shape="rect" id="node1" title="Returns the equipment map." alt="" coords="780,78,1031,105"/>
 <area shape="rect" id="node2" href="$class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9.html#ab04599079f9f0e8734678800df8bc6d9" title="Calculates the magical defence of the target." alt="" coords="532,5,732,47"/>
 <area shape="rect" id="node5" href="$class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0.html#afe23abbc1d1f86ef88484692e4800fb0" title="Calculates the physical defence of the target." alt="" coords="532,71,732,112"/>
-<area shape="rect" id="node6" href="$class_json_receiver_a3f71507aa4bef59295d61e4230f3fb64.html#a3f71507aa4bef59295d61e4230f3fb64" title=" " alt="" coords="543,136,721,177"/>
-<area shape="rect" id="node8" href="$class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="540,201,724,243"/>
+<area shape="rect" id="node6" href="$class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="540,136,724,177"/>
 <area shape="rect" id="node3" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="253,46,484,73"/>
 <area shape="rect" id="node4" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="5,39,205,80"/>
-<area shape="rect" id="node7" href="$class_json_receiver_a3ad8f8479a0410f169114a302b3d268f.html#a3ad8f8479a0410f169114a302b3d268f" title=" " alt="" coords="271,136,466,177"/>
 </map>

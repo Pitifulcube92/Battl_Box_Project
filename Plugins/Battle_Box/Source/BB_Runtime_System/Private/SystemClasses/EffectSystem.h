@@ -5,7 +5,7 @@
 //class UStatSheetObject;
 //class UBaseAction;
 //
-//class EffectSystem 
+//class EffectSystem
 //{
 //private:
 //	static UStatSheetObject* target;
@@ -19,7 +19,7 @@
 //	EffectSystem() = delete;
 //
 //	static void BaseCalculate(const bool IsSingleTarget_, UBaseAction* const action_);
-//	///Calculates the effect	
+//	///Calculates the effect
 //	static void CallculateEffect(UBaseAction* action_);
 //	///Removes the effect by the action.
 //	static void RemoveEffect(UBaseAction* action_);

@@ -1,6 +1,5 @@
 <map id="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h" name="D:/UNrealProjects/Battl_Box_Project/Plugins/Battle_Box/Source/BB_Runtime_System/Private/SystemClasses/DamageDeltSystem.h">
-<area shape="rect" id="node1" title=" " alt="" coords="325,5,617,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="166,5,458,76"/>
 <area shape="rect" id="node2" href="$_damage_delt_system_8cpp.html" title=" " alt="" coords="5,124,312,195"/>
-<area shape="rect" id="node3" href="$_effect_system_8cpp.html" title=" " alt="" coords="337,124,605,195"/>
-<area shape="rect" id="node4" href="$_stat_system_8cpp.html" title=" " alt="" coords="629,124,888,195"/>
+<area shape="rect" id="node3" href="$_stat_system_8cpp.html" title=" " alt="" coords="336,124,595,195"/>
 </map>

@@ -33,8 +33,6 @@ static void \textbf{ Delete\+File} (const F\+String \&source\+Path\+\_\+)
 \begin{DoxyCompactList}\small\item\em Deletes a file. \end{DoxyCompactList}\item 
 static void \textbf{ Get\+File\+Size} (const F\+String \&source\+Path\+\_\+)
 \begin{DoxyCompactList}\small\item\em Gets the file size. \end{DoxyCompactList}\item 
-static F\+String \textbf{ Read\+File} (const F\+String \&Directory\+\_\+, const F\+String \&File\+Name\+\_\+)
-\item 
 static bool \textbf{ Verify\+On\+Create\+Directory} (const F\+String \&test\+Dir\+\_\+)
 \begin{DoxyCompactList}\small\item\em Check and creates if there is a directory. \end{DoxyCompactList}\item 
 static void \textbf{ Write\+Text\+Array\+To\+File} (const F\+String \&save\+Directory\+\_\+, const T\+Array$<$ F\+String $>$ text\+Array\+\_\+, const F\+String \&File\+Name\+\_\+, bool const Is\+Over\+Write\+\_\+)
@@ -139,39 +137,6 @@ Definition at line 22 of file Battle\+Box\+File\+Manager.\+cpp.
 \doxysubsubsection{operator=()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \textbf{ Battle\+Box\+File\+Manager}\& Battle\+Box\+File\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Battle\+Box\+File\+Manager} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
-\mbox{\label{class_battle_box_file_manager_aeb3a75006c111078e57c757747483957_aeb3a75006c111078e57c757747483957}} 
-\index{BattleBoxFileManager@{BattleBoxFileManager}!ReadFile@{ReadFile}}
-\index{ReadFile@{ReadFile}!BattleBoxFileManager@{BattleBoxFileManager}}
-\doxysubsubsection{ReadFile()}
-{\footnotesize\ttfamily F\+String Battle\+Box\+File\+Manager\+::\+Read\+File (\begin{DoxyParamCaption}\item[{const F\+String \&}]{Directory\+\_\+,  }\item[{const F\+String \&}]{File\+Name\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 77 of file Battle\+Box\+File\+Manager.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{78 \{}
-\DoxyCodeLine{79     FString tmp;}
-\DoxyCodeLine{80     FString absoluteFilePath = Directory\_ + \textcolor{stringliteral}{"/"} + FileName\_;}
-\DoxyCodeLine{81     IPlatformFile\& platFormFile = FPlatformFileManager::Get().GetPlatformFile();}
-\DoxyCodeLine{82 }
-\DoxyCodeLine{83     IFileHandle* FileHandle = platFormFile.OpenRead(*FileName\_);}
-\DoxyCodeLine{84     \textcolor{keywordflow}{if}(FileHandle)}
-\DoxyCodeLine{85     \{}
-\DoxyCodeLine{86         FFileHelper::LoadFileToString(tmp, *FileName\_);}
-\DoxyCodeLine{87     \}}
-\DoxyCodeLine{88     \textcolor{keywordflow}{return} tmp;}
-\DoxyCodeLine{89 \}}
-
-\end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_battle_box_file_manager_aeb3a75006c111078e57c757747483957_aeb3a75006c111078e57c757747483957_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa_aac6c3bb192936f4f22b4e93090cd45aa}} 
 \index{BattleBoxFileManager@{BattleBoxFileManager}!VerifyOnCreateDirectory@{VerifyOnCreateDirectory}}
 \index{VerifyOnCreateDirectory@{VerifyOnCreateDirectory}!BattleBoxFileManager@{BattleBoxFileManager}}
@@ -247,7 +212,8 @@ Definition at line 57 of file Battle\+Box\+File\+Manager.\+cpp.
 \DoxyCodeLine{76 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -285,13 +251,6 @@ Definition at line 43 of file Battle\+Box\+File\+Manager.\+cpp.
 \DoxyCodeLine{56 \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_battle_box_file_manager_abd4bb207fe330e3d32150bc96978a385_abd4bb207fe330e3d32150bc96978a385_icgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

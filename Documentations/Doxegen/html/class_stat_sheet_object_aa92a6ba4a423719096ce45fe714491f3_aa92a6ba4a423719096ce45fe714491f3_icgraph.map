@@ -1,14 +1,13 @@
 <map id="StatSheetObject::ReturnStatMap" name="StatSheetObject::ReturnStatMap">
-<area shape="rect" id="node1" title="Returns the statMap." alt="" coords="1005,137,1219,163"/>
+<area shape="rect" id="node1" title="Returns the statMap." alt="" coords="1005,107,1219,134"/>
 <area shape="rect" id="node2" href="$class_damage_delt_system_ab04599079f9f0e8734678800df8bc6d9.html#ab04599079f9f0e8734678800df8bc6d9" title="Calculates the magical defence of the target." alt="" coords="757,5,957,47"/>
 <area shape="rect" id="node5" href="$class_damage_delt_system_afe23abbc1d1f86ef88484692e4800fb0.html#afe23abbc1d1f86ef88484692e4800fb0" title="Calculates the physical defence of the target." alt="" coords="757,71,957,112"/>
 <area shape="rect" id="node6" href="$class_stat_system_adf6b0dd03c3494e535587c692daf582d.html#adf6b0dd03c3494e535587c692daf582d" title="This updates the stats based on the name." alt="" coords="775,137,939,163"/>
 <area shape="rect" id="node11" href="$class_stat_sheet_object_a0122cd38668000c17134d6d267b31df2.html#a0122cd38668000c17134d6d267b31df2" title=" " alt="" coords="765,188,949,229"/>
-<area shape="rect" id="node12" href="$class_json_receiver_a3ad8f8479a0410f169114a302b3d268f.html#a3ad8f8479a0410f169114a302b3d268f" title=" " alt="" coords="760,253,955,295"/>
 <area shape="rect" id="node3" href="$class_damage_delt_system_abd7f711f20dd60d57c896c02f159c663.html#abd7f711f20dd60d57c896c02f159c663" title="System calculation." alt="" coords="479,78,709,105"/>
 <area shape="rect" id="node4" href="$class_damage_delt_system_ae83f59d7ede5c62f9de1b002c33a69d3.html#ae83f59d7ede5c62f9de1b002c33a69d3" title="Static moethod for the base function." alt="" coords="231,71,431,112"/>
 <area shape="rect" id="node7" href="$class_stat_system_a2a37cf57a91f13fb5f640a342d5d0642.html#a2a37cf57a91f13fb5f640a342d5d0642" title="Adds the specific modification by the baseaction." alt="" coords="499,133,689,159"/>
 <area shape="rect" id="node10" href="$class_stat_system_a96853e2e03a30b508ceed1bcf36a58af.html#a96853e2e03a30b508ceed1bcf36a58af" title="Removes the specific modification by the baseaction." alt="" coords="499,183,689,210"/>
-<area shape="rect" id="node8" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title=" " alt="" coords="239,159,422,186"/>
+<area shape="rect" id="node8" href="$class_stat_system_a805454116d5cd0a0c408117b42f413be.html#a805454116d5cd0a0c408117b42f413be" title="Base calculation for any dirieved system classes." alt="" coords="239,159,422,186"/>
 <area shape="rect" id="node9" href="$class_stat_system_a3aa6ceee9134f792fa0f632a7d798a68.html#a3aa6ceee9134f792fa0f632a7d798a68" title=" " alt="" coords="5,159,183,186"/>
 </map>

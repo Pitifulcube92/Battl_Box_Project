@@ -1,7 +1,0 @@
-<map id="JsonReceiver::MakeIDJsonArray" name="JsonReceiver::MakeIDJsonArray">
-<area shape="rect" id="node1" title=" " alt="" coords="5,74,183,115"/>
-<area shape="rect" id="node2" href="$class_stat_sheet_object_a4b6e004e70d178b864126a93d6ea3df4.html#a4b6e004e70d178b864126a93d6ea3df4" title="Returns the ability map." alt="" coords="243,5,469,32"/>
-<area shape="rect" id="node3" href="$class_stat_sheet_object_a9b6fcf1480b8d15424f5476ed40604d2.html#a9b6fcf1480b8d15424f5476ed40604d2" title="Returns the commmand map." alt="" coords="232,56,480,83"/>
-<area shape="rect" id="node4" href="$class_stat_sheet_object_aecfdf70147ffaa33f65b03c3b97232c8.html#aecfdf70147ffaa33f65b03c3b97232c8" title="Returns the equipment map." alt="" coords="231,107,481,133"/>
-<area shape="rect" id="node5" href="$class_stat_sheet_object_a16559559522d65dfb2d4baf3881bc1ba.html#a16559559522d65dfb2d4baf3881bc1ba" title="Returns the item map." alt="" coords="249,157,463,184"/>
-</map>

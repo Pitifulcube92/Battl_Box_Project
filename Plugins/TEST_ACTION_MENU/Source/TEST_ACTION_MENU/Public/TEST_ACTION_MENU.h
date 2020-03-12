@@ -44,17 +44,6 @@ private:
 	TSharedPtr<SHorizontalBox> FillBox1;
 	TSharedPtr<SHorizontalBox> FillBox2;
 
-	//Test For SListView
-	FReply ButtonPressed();
-
-	/* Adds a new textbox with the string to the list */
-	TSharedRef<ITableRow> OnGenerateRowForList(TSharedPtr<FString> Item, const TSharedRef<STableViewBase>& OwnerTable);
-
-	/* The list of strings */
-	TArray<TSharedPtr<FString>> Items;
-
-	/* The actual UI list */
-	TSharedPtr< SListView< TSharedPtr<FString> > > ListViewWidget;
 private:
 	TSharedPtr<class FUICommandList> PluginCommands;
 };
