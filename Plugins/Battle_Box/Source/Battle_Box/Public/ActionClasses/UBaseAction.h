@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "Battle_Box_Enums.h"
+#include "../Public/Battle_Box_Enums.h"
 #include "UBaseAction.generated.h"
 
 
-USTRUCT()
-struct FBaseAction_Info
+USTRUCT(BlueprintType, Category="Battle_Box")
+struct BATTLE_BOX_API FBaseAction_Info
 {
 	GENERATED_USTRUCT_BODY()
-public:
+
 	UPROPERTY(EditAnywhere)
 		FString name;
 	UPROPERTY(EditAnywhere)
@@ -29,15 +29,16 @@ public:
 		uint32 actionID;
 };
 
-UCLASS()
+UCLASS(Abstract, Category="Battle_Box")
 class BATTLE_BOX_API UBaseAction : public UDataAsset
 {
+
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 		FBaseAction_Info baseInfo;
-	/*UFUNCTION(BlueprintCallable)
-		FBaseAction_Info GetBaseInfo() const;*/
+	UFUNCTION(BlueprintCallable)
+		FBaseAction_Info GetBaseInfo() const;
 	
 };

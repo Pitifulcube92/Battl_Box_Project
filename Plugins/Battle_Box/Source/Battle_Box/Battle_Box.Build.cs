@@ -11,8 +11,7 @@ public class Battle_Box : ModuleRules
         PublicIncludePaths.AddRange(
             new string[] {
 				// ... add public include paths required here ...
-               //"Battle_Box/Public",
-               //"Battle_Box/Public/ActionClasses"
+               // "Battle_Box/Public"
 			}
 			);
 				
