@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "StatSheet_DataAsset.generated.h"
+#include "BttleBoxAsset.generated.h"
 
 /**
  * 
  */
-UCLASS(ClassGroup = Test, Category = "BattleBox", BlueprintType, Blueprintable)
-class BATTLE_BOX_API UStatSheet_DataAsset : public UDataAsset
+UCLASS()
+class BATTLE_BOX_API UBttleBoxAsset : public UDataAsset
 {
 	GENERATED_BODY()
 	

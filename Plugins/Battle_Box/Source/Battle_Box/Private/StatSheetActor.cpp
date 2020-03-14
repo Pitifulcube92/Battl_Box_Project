@@ -18,19 +18,19 @@ void AStatSheetActor::BeginPlay()
 	
 }
 
-// Called every frame
+//// Called every frame
 void AStatSheetActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
-void AStatSheetActor::SetName(const FString name_)
-{
-	//statSheet->SetName(name_);
-}
-
-void AStatSheetActor::SetTag(const FString tag_)
-{
-	//statSheet->SetTag(tag_);
-}
+//void AStatSheetActor::SetName(const FString name_)
+//{
+//	//statSheet->SetName(name_);
+//}
+//
+//void AStatSheetActor::SetTag(const FString tag_)
+//{
+//	//statSheet->SetTag(tag_);
+//}

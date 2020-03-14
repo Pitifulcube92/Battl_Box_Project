@@ -43,7 +43,7 @@ struct BATTLE_BOX_API FGeneralStat_Info
 };
 
 
-UCLASS(Blueprintable, ClassGroup = "Battle_Box")
+UCLASS(Blueprintable)
 class BATTLE_BOX_API UStatSheetObject : public UDataAsset
 {
 	GENERATED_BODY()

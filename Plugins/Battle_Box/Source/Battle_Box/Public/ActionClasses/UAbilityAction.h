@@ -1,32 +1,37 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+#pragma once
 
 #include "CoreMinimal.h"
-#include "../Public/ActionClasses/UBaseAction.h"
+#include "UBaseAction.h"
 #include "UAbilityAction.generated.h"
 
 
-USTRUCT(BlueprintType, Category = "Battle_Box")
+USTRUCT(BlueprintType)
 struct BATTLE_BOX_API FAbilityAction_Info
 {
 	GENERATED_USTRUCT_BODY()
-
+public:
 	UPROPERTY(EditAnywhere)
-	float duration;
+		float duration;
 	UPROPERTY(EditAnywhere)
-	float abilityValue;
+		float abilityValue;
 	UPROPERTY(EditAnywhere)
-	ABILITYTYPE abilityType;
+		ABILITYTYPE abilityType;
+	UPROPERTY(EditAnywhere)
+		class UStatusEffect* effect;
 };
 
 
 
-UCLASS(Blueprintable, BlueprintType, Category="Battle_Box")
+UCLASS(BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UAbilityAction : public UBaseAction
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditAnywhere)
 		FAbilityAction_Info abilityInfo;
 	UFUNCTION(BlueprintCallable)
 		FAbilityAction_Info GetAbilityInfo() const;
-};
+	UFUNCTION(BlueprintCallable)
+		void ActivateEffect() const;
+};	

@@ -4,10 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "../Battle_Box/Private/UStatSheetObject.h"
+#include "UStatSheetObject.h"
 #include "StatSheetActor.generated.h"
 
-UCLASS(BlueprintType, ClassGroup = "Battle_Box")
+UCLASS(Blueprintable, BlueprintType, ClassGroup = "Battle_Box")
 class BATTLE_BOX_API AStatSheetActor : public AActor
 {
 	GENERATED_BODY()
@@ -26,8 +26,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	/*UFUNCTION(BlueprintCallable, Category = "StatSheet")
+		void SetName(const FString name_);
 	UFUNCTION(BlueprintCallable, Category = "StatSheet")
-	void SetName(const FString name_);
-	UFUNCTION(BlueprintCallable, Category = "StatSheet")
-	void SetTag(const FString tag_);
+		void SetTag(const FString tag_);*/
 };
