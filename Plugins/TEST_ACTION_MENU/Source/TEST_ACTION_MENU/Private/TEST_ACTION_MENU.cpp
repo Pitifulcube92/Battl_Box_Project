@@ -9,7 +9,10 @@
 #include "Widgets/Text/STextBlock.h"
 #include "Widgets/Input/SEditableTextBox.h"
 #include "Widgets/Input/SButton.h"
+#include "Widgets/Input/SComboBox.h"
+#include "Widgets/Input/SNumericDropDown.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
+
 
 
 static const FName TEST_ACTION_MENUTabName("TEST_ACTION_MENU");
@@ -51,6 +54,14 @@ void FTEST_ACTION_MENUModule::StartupModule()
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
 		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "TEST_ACTION_MENU"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
+
+	//SAssignNew(this->testTextArray, STextBlock);
+	//testTextArray.Add()
+	/*SAssignNew(ActionButtonText, STextBlock).Text(LOCTEXT("ACTIONSADF", "THIS IS TEXT"));
+	testTextArray.Add(ActionButtonText);*/
+	testTextArray.Add(MakeShareable(new FString("E_NONE")));
+	testTextArray.Add(MakeShareable(new FString("E_Abilty")));
+	CurrentItem = testTextArray[0];
 }
 
 void FTEST_ACTION_MENUModule::ShutdownModule()
@@ -216,100 +227,154 @@ FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 
 FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 
-//	FMenuBarBuilder MenuBarBuilder(CommandList, Exenter, FCoreStyle::Get(), FName("test"));
-	auto MyWindow = SNew(SWindow)
+	auto myWindow = generateWidow();
+	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
+	FSlateApplication::Get().AddWindow(myWindow, true);
+	return FReply::Handled();
+}
+TSharedRef<SWidget> FTEST_ACTION_MENUModule::generateWidgetTest(FComboItemType inOption)
+{
+	auto test = SNew(STextBlock).Text(FText::FromString(*inOption));
+	return test;
+}
+FText FTEST_ACTION_MENUModule::GetCurrentItemLabel() const
+{
+	if (CurrentItem.IsValid()) {
+		return FText::FromString(**CurrentItem);
+	}
+	else {
+		return FText::FromString("Failed");
+	}
+}
+void FTEST_ACTION_MENUModule::OnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo) 
+{
+	CurrentItem = NewValue;
+	//FTEST_ACTION_MENUModule::GetCurrentItemLabel();
+	//comboBoxText.Get()->SetText(FText::FromString(**CurrentItem));
+	UE_LOG(LogTemp, Warning, TEXT("Current Item is: %s"), **CurrentItem);
+}
+TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
+{
+	return SNew(SWindow)
 		.ClientSize(FVector2D(640, 640))
-		//.IsPopupWindow(true)
 		.IsEnabled(true)
 		.bDragAnywhere(true)
 		.Content()[
 			SNew(SVerticalBox)
+				+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Top)
+				.HAlign(HAlign_Left)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("Action Title Text", "Action Creation Menu"))
+				]
+				]
 			+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
-					+SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-						[
-							SNew(STextBlock)
-							.Text(LOCTEXT("Action Title Text", "Action Creation Menu"))
-						]
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("Action type", "Choose Action Type"))
 				]
-			+SVerticalBox::Slot()
+			+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(SEditableTextBox)
+					.Text(LOCTEXT("ActionTypeChoice", "Input Action Type"))
+				]
+				]
+			+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
-					+SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-						[
-							SNew(STextBlock)
-							.Text(LOCTEXT("Action type", "Choose Action Type"))
-						]
-					+SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-						[
-							SNew(SComboButton)
-							.ButtonContent()
-							[
-								SNew(STextBlock)
-								.Text(LOCTEXT("ComboButtonText", "Choose Action Type"))
-							]
-							.MenuContent()
-							[
-								SNew(SButton)
-								.Text(LOCTEXT("Base Action", "Base Action"))
-							]
-						]
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("Target type", "Choose Target Type"))
 				]
-			+SVerticalBox::Slot()
+			+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(SEditableTextBox)
+					.Text(LOCTEXT("TargetTypeChoice", "Input Target Type"))
+				]
+				]
+			+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
-					+SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-					//[
-					//	SAssignNew(ListViewWidget, SListView<TSharedPtr<FString>>)
-					//	.ItemHeight(24)
-					//	.ListItemsSource(&Items) //The Items array is the source of this listview
-					//	//.OnGenerateRow(this, &FTEST_ACTION_MENUModule::OnGenerateRowForList)
-					//]
-		/*			+SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-					[
-						SNew(SButton)
-						.OnClicked(this, &FTEST_ACTION_MENUModule::ButtonPressed)
-					]*/
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("stat type", "Choose stat Type"))
+				]
+			+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(SEditableTextBox)
+					.Text(LOCTEXT("statTypeChoice", "Input stat Type"))
+				]
+				]
+			+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("Interaction type", "Choose Interaction Type"))
+				]
+			+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(SEditableTextBox)
+					.Text(LOCTEXT("InteractionTypeChoice", "Input Interaction Type"))
+				]
+				]
+			+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SNew(STextBlock)
+					.Text(LOCTEXT("ActionID  type", "Choose ActionID Type"))
+				]
+			+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Center)
+				[
+					SAssignNew(testBox, SComboBox<FComboItemType>)
+					.OptionsSource(&testTextArray)
+					.OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateWidgetTest)
+					.OnSelectionChanged_Raw(this,&FTEST_ACTION_MENUModule::OnSelectionChanged)
+					.InitiallySelectedItem(CurrentItem)
+				[
+					SAssignNew(comboBoxText,STextBlock).Text_Raw(this,&FTEST_ACTION_MENUModule::GetCurrentItemLabel)
+					//.Text(FText::FromString("Failed"))
+
+				]
+				]
+				]
+			+ SVerticalBox::Slot()
+				[
+					SNew(SHorizontalBox)
+					+ SHorizontalBox::Slot()
+				.VAlign(VAlign_Bottom)
+				.HAlign(HAlign_Right)
+				[
+					SNew(SButton)
+					.Text(LOCTEXT("Action Creation Button Text", "Create"))
+				.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::CreateObject)
+				]
 				]
 		];
 
-	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
-	FSlateApplication::Get().AddWindow(MyWindow, true);
-	return FReply::Handled();
 }
-// SList Test Function
-//TSharedRef<ITableRow> FTEST_ACTION_MENUModule::OnGenerateRowForList(TSharedPtr<FString> Item, const TSharedRef<STableViewBase>& OwnerTable)
-//{
-//	if (!Item.Get() || !Item.IsValid()) // Error catcher
-//		return
-//		SNew(STableRow< TSharedPtr< FString > >, OwnerTable)
-//		[
-//			SNew(SBox)
-//		];
-//	else {
-//		SNew(STableRow< TSharedPtr< FString > >, OwnerTable)
-//			[
-//				SNew(STextBlock)
-//				//.Text(*Item.Get())
-//			];
-//	}
-//}
-//FReply FTEST_ACTION_MENUModule::ButtonPressed()
-//{
-//	//Adds a new item to the array (do whatever you want with this)
-//	Items.Add(MakeShareable(new FString("Hello 1")));
-//
-//	//Update the listview
-//	ListViewWidget->RequestListRefresh();
-//
-//	return FReply::Handled();
-//}
 void FTEST_ACTION_MENUModule::PluginButtonClicked()
 {
 	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
@@ -317,7 +382,14 @@ void FTEST_ACTION_MENUModule::PluginButtonClicked()
 
 void FTEST_ACTION_MENUModule::AddMenuExtension(FMenuBuilder& Builder)
 {
-	Builder.AddMenuEntry(FTEST_ACTION_MENUCommands::Get().OpenPluginWindow);
+	Builder.AddMenuEntry(FTEST_ACTION_MENUCommands::Get().OpenActionWindow);
+//	Builder.AddSubMenu()
+}
+
+FReply FTEST_ACTION_MENUModule::CreateObject()
+{
+	UE_LOG(LogTemp, Log, TEXT("Create Object"));
+	return FReply::Handled();
 }
 
 void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)

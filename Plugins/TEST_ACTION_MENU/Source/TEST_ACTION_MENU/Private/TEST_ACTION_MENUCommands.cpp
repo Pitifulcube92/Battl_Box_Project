@@ -7,6 +7,7 @@
 void FTEST_ACTION_MENUCommands::RegisterCommands()
 {
 	UI_COMMAND(OpenPluginWindow, "TEST_ACTION_MENU", "Bring up TEST_ACTION_MENU window", EUserInterfaceActionType::Button, FInputGesture());
+	UI_COMMAND(OpenActionWindow, "Action Window Creator", "Bring up Action Window", EUserInterfaceActionType::Button, FInputGesture());
 }
 
 #undef LOCTEXT_NAMESPACE
