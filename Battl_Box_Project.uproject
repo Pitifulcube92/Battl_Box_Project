@@ -1,13 +1,22 @@
 {
-	"FileVersion": 3,
-	"EngineAssociation": "4.24",
-	"Category": "",
-	"Description": "",
-	"Modules": [
-		{
-			"Name": "Battl_Box_Project",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	]
+    "FileVersion": 3,
+    "EngineAssociation": "4.24",
+    "Category": "",
+    "Description": "",
+    "Modules": [
+        {
+            "Name": "Battl_Box_Project",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "Engine"
+            ]
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "Battle_Box",
+            "Enabled": true
+        }
+    ]
 }

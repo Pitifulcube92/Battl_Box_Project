@@ -1,29 +1,44 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "UBaseAction.h"
 #include "UCommandAction.generated.h"
+class UCommandAction_Order;
+/************************************
+* Command Action Class
+*
+* This is a derived action class that
+* contains information specified for command
+* like actions. This specializes in containing
+* Actor components that can be executed when called
+* through an interaction.
+*
 
-USTRUCT()
+***********************************+*/
+
+///Command action data structure
+USTRUCT(BlueprintType)
 struct BATTLE_BOX_API FCommandAction_Info
 {
 	GENERATED_USTRUCT_BODY()
-
-	UPROPERTY()
-	bool isActionCommand;
-	UPROPERTY()
-	WEAPONTYPE currentweapon;
-	UPROPERTY()
-	UBaseAction* command;
+public:
+///Command component
+	UPROPERTY(EditAnywhere)
+		class UActorComponent* command;
 };
 
-UCLASS()
+UCLASS(BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UCommandAction : public UBaseAction
 {
 	GENERATED_BODY()
-public:
-	UPROPERTY()
+
+private:
+///Command data structure
+	UPROPERTY(EditAnywhere)
 		FCommandAction_Info commandInfo;
+public:
+///Command data Getter
+	UFUNCTION(BlueprintCallable)
+		FCommandAction_Info GetCommandInfo() const;
 };
