@@ -14,17 +14,18 @@ class BATTLE_BOX_API UStatusEffect : public UObject
 {
 	GENERATED_BODY()
 private:
-	//This will show effect name
+	///Actor component variable
+	UPROPERTY(EditAnywhere)
+		class UActorComponent* effectComponent;
+public:
+	///Effect's name 
 	UPROPERTY(EditAnywhere)
 		FString effectName;
+	///This is the discription of the effect
 	UPROPERTY(EditAnywhere)
 		FString effectDiscription;
-	UPROPERTY(EditAnywhere)
-		class UActorComponent* effectAction;
+	///Return function for the actor component
 	UFUNCTION()
-		void BeginEffect() const;
-	UFUNCTION()
-		void ActivatEffect() const;
-	UFUNCTION()
-		void DeactivateEffect() const;
+		class UActorComponent* GetEffectComponent() const;
 };
+	

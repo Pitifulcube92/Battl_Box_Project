@@ -2,7 +2,7 @@
 
 #include "Battle_Box.h"
 #include "../Public/Debugger.h"
-#include "BattleBoxFileManager.h"
+#include "../Public/BattleBoxFileManager.h"
 #include "Battle_Box_Enums.h"
 #include "Misc/Paths.h"
 

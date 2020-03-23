@@ -7,6 +7,17 @@
 #include "Containers/Map.h"
 #include "UItemAction.generated.h"
 class UAbilityAction;
+/********************************
+* Item Action Class
+*
+* This is a derived class that contains information 
+* for item like actions. An item action contains 
+* detailed information about that would be key for an item.
+* For example, currency value, type of item, or,
+* the general status the item has.
+*
+********************************/
+
 
 USTRUCT(BlueprintType)
 struct BATTLE_BOX_API FItemAction_Info
@@ -20,9 +31,7 @@ public:
 	UPROPERTY(EditAnywhere)
 		TArray<UAbilityAction*> effectList;
 	UPROPERTY(EditAnywhere)
-	TMap<FString, float> statModMap;
-		UPROPERTY(EditAnywhere)
-	DAMAGETYPE damageType;
+		TMap<FString, float> statModMap;
 };
 
 

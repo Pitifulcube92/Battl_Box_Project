@@ -5,17 +5,7 @@
 #include "Components/ActorComponent.h"
 
 //This will let the component to start when the fucntion is called
-void UStatusEffect::BeginEffect() const
+UActorComponent* UStatusEffect::GetEffectComponent() const
 {
-	effectAction->BeginPlay();
-}
-
-void UStatusEffect::ActivatEffect() const
-{
-	effectAction->Activate();
-}
-
-void UStatusEffect::DeactivateEffect() const
-{
-	effectAction->Deactivate();
+	return effectComponent;
 }

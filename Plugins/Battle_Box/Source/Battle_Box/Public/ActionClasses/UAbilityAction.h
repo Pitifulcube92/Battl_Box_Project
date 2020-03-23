@@ -4,7 +4,20 @@
 #include "CoreMinimal.h"
 #include "UBaseAction.h"
 #include "UAbilityAction.generated.h"
-
+/************************************
+* 
+* Ability Action Class
+*
+* This is a derived class that contains information 
+* for ability like actions. Within a Ability action,
+* it conatins a mix of command action and item action like features,
+* however is used for specificly for stat based 
+* abilities
+*
+* Ability Actions are uniqe because they can be used 
+* within a Command Action or Item Action.
+*
+************************************/
 
 USTRUCT(BlueprintType)
 struct BATTLE_BOX_API FAbilityAction_Info
@@ -15,8 +28,6 @@ public:
 		float duration;
 	UPROPERTY(EditAnywhere)
 		float abilityValue;
-	UPROPERTY(EditAnywhere)
-		ABILITYTYPE abilityType;
 	UPROPERTY(EditAnywhere)
 		class UStatusEffect* effect;
 };
