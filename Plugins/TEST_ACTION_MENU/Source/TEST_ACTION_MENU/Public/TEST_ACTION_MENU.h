@@ -50,21 +50,42 @@ private:
 	TSharedPtr<SHorizontalBox> FillBox2;
 	
 	//SComboBox 
-	//TSharedRef<STextBlock> textRef;
 	////Generate widgets 
-	TSharedRef<SWidget> generateWidgetTest(FComboItemType inOption); 
+	TSharedRef<SWidget> generateDropDownWidget(FComboItemType inOption);
+
+
+	//// the Action Type ComboBox  
+	TSharedPtr<SComboBox<FComboItemType>> actionTypeComboBox;
+	//// options in the Action Type sarray
+	TArray<FComboItemType> actionTypeArray;
+	//// Current Action Type
+	FComboItemType currentActionType;
 	////changes selection 
-	void OnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo);
-	//// gets current Item name
-	FText GetCurrentItemLabel() const;
-	//// the combobox 
-	TSharedPtr<SComboBox<FComboItemType>> testBox;
-	//// options in the combobox array
-	TArray<FComboItemType> testTextArray;
-	//// current Item
-	FComboItemType CurrentItem;
-	//Button Text
-	TSharedPtr<STextBlock> comboBoxText;
+	void ActionTypeOnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo);
+	//// 
+	FText GetCurrentActionTypeLabel() const;
+
+	//// Target Type ComboBox
+	TSharedPtr<SComboBox<FComboItemType>> targetTypeComboBox;
+	//// options in the Target Type Array;
+	TArray<FComboItemType> targetTypeArray;
+	//// Current Target Type 
+	FComboItemType currentTargetType;
+	//// Changes selection
+	void TargetTypeOnSectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo);
+	//// Updates Lable
+	FText GetCurrentTargetTypeLabel() const;
+
+	//// interaction Type ComboBox
+	TSharedPtr<SComboBox<FComboItemType>> interactionTypeComboBox;
+	//// options in the interaction Type Array;
+	TArray<FComboItemType> interactionTypeArray;
+	//// Current interaction Type 
+	FComboItemType currentinteractionType;
+	//// Changes selection
+	void InteractionTypeOnSectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo);
+	//// Updates Lable
+	FText GetCurrentInteractionTypeLabel() const;
 
 	TSharedRef<SWindow> generateWidow();
 private:
