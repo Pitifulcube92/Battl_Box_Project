@@ -1,8 +1,8 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "Battle_Box.h"
-#include "../Private/Debugger.h"
-#include "BattleBoxFileManager.h"
+#include "../Public/Debugger.h"
+#include "../Public/BattleBoxFileManager.h"
 #include "Battle_Box_Enums.h"
 #include "Misc/Paths.h"
 
