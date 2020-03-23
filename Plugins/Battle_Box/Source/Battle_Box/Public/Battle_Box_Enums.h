@@ -96,16 +96,19 @@ UENUM(BlueprintType)
 enum class COMMAND_TASK : uint8
 {
 	//Here is all the enums to designate all the  function.
+	E_TEST
 };
 
 UENUM(BlueprintType)
 enum class ITEM_TASK : uint8
 {
 	//Here is all the enums to designate all the  function.
+	E_TEST
 };
 
 UENUM(BlueprintType)
 enum class ABILITY_TASK : uint8
 {
 	//Here is all the enums to designate all the  function.
+	E_TEST
 };

@@ -45,4 +45,5 @@ public:
 		FAbilityAction_Info GetAbilityInfo() const;
 	UFUNCTION(BlueprintCallable)
 		void ActivateEffect() const;
+
 };	

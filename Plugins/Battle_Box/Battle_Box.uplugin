@@ -17,11 +17,6 @@
   "Modules": [
     {
       "Name": "Battle_Box",
-      "Type": "Editor",
-      "LoadingPhase": "Default"
-    },
-    {
-      "Name": "BB_Runtime_System",
       "Type": "Runtime",
       "LoadingPhase": "Default"
     }

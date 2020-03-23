@@ -15,10 +15,7 @@ class UBaseAction;
 class UCommandAction;
 class UItemAction;
 class UAbilityAction;
-//
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCommandFunc);
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FItemFunc);
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FAbilityFunc);
+
 
 UCLASS()
 class BATTLE_BOX_API ABattle_Box_Actor : public AActor
@@ -41,12 +38,4 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 		bool IsOrderReadyToSend(/*UBaseAction obj_*/);
-
-	///These send the orders to the reciever!!!
-	UCommandAction_Order* SendCommandOrder(UCommandAction* action_, void(UCommandAction::*func_)());
-	
-	UItemAction_Order* SendItemOrder(UItemAction* action_, void(UItemAction::*func_)());
-	
-	UAbilityAction_Order* SendAbilityOrder(UAbilityAction* action_, void(UAbilityAction::*func_)());
-	
 };

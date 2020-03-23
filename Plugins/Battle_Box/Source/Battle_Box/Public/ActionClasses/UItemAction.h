@@ -44,4 +44,5 @@ public:
 		struct FItemAction_Info itemInfo;
 	UFUNCTION(BlueprintCallable)
 		FItemAction_Info GetItemInfo() const;
+
 };

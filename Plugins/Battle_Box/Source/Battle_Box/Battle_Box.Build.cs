@@ -27,8 +27,7 @@ public class Battle_Box : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
-                "BB_Runtime_System"
+				"Core"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -42,8 +41,7 @@ public class Battle_Box : ModuleRules
 				"Slate",
 				"SlateCore",
                 "Json",
-                "JsonUtilities",
-                "BB_Runtime_System"
+                "JsonUtilities"
 				// ...   add private dependencies that you statically link with here ...	
 			}
 			);
