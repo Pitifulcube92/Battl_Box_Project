@@ -246,7 +246,7 @@ FText FTEST_ACTION_MENUModule::GetCurrentItemLabel() const
 		return FText::FromString("Failed");
 	}
 }
-void FTEST_ACTION_MENUModule::OnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo) 
+void FTEST_ACTION_MENUModule::OnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
 {
 	CurrentItem = NewValue;
 	//FTEST_ACTION_MENUModule::GetCurrentItemLabel();
