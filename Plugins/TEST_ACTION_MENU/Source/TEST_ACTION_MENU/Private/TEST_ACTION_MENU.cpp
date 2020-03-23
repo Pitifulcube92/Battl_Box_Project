@@ -327,16 +327,16 @@ FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 //			];
 //	}
 //}
-FReply FTEST_ACTION_MENUModule::ButtonPressed()
-{
-	//Adds a new item to the array (do whatever you want with this)
-	Items.Add(MakeShareable(new FString("Hello 1")));
-
-	//Update the listview
-	ListViewWidget->RequestListRefresh();
-
-	return FReply::Handled();
-}
+//FReply FTEST_ACTION_MENUModule::ButtonPressed()
+//{
+//	//Adds a new item to the array (do whatever you want with this)
+//	Items.Add(MakeShareable(new FString("Hello 1")));
+//
+//	//Update the listview
+//	ListViewWidget->RequestListRefresh();
+//
+//	return FReply::Handled();
+//}
 void FTEST_ACTION_MENUModule::PluginButtonClicked()
 {
 	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);

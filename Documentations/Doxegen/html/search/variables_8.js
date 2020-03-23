@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modstatmap_513',['modStatMap',['../class_ability_action_a3f5072b22ebb8945f9b628c55c2eb1f5.html#a3f5072b22ebb8945f9b628c55c2eb1f5',1,'AbilityAction']]]
+  ['owner_397',['owner',['../class_damage_delt_system_a06be62b2827679b45522c1c36c2cf272.html#a06be62b2827679b45522c1c36c2cf272',1,'DamageDeltSystem']]]
 ];

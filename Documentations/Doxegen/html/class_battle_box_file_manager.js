@@ -7,7 +7,6 @@ var class_battle_box_file_manager =
     [ "GetFileSize", "class_battle_box_file_manager_a2afc97bab32b85e1afce4c255e4a7aef.html#a2afc97bab32b85e1afce4c255e4a7aef", null ],
     [ "operator=", "class_battle_box_file_manager_a0531fe1d9ca69a0f5302154a53e2f4bf.html#a0531fe1d9ca69a0f5302154a53e2f4bf", null ],
     [ "operator=", "class_battle_box_file_manager_a4c6958072e3bcd4c4919373d47d16a18.html#a4c6958072e3bcd4c4919373d47d16a18", null ],
-    [ "ReadFile", "class_battle_box_file_manager_aeb3a75006c111078e57c757747483957.html#aeb3a75006c111078e57c757747483957", null ],
     [ "VerifyOnCreateDirectory", "class_battle_box_file_manager_aac6c3bb192936f4f22b4e93090cd45aa.html#aac6c3bb192936f4f22b4e93090cd45aa", null ],
     [ "WriteTextArrayToFile", "class_battle_box_file_manager_a132a3963cf91131124f5b5ff3d4f4909.html#a132a3963cf91131124f5b5ff3d4f4909", null ],
     [ "WriteTextFile", "class_battle_box_file_manager_abd4bb207fe330e3d32150bc96978a385.html#abd4bb207fe330e3d32150bc96978a385", null ]

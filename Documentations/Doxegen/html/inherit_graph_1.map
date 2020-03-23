@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_base_action.html" title=" " alt="" coords="5,56,95,83"/>
-<area shape="rect" id="node2" href="$class_ability_action.html" title=" " alt="" coords="155,5,249,32"/>
-<area shape="rect" id="node3" href="$class_command_action.html" title=" " alt="" coords="143,56,261,83"/>
-<area shape="rect" id="node4" href="$class_item_action.html" title=" " alt="" coords="160,107,244,133"/>
+<area shape="rect" id="node1" href="$class_base_system.html" title=" " alt="" coords="5,56,103,83"/>
+<area shape="rect" id="node2" href="$class_damage_delt_system.html" title=" " alt="" coords="151,5,289,32"/>
+<area shape="rect" id="node3" href="$class_effect_system.html" title=" " alt="" coords="170,56,270,83"/>
+<area shape="rect" id="node4" href="$class_stat_system.html" title=" " alt="" coords="175,107,265,133"/>
 </map>
