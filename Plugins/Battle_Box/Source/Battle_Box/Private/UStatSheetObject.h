@@ -13,43 +13,43 @@ class UCommandAction;
 class UAbilityAction;
 struct StatSheetData;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BATTLE_BOX_API FAction_Info
 {
 	GENERATED_USTRUCT_BODY()
 
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		TMap<FString, UCommandAction*> commandMap;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		TMap<FString, UItemAction*> itemMap;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		TMap<FString, UAbilityAction*> abilityMap;	
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		TMap<FString, UItemAction*> equipmentMap;
 };
 
-USTRUCT(Blueprintable)
+USTRUCT()
 struct BATTLE_BOX_API FGeneralStat_Info
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		FString name;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		FString tag;
-	UPROPERTY(EditAnywhere)
-		TMap<FString, float> additionlStats;
+	UPROPERTY()
+		TMap<FString, float> statMap;
 };
 
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable, ClassGroup = "Battle_Box")
 class BATTLE_BOX_API UStatSheetObject : public UDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		FGeneralStat_Info generalnInfo;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 		FAction_Info actionInfo;
 };

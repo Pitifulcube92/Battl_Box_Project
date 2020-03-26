@@ -10,11 +10,8 @@ public class Battle_Box : ModuleRules
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
         bUseRTTI = true;
         PublicIncludePaths.AddRange(
-            new string[] {
-				// ... add public include paths required here ...
-               //"Battle_Box/Public",
-               //"Battle_Box/Public/ActionClasses"
-			}
+            new string[] { }
+
 			);
 
 
@@ -28,7 +25,8 @@ public class Battle_Box : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core"
+				"Core",
+                "BB_Runtime_System"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -41,8 +39,7 @@ public class Battle_Box : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-                "Json",
-                "JsonUtilities"
+                "BB_Runtime_System"
 				// ...   add private dependencies that you statically link with here ...
 			}
 			);

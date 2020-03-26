@@ -76,7 +76,7 @@ void FTEST_ACTION_MENUModule::StartupModule()
 	targetTypeArray.Add(MakeShareable(new FString("E_ALLY_KO")));
 	targetTypeArray.Add(MakeShareable(new FString("E_USER")));
 	currentTargetType = targetTypeArray[0];
-
+	
 	/*E_NONE,
 	E_PHYSICAL,
 	E_ABILITY,
@@ -98,7 +98,7 @@ void FTEST_ACTION_MENUModule::ShutdownModule()
 
 	FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(TEST_ACTION_MENUTabName);
 }
-//Stat window
+//Stat window 
 TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
 {
 	FText WidgetText = FText::Format(
@@ -200,7 +200,7 @@ void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
 	Builder.AddToolBarButton(FTEST_ACTION_MENUCommands::Get().OpenPluginWindow);
 }
 
-///
+///  
 
 //Creation of the other two windows
 
@@ -323,7 +323,7 @@ FText FTEST_ACTION_MENUModule::GetCurrentInteractionTypeLabel() const
 	}
 	return FText::FromString("Failed");
 }
-//Genrates the Action Creation Menu Move code to actionTab
+//Genrates the Action Creation Menu Move code to actionTab 
 TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 {
 	return SNew(SWindow)
@@ -407,7 +407,7 @@ TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 					.InitiallySelectedItem(currentinteractionType)
 					[
 						SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentInteractionTypeLabel)
-					]
+					]	
 				]
 				]
 			+ SVerticalBox::Slot()
