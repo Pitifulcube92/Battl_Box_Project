@@ -24,7 +24,7 @@ struct BATTLE_BOX_API FCommandAction_Info
 	GENERATED_USTRUCT_BODY()
 public:
 ///Command component
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Command Action")
 		class UActorComponent* command;
 };
 
@@ -39,6 +39,6 @@ private:
 		FCommandAction_Info commandInfo;
 public:
 ///Command data Getter
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Command Action")
 		FCommandAction_Info GetCommandInfo() const;
 };

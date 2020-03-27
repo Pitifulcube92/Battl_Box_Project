@@ -3,16 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Engine/DataAsset.h"
-#include "BttleBoxAsset.generated.h"
+#include "UBaseActionAlgorithm.h"
+#include "EquipAlgorithum.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class BATTLE_BOX_API UBttleBoxAsset : public UDataAsset
+class BATTL_BOX_PROJECT_API UEquipAlgorithum : public UBaseActionAlgorithm
 {
 	GENERATED_BODY()
 	
-		
 };

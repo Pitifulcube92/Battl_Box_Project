@@ -1,11 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-#pragma once
-
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #pragma once
 
 #include "CoreMinimal.h"
 #include "UBaseAction.h"
 #include "UAbilityAction.generated.h"
+class UBaseStatusEffect;
 /************************************
 *
 * Ability Action Class
@@ -26,12 +25,10 @@ struct BATTLE_BOX_API FAbilityAction_Info
 {
 	GENERATED_USTRUCT_BODY()
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Ability Action")
 		float duration;
-	UPROPERTY(EditAnywhere)
-		float abilityValue;
-	UPROPERTY(EditAnywhere)
-		class UStatusEffect* effect;
+	UPROPERTY(EditAnywhere, Category = "Ability Action")
+		TArray<UBaseStatusEffect*> effects;
 };
 
 
@@ -41,11 +38,11 @@ class BATTLE_BOX_API UAbilityAction : public UBaseAction
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Ability Action")
 		FAbilityAction_Info abilityInfo;
 	UFUNCTION(BlueprintCallable)
 		FAbilityAction_Info GetAbilityInfo() const;
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Ability Action")
 		void ActivateEffect() const;
 
 };

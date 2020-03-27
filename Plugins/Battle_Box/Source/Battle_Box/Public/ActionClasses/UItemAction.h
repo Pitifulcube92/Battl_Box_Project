@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #pragma once
 
 #include "CoreMinimal.h"
@@ -24,13 +24,13 @@ struct BATTLE_BOX_API FItemAction_Info
 {
 	GENERATED_USTRUCT_BODY()
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Item Action")
 		ITEMTYPE type;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Item Action")
 		uint32 value;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Item Action")
 		TArray<UAbilityAction*> effectList;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Item Action")
 		TMap<FString, float> statModMap;
 };
 
@@ -40,9 +40,9 @@ class BATTLE_BOX_API UItemAction : public UBaseAction
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Item Action")
 		struct FItemAction_Info itemInfo;
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Item Action")
 		FItemAction_Info GetItemInfo() const;
 
 };

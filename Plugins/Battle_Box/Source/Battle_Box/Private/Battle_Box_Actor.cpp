@@ -1,5 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "Battle_Box_Actor.h"
 #include "UCommandAction.h"
@@ -28,5 +27,10 @@ void ABattle_Box_Actor::BeginPlay()
 void ABattle_Box_Actor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+UStatSheetObject* ABattle_Box_Actor::GetStatSheet() const
+{
+	return statSheet;
 }
 

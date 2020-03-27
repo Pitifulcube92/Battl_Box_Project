@@ -19,12 +19,13 @@ class UAbilityAction;
 
 UCLASS()
 class BATTLE_BOX_API ABattle_Box_Actor : public AActor
-{private:
+{
+private:
 
 	GENERATED_BODY()
 	
-	UPROPERTY(BlueprintType)
-	UStatSheetObject* statSheet;
+	UPROPERTY(EditAnywhere, BlueprintType)
+		UStatSheetObject* statSheet;
 public:	
 	// Sets default values for this actor's properties
 	ABattle_Box_Actor();
@@ -35,7 +36,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
-	UFUNCTION(BlueprintCallable)
-		bool IsOrderReadyToSend(/*UBaseAction obj_*/);
+
+	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
+		UStatSheetObject* GetStatSheet() const;
 };

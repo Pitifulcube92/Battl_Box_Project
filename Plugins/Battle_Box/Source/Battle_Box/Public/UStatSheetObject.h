@@ -19,13 +19,13 @@ struct BATTLE_BOX_API FAction_Info
 	GENERATED_USTRUCT_BODY()
 
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UCommandAction*> commandMap;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UItemAction*> itemMap;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UAbilityAction*> abilityMap;	
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UItemAction*> equipmentMap;
 };
 
@@ -34,11 +34,11 @@ struct BATTLE_BOX_API FGeneralStat_Info
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "General Info")
 		FString name;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "General Info")
 		FString tag;
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "General Info")
 		TMap<FString, float> additionlStats;
 };
 
