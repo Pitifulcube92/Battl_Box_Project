@@ -13,7 +13,10 @@
 #include "Widgets/Input/SNumericDropDown.h"
 #include "Widgets/Input/SSpinbox.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
-
+#include "UDataAssetObjectFactory.h"
+#include "UDataAssetObject.h"
+//#include "Editor/ContentBrowser/Private/SContentBrowser.h"
+#include "AssetRegistryModule.h"
 
 
 static const FName TEST_ACTION_MENUTabName("TEST_ACTION_MENU");
@@ -415,7 +418,7 @@ FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 				[
 					SNew(SButton)
 					.Text(LOCTEXT("Action Creation Button Text", "Create"))
-				.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::CreateNewEntry)
+				.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::CreateObject)
 				]
 				]
 		];
@@ -472,7 +475,15 @@ FText FTEST_ACTION_MENUModule::GetCurrentInteractionTypeLabel() const
 //Test call
 FReply FTEST_ACTION_MENUModule::CreateObject()
 {
-	Udata
+	FString Filename = "DataAssetObject";
+	FString PackageName = "/Game/";
+	PackageName += Filename;
+	UPackage* Package = CreatePackage(NULL, *PackageName);
+	auto UDataAssetFactory = NewObject<UDataAssetObjectFactory>();
+	UDataAssetObject* newDataAssetObject = (UDataAssetObject*)UDataAssetFactory->FactoryCreateNew(UDataAssetObject::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+	FAssetRegistryModule::AssetCreated(newDataAssetObject);
+	Package->FullyLoad();
+	Package->SetDirtyFlag(true);
 	UE_LOG(LogTemp, Log, TEXT("Create Object"));
 	return FReply::Handled();
 }
