@@ -17,6 +17,7 @@ class UStatSheetObject;
 * action class. It contains basic action
 * information that all actions should have.
 *
+*
 ***********************************************/
 
 ///Base action data structure

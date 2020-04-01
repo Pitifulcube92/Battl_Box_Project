@@ -7,7 +7,18 @@
 #include "UBaseStatusEffect.generated.h"
 
 /**
- * 
+* 
+* Base Status Effect Class
+*
+* This is a base class that will contain effect status,
+* the effect status is similar to base action algorithm but 
+* is used to make a effects specifically for statsheet stats.
+*
+*
+* NOTE: Using the name of the status effect to comapare with the 
+* stat map in the statsheet helps confirm that the system can use that 
+* value.
+*
  */
 UCLASS(Blueprintable, BlueprintType, Category= "Status_Effect")
 class BATTLE_BOX_API UBaseStatusEffect : public UObject

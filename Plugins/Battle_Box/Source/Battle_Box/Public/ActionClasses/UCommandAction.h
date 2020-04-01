@@ -35,7 +35,7 @@ class BATTLE_BOX_API UCommandAction : public UBaseAction
 
 private:
 ///Command data structure
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Command Action")
 		FCommandAction_Info commandInfo;
 public:
 ///Command data Getter
