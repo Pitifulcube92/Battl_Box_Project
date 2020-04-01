@@ -5,12 +5,14 @@
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 #include "Widgets/Input/SComboBox.h"
+#include "Widgets/Input/SSpinBox.h"
 //#include "Battle_Box_Enums.h"
 
 
 class FToolBarBuilder;
 class FMenuBuilder;
 typedef TSharedPtr <FString>  FComboItemType;
+typedef TSharedPtr <FString>  FStatSheetItemType;
 
 class FTEST_ACTION_MENUModule : public IModuleInterface
 {
@@ -34,6 +36,7 @@ private:
 	FReply OpenActionTab();
 	//
 	TSharedPtr<FUICommandList> CommandList;
+
 	TSharedPtr<const FExtender> Extender;
 	ISlateStyle* slateStyle;
 	// Buttons
@@ -49,6 +52,9 @@ private:
 	TSharedPtr<SHorizontalBox> FillBox1;
 	TSharedPtr<SHorizontalBox> FillBox2;
 	
+	//SWindow
+	TSharedPtr<SWindow>ActionMenu;
+
 	//SComboBox 
 	////Generate widgets 
 	TSharedRef<SWidget> generateDropDownWidget(FComboItemType inOption);
@@ -87,7 +93,32 @@ private:
 	//// Updates Lable
 	FText GetCurrentInteractionTypeLabel() const;
 
+	
+	
+	
+	/// StatSheet Widgets
+	//Stat Map Variables;
+	///Slate Stat name
+	TSharedPtr<SEditableText> StatName;
+	///Slate Stat VAlue
+	TSharedPtr<SSpinBox<float>> StatValue;
+	///Slate widget Combo Box;
+	TSharedPtr<SComboBox<FStatSheetItemType>> StatMapWidget;
+	/// ComboBox Array;
+	TArray<FStatSheetItemType> StatMapArray;
+	///StatMap Current Selection;
+	FStatSheetItemType currentStatMapItem; 
+	///Stat Map On selection Change
+	void StatMapOnSecctionChanged(FStatSheetItemType NewValue, ESelectInfo::Type selectionInfo);
+	/// C++ Stat Map
+	TMap<FString, float> StatMap;
+	
+	
+	
+	
 	TSharedRef<SWindow> generateWidow();
+
+	FReply CreateNewEntry();
 private:
 	TSharedPtr<class FUICommandList> PluginCommands;
 };
