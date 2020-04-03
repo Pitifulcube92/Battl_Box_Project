@@ -12,4 +12,5 @@ class UDataAssetObject : public UObject
 public:
 	UPROPERTY(EditAnywhere, Category = "My Object Properties")
 		FString Name;
+	TMap<FString, float> StatMap;
 };

@@ -39,26 +39,31 @@ private:
 
 	TSharedPtr<const FExtender> Extender;
 	ISlateStyle* slateStyle;
+
+	/// Main Menu
 	// Buttons
 	TSharedPtr<SButton> ActionButton;
 	TSharedPtr<SButton> StatSheetButton;
-	TSharedPtr<SButton> ManageButton;
 	//Button Text
 	TSharedPtr<STextBlock> ActionButtonText;
 	TSharedPtr<STextBlock> StatSheetButtonText;
-	TSharedPtr<STextBlock> ManageButtonText;
 	//Horisontal Box
 	TSharedPtr<SHorizontalBox> ContentBox;
 	TSharedPtr<SHorizontalBox> FillBox1;
 	TSharedPtr<SHorizontalBox> FillBox2;
+	/// </Main Menu
 	
-	//SWindow
-	TSharedPtr<SWindow>ActionMenu;
+
 
 	//SComboBox 
 	////Generate widgets 
 	TSharedRef<SWidget> generateDropDownWidget(FComboItemType inOption);
 
+	/// Action Menu
+	// SEditable Name
+	TSharedPtr<SEditableTextBox> actionName;
+	// SEditable Desciption
+	TSharedPtr<SEditableTextBox> actionDescription;
 
 	//// the Action Type ComboBox  
 	TSharedPtr<SComboBox<FComboItemType>> actionTypeComboBox;
@@ -82,6 +87,17 @@ private:
 	//// Updates Lable
 	FText GetCurrentTargetTypeLabel() const;
 
+	//// Stataction type ComboBox
+	TSharedPtr<SComboBox<FComboItemType>> statActionTypeComboBox;
+	//// options in the stataction type array
+	TArray<FComboItemType> statActionTypeArray;
+	//// Current statActionType Array
+	FComboItemType currentStatActionType;
+	//// changes current selection 
+	void StatActionTypeOnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo);
+	//// Updates Label
+	FText GetCurrentStatActionTypeLabel() const;
+
 	//// interaction Type ComboBox
 	TSharedPtr<SComboBox<FComboItemType>> interactionTypeComboBox;
 	//// options in the interaction Type Array;
@@ -93,6 +109,9 @@ private:
 	//// Updates Lable
 	FText GetCurrentInteractionTypeLabel() const;
 
+	// SEditable 
+	TSharedPtr<SSpinBox<float>> actionID;
+	/// </Action Menu
 	
 	
 	
@@ -119,6 +138,7 @@ private:
 	TSharedRef<SWindow> generateWidow();
 
 	FReply CreateNewEntry();
+	FReply CreateStatObject();
 private:
 	TSharedPtr<class FUICommandList> PluginCommands;
 };

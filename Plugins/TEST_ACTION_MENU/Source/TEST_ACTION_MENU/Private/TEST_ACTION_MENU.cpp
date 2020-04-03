@@ -81,10 +81,15 @@ void FTEST_ACTION_MENUModule::StartupModule()
 	targetTypeArray.Add(MakeShareable(new FString("E_USER")));
 	currentTargetType = targetTypeArray[0];
 	
-	/*E_NONE,
-	E_PHYSICAL,
-	E_ABILITY,
-	E_PHYSICAL_AND_ABILITY*/
+
+	// Stataction Type
+	statActionTypeArray.Add(MakeShareable(new FString("E_NONE")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_ADD")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_REMOVE")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_TMP_ADD")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_TMP_REMOVE")));
+
+
 	// interaction Type
 	interactionTypeArray.Add(MakeShareable(new FString("E_NONE")));
 	interactionTypeArray.Add(MakeShareable(new FString("E_ABILITY")));
@@ -165,23 +170,6 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 
 							]// Button end
 						]// Vertical Box Slot
-					+SVerticalBox::Slot()
-						[
-						SAssignNew(ManageButton, SButton)
-							[
-							SNew(SBorder)
-							.Padding(FMargin(3))
-							.HAlign(HAlign_Center)
-							.VAlign(VAlign_Center)
-							.Content()
-								[
-								SAssignNew(ManageButtonText, STextBlock)
-								.Text(LOCTEXT("Manage", "Manage Actions and StatSheets"))
-								.AutoWrapText(true)
-								] // Border content end
-
-							]// Button end
-						]
 				]// horisontal box end
 				+ SHorizontalBox::Slot()
 			]// Horisontal Box end
@@ -314,20 +302,35 @@ FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 		.ClientSize(FVector2D(640, 640))
 		.IsEnabled(true)
 		.bDragAnywhere(true)
+		.Title(FText::FromString("Action Creation Menu"))
+		
 		.Content()[
 			SNew(SVerticalBox)
 				+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
-					+ SHorizontalBox::Slot()
-				.VAlign(VAlign_Top)
-				.HAlign(HAlign_Left)
+					+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+						SNew(STextBlock).Text(FText::FromString("Action Name"))
+					]
+					+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+						SAssignNew(actionName,SEditableTextBox)
+					]
+				]
+				+SVerticalBox::Slot()
 				[
-					SNew(STextBlock)
-					.Text(LOCTEXT("Action Title Text", "Action Creation Menu"))
+					SNew(SHorizontalBox)
+					+SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+						SNew(STextBlock).Text(FText::FromString("Action Descption"))
+					]
+					+SHorizontalBox::Slot()
+					[
+						SAssignNew(actionDescription,SEditableTextBox)
+					]
 				]
-				]
-			+ SVerticalBox::Slot()
+				+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
 					+ SHorizontalBox::Slot()
@@ -371,6 +374,22 @@ FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 					SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentTargetTypeLabel)
 				]
 				]
+				]
+			+ SVerticalBox::Slot()
+				[
+				SNew(SHorizontalBox)
+				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+					SNew(STextBlock).Text(FText::FromString("StatAction Type:"))
+					]
+				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+					SAssignNew(statActionTypeComboBox, SComboBox<FComboItemType>).OptionsSource(&statActionTypeArray).OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateDropDownWidget)
+					.OnSelectionChanged_Raw(this, &FTEST_ACTION_MENUModule::StatActionTypeOnSelectionChanged).InitiallySelectedItem(currentStatActionType)
+						[
+							SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentStatActionTypeLabel)
+						]
+					]
 				]
 			+ SVerticalBox::Slot()
 				[
@@ -460,6 +479,17 @@ FText FTEST_ACTION_MENUModule::GetCurrentTargetTypeLabel() const
 	}
 	return FText::FromString("Failed");
 }
+void FTEST_ACTION_MENUModule::StatActionTypeOnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
+{
+	currentStatActionType = NewValue;
+}
+FText FTEST_ACTION_MENUModule::GetCurrentStatActionTypeLabel() const
+{
+	if (currentStatActionType.IsValid()) {
+		return FText::FromString(**currentStatActionType);
+	}
+	return FText::FromString("Failed");
+}
 void FTEST_ACTION_MENUModule::InteractionTypeOnSectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
 {
 	currentinteractionType = NewValue;
@@ -482,6 +512,7 @@ FReply FTEST_ACTION_MENUModule::CreateObject()
 	auto UDataAssetFactory = NewObject<UDataAssetObjectFactory>();
 	UDataAssetObject* newDataAssetObject = (UDataAssetObject*)UDataAssetFactory->FactoryCreateNew(UDataAssetObject::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
 	FAssetRegistryModule::AssetCreated(newDataAssetObject);
+	
 	Package->FullyLoad();
 	Package->SetDirtyFlag(true);
 	UE_LOG(LogTemp, Log, TEXT("Create Object"));
@@ -513,6 +544,10 @@ FReply FTEST_ACTION_MENUModule::CreateNewEntry() {
 	
 
 	
+	return FReply::Handled();
+}
+FReply FTEST_ACTION_MENUModule::CreateStatObject()
+{
 	return FReply::Handled();
 }
 #undef LOCTEXT_NAMESPACE
