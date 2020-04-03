@@ -1,4 +1,4 @@
-
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 #pragma once
 
 #include "CoreMinimal.h"
@@ -10,7 +10,7 @@ enum class  ACTIONTYPE : uint8
 	E_NONE ,
 	E_COMMAND ,
 	E_ITEM ,
-	E_ABILITY 
+	E_ABILITY
 };
 
 UENUM(BlueprintType)
@@ -37,16 +37,6 @@ enum class  INTERACTIONTYPE : uint8
 };
 
 UENUM(BlueprintType)
-enum class  DAMAGETYPE : uint8
-{
-	E_NONE,
-	E_HP_DAMAGE,
-	E_MP_DAMAGE,
-	E_HP_RECOVER,
-	E_MP_RECOVER
-};
-
-UENUM(BlueprintType)
 enum class STATACTION : uint8
 {
 	E_NONE,
@@ -56,22 +46,6 @@ enum class STATACTION : uint8
 	E_TMP_REMOVE
 };
 
-UENUM(BlueprintType)
-enum class  ABILITYTYPE : uint8
-{
-	E_MODIFIYER,
-	E_TMP_MODIFIYER,
-	E_DAMAGE_MODIFYER
-};
-
-UENUM(BlueprintType)
-enum class  WEAPONTYPE : uint8
-{
-	E_NONE,
-	E_BLADE,
-	E_RANGE,
-	E_BLUNT_WEAP
-};
 
 UENUM(BlueprintType)
 enum class  ITEMTYPE : uint8

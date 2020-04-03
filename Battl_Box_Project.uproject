@@ -9,8 +9,15 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine"
+				"Engine",
+				"Battle_Box"
 			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Battle_Box",
+			"Enabled": true
 		}
 	]
 }

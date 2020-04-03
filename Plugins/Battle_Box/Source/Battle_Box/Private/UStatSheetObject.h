@@ -12,20 +12,39 @@ class UItemAction;
 class UCommandAction;
 class UAbilityAction;
 struct StatSheetData;
+/*
+*
+* StatSheetObject Class
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
 
-USTRUCT()
+///StatSheetObject Data structure
+USTRUCT(BlueprintType)
 struct BATTLE_BOX_API FAction_Info
 {
 	GENERATED_USTRUCT_BODY()
 
-
-	UPROPERTY()
+///Command Action Map
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UCommandAction*> commandMap;
-	UPROPERTY()
+///Item Action Map
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UItemAction*> itemMap;
-	UPROPERTY()
-		TMap<FString, UAbilityAction*> abilityMap;	
-	UPROPERTY()
+///Ability Action Map
+	UPROPERTY(EditAnywhere, Category = "Action Info")
+		TMap<FString, UAbilityAction*> abilityMap;
+///Equipment Map (Sub Item Action map)
+	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UItemAction*> equipmentMap;
 };
 
@@ -33,13 +52,15 @@ USTRUCT()
 struct BATTLE_BOX_API FGeneralStat_Info
 {
 	GENERATED_USTRUCT_BODY()
-
-	UPROPERTY()
+///StatSheetObject Name
+	UPROPERTY(EditAnywhere, Category = "General Info")
 		FString name;
-	UPROPERTY()
+///StatSheetObject Tag
+	UPROPERTY(EditAnywhere, Category = "General Info")
 		FString tag;
-	UPROPERTY()
-		TMap<FString, float> statMap;
+///StatSheetObject additional Stat
+	UPROPERTY(EditAnywhere, Category = "General Info")
+		TMap<FString, float> additionlStats;
 };
 
 
@@ -48,8 +69,10 @@ class BATTLE_BOX_API UStatSheetObject : public UDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY()
+///General Info Data Structure
+	UPROPERTY(EditAnywhere)
 		FGeneralStat_Info generalnInfo;
-	UPROPERTY()
+///Action Info Data Structure
+	UPROPERTY(EditAnywhere)
 		FAction_Info actionInfo;
 };
