@@ -42,13 +42,13 @@ struct BATTLE_BOX_API FAction_Info
 		TMap<FString, UItemAction*> itemMap;
 ///Ability Action Map
 	UPROPERTY(EditAnywhere, Category = "Action Info")
-		TMap<FString, UAbilityAction*> abilityMap;	
+		TMap<FString, UAbilityAction*> abilityMap;
 ///Equipment Map (Sub Item Action map)
 	UPROPERTY(EditAnywhere, Category = "Action Info")
 		TMap<FString, UItemAction*> equipmentMap;
 };
 
-USTRUCT(Blueprintable)
+USTRUCT()
 struct BATTLE_BOX_API FGeneralStat_Info
 {
 	GENERATED_USTRUCT_BODY()
@@ -64,7 +64,7 @@ struct BATTLE_BOX_API FGeneralStat_Info
 };
 
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable, ClassGroup = "Battle_Box")
 class BATTLE_BOX_API UStatSheetObject : public UDataAsset
 {
 	GENERATED_BODY()

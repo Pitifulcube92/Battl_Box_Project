@@ -10,7 +10,7 @@ enum class  ACTIONTYPE : uint8
 	E_NONE ,
 	E_COMMAND ,
 	E_ITEM ,
-	E_ABILITY 
+	E_ABILITY
 };
 
 UENUM(BlueprintType)
@@ -31,9 +31,9 @@ UENUM(BlueprintType)
 enum class  INTERACTIONTYPE : uint8
 {
 	E_NONE,
-	E_PHYSICAL, //E_DAMAGE_INTER
-	E_ABILITY, //E_STAT_INTER
-	E_PHYSICAL_AND_ABILITY //E_ABILITY_INTER
+	E_PHYSICAL,
+	E_ABILITY,
+	E_PHYSICAL_AND_ABILITY
 };
 
 UENUM(BlueprintType)
@@ -65,33 +65,4 @@ enum class  MessageType : uint8
 	E_WARNING,
 	E_ERROR,
 	E_FATAL_ERROR
-};
-
-UENUM(BlueprintType)
-enum class SystemOrderType : uint8
-{
-	E_COMMNAD_ORDER,
-	E_ITEM_ORDER,
-	E_ABILITY_ORDER
-};
-
-UENUM(BlueprintType)
-enum class COMMAND_TASK : uint8
-{
-	//Here is all the enums to designate all the  function.
-	E_TEST
-};
-
-UENUM(BlueprintType)
-enum class ITEM_TASK : uint8
-{
-	//Here is all the enums to designate all the  function.
-	E_TEST
-};
-
-UENUM(BlueprintType)
-enum class ABILITY_TASK : uint8
-{
-	//Here is all the enums to designate all the  function.
-	E_TEST
 };

@@ -13,6 +13,6 @@ void UBaseAction::ExecuteAlgorithm(FString algorithmName_, UStatSheetObject* tar
 	if (baseInfo.actionAlgorithms.Contains(algorithmName_))
 	{
 		baseInfo.actionAlgorithms[algorithmName_]->Init(target_);
-		baseInfo.actionAlgorithms[algorithmName_]->CallAlgorithm(); 
+		baseInfo.actionAlgorithms[algorithmName_]->CallAlgorithm();
 	}
 }
