@@ -20,12 +20,11 @@ class UStatSheetObject;
 *
 ***********************************************/
 
-///Base action data structure
+
 USTRUCT(BlueprintType)
-struct FBaseAction_Info
+struct BATTLE_BOX_API FBaseAction_Info
 {
 	GENERATED_USTRUCT_BODY()
-public:
 
 ///Name
 	UPROPERTY(EditAnywhere, Category = "Base Action")
@@ -54,7 +53,6 @@ public:
 UCLASS(BlueprintType)
 class BATTLE_BOX_API UBaseAction : public UDataAsset
 {
-	GENERATED_BODY()
 
 private:
 ///Base infomation variable

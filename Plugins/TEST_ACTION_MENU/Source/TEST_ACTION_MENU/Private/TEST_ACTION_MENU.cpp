@@ -11,14 +11,19 @@
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Input/SComboBox.h"
 #include "Widgets/Input/SNumericDropDown.h"
+#include "Widgets/Input/SSpinbox.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
-
+#include "UDataAssetObjectFactory.h"
+#include "UDataAssetObject.h"
+//#include "Editor/ContentBrowser/Private/SContentBrowser.h"
+#include "AssetRegistryModule.h"
 
 
 static const FName TEST_ACTION_MENUTabName("TEST_ACTION_MENU");
 
 #define LOCTEXT_NAMESPACE "FTEST_ACTION_MENUModule"
 
+//Start up Moduel
 void FTEST_ACTION_MENUModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
@@ -59,11 +64,39 @@ void FTEST_ACTION_MENUModule::StartupModule()
 	//testTextArray.Add()
 	/*SAssignNew(ActionButtonText, STextBlock).Text(LOCTEXT("ACTIONSADF", "THIS IS TEXT"));
 	testTextArray.Add(ActionButtonText);*/
-	testTextArray.Add(MakeShareable(new FString("E_NONE")));
-	testTextArray.Add(MakeShareable(new FString("E_Abilty")));
-	CurrentItem = testTextArray[0];
-}
+	actionTypeArray.Add(MakeShareable(new FString("E_NONE")));
+	actionTypeArray.Add(MakeShareable(new FString("E_ABILTY")));
+	actionTypeArray.Add(MakeShareable(new FString("E_COMMAND")));
+	actionTypeArray.Add(MakeShareable(new FString("E_ITEM")));
+	currentActionType = actionTypeArray[0];
 
+	// target Type
+	targetTypeArray.Add(MakeShareable(new FString("E_NONE")));
+	targetTypeArray.Add(MakeShareable(new FString("E_TARGET_ENEMY")));
+	targetTypeArray.Add(MakeShareable(new FString("E_ALL_ENEMIES")));
+	targetTypeArray.Add(MakeShareable(new FString("E_RANDOM_ENEMY")));
+	targetTypeArray.Add(MakeShareable(new FString("E_ALLY")));
+	targetTypeArray.Add(MakeShareable(new FString("E_ALL_ALLY")));
+	targetTypeArray.Add(MakeShareable(new FString("E_ALLY_KO")));
+	targetTypeArray.Add(MakeShareable(new FString("E_USER")));
+	currentTargetType = targetTypeArray[0];
+	
+
+	// Stataction Type
+	statActionTypeArray.Add(MakeShareable(new FString("E_NONE")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_ADD")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_REMOVE")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_TMP_ADD")));
+	statActionTypeArray.Add(MakeShareable(new FString("E_TMP_REMOVE")));
+
+
+	// interaction Type
+	interactionTypeArray.Add(MakeShareable(new FString("E_NONE")));
+	interactionTypeArray.Add(MakeShareable(new FString("E_ABILITY")));
+	interactionTypeArray.Add(MakeShareable(new FString("E_PHYSICAL_AND_ABILITY")));
+	currentinteractionType = interactionTypeArray[0];
+}
+//Shutdown Moduel
 void FTEST_ACTION_MENUModule::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
@@ -74,7 +107,7 @@ void FTEST_ACTION_MENUModule::ShutdownModule()
 
 	FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(TEST_ACTION_MENUTabName);
 }
-
+//Stat window 
 TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
 {
 	FText WidgetText = FText::Format(
@@ -137,29 +170,34 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 
 							]// Button end
 						]// Vertical Box Slot
-					+SVerticalBox::Slot()
-						[
-						SAssignNew(ManageButton, SButton)
-							[
-							SNew(SBorder)
-							.Padding(FMargin(3))
-							.HAlign(HAlign_Center)
-							.VAlign(VAlign_Center)
-							.Content()
-								[
-								SAssignNew(ManageButtonText, STextBlock)
-								.Text(LOCTEXT("Manage", "Manage Actions and StatSheets"))
-								.AutoWrapText(true)
-								] // Border content end
-
-							]// Button end
-						]
 				]// horisontal box end
 				+ SHorizontalBox::Slot()
 			]// Horisontal Box end
 		];
 }
+// if the plugin button is click open modlue window
+void FTEST_ACTION_MENUModule::PluginButtonClicked()
+{
+	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
+}
+// Builds the First window used in Start up
+void FTEST_ACTION_MENUModule::AddMenuExtension(FMenuBuilder& Builder)
+{
+	Builder.AddMenuEntry(FTEST_ACTION_MENUCommands::Get().OpenActionWindow);
+//	Builder.()
+}
+//toolBar extion call Used in start up
+void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
+{
+	Builder.AddToolBarButton(FTEST_ACTION_MENUCommands::Get().OpenPluginWindow);
+}
 
+///  
+
+//Creation of the other two windows
+
+///
+//StatSheetWindow Creation
 FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 {
 	auto MyWindow = SNew(SWindow)
@@ -171,108 +209,128 @@ FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 		[
 			SNew(SVerticalBox)
 			+ SVerticalBox::Slot()
+		[
+			SNew(STextBlock)
+			.Text(LOCTEXT("Menu Name Stat", "Create StatSheet"))
+		]
+	+ SVerticalBox::Slot()
+		[
+			SNew(SHorizontalBox)
+			+ SHorizontalBox::Slot()
+		.VAlign(VAlign_Center)
+		[
+			SNew(STextBlock)
+			.Text(LOCTEXT("StatName", "Name: "))
+		.AutoWrapText(true)
+		]
+	+ SHorizontalBox::Slot()
+		.VAlign(VAlign_Center)
+		[
+			SNew(SEditableTextBox)
+
+		]
+		]
+	+ SVerticalBox::Slot()
+		[
+			SNew(SHorizontalBox)
+			+ SHorizontalBox::Slot()
+		.VAlign(VAlign_Center)
+		[
+			SNew(STextBlock)
+			.Text(LOCTEXT("StatTag", "Tag: "))
+		.AutoWrapText(true)
+
+		]
+	+ SHorizontalBox::Slot()
+		.VAlign(VAlign_Center)
+		[
+			SNew(SEditableTextBox)
+		]
+		]
+	+ SVerticalBox::Slot()
+		[
+			SNew(SHorizontalBox)
+			+ SHorizontalBox::Slot()
+			.VAlign(VAlign_Center)
 			[
 				SNew(STextBlock)
-				.Text(LOCTEXT( "Menu Name Stat","Create StatSheet"))
+				.Text(FText::FromString("StatMap Inputs"))
 			]
-			+SVerticalBox::Slot()
+			+SHorizontalBox::Slot()
+			.VAlign(VAlign_Center)
 			[
-				SNew(SHorizontalBox)
-				+SHorizontalBox::Slot()
-				.VAlign(VAlign_Center)
+					
+				SNew(STextBlock).Text(FText::FromString("Stat Name"))
+			]
+			+SHorizontalBox::Slot().VAlign(VAlign_Center)
+			[
+				SAssignNew(StatName, SEditableText)
+						//.ToolTipText("The Stat Sheet name")
+			]
+			+SHorizontalBox::Slot().VAlign(VAlign_Center)
+			[
+				SNew(STextBlock).Text(FText::FromString("StatValue"))
+			]
+			+SHorizontalBox::Slot().VAlign(VAlign_Center)
+			[
+				SAssignNew(StatValue, SSpinBox<float>).MaxValue(10000000000)
+						//.ToolTipText("Stat Sheet Value Input")
+			]
+			+SHorizontalBox::Slot().VAlign(VAlign_Center)
+			[
+				SNew(SButton).Text(FText::FromString("Add StatSheet")).OnClicked_Raw(this, &FTEST_ACTION_MENUModule::CreateNewEntry)
+			]
+			+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+			[
+				SAssignNew(actionTypeComboBox, SComboBox<FStatSheetItemType>)
+				.OptionsSource(&StatMapArray)
+				.OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateDropDownWidget)
 				[
-					SNew(STextBlock)
-					.Text(LOCTEXT("StatName", "Name: "))
-					.AutoWrapText(true)
-				]
-				+ SHorizontalBox::Slot()
-				.VAlign(VAlign_Center)
-				[
-					SNew(SEditableTextBox)
-
+					SNew(STextBlock).Text(FText::FromString("List of added Stats"))
 				]
 			]
-			+ SVerticalBox::Slot()
-				[
-					SNew(SHorizontalBox)
-					+ SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-					[
-						SNew(STextBlock)
-						.Text(LOCTEXT("StatTag", "Tag: "))
-						.AutoWrapText(true)
-
-					]
-					+ SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-					[
-						SNew(SEditableTextBox)
-					]
-				]
-			+ SVerticalBox::Slot()
-				[
-					SNew(SHorizontalBox)
-					+SHorizontalBox::Slot()
-					.VAlign(VAlign_Center)
-					[
-						SNew(STextBlock)
-						.Text(LOCTEXT("StatActionMap", "Action Maps"))
-					]
-				]
+		]
 		];
 	UE_LOG(LogTemp, Log, TEXT("Stat Window Open"));
 	FSlateApplication::Get().AddWindow(MyWindow, true);
 	return FReply::Handled();
 }
-
+//actionwindow creation calls Generate Window Transfer code from genrate window to this function call once completed dropDowns
 FReply FTEST_ACTION_MENUModule::OpenActionTab() {
 
-	auto myWindow = generateWidow();
-	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
-	FSlateApplication::Get().AddWindow(myWindow, true);
-	return FReply::Handled();
-}
-TSharedRef<SWidget> FTEST_ACTION_MENUModule::generateWidgetTest(FComboItemType inOption)
-{
-	auto test = SNew(STextBlock).Text(FText::FromString(*inOption));
-	return test;
-}
-FText FTEST_ACTION_MENUModule::GetCurrentItemLabel() const
-{
-	if (CurrentItem.IsValid()) {
-		return FText::FromString(**CurrentItem);
-	}
-	else {
-		return FText::FromString("Failed");
-	}
-}
-void FTEST_ACTION_MENUModule::OnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
-{
-	CurrentItem = NewValue;
-	//FTEST_ACTION_MENUModule::GetCurrentItemLabel();
-	//comboBoxText.Get()->SetText(FText::FromString(**CurrentItem));
-	UE_LOG(LogTemp, Warning, TEXT("Current Item is: %s"), **CurrentItem);
-}
-TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
-{
-	return SNew(SWindow)
+	auto myWindow = SNew(SWindow)
 		.ClientSize(FVector2D(640, 640))
 		.IsEnabled(true)
 		.bDragAnywhere(true)
+		.Title(FText::FromString("Action Creation Menu"))
+		
 		.Content()[
 			SNew(SVerticalBox)
 				+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
-					+ SHorizontalBox::Slot()
-				.VAlign(VAlign_Top)
-				.HAlign(HAlign_Left)
+					+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+						SNew(STextBlock).Text(FText::FromString("Action Name"))
+					]
+					+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+						SAssignNew(actionName,SEditableTextBox)
+					]
+				]
+				+SVerticalBox::Slot()
 				[
-					SNew(STextBlock)
-					.Text(LOCTEXT("Action Title Text", "Action Creation Menu"))
+					SNew(SHorizontalBox)
+					+SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+						SNew(STextBlock).Text(FText::FromString("Action Descption"))
+					]
+					+SHorizontalBox::Slot()
+					[
+						SAssignNew(actionDescription,SEditableTextBox)
+					]
 				]
-				]
-			+ SVerticalBox::Slot()
+				+ SVerticalBox::Slot()
 				[
 					SNew(SHorizontalBox)
 					+ SHorizontalBox::Slot()
@@ -284,8 +342,16 @@ TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 			+ SHorizontalBox::Slot()
 				.VAlign(VAlign_Center)
 				[
-					SNew(SEditableTextBox)
-					.Text(LOCTEXT("ActionTypeChoice", "Input Action Type"))
+					SAssignNew(actionTypeComboBox, SComboBox<FComboItemType>)
+					.OptionsSource(&actionTypeArray)
+				.OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateDropDownWidget)
+				.OnSelectionChanged_Raw(this, &FTEST_ACTION_MENUModule::ActionTypeOnSelectionChanged)
+				.InitiallySelectedItem(currentActionType)
+				[
+					SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentActionTypeLabel)
+					//.Text(FText::FromString("Failed"))
+
+				]
 				]
 				]
 			+ SVerticalBox::Slot()
@@ -294,31 +360,36 @@ TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 					+ SHorizontalBox::Slot()
 				.VAlign(VAlign_Center)
 				[
-					SNew(STextBlock)
-					.Text(LOCTEXT("Target type", "Choose Target Type"))
+					SNew(STextBlock).Text(FText::FromString("Target Type:"))
 				]
 			+ SHorizontalBox::Slot()
 				.VAlign(VAlign_Center)
 				[
-					SNew(SEditableTextBox)
-					.Text(LOCTEXT("TargetTypeChoice", "Input Target Type"))
+					SAssignNew(targetTypeComboBox, SComboBox<FComboItemType>)
+					.OptionsSource(&targetTypeArray)
+				.OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateDropDownWidget)
+				.OnSelectionChanged_Raw(this, &FTEST_ACTION_MENUModule::TargetTypeOnSectionChanged)
+				.InitiallySelectedItem(currentTargetType)
+				[
+					SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentTargetTypeLabel)
+				]
 				]
 				]
 			+ SVerticalBox::Slot()
 				[
-					SNew(SHorizontalBox)
-					+ SHorizontalBox::Slot()
-				.VAlign(VAlign_Center)
-				[
-					SNew(STextBlock)
-					.Text(LOCTEXT("stat type", "Choose stat Type"))
-				]
-			+ SHorizontalBox::Slot()
-				.VAlign(VAlign_Center)
-				[
-					SNew(SEditableTextBox)
-					.Text(LOCTEXT("statTypeChoice", "Input stat Type"))
-				]
+				SNew(SHorizontalBox)
+				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+					SNew(STextBlock).Text(FText::FromString("StatAction Type:"))
+					]
+				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+					[
+					SAssignNew(statActionTypeComboBox, SComboBox<FComboItemType>).OptionsSource(&statActionTypeArray).OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateDropDownWidget)
+					.OnSelectionChanged_Raw(this, &FTEST_ACTION_MENUModule::StatActionTypeOnSelectionChanged).InitiallySelectedItem(currentStatActionType)
+						[
+							SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentStatActionTypeLabel)
+						]
+					]
 				]
 			+ SVerticalBox::Slot()
 				[
@@ -332,8 +403,14 @@ TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 			+ SHorizontalBox::Slot()
 				.VAlign(VAlign_Center)
 				[
-					SNew(SEditableTextBox)
-					.Text(LOCTEXT("InteractionTypeChoice", "Input Interaction Type"))
+					SAssignNew(interactionTypeComboBox, SComboBox<FComboItemType>)
+					.OptionsSource(&interactionTypeArray)
+				.OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateDropDownWidget)
+				.OnSelectionChanged_Raw(this, &FTEST_ACTION_MENUModule::InteractionTypeOnSectionChanged)
+				.InitiallySelectedItem(currentinteractionType)
+				[
+					SNew(STextBlock).Text_Raw(this, &FTEST_ACTION_MENUModule::GetCurrentInteractionTypeLabel)
+				]
 				]
 				]
 			+ SVerticalBox::Slot()
@@ -348,16 +425,7 @@ TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 			+ SHorizontalBox::Slot()
 				.VAlign(VAlign_Center)
 				[
-					SAssignNew(testBox, SComboBox<FComboItemType>)
-					.OptionsSource(&testTextArray)
-					.OnGenerateWidget_Raw(this, &FTEST_ACTION_MENUModule::generateWidgetTest)
-					.OnSelectionChanged_Raw(this,&FTEST_ACTION_MENUModule::OnSelectionChanged)
-					.InitiallySelectedItem(CurrentItem)
-				[
-					SAssignNew(comboBoxText,STextBlock).Text_Raw(this,&FTEST_ACTION_MENUModule::GetCurrentItemLabel)
-					//.Text(FText::FromString("Failed"))
-
-				]
+					SNew(SEditableText)
 				]
 				]
 			+ SVerticalBox::Slot()
@@ -373,30 +441,115 @@ TSharedRef<SWindow> FTEST_ACTION_MENUModule::generateWidow()
 				]
 				]
 		];
-
+	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
+	FSlateApplication::Get().AddWindow(myWindow, true);
+	return FReply::Handled();
 }
-void FTEST_ACTION_MENUModule::PluginButtonClicked()
+//Genreates a STextBlock based on a FComboItemType array
+TSharedRef<SWidget> FTEST_ACTION_MENUModule::generateDropDownWidget(FComboItemType inOption)
 {
-	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
+	auto test = SNew(STextBlock).Text(FText::FromString(*inOption));
+	return test;
 }
-
-void FTEST_ACTION_MENUModule::AddMenuExtension(FMenuBuilder& Builder)
+// gets the action type name
+FText FTEST_ACTION_MENUModule::GetCurrentActionTypeLabel() const
 {
-	Builder.AddMenuEntry(FTEST_ACTION_MENUCommands::Get().OpenActionWindow);
-//	Builder.AddSubMenu()
+	if (currentActionType.IsValid()) {
+		return FText::FromString(**currentActionType);
+	}
+	else {
+		return FText::FromString("Failed");
+	}
+}
+//Section changes the current Action Type once a slection is changed
+void FTEST_ACTION_MENUModule::ActionTypeOnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
+{
+	currentActionType = NewValue;
+	UE_LOG(LogTemp, Warning, TEXT("Current Item is: %s"), **currentActionType);
+}
+void FTEST_ACTION_MENUModule::TargetTypeOnSectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
+{
+	currentTargetType = NewValue;
+	UE_LOG(LogTemp, Warning, TEXT("Current Item is: %s"), **currentActionType);
+}
+FText FTEST_ACTION_MENUModule::GetCurrentTargetTypeLabel() const
+{
+	if (currentTargetType.IsValid()) {
+		return FText::FromString(**currentTargetType);
+	}
+	return FText::FromString("Failed");
+}
+void FTEST_ACTION_MENUModule::StatActionTypeOnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
+{
+	currentStatActionType = NewValue;
+}
+FText FTEST_ACTION_MENUModule::GetCurrentStatActionTypeLabel() const
+{
+	if (currentStatActionType.IsValid()) {
+		return FText::FromString(**currentStatActionType);
+	}
+	return FText::FromString("Failed");
+}
+void FTEST_ACTION_MENUModule::InteractionTypeOnSectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
+{
+	currentinteractionType = NewValue;
+}
+FText FTEST_ACTION_MENUModule::GetCurrentInteractionTypeLabel() const
+{
+	if (currentinteractionType.IsValid()) {
+		return FText::FromString(**currentinteractionType);
+	}
+	return FText::FromString("Failed");
 }
 
+//Test call
 FReply FTEST_ACTION_MENUModule::CreateObject()
 {
+	FString Filename = "DataAssetObject";
+	FString PackageName = "/Game/";
+	PackageName += Filename;
+	UPackage* Package = CreatePackage(NULL, *PackageName);
+	auto UDataAssetFactory = NewObject<UDataAssetObjectFactory>();
+	UDataAssetObject* newDataAssetObject = (UDataAssetObject*)UDataAssetFactory->FactoryCreateNew(UDataAssetObject::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+	FAssetRegistryModule::AssetCreated(newDataAssetObject);
+	
+	Package->FullyLoad();
+	Package->SetDirtyFlag(true);
 	UE_LOG(LogTemp, Log, TEXT("Create Object"));
 	return FReply::Handled();
 }
 
-void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
+void FTEST_ACTION_MENUModule::StatMapOnSecctionChanged(FStatSheetItemType NewValue, ESelectInfo::Type selectionInfo)
 {
-	Builder.AddToolBarButton(FTEST_ACTION_MENUCommands::Get().OpenPluginWindow);
+	currentStatMapItem = NewValue;
 }
 
+FReply FTEST_ACTION_MENUModule::CreateNewEntry() {
+	FString value = StatName.Get()->GetText().ToString();
+	if (value == "") {
+		return FReply::Handled();
+	}
+	/*else if (StatMapArray.Contains(value)) {
+		return FReply::Handled();
+	}*/
+	else {
+		StatMapArray.Add(MakeShareable(new FString(value))); // adds the combo box array
+		StatMap.Add(value, StatValue.Get()->GetValue()); // adds to Statmap
+		StatName.Get()->SetText(FText::FromString("")); // clears current name
+		StatValue.Get()->SetValue(0); // clears value
+		//UE_LOG(LogTemp, Log, TEXT("Stat Window Open"));
+		//UE_LOG(LogTemp, Warning, TEXT("STAT WITH NAME: %s"), StatMap.Find(currentStatMapItem);
+		//UE_LOG(LogTemp, Warning, TEXT("STAT WITH VALUE: %s"), );
+	}
+	
+
+	
+	return FReply::Handled();
+}
+FReply FTEST_ACTION_MENUModule::CreateStatObject()
+{
+	return FReply::Handled();
+}
 #undef LOCTEXT_NAMESPACE
 
 IMPLEMENT_MODULE(FTEST_ACTION_MENUModule, TEST_ACTION_MENU)
