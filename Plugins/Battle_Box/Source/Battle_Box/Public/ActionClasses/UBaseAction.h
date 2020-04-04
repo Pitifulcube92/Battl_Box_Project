@@ -27,25 +27,25 @@ struct BATTLE_BOX_API FBaseAction_Info
 	GENERATED_USTRUCT_BODY()
 
 ///Name
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		FString name;
 ///Discription
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		FString discription;
 ///Action type
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		ACTIONTYPE action;
 ///Interaction type
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		INTERACTIONTYPE interaction;
 ///Action ID
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		uint32 actionID;
 ///Action Algorithms
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		TMap<FString, UBaseActionAlgorithm*> actionAlgorithms;
 ///Effect Objects
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		TMap<FString, UBaseStatusEffect*> effects;
 
 };
@@ -53,10 +53,10 @@ struct BATTLE_BOX_API FBaseAction_Info
 UCLASS(BlueprintType)
 class BATTLE_BOX_API UBaseAction : public UDataAsset
 {
-
+	GENERATED_BODY()
 private:
 ///Base infomation variable
-	UPROPERTY(EditAnywhere, Category = "Base Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Base Action")
 		FBaseAction_Info baseInfo;
 public:
 ///Getter function for Base information

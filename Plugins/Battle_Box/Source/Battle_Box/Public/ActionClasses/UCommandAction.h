@@ -24,11 +24,11 @@ struct BATTLE_BOX_API FCommandAction_Info
 	GENERATED_USTRUCT_BODY()
 public:
 ///Command component
-	UPROPERTY(EditAnywhere, Category = "Command Action")
+	UPROPERTY(EditAnywhere, BlueprintType, Category = "Command Action")
 		class UActorComponent* command;
 };
 
-UCLASS(BlueprintType, Category = "Battle_Box")
+UCLASS(BlueprintType, BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UCommandAction : public UBaseAction
 {
 	GENERATED_BODY()
@@ -39,6 +39,6 @@ private:
 		FCommandAction_Info commandInfo;
 public:
 ///Command data Getter
-	UFUNCTION(BlueprintCallable, Category = "Command Action")
+	UFUNCTION(BlueprintCallable, BlueprintType, Category = "Command Action")
 		FCommandAction_Info GetCommandInfo() const;
 };

@@ -18,11 +18,6 @@
     {
       "Name": "Battle_Box",
       "Type": "Editor",
-      "LoadingPhase": "EarliestPossible"
-    },
-    {
-      "Name": "BB_Runtime_System",
-      "Type": "Runtime",
       "LoadingPhase": "Default"
     }
   ]
