@@ -15,20 +15,20 @@ class BATTLE_BOX_API ABattle_Box_Actor : public AActor
 private:
 
 	GENERATED_BODY()
-	
-	UPROPERTY(EditAnywhere, BlueprintType )
+
+	UPROPERTY(EditAnywhere, BlueprintType)
 		UStatSheetObject* statSheet;
-public:	
+public:
 	// Sets default values for this actor's properties
 	ABattle_Box_Actor();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Battle_Box_Actor")
+	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
 		UStatSheetObject* GetStatSheet() const;
 };
