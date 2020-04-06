@@ -33,16 +33,16 @@ struct BATTLE_BOX_API FItemAction_Info
 	GENERATED_USTRUCT_BODY()
 public:
 ///Item Type 
-	UPROPERTY(EditAnywhere, Category = "Item Action")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
 		ITEMTYPE type;
 ///items value
-	UPROPERTY(EditAnywhere, Category = "Item Action")
-		uint32 value;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
+		int32 value;
 ///Item's Effect list 
-	UPROPERTY(EditAnywhere, Category = "Item Action")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
 		TArray<UAbilityAction*> effectList;
 ///Items basic states
-	UPROPERTY(EditAnywhere, Category = "Item Action")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
 		TMap<FString, float> statModMap;
 };
 

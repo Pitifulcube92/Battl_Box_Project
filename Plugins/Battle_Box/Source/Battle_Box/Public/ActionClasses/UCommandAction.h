@@ -4,7 +4,7 @@
 #include "CoreMinimal.h"
 #include "UBaseAction.h"
 #include "UCommandAction.generated.h"
-class UCommandAction_Order;
+class UActorComponent;
 /************************************
 * Command Action Class
 *
@@ -24,11 +24,11 @@ struct BATTLE_BOX_API FCommandAction_Info
 	GENERATED_USTRUCT_BODY()
 public:
 ///Command component
-	UPROPERTY(EditAnywhere, BlueprintType, Category = "Command Action")
-		class UActorComponent* command;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TSubclassOf<UActorComponent> command;
 };
 
-UCLASS(BlueprintType, BlueprintType, Category = "Battle_Box")
+UCLASS(BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UCommandAction : public UBaseAction
 {
 	GENERATED_BODY()
