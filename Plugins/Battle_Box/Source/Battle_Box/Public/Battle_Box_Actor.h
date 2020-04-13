@@ -16,7 +16,7 @@ private:
 
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintType)
+	UPROPERTY(EditAnywhere)
 		UStatSheetObject* statSheet;
 public:
 	// Sets default values for this actor's properties

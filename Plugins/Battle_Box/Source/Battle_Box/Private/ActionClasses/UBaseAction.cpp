@@ -2,17 +2,19 @@
 
 #include "../Public/ActionClasses/UBaseAction.h"
 #include "../Public/UStatSheetObject.h"
-#include "../Public/UBaseActionAlgorithm.h"
+#include "../Public/ActionAlgorithmComponent.h"
 
 FBaseAction_Info UBaseAction::GetBaseInfo() const
 {
 	return baseInfo;
 }
-void UBaseAction::ExecuteAlgorithm(FString algorithmName_, UStatSheetObject* target_)
+void UBaseAction::ExecuteAlgorithms(FString actionName_, UStatSheetObject* target_)
 {
-	if (baseInfo.actionAlgorithms.Contains(algorithmName_))
+
+	for (auto u : baseInfo.actionAlgorithms)
 	{
-		baseInfo.actionAlgorithms[algorithmName_]->Init(target_);
-		baseInfo.actionAlgorithms[algorithmName_]->CallAlgorithm();
+		UActionAlgorithmComponent* tmp = u.Value.GetDefaultObject();
+		tmp->Init(actionName_, target_);
+		tmp->CallAlgorithm();
 	}
 }

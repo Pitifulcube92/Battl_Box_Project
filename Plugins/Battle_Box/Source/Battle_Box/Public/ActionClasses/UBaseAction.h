@@ -7,7 +7,7 @@
 #include "Containers/Map.h"
 #include "Battle_Box_Enums.h"
 #include "UBaseAction.generated.h"
-class UBaseActionAlgorithm;
+class UActionAlgorithmComponent;
 class UBaseStatusEffect;
 class UStatSheetObject;
 /***********************************************
@@ -43,10 +43,7 @@ struct BATTLE_BOX_API FBaseAction_Info
 		int32 actionID;
 ///Action Algorithms
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Action")
-		TMap<FString, UBaseActionAlgorithm*> actionAlgorithms;
-///Effect Objects
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Action")
-		TMap<FString, UBaseStatusEffect*> effects;
+		TMap < FString, TSubclassOf<UActionAlgorithmComponent>> actionAlgorithms;
 
 };
 
@@ -64,5 +61,5 @@ public:
 		FBaseAction_Info GetBaseInfo() const;
 ///Calls in the algorithm by its given name
 	UFUNCTION(BlueprintCallable, Category = "Base Action")
-		void ExecuteAlgorithm(FString algorithmN, UStatSheetObject* target_);
+		void ExecuteAlgorithms(FString actionName_, UStatSheetObject* target_);
 };
