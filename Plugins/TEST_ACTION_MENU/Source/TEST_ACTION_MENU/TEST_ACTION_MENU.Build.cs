@@ -42,6 +42,9 @@ public class TEST_ACTION_MENU : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "EditorWidgets",
+                "EditorStyle",
+                "Battle_Box",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
