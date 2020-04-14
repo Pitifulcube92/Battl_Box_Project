@@ -160,8 +160,8 @@ FReply StatSheetWindow::createObject() {
 	Package->FullyLoad();
 	Package->SetDirtyFlag(true);
 
-	newDataAssetObject->generalnInfo.name = StatSheetName.Get()->GetText().ToString();
-	newDataAssetObject->generalnInfo.tag = StatSheetTag.Get()->GetText().ToString();
+	newDataAssetObject->generalInfo.name = StatSheetName.Get()->GetText().ToString();
+	newDataAssetObject->generalInfo.tag = StatSheetTag.Get()->GetText().ToString();
 
 	if (StatNames.Num() == StatValues.Num()) { }
 	int counter = StatNames.Num();
@@ -169,7 +169,7 @@ FReply StatSheetWindow::createObject() {
 	for (int i = 0; i < counter; i++) {
 		FString fill = StatNames[i].Get().GetText().ToString();
 		float amount = StatValues[i].Get().GetValue();
-		newDataAssetObject->generalnInfo.additionlStats.Add(fill ,amount);
+		newDataAssetObject->generalInfo.additionlStats.Add(fill ,amount);
 
 		UE_LOG(LogTemp, Log, TEXT("Value Name %s"), *fill);
 		UE_LOG(LogTemp, Log, TEXT("Value %d"), amount);
