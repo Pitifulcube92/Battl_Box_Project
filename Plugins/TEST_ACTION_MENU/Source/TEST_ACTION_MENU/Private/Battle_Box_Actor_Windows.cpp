@@ -17,6 +17,7 @@
 #include "../Battle_Box_Actor.h"
 #include "UBattle_Box_Pawn_Factory.h"
 #include "../Battle_Box_Pawn.h"
+#include "..\Public\Battle_Box_Actor_Windows.h"
 
 TSharedRef<SWindow> Battle_Box_Actor_Windows::generateWidow()
 {
@@ -69,16 +70,35 @@ TSharedRef<SWindow> Battle_Box_Actor_Windows::generateWidow()
 }
 
 FReply Battle_Box_Actor_Windows::CreateCharacterObject() {
+	FindFiles();
 	FString Filename = actorName.Get()->GetText().ToString();
-	FString PackageName = "/Game/";
-	PackageName += Filename;
-	UPackage* Package = CreatePackage(NULL, *PackageName);
-	auto Factory = NewObject<UBattle_Box_Character_Factory>();
-	ABattle_Box_Character* newAssetObject = (ABattle_Box_Character*)Factory->CreateBlueprint(ABattle_Box_Character::StaticClass(), Package,*Filename, FName("NAME_NONE"));
-	FAssetRegistryModule::AssetCreated(newAssetObject);
+ 	if (!contentFiles.Contains((Filename + ".uasset"))) {
+		UE_LOG(LogTemp, Log, TEXT("Test1"));
+		FString PackageName = "/Game/";
+		PackageName += Filename;
+		UPackage* Package = CreatePackage(NULL, *PackageName);
+		Package->FullyLoad();
+		auto Factory = NewObject<UBattle_Box_Character_Factory>();
+		ABattle_Box_Character* newAssetObject = (ABattle_Box_Character*)Factory->CreateBlueprint(ABattle_Box_Character::StaticClass(), Package, *Filename, FName("NAME_NONE"));
 
-	Package->FullyLoad();
-	Package->SetDirtyFlag(true);
+		Package->MarkPackageDirty();
+		FAssetRegistryModule::AssetCreated(newAssetObject);
+
+
+		Package->SetDirtyFlag(true);
+
+		//Save The Package
+		FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+		Package->SavePackage(Package, newAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
+	//	Package->Save(Package,newAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone,)
+
+		newAssetObject->PreEditChange(NULL);
+		newAssetObject->PostEditChange();
+	}
+	if (!contentFiles.Contains(Filename+".uasset")) {
+		UE_LOG(LogTemp, Log, TEXT("Test2"));
+	}
+
 	UE_LOG(LogTemp, Log, TEXT("Create Character Object"));
 	return FReply::Handled();
 }
@@ -114,3 +134,12 @@ FReply Battle_Box_Actor_Windows::CreateActorObject()
 	UE_LOG(LogTemp, Log, TEXT("Create Actor Object"));
 	return FReply::Handled();
 }
+
+void Battle_Box_Actor_Windows::FindFiles()
+{
+	IFileManager& FileManager = IFileManager::Get();
+	FString FilePath = FPaths::ProjectContentDir() + "*.uasset";
+	FileManager.FindFiles(contentFiles, *FilePath, true, false);
+}
+
+
