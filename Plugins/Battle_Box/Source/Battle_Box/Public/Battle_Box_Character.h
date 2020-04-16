@@ -31,7 +31,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	///Returns StatSheet
+	///Returns StatSheetObject
 	UFUNCTION(BlueprintCallable, Category = "Battle_Box_Character")
 		UStatSheetObject* GetStatSheet() const;
+	///Sets StatSheetObject 
+	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
+		void SetStatSheet(UStatSheetObject* other_);
 };

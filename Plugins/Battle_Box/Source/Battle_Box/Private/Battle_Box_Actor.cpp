@@ -34,3 +34,7 @@ UStatSheetObject* ABattle_Box_Actor::GetStatSheet() const
 	return statSheet;
 }
 
+void ABattle_Box_Actor::SetStatSheet(UStatSheetObject* other_)
+{
+	statSheet = other_;
+}

@@ -20,7 +20,7 @@ public:
 		UStatSheetObject* target;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UStatSheetObject* owner;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadonly)
 		FString actionName;
 protected:
 // Called when the game starts

@@ -37,3 +37,8 @@ UStatSheetObject* ABattle_Box_Pawn::GetStatSheet() const
 {
 	return statSheet;
 }
+
+void ABattle_Box_Pawn::SetStatSheet(UStatSheetObject* other_)
+{
+	statSheet = other_;
+}

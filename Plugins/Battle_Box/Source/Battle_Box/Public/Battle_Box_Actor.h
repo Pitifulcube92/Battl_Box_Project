@@ -29,6 +29,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	///Returns StatSheetObject
 	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
 		UStatSheetObject* GetStatSheet() const;
+	///Sets StatSheetObject
+	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
+		void SetStatSheet(UStatSheetObject* other_);
 };

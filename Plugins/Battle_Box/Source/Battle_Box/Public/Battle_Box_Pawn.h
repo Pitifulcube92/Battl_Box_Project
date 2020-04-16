@@ -34,4 +34,7 @@ public:
 	///Returns StatSheetObject
 	UFUNCTION(BlueprintCallable, Category = "Battle_Box_Pawn")
 		UStatSheetObject* GetStatSheet()const;
+	///Sets StatSheetObject
+	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
+		void SetStatSheet(UStatSheetObject* other_);
 };
