@@ -9,7 +9,8 @@
 #include "Widgets/Input/SSpinBox.h"
 #include "Widgets/Layout/SScrollBox.h"
 #include "AssetThumbnail.h"
-#include "../UBaseActionAlgorithm.h"
+#include "../ActionAlgorithmComponent.h"
+#include "../UStatSheetObject.h"
 
 
 //File Management 
@@ -81,10 +82,11 @@ public:
 	//Array of All Files
 	TArray<FString> contentFiles;
 
-
+	TArray<FAssetData> assetDrop;
+	//FName className = "ActionAlgorithmComponent";
 	//FAsset Thumbnail 
 	TSharedPtr<FAssetThumbnailPool> MyThumbnailPool;
 	TSharedPtr<FAssetThumbnail> MyThumbnail;
 
-	UBaseActionAlgorithm* Test;
+	UActionAlgorithmComponent* Test;
 };

@@ -86,7 +86,6 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 			[
 				SNew(SHorizontalBox)
 				+SHorizontalBox::Slot()
-				+SHorizontalBox::Slot()
 				.Padding(10,0,10,10)
 				[
 					SNew(SVerticalBox)
@@ -151,7 +150,6 @@ TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabAr
 						]// Button end
 						]// Vertical Box Slot
 				]// horisontal box end
-				+ SHorizontalBox::Slot()
 			]// Horisontal Box end
 		];
 }
@@ -202,45 +200,6 @@ FReply FTEST_ACTION_MENUModule::OpenActorTab() {
 	return FReply::Handled();
 }
 
-
-
-
-
-
-
-//Test call
-FReply FTEST_ACTION_MENUModule::CreateObject()
-{
-	//FString Filename = "DataAssetObject";
-	//FString PackageName = "/Game/";
-	//PackageName += Filename;
-	//UPackage* Package = CreatePackage(NULL, *PackageName);
-	//auto UDataAssetFactory = NewObject<UDataAssetObjectFactory>();
-	//UDataAssetObject* newDataAssetObject = (UDataAssetObject*)UDataAssetFactory->FactoryCreateNew(UDataAssetObject::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
-	//FAssetRegistryModule::AssetCreated(newDataAssetObject);
-	//
-	//Package->FullyLoad();
-	//Package->SetDirtyFlag(true);
-	//UE_LOG(LogTemp, Log, TEXT("Create Object"));
-	return FReply::Handled();
-}
-
-
-
-FReply FTEST_ACTION_MENUModule::CreateStatObject()
-{
-	return FReply::Handled();
-}
-
-bool FTEST_ACTION_MENUModule::OnDropTargetAllowDrop(TSharedPtr<FDragDropOperation> DragDropOperation) {
-	return true;
-}
-
-FReply FTEST_ACTION_MENUModule::OnDropTargetInputDrop(TSharedPtr<FDragDropOperation> DragDropOperation) {
-	UE_LOG(LogTemp, Warning, TEXT("Drop operation detected!"));
-
-	return FReply::Handled();
-}
 #undef LOCTEXT_NAMESPACE
 
 IMPLEMENT_MODULE(FTEST_ACTION_MENUModule, TEST_ACTION_MENU)

@@ -10,6 +10,10 @@
 #include "Widgets/Input/SButton.h"
 #include "SlateBasics.h"
 #include "Editor/EditorWidgets/Public/SDropTarget.h"
+#include "../ActionAlgorithmComponent.h"
+#include "DragAndDrop/AssetDragDropOp.h"
+
+
 
 //Create Objects
 #include "AssetRegistryModule.h"
@@ -21,7 +25,8 @@
 #include "../ActionClasses/UItemAction.h"
 #include "../Battle_Box_Enums.h"
 #include "..\Public\ActionWindow.h"
-#include "../UBaseActionAlgorithm.h"
+#include "../ActionAlgorithmComponent.h"
+#include "CoreUObject.h"
 
 
 
@@ -31,10 +36,9 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 	MyThumbnailPool = MakeShareable(new FAssetThumbnailPool(16, false));
 	MyThumbnail = MakeShareable(new FAssetThumbnail(Test, 16, 16 , MyThumbnailPool));
 
-
 	// Action Type
 	actionTypeArray.Add(MakeShareable(new FString("E_NONE")));
-	actionTypeArray.Add(MakeShareable(new FString("E_ABILTY")));
+	actionTypeArray.Add(MakeShareable(new FString("E_ABILITY")));
 	actionTypeArray.Add(MakeShareable(new FString("E_COMMAND")));
 	actionTypeArray.Add(MakeShareable(new FString("E_ITEM")));
 	currentActionType = actionTypeArray[0];
@@ -69,7 +73,7 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 				[
 					SNew(STextBlock).Text(FText::FromString("Action Descption"))
 				]
-				+ SHorizontalBox::Slot()
+				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
 				[
 					SAssignNew(actionDescription, SEditableTextBox)
 				]
@@ -141,50 +145,44 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 				+SHorizontalBox::Slot().VAlign(VAlign_Center)
 				[
 					SNew(STextBlock)
-					.Text(FText::FromString("Algorithm Map"))
+					.Text(FText::FromString("Algorithm"))
 				]
-				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+				+ SHorizontalBox::Slot()
 				[
-					SNew(SButton).Text(FText::FromString("Add Algorithm")) //.OnClicked_Raw(this, &StatSheetWindow::CreateNewEntry)
-				]
-				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
-				[
-					SNew(SButton).Text(FText::FromString("Reset Map")) //.OnClicked_Raw(this, &StatSheetWindow::ResetStatMap)
+					SAssignNew(dropTargetTest, SDropTarget)
+					.OnAllowDrop_Raw(this, &ActionWindow::OnDropTargetAllowDrop)
+					.OnDrop_Raw(this, &ActionWindow::OnDropTargetInputDrop)
+					[
+						MyThumbnail->MakeThumbnailWidget()
+					]
 				]
 			]
-			+ SVerticalBox::Slot() // algorrithm scoll box
-			[
-				SNew(SHorizontalBox)
-				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
-				[
-					MyThumbnail->MakeThumbnailWidget()
-				]
-			]
-			+ SVerticalBox::Slot() // status effect map 
-			[
-				SNew(SHorizontalBox)
-				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
-				[
-					SNew(STextBlock)
-					.Text(FText::FromString("Status Effect Map"))
-				]
-				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
-				[
-					SNew(SButton).Text(FText::FromString("Add Status")) //.OnClicked_Raw(this, &StatSheetWindow::CreateNewEntry)
-				]
-				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
-				[
-					SNew(SButton).Text(FText::FromString("Reset Map")) //.OnClicked_Raw(this, &StatSheetWindow::ResetStatMap)
-				]
-			]
-			+SVerticalBox::Slot() // status scroll box
-			[
-				SNew(SHorizontalBox)
-				+SHorizontalBox::Slot().VAlign(VAlign_Center)
-				[
-					SAssignNew(statusPanel, SScrollBox)
-				]
-			]
+	
+			//+ SVerticalBox::Slot() // status effect map 
+			//[
+			//	SNew(SHorizontalBox)
+			//	+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+			//	[
+			//		SNew(STextBlock)
+			//		.Text(FText::FromString("Status Effect Map"))
+			//	]
+			//	+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+			//	[
+			//		SNew(SButton).Text(FText::FromString("Add Status")) //.OnClicked_Raw(this, &StatSheetWindow::CreateNewEntry)
+			//	]
+			//	+ SHorizontalBox::Slot().VAlign(VAlign_Center)
+			//	[
+			//		SNew(SButton).Text(FText::FromString("Reset Map")) //.OnClicked_Raw(this, &StatSheetWindow::ResetStatMap)
+			//	]
+			//]
+			//+SVerticalBox::Slot() // status scroll box
+			//[
+			//	SNew(SHorizontalBox)
+			//	+SHorizontalBox::Slot().VAlign(VAlign_Center)
+			//	[
+			//		SAssignNew(statusPanel, SScrollBox)
+			//	]
+			//]
 			+ SVerticalBox::Slot()
 			[
 				SNew(SHorizontalBox)
@@ -209,11 +207,23 @@ FReply ActionWindow::CreateActionObject()
 {
 	FindFiles();
 	FString Filename = actionName.Get()->GetText().ToString();
+	FBaseAction_Info assetInfo;
 	MyThumbnail->GetAsset();
 	if (!contentFiles.Contains((Filename + ".uasset"))) {
 		FString PackageName = "/Game/";
 		PackageName += Filename;
 		UPackage* Package = CreatePackage(NULL, *PackageName);
+		//interaction Determination
+		INTERACTIONTYPE interactionType;
+		if (*currentinteractionType.Get() == FString("E_NONE")) { interactionType = INTERACTIONTYPE::E_NONE; }
+		else if (*currentinteractionType.Get() == FString("E_ABILITY")) { interactionType = INTERACTIONTYPE::E_ABILITY; }
+		else if (*currentinteractionType.Get() == FString("E_PHYSICAL")) { interactionType = INTERACTIONTYPE::E_PHYSICAL; }
+		else { interactionType = INTERACTIONTYPE::E_PHYSICAL_AND_ABILITY; }
+		//Setting the Action Agorithm
+		UActionAlgorithmComponent* Algorithm = (UActionAlgorithmComponent*)MyThumbnail.Get()->GetAsset();
+		TSubclassOf<UActionAlgorithmComponent> actionAlgorithm(Algorithm->StaticClass());
+
+
 		if (*currentActionType.Get() == FString("E_NONE")) {
 			auto UAssetFactory = NewObject<UAblityActionFactory>();
 			UAbilityAction* newDataAssetObject = (UAbilityAction*)UAssetFactory->FactoryCreateNew(UAbilityAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
@@ -222,9 +232,15 @@ FReply ActionWindow::CreateActionObject()
 			FAssetRegistryModule::AssetCreated(newDataAssetObject);
 			Package->SetDirtyFlag(true);
 
+	
 			// Changing the Contents of the Object
-			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.name = Filename;
+			assetInfo.discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.action = ACTIONTYPE::E_NONE;
+			assetInfo.interaction = interactionType;
+			assetInfo.actionID = actionID.Get()->GetValue();
+			//assetInfo.actionAlgorithms = actionAlgorithm;
+			newDataAssetObject->SetBaseInfo(assetInfo);
 
 			//Save The Package
 			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
@@ -234,7 +250,7 @@ FReply ActionWindow::CreateActionObject()
 			newDataAssetObject->PostEditChange();
 	
 		}
-		else if (*currentActionType.Get() == FString("E_ABILTY")) {
+		else if (*currentActionType.Get() == FString("E_ABILITY")) {
 			auto UAssetFactory = NewObject<UAblityActionFactory>();
 			UAbilityAction* newDataAssetObject = (UAbilityAction*)UAssetFactory->FactoryCreateNew(UAbilityAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
 			Package->MarkPackageDirty();
@@ -243,8 +259,13 @@ FReply ActionWindow::CreateActionObject()
 			Package->SetDirtyFlag(true);
 
 			// Changing the Contents of the Object
-			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.name = Filename;
+			assetInfo.discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.action = ACTIONTYPE::E_ABILITY;
+			assetInfo.interaction = interactionType;
+			assetInfo.actionID = actionID.Get()->GetValue();
+			//assetInfo.actionAlgorithms = actionAlgorithm;
+			newDataAssetObject->SetBaseInfo(assetInfo);
 
 			//Save The Package
 			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
@@ -262,8 +283,13 @@ FReply ActionWindow::CreateActionObject()
 			Package->SetDirtyFlag(true);
 
 			// Changing the Contents of the Object
-			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.name = Filename;
+			assetInfo.discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.action = ACTIONTYPE::E_COMMAND;
+			assetInfo.interaction = interactionType;
+			assetInfo.actionID = actionID.Get()->GetValue();
+			//assetInfo.actionAlgorithms = actionAlgorithm;
+			newDataAssetObject->SetBaseInfo(assetInfo);
 
 			//Save The Package
 			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
@@ -281,10 +307,15 @@ FReply ActionWindow::CreateActionObject()
 			Package->SetDirtyFlag(true);
 
 			// Changing the Contents of the Object
-			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.name = Filename;
+			assetInfo.discription = actionDescription.Get()->GetText().ToString();
+			assetInfo.action = ACTIONTYPE::E_ITEM;
+			assetInfo.interaction = interactionType;
+			assetInfo.actionID = actionID.Get()->GetValue();
+			assetInfo.actionAlgorithms = actionAlgorithm;
+			newDataAssetObject->SetBaseInfo(assetInfo);
 
-			//Save The Package
+			////Save The Package
 			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
 			Package->SavePackage(Package, newDataAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
 
@@ -373,7 +404,14 @@ bool ActionWindow::OnDropTargetAllowDrop(TSharedPtr<FDragDropOperation> DragDrop
 
 FReply ActionWindow::OnDropTargetInputDrop(TSharedPtr<FDragDropOperation> DragDropOperation)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Drop operation detected!"));
 
+	if (DragDropOperation->IsOfType<FAssetDragDropOp>()) {
+		const auto& AssetDragDropOp = StaticCastSharedPtr<FAssetDragDropOp>(DragDropOperation);
+		assetDrop = AssetDragDropOp.Get()->GetAssets();
+
+		UActionAlgorithmComponent* receive = (UActionAlgorithmComponent*)assetDrop[0].GetAsset();
+		MyThumbnail.Get()->SetAsset(receive);
+		UE_LOG(LogTemp, Warning, TEXT("Drop operation detected!"));
+	}
 	return FReply::Handled();
 }
