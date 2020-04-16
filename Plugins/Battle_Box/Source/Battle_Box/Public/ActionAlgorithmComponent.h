@@ -16,11 +16,11 @@ public:
 	// Sets default values for this component's properties
 	UActionAlgorithmComponent();
 
-	UPROPERTY(EditAnywhere, BlueprintReadonly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UStatSheetObject* target;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UStatSheetObject* owner;
-	UPROPERTY(EditAnywhere, BlueprintReadonly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString actionName;
 protected:
 // Called when the game starts
@@ -34,10 +34,4 @@ public:
 ///This initialize the algorithum
 	UFUNCTION(BlueprintCallable, Category = "Action Algorithm")
 		void Init(FString actionName_, UStatSheetObject* target_);
-///Get target StatSheet
-	UFUNCTION(BlueprintCallable, Category = "Action Algorithm")
-		UStatSheetObject* GetTarget() { return target; };
-///Get Action Name 
-	UFUNCTION(BlueprintCallable, Category = "Action Algorithm")
-		FString GetActionName() { return actionName; };
 };

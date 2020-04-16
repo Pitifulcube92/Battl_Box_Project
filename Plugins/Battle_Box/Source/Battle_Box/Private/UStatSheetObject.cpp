@@ -9,3 +9,11 @@ FAction_Info UStatSheetObject::GetActionInfo() const
 {
 	return actionInfo;
 }
+void UStatSheetObject::SetGeneralInfo(FGeneral_Info other_)
+{
+	generalInfo = other_;
+}
+void UStatSheetObject::SetActionInfo(FAction_Info other_)
+{
+	actionInfo = other_;
+}

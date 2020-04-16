@@ -71,10 +71,10 @@ class BATTLE_BOX_API UStatSheetObject : public UDataAsset
 	GENERATED_BODY()
 public:
 ///General Info Data Structure
-	UPROPERTY(EditAnywhere, BlueprintGetter=GetGeneralInfo)
+	UPROPERTY(EditAnywhere, BlueprintGetter=GetGeneralInfo, BlueprintSetter=SetGeneralInfo)
 		FGeneral_Info generalInfo;
 ///Action Info Data Structure
-	UPROPERTY(EditAnywhere, BlueprintGetter=GetActionInfo)
+	UPROPERTY(EditAnywhere, BlueprintGetter=GetActionInfo, BlueprintSetter=SetActionInfo)
 		FAction_Info actionInfo;
 ///Return General Info
 	UFUNCTION(BlueprintCallable, BlueprintGetter)
@@ -82,4 +82,10 @@ public:
 ///Return Action Info
 	UFUNCTION(BlueprintCallable, BlueprintGetter)
 		FAction_Info GetActionInfo() const;
+///Set General Info 
+	UFUNCTION(BlueprintCallable, BlueprintSetter)
+		void SetGeneralInfo(FGeneral_Info other_);
+///Set Action Info 
+	UFUNCTION(BlueprintCallable, BlueprintSetter)
+		void SetActionInfo(FAction_Info other_);
 };

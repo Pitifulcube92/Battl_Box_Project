@@ -8,13 +8,7 @@ FBaseAction_Info UBaseAction::GetBaseInfo() const
 {
 	return baseInfo;
 }
-void UBaseAction::ExecuteAlgorithms(FString actionName_, UStatSheetObject* target_)
+void UBaseAction::SetBaseInfo(FBaseAction_Info other_) 
 {
-
-	for (auto u : baseInfo.actionAlgorithms)
-	{
-		UActionAlgorithmComponent* tmp = u.Value.GetDefaultObject();
-		tmp->Init(actionName_, target_);
-		tmp->CallAlgorithm();
-	}
+	baseInfo = other_;
 }

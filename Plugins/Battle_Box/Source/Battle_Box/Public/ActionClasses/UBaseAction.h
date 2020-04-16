@@ -43,7 +43,7 @@ struct BATTLE_BOX_API FBaseAction_Info
 		int32 actionID;
 ///Action Algorithms
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Action")
-		TMap < FString, TSubclassOf<UActionAlgorithmComponent>> actionAlgorithms;
+		TSubclassOf<UActionAlgorithmComponent> actionAlgorithms;
 
 };
 
@@ -59,7 +59,7 @@ public:
 ///Getter function for Base information
 	UFUNCTION(BlueprintCallable, Category = "Base Action")
 		FBaseAction_Info GetBaseInfo() const;
-///Calls in the algorithm by its given name
+///Setter function for Base Information
 	UFUNCTION(BlueprintCallable, Category = "Base Action")
-		void ExecuteAlgorithms(FString actionName_, UStatSheetObject* target_);
+		void SetBaseInfo(FBaseAction_Info other_);
 };
