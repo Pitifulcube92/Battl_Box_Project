@@ -73,7 +73,7 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 				[
 					SNew(STextBlock).Text(FText::FromString("Action Descption"))
 				]
-				+ SHorizontalBox::Slot()
+				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
 				[
 					SAssignNew(actionDescription, SEditableTextBox)
 				]
