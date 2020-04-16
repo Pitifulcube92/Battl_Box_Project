@@ -8,8 +8,15 @@
 #include "Widgets/Input/SEditableTextBox.h"
 #include "Widgets/Input/SSpinBox.h"
 #include "Widgets/Layout/SScrollBox.h"
-//#include "SlateBasics.h"
-//#include "Editor/EditorWidgets/Public/SDropTarget.h"
+#include "AssetThumbnail.h"
+#include "../UBaseActionAlgorithm.h"
+
+
+//File Management 
+#include "HAL/FileManagerGeneric.h"
+#include "Misc/Paths.h"
+#include "SlateBasics.h"
+#include "Editor/EditorWidgets/Public/SDropTarget.h"
 /**
  * 
  */
@@ -61,11 +68,23 @@ public:
 
 
 
-	//TSharedPtr<SDropTarget> dropTargetTest;
+	TSharedPtr<SDropTarget> dropTargetTest;
 
 	bool OnDropTargetAllowDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
 
 	FReply OnDropTargetInputDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
 	
 	FReply CreateActionObject();
+
+	//Finds all the files in root
+	void FindFiles();
+	//Array of All Files
+	TArray<FString> contentFiles;
+
+
+	//FAsset Thumbnail 
+	TSharedPtr<FAssetThumbnailPool> MyThumbnailPool;
+	TSharedPtr<FAssetThumbnail> MyThumbnail;
+
+	UBaseActionAlgorithm* Test;
 };

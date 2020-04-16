@@ -102,6 +102,11 @@ FReply StatSheetWindow::CreateNewEntry() {
 	return FReply::Handled();
 }
 
+void StatSheetWindow::FindFiles() {
+	IFileManager& FileManager = IFileManager::Get();
+	FString FilePath = FPaths::ProjectContentDir() + "*.uasset";
+	FileManager.FindFiles(contentFiles, *FilePath, true, false);
+}
 TSharedRef<SWidget> StatSheetWindow::generateDropDownWidget(FStatSheetItemType inOption)
 {
 	auto test = SNew(STextBlock).Text(FText::FromString(*inOption));
@@ -149,35 +154,48 @@ void StatSheetWindow::StatMapOnSecctionChanged(FStatSheetItemType NewValue, ESel
 
 // create stat sheet object
 FReply StatSheetWindow::createObject() {
+	FindFiles();
 	FString Filename = StatSheetName.Get()->GetText().ToString();
-	FString PackageName = "/Game/";
-	PackageName += Filename;
-	UPackage* Package = CreatePackage(NULL, *PackageName);
-	auto UDataAssetFactory = NewObject<UStatSheetFactory>();
-	UStatSheetObject* newDataAssetObject = (UStatSheetObject*)UDataAssetFactory->FactoryCreateNew(UStatSheetObject::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
-	FAssetRegistryModule::AssetCreated(newDataAssetObject);
+	if (!contentFiles.Contains((Filename + ".uasset"))) {
+		FString PackageName = "/Game/";
+		PackageName += Filename;
+		UPackage* Package = CreatePackage(NULL, *PackageName);
+		auto UDataAssetFactory = NewObject<UStatSheetFactory>();
+		UStatSheetObject* newDataAssetObject = (UStatSheetObject*)UDataAssetFactory->FactoryCreateNew(UStatSheetObject::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+		Package->MarkPackageDirty();
+		//ADDS THE ASSET TO THE CONTENT
+		FAssetRegistryModule::AssetCreated(newDataAssetObject);
+		Package->SetDirtyFlag(true);
 
-	Package->FullyLoad();
-	Package->SetDirtyFlag(true);
+		newDataAssetObject->generalnInfo.name = StatSheetName.Get()->GetText().ToString();
+		newDataAssetObject->generalnInfo.tag = StatSheetTag.Get()->GetText().ToString();
 
-	newDataAssetObject->generalnInfo.name = StatSheetName.Get()->GetText().ToString();
-	newDataAssetObject->generalnInfo.tag = StatSheetTag.Get()->GetText().ToString();
+		int counter = StatNames.Num();
+		UE_LOG(LogTemp, Log, TEXT("Numbers %d"), counter);
+		for (int i = 0; i < counter; i++) {
+			FString fill = StatNames[i].Get().GetText().ToString();
+			float amount = StatValues[i].Get().GetValue();
+			newDataAssetObject->generalnInfo.additionlStats.Add(fill, amount);
 
-	if (StatNames.Num() == StatValues.Num()) { }
-	int counter = StatNames.Num();
-	UE_LOG(LogTemp, Log, TEXT("Numbers %d"), counter);
-	for (int i = 0; i < counter; i++) {
-		FString fill = StatNames[i].Get().GetText().ToString();
-		float amount = StatValues[i].Get().GetValue();
-		newDataAssetObject->generalnInfo.additionlStats.Add(fill ,amount);
+			UE_LOG(LogTemp, Log, TEXT("Value Name %s"), *fill);
+			UE_LOG(LogTemp, Log, TEXT("Value %d"), amount);
+		}
+		// Clear The Stat Arrays
+		StatNames.Empty();
+		StatValues.Empty();
+		ItemPanel.Get()->ClearChildren();
 
-		UE_LOG(LogTemp, Log, TEXT("Value Name %s"), *fill);
-		UE_LOG(LogTemp, Log, TEXT("Value %d"), amount);
+
+		//Save The Package
+		FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+		Package->SavePackage(Package, newDataAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
+
+		newDataAssetObject->PreEditChange(NULL);
+		newDataAssetObject->PostEditChange();
+		UE_LOG(LogTemp, Log, TEXT("Create Object"));
+
 	}
-	StatNames.Empty();
-	StatValues.Empty();
-	ItemPanel.Get()->ClearChildren();
-	UE_LOG(LogTemp, Log, TEXT("Create Object"));
+
 	return FReply::Handled();
 }
 // Clears the Array

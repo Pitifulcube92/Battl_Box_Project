@@ -8,8 +8,8 @@
 #include "Widgets/Input/SComboBox.h"
 #include "Widgets/Input/SSpinBox.h"
 #include "Widgets/Input/SButton.h"
-//#include "SlateBasics.h"
-//#include "Editor/EditorWidgets/Public/SDropTarget.h"
+#include "SlateBasics.h"
+#include "Editor/EditorWidgets/Public/SDropTarget.h"
 
 //Create Objects
 #include "AssetRegistryModule.h"
@@ -20,11 +20,18 @@
 #include "../ActionClasses/UCommandAction.h"
 #include "../ActionClasses/UItemAction.h"
 #include "../Battle_Box_Enums.h"
+#include "..\Public\ActionWindow.h"
+#include "../UBaseActionAlgorithm.h"
+
 
 
 
 TSharedRef<SWindow> ActionWindow::generateWidow()
 {
+	MyThumbnailPool = MakeShareable(new FAssetThumbnailPool(16, false));
+	MyThumbnail = MakeShareable(new FAssetThumbnail(Test, 16, 16 , MyThumbnailPool));
+
+
 	// Action Type
 	actionTypeArray.Add(MakeShareable(new FString("E_NONE")));
 	actionTypeArray.Add(MakeShareable(new FString("E_ABILTY")));
@@ -150,7 +157,7 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 				SNew(SHorizontalBox)
 				+ SHorizontalBox::Slot().VAlign(VAlign_Center)
 				[
-					SAssignNew(algorithmPanel, SScrollBox)
+					MyThumbnail->MakeThumbnailWidget()
 				]
 			]
 			+ SVerticalBox::Slot() // status effect map 
@@ -200,47 +207,98 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 }
 FReply ActionWindow::CreateActionObject()
 {
+	FindFiles();
 	FString Filename = actionName.Get()->GetText().ToString();
-	FString PackageName = "/Game/";
-	PackageName += Filename;
-	UPackage* Package = CreatePackage(NULL, *PackageName);
-	if (*currentActionType.Get() == FString("E_NONE")) {
-		auto UAssetFactory = NewObject<UAblityActionFactory>();
-		UAbilityAction* newDataAssetObject = (UAbilityAction*)UAssetFactory->FactoryCreateNew(UAbilityAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
-		FAssetRegistryModule::AssetCreated(newDataAssetObject);
-		Package->FullyLoad();
-		Package->SetDirtyFlag(true);
-		newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-		newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
-	}
-	else if (*currentActionType.Get() == FString("E_ABILTY")) {
-		auto UAssetFactory = NewObject<UAblityActionFactory>();
-		UAbilityAction* newDataAssetObject = (UAbilityAction*)UAssetFactory->FactoryCreateNew(UAbilityAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
-		FAssetRegistryModule::AssetCreated(newDataAssetObject);
-		Package->FullyLoad();
-		Package->SetDirtyFlag(true);
-		newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-		newDataAssetObject->GetBaseInfo().discription =  actionDescription.Get()->GetText().ToString();
-	}
-	else if (*currentActionType.Get() == FString("E_COMMAND")) {
-		auto UAssetFactory = NewObject<UCommandActionFactory>();
-		UCommandAction* newDataAssetObject = (UCommandAction*)UAssetFactory->FactoryCreateNew(UCommandAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
-		FAssetRegistryModule::AssetCreated(newDataAssetObject);
-		Package->FullyLoad();
-		Package->SetDirtyFlag(true);
-		newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-		newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
-	}
-	else if (*currentActionType.Get() == FString("E_ITEM")) {
-		auto UAssetFactory = NewObject<UItemActionFactory>();
-		UItemAction* newDataAssetObject = (UItemAction*)UAssetFactory->FactoryCreateNew(UItemAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
-		FAssetRegistryModule::AssetCreated(newDataAssetObject);
-		Package->FullyLoad();
-		Package->SetDirtyFlag(true);
-		newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
-		newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+	MyThumbnail->GetAsset();
+	if (!contentFiles.Contains((Filename + ".uasset"))) {
+		FString PackageName = "/Game/";
+		PackageName += Filename;
+		UPackage* Package = CreatePackage(NULL, *PackageName);
+		if (*currentActionType.Get() == FString("E_NONE")) {
+			auto UAssetFactory = NewObject<UAblityActionFactory>();
+			UAbilityAction* newDataAssetObject = (UAbilityAction*)UAssetFactory->FactoryCreateNew(UAbilityAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+			Package->MarkPackageDirty();
+			//ADDS THE ASSET TO THE CONTENT
+			FAssetRegistryModule::AssetCreated(newDataAssetObject);
+			Package->SetDirtyFlag(true);
+
+			// Changing the Contents of the Object
+			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
+			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+
+			//Save The Package
+			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+			Package->SavePackage(Package, newDataAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
+
+			newDataAssetObject->PreEditChange(NULL);
+			newDataAssetObject->PostEditChange();
+	
+		}
+		else if (*currentActionType.Get() == FString("E_ABILTY")) {
+			auto UAssetFactory = NewObject<UAblityActionFactory>();
+			UAbilityAction* newDataAssetObject = (UAbilityAction*)UAssetFactory->FactoryCreateNew(UAbilityAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+			Package->MarkPackageDirty();
+			//ADDS THE ASSET TO THE CONTENT
+			FAssetRegistryModule::AssetCreated(newDataAssetObject);
+			Package->SetDirtyFlag(true);
+
+			// Changing the Contents of the Object
+			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
+			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+
+			//Save The Package
+			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+			Package->SavePackage(Package, newDataAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
+
+			newDataAssetObject->PreEditChange(NULL);
+			newDataAssetObject->PostEditChange();
+		}
+		else if (*currentActionType.Get() == FString("E_COMMAND")) {
+			auto UAssetFactory = NewObject<UCommandActionFactory>();
+			UCommandAction* newDataAssetObject = (UCommandAction*)UAssetFactory->FactoryCreateNew(UCommandAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+			Package->MarkPackageDirty();
+			//ADDS THE ASSET TO THE CONTENT
+			FAssetRegistryModule::AssetCreated(newDataAssetObject);
+			Package->SetDirtyFlag(true);
+
+			// Changing the Contents of the Object
+			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
+			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+
+			//Save The Package
+			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+			Package->SavePackage(Package, newDataAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
+
+			newDataAssetObject->PreEditChange(NULL);
+			newDataAssetObject->PostEditChange();
+		}
+		else if (*currentActionType.Get() == FString("E_ITEM")) {
+			auto UAssetFactory = NewObject<UItemActionFactory>();
+			UItemAction* newDataAssetObject = (UItemAction*)UAssetFactory->FactoryCreateNew(UItemAction::StaticClass(), Package, *Filename, RF_Standalone | RF_Public, NULL, GWarn);
+			Package->MarkPackageDirty();
+			//ADDS THE ASSET TO THE CONTENT
+			FAssetRegistryModule::AssetCreated(newDataAssetObject);
+			Package->SetDirtyFlag(true);
+
+			// Changing the Contents of the Object
+			newDataAssetObject->GetBaseInfo().name = actionName.Get()->GetText().ToString();
+			newDataAssetObject->GetBaseInfo().discription = actionDescription.Get()->GetText().ToString();
+
+			//Save The Package
+			FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+			Package->SavePackage(Package, newDataAssetObject, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName, GError, nullptr, true, true, SAVE_NoError);
+
+			newDataAssetObject->PreEditChange(NULL);
+			newDataAssetObject->PostEditChange();
+		}
 	}
 	return FReply::Handled();
+}
+void ActionWindow::FindFiles()
+{
+	IFileManager& FileManager = IFileManager::Get();
+	FString FilePath = FPaths::ProjectContentDir() + "*.uasset";
+	FileManager.FindFiles(contentFiles, *FilePath, true, false);
 }
 //Section changes the current Action Type once a slection is changed
 void ActionWindow::ActionTypeOnSelectionChanged(FComboItemType NewValue, ESelectInfo::Type selectionInfo)
