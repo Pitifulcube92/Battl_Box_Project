@@ -16,9 +16,9 @@ class BATTLE_BOX_API ABattle_Box_Character : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ABattle_Box_Character();
-private: 
+public: 
 	///StatSheetObject
-	UPROPERTY(EditAnywhere, BlueprintType)
+	UPROPERTY(EditAnywhere)
 		UStatSheetObject* statSheet;
 protected:
 	// Called when the game starts or when spawned

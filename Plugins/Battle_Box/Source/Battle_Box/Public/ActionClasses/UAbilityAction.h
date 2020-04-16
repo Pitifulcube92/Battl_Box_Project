@@ -26,16 +26,16 @@ struct BATTLE_BOX_API FAbilityAction_Info
 	GENERATED_USTRUCT_BODY()
 public:
 ///Duration value (can used if needed)
-	UPROPERTY(EditAnywhere, BlueprintType, Category = "Ability Action")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ability Action")
 		float duration;
 ///An array that contains the status effect objects.
-	UPROPERTY(EditAnywhere, BlueprintType, Category = "Ability Action")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ability Action")
 		TArray<UBaseStatusEffect*> effects;
 };
 
 
 
-UCLASS(BlueprintType, BlueprintType, Category = "Battle_Box")
+UCLASS(BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UAbilityAction : public UBaseAction
 {
 	GENERATED_BODY()

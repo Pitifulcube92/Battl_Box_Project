@@ -145,7 +145,7 @@ TSharedRef<SWidget> StatSheetWindow::genreateStatMapline() {
 			]
 		];
 		return sendWidget;
-} 
+}
 
 void StatSheetWindow::StatMapOnSecctionChanged(FStatSheetItemType NewValue, ESelectInfo::Type selectionInfo)
 {
