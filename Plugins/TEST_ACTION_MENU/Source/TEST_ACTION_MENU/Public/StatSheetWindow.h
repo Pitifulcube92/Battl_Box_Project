@@ -6,7 +6,9 @@
 #include "Widgets/Input/SSpinBox.h"
 #include "Widgets/SOverlay.h"
 #include "Widgets/Layout/SScrollBox.h"
-
+// File Management
+#include "HAL/FileManagerGeneric.h"
+#include "Misc/Paths.h"
 
 
 typedef TSharedPtr <FString>  FStatSheetItemType;
@@ -43,4 +45,10 @@ private:
 	FReply ResetStatMap();
 
 	TSharedPtr<SVerticalBox> StatSheetStatInfo;
+
+
+	//Finds all the files in root
+	void FindFiles();
+	//Array of All Files
+	TArray<FString> contentFiles;
 };

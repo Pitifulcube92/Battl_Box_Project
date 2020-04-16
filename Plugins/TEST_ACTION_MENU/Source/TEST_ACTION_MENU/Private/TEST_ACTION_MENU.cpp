@@ -16,7 +16,7 @@
 
 
 
-static const FName TEST_ACTION_MENUTabName("TEST_ACTION_MENU");
+static const FName TEST_ACTION_MENUTabName("Battle Box Creation Menus");
 
 #define LOCTEXT_NAMESPACE "FTEST_ACTION_MENUModule"
 
@@ -54,7 +54,7 @@ void FTEST_ACTION_MENUModule::StartupModule()
 	}
 
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
-		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "TEST_ACTION_MENU"))
+		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "Battle Box Creation Menu"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
 }
 //Shutdown Moduel
