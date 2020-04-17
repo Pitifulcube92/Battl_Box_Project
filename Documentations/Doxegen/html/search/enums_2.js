@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elementtype_413',['ELEMENTTYPE',['../_base_action_8h_a79026db208293d4646c9fa72dabdf1bf.html#a79026db208293d4646c9fa72dabdf1bf',1,'BaseAction.h']]]
+  ['messagetype_264',['MessageType',['../_battle___box___enums_8h_a811e9f1d810e5d3eb4c8bc5aab14399b.html#a811e9f1d810e5d3eb4c8bc5aab14399b',1,'Battle_Box_Enums.h']]]
 ];

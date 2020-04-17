@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getfilesize_298',['GetFileSize',['../class_battle_box_file_manager_a2afc97bab32b85e1afce4c255e4a7aef.html#a2afc97bab32b85e1afce4c255e4a7aef',1,'BattleBoxFileManager']]]
+  ['info_210',['Info',['../class_debugger_aef91ed84489c9c928445e1f712d401de.html#aef91ed84489c9c928445e1f712d401de',1,'Debugger']]],
+  ['initdebug_211',['InitDebug',['../class_debugger_a9ab35dcd08d8f181e262f4c8fb1ec892.html#a9ab35dcd08d8f181e262f4c8fb1ec892',1,'Debugger']]]
 ];

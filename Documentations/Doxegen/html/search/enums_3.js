@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['interactiontype_414',['INTERACTIONTYPE',['../_base_action_8h_ad2506947a6c3c06e014b556ab6b13ff3.html#ad2506947a6c3c06e014b556ab6b13ff3',1,'BaseAction.h']]],
-  ['itemtype_415',['ITEMTYPE',['../_item_action_8h_a8164105d3663e42053d5b6daa79a9746.html#a8164105d3663e42053d5b6daa79a9746',1,'ItemAction.h']]]
+  ['stataction_265',['STATACTION',['../_battle___box___enums_8h_a49b0d2e74e1a68b6fa1104e205bd83d6.html#a49b0d2e74e1a68b6fa1104e205bd83d6',1,'Battle_Box_Enums.h']]]
 ];

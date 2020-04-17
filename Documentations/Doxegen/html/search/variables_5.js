@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logarray_394',['LogArray',['../class_debugger_a3694e5bc039163c9dfc64e76a1a7f90f.html#a3694e5bc039163c9dfc64e76a1a7f90f',1,'Debugger']]]
+  ['generalinfo_250',['generalInfo',['../class_u_stat_sheet_object_adcb69419292789445c7dc136421886c8.html#adcb69419292789445c7dc136421886c8',1,'UStatSheetObject']]]
 ];

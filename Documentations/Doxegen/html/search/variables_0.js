@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['abilitymap_376',['abilityMap',['../class_stat_sheet_object_ae95872f630491286291359d6a05e62d8.html#ae95872f630491286291359d6a05e62d8',1,'StatSheetObject']]],
-  ['abilitytype_377',['abilityType',['../class_ability_action_a88f76596d78e3392a55f51a82d1e1036.html#a88f76596d78e3392a55f51a82d1e1036',1,'AbilityAction']]],
-  ['abilityvalue_378',['abilityValue',['../class_ability_action_aef8bac0f72924be136fdade57acb9d34.html#aef8bac0f72924be136fdade57acb9d34',1,'AbilityAction']]],
-  ['action_379',['action',['../class_base_action_a23cf827d35850a4e4d2859a12a885567.html#a23cf827d35850a4e4d2859a12a885567',1,'BaseAction']]],
-  ['actionid_380',['actionID',['../class_base_action_a050d54574671299fb3f8d854aeb6a190.html#a050d54574671299fb3f8d854aeb6a190',1,'BaseAction']]]
+  ['abilityinfo_227',['abilityInfo',['../class_u_ability_action_a1f92e44b4e71bfcc980a5cc9c5589503.html#a1f92e44b4e71bfcc980a5cc9c5589503',1,'UAbilityAction']]],
+  ['abilitymap_228',['abilityMap',['../struct_f_action___info_a5bc205554337f1ae9ff992f52cca74ce.html#a5bc205554337f1ae9ff992f52cca74ce',1,'FAction_Info']]],
+  ['action_229',['action',['../struct_f_base_action___info_a5048eb884894c7ab9c1df95cb9190cdb.html#a5048eb884894c7ab9c1df95cb9190cdb',1,'FBaseAction_Info']]],
+  ['actionalgorithms_230',['actionAlgorithms',['../struct_f_base_action___info_afd18dba747b4faa55f2fcaf6733c658a.html#afd18dba747b4faa55f2fcaf6733c658a',1,'FBaseAction_Info']]],
+  ['actionid_231',['actionID',['../struct_f_base_action___info_aa7d184d0610d37076064831b51bfaa4f.html#aa7d184d0610d37076064831b51bfaa4f',1,'FBaseAction_Info']]],
+  ['actioninfo_232',['actionInfo',['../class_u_stat_sheet_object_af602aee1f9bb5375ad3ed30743b724a1.html#af602aee1f9bb5375ad3ed30743b724a1',1,'UStatSheetObject']]],
+  ['additionlstats_233',['additionlStats',['../struct_f_general___info_ae350f234a6bb04926ef13f3be4401135.html#ae350f234a6bb04926ef13f3be4401135',1,'FGeneral_Info']]]
 ];

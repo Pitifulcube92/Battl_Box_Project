@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_133',['name',['../class_base_action_a89d98c13f445fa58b96d5c4eff58e134.html#a89d98c13f445fa58b96d5c4eff58e134',1,'BaseAction::name()'],['../class_stat_sheet_object_a1a5a1476f919b761c9e99b6acd1aad59.html#a1a5a1476f919b761c9e99b6acd1aad59',1,'StatSheetObject::name()']]]
+  ['name_104',['name',['../struct_f_base_action___info_a596799594da66b458382e6a214d5808d.html#a596799594da66b458382e6a214d5808d',1,'FBaseAction_Info::name()'],['../struct_f_general___info_aa33d6a00d5d6f39d43e373a7e29396b0.html#aa33d6a00d5d6f39d43e373a7e29396b0',1,'FGeneral_Info::name()']]]
 ];

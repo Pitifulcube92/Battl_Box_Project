@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['tag_202',['tag',['../class_stat_sheet_object_a4b56942333d47debc873c70c3378c395.html#a4b56942333d47debc873c70c3378c395',1,'StatSheetObject']]],
-  ['target_203',['target',['../class_base_action_afafdb765a8e836a0eba3a59fb1f23e01.html#afafdb765a8e836a0eba3a59fb1f23e01',1,'BaseAction::target()'],['../class_effect_system_a1c7d29836af594f9fad93b8f3562e8e7.html#a1c7d29836af594f9fad93b8f3562e8e7',1,'EffectSystem::target()'],['../class_stat_system_a5209420271837dec0dc6b3f87e1d85cb.html#a5209420271837dec0dc6b3f87e1d85cb',1,'StatSystem::target()']]],
-  ['targetaction_204',['targetAction',['../class_effect_system_a232e145c135d885a995e9f96d0aa71dc.html#a232e145c135d885a995e9f96d0aa71dc',1,'EffectSystem']]],
-  ['targets_205',['targets',['../class_damage_delt_system_a3fa04084d81c2bfcbcc5d8a8d1cdc57b.html#a3fa04084d81c2bfcbcc5d8a8d1cdc57b',1,'DamageDeltSystem::targets()'],['../class_effect_system_a2c4378aa4b2d84795cfcf32157330c4d.html#a2c4378aa4b2d84795cfcf32157330c4d',1,'EffectSystem::targets()'],['../class_stat_system_ad087654fd24e28b4265023e6c7f6c66d.html#ad087654fd24e28b4265023e6c7f6c66d',1,'StatSystem::targets()']]],
-  ['targettype_206',['TARGETTYPE',['../_base_action_8h_a607550079f88dc0df6c9761da9352ec7.html#a607550079f88dc0df6c9761da9352ec7',1,'BaseAction.h']]],
-  ['totaldamagevalue_207',['totalDamageValue',['../class_damage_delt_system_acbb16604c2f56234c51adf04317817ac.html#acbb16604c2f56234c51adf04317817ac',1,'DamageDeltSystem']]],
-  ['totaldamagevalues_208',['totalDamageValues',['../class_damage_delt_system_ad1eb7204eb7e409717ab32bcdd894bd9.html#ad1eb7204eb7e409717ab32bcdd894bd9',1,'DamageDeltSystem']]],
-  ['type_209',['type',['../class_item_action_a86da96d7beb1b83eceb55297ee397088.html#a86da96d7beb1b83eceb55297ee397088',1,'ItemAction']]]
+  ['uabilityaction_121',['UAbilityAction',['../class_u_ability_action.html',1,'']]],
+  ['uabilityaction_2ecpp_122',['UAbilityAction.cpp',['../_u_ability_action_8cpp.html',1,'']]],
+  ['uabilityaction_2eh_123',['UAbilityAction.h',['../_u_ability_action_8h.html',1,'']]],
+  ['ubaseaction_124',['UBaseAction',['../class_u_base_action.html',1,'']]],
+  ['ubaseaction_2ecpp_125',['UBaseAction.cpp',['../_u_base_action_8cpp.html',1,'']]],
+  ['ubaseaction_2eh_126',['UBaseAction.h',['../_u_base_action_8h.html',1,'']]],
+  ['ubasestatuseffect_127',['UBaseStatusEffect',['../class_u_base_status_effect.html',1,'']]],
+  ['ubasestatuseffect_2eh_128',['UBaseStatusEffect.h',['../_u_base_status_effect_8h.html',1,'']]],
+  ['ucommandaction_129',['UCommandAction',['../class_u_command_action.html',1,'']]],
+  ['ucommandaction_2ecpp_130',['UCommandAction.cpp',['../_u_command_action_8cpp.html',1,'']]],
+  ['ucommandaction_2eh_131',['UCommandAction.h',['../_u_command_action_8h.html',1,'']]],
+  ['uitemaction_132',['UItemAction',['../class_u_item_action.html',1,'']]],
+  ['uitemaction_2ecpp_133',['UItemAction.cpp',['../_u_item_action_8cpp.html',1,'']]],
+  ['uitemaction_2eh_134',['UItemAction.h',['../_u_item_action_8h.html',1,'']]],
+  ['ustatsheetobject_135',['UStatSheetObject',['../class_u_stat_sheet_object.html',1,'']]],
+  ['ustatsheetobject_2ecpp_136',['UStatSheetObject.cpp',['../_u_stat_sheet_object_8cpp.html',1,'']]],
+  ['ustatsheetobject_2eh_137',['UStatSheetObject.h',['../_u_stat_sheet_object_8h.html',1,'']]],
+  ['ustatuseffect_2ecpp_138',['UStatusEffect.cpp',['../_u_status_effect_8cpp.html',1,'']]]
 ];

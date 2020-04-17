@@ -1,0 +1,208 @@
+\doxysection{A\+Battle\+\_\+\+Box\+\_\+\+Pawn Class Reference}
+\label{class_a_battle___box___pawn}\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+
+
+{\ttfamily \#include $<$Battle\+\_\+\+Box\+\_\+\+Pawn.\+h$>$}
+
+
+
+Inheritance diagram for A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_a_battle___box___pawn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_battle___box___pawn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ A\+Battle\+\_\+\+Box\+\_\+\+Pawn} ()
+\item 
+\textbf{ U\+Stat\+Sheet\+Object} $\ast$ \textbf{ Get\+Stat\+Sheet} () const
+\begin{DoxyCompactList}\small\item\em Returns Stat\+Sheet\+Object. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Stat\+Sheet} (\textbf{ U\+Stat\+Sheet\+Object} $\ast$other\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets Stat\+Sheet\+Object. \end{DoxyCompactList}\item 
+virtual void \textbf{ Setup\+Player\+Input\+Component} (class U\+Input\+Component $\ast$Player\+Input\+Component) override
+\item 
+virtual void \textbf{ Tick} (float Delta\+Time) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Begin\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ U\+Stat\+Sheet\+Object} $\ast$ \textbf{ stat\+Sheet}
+\begin{DoxyCompactList}\small\item\em Stat\+Sheet\+Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_a_battle___box___pawn_a793275949d91c8d15081cc6103933a80_a793275949d91c8d15081cc6103933a80}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{ABattle\_Box\_Pawn()}
+{\footnotesize\ttfamily A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::\+A\+Battle\+\_\+\+Box\+\_\+\+Pawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.}}
+\DoxyCodeLine{11     PrimaryActorTick.bCanEverTick = \textcolor{keyword}{true};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_a_battle___box___pawn_a34b5e0f10b04f5299177838b4582a7cb_a34b5e0f10b04f5299177838b4582a7cb}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{BeginPlay()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::\+Begin\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 16 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     Super::BeginPlay();}
+\DoxyCodeLine{19     }
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_a_battle___box___pawn_a366ebfa3bb7cd62a133183e66e853d6b_a366ebfa3bb7cd62a133183e66e853d6b}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!GetStatSheet@{GetStatSheet}}
+\index{GetStatSheet@{GetStatSheet}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{GetStatSheet()}
+{\footnotesize\ttfamily \textbf{ U\+Stat\+Sheet\+Object} $\ast$ A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::\+Get\+Stat\+Sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns Stat\+Sheet\+Object. 
+
+
+
+Definition at line 36 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} statSheet;}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+References stat\+Sheet.
+
+\mbox{\label{class_a_battle___box___pawn_af9e012d8022be8a6c151ff0912d4244e_af9e012d8022be8a6c151ff0912d4244e}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!SetStatSheet@{SetStatSheet}}
+\index{SetStatSheet@{SetStatSheet}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{SetStatSheet()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::\+Set\+Stat\+Sheet (\begin{DoxyParamCaption}\item[{\textbf{ U\+Stat\+Sheet\+Object} $\ast$}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets Stat\+Sheet\+Object. 
+
+
+
+Definition at line 41 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     statSheet = other\_;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+References stat\+Sheet.
+
+\mbox{\label{class_a_battle___box___pawn_a5bf6cd30a5866ae2ccf62b52fe7b0a3b_a5bf6cd30a5866ae2ccf62b52fe7b0a3b}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
+\index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{SetupPlayerInputComponent()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class U\+Input\+Component $\ast$}]{Player\+Input\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 30 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     Super::SetupPlayerInputComponent(PlayerInputComponent);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_a_battle___box___pawn_a05e8f3245d4a361c57936e0db3c4e69b_a05e8f3245d4a361c57936e0db3c4e69b}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!Tick@{Tick}}
+\index{Tick@{Tick}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{Tick()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 23 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     Super::Tick(DeltaTime);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_a_battle___box___pawn_a78d056d18950bf73acd635d5b891747b_a78d056d18950bf73acd635d5b891747b}} 
+\index{ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}!statSheet@{statSheet}}
+\index{statSheet@{statSheet}!ABattle\_Box\_Pawn@{ABattle\_Box\_Pawn}}
+\doxysubsubsection{statSheet}
+{\footnotesize\ttfamily \textbf{ U\+Stat\+Sheet\+Object}$\ast$ A\+Battle\+\_\+\+Box\+\_\+\+Pawn\+::stat\+Sheet\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stat\+Sheet\+Object. 
+
+
+
+Definition at line 22 of file Battle\+\_\+\+Box\+\_\+\+Pawn.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Public/\textbf{ Battle\+\_\+\+Box\+\_\+\+Pawn.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Battle\+\_\+\+Box\+\_\+\+Pawn.\+cpp}\end{DoxyCompactItemize}

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['messagetype_130',['MessageType',['../_debugger_8h_ac6606ebe91c8ac66a2c314c79f5ab013.html#ac6606ebe91c8ac66a2c314c79f5ab013',1,'Debugger.h']]],
-  ['modifiystat_131',['ModifiyStat',['../class_stat_system_adf6b0dd03c3494e535587c692daf582d.html#adf6b0dd03c3494e535587c692daf582d',1,'StatSystem']]],
-  ['modstatmap_132',['modStatMap',['../class_ability_action_a3f5072b22ebb8945f9b628c55c2eb1f5.html#a3f5072b22ebb8945f9b628c55c2eb1f5',1,'AbilityAction']]]
+  ['messagetype_103',['MessageType',['../_battle___box___enums_8h_a811e9f1d810e5d3eb4c8bc5aab14399b.html#a811e9f1d810e5d3eb4c8bc5aab14399b',1,'Battle_Box_Enums.h']]]
 ];

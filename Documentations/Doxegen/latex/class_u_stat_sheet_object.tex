@@ -1,0 +1,191 @@
+\doxysection{U\+Stat\+Sheet\+Object Class Reference}
+\label{class_u_stat_sheet_object}\index{UStatSheetObject@{UStatSheetObject}}
+
+
+{\ttfamily \#include $<$U\+Stat\+Sheet\+Object.\+h$>$}
+
+
+
+Inheritance diagram for U\+Stat\+Sheet\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_u_stat_sheet_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for U\+Stat\+Sheet\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_stat_sheet_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ F\+Action\+\_\+\+Info} \textbf{ Get\+Action\+Info} () const
+\begin{DoxyCompactList}\small\item\em Return Action Info. \end{DoxyCompactList}\item 
+\textbf{ F\+General\+\_\+\+Info} \textbf{ Get\+General\+Info} () const
+\begin{DoxyCompactList}\small\item\em Return General Info. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Action\+Info} (\textbf{ F\+Action\+\_\+\+Info} other\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set Action Info. \end{DoxyCompactList}\item 
+void \textbf{ Set\+General\+Info} (\textbf{ F\+General\+\_\+\+Info} other\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set General Info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ F\+Action\+\_\+\+Info} \textbf{ action\+Info}
+\begin{DoxyCompactList}\small\item\em Action Info Data Structure. \end{DoxyCompactList}\item 
+\textbf{ F\+General\+\_\+\+Info} \textbf{ general\+Info}
+\begin{DoxyCompactList}\small\item\em General Info Data Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 67 of file U\+Stat\+Sheet\+Object.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_u_stat_sheet_object_afd24fb0afe5d4d6190e15504d7389688_afd24fb0afe5d4d6190e15504d7389688}} 
+\index{UStatSheetObject@{UStatSheetObject}!GetActionInfo@{GetActionInfo}}
+\index{GetActionInfo@{GetActionInfo}!UStatSheetObject@{UStatSheetObject}}
+\doxysubsubsection{GetActionInfo()}
+{\footnotesize\ttfamily \textbf{ F\+Action\+\_\+\+Info} U\+Stat\+Sheet\+Object\+::\+Get\+Action\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return Action Info. 
+
+
+
+Definition at line 8 of file U\+Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keywordflow}{return} actionInfo;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+References action\+Info.
+
+\mbox{\label{class_u_stat_sheet_object_a0c1f6ae5c595572f9c1aba32e36ce89f_a0c1f6ae5c595572f9c1aba32e36ce89f}} 
+\index{UStatSheetObject@{UStatSheetObject}!GetGeneralInfo@{GetGeneralInfo}}
+\index{GetGeneralInfo@{GetGeneralInfo}!UStatSheetObject@{UStatSheetObject}}
+\doxysubsubsection{GetGeneralInfo()}
+{\footnotesize\ttfamily \textbf{ F\+General\+\_\+\+Info} U\+Stat\+Sheet\+Object\+::\+Get\+General\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return General Info. 
+
+
+
+Definition at line 3 of file U\+Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     \textcolor{keywordflow}{return} generalInfo;}
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+
+
+References general\+Info.
+
+\mbox{\label{class_u_stat_sheet_object_ab1747f9cd4d8511ea668bf3ddf578b5b_ab1747f9cd4d8511ea668bf3ddf578b5b}} 
+\index{UStatSheetObject@{UStatSheetObject}!SetActionInfo@{SetActionInfo}}
+\index{SetActionInfo@{SetActionInfo}!UStatSheetObject@{UStatSheetObject}}
+\doxysubsubsection{SetActionInfo()}
+{\footnotesize\ttfamily void U\+Stat\+Sheet\+Object\+::\+Set\+Action\+Info (\begin{DoxyParamCaption}\item[{\textbf{ F\+Action\+\_\+\+Info}}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set Action Info. 
+
+
+
+Definition at line 16 of file U\+Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     actionInfo = other\_;}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+
+
+References action\+Info.
+
+\mbox{\label{class_u_stat_sheet_object_a15538b7702a7892a299514e61143dae3_a15538b7702a7892a299514e61143dae3}} 
+\index{UStatSheetObject@{UStatSheetObject}!SetGeneralInfo@{SetGeneralInfo}}
+\index{SetGeneralInfo@{SetGeneralInfo}!UStatSheetObject@{UStatSheetObject}}
+\doxysubsubsection{SetGeneralInfo()}
+{\footnotesize\ttfamily void U\+Stat\+Sheet\+Object\+::\+Set\+General\+Info (\begin{DoxyParamCaption}\item[{\textbf{ F\+General\+\_\+\+Info}}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set General Info. 
+
+
+
+Definition at line 12 of file U\+Stat\+Sheet\+Object.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     generalInfo = other\_;}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+
+
+References general\+Info.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_u_stat_sheet_object_af602aee1f9bb5375ad3ed30743b724a1_af602aee1f9bb5375ad3ed30743b724a1}} 
+\index{UStatSheetObject@{UStatSheetObject}!actionInfo@{actionInfo}}
+\index{actionInfo@{actionInfo}!UStatSheetObject@{UStatSheetObject}}
+\doxysubsubsection{actionInfo}
+{\footnotesize\ttfamily \textbf{ F\+Action\+\_\+\+Info} U\+Stat\+Sheet\+Object\+::action\+Info}
+
+
+
+Action Info Data Structure. 
+
+
+
+Definition at line 76 of file U\+Stat\+Sheet\+Object.\+h.
+
+\mbox{\label{class_u_stat_sheet_object_adcb69419292789445c7dc136421886c8_adcb69419292789445c7dc136421886c8}} 
+\index{UStatSheetObject@{UStatSheetObject}!generalInfo@{generalInfo}}
+\index{generalInfo@{generalInfo}!UStatSheetObject@{UStatSheetObject}}
+\doxysubsubsection{generalInfo}
+{\footnotesize\ttfamily \textbf{ F\+General\+\_\+\+Info} U\+Stat\+Sheet\+Object\+::general\+Info}
+
+
+
+General Info Data Structure. 
+
+
+
+Definition at line 73 of file U\+Stat\+Sheet\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Public/\textbf{ U\+Stat\+Sheet\+Object.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ U\+Stat\+Sheet\+Object.\+cpp}\end{DoxyCompactItemize}

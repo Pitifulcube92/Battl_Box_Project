@@ -16,15 +16,13 @@ struct StatSheetData;
 *
 * StatSheetObject Class
 *
+* This class is one of the key data structs that contains all the 
+* info needed. It contains to major Structures: Action Info & General Info
 *
+* Action Info: Conatins all the action refrences and action data 
+* that this stat sheet have.
 *
-*
-*
-*
-*
-*
-*
-*
+* General Info: Contains all the general refrences of the stat sheet.
 *
 */
 

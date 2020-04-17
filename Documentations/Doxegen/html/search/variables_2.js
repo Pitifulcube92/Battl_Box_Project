@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['damagetype_385',['damageType',['../class_item_action_a93d8f1fe4fdb7223d77b5f176fcbdba0.html#a93d8f1fe4fdb7223d77b5f176fcbdba0',1,'ItemAction']]],
-  ['debugdirectory_386',['DebugDirectory',['../class_debugger_abe3554be440f9a06b0864653bee32b03.html#abe3554be440f9a06b0864653bee32b03',1,'Debugger']]],
-  ['discription_387',['discription',['../class_base_action_a513d01865c01cb52756d2d634afda491.html#a513d01865c01cb52756d2d634afda491',1,'BaseAction']]],
-  ['duration_388',['duration',['../class_ability_action_af1b20c800c8bc6f96bc56bd49775057d.html#af1b20c800c8bc6f96bc56bd49775057d',1,'AbilityAction']]]
+  ['calleffect_235',['CallEffect',['../class_u_base_status_effect_a3ef0f8e381a9a56c8afd0951a8db3ac2.html#a3ef0f8e381a9a56c8afd0951a8db3ac2',1,'UBaseStatusEffect']]],
+  ['command_236',['command',['../struct_f_command_action___info_a685b0636bb3e8eb9d101e7868ed7ee0f.html#a685b0636bb3e8eb9d101e7868ed7ee0f',1,'FCommandAction_Info']]],
+  ['commandinfo_237',['commandInfo',['../class_u_command_action_ab988895028e1ace11fd0c271618a88d6.html#ab988895028e1ace11fd0c271618a88d6',1,'UCommandAction']]],
+  ['commandmap_238',['commandMap',['../struct_f_action___info_ab5103e2433fb4f09233d608c96013fdb.html#ab5103e2433fb4f09233d608c96013fdb',1,'FAction_Info']]],
+  ['currenttype_239',['currentType',['../class_debugger_ad15844f242e2c8a02fd9bf7595a5ece8.html#ad15844f242e2c8a02fd9bf7595a5ece8',1,'Debugger']]]
 ];

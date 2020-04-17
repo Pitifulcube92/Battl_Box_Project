@@ -1,0 +1,208 @@
+\doxysection{A\+Battle\+\_\+\+Box\+\_\+\+Character Class Reference}
+\label{class_a_battle___box___character}\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+
+
+{\ttfamily \#include $<$Battle\+\_\+\+Box\+\_\+\+Character.\+h$>$}
+
+
+
+Inheritance diagram for A\+Battle\+\_\+\+Box\+\_\+\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_a_battle___box___character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+Battle\+\_\+\+Box\+\_\+\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_battle___box___character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ A\+Battle\+\_\+\+Box\+\_\+\+Character} ()
+\item 
+\textbf{ U\+Stat\+Sheet\+Object} $\ast$ \textbf{ Get\+Stat\+Sheet} () const
+\begin{DoxyCompactList}\small\item\em Returns Stat\+Sheet\+Object. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Stat\+Sheet} (\textbf{ U\+Stat\+Sheet\+Object} $\ast$other\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets Stat\+Sheet\+Object. \end{DoxyCompactList}\item 
+virtual void \textbf{ Setup\+Player\+Input\+Component} (class U\+Input\+Component $\ast$Player\+Input\+Component) override
+\item 
+virtual void \textbf{ Tick} (float Delta\+Time) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ U\+Stat\+Sheet\+Object} $\ast$ \textbf{ stat\+Sheet}
+\begin{DoxyCompactList}\small\item\em Stat\+Sheet\+Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Begin\+Play} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file Battle\+\_\+\+Box\+\_\+\+Character.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_a_battle___box___character_a2fda5056f3d6560aadfff2448d7e772a_a2fda5056f3d6560aadfff2448d7e772a}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{ABattle\_Box\_Character()}
+{\footnotesize\ttfamily A\+Battle\+\_\+\+Box\+\_\+\+Character\+::\+A\+Battle\+\_\+\+Box\+\_\+\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Battle\+\_\+\+Box\+\_\+\+Character.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.}}
+\DoxyCodeLine{11     PrimaryActorTick.bCanEverTick = \textcolor{keyword}{true};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_a_battle___box___character_a5c8cdc3311ef287363629ad0a3e2676e_a5c8cdc3311ef287363629ad0a3e2676e}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{BeginPlay()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Character\+::\+Begin\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 16 of file Battle\+\_\+\+Box\+\_\+\+Character.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     Super::BeginPlay();}
+\DoxyCodeLine{19     }
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_a_battle___box___character_ad29b408bfb7dfdb58fcbab4a9fae5f38_ad29b408bfb7dfdb58fcbab4a9fae5f38}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!GetStatSheet@{GetStatSheet}}
+\index{GetStatSheet@{GetStatSheet}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{GetStatSheet()}
+{\footnotesize\ttfamily \textbf{ U\+Stat\+Sheet\+Object} $\ast$ A\+Battle\+\_\+\+Box\+\_\+\+Character\+::\+Get\+Stat\+Sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns Stat\+Sheet\+Object. 
+
+
+
+Definition at line 36 of file Battle\+\_\+\+Box\+\_\+\+Character.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} statSheet;}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+References stat\+Sheet.
+
+\mbox{\label{class_a_battle___box___character_a559ce5a96118974f11ec836591494fd3_a559ce5a96118974f11ec836591494fd3}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!SetStatSheet@{SetStatSheet}}
+\index{SetStatSheet@{SetStatSheet}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{SetStatSheet()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Character\+::\+Set\+Stat\+Sheet (\begin{DoxyParamCaption}\item[{\textbf{ U\+Stat\+Sheet\+Object} $\ast$}]{other\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets Stat\+Sheet\+Object. 
+
+
+
+Definition at line 41 of file Battle\+\_\+\+Box\+\_\+\+Character.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     statSheet = other\_;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+References stat\+Sheet.
+
+\mbox{\label{class_a_battle___box___character_a46433fad8cf2630c70af0f9e193d8b41_a46433fad8cf2630c70af0f9e193d8b41}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
+\index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{SetupPlayerInputComponent()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Character\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class U\+Input\+Component $\ast$}]{Player\+Input\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 30 of file Battle\+\_\+\+Box\+\_\+\+Character.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     Super::SetupPlayerInputComponent(PlayerInputComponent);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\label{class_a_battle___box___character_a47e2c0fdd46903cc0ec0891eca54f481_a47e2c0fdd46903cc0ec0891eca54f481}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!Tick@{Tick}}
+\index{Tick@{Tick}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{Tick()}
+{\footnotesize\ttfamily void A\+Battle\+\_\+\+Box\+\_\+\+Character\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 23 of file Battle\+\_\+\+Box\+\_\+\+Character.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     Super::Tick(DeltaTime);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{class_a_battle___box___character_a4ff4259c46dc3448ca03557ff925b1d7_a4ff4259c46dc3448ca03557ff925b1d7}} 
+\index{ABattle\_Box\_Character@{ABattle\_Box\_Character}!statSheet@{statSheet}}
+\index{statSheet@{statSheet}!ABattle\_Box\_Character@{ABattle\_Box\_Character}}
+\doxysubsubsection{statSheet}
+{\footnotesize\ttfamily \textbf{ U\+Stat\+Sheet\+Object}$\ast$ A\+Battle\+\_\+\+Box\+\_\+\+Character\+::stat\+Sheet}
+
+
+
+Stat\+Sheet\+Object. 
+
+
+
+Definition at line 22 of file Battle\+\_\+\+Box\+\_\+\+Character.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Public/\textbf{ Battle\+\_\+\+Box\+\_\+\+Character.\+h}\item 
+D\+:/\+U\+Nreal\+Projects/\+Battl\+\_\+\+Box\+\_\+\+Project/\+Plugins/\+Battle\+\_\+\+Box/\+Source/\+Battle\+\_\+\+Box/\+Private/\textbf{ Battle\+\_\+\+Box\+\_\+\+Character.\+cpp}\end{DoxyCompactItemize}

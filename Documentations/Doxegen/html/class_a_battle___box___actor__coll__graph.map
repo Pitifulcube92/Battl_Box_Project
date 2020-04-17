@@ -1,0 +1,8 @@
+<map id="ABattle_Box_Actor" name="ABattle_Box_Actor">
+<area shape="rect" id="node1" title=" " alt="" coords="24,373,177,509"/>
+<area shape="rect" id="node2" title=" " alt="" coords="29,211,92,289"/>
+<area shape="rect" id="node3" href="$class_u_stat_sheet_object.html" title=" " alt="" coords="117,189,245,311"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,27,97,105"/>
+<area shape="rect" id="node5" href="$struct_f_action___info.html" title="StatSheetObject Data structure." alt="" coords="121,5,240,127"/>
+<area shape="rect" id="node6" href="$struct_f_general___info.html" title=" " alt="" coords="264,13,377,119"/>
+</map>
