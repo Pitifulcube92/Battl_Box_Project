@@ -16,9 +16,9 @@ class BATTLE_BOX_API ABattle_Box_Pawn : public APawn
 public:
 	// Sets default values for this pawn's properties
 	ABattle_Box_Pawn();
-private:
+
 	///StatSheetObject
-	UPROPERTY(EditAnywhere, BlueprintType)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UStatSheetObject* statSheet;
 protected:
 	// Called when the game starts or when spawned

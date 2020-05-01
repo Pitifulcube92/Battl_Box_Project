@@ -21,65 +21,53 @@ public:
 	virtual void ShutdownModule() override;
 
 	/** This function will be bound to Command (by default it will bring up plugin window) */
-	void PluginButtonClicked();
+	//void PluginButtonClicked();
 
 private:
 
-	void AddToolbarExtension(FToolBarBuilder& Builder);
-	void AddMenuExtension(FMenuBuilder& Builder);
-	FReply CreateObject();
-
-	TSharedRef<class SDockTab> OnSpawnPluginTab(const class FSpawnTabArgs& SpawnTabArgs);
-
-	FReply OpenStatSheetTab();
-	FReply OpenActionTab();
-	FReply OpenActorTab();
-	//
-	TSharedPtr<FUICommandList> CommandList;
-
-	TSharedPtr<const FExtender> Extender;
-	ISlateStyle* slateStyle;
-
-	/// Main Menu
-	// Buttons
-	TSharedPtr<SButton> ActionButton;
-	TSharedPtr<SButton> StatSheetButton;
-	//Button Text
-	TSharedPtr<STextBlock> ActionButtonText;
-	TSharedPtr<STextBlock> StatSheetButtonText;
-	//Horisontal Box
-	TSharedPtr<SHorizontalBox> ContentBox;
-	TSharedPtr<SHorizontalBox> FillBox1;
-	TSharedPtr<SHorizontalBox> FillBox2;
-	/// </Main Menu
-	
-
-
-	//SComboBox 
-
-
-	
-
-	
-
-
-
-	
-
-
-
-
-	/// </Action Menu
-	
-	///FAsseetTargetDrop
-	bool OnDropTargetAllowDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
-
-	FReply OnDropTargetInputDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
-
-	
-
-	
-	FReply CreateStatObject();
-private:
-	TSharedPtr<class FUICommandList> PluginCommands;
+//	void AddToolbarExtension(FToolBarBuilder& Builder);
+//	void AddMenuExtension(FMenuBuilder& Builder);
+//	FReply CreateObject();
+//
+//	TSharedRef<class SDockTab> OnSpawnPluginTab(const class FSpawnTabArgs& SpawnTabArgs);
+//
+//	FReply OpenStatSheetTab();
+//	FReply OpenActionTab();
+//	FReply OpenActorTab();
+//	//
+//	TSharedPtr<FUICommandList> CommandList;
+//
+//	TSharedPtr<const FExtender> Extender;
+//	ISlateStyle* slateStyle;
+//
+//	/// Main Menu
+//	// Buttons
+//	TSharedPtr<SButton> ActionButton;
+//	TSharedPtr<SButton> StatSheetButton;
+//	//Button Text
+//	TSharedPtr<STextBlock> ActionButtonText;
+//	TSharedPtr<STextBlock> StatSheetButtonText;
+//	//Horisontal Box
+//	TSharedPtr<SHorizontalBox> ContentBox;
+//	TSharedPtr<SHorizontalBox> FillBox1;
+//	TSharedPtr<SHorizontalBox> FillBox2;
+//	/// </Main Menu
+//	
+//
+//
+//	//SComboBox 
+//
+//	/// </Action Menu
+//	
+//	///FAsseetTargetDrop
+//	bool OnDropTargetAllowDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
+//
+//	FReply OnDropTargetInputDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
+//
+//	
+//
+//	
+//	FReply CreateStatObject();
+//private:
+//	TSharedPtr<class FUICommandList> PluginCommands;
 };

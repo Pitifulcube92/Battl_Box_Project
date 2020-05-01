@@ -26,38 +26,21 @@ class UAbilityAction;
 *
 ********************************/
 
-
-USTRUCT(BlueprintType)
-struct BATTLE_BOX_API FItemAction_Info
-{
-	GENERATED_USTRUCT_BODY()
-public:
-///Item Type 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
-		ITEMTYPE type;
-///items value
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
-		int32 value;
-///Item's Effect list 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
-		TArray<UAbilityAction*> effectList;
-///Items basic states
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
-		TMap<FString, float> statModMap;
-};
-
-
 UCLASS(BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UItemAction : public UBaseAction
 {
 	GENERATED_BODY()
-private:
-///Item Data structure 
-	UPROPERTY(EditAnywhere, Category = "Item Action")
-		struct FItemAction_Info itemInfo;
 public:
-///Return function for item data structure
-	UFUNCTION(BlueprintCallable, Category = "Item Action")
-		FItemAction_Info GetItemInfo() const;
-
+	///Item Type 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
+		ITEMTYPE type;
+	///items value
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
+		int32 value;
+	///Item's Effect list 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
+		TArray<UAbilityAction*> effectList;
+	///Items basic states
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Action")
+		TMap<FString, float> statModMap;
 };

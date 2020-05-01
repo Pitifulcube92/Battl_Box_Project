@@ -18,7 +18,7 @@ public:
 	ABattle_Box_Character();
 public: 
 	///StatSheetObject
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UStatSheetObject* statSheet;
 protected:
 	// Called when the game starts or when spawned
@@ -34,7 +34,7 @@ public:
 	///Returns StatSheetObject
 	UFUNCTION(BlueprintCallable, Category = "Battle_Box_Character")
 		UStatSheetObject* GetStatSheet() const;
-	///Sets StatSheetObject 
+	///Sets  StatSheetObject 
 	UFUNCTION(BlueprintCallable, Category = "Battle_Box Actor")
 		void SetStatSheet(UStatSheetObject* other_);
 };

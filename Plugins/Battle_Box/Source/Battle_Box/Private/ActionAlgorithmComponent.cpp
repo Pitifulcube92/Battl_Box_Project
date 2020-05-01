@@ -32,8 +32,9 @@ void UActionAlgorithmComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 	// ...
 }
 
-void UActionAlgorithmComponent::Init(FString actionName_, UStatSheetObject* target_ )
+void UActionAlgorithmComponent::Init(FString actionName_, UStatSheetObject* target_, UStatSheetObject* owner_)
 {
 	target = target_;
 	actionName = actionName_;
+	owner = owner_;
 }

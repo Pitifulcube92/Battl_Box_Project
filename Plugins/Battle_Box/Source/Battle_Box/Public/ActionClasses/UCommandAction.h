@@ -15,30 +15,15 @@ class UActorComponent;
 * through an interaction.
 *
 
-***********************************+*/
-
-///Command action data structure
-USTRUCT(BlueprintType)
-struct BATTLE_BOX_API FCommandAction_Info
-{
-	GENERATED_USTRUCT_BODY()
-public:
-///Command component
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		TSubclassOf<UActorComponent> command;
-};
+************************************/
 
 UCLASS(BlueprintType, Category = "Battle_Box")
 class BATTLE_BOX_API UCommandAction : public UBaseAction
 {
 	GENERATED_BODY()
 
-private:
-///Command data structure
-	UPROPERTY(EditAnywhere, Category = "Command Action")
-		FCommandAction_Info commandInfo;
 public:
-///Command data Getter
-	UFUNCTION(BlueprintCallable, BlueprintType, Category = "Command Action")
-		FCommandAction_Info GetCommandInfo() const;
-};
+	///Command component
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintType)
+		TSubclassOf<UActorComponent> command;
+};	
