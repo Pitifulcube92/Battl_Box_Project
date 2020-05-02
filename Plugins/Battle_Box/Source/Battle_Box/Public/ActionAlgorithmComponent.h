@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "UObject/Object.h"
 #include "ActionAlgorithmComponent.generated.h"
 class UStatSheetObject;
 
 UCLASS(Blueprintable, BlueprintType, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class BATTLE_BOX_API UActionAlgorithmComponent : public UActorComponent
+class BATTLE_BOX_API UActionAlgorithmComponent : public UObject 
 {
 	GENERATED_BODY()
 
@@ -22,12 +22,7 @@ public:
 		UStatSheetObject* owner;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Action Algorithm")
 		FString actionName;
-protected:
-// Called when the game starts
-	virtual void BeginPlay() override;
 public:	
-// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 ///This calls the whole algorithm 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "Action Algorithm")
 		void CallAlgorithm();
