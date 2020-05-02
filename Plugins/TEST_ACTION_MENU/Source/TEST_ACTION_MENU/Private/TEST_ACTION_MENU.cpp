@@ -18,6 +18,7 @@
 
 static const FName TEST_ACTION_MENUTabName("Battle Box Creation Menus");
 
+
 #define LOCTEXT_NAMESPACE "FTEST_ACTION_MENUModule"
 
 //Start up Moduel
@@ -25,180 +26,179 @@ void FTEST_ACTION_MENUModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 
-	//FTEST_ACTION_MENUStyle::Initialize();
-	//FTEST_ACTION_MENUStyle::ReloadTextures();
+	FTEST_ACTION_MENUStyle::Initialize();
+	FTEST_ACTION_MENUStyle::ReloadTextures();
 
-	//FTEST_ACTION_MENUCommands::Register();
+	FTEST_ACTION_MENUCommands::Register();
 
-	//PluginCommands = MakeShareable(new FUICommandList);
+	PluginCommands = MakeShareable(new FUICommandList);
 
-	//PluginCommands->MapAction(
-	//	FTEST_ACTION_MENUCommands::Get().OpenPluginWindow,
-	//	FExecuteAction::CreateRaw(this, &FTEST_ACTION_MENUModule::PluginButtonClicked),
-	//	FCanExecuteAction());
+	PluginCommands->MapAction(
+		FTEST_ACTION_MENUCommands::Get().OpenPluginWindow,
+		FExecuteAction::CreateRaw(this, &FTEST_ACTION_MENUModule::PluginButtonClicked),
+		FCanExecuteAction());
 
-	//FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
+	FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
 
-	//{
-	//	TSharedPtr<FExtender> MenuExtender = MakeShareable(new FExtender());
-	//	MenuExtender->AddMenuExtension("WindowLayout", EExtensionHook::After, PluginCommands, FMenuExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddMenuExtension));
+	{
+		TSharedPtr<FExtender> MenuExtender = MakeShareable(new FExtender());
+		MenuExtender->AddMenuExtension("WindowLayout", EExtensionHook::After, PluginCommands, FMenuExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddMenuExtension));
 
-	//	LevelEditorModule.GetMenuExtensibilityManager()->AddExtender(MenuExtender);
-	//}
+		LevelEditorModule.GetMenuExtensibilityManager()->AddExtender(MenuExtender);
+	}
 
-	//{
-	//	TSharedPtr<FExtender> ToolbarExtender = MakeShareable(new FExtender);
-	//	ToolbarExtender->AddToolBarExtension("Settings", EExtensionHook::After, PluginCommands, FToolBarExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddToolbarExtension));
+	{
+		TSharedPtr<FExtender> ToolbarExtender = MakeShareable(new FExtender);
+		ToolbarExtender->AddToolBarExtension("Settings", EExtensionHook::After, PluginCommands, FToolBarExtensionDelegate::CreateRaw(this, &FTEST_ACTION_MENUModule::AddToolbarExtension));
 
-	//	LevelEditorModule.GetToolBarExtensibilityManager()->AddExtender(ToolbarExtender);
-	//}
+		LevelEditorModule.GetToolBarExtensibilityManager()->AddExtender(ToolbarExtender);
+	}
 
-	//FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
-	//	.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "Battle Box Creation Menu"))
-	//	.SetMenuType(ETabSpawnerMenuType::Hidden);
+	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
+		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "Battle Box Creation Menu"))
+		.SetMenuType(ETabSpawnerMenuType::Hidden);
+
+
 }
 //Shutdown Moduel
 void FTEST_ACTION_MENUModule::ShutdownModule()
 {
-	//// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
-	//// we call this function before unloading the module.
-	//FTEST_ACTION_MENUStyle::Shutdown();
+	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
+	// we call this function before unloading the module.
+	FTEST_ACTION_MENUStyle::Shutdown();
 
-	//FTEST_ACTION_MENUCommands::Unregister();
+	FTEST_ACTION_MENUCommands::Unregister();
 
-	//FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(TEST_ACTION_MENUTabName);
+	FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(TEST_ACTION_MENUTabName);
 }
 //Stat window 
-//TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
-//{
-//	FText WidgetText = FText::Format(
-//		LOCTEXT("WindowWidgetText", "Add code to {0} in {1} to override this window's contents"),
-//		FText::FromString(TEXT("FTEST_ACTION_MENUModule::OnSpawnPluginTab")),
-//		FText::FromString(TEXT("TEST_ACTION_MENU.cpp"))
-//	);
-//
-//	return SNew(SDockTab)
-//		.TabRole(ETabRole::NomadTab)
-//		[
-//			SNew(SHorizontalBox)
-//			+ SHorizontalBox::Slot()
-//			//.Padding(1.0f, 1.0f)
-//			[
-//				SNew(SHorizontalBox)
-//				+SHorizontalBox::Slot()
-//				.Padding(10,0,10,10)
-//				[
-//					SNew(SVerticalBox)
-//
-//					+SVerticalBox::Slot()
-//					.Padding(0,0,0,10)
-//					//.FillHeight()
-//						[
-//						SAssignNew(ActionButton, SButton) // Action Button
-//						.OnClicked_Raw(this,  &FTEST_ACTION_MENUModule::OpenActionTab)
-//							[
-//							SNew(SBorder)
-//							.Padding(FMargin(3))
-//							.HAlign(HAlign_Center)
-//							.VAlign(VAlign_Center)
-//							.Content()
-//								[
-//								SAssignNew(ActionButtonText, STextBlock)
-//								.Text(LOCTEXT("Action", "Create Action Menu"))
-//								.AutoWrapText(true)
-//								] // Border content end
-//
-//							]// Button end
-//
-//						]// vertical box slot end
-//					+ SVerticalBox::Slot()
-//					.Padding(0, 0, 0, 10)
-//						[
-//						SAssignNew(StatSheetButton, SButton)
-//						.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::OpenStatSheetTab)
-//							[
-//							SNew(SBorder)
-//							.Padding(FMargin(3))
-//							.HAlign(HAlign_Center)
-//							.VAlign(VAlign_Center)
-//							.Content()
-//								[
-//								SAssignNew(StatSheetButtonText, STextBlock)
-//								.Text(LOCTEXT("StatSheet", "Create StatSheet Menu"))
-//								.AutoWrapText(true)
-//								] // Border content end
-//
-//							]// Button end
-//						]// Vertical Box Slot
-//					+ SVerticalBox::Slot()
-//						.Padding(0, 0, 0, 10)
-//						[
-//							SNew(SButton)
-//							.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::OpenActorTab)
-//						[
-//							SNew(SBorder)
-//							.Padding(FMargin(3))
-//						.HAlign(HAlign_Center)
-//						.VAlign(VAlign_Center)
-//						.Content()
-//						[
-//							SAssignNew(StatSheetButtonText, STextBlock)
-//							.Text(FText::FromString("Create Battle Box Actor"))
-//						.AutoWrapText(true)
-//						] // Border content end
-//
-//						]// Button end
-//						]// Vertical Box Slot
-//				]// horisontal box end
-//			]// Horisontal Box end
-//		];
-//}
+TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
+{
+	FText WidgetText = FText::Format(
+		LOCTEXT("WindowWidgetText", "Add code to {0} in {1} to override this window's contents"),
+		FText::FromString(TEXT("FTEST_ACTION_MENUModule::OnSpawnPluginTab")),
+		FText::FromString(TEXT("TEST_ACTION_MENU.cpp"))
+	);
+
+	return SNew(SDockTab)
+		.TabRole(ETabRole::NomadTab)
+		[
+			SNew(SHorizontalBox)
+			+ SHorizontalBox::Slot()
+			//.Padding(1.0f, 1.0f)
+			[
+				SNew(SHorizontalBox)
+				+SHorizontalBox::Slot()
+				.Padding(10,0,10,10)
+				[
+					SNew(SVerticalBox)
+
+					+SVerticalBox::Slot()
+					.Padding(0,0,0,10)
+					//.FillHeight()
+						[
+						SAssignNew(ActionButton, SButton) // Action Button
+						.OnClicked_Raw(this,  &FTEST_ACTION_MENUModule::OpenActionTab)
+							[
+							SNew(SBorder)
+							.Padding(FMargin(3))
+							.HAlign(HAlign_Center)
+							.VAlign(VAlign_Center)
+							.Content()
+								[
+								SAssignNew(ActionButtonText, STextBlock)
+								.Text(LOCTEXT("Action", "Create Action Menu"))
+								.AutoWrapText(true)
+								] // Border content end
+
+							]// Button end
+
+						]// vertical box slot end
+					+ SVerticalBox::Slot()
+					.Padding(0, 0, 0, 10)
+						[
+						SAssignNew(StatSheetButton, SButton)
+						.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::OpenStatSheetTab)
+							[
+							SNew(SBorder)
+							.Padding(FMargin(3))
+							.HAlign(HAlign_Center)
+							.VAlign(VAlign_Center)
+							.Content()
+								[
+								SAssignNew(StatSheetButtonText, STextBlock)
+								.Text(LOCTEXT("StatSheet", "Create StatSheet Menu"))
+								.AutoWrapText(true)
+								] // Border content end
+
+							]// Button end
+						]// Vertical Box Slot
+					+ SVerticalBox::Slot()
+						.Padding(0, 0, 0, 10)
+						[
+							SNew(SButton)
+							.OnClicked_Raw(this, &FTEST_ACTION_MENUModule::OpenActorTab)
+						[
+							SNew(SBorder)
+							.Padding(FMargin(3))
+						.HAlign(HAlign_Center)
+						.VAlign(VAlign_Center)
+						.Content()
+						[
+							SAssignNew(StatSheetButtonText, STextBlock)
+							.Text(FText::FromString("Create Battle Box Actor"))
+						.AutoWrapText(true)
+						] // Border content end
+
+						]// Button end
+						]// Vertical Box Slot
+				]// horisontal box end
+			]// Horisontal Box end
+		];
+}
 // if the plugin button is click open modlue window 
-//void FTEST_ACTION_MENUModule::PluginButtonClicked()
-//{
-//	//FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
-//}
-//// Builds the First window used in Start up
-//void FTEST_ACTION_MENUModule::AddMenuExtension(FMenuBuilder& Builder)
-//{
-//	//Builder.AddMenuEntry(FTEST_ACTION_MENUCommands::Get().OpenActionWindow);
-////	Builder.()
-//}
-////toolBar extion call Used in start up
-//void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
-//{
-//	//Builder.AddToolBarButton(FTEST_ACTION_MENUCommands::Get().OpenPluginWindow);
-//}
-//
-/////  
-//
-////Creation of the other two windows
-//
-/////
-////StatSheetWindow Creation
-//FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
-//{
-//	/*auto statSheet = new StatSheetWindow();
-//	auto MyWindow = statSheet->generateWidow();
-//	FSlateApplication::Get().AddWindow(MyWindow, true);*/
-//	return FReply::Handled();
-//}
-////actionwindow creation calls Generate Window Transfer code from genrate window to this function call once completed dropDowns
-//FReply FTEST_ACTION_MENUModule::OpenActionTab() {
-//
-//	/*auto action = new ActionWindow();
-//	auto myWindow = action->generateWidow();
-//	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
-//	FSlateApplication::Get().AddWi*/ndow(myWindow, true);
-//	return FReply::Handled();
-//}
-////Actor Tab window Creation
-//FReply FTEST_ACTION_MENUModule::OpenActorTab() {
-//	/*auto actors = new Battle_Box_Actor_Windows();
-//	auto MyWindow = actors->generateWidow();
-//	FSlateApplication::Get().AddWindow(MyWindow, true);*/
-//	return FReply::Handled();
-//}
+void FTEST_ACTION_MENUModule::PluginButtonClicked()
+{
+	FGlobalTabmanager::Get()->InvokeTab(TEST_ACTION_MENUTabName);
+}
+// Builds the First window used in Start up
+void FTEST_ACTION_MENUModule::AddMenuExtension(FMenuBuilder& Builder)
+{
+	Builder.AddMenuEntry(FTEST_ACTION_MENUCommands::Get().OpenActionWindow);
+}
+//toolBar extion call Used in start up
+void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
+{
+	Builder.AddToolBarButton(FTEST_ACTION_MENUCommands::Get().OpenPluginWindow);
+}
+
+///  
+
+//Creation of the other two windows
+
+///
+//StatSheetWindow Creation
+FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
+{
+	auto statSheet = new StatSheetWindow();
+	auto MyWindow = statSheet->generateWidow();
+	FSlateApplication::Get().AddWindow(MyWindow, true);
+	return FReply::Handled();
+}
+//actionwindow creation calls Generate Window Transfer code from genrate window to this function call once completed dropDowns
+FReply FTEST_ACTION_MENUModule::OpenActionTab() {
+	auto action = new ActionWindow();
+	auto actionWindow = action->generateWidow();
+	FSlateApplication::Get().AddWindow(actionWindow, true);
+	return FReply::Handled();
+}
+//Actor Tab window Creation
+FReply FTEST_ACTION_MENUModule::OpenActorTab() {
+	auto actors = new Battle_Box_Actor_Windows();
+	auto MyWindow = actors->generateWidow();
+	FSlateApplication::Get().AddWindow(MyWindow, true);
+	return FReply::Handled();
+}
 
 #undef LOCTEXT_NAMESPACE
 
