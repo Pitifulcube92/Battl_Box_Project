@@ -88,5 +88,7 @@ public:
 	TSharedPtr<FAssetThumbnailPool> MyThumbnailPool;
 	TSharedPtr<FAssetThumbnail> MyThumbnail;
 
-	UActionAlgorithmComponent* Test;
+	UActionAlgorithmComponent* Asset;
+
+
 };

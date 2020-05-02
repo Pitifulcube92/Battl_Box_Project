@@ -34,7 +34,7 @@
 TSharedRef<SWindow> ActionWindow::generateWidow()
 {
 	MyThumbnailPool = MakeShareable(new FAssetThumbnailPool(16, false));
-	MyThumbnail = MakeShareable(new FAssetThumbnail(Test, 16, 16 , MyThumbnailPool));
+	MyThumbnail = MakeShareable(new FAssetThumbnail(Asset, 16, 16 , MyThumbnailPool));
 
 	// Action Type
 	actionTypeArray.Add(MakeShareable(new FString("E_NONE")));
@@ -359,8 +359,8 @@ FText ActionWindow::GetCurrentInteractionTypeLabel() const
 //Genreates a STextBlock based on a FComboItemType array
 TSharedRef<SWidget> ActionWindow::generateDropDownWidget(FComboItemType inOption)
 {
-	auto test = SNew(STextBlock).Text(FText::FromString(*inOption));
-	return test;
+	auto dropDown = SNew(STextBlock).Text(FText::FromString(*inOption));
+	return dropDown;
 }
 //Generates widget item for the Algorithm panel to use
 TSharedRef<SWidget> ActionWindow::GenerateAlgorithmItemDrop() {

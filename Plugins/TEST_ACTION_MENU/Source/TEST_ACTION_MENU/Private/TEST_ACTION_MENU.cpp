@@ -18,6 +18,7 @@
 
 static const FName TEST_ACTION_MENUTabName("Battle Box Creation Menus");
 
+
 #define LOCTEXT_NAMESPACE "FTEST_ACTION_MENUModule"
 
 //Start up Moduel
@@ -56,6 +57,8 @@ void FTEST_ACTION_MENUModule::StartupModule()
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(TEST_ACTION_MENUTabName, FOnSpawnTab::CreateRaw(this, &FTEST_ACTION_MENUModule::OnSpawnPluginTab))
 		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "Battle Box Creation Menu"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
+
+
 }
 //Shutdown Moduel
 void FTEST_ACTION_MENUModule::ShutdownModule()
@@ -184,11 +187,9 @@ FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 }
 //actionwindow creation calls Generate Window Transfer code from genrate window to this function call once completed dropDowns
 FReply FTEST_ACTION_MENUModule::OpenActionTab() {
-
 	auto action = new ActionWindow();
-	auto myWindow = action->generateWidow();
-	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
-	FSlateApplication::Get().AddWindow(myWindow, true);
+	auto actionWindow = action->generateWidow();
+	FSlateApplication::Get().AddWindow(actionWindow, true);
 	return FReply::Handled();
 }
 //Actor Tab window Creation

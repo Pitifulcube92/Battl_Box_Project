@@ -52,8 +52,6 @@ private:
 	TSharedPtr<SHorizontalBox> FillBox1;
 	TSharedPtr<SHorizontalBox> FillBox2;
 	/// </Main Menu
-	
-
 
 	//SComboBox 
 
