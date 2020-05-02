@@ -8,6 +8,8 @@
 #include "Widgets/Input/SComboBox.h"
 #include "Widgets/Input/SSpinBox.h"
 #include "Widgets/Input/SButton.h"
+#include "SDockTab.h"
+#include "SDockableTab.h"
 #include "SlateBasics.h"
 #include "Editor/EditorWidgets/Public/SDropTarget.h"
 #include "../ActionAlgorithmComponent.h"
@@ -28,10 +30,25 @@
 #include "../ActionAlgorithmComponent.h"
 #include "CoreUObject.h"
 
+static const FName ActionMenuTabName("Action Creation Menu");
 
+void ActionWindow::StartupModule() {
+	// Local Reffrence for the global Tab Manager
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->RegisterTabSpawner(ActionMenuTabName, FOnSpawnTab::CreateRaw(this, &ActionWindow::generateWidow))
+		.SetDisplayName(FText::FromString(TEXT("Action Creation Menu")));
+}
 
+void ActionWindow::ShutdownModule() {
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->UnregisterTabSpawner(ActionMenuTabName);
+}
 
-TSharedRef<SWindow> ActionWindow::generateWidow()
+void ActionWindow::Button_Clicked() {
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->InvokeTab(ActionMenuTabName);
+}
+TSharedRef<SDockTab> ActionWindow::generateWidow(const FSpawnTabArgs& TabSpawnArgs)
 {
 	MyThumbnailPool = MakeShareable(new FAssetThumbnailPool(16, false));
 	MyThumbnail = MakeShareable(new FAssetThumbnail(Asset, 16, 16 , MyThumbnailPool));
@@ -47,12 +64,8 @@ TSharedRef<SWindow> ActionWindow::generateWidow()
 	interactionTypeArray.Add(MakeShareable(new FString("E_ABILITY")));
 	interactionTypeArray.Add(MakeShareable(new FString("E_PHYSICAL_AND_ABILITY")));
 	currentinteractionType = interactionTypeArray[0];
-	auto myWindow = SNew(SWindow)
-		.ClientSize(FVector2D(640, 640))
-		.IsEnabled(true)
-		.bDragAnywhere(true)
-		.Title(FText::FromString("Action Creation Menu"))
-		.Content()[
+	auto myWindow = SNew(SDockTab).TabRole(ETabRole::NomadTab)
+		[
 			SNew(SVerticalBox)
 			+ SVerticalBox::Slot()
 			[

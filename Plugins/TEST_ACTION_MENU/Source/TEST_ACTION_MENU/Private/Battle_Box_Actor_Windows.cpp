@@ -5,6 +5,8 @@
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Text/STextBlock.h"
 #include "Widgets/Input/SEditableTextBox.h"
+#include "SDockTab.h"
+#include "SDockableTab.h"
 
 
 //Asset Registry 
@@ -19,14 +21,27 @@
 #include "../Battle_Box_Pawn.h"
 #include "..\Public\Battle_Box_Actor_Windows.h"
 
-TSharedRef<SWindow> Battle_Box_Actor_Windows::generateWidow()
-{
-	return  SNew(SWindow)
-		.ClientSize(FVector2D(640, 640))
-		//.IsPopupWindow(true)
-		.IsEnabled(true)
-		.bDragAnywhere(true)
-		.Content()
+static const FName ActorTabName("Actor Creation Menu");
+void Battle_Box_Actor_Windows::StartupModule() {
+	// Local Reffrence for the global Tab Manager
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->RegisterTabSpawner(ActorTabName, FOnSpawnTab::CreateRaw(this, &Battle_Box_Actor_Windows::generateWidow))
+		.SetDisplayName(FText::FromString(TEXT("Actor Creation Menu")));
+}
+
+void Battle_Box_Actor_Windows::ShutdownModule() {
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->UnregisterTabSpawner(ActorTabName);
+}
+
+void Battle_Box_Actor_Windows::Button_Clicked() {
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->InvokeTab(ActorTabName);
+}
+TSharedRef<SDockTab> Battle_Box_Actor_Windows::generateWidow(const FSpawnTabArgs& TabSpawnArgs) {
+
+	auto window =  SNew(SDockTab)
+		.TabRole(ETabRole::NomadTab)
 		[
 			SNew(SVerticalBox)
 			// Create Name 
@@ -67,6 +82,8 @@ TSharedRef<SWindow> Battle_Box_Actor_Windows::generateWidow()
 				]
 			]
 		];
+	UE_LOG(LogTemp, Log, TEXT("Action Window Open"));
+	return window;
 }
 
 FReply Battle_Box_Actor_Windows::CreateCharacterObject() {
