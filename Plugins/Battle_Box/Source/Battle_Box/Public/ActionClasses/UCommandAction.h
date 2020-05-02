@@ -25,5 +25,5 @@ class BATTLE_BOX_API UCommandAction : public UBaseAction
 public:
 	///Command component
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintType)
-		TSubclassOf<UActorComponent> command;
+		TSubclassOf<UActionAlgorithmComponent> command;
 };	
