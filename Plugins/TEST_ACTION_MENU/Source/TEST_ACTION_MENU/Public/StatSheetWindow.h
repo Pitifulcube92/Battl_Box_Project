@@ -13,14 +13,15 @@
 
 typedef TSharedPtr <FString>  FStatSheetItemType;
 class StatSheetWindow : public IModuleInterface {
-
 public:
-	TSharedRef<SWindow> generateWidow();
+	TSharedRef<class SDockTab> generateWidow(const class FSpawnTabArgs& TabSpawnArgs);
+	virtual void StartupModule() override;
+	virtual void ShutdownModule() override;
+	void Button_Clicked();
 private:
 	TSharedPtr<SEditableTextBox> StatSheetName;
 	TSharedPtr<SEditableTextBox> StatSheetTag;
 	TSharedPtr<SScrollBox> ItemPanel;
-
 	TArray<TSharedRef<SEditableTextBox>> StatNames;
 	TArray<TSharedRef<SSpinBox<float>>> StatValues;
 

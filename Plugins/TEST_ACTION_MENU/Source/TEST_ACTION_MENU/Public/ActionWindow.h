@@ -22,9 +22,15 @@
  * 
  */
 typedef TSharedPtr <FString>  FComboItemType;
-class TEST_ACTION_MENU_API ActionWindow
+class TEST_ACTION_MENU_API ActionWindow : public IModuleInterface
 {
 public:
+	// Nomad Tab Shenenigans
+	virtual void StartupModule() override;
+	virtual void ShutdownModule() override;
+
+	void Button_Clicked();
+
 	/// Action Menu
 	// SEditable Name
 	TSharedPtr<SEditableTextBox> actionName;
@@ -64,7 +70,7 @@ public:
 	TSharedRef<SWidget> generateDropDownWidget(FComboItemType inOption);
 	TSharedRef<SWidget> GenerateAlgorithmItemDrop();
 
-	TSharedRef<SWindow> generateWidow();
+	TSharedRef<class SDockTab> generateWidow(const class FSpawnTabArgs& TabSpawnArgs);
 
 
 

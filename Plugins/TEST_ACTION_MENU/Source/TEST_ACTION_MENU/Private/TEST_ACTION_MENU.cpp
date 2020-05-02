@@ -58,6 +58,12 @@ void FTEST_ACTION_MENUModule::StartupModule()
 		.SetDisplayName(LOCTEXT("FTEST_ACTION_MENUTabTitle", "Battle Box Creation Menu"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
 
+	actionWindowRef = new ActionWindow();
+	statSheetWindowRef = new StatSheetWindow();
+	actorWindowRef = new Battle_Box_Actor_Windows();
+	actionWindowRef->StartupModule();
+	statSheetWindowRef->StartupModule();
+	actorWindowRef->StartupModule();
 
 }
 //Shutdown Moduel
@@ -70,6 +76,9 @@ void FTEST_ACTION_MENUModule::ShutdownModule()
 	FTEST_ACTION_MENUCommands::Unregister();
 
 	FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(TEST_ACTION_MENUTabName);
+	actionWindowRef->ShutdownModule();
+	statSheetWindowRef->ShutdownModule();
+	actorWindowRef->ShutdownModule();
 }
 //Stat window 
 TSharedRef<SDockTab> FTEST_ACTION_MENUModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
@@ -180,23 +189,19 @@ void FTEST_ACTION_MENUModule::AddToolbarExtension(FToolBarBuilder& Builder)
 //StatSheetWindow Creation
 FReply FTEST_ACTION_MENUModule::OpenStatSheetTab()
 {
-	auto statSheet = new StatSheetWindow();
-	auto MyWindow = statSheet->generateWidow();
-	FSlateApplication::Get().AddWindow(MyWindow, true);
+	statSheetWindowRef->Button_Clicked();
 	return FReply::Handled();
 }
 //actionwindow creation calls Generate Window Transfer code from genrate window to this function call once completed dropDowns
 FReply FTEST_ACTION_MENUModule::OpenActionTab() {
-	auto action = new ActionWindow();
-	auto actionWindow = action->generateWidow();
-	FSlateApplication::Get().AddWindow(actionWindow, true);
+//	auto action = new ActionWindow();
+	actionWindowRef->Button_Clicked();
+	//FSlateApplication::Get().AddWindow(actionWindow, true);
 	return FReply::Handled();
 }
 //Actor Tab window Creation
 FReply FTEST_ACTION_MENUModule::OpenActorTab() {
-	auto actors = new Battle_Box_Actor_Windows();
-	auto MyWindow = actors->generateWidow();
-	FSlateApplication::Get().AddWindow(MyWindow, true);
+	actorWindowRef->Button_Clicked();
 	return FReply::Handled();
 }
 

@@ -27,7 +27,6 @@ private:
 
 	void AddToolbarExtension(FToolBarBuilder& Builder);
 	void AddMenuExtension(FMenuBuilder& Builder);
-	FReply CreateObject();
 
 	TSharedRef<class SDockTab> OnSpawnPluginTab(const class FSpawnTabArgs& SpawnTabArgs);
 
@@ -55,17 +54,10 @@ private:
 
 	//SComboBox 
 
-	/// </Action Menu
-	
-	///FAsseetTargetDrop
-	bool OnDropTargetAllowDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
 
-	FReply OnDropTargetInputDrop(TSharedPtr<FDragDropOperation> DragDropOperation);
-
-	
-
-	
-	FReply CreateStatObject();
+	class ActionWindow* actionWindowRef;
+	class StatSheetWindow* statSheetWindowRef;
+	class Battle_Box_Actor_Windows* actorWindowRef;
 private:
 	TSharedPtr<class FUICommandList> PluginCommands;
 };

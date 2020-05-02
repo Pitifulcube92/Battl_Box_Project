@@ -11,21 +11,37 @@
 #include "Widgets/Input/SSpinbox.h"
 #include "Widgets/Layout/SScrollBox.h"
 #include "Widgets/SOverlay.h"
+#include "SDockTab.h"
+#include "SDockableTab.h"
 //#include "Editor/EditorWidgets/Public/SDropTarget.h"
 #include "AssetRegistryModule.h"
 #include "../UStatSheetObject.h"
 #include "UStatSheetFactory.h"
 
+static const FName StatSheetTabName("StatSheet Creation Menu");
+void StatSheetWindow::StartupModule() {
+	// Local Reffrence for the global Tab Manager
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->RegisterTabSpawner(StatSheetTabName, FOnSpawnTab::CreateRaw(this, &StatSheetWindow::generateWidow))
+		.SetDisplayName(FText::FromString(TEXT("StatSheet Creation Menu")));
+}
 
-TSharedRef<SWindow> StatSheetWindow::generateWidow()
+void StatSheetWindow::ShutdownModule() {
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->UnregisterTabSpawner(StatSheetTabName);
+}
+
+void StatSheetWindow::Button_Clicked() {
+	TSharedRef<class FGlobalTabmanager> tabManager = FGlobalTabmanager::Get();
+	tabManager->InvokeTab(StatSheetTabName);
+}
+
+
+TSharedRef<SDockTab> StatSheetWindow::generateWidow(const FSpawnTabArgs& TabSpawnArgs)
 {
-	return  SNew(SWindow)
-		.ClientSize(FVector2D(640, 640))
-		.IsEnabled(true)
-		.bDragAnywhere(true)
-		.Title(FText::FromString("StatSheet Creation Menu"))
-		.Content()
-		[
+	auto window =  SNew(SDockTab)
+		.TabRole(ETabRole::NomadTab)
+	[
 		SNew(SVerticalBox)
 		+ SVerticalBox::Slot()
 		[
@@ -95,6 +111,7 @@ TSharedRef<SWindow> StatSheetWindow::generateWidow()
 		]
 		];
 	UE_LOG(LogTemp, Log, TEXT("Stat Window Open"));
+	return window;
 }
 
 FReply StatSheetWindow::CreateNewEntry() {
